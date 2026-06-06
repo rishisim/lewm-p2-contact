@@ -24,7 +24,6 @@ import math
 import os
 import shutil
 import subprocess
-import sys
 import tempfile
 import time
 import urllib.request
@@ -155,16 +154,6 @@ def parse_args() -> argparse.Namespace:
         help="Download/decompress/materialize the dataset subset, then exit before model inference.",
     )
     return parser.parse_args()
-
-
-def add_local_dependency_paths() -> None:
-    """Make the sibling read-only checkouts importable when pip packages are absent."""
-    root = Path(__file__).resolve().parent
-    workspace = root.parent
-    for rel in ("stable-pretraining-readonly", "stable-worldmodel-readonly"):
-        candidate = workspace / rel
-        if candidate.exists():
-            sys.path.insert(0, str(candidate))
 
 
 def vit_hf_from_config(
@@ -322,7 +311,6 @@ def clean_cfg(d: dict[str, Any]) -> dict[str, Any]:
 
 
 def instantiate_model(config_path: Path, weights_path: Path, device: Any) -> Any:
-    add_local_dependency_paths()
     import torch
 
     from jepa import JEPA
@@ -1126,7 +1114,6 @@ def main() -> None:
     validate_args(args)
     args.cache_dir.mkdir(parents=True, exist_ok=True)
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    add_local_dependency_paths()
 
     import torch
 

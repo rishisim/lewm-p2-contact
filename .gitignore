@@ -9,9 +9,10 @@ venv/
 
 # Local experiment and dependency caches.
 .cache/
-outputs/
+le-wm/outputs/
 wandb/
 mlruns/
+*.egg-info/
 
 # Large local datasets/checkpoints should stay out of git.
 *.h5

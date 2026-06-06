@@ -1,0 +1,17 @@
+/Users/rishisim/Documents/research/World Models/stable-worldmodel-readonly/stable_worldmodel/envs/__init__.py:215: UserWarning: ale-py not found; ALE/* envs are unavailable. Install with: pip install 'stable-worldmodel[env]' or pip install ale-py.
+  from stable_worldmodel.envs import ale  # noqa: F401
+STAGE 1 V2 SUMMARY
+sanity last-latent ridge: persistence=0.197046, ridge=0.153607, ratio=0.779551, passed=True
+persistence: abs_mse=0.197046, normalized=0.197124, frac_persistence=1.000000, traj_mean±std=0.203991±0.061174
+ridge: abs_mse=0.123972, normalized=0.124022, frac_persistence=0.629155, traj_mean±std=0.129947±0.054948
+mlp: abs_mse=0.167294, normalized=0.167360, frac_persistence=0.849011, traj_mean±std=0.173683±0.097620
+full_lewm: abs_mse=0.007169, normalized=0.007171, frac_persistence=0.036381, traj_mean±std=0.007515±0.003226
+best_history_probe: ridge
+action_information_value: 0.942176
+predictive_headroom_over_persistence: 0.370845
+ridge scaling status: still_dropping, last_step_relative_drop=0.145441
+non_contact: n=422, action_information_value=0.937918
+contact: n=246, action_information_value=0.948515
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1v2_results.json
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1_report.md
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1v2_ridge_scaling.png

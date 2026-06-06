@@ -1,0 +1,3668 @@
+{
+  "stage": "1v2_extraction",
+  "seed": 4242,
+  "target_episodes": 200,
+  "used_episodes": 200,
+  "train_trajectory_count": 140,
+  "val_trajectory_count": 30,
+  "test_trajectory_count": 30,
+  "train_episodes": [
+    146,
+    245,
+    410,
+    541,
+    550,
+    674,
+    1075,
+    1314,
+    1397,
+    1465,
+    1606,
+    1802,
+    1857,
+    1875,
+    1909,
+    2114,
+    2117,
+    2273,
+    2297,
+    2445,
+    2564,
+    2599,
+    2635,
+    2813,
+    3107,
+    3318,
+    3404,
+    3558,
+    3629,
+    3750,
+    3755,
+    3938,
+    4079,
+    4102,
+    4261,
+    4389,
+    4418,
+    4421,
+    4579,
+    4781,
+    4882,
+    4960,
+    5148,
+    5453,
+    5514,
+    5614,
+    5761,
+    5814,
+    5979,
+    6308,
+    6328,
+    6410,
+    6546,
+    6570,
+    6614,
+    7137,
+    7251,
+    7343,
+    7826,
+    7851,
+    8230,
+    8566,
+    8644,
+    8680,
+    8836,
+    8904,
+    9047,
+    9079,
+    9298,
+    9327,
+    9476,
+    9478,
+    9801,
+    9968,
+    10057,
+    10222,
+    10384,
+    10436,
+    10568,
+    10619,
+    10649,
+    10747,
+    11049,
+    11108,
+    11128,
+    11213,
+    11349,
+    11369,
+    11998,
+    12075,
+    12117,
+    12174,
+    12415,
+    12678,
+    12734,
+    13137,
+    13177,
+    13214,
+    13221,
+    13238,
+    13265,
+    13331,
+    13339,
+    13346,
+    13359,
+    13551,
+    13808,
+    13886,
+    14072,
+    14562,
+    14859,
+    15118,
+    15279,
+    15293,
+    15346,
+    15693,
+    15725,
+    15818,
+    15823,
+    16032,
+    16110,
+    16224,
+    16795,
+    16845,
+    16950,
+    16982,
+    17017,
+    17022,
+    17259,
+    17299,
+    17316,
+    17449,
+    17467,
+    17530,
+    17952,
+    17977,
+    18254,
+    18458,
+    18614,
+    18636
+  ],
+  "val_episodes": [
+    479,
+    1047,
+    1969,
+    2528,
+    3149,
+    3412,
+    3637,
+    4333,
+    4363,
+    5741,
+    5850,
+    6706,
+    7911,
+    7948,
+    10741,
+    11804,
+    12134,
+    12191,
+    13127,
+    13447,
+    14368,
+    15377,
+    16271,
+    16940,
+    17409,
+    17519,
+    17849,
+    17896,
+    18457,
+    18562
+  ],
+  "test_episodes": [
+    154,
+    405,
+    539,
+    796,
+    2377,
+    3240,
+    3407,
+    4973,
+    5306,
+    5461,
+    6749,
+    6772,
+    8137,
+    8222,
+    8640,
+    8774,
+    9802,
+    10341,
+    11319,
+    11468,
+    12167,
+    12940,
+    13086,
+    14020,
+    14046,
+    14461,
+    15196,
+    15443,
+    16907,
+    17877
+  ],
+  "total_pairs": 4335,
+  "train_pairs": 3076,
+  "val_pairs": 591,
+  "test_pairs": 668,
+  "history_shape": [
+    4335,
+    3,
+    192
+  ],
+  "action_history_shape": [
+    4335,
+    3,
+    10
+  ],
+  "target_shape": [
+    4335,
+    192
+  ],
+  "latent_stats": {
+    "target_per_dim_mean_mean": 0.007824043743312359,
+    "target_per_dim_mean_std": 0.05849345028400421,
+    "target_per_dim_std_mean": 0.9987977147102356,
+    "target_per_dim_std_min": 0.7474015355110168,
+    "target_per_dim_std_max": 1.2199269533157349,
+    "any_nan": false
+  },
+  "action_normalization": {
+    "source": "le-wm/train.py get_column_normalizer(dataset, 'action', 'action') equivalent",
+    "raw_action_mean": [
+      -0.007812755182385445,
+      0.006860560737550259
+    ],
+    "raw_action_std": [
+      0.20824122428894043,
+      0.20649132132530212
+    ]
+  },
+  "indexing": {
+    "frameskip": 5,
+    "history_size": 3,
+    "convention": "history latents/action blocks at model steps [i, i+1, i+2] target latent at [i+3]",
+    "training_source": "le-wm/train.py: tgt_emb = emb[:, num_preds:] with num_preds=1; final predictor token is next latent"
+  },
+  "contact": {
+    "source": "geometry-from-state",
+    "positive_pairs": 1559,
+    "non_contact_pairs": 2776,
+    "caveat": "HDF5 has no n_contacts; this uses the prior geometric fallback from 7D state."
+  },
+  "elapsed_seconds": 20.223883457998454,
+  "cache_path": "/Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1v2_latents.npz",
+  "trajectory_records": [
+    {
+      "episode_id": 146,
+      "split": "train",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 154,
+      "split": "test",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 245,
+      "split": "train",
+      "raw_length": 84,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 405,
+      "split": "test",
+      "raw_length": 69,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 410,
+      "split": "train",
+      "raw_length": 69,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 479,
+      "split": "val",
+      "raw_length": 69,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 539,
+      "split": "test",
+      "raw_length": 126,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 541,
+      "split": "train",
+      "raw_length": 126,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 550,
+      "split": "train",
+      "raw_length": 126,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 674,
+      "split": "train",
+      "raw_length": 158,
+      "model_steps": 32,
+      "pairs": 29,
+      "latent_shape": [
+        32,
+        192
+      ],
+      "action_block_shape": [
+        31,
+        10
+      ],
+      "contact_positive_blocks": 17,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 796,
+      "split": "test",
+      "raw_length": 125,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1047,
+      "split": "val",
+      "raw_length": 117,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 15,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1075,
+      "split": "train",
+      "raw_length": 117,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 15,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1314,
+      "split": "train",
+      "raw_length": 159,
+      "model_steps": 32,
+      "pairs": 29,
+      "latent_shape": [
+        32,
+        192
+      ],
+      "action_block_shape": [
+        31,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1397,
+      "split": "train",
+      "raw_length": 159,
+      "model_steps": 32,
+      "pairs": 29,
+      "latent_shape": [
+        32,
+        192
+      ],
+      "action_block_shape": [
+        31,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1465,
+      "split": "train",
+      "raw_length": 92,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1606,
+      "split": "train",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1802,
+      "split": "train",
+      "raw_length": 90,
+      "model_steps": 18,
+      "pairs": 15,
+      "latent_shape": [
+        18,
+        192
+      ],
+      "action_block_shape": [
+        17,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1857,
+      "split": "train",
+      "raw_length": 83,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1875,
+      "split": "train",
+      "raw_length": 83,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1909,
+      "split": "train",
+      "raw_length": 83,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 1969,
+      "split": "val",
+      "raw_length": 125,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2114,
+      "split": "train",
+      "raw_length": 140,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2117,
+      "split": "train",
+      "raw_length": 140,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2273,
+      "split": "train",
+      "raw_length": 140,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2297,
+      "split": "train",
+      "raw_length": 140,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2377,
+      "split": "test",
+      "raw_length": 78,
+      "model_steps": 16,
+      "pairs": 13,
+      "latent_shape": [
+        16,
+        192
+      ],
+      "action_block_shape": [
+        15,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2445,
+      "split": "train",
+      "raw_length": 107,
+      "model_steps": 22,
+      "pairs": 19,
+      "latent_shape": [
+        22,
+        192
+      ],
+      "action_block_shape": [
+        21,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2528,
+      "split": "val",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2564,
+      "split": "train",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2599,
+      "split": "train",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2635,
+      "split": "train",
+      "raw_length": 141,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 2813,
+      "split": "train",
+      "raw_length": 98,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3107,
+      "split": "train",
+      "raw_length": 133,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3149,
+      "split": "val",
+      "raw_length": 142,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3240,
+      "split": "test",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3318,
+      "split": "train",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3404,
+      "split": "train",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3407,
+      "split": "test",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3412,
+      "split": "val",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3558,
+      "split": "train",
+      "raw_length": 127,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3629,
+      "split": "train",
+      "raw_length": 127,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3637,
+      "split": "val",
+      "raw_length": 146,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3750,
+      "split": "train",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3755,
+      "split": "train",
+      "raw_length": 137,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 3938,
+      "split": "train",
+      "raw_length": 169,
+      "model_steps": 34,
+      "pairs": 31,
+      "latent_shape": [
+        34,
+        192
+      ],
+      "action_block_shape": [
+        33,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4079,
+      "split": "train",
+      "raw_length": 147,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4102,
+      "split": "train",
+      "raw_length": 147,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4261,
+      "split": "train",
+      "raw_length": 82,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4333,
+      "split": "val",
+      "raw_length": 82,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4363,
+      "split": "val",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4389,
+      "split": "train",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4418,
+      "split": "train",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4421,
+      "split": "train",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4579,
+      "split": "train",
+      "raw_length": 71,
+      "model_steps": 15,
+      "pairs": 12,
+      "latent_shape": [
+        15,
+        192
+      ],
+      "action_block_shape": [
+        14,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4781,
+      "split": "train",
+      "raw_length": 148,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4882,
+      "split": "train",
+      "raw_length": 145,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 18,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4960,
+      "split": "train",
+      "raw_length": 166,
+      "model_steps": 34,
+      "pairs": 31,
+      "latent_shape": [
+        34,
+        192
+      ],
+      "action_block_shape": [
+        33,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 4973,
+      "split": "test",
+      "raw_length": 166,
+      "model_steps": 34,
+      "pairs": 31,
+      "latent_shape": [
+        34,
+        192
+      ],
+      "action_block_shape": [
+        33,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5148,
+      "split": "train",
+      "raw_length": 188,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5306,
+      "split": "test",
+      "raw_length": 110,
+      "model_steps": 22,
+      "pairs": 19,
+      "latent_shape": [
+        22,
+        192
+      ],
+      "action_block_shape": [
+        21,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5453,
+      "split": "train",
+      "raw_length": 138,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 18,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5461,
+      "split": "test",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5514,
+      "split": "train",
+      "raw_length": 99,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5614,
+      "split": "train",
+      "raw_length": 64,
+      "model_steps": 13,
+      "pairs": 10,
+      "latent_shape": [
+        13,
+        192
+      ],
+      "action_block_shape": [
+        12,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5741,
+      "split": "val",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5761,
+      "split": "train",
+      "raw_length": 103,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5814,
+      "split": "train",
+      "raw_length": 103,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5850,
+      "split": "val",
+      "raw_length": 103,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 5979,
+      "split": "train",
+      "raw_length": 107,
+      "model_steps": 22,
+      "pairs": 19,
+      "latent_shape": [
+        22,
+        192
+      ],
+      "action_block_shape": [
+        21,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6308,
+      "split": "train",
+      "raw_length": 94,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6328,
+      "split": "train",
+      "raw_length": 94,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6410,
+      "split": "train",
+      "raw_length": 75,
+      "model_steps": 15,
+      "pairs": 12,
+      "latent_shape": [
+        15,
+        192
+      ],
+      "action_block_shape": [
+        14,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6546,
+      "split": "train",
+      "raw_length": 161,
+      "model_steps": 33,
+      "pairs": 30,
+      "latent_shape": [
+        33,
+        192
+      ],
+      "action_block_shape": [
+        32,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6570,
+      "split": "train",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6614,
+      "split": "train",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6706,
+      "split": "val",
+      "raw_length": 83,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6749,
+      "split": "test",
+      "raw_length": 83,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 6772,
+      "split": "test",
+      "raw_length": 121,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 17,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7137,
+      "split": "train",
+      "raw_length": 107,
+      "model_steps": 22,
+      "pairs": 19,
+      "latent_shape": [
+        22,
+        192
+      ],
+      "action_block_shape": [
+        21,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7251,
+      "split": "train",
+      "raw_length": 125,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7343,
+      "split": "train",
+      "raw_length": 133,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7826,
+      "split": "train",
+      "raw_length": 64,
+      "model_steps": 13,
+      "pairs": 10,
+      "latent_shape": [
+        13,
+        192
+      ],
+      "action_block_shape": [
+        12,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7851,
+      "split": "train",
+      "raw_length": 64,
+      "model_steps": 13,
+      "pairs": 10,
+      "latent_shape": [
+        13,
+        192
+      ],
+      "action_block_shape": [
+        12,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7911,
+      "split": "val",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 7948,
+      "split": "val",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8137,
+      "split": "test",
+      "raw_length": 119,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8222,
+      "split": "test",
+      "raw_length": 162,
+      "model_steps": 33,
+      "pairs": 30,
+      "latent_shape": [
+        33,
+        192
+      ],
+      "action_block_shape": [
+        32,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8230,
+      "split": "train",
+      "raw_length": 162,
+      "model_steps": 33,
+      "pairs": 30,
+      "latent_shape": [
+        33,
+        192
+      ],
+      "action_block_shape": [
+        32,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8566,
+      "split": "train",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8640,
+      "split": "test",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8644,
+      "split": "train",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8680,
+      "split": "train",
+      "raw_length": 115,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 1,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8774,
+      "split": "test",
+      "raw_length": 73,
+      "model_steps": 15,
+      "pairs": 12,
+      "latent_shape": [
+        15,
+        192
+      ],
+      "action_block_shape": [
+        14,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8836,
+      "split": "train",
+      "raw_length": 167,
+      "model_steps": 34,
+      "pairs": 31,
+      "latent_shape": [
+        34,
+        192
+      ],
+      "action_block_shape": [
+        33,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 8904,
+      "split": "train",
+      "raw_length": 150,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9047,
+      "split": "train",
+      "raw_length": 60,
+      "model_steps": 12,
+      "pairs": 9,
+      "latent_shape": [
+        12,
+        192
+      ],
+      "action_block_shape": [
+        11,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9079,
+      "split": "train",
+      "raw_length": 60,
+      "model_steps": 12,
+      "pairs": 9,
+      "latent_shape": [
+        12,
+        192
+      ],
+      "action_block_shape": [
+        11,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9298,
+      "split": "train",
+      "raw_length": 81,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9327,
+      "split": "train",
+      "raw_length": 81,
+      "model_steps": 17,
+      "pairs": 14,
+      "latent_shape": [
+        17,
+        192
+      ],
+      "action_block_shape": [
+        16,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9476,
+      "split": "train",
+      "raw_length": 89,
+      "model_steps": 18,
+      "pairs": 15,
+      "latent_shape": [
+        18,
+        192
+      ],
+      "action_block_shape": [
+        17,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9478,
+      "split": "train",
+      "raw_length": 89,
+      "model_steps": 18,
+      "pairs": 15,
+      "latent_shape": [
+        18,
+        192
+      ],
+      "action_block_shape": [
+        17,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9801,
+      "split": "train",
+      "raw_length": 127,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9802,
+      "split": "test",
+      "raw_length": 127,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 9968,
+      "split": "train",
+      "raw_length": 141,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10057,
+      "split": "train",
+      "raw_length": 92,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10222,
+      "split": "train",
+      "raw_length": 155,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10341,
+      "split": "test",
+      "raw_length": 142,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10384,
+      "split": "train",
+      "raw_length": 142,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10436,
+      "split": "train",
+      "raw_length": 190,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10568,
+      "split": "train",
+      "raw_length": 68,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10619,
+      "split": "train",
+      "raw_length": 150,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10649,
+      "split": "train",
+      "raw_length": 150,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10741,
+      "split": "val",
+      "raw_length": 98,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 10747,
+      "split": "train",
+      "raw_length": 98,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11049,
+      "split": "train",
+      "raw_length": 148,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11108,
+      "split": "train",
+      "raw_length": 148,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11128,
+      "split": "train",
+      "raw_length": 134,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11213,
+      "split": "train",
+      "raw_length": 173,
+      "model_steps": 35,
+      "pairs": 32,
+      "latent_shape": [
+        35,
+        192
+      ],
+      "action_block_shape": [
+        34,
+        10
+      ],
+      "contact_positive_blocks": 23,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11319,
+      "split": "test",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11349,
+      "split": "train",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11369,
+      "split": "train",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11468,
+      "split": "test",
+      "raw_length": 149,
+      "model_steps": 30,
+      "pairs": 27,
+      "latent_shape": [
+        30,
+        192
+      ],
+      "action_block_shape": [
+        29,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11804,
+      "split": "val",
+      "raw_length": 125,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 11998,
+      "split": "train",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12075,
+      "split": "train",
+      "raw_length": 153,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12117,
+      "split": "train",
+      "raw_length": 153,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12134,
+      "split": "val",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 1,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12167,
+      "split": "test",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12174,
+      "split": "train",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12191,
+      "split": "val",
+      "raw_length": 131,
+      "model_steps": 27,
+      "pairs": 24,
+      "latent_shape": [
+        27,
+        192
+      ],
+      "action_block_shape": [
+        26,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12415,
+      "split": "train",
+      "raw_length": 145,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12678,
+      "split": "train",
+      "raw_length": 56,
+      "model_steps": 12,
+      "pairs": 9,
+      "latent_shape": [
+        12,
+        192
+      ],
+      "action_block_shape": [
+        11,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12734,
+      "split": "train",
+      "raw_length": 152,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 19,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 12940,
+      "split": "test",
+      "raw_length": 112,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13086,
+      "split": "test",
+      "raw_length": 120,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13127,
+      "split": "val",
+      "raw_length": 120,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13137,
+      "split": "train",
+      "raw_length": 152,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13177,
+      "split": "train",
+      "raw_length": 152,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13214,
+      "split": "train",
+      "raw_length": 152,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13221,
+      "split": "train",
+      "raw_length": 152,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13238,
+      "split": "train",
+      "raw_length": 153,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13265,
+      "split": "train",
+      "raw_length": 153,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13331,
+      "split": "train",
+      "raw_length": 153,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13339,
+      "split": "train",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13346,
+      "split": "train",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13359,
+      "split": "train",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13447,
+      "split": "val",
+      "raw_length": 118,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13551,
+      "split": "train",
+      "raw_length": 118,
+      "model_steps": 24,
+      "pairs": 21,
+      "latent_shape": [
+        24,
+        192
+      ],
+      "action_block_shape": [
+        23,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13808,
+      "split": "train",
+      "raw_length": 65,
+      "model_steps": 13,
+      "pairs": 10,
+      "latent_shape": [
+        13,
+        192
+      ],
+      "action_block_shape": [
+        12,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 13886,
+      "split": "train",
+      "raw_length": 113,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14020,
+      "split": "test",
+      "raw_length": 176,
+      "model_steps": 36,
+      "pairs": 33,
+      "latent_shape": [
+        36,
+        192
+      ],
+      "action_block_shape": [
+        35,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14046,
+      "split": "test",
+      "raw_length": 95,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14072,
+      "split": "train",
+      "raw_length": 95,
+      "model_steps": 19,
+      "pairs": 16,
+      "latent_shape": [
+        19,
+        192
+      ],
+      "action_block_shape": [
+        18,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14368,
+      "split": "val",
+      "raw_length": 106,
+      "model_steps": 22,
+      "pairs": 19,
+      "latent_shape": [
+        22,
+        192
+      ],
+      "action_block_shape": [
+        21,
+        10
+      ],
+      "contact_positive_blocks": 13,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14461,
+      "split": "test",
+      "raw_length": 186,
+      "model_steps": 38,
+      "pairs": 35,
+      "latent_shape": [
+        38,
+        192
+      ],
+      "action_block_shape": [
+        37,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14562,
+      "split": "train",
+      "raw_length": 122,
+      "model_steps": 25,
+      "pairs": 22,
+      "latent_shape": [
+        25,
+        192
+      ],
+      "action_block_shape": [
+        24,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 14859,
+      "split": "train",
+      "raw_length": 69,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15118,
+      "split": "train",
+      "raw_length": 142,
+      "model_steps": 29,
+      "pairs": 26,
+      "latent_shape": [
+        29,
+        192
+      ],
+      "action_block_shape": [
+        28,
+        10
+      ],
+      "contact_positive_blocks": 21,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15196,
+      "split": "test",
+      "raw_length": 154,
+      "model_steps": 31,
+      "pairs": 28,
+      "latent_shape": [
+        31,
+        192
+      ],
+      "action_block_shape": [
+        30,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15279,
+      "split": "train",
+      "raw_length": 97,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15293,
+      "split": "train",
+      "raw_length": 97,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15346,
+      "split": "train",
+      "raw_length": 97,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15377,
+      "split": "val",
+      "raw_length": 70,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15443,
+      "split": "test",
+      "raw_length": 70,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 0,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15693,
+      "split": "train",
+      "raw_length": 205,
+      "model_steps": 41,
+      "pairs": 38,
+      "latent_shape": [
+        41,
+        192
+      ],
+      "action_block_shape": [
+        40,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15725,
+      "split": "train",
+      "raw_length": 205,
+      "model_steps": 41,
+      "pairs": 38,
+      "latent_shape": [
+        41,
+        192
+      ],
+      "action_block_shape": [
+        40,
+        10
+      ],
+      "contact_positive_blocks": 14,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15818,
+      "split": "train",
+      "raw_length": 78,
+      "model_steps": 16,
+      "pairs": 13,
+      "latent_shape": [
+        16,
+        192
+      ],
+      "action_block_shape": [
+        15,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 15823,
+      "split": "train",
+      "raw_length": 78,
+      "model_steps": 16,
+      "pairs": 13,
+      "latent_shape": [
+        16,
+        192
+      ],
+      "action_block_shape": [
+        15,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16032,
+      "split": "train",
+      "raw_length": 178,
+      "model_steps": 36,
+      "pairs": 33,
+      "latent_shape": [
+        36,
+        192
+      ],
+      "action_block_shape": [
+        35,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16110,
+      "split": "train",
+      "raw_length": 197,
+      "model_steps": 40,
+      "pairs": 37,
+      "latent_shape": [
+        40,
+        192
+      ],
+      "action_block_shape": [
+        39,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16224,
+      "split": "train",
+      "raw_length": 229,
+      "model_steps": 46,
+      "pairs": 43,
+      "latent_shape": [
+        46,
+        192
+      ],
+      "action_block_shape": [
+        45,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16271,
+      "split": "val",
+      "raw_length": 103,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16795,
+      "split": "train",
+      "raw_length": 49,
+      "model_steps": 10,
+      "pairs": 7,
+      "latent_shape": [
+        10,
+        192
+      ],
+      "action_block_shape": [
+        9,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16845,
+      "split": "train",
+      "raw_length": 49,
+      "model_steps": 10,
+      "pairs": 7,
+      "latent_shape": [
+        10,
+        192
+      ],
+      "action_block_shape": [
+        9,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16907,
+      "split": "test",
+      "raw_length": 112,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 4,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16940,
+      "split": "val",
+      "raw_length": 112,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16950,
+      "split": "train",
+      "raw_length": 112,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 7,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 16982,
+      "split": "train",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17017,
+      "split": "train",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17022,
+      "split": "train",
+      "raw_length": 67,
+      "model_steps": 14,
+      "pairs": 11,
+      "latent_shape": [
+        14,
+        192
+      ],
+      "action_block_shape": [
+        13,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17259,
+      "split": "train",
+      "raw_length": 126,
+      "model_steps": 26,
+      "pairs": 23,
+      "latent_shape": [
+        26,
+        192
+      ],
+      "action_block_shape": [
+        25,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17299,
+      "split": "train",
+      "raw_length": 204,
+      "model_steps": 41,
+      "pairs": 38,
+      "latent_shape": [
+        41,
+        192
+      ],
+      "action_block_shape": [
+        40,
+        10
+      ],
+      "contact_positive_blocks": 2,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17316,
+      "split": "train",
+      "raw_length": 204,
+      "model_steps": 41,
+      "pairs": 38,
+      "latent_shape": [
+        41,
+        192
+      ],
+      "action_block_shape": [
+        40,
+        10
+      ],
+      "contact_positive_blocks": 3,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17409,
+      "split": "val",
+      "raw_length": 102,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 5,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17449,
+      "split": "train",
+      "raw_length": 102,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17467,
+      "split": "train",
+      "raw_length": 102,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 10,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17519,
+      "split": "val",
+      "raw_length": 104,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17530,
+      "split": "train",
+      "raw_length": 104,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17849,
+      "split": "val",
+      "raw_length": 193,
+      "model_steps": 39,
+      "pairs": 36,
+      "latent_shape": [
+        39,
+        192
+      ],
+      "action_block_shape": [
+        38,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17877,
+      "split": "test",
+      "raw_length": 136,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17896,
+      "split": "val",
+      "raw_length": 136,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17952,
+      "split": "train",
+      "raw_length": 136,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 12,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 17977,
+      "split": "train",
+      "raw_length": 136,
+      "model_steps": 28,
+      "pairs": 25,
+      "latent_shape": [
+        28,
+        192
+      ],
+      "action_block_shape": [
+        27,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18254,
+      "split": "train",
+      "raw_length": 102,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 11,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18457,
+      "split": "val",
+      "raw_length": 96,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 6,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18458,
+      "split": "train",
+      "raw_length": 96,
+      "model_steps": 20,
+      "pairs": 17,
+      "latent_shape": [
+        20,
+        192
+      ],
+      "action_block_shape": [
+        19,
+        10
+      ],
+      "contact_positive_blocks": 8,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18562,
+      "split": "val",
+      "raw_length": 105,
+      "model_steps": 21,
+      "pairs": 18,
+      "latent_shape": [
+        21,
+        192
+      ],
+      "action_block_shape": [
+        20,
+        10
+      ],
+      "contact_positive_blocks": 9,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18614,
+      "split": "train",
+      "raw_length": 113,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 16,
+      "contact_source": "geometry-from-state"
+    },
+    {
+      "episode_id": 18636,
+      "split": "train",
+      "raw_length": 113,
+      "model_steps": 23,
+      "pairs": 20,
+      "latent_shape": [
+        23,
+        192
+      ],
+      "action_block_shape": [
+        22,
+        10
+      ],
+      "contact_positive_blocks": 18,
+      "contact_source": "geometry-from-state"
+    }
+  ]
+}

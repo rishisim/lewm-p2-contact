@@ -1,0 +1,23 @@
+/Users/rishisim/Documents/research/World Models/stable-worldmodel-readonly/stable_worldmodel/envs/__init__.py:215: UserWarning: ale-py not found; ALE/* envs are unavailable. Install with: pip install 'stable-worldmodel[env]' or pip install ale-py.
+  from stable_worldmodel.envs import ale  # noqa: F401
+22:23:40 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+22:23:40 | INFO  | __init__.py | Cached 'action' from '/Users/rishisim/.stable_worldmodel/datasets/pusht_expert_train.h5'
+22:23:40 | INFO  | __init__.py | Cached 'state' from '/Users/rishisim/.stable_worldmodel/datasets/pusht_expert_train.h5'
+encoded 25/200 episodes
+encoded 50/200 episodes
+encoded 75/200 episodes
+encoded 100/200 episodes
+encoded 125/200 episodes
+encoded 150/200 episodes
+encoded 175/200 episodes
+encoded 200/200 episodes
+STAGE 1 V2 EXTRACTION SUMMARY
+episodes used: 200 (train=140, val=30, test=30)
+pairs: train=3076, val=591, test=668, total=4335
+history_shape: (4335, 3, 192)
+action_history_shape: (4335, 3, 10)
+target_shape: (4335, 192)
+latent target stats: mean(mean_dim)=0.007824, std(mean_dim)=0.058493, mean(std_dim)=0.998798, min(std_dim)=0.747402, max(std_dim)=1.219927, any_nan=False
+contact labels: source=geometry-from-state, contact_pairs=1559, non_contact_pairs=2776
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1v2_latents.npz
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1v2_extraction_summary.json

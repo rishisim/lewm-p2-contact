@@ -1,0 +1,15 @@
+/Users/rishisim/Documents/research/World Models/stable-worldmodel-readonly/stable_worldmodel/envs/__init__.py:215: UserWarning: ale-py not found; ALE/* envs are unavailable. Install with: pip install 'stable-worldmodel[env]' or pip install ale-py.
+  from stable_worldmodel.envs import ale  # noqa: F401
+22:11:19 | INFO  | __init__.py | Cached 'action' from '/Users/rishisim/.stable_worldmodel/datasets/pusht_expert_train.h5'
+22:11:20 | INFO  | __init__.py | Cached 'state' from '/Users/rishisim/.stable_worldmodel/datasets/pusht_expert_train.h5'
+22:11:23 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+STAGE 1A SUMMARY
+episodes: 30 (train trajectories=20, test trajectories=10)
+pairs: train=505, test=255, total=760
+history_shape: (760, 3, 192)
+action_history_shape: (760, 3, 10)
+target_shape: (760, 192)
+latent target stats: mean(mean_dim)=0.000454, std(mean_dim)=0.106782, mean(std_dim)=0.993174, min(std_dim)=0.657970, max(std_dim)=1.216068, any_nan=False
+contact labels: source=geometry-from-state, contact_pairs=238, non_contact_pairs=522
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1a_latents.npz
+wrote: /Users/rishisim/Documents/research/World Models/prelim-p1/outputs/stage1a_summary.json

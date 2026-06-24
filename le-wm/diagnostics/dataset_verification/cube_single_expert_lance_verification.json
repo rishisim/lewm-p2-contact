@@ -1,0 +1,196 @@
+{
+  "dataset": {
+    "columns": [
+      "pixels",
+      "action",
+      "control",
+      "observation",
+      "prev_qpos",
+      "prev_qvel",
+      "privileged_block_0_pos",
+      "privileged_block_0_quat",
+      "privileged_block_0_yaw",
+      "privileged_target_block",
+      "privileged_target_block_pos",
+      "privileged_target_block_yaw",
+      "qpos",
+      "qvel",
+      "render_time",
+      "reward",
+      "success",
+      "target",
+      "terminated",
+      "time",
+      "truncated",
+      "proprio_effector_pos",
+      "proprio_effector_yaw",
+      "proprio_gripper_contact",
+      "proprio_gripper_opening",
+      "proprio_gripper_vel",
+      "proprio_joint_pos",
+      "proprio_joint_vel",
+      "proprio"
+    ],
+    "episodes": 10000,
+    "format": "LanceDataset",
+    "index_columns": [
+      "episode_idx",
+      "step_idx"
+    ],
+    "name": "/Users/rishisim/.stable_worldmodel/datasets/cube_single_expert.lance",
+    "rows": 2010000
+  },
+  "failures": [],
+  "image_parity_policy": "Skip byte equality for image columns; use bounded pixel/model-output parity.",
+  "parity": {
+    "checks": [
+      {
+        "atol": 1e-05,
+        "column": "action",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "control",
+        "max_abs_diff": 2.1996047792072204e-06,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "observation",
+        "max_abs_diff": 1.125398534362887e-07,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "qpos",
+        "max_abs_diff": 1.125398534362887e-07,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "qvel",
+        "max_abs_diff": 1.1815693978789454e-07,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "privileged_block_0_pos",
+        "max_abs_diff": 1.2573458052500541e-08,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "privileged_block_0_quat",
+        "max_abs_diff": 2.7251308987175094e-08,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "privileged_target_block_pos",
+        "max_abs_diff": 8.587155209127673e-09,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "proprio_joint_pos",
+        "max_abs_diff": 1.125398534362887e-07,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-05,
+        "column": "reward",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-05,
+        "status": "passed"
+      },
+      {
+        "column": "success",
+        "status": "passed"
+      },
+      {
+        "column": "terminated",
+        "status": "passed"
+      },
+      {
+        "column": "truncated",
+        "status": "passed"
+      }
+    ],
+    "sample_indices": [
+      0,
+      1,
+      200,
+      201,
+      123456,
+      1000000,
+      2009999
+    ]
+  },
+  "reference": {
+    "columns": [
+      "action",
+      "control",
+      "ep_idx",
+      "id",
+      "observation",
+      "pixels",
+      "prev_qpos",
+      "prev_qvel",
+      "privileged_block_0_pos",
+      "privileged_block_0_quat",
+      "privileged_block_0_yaw",
+      "privileged_target_block",
+      "privileged_target_block_pos",
+      "privileged_target_block_yaw",
+      "privileged_target_task",
+      "proprio_effector_pos",
+      "proprio_effector_yaw",
+      "proprio_gripper_contact",
+      "proprio_gripper_opening",
+      "proprio_gripper_vel",
+      "proprio_joint_pos",
+      "proprio_joint_vel",
+      "qpos",
+      "qvel",
+      "render_time",
+      "reward",
+      "step_idx",
+      "success",
+      "target",
+      "terminated",
+      "time",
+      "truncated"
+    ],
+    "episodes": 10000,
+    "format": "HDF5Dataset",
+    "index_columns": [
+      "ep_idx",
+      "step_idx"
+    ],
+    "name": "/Users/rishisim/.stable_worldmodel/source_downloads/lewm-cube/extracted/cube_single_expert.h5",
+    "rows": 2010000
+  },
+  "required_columns": [
+    "pixels",
+    "action",
+    "observation",
+    "proprio",
+    "qpos",
+    "qvel",
+    "privileged_block_0_pos",
+    "privileged_block_0_quat"
+  ],
+  "required_columns_passed": true,
+  "status": "passed"
+}

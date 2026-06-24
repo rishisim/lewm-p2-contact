@@ -79,8 +79,9 @@ Current local policy notes:
   state-rich `reacher_eval.lance` artifact with `qpos`, `qvel`, and target
   fields.
 - TwoRoom uses the verified `tworoom.lance` artifact.
-- Cube remains HDF5-backed until the true source HDF5 is available, converted,
-  and verified.
+- Cube uses the verified `cube_single_expert.lance` artifact. The original
+  `cube_single_expert.h5` remains the provenance source; the Lance conversion
+  adds a synthetic `proprio` column matching the prior HDF5 `proprio*` merge.
 
 ## Training
 

@@ -38,18 +38,48 @@ uv pip install stable-worldmodel[train,env]
 
 ## Data
 
-Datasets use the HDF5 format for fast loading. Download the data from [HuggingFace](https://huggingface.co/collections/quentinll/lewm) and decompress with:
+Dataset loading is delegated to `stable-worldmodel` through its format registry.
+Lance is the preferred working format for repeated training, evaluation
+sampling, and large pixel reads. HDF5 is kept as an import/provenance format
+when it is the original published artifact.
+
+Download source data from [HuggingFace](https://huggingface.co/collections/quentinll/lewm) and decompress with:
 
 ```bash
 tar --zstd -xvf archive.tar.zst
 ```
 
-Place the extracted `.h5` files under `$STABLEWM_HOME` (defaults to `~/.stable-wm/`). You can override this path:
+Place extracted datasets under `$STABLEWM_HOME` (defaults to
+`~/.stable_worldmodel/`). You can override this path:
 ```bash
 export STABLEWM_HOME=/path/to/your/storage
 ```
 
-Dataset names are specified without the `.h5` extension. For example, `config/train/data/pusht.yaml` references `pusht_expert_train`, which resolves to `$STABLEWM_HOME/pusht_expert_train.h5`.
+Dataset names may include their format extension. For example,
+`config/train/data/pusht.yaml` references `pusht_expert_train.lance`, which
+resolves through `swm.data.load_dataset(...)`.
+
+Before relying on a converted working artifact, run a verification smoke check:
+
+```bash
+python verify_dataset.py pusht_expert_train.lance \
+  --expected-rows 2336736 \
+  --required-column pixels \
+  --required-column action \
+  --required-column proprio \
+  --required-column state \
+  --required-column episode_idx \
+  --required-column step_idx
+```
+
+Current local policy notes:
+
+- PushT uses `pusht_expert_train.lance` for training and eval sampling.
+- Reacher training uses `reacher.lance`; Reacher eval still needs the HDF5-style
+  state-rich dataset until a Lance artifact with `qpos`, `qvel`, and goal fields
+  is created and verified.
+- TwoRoom and Cube remain HDF5-backed until their Lance conversions are created
+  and verified.
 
 ## Training
 

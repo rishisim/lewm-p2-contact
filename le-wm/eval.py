@@ -42,25 +42,39 @@ def img_transform(cfg):
     return transform
 
 
-def get_episodes_length(dataset, episodes):
-    col_name = "episode_idx" if "episode_idx" in dataset.column_names else "ep_idx"
+def get_index_columns(dataset):
+    errors = {}
+    for col_name in ("episode_idx", "ep_idx"):
+        try:
+            episode_idx = dataset.get_col_data(col_name)
+            break
+        except (KeyError, ValueError) as exc:
+            errors[col_name] = exc
+    else:
+        raise KeyError(f"Dataset has no episode index column; tried {list(errors)}")
 
-    episode_idx = dataset.get_col_data(col_name)
     step_idx = dataset.get_col_data("step_idx")
-    lengths = []
-    for ep_id in episodes:
-        lengths.append(np.max(step_idx[episode_idx == ep_id]) + 1)
-    return np.array(lengths)
+    return col_name, episode_idx, step_idx
+
+
+def get_episode_index(episode_idx, step_idx):
+    episodes, inverse = np.unique(episode_idx, return_inverse=True)
+    lengths = np.zeros(len(episodes), dtype=np.asarray(step_idx).dtype)
+    np.maximum.at(lengths, inverse, step_idx + 1)
+    return episodes, inverse, lengths
 
 
 def get_dataset(cfg, dataset_name):
-    dataset_path = Path(cfg.cache_dir or swm.data.utils.get_cache_dir())
-    dataset = swm.data.HDF5Dataset(
+    dataset_cfg = OmegaConf.to_container(cfg.dataset, resolve=True)
+    dataset_cfg.pop("stats", None)
+    dataset_cfg.setdefault("frameskip", 1)
+    dataset_cfg.setdefault("num_steps", 1)
+    dataset_cfg = {k: v for k, v in dataset_cfg.items() if v is not None}
+    return swm.data.load_dataset(
         dataset_name,
-        keys_to_cache=cfg.dataset.keys_to_cache,
-        cache_dir=dataset_path,
+        cache_dir=cfg.get("cache_dir"),
+        **dataset_cfg,
     )
-    return dataset
 
 @hydra.main(version_base=None, config_path="./config/eval", config_name="pusht")
 def run(cfg: DictConfig):
@@ -81,8 +95,10 @@ def run(cfg: DictConfig):
 
     dataset = get_dataset(cfg, cfg.eval.dataset_name)
     stats_dataset = dataset  # get_dataset(cfg, cfg.dataset.stats)
-    col_name = "episode_idx" if "episode_idx" in dataset.column_names else "ep_idx"
-    ep_indices, _ = np.unique(stats_dataset.get_col_data(col_name), return_index=True)
+    col_name, episode_idx, step_idx = get_index_columns(dataset)
+    ep_indices, episode_inverse, episode_len = get_episode_index(
+        episode_idx, step_idx
+    )
 
     process = {}
     for col in cfg.dataset.keys_to_cache:
@@ -127,17 +143,12 @@ def run(cfg: DictConfig):
     )
 
     # sample the episodes and the starting indices
-    episode_len = get_episodes_length(dataset, ep_indices)
     max_start_idx = episode_len - cfg.eval.goal_offset_steps - 1
-    max_start_idx_dict = {ep_id: max_start_idx[i] for i, ep_id in enumerate(ep_indices)}
-    # Map each dataset row’s episode_idx to its max_start_idx
-    col_name = "episode_idx" if "episode_idx" in dataset.column_names else "ep_idx"
-    max_start_per_row = np.array(
-        [max_start_idx_dict[ep_id] for ep_id in dataset.get_col_data(col_name)]
-    )
+    # Map each dataset row's episode id to its max valid start step.
+    max_start_per_row = max_start_idx[episode_inverse]
 
-    # remove all the lines of dataset for which dataset['step_idx'] > max_start_per_row
-    valid_mask = dataset.get_col_data("step_idx") <= max_start_per_row
+    # Remove rows whose goal offset would run beyond the episode.
+    valid_mask = step_idx <= max_start_per_row
     valid_indices = np.nonzero(valid_mask)[0]
     print(valid_mask.sum(), "valid starting points found for evaluation.")
 
@@ -146,13 +157,13 @@ def run(cfg: DictConfig):
         len(valid_indices) - 1, size=cfg.eval.num_eval, replace=False
     )
 
-    # sort increasingly to avoid issues with HDF5Dataset indexing
+    # Keep deterministic ascending row access across dataset backends.
     random_episode_indices = np.sort(valid_indices[random_episode_indices])
 
     print(random_episode_indices)
 
-    eval_episodes = dataset.get_row_data(random_episode_indices)[col_name]
-    eval_start_idx = dataset.get_row_data(random_episode_indices)["step_idx"]
+    eval_episodes = episode_idx[random_episode_indices]
+    eval_start_idx = step_idx[random_episode_indices]
 
     if len(eval_episodes) < cfg.eval.num_eval:
         raise ValueError("Not enough episodes with sufficient length for evaluation.")

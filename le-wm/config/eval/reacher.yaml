@@ -11,6 +11,8 @@ world:
 
 dataset:
   stats: ${eval.dataset_name}
+  num_steps: 1
+  frameskip: 1
   keys_to_cache:
     - action
 
@@ -28,7 +30,7 @@ eval:
   goal_offset_steps: 25
   eval_budget: 50
   img_size: 224
-  dataset_name: dmc/reacher_random
+  dataset_name: reacher.h5
   callables:
     # -- set state
     - method: set_state
@@ -45,4 +47,3 @@ eval:
 
 output:
   filename: dmc_results.txt
-

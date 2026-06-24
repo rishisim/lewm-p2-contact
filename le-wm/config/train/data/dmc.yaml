@@ -1,7 +1,7 @@
 dataset:
   num_steps: ${eval:'${num_preds} + ${history_size}'}
   frameskip: 5
-  name: reacher.h5
+  name: reacher.lance
   keys_to_load:
     - pixels
     - action

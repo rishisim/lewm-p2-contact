@@ -75,10 +75,11 @@ python verify_dataset.py pusht_expert_train.lance \
 Current local policy notes:
 
 - PushT uses `pusht_expert_train.lance` for training and eval sampling.
-- Reacher training uses `reacher.lance`; Reacher eval still needs the HDF5-style
-  state-rich dataset until a Lance artifact with `qpos`, `qvel`, and goal fields
-  is created and verified.
-- TwoRoom and Cube remain HDF5-backed until their Lance conversions are created
+- Reacher training uses `reacher.lance`; Reacher eval uses the verified
+  state-rich `reacher_eval.lance` artifact with `qpos`, `qvel`, and target
+  fields.
+- TwoRoom uses the verified `tworoom.lance` artifact.
+- Cube remains HDF5-backed until the true source HDF5 is available, converted,
   and verified.
 
 ## Training

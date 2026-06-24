@@ -130,6 +130,8 @@ def compare_values(
             "status": "skipped",
             "reason": "image column; use bounded pixel/model-output parity instead of byte equality",
         }
+    if left.shape != right.shape and left.size == right.size:
+        right = right.reshape(left.shape)
     if left.shape != right.shape:
         return {
             "column": column,

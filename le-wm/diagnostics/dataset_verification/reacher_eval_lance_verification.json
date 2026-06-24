@@ -1,0 +1,150 @@
+{
+  "dataset": {
+    "columns": [
+      "action",
+      "finger_pos",
+      "id",
+      "observation",
+      "pixels",
+      "qpos",
+      "qvel",
+      "render_time",
+      "reward",
+      "score",
+      "success",
+      "target_pos",
+      "terminated",
+      "truncated"
+    ],
+    "episodes": 10000,
+    "format": "LanceDataset",
+    "index_columns": [
+      "episode_idx",
+      "step_idx"
+    ],
+    "name": "reacher_eval.lance",
+    "rows": 2010000
+  },
+  "failures": [],
+  "image_parity_policy": "Skip byte equality for image columns; use bounded pixel/model-output parity.",
+  "parity": {
+    "checks": [
+      {
+        "atol": 1e-06,
+        "column": "action",
+        "max_abs_diff": 1.947395400492269e-08,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "observation",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "qpos",
+        "max_abs_diff": 9.836690884057475e-08,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "qvel",
+        "max_abs_diff": 1.0880927003853458e-07,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "target_pos",
+        "max_abs_diff": 3.592307409872042e-09,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "reward",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "score",
+        "max_abs_diff": 2.2351741811588166e-10,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "success",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-06,
+        "status": "passed"
+      },
+      {
+        "column": "terminated",
+        "status": "passed"
+      },
+      {
+        "column": "truncated",
+        "status": "passed"
+      },
+      {
+        "atol": 1e-06,
+        "column": "step_idx",
+        "max_abs_diff": 0.0,
+        "rtol": 1e-06,
+        "status": "passed"
+      }
+    ],
+    "sample_indices": [
+      0,
+      1005000,
+      2009999
+    ]
+  },
+  "reference": {
+    "columns": [
+      "action",
+      "ep_idx",
+      "finger_pos",
+      "id",
+      "observation",
+      "pixels",
+      "qpos",
+      "qvel",
+      "render_time",
+      "reward",
+      "score",
+      "step_idx",
+      "success",
+      "target_pos",
+      "terminated",
+      "truncated"
+    ],
+    "episodes": 10000,
+    "format": "HDF5Dataset",
+    "index_columns": [
+      "ep_idx",
+      "step_idx"
+    ],
+    "name": "reacher.h5",
+    "rows": 2010000
+  },
+  "required_columns": [
+    "pixels",
+    "action",
+    "observation",
+    "qpos",
+    "qvel",
+    "target_pos",
+    "episode_idx",
+    "step_idx"
+  ],
+  "required_columns_passed": true,
+  "status": "passed"
+}

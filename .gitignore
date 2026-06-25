@@ -23,6 +23,8 @@ mlruns/
 # Large local datasets/checkpoints should stay out of git.
 *.h5
 *.h5.zst
+*.tar.zst
+*.lance/
 *.pt
 *.pth
 *.ckpt

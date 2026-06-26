@@ -13,6 +13,8 @@ and full datasets out of git.
 - `cube_event_localization/`: Cube pixel-event diagnostic script and compact
   outputs. The local `cube_first30_pixel_subset.lance` cache is intentionally
   ignored because it is about 870M and reproducible from the Cube source HDF5.
+- `fetch_contact_compute/`: StableWM Fetch pilot for active manipulation
+  contact versus non-interaction prediction-error diagnostics.
 - `stage4_dryrun/`: early PushT dry-run outputs retained for provenance.
 
 ## Current Dataset Policy

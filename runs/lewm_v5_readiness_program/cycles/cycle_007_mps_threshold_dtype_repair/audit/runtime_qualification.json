@@ -1,0 +1,183 @@
+{
+  "consumed_only": true,
+  "devices": [
+    {
+      "base_provenance": {
+        "config_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+        "config_sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+        "contract": {
+          "blocked_action_dim": 25,
+          "frameskip": 5,
+          "history_size": 3,
+          "image_size": 224,
+          "latent_dim": 192,
+          "raw_action_dim": 5
+        },
+        "frozen_audit": {
+          "all_parameters_frozen": true,
+          "buffer_count": 8194,
+          "no_parameter_gradients": true,
+          "parameter_count": 18034628,
+          "state_sha256": "8a82902703c10e49732893e6e30802ee840f39436f0108eb4ce683df0865736f",
+          "training": false
+        },
+        "strict_key_mapping": "legacy_to_modern",
+        "weights_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+        "weights_sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+      },
+      "call_histogram": [
+        31,
+        6,
+        1,
+        0
+      ],
+      "checks": {
+        "cross_batch_allclose": true,
+        "cross_batch_max_abs_ceiling": true,
+        "dense_repeat_calls_exact": true,
+        "dense_repeat_exits_exact": true,
+        "dense_repeat_features_exact": true,
+        "dense_repeat_scores_exact": true,
+        "depth_one_selected_rows_exact": true,
+        "manual_sparse_vs_forward_selected_exact": true,
+        "module_after_identical": true,
+        "module_before_passed": true,
+        "sparse_dense_calls_exact": true,
+        "sparse_dense_histogram_exact": true,
+        "sparse_repeat_calls_exact": true,
+        "sparse_repeat_features_exact": true,
+        "sparse_repeat_output_exact": true,
+        "sparse_repeat_scores_exact": true
+      },
+      "consumed_episode_id": "par-smok-000",
+      "consumed_episode_sha256": "2abd6db8638e126e46d47d3da8dab79a569167388f9c0b3f8d945828ec4f03d4",
+      "cross_batch_max_abs": 1.1920928955078125e-07,
+      "cross_batch_mean_abs": 1.3837084256174137e-10,
+      "cross_batch_rmse": 3.05323366589505e-09,
+      "device": "cpu",
+      "maximum_observed_per_row_raw_mse_impact": 0.0,
+      "mean_observed_raw_mse_impact": 0.0,
+      "passed": true
+    },
+    {
+      "base_provenance": {
+        "config_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+        "config_sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+        "contract": {
+          "blocked_action_dim": 25,
+          "frameskip": 5,
+          "history_size": 3,
+          "image_size": 224,
+          "latent_dim": 192,
+          "raw_action_dim": 5
+        },
+        "frozen_audit": {
+          "all_parameters_frozen": true,
+          "buffer_count": 8194,
+          "no_parameter_gradients": true,
+          "parameter_count": 18034628,
+          "state_sha256": "8a82902703c10e49732893e6e30802ee840f39436f0108eb4ce683df0865736f",
+          "training": false
+        },
+        "strict_key_mapping": "legacy_to_modern",
+        "weights_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+        "weights_sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+      },
+      "call_histogram": [
+        31,
+        6,
+        1,
+        0
+      ],
+      "checks": {
+        "cross_batch_allclose": true,
+        "cross_batch_max_abs_ceiling": true,
+        "dense_repeat_calls_exact": true,
+        "dense_repeat_exits_exact": true,
+        "dense_repeat_features_exact": true,
+        "dense_repeat_scores_exact": true,
+        "depth_one_selected_rows_exact": true,
+        "manual_sparse_vs_forward_selected_exact": true,
+        "module_after_identical": true,
+        "module_before_passed": true,
+        "sparse_dense_calls_exact": true,
+        "sparse_dense_histogram_exact": true,
+        "sparse_repeat_calls_exact": true,
+        "sparse_repeat_features_exact": true,
+        "sparse_repeat_output_exact": true,
+        "sparse_repeat_scores_exact": true
+      },
+      "consumed_episode_id": "par-smok-000",
+      "consumed_episode_sha256": "2abd6db8638e126e46d47d3da8dab79a569167388f9c0b3f8d945828ec4f03d4",
+      "cross_batch_max_abs": 2.384185791015625e-07,
+      "cross_batch_mean_abs": 1.299109486652128e-09,
+      "cross_batch_rmse": 9.20288290018334e-09,
+      "device": "mps",
+      "maximum_observed_per_row_raw_mse_impact": 4.656612873077393e-10,
+      "mean_observed_raw_mse_impact": 9.19068293692149e-12,
+      "passed": true
+    }
+  ],
+  "fixed_contract": {
+    "atol": 2e-07,
+    "maximum_absolute_error_ceiling": 4.76837158203125e-07,
+    "rtol": 2e-06
+  },
+  "input_loader": {
+    "archive_key_names_observed_without_array_load": [
+      "action",
+      "control",
+      "env_seed",
+      "observation",
+      "oracle_np_seed",
+      "phase",
+      "pixels",
+      "policy_seed",
+      "policy_type",
+      "prev_qpos",
+      "prev_qvel",
+      "privileged_block_0_pos",
+      "privileged_block_0_quat",
+      "privileged_block_0_yaw",
+      "privileged_target_block",
+      "privileged_target_block_pos",
+      "privileged_target_block_yaw",
+      "privileged_target_task",
+      "proprio_effector_pos",
+      "proprio_effector_yaw",
+      "proprio_gripper_contact",
+      "proprio_gripper_opening",
+      "proprio_gripper_vel",
+      "proprio_joint_pos",
+      "proprio_joint_vel",
+      "qpos",
+      "qvel",
+      "reward",
+      "slot",
+      "step_idx",
+      "success",
+      "terminated",
+      "time",
+      "trajectory_id",
+      "truncated"
+    ],
+    "contact_or_privileged_loaded": false,
+    "forbidden_arrays_materialized": false,
+    "loaded_keys": [
+      "action",
+      "pixels"
+    ]
+  },
+  "passed": true,
+  "prospective_episodes": 0,
+  "requested_devices": [
+    "cpu",
+    "mps"
+  ],
+  "schema_version": 1,
+  "tested_devices": [
+    "cpu",
+    "mps"
+  ],
+  "v5_outcome_episodes": 0
+}

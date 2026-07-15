@@ -1,0 +1,17 @@
+{
+  "main_targets_opened": false,
+  "schema_version": 1,
+  "sealed_files": {
+    "runs/lewm_adaptive_compute_distribution_contract/PROTOCOL_AMENDMENT_01.md": "ea7218bf95a7dc17bf06259632b5a5fd5158556754bdb51c96c6a0640a3ee34d",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/pre_generation_seal.json": "e59480b81715f28d32ea8fddb9735f3bfcc293b6aad5669c46234ec33a5c9a02",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/smoke_pairing.json": "228d2f3df7d5bb456cd7567db37b7f9f9967a43faf96e65cc288ce1399903f8c",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/smoke_pairing_pre_amendment_failed.json": "b618f6c0b6ae30fa51aab4c82cb94b4b1a4fcc6a665273ed70aa812ff1445fe1",
+    "runs/lewm_adaptive_compute_distribution_contract/bounded_check_with_amendment.py": "47432a2c892ee95a2eacae9249ce9fa85da982c8a3d8f8e25f09d8b45cc5ddcd",
+    "runs/lewm_adaptive_compute_distribution_contract/generator_seedfix.py": "f8a6a79d3ea6d093bbab18d4e903bc8f1611717d85e2d31ae88128a98199357d",
+    "runs/lewm_adaptive_compute_distribution_contract/protocol_amendment_01.json": "8c55f6a855eb20a987aac7473a085548f75b7006ff8c85d11c2d268bc273f57b",
+    "runs/lewm_adaptive_compute_distribution_contract/report_with_amendment.py": "78827d1289ae360fc8664977c23d6ad93cf3b79a9187330ba18f4b0529c4e3a6"
+  },
+  "status": "frozen_before_any_main_rollout",
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

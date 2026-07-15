@@ -1,0 +1,42 @@
+{
+  "DGP": {
+    "action_normalization": "frozen released-model normalizer",
+    "constructor": "single-agent 224x224, 200 steps, frameskip 5",
+    "environment": "swm/OGBCube-v0",
+    "history": 3,
+    "packages": {
+      "gymnasium": "resolved at generation",
+      "mujoco": "resolved at generation",
+      "ogbench": "resolved at generation",
+      "stable-worldmodel": "resolved at generation"
+    },
+    "policy": "PlanOracle action_noise=.1 p_random_action=0 noise_smoothing=.5 min_norm=.4",
+    "reset": "distribution-contract deterministic reset amendment",
+    "targets": "next-step frozen-base latent, model steps 3..40"
+  },
+  "compute": "base=70,529,190 FLOPs/row; mandatory depth1=669,184; each later adapter=264,960. Gate FLOPs derived from actual selected architecture: linear scalar head=2D-1; shared MLP=2D*H+2H+2H+1 including affine normalization and activations; dual linear=2*(2D-1)+1 minimax. Evaluate gate at each reached decision. Analytic comparator linearly interpolates adjacent fixed depths to exact adaptive total FLOPs. Conservative seeded comparator uses ceil-equivalent total calls, weakly more FLOPs. Histogram comparator independently permutes adaptive calls within episode using seed 1750888888.",
+  "contact": "post-hoc only and not collected for decision artifacts",
+  "features": "1046 causal features from history latents, normalized actions, current prediction, last update, scalar summaries; stage one-hot; no contact/state/future/target",
+  "forbidden": [
+    "released HDF5 access",
+    "V3 target/cache access",
+    "V4 selection or confirmation use",
+    "V5 launch",
+    "generator reconstruction/distribution matching claim",
+    "first adaptive world model claim"
+  ],
+  "frozen_objects": "base and stagewise depth-4 refiner from prior sealed runtime; inference-only, no gradients",
+  "latency": "synchronized MPS after statistical verdict only; excluded from decision",
+  "prospective": "generated only after selected gate freeze seal verifies; one evaluation; no peeking/expansion/retuning",
+  "related_work": "LoopWM is relevant prior adaptive-computation work in text environments.",
+  "roles": {
+    "fit": 120,
+    "prospective": 180,
+    "selection": 60,
+    "smoke": 12
+  },
+  "schema_version": 1,
+  "selection": "fit candidates on fit only, thresholds are fit-score quantiles; evaluate locked selection once; require positive point benefits raw and native-whitened plus audits; fixed tie-break",
+  "study": "PlanOracle-native adaptive-depth prospective discovery",
+  "whitening": "fit targets only: centered covariance eigendecomposition with eigenvalue floor max(1e-8, 1e-4*median positive eigenvalue); matrix V diag(1/sqrt(clipped eigenvalues)) V^T; frozen before selection"
+}

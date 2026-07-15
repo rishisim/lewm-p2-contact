@@ -1,0 +1,128 @@
+{
+  "checks": {
+    "adaptive_native_whitened_mse_reproduced": true,
+    "adaptive_raw_mse_reproduced": true,
+    "analytic_mixture_mapping_reproduced": true,
+    "chronology": true,
+    "effects_and_individual_intervals_reproduced": true,
+    "exact_call_histogram_reproduced": true,
+    "exact_calls_reproduced_from_scores": true,
+    "exact_compute_reproduced": true,
+    "frozen_modules_and_gradients": true,
+    "input_isolation": true,
+    "latency_separate_and_smoke_validated": true,
+    "numerical_equivalence_reproduced": true,
+    "operation_graph_rederived": true,
+    "pre_data_seal": true,
+    "raw_path_set_complete": true,
+    "required_path_set_present": true,
+    "seed_isolation": true,
+    "seeded_baseline_weakly_more_compute": true,
+    "simultaneous_bounds_reproduced": true,
+    "stagewise_ranks_reproduced": true,
+    "terminal_mapping_reproduced": true,
+    "within_episode_histograms_reproduced": true,
+    "zero_v5_outcomes": true
+  },
+  "created_unix_ns": 1784147280824195000,
+  "implementation_independent_of_analyze_py": true,
+  "interval_matches": {
+    "native_whitened_vs_analytic": true,
+    "native_whitened_vs_within_episode_histogram": true,
+    "raw_vs_analytic": true,
+    "raw_vs_fixed_d1": true,
+    "raw_vs_seeded": true,
+    "raw_vs_within_episode_histogram": true
+  },
+  "passed": true,
+  "read_only_scientific_inputs": true,
+  "recomputed": {
+    "adaptive_planoracle_native_whitened_mse": 0.09746306072047338,
+    "adaptive_raw_mse": 0.0033378878820847302,
+    "adaptive_total_flops": 812738956763,
+    "calls": 15026,
+    "criteria": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0005786113013359582,
+        "lower": 0.00031851722750023673,
+        "upper": 0.0008528040017971025
+      },
+      "native_whitened_vs_within_episode_histogram": {
+        "estimate": 0.00045695184533580936,
+        "lower": 0.0003217751662281569,
+        "upper": 0.000594645525150616
+      },
+      "raw_vs_analytic": {
+        "estimate": 8.281764631369647e-06,
+        "lower": 4.339746977406348e-06,
+        "upper": 1.2467133389902378e-05
+      },
+      "raw_vs_fixed_d1": {
+        "estimate": 2.1108278910198727e-05,
+        "lower": 1.5886953374069933e-05,
+        "upper": 2.6699708229804585e-05
+      },
+      "raw_vs_seeded": {
+        "estimate": 7.601099646016377e-06,
+        "lower": 2.65825990853969e-06,
+        "upper": 1.2668770317835355e-05
+      },
+      "raw_vs_within_episode_histogram": {
+        "estimate": 6.8017063787048005e-06,
+        "lower": 3.3243117956871836e-06,
+        "upper": 1.0290143242056518e-05
+      }
+    },
+    "gate_evaluations": 14599,
+    "operation_graph": {
+      "feature_flops": 3801,
+      "nonflop_operations": 5,
+      "score_flops": 4196
+    },
+    "seeded_total_flops": 812739055920,
+    "simultaneous_co_primary": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0005786113013359582,
+        "familywise_alpha": 0.05,
+        "lower": 0.00031851722750023673,
+        "method": "bonferroni_two_endpoint_one_sided_percentile",
+        "per_endpoint_alpha": 0.025
+      },
+      "raw_vs_analytic": {
+        "estimate": 8.281764631369647e-06,
+        "familywise_alpha": 0.05,
+        "lower": 4.339746977406348e-06,
+        "method": "bonferroni_two_endpoint_one_sided_percentile",
+        "per_endpoint_alpha": 0.025
+      }
+    },
+    "stagewise_rank": [
+      {
+        "positive_sign": true,
+        "reached_rows": 11400,
+        "spearman_score_gain_rho": 0.230495124146955,
+        "stage": 1
+      },
+      {
+        "positive_sign": false,
+        "reached_rows": 2508,
+        "spearman_score_gain_rho": -0.014507232936397519,
+        "stage": 2
+      },
+      {
+        "positive_sign": false,
+        "reached_rows": 691,
+        "spearman_score_gain_rho": -0.007833892043212394,
+        "stage": 3
+      }
+    ],
+    "terminal_mapping": "cycle_execution_invalid"
+  },
+  "schema_version": 1,
+  "simultaneous_matches": {
+    "native_whitened_vs_analytic": true,
+    "raw_vs_analytic": true
+  },
+  "terminal_outcome_after_independent_audit": "cycle_execution_invalid",
+  "v5_outcome_episodes": 0
+}

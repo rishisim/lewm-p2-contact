@@ -1,0 +1,17 @@
+{
+  "archive_members_inspected": 1,
+  "archive_payload_bytes": 1048576,
+  "archive_payload_cap": 16777216,
+  "combined_v3_cache_numpy_loaded": false,
+  "cube_environment_executions": 0,
+  "hdf5_rows_opened": 0,
+  "http_request_cap": 48,
+  "http_requests_conservative": 28,
+  "model_or_gate_rows": 0,
+  "policy_trajectories": 0,
+  "revision_count": 6,
+  "signed_commits_unverified_public_key_absent": 5,
+  "unsigned_commits": 1,
+  "v3_test_targets_opened": false,
+  "v5_episodes": 0
+}

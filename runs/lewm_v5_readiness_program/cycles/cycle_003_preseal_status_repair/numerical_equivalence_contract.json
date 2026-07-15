@@ -1,0 +1,116 @@
+{
+  "acceptance_checks": {
+    "ceiling_exceeds_or_equals_all_consumed_diagnostics": true,
+    "ceiling_is_exactly_two_times_largest_consumed_discrepancy": true,
+    "cpu_mps_runtime_qualification_passed": true,
+    "raw_bound_below_two_percent_of_smallest_consumed_raw_effect": true,
+    "repository_tighter_tolerances_adopted": true,
+    "white_bound_below_five_percent_of_smallest_consumed_white_effect": true
+  },
+  "consumed_evidence": {
+    "ceiling_multiple_of_largest_observed": 2.0,
+    "largest_observed_cross_batch_max_abs": 2.384185791015625e-07,
+    "repository_rtol_2e_6_atol_2e_7_present": true,
+    "repository_selected_execution_test_path": "runs/lewm_adaptive_compute_discovery/tests/test_models.py",
+    "repository_selected_execution_test_sha256": "2b78f4b234ccd2fec03ebf68943ed50569770a9003d5d0b27c1ae56390a78a26",
+    "runtime_qualification_path": "runs/lewm_v5_readiness_program/cycles/cycle_003_preseal_status_repair/audit/runtime_qualification.json",
+    "runtime_tested_devices": [
+      "cpu",
+      "mps"
+    ],
+    "sources": [
+      {
+        "path": "runs/lewm_adaptive_compute_discovery/metrics/internal_stagewise__full.json",
+        "sha256": "01f1195ca3f813c7b9b6f3434a7d85531bda8dc2f80295f6e58ec3d6c438a328"
+      },
+      {
+        "path": "runs/lewm_adaptive_compute_v4/metrics/runtime.json",
+        "sha256": "8627b96aa6afde5ef726bd0d48979511f50233e0e36d10206f89c6e29f444a02"
+      },
+      {
+        "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/latency.json",
+        "sha256": "04248a26612932b545d488d0b7598d8bacf1198ae29c8980d29b4aadad80fba0"
+      }
+    ]
+  },
+  "cycle_001_prospective_used_to_change_contract": false,
+  "passed": true,
+  "prospective_episodes_used_to_choose_contract": 0,
+  "scale_justification": {
+    "bound_formula": "|MSE(p+e,t)-MSE(p,t)| <= 2*RMSE(p-t)*RMSE(e)+RMSE(e)^2; raw RMSE(e)<=ceiling and whitened RMSE(e)<=||W||2*ceiling",
+    "ceiling_fraction_of_latent_raw_rmse": 8.187977565118868e-06,
+    "every_consumed_primary_contrast": {
+      "raw_vs_analytic": {
+        "consumed_estimate": 6.272914235951081e-06,
+        "consumed_lower_bound": 1.4442872489748991e-06,
+        "fraction_of_consumed_effect_estimate": 0.00885372364186888,
+        "fraction_of_consumed_positive_lower_bound": 0.03845401883432482,
+        "maximum_contrast_shift_bound": 5.5538649074255947e-08,
+        "scale": "raw"
+      },
+      "raw_vs_fixed_d1": {
+        "consumed_estimate": 2.338360115201628e-05,
+        "consumed_lower_bound": 1.676205251721664e-05,
+        "fraction_of_consumed_effect_estimate": 0.002375111032436809,
+        "fraction_of_consumed_positive_lower_bound": 0.003313356107028724,
+        "maximum_contrast_shift_bound": 5.5538649074255947e-08,
+        "scale": "raw"
+      },
+      "raw_vs_histogram": {
+        "consumed_estimate": 1.2603035616513427e-05,
+        "consumed_lower_bound": 6.716646356703105e-06,
+        "fraction_of_consumed_effect_estimate": 0.004406767604582908,
+        "fraction_of_consumed_positive_lower_bound": 0.008268806503237924,
+        "maximum_contrast_shift_bound": 5.5538649074255947e-08,
+        "scale": "raw"
+      },
+      "raw_vs_seeded": {
+        "consumed_estimate": 6.353936853774181e-06,
+        "consumed_lower_bound": 9.739428238334003e-07,
+        "fraction_of_consumed_effect_estimate": 0.00874082483858279,
+        "fraction_of_consumed_positive_lower_bound": 0.05702454776108728,
+        "maximum_contrast_shift_bound": 5.5538649074255947e-08,
+        "scale": "raw"
+      },
+      "white_vs_analytic": {
+        "consumed_estimate": 0.0007330466678777008,
+        "consumed_lower_bound": 0.00039554873719100433,
+        "fraction_of_consumed_effect_estimate": 0.028412450398418818,
+        "fraction_of_consumed_positive_lower_bound": 0.0526550842728238,
+        "maximum_contrast_shift_bound": 2.082765209080137e-05,
+        "scale": "native_whitened"
+      },
+      "white_vs_histogram": {
+        "consumed_estimate": 0.0012925336039122076,
+        "consumed_lower_bound": 0.0008909769502663497,
+        "fraction_of_consumed_effect_estimate": 0.016113818648707288,
+        "fraction_of_consumed_positive_lower_bound": 0.023376196302917967,
+        "maximum_contrast_shift_bound": 2.082765209080137e-05,
+        "scale": "native_whitened"
+      }
+    },
+    "latent_raw_rmse": 0.0582362560731079,
+    "native_whitened_per_row_mse_shift_bound": 2.082765209080137e-05,
+    "native_whitening_operator_norm": 70.52821937164411,
+    "raw_per_row_mse_shift_bound": 5.5538649074255947e-08
+  },
+  "schema_version": 1,
+  "scope": "cross-batch-shape selected latent tensors only",
+  "status": "carried_forward_unchanged_before_new_cycle_003_smoke",
+  "still_bitwise_exact": [
+    "call decisions",
+    "stopping depths",
+    "call histograms",
+    "gate scores and features when the same sparse path is repeated",
+    "manual sparse output versus StagewiseResidualCascade.forward_selected",
+    "depth-one selected rows"
+  ],
+  "tensor_contract": {
+    "both_allclose_and_ceiling_required": true,
+    "independent_maximum_absolute_error_ceiling": 4.76837158203125e-07,
+    "torch_allclose_atol": 2e-07,
+    "torch_allclose_rtol": 2e-06
+  },
+  "tolerance_never_applies_to_calls_or_gate_repeatability": true,
+  "v5_outcome_episodes": 0
+}

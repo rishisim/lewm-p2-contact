@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "verdict": "adaptive_refiner_headroom_failed",
+  "sha256": {
+    "PLAN.md": "21efb81487e7eee4506f20318791a7d54fdfca7c33c5c356374e344089dce9bf",
+    "README.md": "44eb77cda2fce8819bf165f8a2a2cdd94b61cde1e49e001b5047fed486b9e34a",
+    "REPORT.md": "f9e909f9d6067803f5e3cd2a208a0e402bff0af42a8494d51346f4648b32f5a6",
+    "decision.json": "687c06c17fd6f18d17f7618794087df3748c6ca89d708d2cb878ac4135cc507f",
+    "preregistration.json": "f0298ad324f393114c87791fd2d2049bc9ced82ed65e9aaa8c56a4cc3c0d33c0",
+    "full_config.json": "63a83582217666eed01d2d5382d68c88b59e4aed3704792968aba2b5c57c8744",
+    "smoke_config.json": "bdd50bef8cdeb367b38086d004bf0ab73ff244071f10cf18b9e9a08b13041448",
+    "provenance.json": "6b626cc08f6a556fdd4d7df9e7359462eb3892bd1c73061e42bfa6b1cf7e64e5",
+    "cache/planned_split.json": "f75bd2b5b71f53ec3f14a100527e2052640263972ad0e7ac74981e49b8abf588",
+    "cache/split_manifest.json": "4b9344b6ff2acce4c58c3b296ba2017b0122f8f8158f45088239712ce94b7030",
+    "cache/cube_inputs.npz": "21377c283136008ae07aa4d1e00407ab57eaba5ddda7d5b1c740c47e55afaba0",
+    "metrics/policy_metrics.csv": "d11d7913acec38dd46d664db9784edbb289b5667659510ef7994e3e4df181c53",
+    "metrics/paired_comparisons.csv": "e1b3e9a3ab1c21f08afe9a31b226de06fa5a0d18f3f8370700b07036185421bd",
+    "metrics/frontier.csv": "9ab25a3285de5b93194d891d64064e2422bd7cc40009aa469eb7572e5b105a76",
+    "metrics/seed_stability.csv": "955c02812a4726fce9107e64c73ec870a408ec6b7b5e59651105ca59460f469f",
+    "metrics/seed_aggregation.json": "24ead6e3dedbc1e9670ba482623dd9faff198eaf60f379c1b4f00554c00ba34a",
+    "metrics/calibrated_thresholds.csv": "5f087ab4a0145972f1d50920f01dae4a76119c71aab9b8478ed50ce1793d7952",
+    "metrics/test_allocations_frozen_pre_outcome.npz": "60b719cffdf67b4cb2ce7e4dd4f31b16e5180a1fa0d67bffe074b50c278a63df",
+    "metrics/latency_baselines.json": "851b8d0570ac3453efc1ab1e152b8ac20899bac5c43c61981bcda08f9280db93",
+    "checkpoints/joint_seed_260913.pt": "7f21db75cfaeae7ad6eb6b869dd4297cc7673be77a02c68bb597fc7a24593e41",
+    "checkpoints/joint_seed_260914.pt": "8475542f594c0607b816ef3f480ff95dddbdcb3a5c1ec5c02ee0550e640138a1",
+    "checkpoints/joint_seed_260915.pt": "99d8541d9e38fbea5344b4aeae019a719ccc3e69ed07a0855dfc74f1a59c432c",
+    "figures/01_compute_error_pareto.png": "c80169db76a28616e9ca178e9036340808a7d055b200e718f035679d1f1e9382",
+    "figures/02_allocation.png": "671f38767e6e1bb688efca4cc8043445cf0c09a9dcc7545e9bb7c3940124dac9",
+    "figures/03_calibration_transfer.png": "574996ada5617d46727173c0aed19c429624e5b6aa799f31f8a2d0ce28b084aa",
+    "figures/04_seed_stability.png": "fa4db4cd112c6b9a99977a4ffc74b828b6461e676fe8e7467abb6dfe60a55681",
+    "figures/05_posthoc_regimes.png": "15d8d141a466ae7818096224fb94db4b823a1a767aa0eb78bf652d13092053b4"
+  }
+}

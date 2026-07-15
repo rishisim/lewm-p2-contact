@@ -1,0 +1,117 @@
+{
+  "figures": {
+    "exact_allocation": {
+      "byte_count": 109877,
+      "channels": 4,
+      "height_px": 920,
+      "path": "03_exact_allocation_histogram.png",
+      "sha256": "62f7c3bf580124f6de9c062a05d39d28b53d95d0f72ebddf1dca483888e25bb2",
+      "width_px": 1856
+    },
+    "gate_diagnostics": {
+      "byte_count": 141245,
+      "channels": 4,
+      "height_px": 812,
+      "path": "02_gate_calibration_quantiles.png",
+      "sha256": "ff58983f2c1a77e65f5b67f79d639add21f110ff27ad95f5017ef05e05000b68",
+      "width_px": 2216
+    },
+    "policy_performance": {
+      "byte_count": 221370,
+      "channels": 4,
+      "height_px": 1460,
+      "path": "01_policy_losses_and_comparisons.png",
+      "sha256": "a850250e57e18d56dbfc5624878d45fda8dd180b2bc0a41a9e654b1db0c68b17",
+      "width_px": 2535
+    },
+    "posthoc_regimes": {
+      "byte_count": 134690,
+      "channels": 4,
+      "height_px": 830,
+      "path": "04_posthoc_regimes.png",
+      "sha256": "026101059c7adc16edf4563f5b1cf45d332f53a4f071e3175a6bc8f491f59f21",
+      "width_px": 2144
+    }
+  },
+  "schema_version": 1,
+  "sources": {
+    "allocation_rows": {
+      "columns": [
+        "count",
+        "depth",
+        "fraction",
+        "policy",
+        "total_calls"
+      ],
+      "row_count": 18,
+      "sha256": "7cb02b2753a0594baac63d6ced0df797e97f93485fae8fba019e5c0d9e8df7f8"
+    },
+    "calibration_rows": {
+      "columns": [
+        "actual_mean",
+        "benefit",
+        "mae",
+        "pearson",
+        "predicted_mean",
+        "rmse",
+        "scope",
+        "spearman"
+      ],
+      "row_count": 2,
+      "sha256": "cd60e6e6c992b3f30dc74ae86acf456eba6b6334625eec049a5526915d94add4"
+    },
+    "comparison_rows": {
+      "columns": [
+        "comparison",
+        "raw_ci_lower",
+        "raw_ci_upper",
+        "raw_mean_difference",
+        "whitened_ci_lower",
+        "whitened_ci_upper",
+        "whitened_mean_difference"
+      ],
+      "row_count": 6,
+      "sha256": "2140c45fec9a017ee0c4315b88801e2a5d4aefe05406dd16bb931fb2b29ab121"
+    },
+    "policy_rows": {
+      "columns": [
+        "continuation_calls",
+        "depth_1",
+        "depth_2",
+        "depth_4",
+        "diagnostic_only",
+        "first_calls",
+        "mean_calls",
+        "policy",
+        "raw_mean_loss",
+        "total_calls",
+        "whitened_mean_loss"
+      ],
+      "row_count": 6,
+      "sha256": "0b8fd91b164287fe1e5907fa032670147b042d4b426c5b55802a35ce6f5f9183"
+    },
+    "quantile_rows": {
+      "columns": [
+        "benefit",
+        "count",
+        "mean_actual",
+        "mean_predicted",
+        "quantile"
+      ],
+      "row_count": 10,
+      "sha256": "b759cf31abd20532153bd24d04d72e00f4dbcaf2b13be2ab41c93b6efeb7f9a6"
+    },
+    "regime_rows": {
+      "columns": [
+        "count",
+        "depth",
+        "fraction",
+        "n",
+        "raw_benefit_vs_uniform",
+        "regime"
+      ],
+      "row_count": 12,
+      "sha256": "fbfc3a30bb0332fbeb728a9401e47dc6472d60873155395b24d5488e7194b1fa"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "bounded_replay_passed": true,
+  "bounded_replay_sha256": "d7da3065815a18422fa95ca1f4f1adf8b6f42c622056265a59f1dca159c2cc96",
+  "confirmatory_claim": false,
+  "contact_aware_claim": false,
+  "direct_action_semantics_verified": true,
+  "exact_pixels_observation_qpos_qvel_replay": true,
+  "future_entirely_fresh_v5_confirmation_authorized": false,
+  "gate_interpretation": "The frozen gate passed every raw/FLOP/ranking criterion but had negative whitened point benefit. Because the distribution contract failed first, this is not a matched-distribution gate verdict and cannot motivate tuning here.",
+  "mechanical_decision": "generator_reconstruction_failed",
+  "new_environment_seeds_in_diagnostic": 0,
+  "new_policy_trajectories_in_diagnostic": 0,
+  "next_highest_information_step": "Obtain or reconstruct the exact released HDF5 generator provenance (environment implementation, reset semantics, horizon, command/config, and seed handling), then preregister a new bounded generator-reconstruction study. Do not tune the gate or launch V5.",
+  "preregistered_failure_branch_completed": true,
+  "remaining_unresolved_generator_differences": [
+    "released offline HDF5 lacks its exact generation commit/config/seed manifest",
+    "public upstream command horizon is 1001 while released local episodes use 200 actions",
+    "installed stable-worldmodel Cube reset semantics differ from the public OGBench generator path"
+  ],
+  "schema_version": 1,
+  "v3_test_targets_opened": false,
+  "v5_launched": false
+}

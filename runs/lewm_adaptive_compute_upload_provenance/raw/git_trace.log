@@ -1,0 +1,358 @@
+Cloning into 'dataset_git'...
+20:11:18.506708 http.c:889              == Info: Couldn't find host huggingface.co in the .netrc file; using defaults
+20:11:18.508405 http.c:889              == Info: Host huggingface.co:443 was resolved.
+20:11:18.508413 http.c:889              == Info: IPv6: (none)
+20:11:18.508416 http.c:889              == Info: IPv4: 18.238.109.92, 18.238.109.121, 18.238.109.52, 18.238.109.102
+20:11:18.508427 http.c:889              == Info:   Trying 18.238.109.92:443...
+20:11:18.517709 http.c:889              == Info: Connected to huggingface.co (18.238.109.92) port 443
+20:11:18.517764 http.c:889              == Info: ALPN: curl offers h2,http/1.1
+20:11:18.517839 http.c:889              == Info: (304) (OUT), TLS handshake, Client hello (1):
+20:11:18.517843 http.c:862              => Send SSL data, 0000000319 bytes (0x0000013f)
+20:11:18.517845 http.c:877              => Send SSL data: ...;...q......FF.mR..@...o..1.1K....z] v@.R....B..{.W...D.vF
+20:11:18.517847 http.c:877              => Send SSL data: .1.-.(%...'.b.............0.,.(.$.......k.9...........=.5...
+20:11:18.517849 http.c:877              => Send SSL data: ../.+.'.#.......g.3...E...<./...A.......................+...
+20:11:18.517851 http.c:877              => Send SSL data: .........3.&.$... .|+......}.........a.;.m.?....}1.........h
+20:11:18.517853 http.c:877              => Send SSL data: uggingface.co...............................................
+20:11:18.517855 http.c:877              => Send SSL data: ........h2.http/1.1
+20:11:18.519640 http.c:889              == Info:  CAfile: /etc/ssl/cert.pem
+20:11:18.519644 http.c:889              == Info:  CApath: none
+20:11:18.530677 http.c:889              == Info: (304) (IN), TLS handshake, Server hello (2):
+20:11:18.530691 http.c:862              <= Recv SSL data, 0000000122 bytes (0x0000007a)
+20:11:18.530698 http.c:877              <= Recv SSL data: ...v..E{.P....T...l.W..,.Y...I..~q^.m. v@.R....B..{.W...D.vF
+20:11:18.530705 http.c:877              <= Recv SSL data: .1.-.(%...'......+.....3.$... K^K.[,.fn.a..-.z....Q....?K..
+20:11:18.530712 http.c:877              <= Recv SSL data: a^
+20:11:18.530824 http.c:889              == Info: (304) (IN), TLS handshake, Unknown (8):
+20:11:18.530827 http.c:862              <= Recv SSL data, 0000000019 bytes (0x00000013)
+20:11:18.530829 http.c:877              <= Recv SSL data: .................h2
+20:11:18.530855 http.c:889              == Info: (304) (IN), TLS handshake, Certificate (11):
+20:11:18.530858 http.c:862              <= Recv SSL data, 0000003811 bytes (0x00000ee3)
+20:11:18.530860 http.c:877              <= Recv SSL data: ...........0...0.............T..U/.Nw.z...0...*.H........0<1
+20:11:18.530862 http.c:877              <= Recv SSL data: .0...U....US1.0...U....Amazon1.0...U....Amazon RSA 2048 M040
+20:11:18.530864 http.c:877              <= Recv SSL data: ...260314000000Z..260927235959Z0.1.0...U....huggingface.co0.
+20:11:18.530866 http.c:877              <= Recv SSL data: ."0...*.H.............0.........#.w..>...0_....~...F.....k..
+20:11:18.530868 http.c:877              <= Recv SSL data: ....C...;o...B.m4v..z.^...!...G.y.C.......w.K2....a......QK.
+20:11:18.530870 http.c:877              <= Recv SSL data: .i`?u... ......%.m....."..Y.}.M..1.Z.VT...t...5.....f.....t
+20:11:18.530872 http.c:877              <= Recv SSL data: ..{fx.,......+.........i........t...F}....a...i..A......M...
+20:11:18.530879 http.c:877              <= Recv SSL data: ...6He.]E.(.;#\H_.BH.....:m......P......................0...
+20:11:18.530881 http.c:877              <= Recv SSL data: 0...U.#..0....R.aV.T.f..=..2\...0...U......a.......B..c...R
+20:11:18.530883 http.c:877              <= Recv SSL data: ..030+..U...$0"..huggingface.co..*.huggingface.co0...U. ..0.
+20:11:18.530885 http.c:877              <= Recv SSL data: 0...g.....0...U...........0...U.%..0...+.......0;..U...40200
+20:11:18.530887 http.c:877              <= Recv SSL data: ...,.*http://crl.r2m04.amazontrust.com/r2m04.crl0u..+.......
+20:11:18.530889 http.c:877              <= Recv SSL data: .i0g0-..+.....0..!http://ocsp.r2m04.amazontrust.com06..+....
+20:11:18.530901 http.c:877              <= Recv SSL data: .0..*http://crt.r2m04.amazontrust.com/r2m04.cer0...U.......0
+20:11:18.530903 http.c:877              <= Recv SSL data: .0..~..+.....y......n...j.h.v..1~WE..E.8...A...!Z"....v...
+20:11:18.530904 http.c:877              <= Recv SSL data: R......?Z......G0E. 1..T.......V]a...^...?.....;.N...!..{...
+20:11:18.530906 http.c:877              <= Recv SSL data: =.\.\..9.(5..a?JM.nU.......u..m}....w..._......3Ze....s....
+20:11:18.530907 http.c:877              <= Recv SSL data: iw.....?Z......F0D. \)..R.....O......O[B.TA".,m.`RQ. .Pa.H.
+20:11:18.530909 http.c:877              <= Recv SSL data: #\,..j....z......,..@|..i.w..NC........$&..e..._8..?rg}U7..
+20:11:18.530910 http.c:877              <= Recv SSL data: ......?Z......H0F.!...^.5..Us..b....P......L.r).....!......
+20:11:18.530911 http.c:877              <= Recv SSL data: ..y....Cm&...$bPf......FX.$0...*.H.............,.!_O.<..R{D
+20:11:18.530913 http.c:877              <= Recv SSL data: _X?.P.............}w{t.O....s'...U...O'.+..W.'&.3.....L..z8e
+20:11:18.530914 http.c:877              <= Recv SSL data: ....!.C..1v.""...g.8.......C..X.H.............G`.H@ ....5...
+20:11:18.530916 http.c:877              <= Recv SSL data: 1D0s.;[............~h+..Q.O-..K..wXlR..+.t.....6i.?.cF.e..7.
+20:11:18.530917 http.c:877              <= Recv SSL data: ..............X\w.&..2........D.D......K.|.I..`Klk.n&l....[
+20:11:18.530919 http.c:877              <= Recv SSL data: bCL....b0..^0..F........s.O*..>..X..]..._'0...*.H........091
+20:11:18.530920 http.c:877              <= Recv SSL data: .0...U....US1.0...U....Amazon1.0...U....Amazon Root CA 10...
+20:11:18.530921 http.c:877              <= Recv SSL data: 220823222635Z..300823222635Z0<1.0...U....US1.0...U....Amazon
+20:11:18.530923 http.c:877              <= Recv SSL data: 1.0...U....Amazon RSA 2048 M040.."0...*.H.............0.....
+20:11:18.530924 http.c:877              <= Recv SSL data: .....U..........]x..z8.....Z.....^.~...J..X...@q.k%.%.g....
+20:11:18.530926 http.c:877              <= Recv SSL data: ..D..R.l..I.T.gr.8...j..Z....9..'g.....x-'....h..X.&`....._.
+20:11:18.530927 http.c:877              <= Recv SSL data: .m7,D..&.{.....'..[K`......t.Y.................~.....3Hp...A
+20:11:18.530928 http.c:877              <= Recv SSL data: . .......R..:b....>....'..|...d.6.N..'...&.h.....]......0.4.
+20:11:18.530930 http.c:877              <= Recv SSL data: o. ..k}..o......m.Y........Z0..V0...U.......0.......0...U...
+20:11:18.530931 http.c:877              <= Recv SSL data: ........0...U.%..0...+.........+.......0...U.......R.aV.T.f
+20:11:18.530933 http.c:877              <= Recv SSL data: ..=..2\...0...U.#..0.......4.......Y....N..0{..+........o0m0
+20:11:18.530934 http.c:877              <= Recv SSL data: /..+.....0..#http://ocsp.rootca1.amazontrust.com0:..+.....0.
+20:11:18.530936 http.c:877              <= Recv SSL data: ..http://crt.rootca1.amazontrust.com/rootca1.cer0?..U...8060
+20:11:18.530937 http.c:877              <= Recv SSL data: 4.2.0..http://crl.rootca1.amazontrust.com/rootca1.crl0...U. 
+20:11:18.530938 http.c:877              <= Recv SSL data: ..0.0...g.....0...*.H.............>..T....m..2m....v].....i.
+20:11:18.530940 http.c:877              <= Recv SSL data: ..i^*...K....O.'.a)Cd^r.S......n$v?..uo.H.a.........LZ...P.&
+20:11:18.530941 http.c:877              <= Recv SSL data: 1q..L...|..#.Vw...........H.......4$......5jj..d..2..v=.cm..
+20:11:18.530943 http.c:877              <= Recv SSL data: ......A.......[..l...uY..Y....o[.tw|....>.>....#z.8X........
+20:11:18.530944 http.c:877              <= Recv SSL data: >.;.%+........Z<..3..;,................>i.r[....)......0...0
+20:11:18.530946 http.c:877              <= Recv SSL data: ..z.........J*'.....+.......0...*.H........0..1.0...U....US
+20:11:18.530947 http.c:877              <= Recv SSL data: 1.0...U....Arizona1.0...U....Scottsdale1%0#..U....Starfield 
+20:11:18.530948 http.c:877              <= Recv SSL data: Technologies, Inc.1;09..U...2Starfield Services Root Certifi
+20:11:18.530950 http.c:877              <= Recv SSL data: cate Authority - G20...150525120000Z..371231010000Z091.0...U
+20:11:18.530956 http.c:877              <= Recv SSL data: ....US1.0...U....Amazon1.0...U....Amazon Root CA 10.."0...*.
+20:11:18.530958 http.c:877              <= Recv SSL data: H.............0.........x.q.x..q.G.Pt}n...v..h.X!`.t../..-..
+20:11:18.530959 http.c:877              <= Recv SSL data: .CzN...6.....H...6L...#.>.7....Ih....v8.a....6..JV.E......t.
+20:11:18.530961 http.c:877              <= Recv SSL data: ..59/.. P.lz.......G..P8....9X.....Hg0...x^o..Q.0.f.Ef.T....
+20:11:18.530962 http.c:877              <= Recv SSL data: .H....0-}-tp5..$...Yn.s...2F(.C........$.-K.q\^i.....8..P8o.
+20:11:18.530963 http.c:877              <= Recv SSL data: .-b....T.w.g....#.?@  ...L>;$&...l............10..-0...U...
+20:11:18.530965 http.c:877              <= Recv SSL data: ....0....0...U...........0...U..........4.......Y....N..0...
+20:11:18.530966 http.c:877              <= Recv SSL data: U.#..0...._.....0+8...mJ.....0x..+........l0j0...+.....0.."h
+20:11:18.530968 http.c:877              <= Recv SSL data: ttp://ocsp.rootg2.amazontrust.com08..+.....0..,http://crt.ro
+20:11:18.530969 http.c:877              <= Recv SSL data: otg2.amazontrust.com/rootg2.cer0=..U...60402.0...,http://crl
+20:11:18.530970 http.c:877              <= Recv SSL data: .rootg2.amazontrust.com/rootg2.crl0...U. ..0.0...U. .0...*.H
+20:11:18.530972 http.c:877              <= Recv SSL data: .............b7B\...>.,...lE...z..X....>..%<.oP..5j..4.2!.HD
+20:11:18.530973 http.c:877              <= Recv SSL data: ...=..sm....l.(...Gy..~0[.;.`.w.....|^....{"....~.F....&W.0
+20:11:18.530975 http.c:877              <= Recv SSL data: 9b.........>.ChlW.... ....j]..Jm.X...91_|s...j...'....F.~.r.
+20:11:18.530976 http.c:877              <= Recv SSL data: .R>...cw.i..9....EM.Q:.]]7dL~0.U$B.6.]...a.....$...t..{E)P9.
+20:11:18.530978 http.c:877              <= Recv SSL data: ...5%..jG#1/\.....bQ.*...4.!...
+20:11:18.531235 http.c:889              == Info: (304) (IN), TLS handshake, CERT verify (15):
+20:11:18.531241 http.c:862              <= Recv SSL data, 0000000264 bytes (0x00000108)
+20:11:18.531244 http.c:877              <= Recv SSL data: ........,....F.fk..k..u.C..`....h...}fO3..........q...V$..Jo
+20:11:18.531246 http.c:877              <= Recv SSL data: .>.6.k..yY$JmJ.-......G...#.......3.y;..(R.rmu.VT...........
+20:11:18.531248 http.c:877              <= Recv SSL data: .c/....u4.MjX..$).......q..{.c....8.....s......);.[....u..W/
+20:11:18.531250 http.c:877              <= Recv SSL data: 9.....Ay.......Tx.xS....#.:...L l....\.)..oy./.u..u.........
+20:11:18.531251 http.c:877              <= Recv SSL data: .....x......S...../.8...
+20:11:18.531288 http.c:889              == Info: (304) (IN), TLS handshake, Finished (20):
+20:11:18.531292 http.c:862              <= Recv SSL data, 0000000036 bytes (0x00000024)
+20:11:18.531295 http.c:877              <= Recv SSL data: ... .m|.YB...IX._.L.......V~.)ixY#.'
+20:11:18.531319 http.c:889              == Info: (304) (OUT), TLS handshake, Finished (20):
+20:11:18.531322 http.c:862              => Send SSL data, 0000000036 bytes (0x00000024)
+20:11:18.531324 http.c:877              => Send SSL data: ... ...2..........K<.........'..0..n
+20:11:18.531328 http.c:889              == Info: SSL connection using TLSv1.3 / AEAD-AES128-GCM-SHA256 / [blank] / UNDEF
+20:11:18.531330 http.c:889              == Info: ALPN: server accepted h2
+20:11:18.531333 http.c:889              == Info: Server certificate:
+20:11:18.531337 http.c:889              == Info:  subject: CN=huggingface.co
+20:11:18.531341 http.c:889              == Info:  start date: Mar 14 00:00:00 2026 GMT
+20:11:18.531343 http.c:889              == Info:  expire date: Sep 27 23:59:59 2026 GMT
+20:11:18.531348 http.c:889              == Info:  subjectAltName: host "huggingface.co" matched cert's "huggingface.co"
+20:11:18.531351 http.c:889              == Info:  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M04
+20:11:18.531353 http.c:889              == Info:  SSL certificate verify ok.
+20:11:18.531372 http.c:889              == Info: using HTTP/2
+20:11:18.531390 http.c:889              == Info: [HTTP/2] [1] OPENED stream for https://huggingface.co/datasets/quentinll/lewm-cube.git/info/refs?service=git-upload-pack
+20:11:18.531393 http.c:889              == Info: [HTTP/2] [1] [:method: GET]
+20:11:18.531395 http.c:889              == Info: [HTTP/2] [1] [:scheme: https]
+20:11:18.531397 http.c:889              == Info: [HTTP/2] [1] [:authority: huggingface.co]
+20:11:18.531398 http.c:889              == Info: [HTTP/2] [1] [:path: /datasets/quentinll/lewm-cube.git/info/refs?service=git-upload-pack]
+20:11:18.531400 http.c:889              == Info: [HTTP/2] [1] [user-agent: git/2.50.1]
+20:11:18.531402 http.c:889              == Info: [HTTP/2] [1] [accept: */*]
+20:11:18.531403 http.c:889              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip]
+20:11:18.531405 http.c:889              == Info: [HTTP/2] [1] [pragma: no-cache]
+20:11:18.531407 http.c:889              == Info: [HTTP/2] [1] [git-protocol: version=2]
+20:11:18.531419 http.c:836              => Send header, 0000000216 bytes (0x000000d8)
+20:11:18.531423 http.c:848              => Send header: GET /datasets/quentinll/lewm-cube.git/info/refs?service=git-upload-pack HTTP/2
+20:11:18.531424 http.c:848              => Send header: Host: huggingface.co
+20:11:18.531426 http.c:848              => Send header: User-Agent: git/2.50.1
+20:11:18.531428 http.c:848              => Send header: Accept: */*
+20:11:18.531429 http.c:848              => Send header: Accept-Encoding: deflate, gzip
+20:11:18.531431 http.c:848              => Send header: Pragma: no-cache
+20:11:18.531432 http.c:848              => Send header: Git-Protocol: version=2
+20:11:18.531434 http.c:848              => Send header:
+20:11:18.531437 http.c:889              == Info: Request completely sent off
+20:11:18.645349 http.c:836              <= Recv header, 0000000013 bytes (0x0000000d)
+20:11:18.645368 http.c:848              <= Recv header: HTTP/2 200
+20:11:18.645375 http.c:836              <= Recv header, 0000000059 bytes (0x0000003b)
+20:11:18.645378 http.c:848              <= Recv header: content-type: application/x-git-upload-pack-advertisement
+20:11:18.645382 http.c:836              <= Recv header, 0000000021 bytes (0x00000015)
+20:11:18.645384 http.c:848              <= Recv header: content-length: 191
+20:11:18.645387 http.c:836              <= Recv header, 0000000037 bytes (0x00000025)
+20:11:18.645390 http.c:848              <= Recv header: date: Wed, 15 Jul 2026 03:11:18 GMT
+20:11:18.645392 http.c:836              <= Recv header, 0000000025 bytes (0x00000019)
+20:11:18.645394 http.c:848              <= Recv header: cache-control: no-cache
+20:11:18.645397 http.c:836              <= Recv header, 0000000031 bytes (0x0000001f)
+20:11:18.645399 http.c:848              <= Recv header: x-cache: Miss from cloudfront
+20:11:18.645402 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.645404 http.c:848              <= Recv header: via: 1.1 3eea99685872ef220751c4da0f7139f6.cloudfront.net (CloudFront)
+20:11:18.645406 http.c:836              <= Recv header, 0000000024 bytes (0x00000018)
+20:11:18.645409 http.c:848              <= Recv header: x-amz-cf-pop: PHX52-P2
+20:11:18.645412 http.c:836              <= Recv header, 0000000030 bytes (0x0000001e)
+20:11:18.645414 http.c:848              <= Recv header: alt-svc: h3=":443"; ma=86400
+20:11:18.645416 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.645418 http.c:848              <= Recv header: x-amz-cf-id: Fu4kCrLWyiU4Bu6bbt2phHskEJz4OV1T2jspnV5edmcNrxZXrppLfQ==
+20:11:18.645422 http.c:836              <= Recv header, 0000000002 bytes (0x00000002)
+20:11:18.645424 http.c:848              <= Recv header:
+20:11:18.645427 http.c:862              <= Recv data, 0000000191 bytes (0x000000bf)
+20:11:18.645429 http.c:877              <= Recv data: 001e# service=git-upload-pack.0000000eversion 2.0028agent=gi
+20:11:18.645431 http.c:877              <= Recv data: t/2.53.0-rc0.g83a69f1-Linux.0013ls-refs=unborn.0027fetch=sha
+20:11:18.645433 http.c:877              <= Recv data: llow wait-for-done filter.0012server-option.0017object-forma
+20:11:18.645444 http.c:877              <= Recv data: t=sha1.0000
+20:11:18.645453 http.c:862              <= Recv data, 0000000000 bytes (0x00000000)
+20:11:18.645460 http.c:889              == Info: Connection #0 to host huggingface.co left intact
+20:11:18.645565 http.c:889              == Info: Couldn't find host huggingface.co in the .netrc file; using defaults
+20:11:18.645571 http.c:889              == Info: Found bundle for host: 0x972c38300 [can multiplex]
+20:11:18.645575 http.c:889              == Info: Re-using existing connection with host huggingface.co
+20:11:18.645589 http.c:889              == Info: [HTTP/2] [3] OPENED stream for https://huggingface.co/datasets/quentinll/lewm-cube.git/git-upload-pack
+20:11:18.645593 http.c:889              == Info: [HTTP/2] [3] [:method: POST]
+20:11:18.645595 http.c:889              == Info: [HTTP/2] [3] [:scheme: https]
+20:11:18.645597 http.c:889              == Info: [HTTP/2] [3] [:authority: huggingface.co]
+20:11:18.645599 http.c:889              == Info: [HTTP/2] [3] [:path: /datasets/quentinll/lewm-cube.git/git-upload-pack]
+20:11:18.645601 http.c:889              == Info: [HTTP/2] [3] [user-agent: git/2.50.1]
+20:11:18.645604 http.c:889              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip]
+20:11:18.645606 http.c:889              == Info: [HTTP/2] [3] [content-type: application/x-git-upload-pack-request]
+20:11:18.645608 http.c:889              == Info: [HTTP/2] [3] [accept: application/x-git-upload-pack-result]
+20:11:18.645610 http.c:889              == Info: [HTTP/2] [3] [git-protocol: version=2]
+20:11:18.645612 http.c:889              == Info: [HTTP/2] [3] [content-length: 182]
+20:11:18.645648 http.c:836              => Send header, 0000000288 bytes (0x00000120)
+20:11:18.645652 http.c:848              => Send header: POST /datasets/quentinll/lewm-cube.git/git-upload-pack HTTP/2
+20:11:18.645654 http.c:848              => Send header: Host: huggingface.co
+20:11:18.645655 http.c:848              => Send header: User-Agent: git/2.50.1
+20:11:18.645657 http.c:848              => Send header: Accept-Encoding: deflate, gzip
+20:11:18.645659 http.c:848              => Send header: Content-Type: application/x-git-upload-pack-request
+20:11:18.645661 http.c:848              => Send header: Accept: application/x-git-upload-pack-result
+20:11:18.645663 http.c:848              => Send header: Git-Protocol: version=2
+20:11:18.645664 http.c:848              => Send header: Content-Length: 182
+20:11:18.645666 http.c:848              => Send header:
+20:11:18.645668 http.c:862              => Send data, 0000000182 bytes (0x000000b6)
+20:11:18.645670 http.c:877              => Send data: 0014command=ls-refs.001bagent=git/2.50.1-Darwin0016object-fo
+20:11:18.645671 http.c:877              => Send data: rmat=sha100010009peel.000csymrefs.000bunborn.001bref-prefix 
+20:11:18.645673 http.c:877              => Send data: refs/heads/.001aref-prefix refs/tags/.0014ref-prefix HEAD.00
+20:11:18.645675 http.c:877              => Send data: 00
+20:11:18.645677 http.c:889              == Info: upload completely sent off: 182 bytes
+20:11:18.772421 http.c:836              <= Recv header, 0000000013 bytes (0x0000000d)
+20:11:18.772459 http.c:848              <= Recv header: HTTP/2 200
+20:11:18.772472 http.c:836              <= Recv header, 0000000052 bytes (0x00000034)
+20:11:18.772478 http.c:848              <= Recv header: content-type: application/x-git-upload-pack-result
+20:11:18.772484 http.c:836              <= Recv header, 0000000021 bytes (0x00000015)
+20:11:18.772489 http.c:848              <= Recv header: content-length: 145
+20:11:18.772495 http.c:836              <= Recv header, 0000000037 bytes (0x00000025)
+20:11:18.772499 http.c:848              <= Recv header: date: Wed, 15 Jul 2026 03:11:18 GMT
+20:11:18.772505 http.c:836              <= Recv header, 0000000025 bytes (0x00000019)
+20:11:18.772510 http.c:848              <= Recv header: cache-control: no-cache
+20:11:18.772515 http.c:836              <= Recv header, 0000000031 bytes (0x0000001f)
+20:11:18.772531 http.c:848              <= Recv header: x-cache: Miss from cloudfront
+20:11:18.772538 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.772542 http.c:848              <= Recv header: via: 1.1 3eea99685872ef220751c4da0f7139f6.cloudfront.net (CloudFront)
+20:11:18.772547 http.c:836              <= Recv header, 0000000024 bytes (0x00000018)
+20:11:18.772551 http.c:848              <= Recv header: x-amz-cf-pop: PHX52-P2
+20:11:18.772556 http.c:836              <= Recv header, 0000000030 bytes (0x0000001e)
+20:11:18.772560 http.c:848              <= Recv header: alt-svc: h3=":443"; ma=86400
+20:11:18.772566 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.772570 http.c:848              <= Recv header: x-amz-cf-id: VowVOXiaMLO7JcjAiC2Ri9cbMIJ58-f1E0y6Iic2GCmK3TvoqlG1dQ==
+20:11:18.772575 http.c:836              <= Recv header, 0000000002 bytes (0x00000002)
+20:11:18.772579 http.c:848              <= Recv header:
+20:11:18.772585 http.c:862              <= Recv data, 0000000145 bytes (0x00000091)
+20:11:18.772589 http.c:877              <= Recv data: 005002a19a67a0dc8c9d6215f89c19e0a597691e152a HEAD symref-tar
+20:11:18.772592 http.c:877              <= Recv data: get:refs/heads/main.003d02a19a67a0dc8c9d6215f89c19e0a597691e
+20:11:18.772596 http.c:877              <= Recv data: 152a refs/heads/main.0000
+20:11:18.772616 http.c:862              <= Recv data, 0000000000 bytes (0x00000000)
+20:11:18.772627 http.c:889              == Info: Connection #0 to host huggingface.co left intact
+20:11:18.776706 http.c:889              == Info: Couldn't find host huggingface.co in the .netrc file; using defaults
+20:11:18.776718 http.c:889              == Info: Found bundle for host: 0x972c38300 [can multiplex]
+20:11:18.776725 http.c:889              == Info: Re-using existing connection with host huggingface.co
+20:11:18.776748 http.c:889              == Info: [HTTP/2] [5] OPENED stream for https://huggingface.co/datasets/quentinll/lewm-cube.git/git-upload-pack
+20:11:18.776752 http.c:889              == Info: [HTTP/2] [5] [:method: POST]
+20:11:18.776756 http.c:889              == Info: [HTTP/2] [5] [:scheme: https]
+20:11:18.776759 http.c:889              == Info: [HTTP/2] [5] [:authority: huggingface.co]
+20:11:18.776763 http.c:889              == Info: [HTTP/2] [5] [:path: /datasets/quentinll/lewm-cube.git/git-upload-pack]
+20:11:18.776767 http.c:889              == Info: [HTTP/2] [5] [user-agent: git/2.50.1]
+20:11:18.776770 http.c:889              == Info: [HTTP/2] [5] [accept-encoding: deflate, gzip]
+20:11:18.776774 http.c:889              == Info: [HTTP/2] [5] [content-type: application/x-git-upload-pack-request]
+20:11:18.776777 http.c:889              == Info: [HTTP/2] [5] [accept: application/x-git-upload-pack-result]
+20:11:18.776780 http.c:889              == Info: [HTTP/2] [5] [git-protocol: version=2]
+20:11:18.776783 http.c:889              == Info: [HTTP/2] [5] [content-length: 244]
+20:11:18.776839 http.c:836              => Send header, 0000000288 bytes (0x00000120)
+20:11:18.776846 http.c:848              => Send header: POST /datasets/quentinll/lewm-cube.git/git-upload-pack HTTP/2
+20:11:18.776849 http.c:848              => Send header: Host: huggingface.co
+20:11:18.776852 http.c:848              => Send header: User-Agent: git/2.50.1
+20:11:18.776855 http.c:848              => Send header: Accept-Encoding: deflate, gzip
+20:11:18.776857 http.c:848              => Send header: Content-Type: application/x-git-upload-pack-request
+20:11:18.776860 http.c:848              => Send header: Accept: application/x-git-upload-pack-result
+20:11:18.776863 http.c:848              => Send header: Git-Protocol: version=2
+20:11:18.776865 http.c:848              => Send header: Content-Length: 244
+20:11:18.776868 http.c:848              => Send header:
+20:11:18.776872 http.c:862              => Send data, 0000000244 bytes (0x000000f4)
+20:11:18.776875 http.c:877              => Send data: 0011command=fetch001bagent=git/2.50.1-Darwin0016object-forma
+20:11:18.776884 http.c:877              => Send data: t=sha10001000dthin-pack000fno-progress000dofs-delta0014filte
+20:11:18.776887 http.c:877              => Send data: r blob:none0032want 02a19a67a0dc8c9d6215f89c19e0a597691e152a
+20:11:18.776890 http.c:877              => Send data: .0032want 02a19a67a0dc8c9d6215f89c19e0a597691e152a.0009done.
+20:11:18.776892 http.c:877              => Send data: 0000
+20:11:18.776896 http.c:889              == Info: upload completely sent off: 244 bytes
+20:11:18.909034 http.c:836              <= Recv header, 0000000013 bytes (0x0000000d)
+20:11:18.909093 http.c:848              <= Recv header: HTTP/2 200
+20:11:18.909134 http.c:836              <= Recv header, 0000000052 bytes (0x00000034)
+20:11:18.909153 http.c:848              <= Recv header: content-type: application/x-git-upload-pack-result
+20:11:18.909172 http.c:836              <= Recv header, 0000000037 bytes (0x00000025)
+20:11:18.909192 http.c:848              <= Recv header: date: Wed, 15 Jul 2026 03:11:18 GMT
+20:11:18.909213 http.c:836              <= Recv header, 0000000025 bytes (0x00000019)
+20:11:18.909227 http.c:848              <= Recv header: cache-control: no-cache
+20:11:18.909245 http.c:836              <= Recv header, 0000000031 bytes (0x0000001f)
+20:11:18.909259 http.c:848              <= Recv header: x-cache: Miss from cloudfront
+20:11:18.909278 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.909294 http.c:848              <= Recv header: via: 1.1 3eea99685872ef220751c4da0f7139f6.cloudfront.net (CloudFront)
+20:11:18.909311 http.c:836              <= Recv header, 0000000024 bytes (0x00000018)
+20:11:18.909324 http.c:848              <= Recv header: x-amz-cf-pop: PHX52-P2
+20:11:18.909339 http.c:836              <= Recv header, 0000000030 bytes (0x0000001e)
+20:11:18.909358 http.c:848              <= Recv header: alt-svc: h3=":443"; ma=86400
+20:11:18.909375 http.c:836              <= Recv header, 0000000071 bytes (0x00000047)
+20:11:18.909389 http.c:848              <= Recv header: x-amz-cf-id: AfgJDMD_F0nGglyWNP7fsPLkjKRUR561JWhaTTxpkWZTVwBMMLvlLg==
+20:11:18.909408 http.c:836              <= Recv header, 0000000002 bytes (0x00000002)
+20:11:18.909419 http.c:848              <= Recv header:
+20:11:18.909437 http.c:862              <= Recv data, 0000004602 bytes (0x000011fa)
+20:11:18.909450 http.c:877              <= Recv data: 000dpackfile.12ae.PACK..........x....j.0.....b..3.XcC.)4.d.B
+20:11:18.909461 http.c:877              <= Recv data: .@....o..E...<@W.~.8%......-.l.......tAB`......Z}..@c......#
+20:11:18.909472 http.c:877              <= Recv data: .f..k..1....N)...^.K...P..7......|.q.......,....{..s.<K.....
+20:11:18.909483 http.c:877              <= Recv data: u..j.8...e..R$....Lpz.._Y..........ZO..f.N..Ex......X.F.<...
+20:11:18.909494 http.c:877              <= Recv data: .e.!....$."...\..2O.O_..o;.......7......E...s...F.S....b(...
+20:11:18.909505 http.c:877              <= Recv data: s..h$"..#ng.1..R..Lz.i.g...,.a&...r.MSB&r.\.G7....*[`a`..F..
+20:11:18.909518 http.c:877              <= Recv data: .m...2.q.j........E..9D..u.....G.D...?..k.r.....4....._.[.}
+20:11:18.909529 http.c:877              <= Recv data: 1.....dU?9..]..tG.BO......I...*.%...f..(:z..v,..6y...l...&n.
+20:11:18.909541 http.c:877              <= Recv data: ..........*..k. I.V^{.(..?8..!.^..)IA..d..............%...,
+20:11:18.909552 http.c:877              <= Recv data: ..V....X'oF...........=(... `..f...U2..t.:..ji.....[.$.*...T
+20:11:18.909563 http.c:877              <= Recv data: h...V.X....U/+..9k0.=.......oL.......M.E..]\..5.......8.<..
+20:11:18.909575 http.c:877              <= Recv data: .U.rri ....v6.F...y..QF.<.>..1..H......hf.%.......{....k..8.
+20:11:18.909585 http.c:877              <= Recv data: ..C.m6..Q..........7.(...8y'...<8...o....)..Q..9J...6t.wf.+3
+20:11:18.909597 http.c:877              <= Recv data: -.D.xh.....mS.$...0...|.....eE.La...q5.y..5..A.....wR...s.s(
+20:11:18.909608 http.c:877              <= Recv data: z.v...l.?.(...;R~.d29...{.f.E'.s.).....5..l.0 Ji.:W..N2.0.Nq
+20:11:18.909619 http.c:877              <= Recv data: G........;U..O.-.|.1.s..E..:.K{L.....HW..d.$.....C..<..[...
+20:11:18.909661 http.c:877              <= Recv data: .;..'bh........d...iq........]..~..=.....\......^...V...?.K>
+20:11:18.909672 http.c:877              <= Recv data: .T.~......OZjn}{.$...zq..gTG....a....O..[.j..G.``.Ex...K..Z.
+20:11:18.909682 http.c:877              <= Recv data: ....=7}xm@..N.<..y....l..7(...{..&.&+.....U..1.`.%4O'...-G..
+20:11:18.909691 http.c:877              <= Recv data: G[.2..)..$...........4.p..P....)FHX..y..6...n...3.@.tk....T.
+20:11:18.909701 http.c:877              <= Recv data: .#..2.)..;...y..........m...)r......hA..'2[.6.GD..u9Mx..:N.
+20:11:18.909710 http.c:877              <= Recv data: .?....M.]1.....dU7l................Q{..*.$..].[.D.<..Z.....%
+20:11:18.909719 http.c:877              <= Recv data: ..V.j0rJ>..........E....H.4..$U..=.._.....P=..r8..Y...y.5kU:
+20:11:18.909729 http.c:877              <= Recv data: g.W=...h.$1h<.`h.S...........R...........n{......Ycd...5l...
+20:11:18.909740 http.c:877              <= Recv data: .........O63VS....Z..t.N.U..Pe...Z..E..........i. a_-6......
+20:11:18.909750 http.c:877              <= Recv data: C!../i.v........Vx.h0......s..Tg..e*..K....!....mx6CN......!
+20:11:18.909760 http.c:877              <= Recv data: .f...gd.z......Rq...."U..}Sm.9]k.....G..N..k.].(..A[........
+20:11:18.909770 http.c:877              <= Recv data: .*.....|p.X..&m..B..Hi....)...3H.aK...?........+..y........`
+20:11:18.909779 http.c:877              <= Recv data: .B.......O.F............|Ly.*...4.d.y....f,....K....p...R...
+20:11:18.909789 http.c:877              <= Recv data: ;z.>.....Q.ut..]...p......9z{..E.....~..9g....m...sc7......
+20:11:18.909799 http.c:877              <= Recv data: C..H...7o/V..mU...j...[c....^.p....._.m..,.L....g.P.),.}k0N.
+20:11:18.909809 http.c:877              <= Recv data: .1k..c.....f.....|Z.y..^=W....kG......V.k1D.eh..S%.R.../?.].
+20:11:18.909818 http.c:877              <= Recv data: .Ex..S...X....w....2IU...d.0.$....!...__.~....K.|d..c..@D,s.
+20:11:18.909828 http.c:877              <= Recv data: x.b.......4CB,......J..b$.-..z......8Ad$.I4uO`,.wI..........
+20:11:18.909837 http.c:877              <= Recv data: .@.1oz..>...f.."Ic...V..?.!.........._..5.P.~..o@..4..@....D
+20:11:18.909847 http.c:877              <= Recv data: .TU1.i...0........[<......f.O.1..........N.....*....\+..]..
+20:11:18.909857 http.c:877              <= Recv data: ......pgQ...+V.........._F..x<p.z5.dY)sy#.q..s*r.L.1Cy.8....
+20:11:18.909866 http.c:877              <= Recv data: ._h?*..Q.(.o..^v.Z..}z.....o....E....x2"...F...jG...%.F...%R
+20:11:18.909878 http.c:877              <= Recv data: .x..:.".t....)&....I..Q.:pAI.Y.z./f#.........1.....q..s.....
+20:11:18.909888 http.c:877              <= Recv data: .z..+..:.ES....+../v.4n..(U..5..\6N.......j..}..Q..I}(..`^..
+20:11:18.909897 http.c:877              <= Recv data: ...TA^.VM....zb..1bq..L...-b37.4......:.W.EX$.....T.G.fM.\M.
+20:11:18.909907 http.c:877              <= Recv data: .!....ul..5.....K...W.=.*.r.B...2..`w..M......F+...*.2.....\
+20:11:18.909917 http.c:877              <= Recv data: =&L.3....=..M.z...<=..e...2..?....Sv.Q.........+e.c.%.....!X
+20:11:18.909927 http.c:877              <= Recv data: ............7YA.r.U.....a.[7.....2C...+'}..T<..A..W....>....
+20:11:18.909936 http.c:877              <= Recv data: :..i?MV...Q.[...<\.d...k.3..;.9...Z?O.....1w..W7.p.........
+20:11:18.909948 http.c:877              <= Recv data: msF._Mz.......A[..<.$.\\..<..p{d(.~...........v...b..M...O..
+20:11:18.909957 http.c:877              <= Recv data: ..U%...[..Gx......H.D.|E..TavK.....P...pi.$..d.|..L].0..%..
+20:11:18.909967 http.c:877              <= Recv data: .)...!..GV...1..&.....<M.x..Y.O.X.i.&.s@...$pi.@.R"w.4%."{..
+20:11:18.909977 http.c:877              <= Recv data: ..T"...~".g..9Oy7.{.......E. ../u.k..0....p.z..,+.,}B...?.A
+20:11:18.909986 http.c:877              <= Recv data: .X......W..5M1Mh..k.P.~|...%3..E...;.Y.L`..p5..<.9.........t
+20:11:18.909996 http.c:877              <= Recv data: .O......h.O.......+.ma._.NaC..#uYC..c.,...NK.I.-u...qd....=.
+20:11:18.910020 http.c:877              <= Recv data: D...N...C..A.N}...-.....bI+..........=...zf...F......bNE]U7.
+20:11:18.910031 http.c:877              <= Recv data: .......2.)IO.........1..p....I..8........Q....J..M...|+(.LZ.
+20:11:18.910040 http.c:877              <= Recv data: bX.B...U.yI.b...#`....9.(F..e.X.......}3.5..kN>vY..........(
+20:11:18.910049 http.c:877              <= Recv data: q$.S..O.........i?7rq..9.oE.....x..66u..O.N.A.8........0....
+20:11:18.910059 http.c:877              <= Recv data: K...P2:./.....M..U..O......T.q....[bw.n...M]....V.W.........
+20:11:18.910068 http.c:877              <= Recv data: .....*cps..9.....YE....._.}..9..H+.L.c|.~u..Uo.|U......y*..n
+20:11:18.910078 http.c:877              <= Recv data: ....C_..e.v... .....B.*>......n%......n.v.wm......`..o.....5
+20:11:18.910087 http.c:877              <= Recv data: ...P.......:........uYkhUQ.e!E......W.0*..%\dlIm...Q.<......
+20:11:18.910097 http.c:877              <= Recv data: ..ml....0^zd.{...5..Zb0mha...)....,D.".2.(_S..I...GE..3g....
+20:11:18.910106 http.c:877              <= Recv data: !|\w...9F../.k..m........q.k1.._~..../r.qe.Bx......H.E.|E...
+20:11:18.910116 http.c:877              <= Recv data: ..HU......hl`GB2...f..v....w...B.W......9.C..Y..).(..9.dI..4
+20:11:18.910125 http.c:877              <= Recv data: ..1...O.M.o\t.p...e....2E....v...{D............e.gq.~$....y.
+20:11:18.910134 http.c:877              <= Recv data: ey.......tMSb..0.#F...].og..c.....tQ.&...xW..o.{......(o.x.
+20:11:18.910144 http.c:877              <= Recv data: N..J../Q..\..w..._.h.....d&.K.R.9......*O6.%.(..)."..v..A.?.
+20:11:18.910153 http.c:877              <= Recv data: >.|.....H.b....X.N...@..m.<n....<}v..S.."=.jMO.N..c|........
+20:11:18.910163 http.c:877              <= Recv data: ..kn'....FqynK.....Mv'....)......./Q...Z...w......Lv....ug..
+20:11:18.910172 http.c:877              <= Recv data: ...5..h..B...L.T............^....NY..Z...Q..4...^......N....
+20:11:18.910182 http.c:877              <= Recv data: .}|..P^.qc.^..i.a.o..'.9.{...P.S...].x.wO!...eV.Q..@....6...
+20:11:18.910191 http.c:877              <= Recv data: d..V.I....6.0[w.|.H.j..M}...JA!.M....P..]o.I...o..u.1K'.9..3
+20:11:18.910201 http.c:877              <= Recv data: .....K5./...K.%...-..O).2C1.B...y!@tL'K.W.....S.\e...]>.g.:H
+20:11:18.910210 http.c:877              <= Recv data: ...BuRc.m[6SX..7.r....Z..fu..[v.7\...V$.PGU`....8.>`~y%..9..
+20:11:18.910220 http.c:877              <= Recv data: .."....8.Eq...'......q..l.ax.iD.lK..........*...q....}mm....
+20:11:18.910230 http.c:877              <= Recv data: .k.&.I.{.5n.$...,......r.iL`9{....+.Gj...C]....k....?l\...C
+20:11:18.910239 http.c:877              <= Recv data: .m.....d....U{..x.340031Q.K.,I,)).L*-I-f.w.......S3.^.l...].
+20:11:18.910249 http.c:877              <= Recv data: .,C.. WG._W.....Sa.-.k........2..v..TQriRj|qf^zNj|jEAjQ.^Ib.
+20:11:18.910258 http.c:877              <= Recv data: ^Uq..........K..=...h|.f7...I4E....x.kele.
+20:11:18.910307 http.c:862              <= Recv data, 0000000203 bytes (0x000000cb)
+20:11:18.910320 http.c:877              <= Recv data: `-...>.n...."]..}..Y..T&..........+x.kele.`-.x.CX.r.......Y.
+20:11:18.910330 http.c:877              <= Recv data: .....M.7.....2..Ux.kele.`-.Vx....;....n..v.lC..D3..;.s....
+20:11:18.910339 http.c:877              <= Recv data: x.kele.`-R..O....L.B..*3t......o......e+x.ke..............O
+20:11:18.910348 http.c:877              <= Recv data: ...v.#.f.n. K0006..0000
+20:11:18.910409 http.c:862              <= Recv data, 0000000000 bytes (0x00000000)
+20:11:18.910440 http.c:889              == Info: Connection #0 to host huggingface.co left intact

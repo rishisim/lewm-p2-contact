@@ -1,0 +1,21 @@
+{
+  "method": "closed-form count independently transcribed from the mathematical feature specification",
+  "passed": true,
+  "schema_version": 1,
+  "terms": {
+    "action_change_norms": 150,
+    "four_reused_norms": 1536,
+    "gap_subtractions": 192,
+    "history_change_norms": 1152,
+    "relative_ratio": 1,
+    "three_clamps_plus_head_min_plus_threshold_comparison": 5,
+    "two_affine_heads": 4196,
+    "two_cosines": 770
+  },
+  "totals": {
+    "dual_affine_score_flops_per_reached_evaluation": 4196,
+    "feature_flops_per_reached_evaluation": 3801,
+    "nonflop_comparison_min_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7997
+  }
+}

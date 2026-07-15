@@ -1,0 +1,10 @@
+{
+  "failure": "cycle_prospective_discovery_failed",
+  "failure_when": "a procedurally valid sealed run misses any preregistered statistical criterion",
+  "invalid": "cycle_execution_invalid",
+  "invalid_when": "any seal, DGP, chronology, path-set, isolation, sparse execution, numerical contract, hash, seed, frozen-module, finite-array, or exact-compute criterion fails",
+  "latency_can_change_terminal_outcome": false,
+  "pass": "cycle_prospective_discovery_passed",
+  "pass_requires": "all six individual lower bounds, both simultaneous co-primary lower bounds, every stagewise positive sign, every process/integrity criterion, and independent reproduction",
+  "schema_version": 1
+}

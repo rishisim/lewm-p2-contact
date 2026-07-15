@@ -1,0 +1,62 @@
+commit 02a19a67a0dc8c9d6215f89c19e0a597691e152a
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Fri Mar 27 18:45:02 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Fri Mar 27 18:45:02 2026 +0000
+
+    Update README.md
+
+commit 54324364f20a0002c075958c49c7027ffa2ffd71
+gpg: Signature made Thu Mar 26 14:29:57 2026 MST
+gpg:                using RSA key C8A817860F8BA646BF0612916A528E38E0733467
+gpg: Can't check signature: No public key
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Thu Mar 26 21:29:57 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Thu Mar 26 21:29:57 2026 +0000
+
+    Update README.md
+
+commit 63c01ba443b5ebdfd363b46ead9912b612218d96
+gpg: Signature made Thu Mar 26 14:08:04 2026 MST
+gpg:                using RSA key C8A817860F8BA646BF0612916A528E38E0733467
+gpg: Can't check signature: No public key
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Thu Mar 26 21:08:04 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Thu Mar 26 21:08:04 2026 +0000
+
+    Update README.md
+
+commit 116b5467ac69094027b3e2cfda48c79f482356d3
+gpg: Signature made Thu Mar 26 14:07:28 2026 MST
+gpg:                using RSA key C8A817860F8BA646BF0612916A528E38E0733467
+gpg: Can't check signature: No public key
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Thu Mar 26 21:07:28 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Thu Mar 26 21:07:28 2026 +0000
+
+    Update README.md
+
+commit f6fe469578297a910bd4c88b9857f572908d7a34
+gpg: Signature made Thu Mar 26 13:49:37 2026 MST
+gpg:                using RSA key C8A817860F8BA646BF0612916A528E38E0733467
+gpg: Can't check signature: No public key
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Thu Mar 26 20:49:37 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Thu Mar 26 20:49:37 2026 +0000
+
+    Upload cube_single_expert.tar.zst with huggingface_hub
+
+commit de75ff3cef0851c208b849c58570d765a2ae0637
+gpg: Signature made Thu Mar 26 13:41:03 2026 MST
+gpg:                using RSA key C8A817860F8BA646BF0612916A528E38E0733467
+gpg: Can't check signature: No public key
+Author:     Quentin Le Lidec <quentinll@users.noreply.huggingface.co>
+AuthorDate: Thu Mar 26 20:41:03 2026 +0000
+Commit:     system <system@huggingface.co>
+CommitDate: Thu Mar 26 20:41:03 2026 +0000
+
+    initial commit

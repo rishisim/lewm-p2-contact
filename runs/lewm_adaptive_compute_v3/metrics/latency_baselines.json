@@ -1,0 +1,54 @@
+{
+  "device": "mps",
+  "repeats": 5,
+  "samples": 3420,
+  "policies": {
+    "depth0": {
+      "mean_calls": 0.0,
+      "median_seconds": 0.23251604198594578,
+      "repeats_seconds": [0.3723162499954924, 0.2371635419985978, 0.23251604198594578, 0.22687562501232605, 0.21985541700269096],
+      "total_calls": 0,
+      "total_latent_inference_flops": 241209829800
+    },
+    "fixed_d1": {
+      "mean_calls": 1.0,
+      "median_seconds": 0.2630657919944497,
+      "repeats_seconds": [0.28731162499752827, 0.24714983299782034, 0.2630657919944497, 0.25668670899176504, 0.26655174999905284],
+      "total_calls": 3420,
+      "total_latent_inference_flops": 243498439080
+    },
+    "fixed_d2": {
+      "mean_calls": 2.0,
+      "median_seconds": 0.2671432080096565,
+      "repeats_seconds": [0.27308304100006353, 0.26478016599139664, 0.2671432080096565, 0.26627666600688826, 0.2701618329883786],
+      "total_calls": 6840,
+      "total_latent_inference_flops": 245787048360
+    },
+    "fixed_d4": {
+      "mean_calls": 4.0,
+      "median_seconds": 0.28729329199995846,
+      "repeats_seconds": [0.2936726250045467, 0.3022282919991994, 0.28729329199995846, 0.2863822090002941, 0.2734908330021426],
+      "total_calls": 13680,
+      "total_latent_inference_flops": 250364266920
+    },
+    "matched_mixture": {
+      "mean_calls": 2.0,
+      "median_seconds": 0.26133150000532623,
+      "repeats_seconds": [0.34739520799485035, 0.24482300000090618, 0.26133150000532623, 0.27682187499885913, 0.2560574160015676],
+      "total_calls": 6840,
+      "total_latent_inference_flops": 245787048360
+    },
+    "adaptive": {
+      "gate_decisions": 6840,
+      "mean_calls": 2.0,
+      "median_seconds": 0.2692309169942746,
+      "repeats_seconds": [0.8746950839995407, 0.26143858300929423, 0.2679175410012249, 0.2692309169942746, 0.2703743750025751],
+      "total_calls": 6840,
+      "total_latent_inference_flops": 247745586600
+    }
+  },
+  "adaptive_over_matched": {
+    "flop_overhead_fraction": 0.007968435493522682,
+    "latency_overhead_fraction": 0.03022757298216016
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "base_pretraining_episode_membership": "unknown",
+  "prior_exclusions": {
+    "diagnostic_episode_ordinals": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "full_manifest": {
+      "episode_count": 600,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/cache/split_manifest.json",
+      "sha256": "3cc9bd4d7df229b0a4111a49933e98c5b72e916b5b5f98d7d5e023fc30ed544d",
+      "split_counts": {
+        "calibration": 90,
+        "test": 90,
+        "train": 420
+      }
+    },
+    "smoke_manifest": {
+      "episode_count": 6,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/cache/split_manifest.json",
+      "sha256": "f5a4da6c0f37d6222e83085327e30a1b70f0ace6f96e9c97d37c1067d7b65940",
+      "split_counts": {
+        "calibration": 1,
+        "test": 1,
+        "train": 4
+      }
+    },
+    "union_count": 636,
+    "union_sha256": "e75042c92b988855beb142d5b47c2628807da161c580d49d3fb4619b18a2afd3"
+  },
+  "reserved_smoke_episode_ordinals": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "selection_seed": null,
+  "split_episode_counts": {
+    "calibration": 1,
+    "test": 1,
+    "train": 4
+  },
+  "split_episode_ordinals": {
+    "calibration": [
+      40
+    ],
+    "test": [
+      41
+    ],
+    "train": [
+      36,
+      37,
+      38,
+      39
+    ]
+  }
+}

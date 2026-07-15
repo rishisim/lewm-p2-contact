@@ -1,0 +1,13 @@
+comparison,metric,mean_benefit,ci_low,ci_high,n,n_episodes,bootstrap_samples,positive_favors,diagnostic_only,bootstrap_procedure
+adaptive_vs_uniform_d2,raw,1.1641742795588097e-05,4.917691931545799e-06,1.783459695450547e-05,3420,90,2000,adaptive,False,
+adaptive_vs_uniform_d2,whitened,1.291349658139189e-05,-0.00029607579148391186,0.000315643188701363,3420,90,2000,adaptive,False,
+adaptive_vs_fixed_d1,raw,-2.7649410919391157e-06,-7.829603052697811e-06,2.1101656564302526e-06,3420,90,2000,adaptive,False,
+adaptive_vs_fixed_d1,whitened,-5.346915771345227e-05,-0.0003421694031893721,0.00024661026165810943,3420,90,2000,adaptive,False,
+adaptive_vs_random,raw,1.3282359269268892e-05,5.959495859630524e-06,1.985641358692116e-05,3420,90,2000,adaptive,False,
+adaptive_vs_random,whitened,0.000995719116451719,0.0007136489963994491,0.0012826730171504634,3420,90,2000,adaptive,False,
+adaptive_vs_permutation,raw,1.6484076428206937e-05,9.023276503016758e-06,2.3673830873104136e-05,3420,90,2000,adaptive,False,
+adaptive_vs_permutation,whitened,0.0009683002127049325,0.0006379513427856032,0.0012874578194646761,3420,90,2000,adaptive,False,
+oracle_regret,raw,5.9649760823625615e-05,5.2748571002451346e-05,6.778707019906242e-05,3420,90,2000,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_regret,whitened,-0.0006887037348792329,-0.0009514231663813002,-0.0004140759338960898,3420,90,2000,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_advantage_vs_uniform_d2,raw,7.129150361921371e-05,6.552278627544478e-05,7.706880836252958e-05,3420,90,2000,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_advantage_vs_uniform_d2,whitened,-0.000675790238297841,-0.0008748008098659828,-0.0004547627209775212,3420,90,2000,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle

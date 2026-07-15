@@ -1,0 +1,58 @@
+{
+  "artifacts": {
+    "cache_manifest": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/cache/split_manifest.json",
+    "figures": {
+      "allocation_by_regime": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/figures/04_allocation_by_regime.png",
+      "budget_curve": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/figures/03_budget_curves.png",
+      "depth_curve": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/figures/01_error_vs_depth.png",
+      "gain_distribution": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/figures/02_compute_benefit_distribution.png"
+    },
+    "metrics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/metrics"
+  },
+  "calibration_stage_a": {
+    "compute_response_passed": true,
+    "meaningful_headroom_threshold": 2.5742783237963614e-05,
+    "n": 38,
+    "n_episodes": 1,
+    "oracle_headroom_passed": false,
+    "scope": "calibration"
+  },
+  "compute": {
+    "allocation_source": "diagnostic_oracle",
+    "device": "mps",
+    "flops_per_call": 141696,
+    "selected_estimated_flops": 5384448,
+    "selected_latency": {},
+    "selected_latency_seconds_median": null,
+    "selected_total_calls": 38,
+    "trainable_parameters": 71200,
+    "uniform_latency": {}
+  },
+  "gate_comparisons": [],
+  "gate_screen_failure_reason": "gate_not_fit_calibration_screen",
+  "gate_screened_in": false,
+  "mode": "smoke",
+  "primary_seed": 260713,
+  "reason": "Test oracle headroom exists, but the causal gate was not fit because the calibration-only Stage A screen failed.",
+  "selected_gate_mean_budget": null,
+  "test_stage_a": {
+    "compute_response_passed": true,
+    "meaningful_headroom_threshold": 1.8746253663404236e-05,
+    "n": 38,
+    "n_episodes": 1,
+    "oracle_headroom_passed": true,
+    "scope": "test"
+  },
+  "validity": {
+    "base_frozen": true,
+    "calibration_fit_whitening": true,
+    "causal_gate_features_only": true,
+    "depth0_bitwise_equal": true,
+    "episode_split_isolated": true,
+    "fresh_relative_to_prior_diagnostics_not_base_pretraining": true,
+    "prior_episodes_excluded": true,
+    "strict_checkpoint_load": true,
+    "test_evaluated_after_freeze": true
+  },
+  "verdict": "selective_headroom_gate_failed"
+}

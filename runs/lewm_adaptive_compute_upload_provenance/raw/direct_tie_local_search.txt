@@ -1,0 +1,2 @@
+repository ../../le-wm
+repository /Users/rishisim/Documents/research/World Models/stable-pretraining-readonly

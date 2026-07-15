@@ -1,0 +1,11 @@
+test_alignment_and_counts (test_audit.AuditTest.test_alignment_and_counts) ... ok
+test_decision_and_historical_candidate (test_audit.AuditTest.test_decision_and_historical_candidate) ... ok
+test_fail_closed_claim_flags (test_audit.AuditTest.test_fail_closed_claim_flags) ... ok
+test_hash_sample_and_isolation (test_audit.AuditTest.test_hash_sample_and_isolation) ... ok
+test_protocol_hash_and_bounds (test_audit.AuditTest.test_protocol_hash_and_bounds) ... ok
+test_summary_recomputes_from_records (test_audit.AuditTest.test_summary_recomputes_from_records) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

@@ -1,0 +1,78 @@
+{
+  "confirmation_episode_count": 300,
+  "files": {
+    "config": {
+      "path": "runs/lewm_adaptive_compute_v4/config.json",
+      "sha256": "3749619ee3c591a204d88f712ab9bc0c45e719be45b35b68e9e74316a1450646"
+    },
+    "confirmation_data_manifest": {
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_data_manifest.json",
+      "sha256": "6a19bc4101cb8fd13e3585030dd61fb1513861415791851e0592d1423ccbdf39"
+    },
+    "decision_rule": {
+      "path": "runs/lewm_adaptive_compute_v4/decision_rule.json",
+      "sha256": "173d9829e8cb723f96e935fa949f0937e4544c56b59f4c33e572ac459d90aa9e"
+    },
+    "phase0_seal": {
+      "path": "runs/lewm_adaptive_compute_v4/audit/phase0_seal.json",
+      "sha256": "b7268998e1d6dd2af07fb8107a90d4f60d23355eb123fc4adab92a384f5ecad7"
+    },
+    "pre_confirmation_seal": {
+      "path": "runs/lewm_adaptive_compute_v4/audit/pre_confirmation_seal.json",
+      "sha256": "7b6d8fb0becf2322c3c739e62ee4f20a0590bfb1f4b249c51ee0670a0294f322"
+    },
+    "seed_manifest": {
+      "path": "runs/lewm_adaptive_compute_v4/seed_manifest.json",
+      "sha256": "36c1ed920d8537cce0f2c44827aa62a08581af8739d1e9608f1bb1db0eeceed0"
+    },
+    "smoke_completion": {
+      "path": "runs/lewm_adaptive_compute_v4/audit/smoke_completion.json",
+      "sha256": "06e7dab2c21be7b6068d886f30852ac2da2e0f31fd3e648fafdd46aa5bd6a432"
+    }
+  },
+  "frozen_objects": {
+    "base_config": {
+      "bytes": 1313,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+      "sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+    },
+    "base_weights": {
+      "bytes": 72291425,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+      "sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+    },
+    "contract": {
+      "compute_price": true,
+      "family": true,
+      "gate_flops": true,
+      "operating_point": true,
+      "parameters": true
+    },
+    "solver_checkpoint": {
+      "bytes": 2945961,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+      "sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+    },
+    "student_checkpoint": {
+      "bytes": 1250325,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/final_student.pt",
+      "sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302"
+    },
+    "tournament": {
+      "bytes": 12987,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/audit/frozen_tournament.json",
+      "sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66"
+    },
+    "whitening": {
+      "bytes": 298994,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/discovery_whitening.npz",
+      "sha256": "6ac9f8a463921e8fc158ba2aca543f07dc46931a3f98b4d7ef9f10efd4add54f"
+    }
+  },
+  "partial_metric_inspection": "forbidden",
+  "rerun_with_changed_choices": "forbidden",
+  "role": "v4_confirmation_once",
+  "schema_version": 1,
+  "status": "consumed_before_any_confirmatory_target_or_next_latent_io",
+  "v3_test_targets": "forbidden_and_unopened"
+}

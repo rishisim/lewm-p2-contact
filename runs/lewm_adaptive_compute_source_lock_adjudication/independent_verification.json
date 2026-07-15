@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "allowlist_and_counts": true,
+    "base_drift_recomputed": true,
+    "candidate_count_and_ids": true,
+    "decision_mapping": true,
+    "eligibility_mapping": true,
+    "env_requirements_recomputed": true,
+    "network_fetch_absent": true,
+    "preregistration_seal": true,
+    "prior_run_manifest_preserved": true,
+    "protocol_seal": true,
+    "tag_peels_exactly": true,
+    "versions_incoherent": true,
+    "zero_prohibited_work": true
+  },
+  "independence": {
+    "candidate_selection_implementation_imported": false,
+    "environment_imported": false,
+    "hdf5_opened": false,
+    "mechanics_implementation_imported": false
+  },
+  "recomputed": [
+    {
+      "base_diff_ok": true,
+      "base_ok": false,
+      "collector_ok": false,
+      "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+      "env_name_multiset_ok": true,
+      "lock_sha256": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d",
+      "lock_version": "0.0.3",
+      "required_files_ok": false,
+      "source_version": "0.0.4",
+      "version_ok": false
+    },
+    {
+      "base_diff_ok": true,
+      "base_ok": false,
+      "collector_ok": true,
+      "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "env_name_multiset_ok": true,
+      "lock_sha256": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d",
+      "lock_version": "0.0.3",
+      "required_files_ok": true,
+      "source_version": "0.0.5",
+      "version_ok": false
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass"
+}

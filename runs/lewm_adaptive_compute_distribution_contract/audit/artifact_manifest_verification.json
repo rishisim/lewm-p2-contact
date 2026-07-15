@@ -1,0 +1,8 @@
+{
+  "manifest_path": "runs/lewm_adaptive_compute_distribution_contract/artifact_manifest.json",
+  "manifest_sha256": "01aacb490d867bf720cf5698fca195d793f3f89dc6f9b3e3dfeb1e8748482c72",
+  "mismatches": [],
+  "passed": true,
+  "schema_version": 1,
+  "verified_file_count": 368
+}

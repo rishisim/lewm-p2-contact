@@ -1,0 +1,121 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "stagewise_linear-r0.001-q0.55",
+      "family": "stagewise_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "stagewise_linear-r0.001-q0.70",
+      "family": "stagewise_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "stagewise_linear-r0.001-q0.85",
+      "family": "stagewise_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.85
+    },
+    {
+      "candidate_id": "stagewise_linear-r0.01-q0.55",
+      "family": "stagewise_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "stagewise_linear-r0.01-q0.70",
+      "family": "stagewise_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "stagewise_linear-r0.01-q0.85",
+      "family": "stagewise_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.85
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.001-q0.55",
+      "family": "shared_mlp_h16",
+      "regularization": 0.001,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.001-q0.70",
+      "family": "shared_mlp_h16",
+      "regularization": 0.001,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.001-q0.85",
+      "family": "shared_mlp_h16",
+      "regularization": 0.001,
+      "threshold_quantile": 0.85
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.01-q0.55",
+      "family": "shared_mlp_h16",
+      "regularization": 0.01,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.01-q0.70",
+      "family": "shared_mlp_h16",
+      "regularization": 0.01,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "shared_mlp_h16-r0.01-q0.85",
+      "family": "shared_mlp_h16",
+      "regularization": 0.01,
+      "threshold_quantile": 0.85
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.001-q0.55",
+      "family": "minimax_dual_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.001-q0.70",
+      "family": "minimax_dual_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.001-q0.85",
+      "family": "minimax_dual_linear",
+      "regularization": 0.001,
+      "threshold_quantile": 0.85
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.01-q0.55",
+      "family": "minimax_dual_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.55
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.01-q0.70",
+      "family": "minimax_dual_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.7
+    },
+    {
+      "candidate_id": "minimax_dual_linear-r0.01-q0.85",
+      "family": "minimax_dual_linear",
+      "regularization": 0.01,
+      "threshold_quantile": 0.85
+    }
+  ],
+  "finite_candidate_count": 18,
+  "maximum_hidden_units": 32,
+  "schema_version": 1,
+  "tie_break": [
+    "largest minimum selection benefit (raw, native-whitened)",
+    "lower total FLOPs",
+    "fewer parameters",
+    "lexicographic candidate_id"
+  ]
+}

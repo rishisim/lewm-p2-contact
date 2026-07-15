@@ -1,0 +1,224 @@
+{
+  "cycle_index": 7,
+  "goal_completed_utc": "2026-07-15T22:03:43Z",
+  "goal_objective": "Reach a defensible LeWM V5_READY state: obtain and independently validate a procedurally clean fresh prospective discovery pass for one frozen causal contact-free adaptive-compute policy, then produce a fully preregistered, power-justified, sealed, smoke-validated V5 confirmation package while generating zero V5 outcome episodes.",
+  "goal_status": "complete",
+  "last_verified_checkpoint": {
+    "accepted_discovery_cycle": 7,
+    "checkpoint": "v5_ready_all_criteria_verified",
+    "package_final_manifest_sha256": "3946e32be7fadcf54b6b2831d8fd31a63ccb234a5c92d28142a45d58067e3feb",
+    "package_smoke_episode_count": 12,
+    "package_smoke_verification_sha256": "1345ece9bc541324f9ce150738e98891e8604b3a668c2ebb675b973edad06c12",
+    "package_version": "v001",
+    "pre_v5_seal_sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd",
+    "primary_joint_power_lower": 0.9659810650707059,
+    "selected_v5_sample_size": 1600,
+    "stress_joint_power_lower": 0.9046395064401636,
+    "v5_outcome_episodes": 0,
+    "v5_ready_sha256": "075b13b1364d62f12547c5182f0e02bc98a3c8e0eadc2ee34a65987128c72a45",
+    "verified_utc": "2026-07-15T22:03:21Z"
+  },
+  "next_action": "None. V5_READY is achieved; retain the untouched 1,600-episode confirmation ledger and generate no V5 outcome unless a separate future confirmation task explicitly authorizes execution.",
+  "platform_goal_usage": {
+    "time_used_seconds": 11047,
+    "tokens_used": 2348554
+  },
+  "program_root": "runs/lewm_v5_readiness_program",
+  "program_state": "V5_READY",
+  "schema_version": 1,
+  "state_history": [
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:00:11Z",
+      "reason": "Verified prior invalid smoke and recorded the two independently diagnosed implementation defects.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:26:03Z",
+      "reason": "Smallest evidence-backed repair implemented in a new versioned cycle; all normative source files exist and parse.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:28:12Z",
+      "reason": "All repository tests, consumed feature/gate decisions, CPU/MPS determinism, sparse execution, numerical bounds, and two FLOP derivations passed.",
+      "state": "PRESEAL_TEST"
+    },
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:28:38Z",
+      "reason": "Complete normative package sealed before data and independently hash-verified from both runtimes.",
+      "state": "SEALED_SMOKE"
+    },
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:30:00Z",
+      "reason": "All 12 disjoint excluded smoke episodes passed every sealed execution and isolation audit.",
+      "state": "PROSPECTIVE_DISCOVERY"
+    },
+    {
+      "cycle_index": 1,
+      "entered_utc": "2026-07-15T19:42:21Z",
+      "reason": "Sealed 20,000-replicate analysis completed and proposed a process-valid statistical failure; synchronized latency and equivalence measurement passed.",
+      "state": "INDEPENDENT_AUDIT"
+    },
+    {
+      "cycle_index": 2,
+      "entered_utc": "2026-07-15T19:43:38Z",
+      "reason": "Cycle 001 was independently confirmed and immutably finalized as a process-valid statistical failure; its cohort is permanently consumed.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 2,
+      "entered_utc": "2026-07-15T19:49:15Z",
+      "reason": "Consumed-cycle diagnosis selected exactly one bounded scale-valid inference change while keeping the frozen candidate, DGP, model, gate, threshold, whitening, compute, and substantive criteria unchanged.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T19:51:16Z",
+      "reason": "Cycle 002 was sealed but failed its own pre-data verifier before smoke due to one stale status literal; it was finalized invalid with zero new episodes and no post-seal normative patch.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T19:52:22Z",
+      "reason": "The sole cycle-002 defect was corrected in a new cycle: verifier and seal now share the cycle-003 status literal; new disjoint cohort and analysis seeds are assigned.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T19:53:36Z",
+      "reason": "All repository, feature/gate, inference, CPU/MPS sparse-runtime, numerical-contract, and two exact-FLOP qualifications passed using only synthetic and consumed evidence.",
+      "state": "PRESEAL_TEST"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T19:53:36Z",
+      "reason": "The complete 82-file cycle 003 normative/transitive package was sealed with zero new data and verified from both runtimes.",
+      "state": "SEALED_SMOKE"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T19:54:40Z",
+      "reason": "All 12 fresh excluded smoke episodes passed the sealed sparse execution, exact-call, numerical, isolation, and frozen-module checks.",
+      "state": "PROSPECTIVE_DISCOVERY"
+    },
+    {
+      "cycle_index": 3,
+      "entered_utc": "2026-07-15T20:05:43Z",
+      "reason": "The sealed analysis completed and proposed a process-valid statistical failure; synchronized latency and numerical checks passed.",
+      "state": "INDEPENDENT_AUDIT"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:07:07Z",
+      "reason": "Cycle 003 was independently confirmed and finalized as a process-valid statistical failure; both cycle 001 and cycle 003 cohorts are now permanently consumed for bounded development diagnostics.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:13:23Z",
+      "reason": "The finite threshold-only study selected 0.2719204773217412 on cycle 001 and it passed every unchanged guardrail in the one-shot cycle 003 validation; the candidate is now frozen for a wholly fresh cohort.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:15:01Z",
+      "reason": "Threshold selection/validation isolation, exact new-threshold calls, repository tests, feature/FLOP derivations, numerical equivalence, and CPU/MPS sparse runtime all passed on consumed or synthetic evidence.",
+      "state": "PRESEAL_TEST"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:15:01Z",
+      "reason": "The complete 89-file threshold-recalibrated package was sealed before new data and verified from both runtimes.",
+      "state": "SEALED_SMOKE"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:16:03Z",
+      "reason": "All 12 fresh excluded smoke episodes passed every sealed new-threshold sparse execution, numerical, isolation, and frozen-module check.",
+      "state": "PROSPECTIVE_DISCOVERY"
+    },
+    {
+      "cycle_index": 4,
+      "entered_utc": "2026-07-15T20:27:33Z",
+      "reason": "Sealed 20,000-replicate analysis found every effect bound positive but failed the immutable positive stagewise rank criterion at stages 2 and 3; sealed mapping proposed cycle_execution_invalid and synchronized latency passed.",
+      "state": "INDEPENDENT_AUDIT"
+    },
+    {
+      "cycle_index": 5,
+      "entered_utc": "2026-07-15T20:28:12Z",
+      "reason": "Cycle 004 was independently reproduced and finalized as cycle_execution_invalid under its immutable terminal map; its 300 episodes are permanently consumed and candidate is ineligible.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 6,
+      "entered_utc": "2026-07-15T20:39:12Z",
+      "reason": "Cycle 005 upward-only stage-threshold selection passed on the consumed selection role but failed the predeclared one-shot validation stage-rank criterion; no new episode was launched and the attempt was finalized.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 6,
+      "entered_utc": "2026-07-15T20:56:56Z",
+      "reason": "The bounded stage-specific dual-linear gate refit, fresh 240/120 fit-selection isolation, nine-candidate grid, exact 7985-FLOP operation graph, and all future generation/execution/analysis/audit code were materialized before any cycle-006 episode.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:16:28Z",
+      "reason": "Cycle 006 was finalized implementation-invalid before smoke because MPS does not support its sealed float64 threshold tensor; fit/selection are consumed and the sole repair is versioned forward.",
+      "state": "DIAGNOSE"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:23:48Z",
+      "reason": "The exact frozen gate was copied byte-for-byte and the sole MPS threshold-dtype repair, fresh cohort identifiers, generator, sparse runner, analysis, independent verifier, decision, and finalizer were materialized with no new episode.",
+      "state": "IMPLEMENT"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:25:05Z",
+      "reason": "Exact float64-to-float32 threshold calls, repository/feature tests, two FLOP derivations, CPU/MPS sparse runtime, numerical equivalence, and simultaneous inference all passed; the 87-file repair design seal verifies in both runtimes.",
+      "state": "PRESEAL_TEST"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:25:48Z",
+      "reason": "The complete 96-file repair package, including all qualifiers, frozen gate, exact operation graph, generator, sparse runner, analysis, independent verifier, and terminal mapping, was sealed and independently verified from both runtimes before any new episode.",
+      "state": "SEALED_SMOKE"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:27:13Z",
+      "reason": "All 12 fresh excluded smoke episodes passed exact calls, histograms, same-path repeatability, manual sparse equivalence, numerical bounds, input isolation, and frozen-module audits under the sealed MPS repair.",
+      "state": "PROSPECTIVE_DISCOVERY"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:37:55Z",
+      "reason": "The sealed 20,000-replicate analysis proposed a process-valid statistical pass with all six individual lowers, both simultaneous co-primary lowers, and all three stage ranks positive; synchronized MPS latency passed separately.",
+      "state": "INDEPENDENT_AUDIT"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T21:39:06Z",
+      "reason": "A second implementation reproduced all effects, intervals, calls, exact compute, stage ranks, integrity checks, and terminal mapping; the 702-file cycle was finalized as the accepted discovery pass.",
+      "state": "V5_PACKAGE"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T22:00:46Z",
+      "reason": "Power analysis selected the minimum eligible n=1600; the complete v001 package passed all CPU/MPS, inference, exact-operation, source, cohort, and hash qualifications and its 88-file pre-V5 seal verified in both runtimes before any package-smoke or V5 episode.",
+      "state": "V5_SMOKE"
+    },
+    {
+      "cycle_index": 7,
+      "entered_utc": "2026-07-15T22:03:21Z",
+      "reason": "The sealed 12-episode excluded package smoke passed all execution, isolation, numerical, operation, latency, seed, hash, and zero-confirmation checks; the final 77-file v001 manifest verified in both runtimes and V5_READY.json recorded all criteria with zero V5 outcomes.",
+      "state": "V5_READY"
+    }
+  ],
+  "v5_outcome_episode_count": 0
+}

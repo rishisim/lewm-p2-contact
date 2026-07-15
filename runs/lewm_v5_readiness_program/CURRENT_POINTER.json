@@ -1,0 +1,130 @@
+{
+  "accepted_discovery": {
+    "adaptive_total_flops": 812433135415,
+    "candidate_id": "stage_dual_r0.01_q0.85",
+    "compiled_gate_sha256": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "cycle_index": 7,
+    "decision_sha256": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+    "final_manifest_sha256": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+    "gate_fit_sha256": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "independent_verification_sha256": "ee719a50d4bffe4df7fff9a74f21712564e2f2d7c09be21a627c36bd88323a72",
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006087347715632228,
+      "lower": 0.0004154267275268048,
+      "upper": 0.0008114536582685712
+    },
+    "path": "runs/lewm_v5_readiness_program/cycles/cycle_007_mps_threshold_dtype_repair",
+    "prospective_episode_count": 300,
+    "raw_vs_analytic": {
+      "estimate": 7.118699225729594e-06,
+      "lower": 4.058252005859703e-06,
+      "upper": 1.0390723547917983e-05
+    },
+    "terminal_outcome": "cycle_prospective_discovery_passed",
+    "thresholds": [
+      0.19465729885363534,
+      0.1568665868361991,
+      0.15153321811129283
+    ]
+  },
+  "completed_cycles": [
+    {
+      "consumed": true,
+      "cycle_index": 1,
+      "decision_sha256": "209569ac025b489c2063dc737404336584c567781e5cf6f336c830a6e7ac3f9c",
+      "final_manifest_sha256": "41a1235355e5c167759d5d19a055fb48d2cde6372ea20c66a4d46f00f6056e0e",
+      "independent_verification_sha256": "2cf7bdeec7c4158a66915606d4a2280bb88c4aa3ab71b45e51775437cd12e194",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_001_audit_repair",
+      "prospective_episode_count": 300,
+      "terminal_outcome": "cycle_prospective_discovery_failed"
+    },
+    {
+      "consumed": true,
+      "cycle_index": 2,
+      "decision_sha256": "8d0cc1b166c7c708fe7afef15cba5e963f0db2b5fafb841ee583f3d104cf07fa",
+      "failure_stage": "postseal_predata_verification_before_smoke",
+      "final_manifest_sha256": "ca0e52dfcc1b07fc8070242db623ecc922b845c0ea9da98e165b560d12d472a6",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous",
+      "prospective_episode_count": 0,
+      "smoke_episode_count": 0,
+      "terminal_outcome": "cycle_execution_invalid"
+    },
+    {
+      "consumed": true,
+      "cycle_index": 3,
+      "decision_sha256": "6c3ead5240912c45942f9d1e26b8a25caddb7c81fa1ea44d030b28d736df7adb",
+      "final_manifest_sha256": "192ccfd0fa61381511f7f73062deec1804f31b9e123184c13fb4ddf7f87765cf",
+      "independent_verification_sha256": "a4f214527e953cc3c6d6768531c382699c707d31cddf642990edf1afc62dd4f8",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_003_preseal_status_repair",
+      "prospective_episode_count": 300,
+      "terminal_outcome": "cycle_prospective_discovery_failed"
+    },
+    {
+      "consumed": true,
+      "cycle_index": 4,
+      "decision_sha256": "7578b8556b97cd3979d6831c408af91a9e67b5f46f28dfd8c867513c165bc233",
+      "final_manifest_sha256": "81c25571b98454c347e97e33d7814df5e9e6f7005095ee568d44c77849f63624",
+      "independent_verification_sha256": "c615f788bfe1f6dab06e7f9779a3f1b1d0b66a7b17a73db8157bdd8c3b3ea018",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration",
+      "prospective_episode_count": 300,
+      "terminal_outcome": "cycle_execution_invalid"
+    },
+    {
+      "consumed": true,
+      "cycle_index": 5,
+      "final_manifest_sha256": "2d1e51cbe141b7eca8b8620bbeab4d654cd2d88535e41dbfda1fc960e560647d",
+      "new_episode_count": 0,
+      "outcome": "cycle_development_validation_failed",
+      "outcome_sha256": "b5ee4ce8148ecee269bfbd66865394bb34131a78d0fdec78aa0e93a1cfbaab2b",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold"
+    },
+    {
+      "consumed": true,
+      "cycle_index": 6,
+      "decision_sha256": "3015a4fbe6275d781c86856c0198b30a0f99009c2520967f725d1148e94f522b",
+      "failure_stage": "post_selection_preseal_runtime_qualification_before_smoke",
+      "final_manifest_sha256": "1b18578c5f69f55d7648c0c3ff1bcbc230e0bf88800c62e2accdb86afdaf0349",
+      "fit_episode_count": 240,
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit",
+      "prospective_episode_count": 0,
+      "selection_episode_count": 120,
+      "smoke_episode_count": 0,
+      "terminal_outcome": "cycle_execution_invalid"
+    },
+    {
+      "carried_consumed_fit_episode_count": 240,
+      "carried_consumed_selection_episode_count": 120,
+      "consumed": true,
+      "cycle_index": 7,
+      "decision_sha256": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+      "final_manifest_sha256": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+      "fit_episode_count": 0,
+      "independent_verification_sha256": "ee719a50d4bffe4df7fff9a74f21712564e2f2d7c09be21a627c36bd88323a72",
+      "path": "runs/lewm_v5_readiness_program/cycles/cycle_007_mps_threshold_dtype_repair",
+      "prospective_episode_count": 300,
+      "selection_episode_count": 0,
+      "smoke_episode_count": 12,
+      "terminal_outcome": "cycle_prospective_discovery_passed"
+    }
+  ],
+  "current_cycle": null,
+  "current_v5_package": {
+    "package_final_manifest_sha256": "3946e32be7fadcf54b6b2831d8fd31a63ccb234a5c92d28142a45d58067e3feb",
+    "package_smoke_verification_sha256": "1345ece9bc541324f9ce150738e98891e8604b3a668c2ebb675b973edad06c12",
+    "path": "runs/lewm_v5_readiness_program/v5_package_versions/v001",
+    "pre_v5_seal_sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd",
+    "selected_v5_sample_size": 1600,
+    "status": "accepted_v5_ready",
+    "v5_outcome_episode_count": 0,
+    "v5_ready_path": "runs/lewm_v5_readiness_program/V5_READY.json",
+    "v5_ready_sha256": "075b13b1364d62f12547c5182f0e02bc98a3c8e0eadc2ee34a65987128c72a45",
+    "version": "v001"
+  },
+  "prior_verified_input": {
+    "manifest_path": "runs/lewm_adaptive_compute_planoracle_native_audit_repair/artifact_manifest.json",
+    "manifest_sha256": "d357f0a100312b91d2a925ca42dfaec670d5fd858ade3abbcdc82a618feec61a",
+    "terminal_outcome": "planoracle_audit_repair_invalid"
+  },
+  "schema_version": 1,
+  "v5_outcome_episode_count": 0
+}

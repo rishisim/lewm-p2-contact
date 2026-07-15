@@ -1,0 +1,90 @@
+{
+  "cache_exclusion_checks": {
+    "markov_oracle_encoded.npz": {
+      "slot_count": 30,
+      "source_namespace": "fresh_rollout_slot_not_v3_ordinal",
+      "v3_episode_ids": [],
+      "v3_test_targets_opened": false
+    },
+    "markov_oracle_evaluation.npz": {
+      "slot_count": 30,
+      "source_namespace": "fresh_rollout_slot_not_v3_ordinal",
+      "v3_episode_ids": [],
+      "v3_test_targets_opened": false
+    },
+    "offline_calibration_evaluation.npz": {
+      "episode_count": 90,
+      "v3_test_intersection": [],
+      "v3_test_targets_opened": false
+    },
+    "offline_discovery_evaluation.npz": {
+      "episode_count": 420,
+      "v3_test_intersection": [],
+      "v3_test_targets_opened": false
+    },
+    "offline_episode_metrics.npz": {
+      "episode_count": 510,
+      "v3_test_intersection": [],
+      "v3_test_targets_opened": false
+    },
+    "plan_oracle_encoded.npz": {
+      "slot_count": 90,
+      "source_namespace": "fresh_rollout_slot_not_v3_ordinal",
+      "v3_episode_ids": [],
+      "v3_test_targets_opened": false
+    },
+    "plan_oracle_evaluation.npz": {
+      "slot_count": 90,
+      "source_namespace": "fresh_rollout_slot_not_v3_ordinal",
+      "v3_episode_ids": [],
+      "v3_test_targets_opened": false
+    }
+  },
+  "checks": {
+    "all_seed_values_disjoint_from_prior_numeric_identifiers": true,
+    "every_derived_cache_test_clear": true,
+    "main_pairing_passed": true,
+    "no_exact_raw_hash_duplicates_against_accessible_prior_or_v4": true,
+    "no_internal_exact_raw_hash_duplicates": true,
+    "no_performance_or_success_exclusions": true,
+    "pre_generation_seal_valid": true,
+    "role_counts_exact": true,
+    "smoke_pairing_passed": true,
+    "smoke_physically_and_analytically_excluded": true,
+    "v3_combined_cache_opened_with_numpy": false,
+    "v3_test_targets_opened": false,
+    "v5_confirmation_episodes": 0
+  },
+  "duplicate_detail": {
+    "actions_sha256": {
+      "new_internal_duplicates": [],
+      "prior_duplicates": []
+    },
+    "combined_observation_action_sha256": {
+      "new_internal_duplicates": [],
+      "prior_duplicates": []
+    },
+    "observation_sha256": {
+      "new_internal_duplicates": [],
+      "prior_duplicates": []
+    },
+    "pixels_sha256": {
+      "new_internal_duplicates": [],
+      "prior_duplicates": []
+    }
+  },
+  "passed": true,
+  "pretraining_membership_caveat": "Exact nonduplication is proven against every accessible recorded prior episode outside the opaque V3 test set and against V4. The released checkpoint lacks a complete original pretraining episode manifest, so membership cannot be proven.",
+  "prior_raw_hash_index_sha256": "2ef92128d3452b3f7d8ee0a7aec9050096f514914f8bc59d2962e574dd5b3cd7",
+  "released_checkpoint_pretraining_episode_manifest_available": false,
+  "role_counts": {
+    "main_markov_oracle": 30,
+    "main_plan_oracle": 90,
+    "smoke_markov_oracle": 12,
+    "smoke_plan_oracle": 12
+  },
+  "schema_version": 1,
+  "seed_manifest_sha256": "259e4c1e4f6481a50043627e497c18eecd88796f22fef6b11fd7acb27b523adb",
+  "seed_overlap": [],
+  "smoke_leaks": []
+}

@@ -1,0 +1,10 @@
+{
+  "collapse_passed": true,
+  "contrast_passed": false,
+  "coverage_passed": true,
+  "matched_passed": true,
+  "phase_passed": true,
+  "reason": "global interaction-vs-transport_free excess contrast is not positive, but phase-adjusted and matched-position phase controls are positive; preregistered transfer acceptance is not met",
+  "transfer_supported": false,
+  "verdict": "mixed_phase_control_positive_global_negative"
+}

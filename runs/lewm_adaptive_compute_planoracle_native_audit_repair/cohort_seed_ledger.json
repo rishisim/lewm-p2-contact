@@ -1,0 +1,2999 @@
+{
+  "all_identifiers_unique": true,
+  "bootstrap_seed": 1765999999,
+  "histogram_seed": 1765888888,
+  "overlap_with_prior_recorded_identifiers": [],
+  "prior_numeric_identifier_count": 8277,
+  "replacement_rule": "only exception or mechanically malformed rollout; never outcome, loss, contact, or success; replacements consumed in order",
+  "roles": {
+    "prospective": [
+      {
+        "env_seed": 1765010000,
+        "episode_id": "par-pros-000",
+        "oracle_np_seed": 1765210000,
+        "policy_seed": 1765110000,
+        "role": "prospective",
+        "slot": 0
+      },
+      {
+        "env_seed": 1765010001,
+        "episode_id": "par-pros-001",
+        "oracle_np_seed": 1765210001,
+        "policy_seed": 1765110001,
+        "role": "prospective",
+        "slot": 1
+      },
+      {
+        "env_seed": 1765010002,
+        "episode_id": "par-pros-002",
+        "oracle_np_seed": 1765210002,
+        "policy_seed": 1765110002,
+        "role": "prospective",
+        "slot": 2
+      },
+      {
+        "env_seed": 1765010003,
+        "episode_id": "par-pros-003",
+        "oracle_np_seed": 1765210003,
+        "policy_seed": 1765110003,
+        "role": "prospective",
+        "slot": 3
+      },
+      {
+        "env_seed": 1765010004,
+        "episode_id": "par-pros-004",
+        "oracle_np_seed": 1765210004,
+        "policy_seed": 1765110004,
+        "role": "prospective",
+        "slot": 4
+      },
+      {
+        "env_seed": 1765010005,
+        "episode_id": "par-pros-005",
+        "oracle_np_seed": 1765210005,
+        "policy_seed": 1765110005,
+        "role": "prospective",
+        "slot": 5
+      },
+      {
+        "env_seed": 1765010006,
+        "episode_id": "par-pros-006",
+        "oracle_np_seed": 1765210006,
+        "policy_seed": 1765110006,
+        "role": "prospective",
+        "slot": 6
+      },
+      {
+        "env_seed": 1765010007,
+        "episode_id": "par-pros-007",
+        "oracle_np_seed": 1765210007,
+        "policy_seed": 1765110007,
+        "role": "prospective",
+        "slot": 7
+      },
+      {
+        "env_seed": 1765010008,
+        "episode_id": "par-pros-008",
+        "oracle_np_seed": 1765210008,
+        "policy_seed": 1765110008,
+        "role": "prospective",
+        "slot": 8
+      },
+      {
+        "env_seed": 1765010009,
+        "episode_id": "par-pros-009",
+        "oracle_np_seed": 1765210009,
+        "policy_seed": 1765110009,
+        "role": "prospective",
+        "slot": 9
+      },
+      {
+        "env_seed": 1765010010,
+        "episode_id": "par-pros-010",
+        "oracle_np_seed": 1765210010,
+        "policy_seed": 1765110010,
+        "role": "prospective",
+        "slot": 10
+      },
+      {
+        "env_seed": 1765010011,
+        "episode_id": "par-pros-011",
+        "oracle_np_seed": 1765210011,
+        "policy_seed": 1765110011,
+        "role": "prospective",
+        "slot": 11
+      },
+      {
+        "env_seed": 1765010012,
+        "episode_id": "par-pros-012",
+        "oracle_np_seed": 1765210012,
+        "policy_seed": 1765110012,
+        "role": "prospective",
+        "slot": 12
+      },
+      {
+        "env_seed": 1765010013,
+        "episode_id": "par-pros-013",
+        "oracle_np_seed": 1765210013,
+        "policy_seed": 1765110013,
+        "role": "prospective",
+        "slot": 13
+      },
+      {
+        "env_seed": 1765010014,
+        "episode_id": "par-pros-014",
+        "oracle_np_seed": 1765210014,
+        "policy_seed": 1765110014,
+        "role": "prospective",
+        "slot": 14
+      },
+      {
+        "env_seed": 1765010015,
+        "episode_id": "par-pros-015",
+        "oracle_np_seed": 1765210015,
+        "policy_seed": 1765110015,
+        "role": "prospective",
+        "slot": 15
+      },
+      {
+        "env_seed": 1765010016,
+        "episode_id": "par-pros-016",
+        "oracle_np_seed": 1765210016,
+        "policy_seed": 1765110016,
+        "role": "prospective",
+        "slot": 16
+      },
+      {
+        "env_seed": 1765010017,
+        "episode_id": "par-pros-017",
+        "oracle_np_seed": 1765210017,
+        "policy_seed": 1765110017,
+        "role": "prospective",
+        "slot": 17
+      },
+      {
+        "env_seed": 1765010018,
+        "episode_id": "par-pros-018",
+        "oracle_np_seed": 1765210018,
+        "policy_seed": 1765110018,
+        "role": "prospective",
+        "slot": 18
+      },
+      {
+        "env_seed": 1765010019,
+        "episode_id": "par-pros-019",
+        "oracle_np_seed": 1765210019,
+        "policy_seed": 1765110019,
+        "role": "prospective",
+        "slot": 19
+      },
+      {
+        "env_seed": 1765010020,
+        "episode_id": "par-pros-020",
+        "oracle_np_seed": 1765210020,
+        "policy_seed": 1765110020,
+        "role": "prospective",
+        "slot": 20
+      },
+      {
+        "env_seed": 1765010021,
+        "episode_id": "par-pros-021",
+        "oracle_np_seed": 1765210021,
+        "policy_seed": 1765110021,
+        "role": "prospective",
+        "slot": 21
+      },
+      {
+        "env_seed": 1765010022,
+        "episode_id": "par-pros-022",
+        "oracle_np_seed": 1765210022,
+        "policy_seed": 1765110022,
+        "role": "prospective",
+        "slot": 22
+      },
+      {
+        "env_seed": 1765010023,
+        "episode_id": "par-pros-023",
+        "oracle_np_seed": 1765210023,
+        "policy_seed": 1765110023,
+        "role": "prospective",
+        "slot": 23
+      },
+      {
+        "env_seed": 1765010024,
+        "episode_id": "par-pros-024",
+        "oracle_np_seed": 1765210024,
+        "policy_seed": 1765110024,
+        "role": "prospective",
+        "slot": 24
+      },
+      {
+        "env_seed": 1765010025,
+        "episode_id": "par-pros-025",
+        "oracle_np_seed": 1765210025,
+        "policy_seed": 1765110025,
+        "role": "prospective",
+        "slot": 25
+      },
+      {
+        "env_seed": 1765010026,
+        "episode_id": "par-pros-026",
+        "oracle_np_seed": 1765210026,
+        "policy_seed": 1765110026,
+        "role": "prospective",
+        "slot": 26
+      },
+      {
+        "env_seed": 1765010027,
+        "episode_id": "par-pros-027",
+        "oracle_np_seed": 1765210027,
+        "policy_seed": 1765110027,
+        "role": "prospective",
+        "slot": 27
+      },
+      {
+        "env_seed": 1765010028,
+        "episode_id": "par-pros-028",
+        "oracle_np_seed": 1765210028,
+        "policy_seed": 1765110028,
+        "role": "prospective",
+        "slot": 28
+      },
+      {
+        "env_seed": 1765010029,
+        "episode_id": "par-pros-029",
+        "oracle_np_seed": 1765210029,
+        "policy_seed": 1765110029,
+        "role": "prospective",
+        "slot": 29
+      },
+      {
+        "env_seed": 1765010030,
+        "episode_id": "par-pros-030",
+        "oracle_np_seed": 1765210030,
+        "policy_seed": 1765110030,
+        "role": "prospective",
+        "slot": 30
+      },
+      {
+        "env_seed": 1765010031,
+        "episode_id": "par-pros-031",
+        "oracle_np_seed": 1765210031,
+        "policy_seed": 1765110031,
+        "role": "prospective",
+        "slot": 31
+      },
+      {
+        "env_seed": 1765010032,
+        "episode_id": "par-pros-032",
+        "oracle_np_seed": 1765210032,
+        "policy_seed": 1765110032,
+        "role": "prospective",
+        "slot": 32
+      },
+      {
+        "env_seed": 1765010033,
+        "episode_id": "par-pros-033",
+        "oracle_np_seed": 1765210033,
+        "policy_seed": 1765110033,
+        "role": "prospective",
+        "slot": 33
+      },
+      {
+        "env_seed": 1765010034,
+        "episode_id": "par-pros-034",
+        "oracle_np_seed": 1765210034,
+        "policy_seed": 1765110034,
+        "role": "prospective",
+        "slot": 34
+      },
+      {
+        "env_seed": 1765010035,
+        "episode_id": "par-pros-035",
+        "oracle_np_seed": 1765210035,
+        "policy_seed": 1765110035,
+        "role": "prospective",
+        "slot": 35
+      },
+      {
+        "env_seed": 1765010036,
+        "episode_id": "par-pros-036",
+        "oracle_np_seed": 1765210036,
+        "policy_seed": 1765110036,
+        "role": "prospective",
+        "slot": 36
+      },
+      {
+        "env_seed": 1765010037,
+        "episode_id": "par-pros-037",
+        "oracle_np_seed": 1765210037,
+        "policy_seed": 1765110037,
+        "role": "prospective",
+        "slot": 37
+      },
+      {
+        "env_seed": 1765010038,
+        "episode_id": "par-pros-038",
+        "oracle_np_seed": 1765210038,
+        "policy_seed": 1765110038,
+        "role": "prospective",
+        "slot": 38
+      },
+      {
+        "env_seed": 1765010039,
+        "episode_id": "par-pros-039",
+        "oracle_np_seed": 1765210039,
+        "policy_seed": 1765110039,
+        "role": "prospective",
+        "slot": 39
+      },
+      {
+        "env_seed": 1765010040,
+        "episode_id": "par-pros-040",
+        "oracle_np_seed": 1765210040,
+        "policy_seed": 1765110040,
+        "role": "prospective",
+        "slot": 40
+      },
+      {
+        "env_seed": 1765010041,
+        "episode_id": "par-pros-041",
+        "oracle_np_seed": 1765210041,
+        "policy_seed": 1765110041,
+        "role": "prospective",
+        "slot": 41
+      },
+      {
+        "env_seed": 1765010042,
+        "episode_id": "par-pros-042",
+        "oracle_np_seed": 1765210042,
+        "policy_seed": 1765110042,
+        "role": "prospective",
+        "slot": 42
+      },
+      {
+        "env_seed": 1765010043,
+        "episode_id": "par-pros-043",
+        "oracle_np_seed": 1765210043,
+        "policy_seed": 1765110043,
+        "role": "prospective",
+        "slot": 43
+      },
+      {
+        "env_seed": 1765010044,
+        "episode_id": "par-pros-044",
+        "oracle_np_seed": 1765210044,
+        "policy_seed": 1765110044,
+        "role": "prospective",
+        "slot": 44
+      },
+      {
+        "env_seed": 1765010045,
+        "episode_id": "par-pros-045",
+        "oracle_np_seed": 1765210045,
+        "policy_seed": 1765110045,
+        "role": "prospective",
+        "slot": 45
+      },
+      {
+        "env_seed": 1765010046,
+        "episode_id": "par-pros-046",
+        "oracle_np_seed": 1765210046,
+        "policy_seed": 1765110046,
+        "role": "prospective",
+        "slot": 46
+      },
+      {
+        "env_seed": 1765010047,
+        "episode_id": "par-pros-047",
+        "oracle_np_seed": 1765210047,
+        "policy_seed": 1765110047,
+        "role": "prospective",
+        "slot": 47
+      },
+      {
+        "env_seed": 1765010048,
+        "episode_id": "par-pros-048",
+        "oracle_np_seed": 1765210048,
+        "policy_seed": 1765110048,
+        "role": "prospective",
+        "slot": 48
+      },
+      {
+        "env_seed": 1765010049,
+        "episode_id": "par-pros-049",
+        "oracle_np_seed": 1765210049,
+        "policy_seed": 1765110049,
+        "role": "prospective",
+        "slot": 49
+      },
+      {
+        "env_seed": 1765010050,
+        "episode_id": "par-pros-050",
+        "oracle_np_seed": 1765210050,
+        "policy_seed": 1765110050,
+        "role": "prospective",
+        "slot": 50
+      },
+      {
+        "env_seed": 1765010051,
+        "episode_id": "par-pros-051",
+        "oracle_np_seed": 1765210051,
+        "policy_seed": 1765110051,
+        "role": "prospective",
+        "slot": 51
+      },
+      {
+        "env_seed": 1765010052,
+        "episode_id": "par-pros-052",
+        "oracle_np_seed": 1765210052,
+        "policy_seed": 1765110052,
+        "role": "prospective",
+        "slot": 52
+      },
+      {
+        "env_seed": 1765010053,
+        "episode_id": "par-pros-053",
+        "oracle_np_seed": 1765210053,
+        "policy_seed": 1765110053,
+        "role": "prospective",
+        "slot": 53
+      },
+      {
+        "env_seed": 1765010054,
+        "episode_id": "par-pros-054",
+        "oracle_np_seed": 1765210054,
+        "policy_seed": 1765110054,
+        "role": "prospective",
+        "slot": 54
+      },
+      {
+        "env_seed": 1765010055,
+        "episode_id": "par-pros-055",
+        "oracle_np_seed": 1765210055,
+        "policy_seed": 1765110055,
+        "role": "prospective",
+        "slot": 55
+      },
+      {
+        "env_seed": 1765010056,
+        "episode_id": "par-pros-056",
+        "oracle_np_seed": 1765210056,
+        "policy_seed": 1765110056,
+        "role": "prospective",
+        "slot": 56
+      },
+      {
+        "env_seed": 1765010057,
+        "episode_id": "par-pros-057",
+        "oracle_np_seed": 1765210057,
+        "policy_seed": 1765110057,
+        "role": "prospective",
+        "slot": 57
+      },
+      {
+        "env_seed": 1765010058,
+        "episode_id": "par-pros-058",
+        "oracle_np_seed": 1765210058,
+        "policy_seed": 1765110058,
+        "role": "prospective",
+        "slot": 58
+      },
+      {
+        "env_seed": 1765010059,
+        "episode_id": "par-pros-059",
+        "oracle_np_seed": 1765210059,
+        "policy_seed": 1765110059,
+        "role": "prospective",
+        "slot": 59
+      },
+      {
+        "env_seed": 1765010060,
+        "episode_id": "par-pros-060",
+        "oracle_np_seed": 1765210060,
+        "policy_seed": 1765110060,
+        "role": "prospective",
+        "slot": 60
+      },
+      {
+        "env_seed": 1765010061,
+        "episode_id": "par-pros-061",
+        "oracle_np_seed": 1765210061,
+        "policy_seed": 1765110061,
+        "role": "prospective",
+        "slot": 61
+      },
+      {
+        "env_seed": 1765010062,
+        "episode_id": "par-pros-062",
+        "oracle_np_seed": 1765210062,
+        "policy_seed": 1765110062,
+        "role": "prospective",
+        "slot": 62
+      },
+      {
+        "env_seed": 1765010063,
+        "episode_id": "par-pros-063",
+        "oracle_np_seed": 1765210063,
+        "policy_seed": 1765110063,
+        "role": "prospective",
+        "slot": 63
+      },
+      {
+        "env_seed": 1765010064,
+        "episode_id": "par-pros-064",
+        "oracle_np_seed": 1765210064,
+        "policy_seed": 1765110064,
+        "role": "prospective",
+        "slot": 64
+      },
+      {
+        "env_seed": 1765010065,
+        "episode_id": "par-pros-065",
+        "oracle_np_seed": 1765210065,
+        "policy_seed": 1765110065,
+        "role": "prospective",
+        "slot": 65
+      },
+      {
+        "env_seed": 1765010066,
+        "episode_id": "par-pros-066",
+        "oracle_np_seed": 1765210066,
+        "policy_seed": 1765110066,
+        "role": "prospective",
+        "slot": 66
+      },
+      {
+        "env_seed": 1765010067,
+        "episode_id": "par-pros-067",
+        "oracle_np_seed": 1765210067,
+        "policy_seed": 1765110067,
+        "role": "prospective",
+        "slot": 67
+      },
+      {
+        "env_seed": 1765010068,
+        "episode_id": "par-pros-068",
+        "oracle_np_seed": 1765210068,
+        "policy_seed": 1765110068,
+        "role": "prospective",
+        "slot": 68
+      },
+      {
+        "env_seed": 1765010069,
+        "episode_id": "par-pros-069",
+        "oracle_np_seed": 1765210069,
+        "policy_seed": 1765110069,
+        "role": "prospective",
+        "slot": 69
+      },
+      {
+        "env_seed": 1765010070,
+        "episode_id": "par-pros-070",
+        "oracle_np_seed": 1765210070,
+        "policy_seed": 1765110070,
+        "role": "prospective",
+        "slot": 70
+      },
+      {
+        "env_seed": 1765010071,
+        "episode_id": "par-pros-071",
+        "oracle_np_seed": 1765210071,
+        "policy_seed": 1765110071,
+        "role": "prospective",
+        "slot": 71
+      },
+      {
+        "env_seed": 1765010072,
+        "episode_id": "par-pros-072",
+        "oracle_np_seed": 1765210072,
+        "policy_seed": 1765110072,
+        "role": "prospective",
+        "slot": 72
+      },
+      {
+        "env_seed": 1765010073,
+        "episode_id": "par-pros-073",
+        "oracle_np_seed": 1765210073,
+        "policy_seed": 1765110073,
+        "role": "prospective",
+        "slot": 73
+      },
+      {
+        "env_seed": 1765010074,
+        "episode_id": "par-pros-074",
+        "oracle_np_seed": 1765210074,
+        "policy_seed": 1765110074,
+        "role": "prospective",
+        "slot": 74
+      },
+      {
+        "env_seed": 1765010075,
+        "episode_id": "par-pros-075",
+        "oracle_np_seed": 1765210075,
+        "policy_seed": 1765110075,
+        "role": "prospective",
+        "slot": 75
+      },
+      {
+        "env_seed": 1765010076,
+        "episode_id": "par-pros-076",
+        "oracle_np_seed": 1765210076,
+        "policy_seed": 1765110076,
+        "role": "prospective",
+        "slot": 76
+      },
+      {
+        "env_seed": 1765010077,
+        "episode_id": "par-pros-077",
+        "oracle_np_seed": 1765210077,
+        "policy_seed": 1765110077,
+        "role": "prospective",
+        "slot": 77
+      },
+      {
+        "env_seed": 1765010078,
+        "episode_id": "par-pros-078",
+        "oracle_np_seed": 1765210078,
+        "policy_seed": 1765110078,
+        "role": "prospective",
+        "slot": 78
+      },
+      {
+        "env_seed": 1765010079,
+        "episode_id": "par-pros-079",
+        "oracle_np_seed": 1765210079,
+        "policy_seed": 1765110079,
+        "role": "prospective",
+        "slot": 79
+      },
+      {
+        "env_seed": 1765010080,
+        "episode_id": "par-pros-080",
+        "oracle_np_seed": 1765210080,
+        "policy_seed": 1765110080,
+        "role": "prospective",
+        "slot": 80
+      },
+      {
+        "env_seed": 1765010081,
+        "episode_id": "par-pros-081",
+        "oracle_np_seed": 1765210081,
+        "policy_seed": 1765110081,
+        "role": "prospective",
+        "slot": 81
+      },
+      {
+        "env_seed": 1765010082,
+        "episode_id": "par-pros-082",
+        "oracle_np_seed": 1765210082,
+        "policy_seed": 1765110082,
+        "role": "prospective",
+        "slot": 82
+      },
+      {
+        "env_seed": 1765010083,
+        "episode_id": "par-pros-083",
+        "oracle_np_seed": 1765210083,
+        "policy_seed": 1765110083,
+        "role": "prospective",
+        "slot": 83
+      },
+      {
+        "env_seed": 1765010084,
+        "episode_id": "par-pros-084",
+        "oracle_np_seed": 1765210084,
+        "policy_seed": 1765110084,
+        "role": "prospective",
+        "slot": 84
+      },
+      {
+        "env_seed": 1765010085,
+        "episode_id": "par-pros-085",
+        "oracle_np_seed": 1765210085,
+        "policy_seed": 1765110085,
+        "role": "prospective",
+        "slot": 85
+      },
+      {
+        "env_seed": 1765010086,
+        "episode_id": "par-pros-086",
+        "oracle_np_seed": 1765210086,
+        "policy_seed": 1765110086,
+        "role": "prospective",
+        "slot": 86
+      },
+      {
+        "env_seed": 1765010087,
+        "episode_id": "par-pros-087",
+        "oracle_np_seed": 1765210087,
+        "policy_seed": 1765110087,
+        "role": "prospective",
+        "slot": 87
+      },
+      {
+        "env_seed": 1765010088,
+        "episode_id": "par-pros-088",
+        "oracle_np_seed": 1765210088,
+        "policy_seed": 1765110088,
+        "role": "prospective",
+        "slot": 88
+      },
+      {
+        "env_seed": 1765010089,
+        "episode_id": "par-pros-089",
+        "oracle_np_seed": 1765210089,
+        "policy_seed": 1765110089,
+        "role": "prospective",
+        "slot": 89
+      },
+      {
+        "env_seed": 1765010090,
+        "episode_id": "par-pros-090",
+        "oracle_np_seed": 1765210090,
+        "policy_seed": 1765110090,
+        "role": "prospective",
+        "slot": 90
+      },
+      {
+        "env_seed": 1765010091,
+        "episode_id": "par-pros-091",
+        "oracle_np_seed": 1765210091,
+        "policy_seed": 1765110091,
+        "role": "prospective",
+        "slot": 91
+      },
+      {
+        "env_seed": 1765010092,
+        "episode_id": "par-pros-092",
+        "oracle_np_seed": 1765210092,
+        "policy_seed": 1765110092,
+        "role": "prospective",
+        "slot": 92
+      },
+      {
+        "env_seed": 1765010093,
+        "episode_id": "par-pros-093",
+        "oracle_np_seed": 1765210093,
+        "policy_seed": 1765110093,
+        "role": "prospective",
+        "slot": 93
+      },
+      {
+        "env_seed": 1765010094,
+        "episode_id": "par-pros-094",
+        "oracle_np_seed": 1765210094,
+        "policy_seed": 1765110094,
+        "role": "prospective",
+        "slot": 94
+      },
+      {
+        "env_seed": 1765010095,
+        "episode_id": "par-pros-095",
+        "oracle_np_seed": 1765210095,
+        "policy_seed": 1765110095,
+        "role": "prospective",
+        "slot": 95
+      },
+      {
+        "env_seed": 1765010096,
+        "episode_id": "par-pros-096",
+        "oracle_np_seed": 1765210096,
+        "policy_seed": 1765110096,
+        "role": "prospective",
+        "slot": 96
+      },
+      {
+        "env_seed": 1765010097,
+        "episode_id": "par-pros-097",
+        "oracle_np_seed": 1765210097,
+        "policy_seed": 1765110097,
+        "role": "prospective",
+        "slot": 97
+      },
+      {
+        "env_seed": 1765010098,
+        "episode_id": "par-pros-098",
+        "oracle_np_seed": 1765210098,
+        "policy_seed": 1765110098,
+        "role": "prospective",
+        "slot": 98
+      },
+      {
+        "env_seed": 1765010099,
+        "episode_id": "par-pros-099",
+        "oracle_np_seed": 1765210099,
+        "policy_seed": 1765110099,
+        "role": "prospective",
+        "slot": 99
+      },
+      {
+        "env_seed": 1765010100,
+        "episode_id": "par-pros-100",
+        "oracle_np_seed": 1765210100,
+        "policy_seed": 1765110100,
+        "role": "prospective",
+        "slot": 100
+      },
+      {
+        "env_seed": 1765010101,
+        "episode_id": "par-pros-101",
+        "oracle_np_seed": 1765210101,
+        "policy_seed": 1765110101,
+        "role": "prospective",
+        "slot": 101
+      },
+      {
+        "env_seed": 1765010102,
+        "episode_id": "par-pros-102",
+        "oracle_np_seed": 1765210102,
+        "policy_seed": 1765110102,
+        "role": "prospective",
+        "slot": 102
+      },
+      {
+        "env_seed": 1765010103,
+        "episode_id": "par-pros-103",
+        "oracle_np_seed": 1765210103,
+        "policy_seed": 1765110103,
+        "role": "prospective",
+        "slot": 103
+      },
+      {
+        "env_seed": 1765010104,
+        "episode_id": "par-pros-104",
+        "oracle_np_seed": 1765210104,
+        "policy_seed": 1765110104,
+        "role": "prospective",
+        "slot": 104
+      },
+      {
+        "env_seed": 1765010105,
+        "episode_id": "par-pros-105",
+        "oracle_np_seed": 1765210105,
+        "policy_seed": 1765110105,
+        "role": "prospective",
+        "slot": 105
+      },
+      {
+        "env_seed": 1765010106,
+        "episode_id": "par-pros-106",
+        "oracle_np_seed": 1765210106,
+        "policy_seed": 1765110106,
+        "role": "prospective",
+        "slot": 106
+      },
+      {
+        "env_seed": 1765010107,
+        "episode_id": "par-pros-107",
+        "oracle_np_seed": 1765210107,
+        "policy_seed": 1765110107,
+        "role": "prospective",
+        "slot": 107
+      },
+      {
+        "env_seed": 1765010108,
+        "episode_id": "par-pros-108",
+        "oracle_np_seed": 1765210108,
+        "policy_seed": 1765110108,
+        "role": "prospective",
+        "slot": 108
+      },
+      {
+        "env_seed": 1765010109,
+        "episode_id": "par-pros-109",
+        "oracle_np_seed": 1765210109,
+        "policy_seed": 1765110109,
+        "role": "prospective",
+        "slot": 109
+      },
+      {
+        "env_seed": 1765010110,
+        "episode_id": "par-pros-110",
+        "oracle_np_seed": 1765210110,
+        "policy_seed": 1765110110,
+        "role": "prospective",
+        "slot": 110
+      },
+      {
+        "env_seed": 1765010111,
+        "episode_id": "par-pros-111",
+        "oracle_np_seed": 1765210111,
+        "policy_seed": 1765110111,
+        "role": "prospective",
+        "slot": 111
+      },
+      {
+        "env_seed": 1765010112,
+        "episode_id": "par-pros-112",
+        "oracle_np_seed": 1765210112,
+        "policy_seed": 1765110112,
+        "role": "prospective",
+        "slot": 112
+      },
+      {
+        "env_seed": 1765010113,
+        "episode_id": "par-pros-113",
+        "oracle_np_seed": 1765210113,
+        "policy_seed": 1765110113,
+        "role": "prospective",
+        "slot": 113
+      },
+      {
+        "env_seed": 1765010114,
+        "episode_id": "par-pros-114",
+        "oracle_np_seed": 1765210114,
+        "policy_seed": 1765110114,
+        "role": "prospective",
+        "slot": 114
+      },
+      {
+        "env_seed": 1765010115,
+        "episode_id": "par-pros-115",
+        "oracle_np_seed": 1765210115,
+        "policy_seed": 1765110115,
+        "role": "prospective",
+        "slot": 115
+      },
+      {
+        "env_seed": 1765010116,
+        "episode_id": "par-pros-116",
+        "oracle_np_seed": 1765210116,
+        "policy_seed": 1765110116,
+        "role": "prospective",
+        "slot": 116
+      },
+      {
+        "env_seed": 1765010117,
+        "episode_id": "par-pros-117",
+        "oracle_np_seed": 1765210117,
+        "policy_seed": 1765110117,
+        "role": "prospective",
+        "slot": 117
+      },
+      {
+        "env_seed": 1765010118,
+        "episode_id": "par-pros-118",
+        "oracle_np_seed": 1765210118,
+        "policy_seed": 1765110118,
+        "role": "prospective",
+        "slot": 118
+      },
+      {
+        "env_seed": 1765010119,
+        "episode_id": "par-pros-119",
+        "oracle_np_seed": 1765210119,
+        "policy_seed": 1765110119,
+        "role": "prospective",
+        "slot": 119
+      },
+      {
+        "env_seed": 1765010120,
+        "episode_id": "par-pros-120",
+        "oracle_np_seed": 1765210120,
+        "policy_seed": 1765110120,
+        "role": "prospective",
+        "slot": 120
+      },
+      {
+        "env_seed": 1765010121,
+        "episode_id": "par-pros-121",
+        "oracle_np_seed": 1765210121,
+        "policy_seed": 1765110121,
+        "role": "prospective",
+        "slot": 121
+      },
+      {
+        "env_seed": 1765010122,
+        "episode_id": "par-pros-122",
+        "oracle_np_seed": 1765210122,
+        "policy_seed": 1765110122,
+        "role": "prospective",
+        "slot": 122
+      },
+      {
+        "env_seed": 1765010123,
+        "episode_id": "par-pros-123",
+        "oracle_np_seed": 1765210123,
+        "policy_seed": 1765110123,
+        "role": "prospective",
+        "slot": 123
+      },
+      {
+        "env_seed": 1765010124,
+        "episode_id": "par-pros-124",
+        "oracle_np_seed": 1765210124,
+        "policy_seed": 1765110124,
+        "role": "prospective",
+        "slot": 124
+      },
+      {
+        "env_seed": 1765010125,
+        "episode_id": "par-pros-125",
+        "oracle_np_seed": 1765210125,
+        "policy_seed": 1765110125,
+        "role": "prospective",
+        "slot": 125
+      },
+      {
+        "env_seed": 1765010126,
+        "episode_id": "par-pros-126",
+        "oracle_np_seed": 1765210126,
+        "policy_seed": 1765110126,
+        "role": "prospective",
+        "slot": 126
+      },
+      {
+        "env_seed": 1765010127,
+        "episode_id": "par-pros-127",
+        "oracle_np_seed": 1765210127,
+        "policy_seed": 1765110127,
+        "role": "prospective",
+        "slot": 127
+      },
+      {
+        "env_seed": 1765010128,
+        "episode_id": "par-pros-128",
+        "oracle_np_seed": 1765210128,
+        "policy_seed": 1765110128,
+        "role": "prospective",
+        "slot": 128
+      },
+      {
+        "env_seed": 1765010129,
+        "episode_id": "par-pros-129",
+        "oracle_np_seed": 1765210129,
+        "policy_seed": 1765110129,
+        "role": "prospective",
+        "slot": 129
+      },
+      {
+        "env_seed": 1765010130,
+        "episode_id": "par-pros-130",
+        "oracle_np_seed": 1765210130,
+        "policy_seed": 1765110130,
+        "role": "prospective",
+        "slot": 130
+      },
+      {
+        "env_seed": 1765010131,
+        "episode_id": "par-pros-131",
+        "oracle_np_seed": 1765210131,
+        "policy_seed": 1765110131,
+        "role": "prospective",
+        "slot": 131
+      },
+      {
+        "env_seed": 1765010132,
+        "episode_id": "par-pros-132",
+        "oracle_np_seed": 1765210132,
+        "policy_seed": 1765110132,
+        "role": "prospective",
+        "slot": 132
+      },
+      {
+        "env_seed": 1765010133,
+        "episode_id": "par-pros-133",
+        "oracle_np_seed": 1765210133,
+        "policy_seed": 1765110133,
+        "role": "prospective",
+        "slot": 133
+      },
+      {
+        "env_seed": 1765010134,
+        "episode_id": "par-pros-134",
+        "oracle_np_seed": 1765210134,
+        "policy_seed": 1765110134,
+        "role": "prospective",
+        "slot": 134
+      },
+      {
+        "env_seed": 1765010135,
+        "episode_id": "par-pros-135",
+        "oracle_np_seed": 1765210135,
+        "policy_seed": 1765110135,
+        "role": "prospective",
+        "slot": 135
+      },
+      {
+        "env_seed": 1765010136,
+        "episode_id": "par-pros-136",
+        "oracle_np_seed": 1765210136,
+        "policy_seed": 1765110136,
+        "role": "prospective",
+        "slot": 136
+      },
+      {
+        "env_seed": 1765010137,
+        "episode_id": "par-pros-137",
+        "oracle_np_seed": 1765210137,
+        "policy_seed": 1765110137,
+        "role": "prospective",
+        "slot": 137
+      },
+      {
+        "env_seed": 1765010138,
+        "episode_id": "par-pros-138",
+        "oracle_np_seed": 1765210138,
+        "policy_seed": 1765110138,
+        "role": "prospective",
+        "slot": 138
+      },
+      {
+        "env_seed": 1765010139,
+        "episode_id": "par-pros-139",
+        "oracle_np_seed": 1765210139,
+        "policy_seed": 1765110139,
+        "role": "prospective",
+        "slot": 139
+      },
+      {
+        "env_seed": 1765010140,
+        "episode_id": "par-pros-140",
+        "oracle_np_seed": 1765210140,
+        "policy_seed": 1765110140,
+        "role": "prospective",
+        "slot": 140
+      },
+      {
+        "env_seed": 1765010141,
+        "episode_id": "par-pros-141",
+        "oracle_np_seed": 1765210141,
+        "policy_seed": 1765110141,
+        "role": "prospective",
+        "slot": 141
+      },
+      {
+        "env_seed": 1765010142,
+        "episode_id": "par-pros-142",
+        "oracle_np_seed": 1765210142,
+        "policy_seed": 1765110142,
+        "role": "prospective",
+        "slot": 142
+      },
+      {
+        "env_seed": 1765010143,
+        "episode_id": "par-pros-143",
+        "oracle_np_seed": 1765210143,
+        "policy_seed": 1765110143,
+        "role": "prospective",
+        "slot": 143
+      },
+      {
+        "env_seed": 1765010144,
+        "episode_id": "par-pros-144",
+        "oracle_np_seed": 1765210144,
+        "policy_seed": 1765110144,
+        "role": "prospective",
+        "slot": 144
+      },
+      {
+        "env_seed": 1765010145,
+        "episode_id": "par-pros-145",
+        "oracle_np_seed": 1765210145,
+        "policy_seed": 1765110145,
+        "role": "prospective",
+        "slot": 145
+      },
+      {
+        "env_seed": 1765010146,
+        "episode_id": "par-pros-146",
+        "oracle_np_seed": 1765210146,
+        "policy_seed": 1765110146,
+        "role": "prospective",
+        "slot": 146
+      },
+      {
+        "env_seed": 1765010147,
+        "episode_id": "par-pros-147",
+        "oracle_np_seed": 1765210147,
+        "policy_seed": 1765110147,
+        "role": "prospective",
+        "slot": 147
+      },
+      {
+        "env_seed": 1765010148,
+        "episode_id": "par-pros-148",
+        "oracle_np_seed": 1765210148,
+        "policy_seed": 1765110148,
+        "role": "prospective",
+        "slot": 148
+      },
+      {
+        "env_seed": 1765010149,
+        "episode_id": "par-pros-149",
+        "oracle_np_seed": 1765210149,
+        "policy_seed": 1765110149,
+        "role": "prospective",
+        "slot": 149
+      },
+      {
+        "env_seed": 1765010150,
+        "episode_id": "par-pros-150",
+        "oracle_np_seed": 1765210150,
+        "policy_seed": 1765110150,
+        "role": "prospective",
+        "slot": 150
+      },
+      {
+        "env_seed": 1765010151,
+        "episode_id": "par-pros-151",
+        "oracle_np_seed": 1765210151,
+        "policy_seed": 1765110151,
+        "role": "prospective",
+        "slot": 151
+      },
+      {
+        "env_seed": 1765010152,
+        "episode_id": "par-pros-152",
+        "oracle_np_seed": 1765210152,
+        "policy_seed": 1765110152,
+        "role": "prospective",
+        "slot": 152
+      },
+      {
+        "env_seed": 1765010153,
+        "episode_id": "par-pros-153",
+        "oracle_np_seed": 1765210153,
+        "policy_seed": 1765110153,
+        "role": "prospective",
+        "slot": 153
+      },
+      {
+        "env_seed": 1765010154,
+        "episode_id": "par-pros-154",
+        "oracle_np_seed": 1765210154,
+        "policy_seed": 1765110154,
+        "role": "prospective",
+        "slot": 154
+      },
+      {
+        "env_seed": 1765010155,
+        "episode_id": "par-pros-155",
+        "oracle_np_seed": 1765210155,
+        "policy_seed": 1765110155,
+        "role": "prospective",
+        "slot": 155
+      },
+      {
+        "env_seed": 1765010156,
+        "episode_id": "par-pros-156",
+        "oracle_np_seed": 1765210156,
+        "policy_seed": 1765110156,
+        "role": "prospective",
+        "slot": 156
+      },
+      {
+        "env_seed": 1765010157,
+        "episode_id": "par-pros-157",
+        "oracle_np_seed": 1765210157,
+        "policy_seed": 1765110157,
+        "role": "prospective",
+        "slot": 157
+      },
+      {
+        "env_seed": 1765010158,
+        "episode_id": "par-pros-158",
+        "oracle_np_seed": 1765210158,
+        "policy_seed": 1765110158,
+        "role": "prospective",
+        "slot": 158
+      },
+      {
+        "env_seed": 1765010159,
+        "episode_id": "par-pros-159",
+        "oracle_np_seed": 1765210159,
+        "policy_seed": 1765110159,
+        "role": "prospective",
+        "slot": 159
+      },
+      {
+        "env_seed": 1765010160,
+        "episode_id": "par-pros-160",
+        "oracle_np_seed": 1765210160,
+        "policy_seed": 1765110160,
+        "role": "prospective",
+        "slot": 160
+      },
+      {
+        "env_seed": 1765010161,
+        "episode_id": "par-pros-161",
+        "oracle_np_seed": 1765210161,
+        "policy_seed": 1765110161,
+        "role": "prospective",
+        "slot": 161
+      },
+      {
+        "env_seed": 1765010162,
+        "episode_id": "par-pros-162",
+        "oracle_np_seed": 1765210162,
+        "policy_seed": 1765110162,
+        "role": "prospective",
+        "slot": 162
+      },
+      {
+        "env_seed": 1765010163,
+        "episode_id": "par-pros-163",
+        "oracle_np_seed": 1765210163,
+        "policy_seed": 1765110163,
+        "role": "prospective",
+        "slot": 163
+      },
+      {
+        "env_seed": 1765010164,
+        "episode_id": "par-pros-164",
+        "oracle_np_seed": 1765210164,
+        "policy_seed": 1765110164,
+        "role": "prospective",
+        "slot": 164
+      },
+      {
+        "env_seed": 1765010165,
+        "episode_id": "par-pros-165",
+        "oracle_np_seed": 1765210165,
+        "policy_seed": 1765110165,
+        "role": "prospective",
+        "slot": 165
+      },
+      {
+        "env_seed": 1765010166,
+        "episode_id": "par-pros-166",
+        "oracle_np_seed": 1765210166,
+        "policy_seed": 1765110166,
+        "role": "prospective",
+        "slot": 166
+      },
+      {
+        "env_seed": 1765010167,
+        "episode_id": "par-pros-167",
+        "oracle_np_seed": 1765210167,
+        "policy_seed": 1765110167,
+        "role": "prospective",
+        "slot": 167
+      },
+      {
+        "env_seed": 1765010168,
+        "episode_id": "par-pros-168",
+        "oracle_np_seed": 1765210168,
+        "policy_seed": 1765110168,
+        "role": "prospective",
+        "slot": 168
+      },
+      {
+        "env_seed": 1765010169,
+        "episode_id": "par-pros-169",
+        "oracle_np_seed": 1765210169,
+        "policy_seed": 1765110169,
+        "role": "prospective",
+        "slot": 169
+      },
+      {
+        "env_seed": 1765010170,
+        "episode_id": "par-pros-170",
+        "oracle_np_seed": 1765210170,
+        "policy_seed": 1765110170,
+        "role": "prospective",
+        "slot": 170
+      },
+      {
+        "env_seed": 1765010171,
+        "episode_id": "par-pros-171",
+        "oracle_np_seed": 1765210171,
+        "policy_seed": 1765110171,
+        "role": "prospective",
+        "slot": 171
+      },
+      {
+        "env_seed": 1765010172,
+        "episode_id": "par-pros-172",
+        "oracle_np_seed": 1765210172,
+        "policy_seed": 1765110172,
+        "role": "prospective",
+        "slot": 172
+      },
+      {
+        "env_seed": 1765010173,
+        "episode_id": "par-pros-173",
+        "oracle_np_seed": 1765210173,
+        "policy_seed": 1765110173,
+        "role": "prospective",
+        "slot": 173
+      },
+      {
+        "env_seed": 1765010174,
+        "episode_id": "par-pros-174",
+        "oracle_np_seed": 1765210174,
+        "policy_seed": 1765110174,
+        "role": "prospective",
+        "slot": 174
+      },
+      {
+        "env_seed": 1765010175,
+        "episode_id": "par-pros-175",
+        "oracle_np_seed": 1765210175,
+        "policy_seed": 1765110175,
+        "role": "prospective",
+        "slot": 175
+      },
+      {
+        "env_seed": 1765010176,
+        "episode_id": "par-pros-176",
+        "oracle_np_seed": 1765210176,
+        "policy_seed": 1765110176,
+        "role": "prospective",
+        "slot": 176
+      },
+      {
+        "env_seed": 1765010177,
+        "episode_id": "par-pros-177",
+        "oracle_np_seed": 1765210177,
+        "policy_seed": 1765110177,
+        "role": "prospective",
+        "slot": 177
+      },
+      {
+        "env_seed": 1765010178,
+        "episode_id": "par-pros-178",
+        "oracle_np_seed": 1765210178,
+        "policy_seed": 1765110178,
+        "role": "prospective",
+        "slot": 178
+      },
+      {
+        "env_seed": 1765010179,
+        "episode_id": "par-pros-179",
+        "oracle_np_seed": 1765210179,
+        "policy_seed": 1765110179,
+        "role": "prospective",
+        "slot": 179
+      },
+      {
+        "env_seed": 1765010180,
+        "episode_id": "par-pros-180",
+        "oracle_np_seed": 1765210180,
+        "policy_seed": 1765110180,
+        "role": "prospective",
+        "slot": 180
+      },
+      {
+        "env_seed": 1765010181,
+        "episode_id": "par-pros-181",
+        "oracle_np_seed": 1765210181,
+        "policy_seed": 1765110181,
+        "role": "prospective",
+        "slot": 181
+      },
+      {
+        "env_seed": 1765010182,
+        "episode_id": "par-pros-182",
+        "oracle_np_seed": 1765210182,
+        "policy_seed": 1765110182,
+        "role": "prospective",
+        "slot": 182
+      },
+      {
+        "env_seed": 1765010183,
+        "episode_id": "par-pros-183",
+        "oracle_np_seed": 1765210183,
+        "policy_seed": 1765110183,
+        "role": "prospective",
+        "slot": 183
+      },
+      {
+        "env_seed": 1765010184,
+        "episode_id": "par-pros-184",
+        "oracle_np_seed": 1765210184,
+        "policy_seed": 1765110184,
+        "role": "prospective",
+        "slot": 184
+      },
+      {
+        "env_seed": 1765010185,
+        "episode_id": "par-pros-185",
+        "oracle_np_seed": 1765210185,
+        "policy_seed": 1765110185,
+        "role": "prospective",
+        "slot": 185
+      },
+      {
+        "env_seed": 1765010186,
+        "episode_id": "par-pros-186",
+        "oracle_np_seed": 1765210186,
+        "policy_seed": 1765110186,
+        "role": "prospective",
+        "slot": 186
+      },
+      {
+        "env_seed": 1765010187,
+        "episode_id": "par-pros-187",
+        "oracle_np_seed": 1765210187,
+        "policy_seed": 1765110187,
+        "role": "prospective",
+        "slot": 187
+      },
+      {
+        "env_seed": 1765010188,
+        "episode_id": "par-pros-188",
+        "oracle_np_seed": 1765210188,
+        "policy_seed": 1765110188,
+        "role": "prospective",
+        "slot": 188
+      },
+      {
+        "env_seed": 1765010189,
+        "episode_id": "par-pros-189",
+        "oracle_np_seed": 1765210189,
+        "policy_seed": 1765110189,
+        "role": "prospective",
+        "slot": 189
+      },
+      {
+        "env_seed": 1765010190,
+        "episode_id": "par-pros-190",
+        "oracle_np_seed": 1765210190,
+        "policy_seed": 1765110190,
+        "role": "prospective",
+        "slot": 190
+      },
+      {
+        "env_seed": 1765010191,
+        "episode_id": "par-pros-191",
+        "oracle_np_seed": 1765210191,
+        "policy_seed": 1765110191,
+        "role": "prospective",
+        "slot": 191
+      },
+      {
+        "env_seed": 1765010192,
+        "episode_id": "par-pros-192",
+        "oracle_np_seed": 1765210192,
+        "policy_seed": 1765110192,
+        "role": "prospective",
+        "slot": 192
+      },
+      {
+        "env_seed": 1765010193,
+        "episode_id": "par-pros-193",
+        "oracle_np_seed": 1765210193,
+        "policy_seed": 1765110193,
+        "role": "prospective",
+        "slot": 193
+      },
+      {
+        "env_seed": 1765010194,
+        "episode_id": "par-pros-194",
+        "oracle_np_seed": 1765210194,
+        "policy_seed": 1765110194,
+        "role": "prospective",
+        "slot": 194
+      },
+      {
+        "env_seed": 1765010195,
+        "episode_id": "par-pros-195",
+        "oracle_np_seed": 1765210195,
+        "policy_seed": 1765110195,
+        "role": "prospective",
+        "slot": 195
+      },
+      {
+        "env_seed": 1765010196,
+        "episode_id": "par-pros-196",
+        "oracle_np_seed": 1765210196,
+        "policy_seed": 1765110196,
+        "role": "prospective",
+        "slot": 196
+      },
+      {
+        "env_seed": 1765010197,
+        "episode_id": "par-pros-197",
+        "oracle_np_seed": 1765210197,
+        "policy_seed": 1765110197,
+        "role": "prospective",
+        "slot": 197
+      },
+      {
+        "env_seed": 1765010198,
+        "episode_id": "par-pros-198",
+        "oracle_np_seed": 1765210198,
+        "policy_seed": 1765110198,
+        "role": "prospective",
+        "slot": 198
+      },
+      {
+        "env_seed": 1765010199,
+        "episode_id": "par-pros-199",
+        "oracle_np_seed": 1765210199,
+        "policy_seed": 1765110199,
+        "role": "prospective",
+        "slot": 199
+      },
+      {
+        "env_seed": 1765010200,
+        "episode_id": "par-pros-200",
+        "oracle_np_seed": 1765210200,
+        "policy_seed": 1765110200,
+        "role": "prospective",
+        "slot": 200
+      },
+      {
+        "env_seed": 1765010201,
+        "episode_id": "par-pros-201",
+        "oracle_np_seed": 1765210201,
+        "policy_seed": 1765110201,
+        "role": "prospective",
+        "slot": 201
+      },
+      {
+        "env_seed": 1765010202,
+        "episode_id": "par-pros-202",
+        "oracle_np_seed": 1765210202,
+        "policy_seed": 1765110202,
+        "role": "prospective",
+        "slot": 202
+      },
+      {
+        "env_seed": 1765010203,
+        "episode_id": "par-pros-203",
+        "oracle_np_seed": 1765210203,
+        "policy_seed": 1765110203,
+        "role": "prospective",
+        "slot": 203
+      },
+      {
+        "env_seed": 1765010204,
+        "episode_id": "par-pros-204",
+        "oracle_np_seed": 1765210204,
+        "policy_seed": 1765110204,
+        "role": "prospective",
+        "slot": 204
+      },
+      {
+        "env_seed": 1765010205,
+        "episode_id": "par-pros-205",
+        "oracle_np_seed": 1765210205,
+        "policy_seed": 1765110205,
+        "role": "prospective",
+        "slot": 205
+      },
+      {
+        "env_seed": 1765010206,
+        "episode_id": "par-pros-206",
+        "oracle_np_seed": 1765210206,
+        "policy_seed": 1765110206,
+        "role": "prospective",
+        "slot": 206
+      },
+      {
+        "env_seed": 1765010207,
+        "episode_id": "par-pros-207",
+        "oracle_np_seed": 1765210207,
+        "policy_seed": 1765110207,
+        "role": "prospective",
+        "slot": 207
+      },
+      {
+        "env_seed": 1765010208,
+        "episode_id": "par-pros-208",
+        "oracle_np_seed": 1765210208,
+        "policy_seed": 1765110208,
+        "role": "prospective",
+        "slot": 208
+      },
+      {
+        "env_seed": 1765010209,
+        "episode_id": "par-pros-209",
+        "oracle_np_seed": 1765210209,
+        "policy_seed": 1765110209,
+        "role": "prospective",
+        "slot": 209
+      },
+      {
+        "env_seed": 1765010210,
+        "episode_id": "par-pros-210",
+        "oracle_np_seed": 1765210210,
+        "policy_seed": 1765110210,
+        "role": "prospective",
+        "slot": 210
+      },
+      {
+        "env_seed": 1765010211,
+        "episode_id": "par-pros-211",
+        "oracle_np_seed": 1765210211,
+        "policy_seed": 1765110211,
+        "role": "prospective",
+        "slot": 211
+      },
+      {
+        "env_seed": 1765010212,
+        "episode_id": "par-pros-212",
+        "oracle_np_seed": 1765210212,
+        "policy_seed": 1765110212,
+        "role": "prospective",
+        "slot": 212
+      },
+      {
+        "env_seed": 1765010213,
+        "episode_id": "par-pros-213",
+        "oracle_np_seed": 1765210213,
+        "policy_seed": 1765110213,
+        "role": "prospective",
+        "slot": 213
+      },
+      {
+        "env_seed": 1765010214,
+        "episode_id": "par-pros-214",
+        "oracle_np_seed": 1765210214,
+        "policy_seed": 1765110214,
+        "role": "prospective",
+        "slot": 214
+      },
+      {
+        "env_seed": 1765010215,
+        "episode_id": "par-pros-215",
+        "oracle_np_seed": 1765210215,
+        "policy_seed": 1765110215,
+        "role": "prospective",
+        "slot": 215
+      },
+      {
+        "env_seed": 1765010216,
+        "episode_id": "par-pros-216",
+        "oracle_np_seed": 1765210216,
+        "policy_seed": 1765110216,
+        "role": "prospective",
+        "slot": 216
+      },
+      {
+        "env_seed": 1765010217,
+        "episode_id": "par-pros-217",
+        "oracle_np_seed": 1765210217,
+        "policy_seed": 1765110217,
+        "role": "prospective",
+        "slot": 217
+      },
+      {
+        "env_seed": 1765010218,
+        "episode_id": "par-pros-218",
+        "oracle_np_seed": 1765210218,
+        "policy_seed": 1765110218,
+        "role": "prospective",
+        "slot": 218
+      },
+      {
+        "env_seed": 1765010219,
+        "episode_id": "par-pros-219",
+        "oracle_np_seed": 1765210219,
+        "policy_seed": 1765110219,
+        "role": "prospective",
+        "slot": 219
+      },
+      {
+        "env_seed": 1765010220,
+        "episode_id": "par-pros-220",
+        "oracle_np_seed": 1765210220,
+        "policy_seed": 1765110220,
+        "role": "prospective",
+        "slot": 220
+      },
+      {
+        "env_seed": 1765010221,
+        "episode_id": "par-pros-221",
+        "oracle_np_seed": 1765210221,
+        "policy_seed": 1765110221,
+        "role": "prospective",
+        "slot": 221
+      },
+      {
+        "env_seed": 1765010222,
+        "episode_id": "par-pros-222",
+        "oracle_np_seed": 1765210222,
+        "policy_seed": 1765110222,
+        "role": "prospective",
+        "slot": 222
+      },
+      {
+        "env_seed": 1765010223,
+        "episode_id": "par-pros-223",
+        "oracle_np_seed": 1765210223,
+        "policy_seed": 1765110223,
+        "role": "prospective",
+        "slot": 223
+      },
+      {
+        "env_seed": 1765010224,
+        "episode_id": "par-pros-224",
+        "oracle_np_seed": 1765210224,
+        "policy_seed": 1765110224,
+        "role": "prospective",
+        "slot": 224
+      },
+      {
+        "env_seed": 1765010225,
+        "episode_id": "par-pros-225",
+        "oracle_np_seed": 1765210225,
+        "policy_seed": 1765110225,
+        "role": "prospective",
+        "slot": 225
+      },
+      {
+        "env_seed": 1765010226,
+        "episode_id": "par-pros-226",
+        "oracle_np_seed": 1765210226,
+        "policy_seed": 1765110226,
+        "role": "prospective",
+        "slot": 226
+      },
+      {
+        "env_seed": 1765010227,
+        "episode_id": "par-pros-227",
+        "oracle_np_seed": 1765210227,
+        "policy_seed": 1765110227,
+        "role": "prospective",
+        "slot": 227
+      },
+      {
+        "env_seed": 1765010228,
+        "episode_id": "par-pros-228",
+        "oracle_np_seed": 1765210228,
+        "policy_seed": 1765110228,
+        "role": "prospective",
+        "slot": 228
+      },
+      {
+        "env_seed": 1765010229,
+        "episode_id": "par-pros-229",
+        "oracle_np_seed": 1765210229,
+        "policy_seed": 1765110229,
+        "role": "prospective",
+        "slot": 229
+      },
+      {
+        "env_seed": 1765010230,
+        "episode_id": "par-pros-230",
+        "oracle_np_seed": 1765210230,
+        "policy_seed": 1765110230,
+        "role": "prospective",
+        "slot": 230
+      },
+      {
+        "env_seed": 1765010231,
+        "episode_id": "par-pros-231",
+        "oracle_np_seed": 1765210231,
+        "policy_seed": 1765110231,
+        "role": "prospective",
+        "slot": 231
+      },
+      {
+        "env_seed": 1765010232,
+        "episode_id": "par-pros-232",
+        "oracle_np_seed": 1765210232,
+        "policy_seed": 1765110232,
+        "role": "prospective",
+        "slot": 232
+      },
+      {
+        "env_seed": 1765010233,
+        "episode_id": "par-pros-233",
+        "oracle_np_seed": 1765210233,
+        "policy_seed": 1765110233,
+        "role": "prospective",
+        "slot": 233
+      },
+      {
+        "env_seed": 1765010234,
+        "episode_id": "par-pros-234",
+        "oracle_np_seed": 1765210234,
+        "policy_seed": 1765110234,
+        "role": "prospective",
+        "slot": 234
+      },
+      {
+        "env_seed": 1765010235,
+        "episode_id": "par-pros-235",
+        "oracle_np_seed": 1765210235,
+        "policy_seed": 1765110235,
+        "role": "prospective",
+        "slot": 235
+      },
+      {
+        "env_seed": 1765010236,
+        "episode_id": "par-pros-236",
+        "oracle_np_seed": 1765210236,
+        "policy_seed": 1765110236,
+        "role": "prospective",
+        "slot": 236
+      },
+      {
+        "env_seed": 1765010237,
+        "episode_id": "par-pros-237",
+        "oracle_np_seed": 1765210237,
+        "policy_seed": 1765110237,
+        "role": "prospective",
+        "slot": 237
+      },
+      {
+        "env_seed": 1765010238,
+        "episode_id": "par-pros-238",
+        "oracle_np_seed": 1765210238,
+        "policy_seed": 1765110238,
+        "role": "prospective",
+        "slot": 238
+      },
+      {
+        "env_seed": 1765010239,
+        "episode_id": "par-pros-239",
+        "oracle_np_seed": 1765210239,
+        "policy_seed": 1765110239,
+        "role": "prospective",
+        "slot": 239
+      },
+      {
+        "env_seed": 1765010240,
+        "episode_id": "par-pros-240",
+        "oracle_np_seed": 1765210240,
+        "policy_seed": 1765110240,
+        "role": "prospective",
+        "slot": 240
+      },
+      {
+        "env_seed": 1765010241,
+        "episode_id": "par-pros-241",
+        "oracle_np_seed": 1765210241,
+        "policy_seed": 1765110241,
+        "role": "prospective",
+        "slot": 241
+      },
+      {
+        "env_seed": 1765010242,
+        "episode_id": "par-pros-242",
+        "oracle_np_seed": 1765210242,
+        "policy_seed": 1765110242,
+        "role": "prospective",
+        "slot": 242
+      },
+      {
+        "env_seed": 1765010243,
+        "episode_id": "par-pros-243",
+        "oracle_np_seed": 1765210243,
+        "policy_seed": 1765110243,
+        "role": "prospective",
+        "slot": 243
+      },
+      {
+        "env_seed": 1765010244,
+        "episode_id": "par-pros-244",
+        "oracle_np_seed": 1765210244,
+        "policy_seed": 1765110244,
+        "role": "prospective",
+        "slot": 244
+      },
+      {
+        "env_seed": 1765010245,
+        "episode_id": "par-pros-245",
+        "oracle_np_seed": 1765210245,
+        "policy_seed": 1765110245,
+        "role": "prospective",
+        "slot": 245
+      },
+      {
+        "env_seed": 1765010246,
+        "episode_id": "par-pros-246",
+        "oracle_np_seed": 1765210246,
+        "policy_seed": 1765110246,
+        "role": "prospective",
+        "slot": 246
+      },
+      {
+        "env_seed": 1765010247,
+        "episode_id": "par-pros-247",
+        "oracle_np_seed": 1765210247,
+        "policy_seed": 1765110247,
+        "role": "prospective",
+        "slot": 247
+      },
+      {
+        "env_seed": 1765010248,
+        "episode_id": "par-pros-248",
+        "oracle_np_seed": 1765210248,
+        "policy_seed": 1765110248,
+        "role": "prospective",
+        "slot": 248
+      },
+      {
+        "env_seed": 1765010249,
+        "episode_id": "par-pros-249",
+        "oracle_np_seed": 1765210249,
+        "policy_seed": 1765110249,
+        "role": "prospective",
+        "slot": 249
+      },
+      {
+        "env_seed": 1765010250,
+        "episode_id": "par-pros-250",
+        "oracle_np_seed": 1765210250,
+        "policy_seed": 1765110250,
+        "role": "prospective",
+        "slot": 250
+      },
+      {
+        "env_seed": 1765010251,
+        "episode_id": "par-pros-251",
+        "oracle_np_seed": 1765210251,
+        "policy_seed": 1765110251,
+        "role": "prospective",
+        "slot": 251
+      },
+      {
+        "env_seed": 1765010252,
+        "episode_id": "par-pros-252",
+        "oracle_np_seed": 1765210252,
+        "policy_seed": 1765110252,
+        "role": "prospective",
+        "slot": 252
+      },
+      {
+        "env_seed": 1765010253,
+        "episode_id": "par-pros-253",
+        "oracle_np_seed": 1765210253,
+        "policy_seed": 1765110253,
+        "role": "prospective",
+        "slot": 253
+      },
+      {
+        "env_seed": 1765010254,
+        "episode_id": "par-pros-254",
+        "oracle_np_seed": 1765210254,
+        "policy_seed": 1765110254,
+        "role": "prospective",
+        "slot": 254
+      },
+      {
+        "env_seed": 1765010255,
+        "episode_id": "par-pros-255",
+        "oracle_np_seed": 1765210255,
+        "policy_seed": 1765110255,
+        "role": "prospective",
+        "slot": 255
+      },
+      {
+        "env_seed": 1765010256,
+        "episode_id": "par-pros-256",
+        "oracle_np_seed": 1765210256,
+        "policy_seed": 1765110256,
+        "role": "prospective",
+        "slot": 256
+      },
+      {
+        "env_seed": 1765010257,
+        "episode_id": "par-pros-257",
+        "oracle_np_seed": 1765210257,
+        "policy_seed": 1765110257,
+        "role": "prospective",
+        "slot": 257
+      },
+      {
+        "env_seed": 1765010258,
+        "episode_id": "par-pros-258",
+        "oracle_np_seed": 1765210258,
+        "policy_seed": 1765110258,
+        "role": "prospective",
+        "slot": 258
+      },
+      {
+        "env_seed": 1765010259,
+        "episode_id": "par-pros-259",
+        "oracle_np_seed": 1765210259,
+        "policy_seed": 1765110259,
+        "role": "prospective",
+        "slot": 259
+      },
+      {
+        "env_seed": 1765010260,
+        "episode_id": "par-pros-260",
+        "oracle_np_seed": 1765210260,
+        "policy_seed": 1765110260,
+        "role": "prospective",
+        "slot": 260
+      },
+      {
+        "env_seed": 1765010261,
+        "episode_id": "par-pros-261",
+        "oracle_np_seed": 1765210261,
+        "policy_seed": 1765110261,
+        "role": "prospective",
+        "slot": 261
+      },
+      {
+        "env_seed": 1765010262,
+        "episode_id": "par-pros-262",
+        "oracle_np_seed": 1765210262,
+        "policy_seed": 1765110262,
+        "role": "prospective",
+        "slot": 262
+      },
+      {
+        "env_seed": 1765010263,
+        "episode_id": "par-pros-263",
+        "oracle_np_seed": 1765210263,
+        "policy_seed": 1765110263,
+        "role": "prospective",
+        "slot": 263
+      },
+      {
+        "env_seed": 1765010264,
+        "episode_id": "par-pros-264",
+        "oracle_np_seed": 1765210264,
+        "policy_seed": 1765110264,
+        "role": "prospective",
+        "slot": 264
+      },
+      {
+        "env_seed": 1765010265,
+        "episode_id": "par-pros-265",
+        "oracle_np_seed": 1765210265,
+        "policy_seed": 1765110265,
+        "role": "prospective",
+        "slot": 265
+      },
+      {
+        "env_seed": 1765010266,
+        "episode_id": "par-pros-266",
+        "oracle_np_seed": 1765210266,
+        "policy_seed": 1765110266,
+        "role": "prospective",
+        "slot": 266
+      },
+      {
+        "env_seed": 1765010267,
+        "episode_id": "par-pros-267",
+        "oracle_np_seed": 1765210267,
+        "policy_seed": 1765110267,
+        "role": "prospective",
+        "slot": 267
+      },
+      {
+        "env_seed": 1765010268,
+        "episode_id": "par-pros-268",
+        "oracle_np_seed": 1765210268,
+        "policy_seed": 1765110268,
+        "role": "prospective",
+        "slot": 268
+      },
+      {
+        "env_seed": 1765010269,
+        "episode_id": "par-pros-269",
+        "oracle_np_seed": 1765210269,
+        "policy_seed": 1765110269,
+        "role": "prospective",
+        "slot": 269
+      },
+      {
+        "env_seed": 1765010270,
+        "episode_id": "par-pros-270",
+        "oracle_np_seed": 1765210270,
+        "policy_seed": 1765110270,
+        "role": "prospective",
+        "slot": 270
+      },
+      {
+        "env_seed": 1765010271,
+        "episode_id": "par-pros-271",
+        "oracle_np_seed": 1765210271,
+        "policy_seed": 1765110271,
+        "role": "prospective",
+        "slot": 271
+      },
+      {
+        "env_seed": 1765010272,
+        "episode_id": "par-pros-272",
+        "oracle_np_seed": 1765210272,
+        "policy_seed": 1765110272,
+        "role": "prospective",
+        "slot": 272
+      },
+      {
+        "env_seed": 1765010273,
+        "episode_id": "par-pros-273",
+        "oracle_np_seed": 1765210273,
+        "policy_seed": 1765110273,
+        "role": "prospective",
+        "slot": 273
+      },
+      {
+        "env_seed": 1765010274,
+        "episode_id": "par-pros-274",
+        "oracle_np_seed": 1765210274,
+        "policy_seed": 1765110274,
+        "role": "prospective",
+        "slot": 274
+      },
+      {
+        "env_seed": 1765010275,
+        "episode_id": "par-pros-275",
+        "oracle_np_seed": 1765210275,
+        "policy_seed": 1765110275,
+        "role": "prospective",
+        "slot": 275
+      },
+      {
+        "env_seed": 1765010276,
+        "episode_id": "par-pros-276",
+        "oracle_np_seed": 1765210276,
+        "policy_seed": 1765110276,
+        "role": "prospective",
+        "slot": 276
+      },
+      {
+        "env_seed": 1765010277,
+        "episode_id": "par-pros-277",
+        "oracle_np_seed": 1765210277,
+        "policy_seed": 1765110277,
+        "role": "prospective",
+        "slot": 277
+      },
+      {
+        "env_seed": 1765010278,
+        "episode_id": "par-pros-278",
+        "oracle_np_seed": 1765210278,
+        "policy_seed": 1765110278,
+        "role": "prospective",
+        "slot": 278
+      },
+      {
+        "env_seed": 1765010279,
+        "episode_id": "par-pros-279",
+        "oracle_np_seed": 1765210279,
+        "policy_seed": 1765110279,
+        "role": "prospective",
+        "slot": 279
+      },
+      {
+        "env_seed": 1765010280,
+        "episode_id": "par-pros-280",
+        "oracle_np_seed": 1765210280,
+        "policy_seed": 1765110280,
+        "role": "prospective",
+        "slot": 280
+      },
+      {
+        "env_seed": 1765010281,
+        "episode_id": "par-pros-281",
+        "oracle_np_seed": 1765210281,
+        "policy_seed": 1765110281,
+        "role": "prospective",
+        "slot": 281
+      },
+      {
+        "env_seed": 1765010282,
+        "episode_id": "par-pros-282",
+        "oracle_np_seed": 1765210282,
+        "policy_seed": 1765110282,
+        "role": "prospective",
+        "slot": 282
+      },
+      {
+        "env_seed": 1765010283,
+        "episode_id": "par-pros-283",
+        "oracle_np_seed": 1765210283,
+        "policy_seed": 1765110283,
+        "role": "prospective",
+        "slot": 283
+      },
+      {
+        "env_seed": 1765010284,
+        "episode_id": "par-pros-284",
+        "oracle_np_seed": 1765210284,
+        "policy_seed": 1765110284,
+        "role": "prospective",
+        "slot": 284
+      },
+      {
+        "env_seed": 1765010285,
+        "episode_id": "par-pros-285",
+        "oracle_np_seed": 1765210285,
+        "policy_seed": 1765110285,
+        "role": "prospective",
+        "slot": 285
+      },
+      {
+        "env_seed": 1765010286,
+        "episode_id": "par-pros-286",
+        "oracle_np_seed": 1765210286,
+        "policy_seed": 1765110286,
+        "role": "prospective",
+        "slot": 286
+      },
+      {
+        "env_seed": 1765010287,
+        "episode_id": "par-pros-287",
+        "oracle_np_seed": 1765210287,
+        "policy_seed": 1765110287,
+        "role": "prospective",
+        "slot": 287
+      },
+      {
+        "env_seed": 1765010288,
+        "episode_id": "par-pros-288",
+        "oracle_np_seed": 1765210288,
+        "policy_seed": 1765110288,
+        "role": "prospective",
+        "slot": 288
+      },
+      {
+        "env_seed": 1765010289,
+        "episode_id": "par-pros-289",
+        "oracle_np_seed": 1765210289,
+        "policy_seed": 1765110289,
+        "role": "prospective",
+        "slot": 289
+      },
+      {
+        "env_seed": 1765010290,
+        "episode_id": "par-pros-290",
+        "oracle_np_seed": 1765210290,
+        "policy_seed": 1765110290,
+        "role": "prospective",
+        "slot": 290
+      },
+      {
+        "env_seed": 1765010291,
+        "episode_id": "par-pros-291",
+        "oracle_np_seed": 1765210291,
+        "policy_seed": 1765110291,
+        "role": "prospective",
+        "slot": 291
+      },
+      {
+        "env_seed": 1765010292,
+        "episode_id": "par-pros-292",
+        "oracle_np_seed": 1765210292,
+        "policy_seed": 1765110292,
+        "role": "prospective",
+        "slot": 292
+      },
+      {
+        "env_seed": 1765010293,
+        "episode_id": "par-pros-293",
+        "oracle_np_seed": 1765210293,
+        "policy_seed": 1765110293,
+        "role": "prospective",
+        "slot": 293
+      },
+      {
+        "env_seed": 1765010294,
+        "episode_id": "par-pros-294",
+        "oracle_np_seed": 1765210294,
+        "policy_seed": 1765110294,
+        "role": "prospective",
+        "slot": 294
+      },
+      {
+        "env_seed": 1765010295,
+        "episode_id": "par-pros-295",
+        "oracle_np_seed": 1765210295,
+        "policy_seed": 1765110295,
+        "role": "prospective",
+        "slot": 295
+      },
+      {
+        "env_seed": 1765010296,
+        "episode_id": "par-pros-296",
+        "oracle_np_seed": 1765210296,
+        "policy_seed": 1765110296,
+        "role": "prospective",
+        "slot": 296
+      },
+      {
+        "env_seed": 1765010297,
+        "episode_id": "par-pros-297",
+        "oracle_np_seed": 1765210297,
+        "policy_seed": 1765110297,
+        "role": "prospective",
+        "slot": 297
+      },
+      {
+        "env_seed": 1765010298,
+        "episode_id": "par-pros-298",
+        "oracle_np_seed": 1765210298,
+        "policy_seed": 1765110298,
+        "role": "prospective",
+        "slot": 298
+      },
+      {
+        "env_seed": 1765010299,
+        "episode_id": "par-pros-299",
+        "oracle_np_seed": 1765210299,
+        "policy_seed": 1765110299,
+        "role": "prospective",
+        "slot": 299
+      }
+    ],
+    "replacement": [
+      {
+        "env_seed": 1765050000,
+        "episode_id": "par-repl-000",
+        "oracle_np_seed": 1765250000,
+        "policy_seed": 1765150000,
+        "role": "replacement",
+        "slot": 0
+      },
+      {
+        "env_seed": 1765050001,
+        "episode_id": "par-repl-001",
+        "oracle_np_seed": 1765250001,
+        "policy_seed": 1765150001,
+        "role": "replacement",
+        "slot": 1
+      },
+      {
+        "env_seed": 1765050002,
+        "episode_id": "par-repl-002",
+        "oracle_np_seed": 1765250002,
+        "policy_seed": 1765150002,
+        "role": "replacement",
+        "slot": 2
+      },
+      {
+        "env_seed": 1765050003,
+        "episode_id": "par-repl-003",
+        "oracle_np_seed": 1765250003,
+        "policy_seed": 1765150003,
+        "role": "replacement",
+        "slot": 3
+      },
+      {
+        "env_seed": 1765050004,
+        "episode_id": "par-repl-004",
+        "oracle_np_seed": 1765250004,
+        "policy_seed": 1765150004,
+        "role": "replacement",
+        "slot": 4
+      },
+      {
+        "env_seed": 1765050005,
+        "episode_id": "par-repl-005",
+        "oracle_np_seed": 1765250005,
+        "policy_seed": 1765150005,
+        "role": "replacement",
+        "slot": 5
+      },
+      {
+        "env_seed": 1765050006,
+        "episode_id": "par-repl-006",
+        "oracle_np_seed": 1765250006,
+        "policy_seed": 1765150006,
+        "role": "replacement",
+        "slot": 6
+      },
+      {
+        "env_seed": 1765050007,
+        "episode_id": "par-repl-007",
+        "oracle_np_seed": 1765250007,
+        "policy_seed": 1765150007,
+        "role": "replacement",
+        "slot": 7
+      },
+      {
+        "env_seed": 1765050008,
+        "episode_id": "par-repl-008",
+        "oracle_np_seed": 1765250008,
+        "policy_seed": 1765150008,
+        "role": "replacement",
+        "slot": 8
+      },
+      {
+        "env_seed": 1765050009,
+        "episode_id": "par-repl-009",
+        "oracle_np_seed": 1765250009,
+        "policy_seed": 1765150009,
+        "role": "replacement",
+        "slot": 9
+      },
+      {
+        "env_seed": 1765050010,
+        "episode_id": "par-repl-010",
+        "oracle_np_seed": 1765250010,
+        "policy_seed": 1765150010,
+        "role": "replacement",
+        "slot": 10
+      },
+      {
+        "env_seed": 1765050011,
+        "episode_id": "par-repl-011",
+        "oracle_np_seed": 1765250011,
+        "policy_seed": 1765150011,
+        "role": "replacement",
+        "slot": 11
+      },
+      {
+        "env_seed": 1765050012,
+        "episode_id": "par-repl-012",
+        "oracle_np_seed": 1765250012,
+        "policy_seed": 1765150012,
+        "role": "replacement",
+        "slot": 12
+      },
+      {
+        "env_seed": 1765050013,
+        "episode_id": "par-repl-013",
+        "oracle_np_seed": 1765250013,
+        "policy_seed": 1765150013,
+        "role": "replacement",
+        "slot": 13
+      },
+      {
+        "env_seed": 1765050014,
+        "episode_id": "par-repl-014",
+        "oracle_np_seed": 1765250014,
+        "policy_seed": 1765150014,
+        "role": "replacement",
+        "slot": 14
+      },
+      {
+        "env_seed": 1765050015,
+        "episode_id": "par-repl-015",
+        "oracle_np_seed": 1765250015,
+        "policy_seed": 1765150015,
+        "role": "replacement",
+        "slot": 15
+      },
+      {
+        "env_seed": 1765050016,
+        "episode_id": "par-repl-016",
+        "oracle_np_seed": 1765250016,
+        "policy_seed": 1765150016,
+        "role": "replacement",
+        "slot": 16
+      },
+      {
+        "env_seed": 1765050017,
+        "episode_id": "par-repl-017",
+        "oracle_np_seed": 1765250017,
+        "policy_seed": 1765150017,
+        "role": "replacement",
+        "slot": 17
+      },
+      {
+        "env_seed": 1765050018,
+        "episode_id": "par-repl-018",
+        "oracle_np_seed": 1765250018,
+        "policy_seed": 1765150018,
+        "role": "replacement",
+        "slot": 18
+      },
+      {
+        "env_seed": 1765050019,
+        "episode_id": "par-repl-019",
+        "oracle_np_seed": 1765250019,
+        "policy_seed": 1765150019,
+        "role": "replacement",
+        "slot": 19
+      },
+      {
+        "env_seed": 1765050020,
+        "episode_id": "par-repl-020",
+        "oracle_np_seed": 1765250020,
+        "policy_seed": 1765150020,
+        "role": "replacement",
+        "slot": 20
+      },
+      {
+        "env_seed": 1765050021,
+        "episode_id": "par-repl-021",
+        "oracle_np_seed": 1765250021,
+        "policy_seed": 1765150021,
+        "role": "replacement",
+        "slot": 21
+      },
+      {
+        "env_seed": 1765050022,
+        "episode_id": "par-repl-022",
+        "oracle_np_seed": 1765250022,
+        "policy_seed": 1765150022,
+        "role": "replacement",
+        "slot": 22
+      },
+      {
+        "env_seed": 1765050023,
+        "episode_id": "par-repl-023",
+        "oracle_np_seed": 1765250023,
+        "policy_seed": 1765150023,
+        "role": "replacement",
+        "slot": 23
+      },
+      {
+        "env_seed": 1765050024,
+        "episode_id": "par-repl-024",
+        "oracle_np_seed": 1765250024,
+        "policy_seed": 1765150024,
+        "role": "replacement",
+        "slot": 24
+      },
+      {
+        "env_seed": 1765050025,
+        "episode_id": "par-repl-025",
+        "oracle_np_seed": 1765250025,
+        "policy_seed": 1765150025,
+        "role": "replacement",
+        "slot": 25
+      },
+      {
+        "env_seed": 1765050026,
+        "episode_id": "par-repl-026",
+        "oracle_np_seed": 1765250026,
+        "policy_seed": 1765150026,
+        "role": "replacement",
+        "slot": 26
+      },
+      {
+        "env_seed": 1765050027,
+        "episode_id": "par-repl-027",
+        "oracle_np_seed": 1765250027,
+        "policy_seed": 1765150027,
+        "role": "replacement",
+        "slot": 27
+      },
+      {
+        "env_seed": 1765050028,
+        "episode_id": "par-repl-028",
+        "oracle_np_seed": 1765250028,
+        "policy_seed": 1765150028,
+        "role": "replacement",
+        "slot": 28
+      },
+      {
+        "env_seed": 1765050029,
+        "episode_id": "par-repl-029",
+        "oracle_np_seed": 1765250029,
+        "policy_seed": 1765150029,
+        "role": "replacement",
+        "slot": 29
+      },
+      {
+        "env_seed": 1765050030,
+        "episode_id": "par-repl-030",
+        "oracle_np_seed": 1765250030,
+        "policy_seed": 1765150030,
+        "role": "replacement",
+        "slot": 30
+      },
+      {
+        "env_seed": 1765050031,
+        "episode_id": "par-repl-031",
+        "oracle_np_seed": 1765250031,
+        "policy_seed": 1765150031,
+        "role": "replacement",
+        "slot": 31
+      },
+      {
+        "env_seed": 1765050032,
+        "episode_id": "par-repl-032",
+        "oracle_np_seed": 1765250032,
+        "policy_seed": 1765150032,
+        "role": "replacement",
+        "slot": 32
+      },
+      {
+        "env_seed": 1765050033,
+        "episode_id": "par-repl-033",
+        "oracle_np_seed": 1765250033,
+        "policy_seed": 1765150033,
+        "role": "replacement",
+        "slot": 33
+      },
+      {
+        "env_seed": 1765050034,
+        "episode_id": "par-repl-034",
+        "oracle_np_seed": 1765250034,
+        "policy_seed": 1765150034,
+        "role": "replacement",
+        "slot": 34
+      },
+      {
+        "env_seed": 1765050035,
+        "episode_id": "par-repl-035",
+        "oracle_np_seed": 1765250035,
+        "policy_seed": 1765150035,
+        "role": "replacement",
+        "slot": 35
+      },
+      {
+        "env_seed": 1765050036,
+        "episode_id": "par-repl-036",
+        "oracle_np_seed": 1765250036,
+        "policy_seed": 1765150036,
+        "role": "replacement",
+        "slot": 36
+      },
+      {
+        "env_seed": 1765050037,
+        "episode_id": "par-repl-037",
+        "oracle_np_seed": 1765250037,
+        "policy_seed": 1765150037,
+        "role": "replacement",
+        "slot": 37
+      },
+      {
+        "env_seed": 1765050038,
+        "episode_id": "par-repl-038",
+        "oracle_np_seed": 1765250038,
+        "policy_seed": 1765150038,
+        "role": "replacement",
+        "slot": 38
+      },
+      {
+        "env_seed": 1765050039,
+        "episode_id": "par-repl-039",
+        "oracle_np_seed": 1765250039,
+        "policy_seed": 1765150039,
+        "role": "replacement",
+        "slot": 39
+      },
+      {
+        "env_seed": 1765050040,
+        "episode_id": "par-repl-040",
+        "oracle_np_seed": 1765250040,
+        "policy_seed": 1765150040,
+        "role": "replacement",
+        "slot": 40
+      },
+      {
+        "env_seed": 1765050041,
+        "episode_id": "par-repl-041",
+        "oracle_np_seed": 1765250041,
+        "policy_seed": 1765150041,
+        "role": "replacement",
+        "slot": 41
+      },
+      {
+        "env_seed": 1765050042,
+        "episode_id": "par-repl-042",
+        "oracle_np_seed": 1765250042,
+        "policy_seed": 1765150042,
+        "role": "replacement",
+        "slot": 42
+      },
+      {
+        "env_seed": 1765050043,
+        "episode_id": "par-repl-043",
+        "oracle_np_seed": 1765250043,
+        "policy_seed": 1765150043,
+        "role": "replacement",
+        "slot": 43
+      },
+      {
+        "env_seed": 1765050044,
+        "episode_id": "par-repl-044",
+        "oracle_np_seed": 1765250044,
+        "policy_seed": 1765150044,
+        "role": "replacement",
+        "slot": 44
+      },
+      {
+        "env_seed": 1765050045,
+        "episode_id": "par-repl-045",
+        "oracle_np_seed": 1765250045,
+        "policy_seed": 1765150045,
+        "role": "replacement",
+        "slot": 45
+      },
+      {
+        "env_seed": 1765050046,
+        "episode_id": "par-repl-046",
+        "oracle_np_seed": 1765250046,
+        "policy_seed": 1765150046,
+        "role": "replacement",
+        "slot": 46
+      },
+      {
+        "env_seed": 1765050047,
+        "episode_id": "par-repl-047",
+        "oracle_np_seed": 1765250047,
+        "policy_seed": 1765150047,
+        "role": "replacement",
+        "slot": 47
+      },
+      {
+        "env_seed": 1765050048,
+        "episode_id": "par-repl-048",
+        "oracle_np_seed": 1765250048,
+        "policy_seed": 1765150048,
+        "role": "replacement",
+        "slot": 48
+      },
+      {
+        "env_seed": 1765050049,
+        "episode_id": "par-repl-049",
+        "oracle_np_seed": 1765250049,
+        "policy_seed": 1765150049,
+        "role": "replacement",
+        "slot": 49
+      },
+      {
+        "env_seed": 1765050050,
+        "episode_id": "par-repl-050",
+        "oracle_np_seed": 1765250050,
+        "policy_seed": 1765150050,
+        "role": "replacement",
+        "slot": 50
+      },
+      {
+        "env_seed": 1765050051,
+        "episode_id": "par-repl-051",
+        "oracle_np_seed": 1765250051,
+        "policy_seed": 1765150051,
+        "role": "replacement",
+        "slot": 51
+      },
+      {
+        "env_seed": 1765050052,
+        "episode_id": "par-repl-052",
+        "oracle_np_seed": 1765250052,
+        "policy_seed": 1765150052,
+        "role": "replacement",
+        "slot": 52
+      },
+      {
+        "env_seed": 1765050053,
+        "episode_id": "par-repl-053",
+        "oracle_np_seed": 1765250053,
+        "policy_seed": 1765150053,
+        "role": "replacement",
+        "slot": 53
+      },
+      {
+        "env_seed": 1765050054,
+        "episode_id": "par-repl-054",
+        "oracle_np_seed": 1765250054,
+        "policy_seed": 1765150054,
+        "role": "replacement",
+        "slot": 54
+      },
+      {
+        "env_seed": 1765050055,
+        "episode_id": "par-repl-055",
+        "oracle_np_seed": 1765250055,
+        "policy_seed": 1765150055,
+        "role": "replacement",
+        "slot": 55
+      },
+      {
+        "env_seed": 1765050056,
+        "episode_id": "par-repl-056",
+        "oracle_np_seed": 1765250056,
+        "policy_seed": 1765150056,
+        "role": "replacement",
+        "slot": 56
+      },
+      {
+        "env_seed": 1765050057,
+        "episode_id": "par-repl-057",
+        "oracle_np_seed": 1765250057,
+        "policy_seed": 1765150057,
+        "role": "replacement",
+        "slot": 57
+      },
+      {
+        "env_seed": 1765050058,
+        "episode_id": "par-repl-058",
+        "oracle_np_seed": 1765250058,
+        "policy_seed": 1765150058,
+        "role": "replacement",
+        "slot": 58
+      },
+      {
+        "env_seed": 1765050059,
+        "episode_id": "par-repl-059",
+        "oracle_np_seed": 1765250059,
+        "policy_seed": 1765150059,
+        "role": "replacement",
+        "slot": 59
+      }
+    ],
+    "smoke": [
+      {
+        "env_seed": 1765000000,
+        "episode_id": "par-smok-000",
+        "oracle_np_seed": 1765200000,
+        "policy_seed": 1765100000,
+        "role": "smoke",
+        "slot": 0
+      },
+      {
+        "env_seed": 1765000001,
+        "episode_id": "par-smok-001",
+        "oracle_np_seed": 1765200001,
+        "policy_seed": 1765100001,
+        "role": "smoke",
+        "slot": 1
+      },
+      {
+        "env_seed": 1765000002,
+        "episode_id": "par-smok-002",
+        "oracle_np_seed": 1765200002,
+        "policy_seed": 1765100002,
+        "role": "smoke",
+        "slot": 2
+      },
+      {
+        "env_seed": 1765000003,
+        "episode_id": "par-smok-003",
+        "oracle_np_seed": 1765200003,
+        "policy_seed": 1765100003,
+        "role": "smoke",
+        "slot": 3
+      },
+      {
+        "env_seed": 1765000004,
+        "episode_id": "par-smok-004",
+        "oracle_np_seed": 1765200004,
+        "policy_seed": 1765100004,
+        "role": "smoke",
+        "slot": 4
+      },
+      {
+        "env_seed": 1765000005,
+        "episode_id": "par-smok-005",
+        "oracle_np_seed": 1765200005,
+        "policy_seed": 1765100005,
+        "role": "smoke",
+        "slot": 5
+      },
+      {
+        "env_seed": 1765000006,
+        "episode_id": "par-smok-006",
+        "oracle_np_seed": 1765200006,
+        "policy_seed": 1765100006,
+        "role": "smoke",
+        "slot": 6
+      },
+      {
+        "env_seed": 1765000007,
+        "episode_id": "par-smok-007",
+        "oracle_np_seed": 1765200007,
+        "policy_seed": 1765100007,
+        "role": "smoke",
+        "slot": 7
+      },
+      {
+        "env_seed": 1765000008,
+        "episode_id": "par-smok-008",
+        "oracle_np_seed": 1765200008,
+        "policy_seed": 1765100008,
+        "role": "smoke",
+        "slot": 8
+      },
+      {
+        "env_seed": 1765000009,
+        "episode_id": "par-smok-009",
+        "oracle_np_seed": 1765200009,
+        "policy_seed": 1765100009,
+        "role": "smoke",
+        "slot": 9
+      },
+      {
+        "env_seed": 1765000010,
+        "episode_id": "par-smok-010",
+        "oracle_np_seed": 1765200010,
+        "policy_seed": 1765100010,
+        "role": "smoke",
+        "slot": 10
+      },
+      {
+        "env_seed": 1765000011,
+        "episode_id": "par-smok-011",
+        "oracle_np_seed": 1765200011,
+        "policy_seed": 1765100011,
+        "role": "smoke",
+        "slot": 11
+      }
+    ]
+  },
+  "schema_version": 1,
+  "seeded_mixture_seed": 1765777777,
+  "stagewise_bootstrap_seeds": [
+    1765666601,
+    1765666602,
+    1765666603
+  ]
+}

@@ -1,0 +1,1 @@
+{"checks": {"binding": true, "counts_frozen": true, "decision": true, "dependency_versions": true, "head": true, "installed_version": true, "isolation": true, "lock_hash": true, "lock_root_version": true, "protocol_seal": true, "source_version": true, "zero_prohibited_work": true}, "status": "pass"}

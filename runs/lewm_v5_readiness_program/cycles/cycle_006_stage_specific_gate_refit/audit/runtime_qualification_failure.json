@@ -1,0 +1,23 @@
+{
+  "command": "qualify_runtime.py --devices cpu,mps",
+  "created_utc": "2026-07-15T21:14:47Z",
+  "cycle_index": 6,
+  "design_seal_sha256": "e6ffd418c7a81fb8593985b4ddf9a6806d258ae77b3b814e1930fa9209cd2a17",
+  "diagnosis": "The sealed runner loads the frozen threshold array as torch.float64 on every device. CPU qualification passed, but Apple MPS does not support float64 tensors, so construction failed before MPS sparse execution. The smallest repair is to load thresholds in the score/comparison dtype (float32) on a new versioned cycle while leaving the frozen numeric threshold values, gate coefficients, calls, model, DGP, and statistical criteria unchanged.",
+  "exception_message": "Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.",
+  "exception_type": "TypeError",
+  "failure_location": "runner.py:84 load_gate_tensors",
+  "fit_episode_count": 240,
+  "mps_available": true,
+  "mps_qualification_passed": false,
+  "normative_code_patched_after_seal": false,
+  "prospective_episode_count": 0,
+  "qualify_runtime_sha256": "712609b55406acc2f0c47b0b5d4b0ab085e2cefba85f90e204c08c4bdd2f052d",
+  "runner_sha256": "7dac9700fca9d6be04f12baaf6f3b730ce306f7197c03165a76a65a955a1c368",
+  "schema_version": 1,
+  "selection_episode_count": 120,
+  "smoke_episode_count": 0,
+  "status": "sealed_runtime_qualification_failed_before_smoke",
+  "verified_cpu_qualification_passed": true,
+  "v5_outcome_episodes": 0
+}

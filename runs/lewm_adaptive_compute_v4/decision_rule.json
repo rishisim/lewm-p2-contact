@@ -1,0 +1,53 @@
+{
+  "bootstrap": {
+    "confidence": 0.95,
+    "replicates": 10000,
+    "two_sided": true
+  },
+  "equal_call_mixture": "secondary allocation-quality decomposition before gate cost",
+  "estimand": "transition-weighted mean with episode-cluster resampling",
+  "frozen_policy": {
+    "compute_price": 0.00014899746351320145,
+    "family": "full_linear",
+    "force_v4_mean_calls_to_1.25": false,
+    "operating_point": "b1.25"
+  },
+  "physical_claim_rule": "Use the fine frozen coarsened-exact bins as primary physical matching. Call the policy contact-aware only if matched contact-minus-noncontact calls and exact-total-analytic prediction benefit are both positive with clustered 95% CI lower > 0.",
+  "primary_endpoint": "raw latent mean squared error per transition",
+  "primary_exact_total_flop_comparator": {
+    "analytic": "exact expected total-FLOP equality",
+    "definition": "Strongest transition-independent convex mixture from the V4 aggregate fixed-exit loss vector at adaptive solver calls plus adaptive gate feature/normalization/head/control FLOPs converted to fractional expected later-adapter calls.",
+    "integer": "MILP-optimal depth counts at ceil(fractional total calls), hash-seeded assignment independent of transition data; residual baseline-minus-adaptive FLOPs reported",
+    "integer_rounding": "ceiling, conservatively granting the baseline weakly more compute",
+    "raw_ci_low_must_exceed_zero_analytic": true,
+    "raw_ci_low_must_exceed_zero_seeded_integer": true
+  },
+  "raw_required": [
+    "exact-total-FLOP analytic mixture CI lower > 0",
+    "exact-total-FLOP hash-seeded conservative integer mixture CI lower > 0",
+    "fixed d1 CI lower > 0",
+    "exact histogram randomization CI lower > 0",
+    "score permutation does not significantly beat its own exact-total analytic or seeded baseline",
+    "adaptive is nondominated on realized block-call and fully counted FLOP frontiers",
+    "all mechanical validity audits pass"
+  ],
+  "runtime_status_separate": [
+    "latency_improved",
+    "latency_neutral",
+    "latency_regressed"
+  ],
+  "schema_version": 1,
+  "status": "frozen_before_any_v4_data_generation_or_target_access",
+  "verdicts": {
+    "v4_confirmatory_failed": "any primary raw/compute criterion fails, whitening is negative, or no replication",
+    "v4_confirmatory_invalid": "freshness, leakage, preregistration, target-access, checkpoint, exact-call, or mechanical audit failure",
+    "v4_confirmatory_passed": "all raw/validity/compute criteria and whitened CI lower > 0",
+    "v4_confirmatory_raw_only": "all raw/validity/compute criteria; whitened point positive, CI crosses zero"
+  },
+  "whitening": {
+    "failure": "whitened point < 0 or any raw/compute criterion fails",
+    "full_pass": "analytic exact-total-FLOP whitened CI lower > 0",
+    "raw_only": "all raw criteria pass and whitened point > 0 but CI includes 0",
+    "transform": "frozen discovery whitening; never refit"
+  }
+}

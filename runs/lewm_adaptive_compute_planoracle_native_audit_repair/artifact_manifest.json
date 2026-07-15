@@ -1,0 +1,161 @@
+{
+  "created_unix_ns": 1784088986736847000,
+  "files": {
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/INVALIDATION.md": {
+      "bytes": 1093,
+      "sha256": "bbea948897ab007e2cd2f5b40226826e8afdbfe2c718fa53961e3ea6a2f94d09"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/PREREGISTRATION.md": {
+      "bytes": 1035,
+      "sha256": "87385b5b96286ad6452d0ddfa99e03f1ed12c0a817b1144921877408ae3a97ec"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/REPORT.md": {
+      "bytes": 389,
+      "sha256": "9d449dc7178fb1c19bca9f3a37e4fb3fb8ad09b2205665ed5a745197288b1c59"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/analyze.cpython-314.pyc": {
+      "bytes": 22678,
+      "sha256": "430b36b2b84b79ebe4d4d4b72b539df15ca04cce13b57098a81145b6ee35eeac"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/finalize.cpython-314.pyc": {
+      "bytes": 7647,
+      "sha256": "c883a8a9539748eaca963d948a9a5dbb9871808f475b096d15ed7dbebde5c8de"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/prepare.cpython-314.pyc": {
+      "bytes": 22836,
+      "sha256": "b79a6b5e4ed07fd9071cc5da9cb9c2bb7ac81d904532d0ecef43f0e0727efa51"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/runner.cpython-314.pyc": {
+      "bytes": 19102,
+      "sha256": "eda1b01d39c214eb72fc108810fcd85c10065233f4aa043f8e434267fbb8b31d"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/verify_final.cpython-314.pyc": {
+      "bytes": 3042,
+      "sha256": "dacdcfa7af2b4c660cbe1250d7324c6fd081da01a554757a828594c31cf6b5aa"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/__pycache__/verify_pre_data.cpython-314.pyc": {
+      "bytes": 2428,
+      "sha256": "a30e068ac4e9d882ace55551e1a6a3e6b95ee3ebc2dd4cf0091acaeed500bbde"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/analyze.py": {
+      "bytes": 7330,
+      "sha256": "e8bc293251045cef501d3f3e211666021d31d4a76e3c17acca14086a57e22257"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/audit/implementation_equivalence.json": {
+      "bytes": 1094,
+      "sha256": "7253ed1af9754bc8ae2279309ff27cd0131dc1599c3186d032dd507627e16afc"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/audit/pre_data_seal.json": {
+      "bytes": 4469,
+      "sha256": "ba67855f116e39b2834b6d604524e13ab1e0c7b681014f3b24cbea34ef1134f9"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/audit/smoke_failure.json": {
+      "bytes": 514,
+      "sha256": "75bc43191da1a1aa4983fa207bfc5732f5c8dc039025a20e664d74848015cc6c"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/cohort_seed_ledger.json": {
+      "bytes": 78795,
+      "sha256": "04265d72a4d716eb811af8652e788d85d8f6664ee15031b6e25c1773272eb231"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-000.npz": {
+      "bytes": 3933518,
+      "sha256": "2abd6db8638e126e46d47d3da8dab79a569167388f9c0b3f8d945828ec4f03d4"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-001.npz": {
+      "bytes": 4083288,
+      "sha256": "ec6f12e9af13a999782616e0ad3037a2ec8f80a2fd02d9ee6a274bcd6a1a9859"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-002.npz": {
+      "bytes": 4074282,
+      "sha256": "0c69ba3dd03deefef8a9ee5a74081f8d2a6786d962953c24f8a99a1a2fdba91f"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-003.npz": {
+      "bytes": 3724149,
+      "sha256": "b5dc3590a525bd98e9b2901ec7a86c8ec7925df9b5f2f3e30f268b5bb1753a9b"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-004.npz": {
+      "bytes": 4084980,
+      "sha256": "2af6886b530407ed29721e7f412f2946889eee7d18e0ed35d015f46cab1389f6"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-005.npz": {
+      "bytes": 3770584,
+      "sha256": "f75359e6ba6d38b1da46840723555d38a666eeba49ffec59ed332ff0b6000750"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-006.npz": {
+      "bytes": 4046505,
+      "sha256": "aa4c9197e64d74e167249080e8af481b3a1afbdad50e19d64300d7836cf8830d"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-007.npz": {
+      "bytes": 4225502,
+      "sha256": "0f0b8f49413c19acf29da57a6565320e1bb56bd9fa2c78db127607a1792e08c2"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-008.npz": {
+      "bytes": 4229480,
+      "sha256": "758975e453c9f6c1ce757847fa701d125bd33cfc024a955162645c9056777d3a"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-009.npz": {
+      "bytes": 3749651,
+      "sha256": "6deee2db1d50dec069b614090ec0894ed651b91bb283a4b0b6f49e29bfcac92c"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-010.npz": {
+      "bytes": 3999759,
+      "sha256": "3df9e9ffdccb52aff8d82bbaec7d94e05efe6cefff81a2069ef09a147471dfe4"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw/par-smok-011.npz": {
+      "bytes": 3664492,
+      "sha256": "5ebf5484b6fe756e20b3213ce8ac540734e08b1c8506083e4b924f8f1ca6457e"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/data/smoke_raw_manifest.json": {
+      "bytes": 6657,
+      "sha256": "c42cf9561c7081a823f248590d95f453d48799c36092c133204c79534635efbe"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/decision.json": {
+      "bytes": 623,
+      "sha256": "89300eba9913aaf21a7642b3989a094813bb59a6961aa1fc30acfee42bd41f7b"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/finalize.py": {
+      "bytes": 2937,
+      "sha256": "6969cc686ea114e22be5a793e184e4d7a86a945e9834a839e5d05f52a72a8606"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/freeze/compiled_gate.npz": {
+      "bytes": 9656,
+      "sha256": "efadf8c820ca083b4f9cade249fd71599a41fff75bbe5d13bebcf05247a17faf"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/operation_ledger.json": {
+      "bytes": 1400,
+      "sha256": "21b22b04a7fe4b164fa0fa3f3cde78552a1344fc8936e9e77c8ea62f0bec9532"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/outcome_mapping.json": {
+      "bytes": 479,
+      "sha256": "696c627f5e277131094d5fa4933ee3c23cf581db11943db74da5b37930d18f3c"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/prepare.py": {
+      "bytes": 12371,
+      "sha256": "995102ee165f859ae86c8f20f7130881accd6c0a7f34b429136fca616b4c7453"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/protocol.json": {
+      "bytes": 2108,
+      "sha256": "f1c78ad3b1deeaf4744ae6c47b5cfc5fc896554618853ea3dcbe7fe8e4955727"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/runner.py": {
+      "bytes": 6905,
+      "sha256": "9e6c948c35985c654cde6cc5d7277ebb8dee261eb8b85f9c607f2e685fdfe7eb"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/transitive_dependency_manifest.json": {
+      "bytes": 4638,
+      "sha256": "620075776421d4b7b8fd8122996c77156b57f5923f7f126d84d9ed6fab55d170"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/verify_final.py": {
+      "bytes": 840,
+      "sha256": "475c94f53ca493e414b524d7a12e1853efe7e7e5a524347baf7b6a025599cf2c"
+    },
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/verify_pre_data.py": {
+      "bytes": 775,
+      "sha256": "db233822ce53b23256e4da6531649bf5693fda91047ad3ffeed1972f62111fcf"
+    }
+  },
+  "path_set_complete": true,
+  "root": "runs/lewm_adaptive_compute_planoracle_native_audit_repair",
+  "schema_version": 1,
+  "terminal_outcome": "planoracle_audit_repair_invalid"
+}

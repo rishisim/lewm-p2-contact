@@ -1,0 +1,5 @@
+{
+  "decision_sha256_before_secondary": "c7b511beaccdaf67610386b3aadd9249f0d5ee0e87be4da106f41cdc0ea8bf70",
+  "physical_metrics_sha256": "54636aeb30d78d38a6b5317410f10180010efcece3e4667cb4db1040a22cd38a",
+  "primary_verdict_was_written_first": true
+}

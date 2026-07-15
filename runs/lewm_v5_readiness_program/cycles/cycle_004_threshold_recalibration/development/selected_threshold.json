@@ -1,0 +1,18 @@
+{
+  "base_refiner_gate_whitening_unchanged": true,
+  "change": "threshold_only",
+  "created_unix_ns": 1784146223113378000,
+  "diagnosis_sha256": "d18bf37175113e36f7bc24ec8542a457688fcce92f6434f816eac08537136fcc",
+  "old_threshold": 0.18128031821449414,
+  "requires_new_prospective": 300,
+  "requires_new_sparse_smoke": 12,
+  "schema_version": 1,
+  "selection_cohort": "cycle_001_consumed",
+  "selection_passed": true,
+  "selection_protocol_sha256": "3d0396a0c2c9530165de23377986e6a436196dd1f9c34456c9982c65530d9d98",
+  "selection_result_sha256": "f64f530743174b1e5c119e9cbf0c402cdacf320a722c1dd81e1a96ed3dc5d2e2",
+  "threshold": 0.2719204773217412,
+  "v5_outcome_episodes": 0,
+  "validation_cohort": "cycle_003_consumed_one_shot",
+  "validation_passed": true
+}

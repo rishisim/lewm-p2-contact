@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "adapter_matches_frozen": true,
+    "gate_matches_frozen": true,
+    "gate_parameters_match_frozen": true
+  },
+  "common_base_prediction_flops": 70529190,
+  "convention": "historical LeWM discovery arithmetic convention: multiply/add pair=2; common base and V1 anchors retained; solver norms/activations omitted; gate summary/normalization/head/control fully incremental-counted",
+  "fixed_depth_total_flops": {
+    "d1": 71198374,
+    "d2": 71463334,
+    "d3": 71728294,
+    "d4": 71993254
+  },
+  "gate_per_evaluated_decision": {
+    "control_flow_flops": 1,
+    "d1_update_arithmetic": 192,
+    "feature_construction_flops": 3998,
+    "linear_head_flops": 2099,
+    "normalization_flops": 2098,
+    "parameters": 1050,
+    "summary_arithmetic": 3806,
+    "total_flops": 8196
+  },
+  "later_adapter": {
+    "flops": 264960,
+    "formula": "2 * (843*128 + 128*192)",
+    "hidden_dim": 128,
+    "input_dim": 843,
+    "output_dim": 192
+  },
+  "passed": true,
+  "schema_version": 1,
+  "v1_call_flops": 669184
+}

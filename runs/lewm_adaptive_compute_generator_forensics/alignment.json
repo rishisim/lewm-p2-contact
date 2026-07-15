@@ -1,0 +1,492 @@
+{
+  "combined_v3_cache_opened_with_numpy": false,
+  "episode_count": 8,
+  "episode_ids": [
+    3316,
+    5355,
+    6405,
+    2420,
+    6763,
+    8240,
+    9767,
+    8510
+  ],
+  "per_episode": [
+    {
+      "episode_id": 3316,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 20.00581670744235,
+        "mean_abs": 2.865029963664417
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.14534582295967685,
+        "mean_abs": 0.009274398537565152
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 2.679255278403989,
+        "mean_abs": 0.1044849216595557
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 5355,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 53.31796806941965,
+        "mean_abs": 7.624542421339524
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.11821784888079806,
+        "mean_abs": 0.009527344810024346
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 6.97166461836761,
+        "mean_abs": 0.11415161657442764
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 6405,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 80.92428929952656,
+        "mean_abs": 11.568594108479902
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.12954908354109101,
+        "mean_abs": 0.00986524895658877
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 3.2186897592445116,
+        "mean_abs": 0.10513993059064172
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 2420,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 29.529660004883475,
+        "mean_abs": 4.236041333254987
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.13674676157869514,
+        "mean_abs": 0.009163687249149968
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 2.78468663513258,
+        "mean_abs": 0.09344910182323216
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 6763,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 66.65274543129857,
+        "mean_abs": 9.526488174378558
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.12347451667185091,
+        "mean_abs": 0.009871976890685558
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 4.073870722218805,
+        "mean_abs": 0.10698568484250215
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 8240,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 0.6944437555066605,
+        "mean_abs": 0.11469920216970533
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.14401378574895973,
+        "mean_abs": 0.008552880866667554
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 2.4498122788720207,
+        "mean_abs": 0.09562111143966724
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 9767,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 6.328191638218897,
+        "mean_abs": 0.9106431964837743
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.1498409259345463,
+        "mean_abs": 0.010464713397796315
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 5.538422825597005,
+        "mean_abs": 0.11941357588734644
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    },
+    {
+      "episode_id": 8510,
+      "final_action_zero": false,
+      "final_control_vs_prior": {
+        "exact": false,
+        "max_abs": 16.46216265214734,
+        "mean_abs": 2.3719127519881957
+      },
+      "first_prev_vs_first_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "first_prev_vs_first_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qpos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_prior_qvel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "prev_vs_same_qpos": {
+        "exact": false,
+        "max_abs": 0.129723893956736,
+        "mean_abs": 0.010553628949503284
+      },
+      "prev_vs_same_qvel": {
+        "exact": false,
+        "max_abs": 2.5770385759644867,
+        "mean_abs": 0.11190152738972545
+      },
+      "step_idx": {
+        "first": 0,
+        "last": 200,
+        "unit_increment": true
+      },
+      "terminal": {
+        "earlier_any": false,
+        "terminated_last": false,
+        "truncated_last": true
+      },
+      "time": {
+        "first": 0.0,
+        "increment": {
+          "exact": false,
+          "max_abs": 1.669497873280079e-14,
+          "mean_abs": 6.6512073626512344e-15
+        },
+        "last": 10.000000000000009
+      }
+    }
+  ],
+  "protocol_sha256": "ce0f5d1c25a8c0d25bdd2b44928f03c36572e1653d977a7781dd31c28bfba365",
+  "resolved_alignment": {
+    "frame_observation_probe": "row t state/observation/pixels are co-indexed",
+    "row_200": "terminal sentinel after action[199]; action[200] is padding and is never executed",
+    "row_semantics": "row t stores post-step state for action[t-1]; prev_qpos/prev_qvel at row t are exactly qpos/qvel at row t-1 for t>=1",
+    "transition_probe": "for frozen transition index t, inject qpos[t]/qvel[t], apply action[t], compare against qpos[t+1]/qvel[t+1]; compare generated control to control[t+1] because get_step_info is captured post-step on row t+1"
+  },
+  "rows_per_episode": 201,
+  "schema_version": 1,
+  "status": "sealed_before_environment_comparison",
+  "v3_test_episode_intersection": [],
+  "v3_test_targets_opened": false
+}

@@ -1,0 +1,14 @@
+{
+  "calibration_metrics_sha256": "50b8920edc5d1e1ed0db37fe76475f6f1e69b0e5e43b27e5e7d29720c8423c7b",
+  "calibration_receipt_sha256": "ff2f529db7a65516ed9eec88e6b6052555856d42d62e40e118e77ba8e204f0bf",
+  "final_student_checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/final_student.pt",
+  "final_student_checkpoint_sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302",
+  "frozen_tournament_sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+  "prior_discovery": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery",
+  "selected_solver_checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+  "selected_solver_checkpoint_sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+  "source_thread_handoff": "019f5e02-aee8-7c73-a532-9df2e1573827",
+  "v3_test_targets_consumed": false,
+  "v4_created": false,
+  "workspace": "/Users/rishisim/Documents/research/lewm-p2-contact"
+}

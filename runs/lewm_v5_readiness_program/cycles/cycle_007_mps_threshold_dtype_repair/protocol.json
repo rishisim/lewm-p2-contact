@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "study": "LeWM V5-readiness cycle 007 MPS threshold-dtype repair prospective discovery",
+  "DGP": {
+    "packages": {
+      "stable-worldmodel": "0.1.0",
+      "ogbench": "1.2.1",
+      "mujoco": "3.10.0",
+      "gymnasium": "1.3.0"
+    },
+    "environment": "swm/OGBCube-v0",
+    "agents": 1,
+    "image_size": [224, 224],
+    "environment_steps": 200,
+    "frameskip": 5,
+    "history": 3,
+    "model_steps_inclusive": [3, 40],
+    "policy": {
+      "name": "PlanOracle",
+      "action_noise": 0.1,
+      "p_random_action": 0.0,
+      "noise_smoothing": 0.5,
+      "min_norm": 0.4
+    },
+    "reset": "distribution-contract deterministic reset amendment"
+  },
+  "roles": {
+    "consumed_cycle_006_fit_provenance": 240,
+    "consumed_cycle_006_selection_provenance": 120,
+    "new_fit": 0,
+    "new_selection": 0,
+    "excluded_smoke": 12,
+    "prospective": 300
+  },
+  "repair": {
+    "source_cycle": "cycle_006_stage_specific_gate_refit",
+    "source_terminal_outcome": "cycle_execution_invalid",
+    "source_failure_stage": "post_selection_preseal_runtime_qualification_before_smoke",
+    "sole_executable_change": "materialize the frozen threshold tensor as float32, matching gate scores, because Apple MPS does not support float64 tensors",
+    "numeric_threshold_values_changed": false,
+    "gate_coefficients_changed": false,
+    "refit_or_reselection": false,
+    "required_preseal_proof": "float64-storage versus float32-runtime thresholds produce exactly identical calls on all 9120 consumed fit rows and 4560 consumed selection rows; CPU and MPS sparse-runtime qualifications both pass"
+  },
+  "gate_design": {
+    "family": "stage-specific minimax dual linear",
+    "feature_width": 1046,
+    "stage_count": 3,
+    "candidate_grid_path": "candidate_grid.json",
+    "fit_only_feature_normalization": true,
+    "target_native_whitening": "unchanged source discovery fit-only whitening",
+    "no_selected_head_refit": true,
+    "fit_selection_isolation_required": true,
+    "frozen_exactly_from_cycle_006": true
+  },
+  "causal_inputs": {
+    "loader_allowlist": ["action", "pixels"],
+    "contact_or_privileged_fields": "never loaded into generation fitting selection gating stopping whitening exclusions or decision statistics",
+    "feature_graph": "1046 counted history/action/current/update causal features; no target future episode batch contact or state input",
+    "gradient_boundary": "all feature and gate inference inputs detached; base and refiner frozen; no gradients"
+  },
+  "compute": {
+    "base_flops_per_row": 70529190,
+    "mandatory_depth1_refiner_flops_per_row": 669184,
+    "additional_refiner_flops_per_call": 264960,
+    "causal_feature_flops_per_reached_decision": 3801,
+    "stage_specific_dual_affine_flops_per_reached_decision": 4184,
+    "gate_total_flops_per_reached_decision": 7985,
+    "nonflop_comparison_min_operations_per_reached_decision": 5,
+    "analytic_comparator": "enumerate every transition-independent adjacent-or-wider fixed-depth mixture and select the lowest-loss mixture at exact adaptive refiner plus gate-equivalent total FLOPs",
+    "seeded_comparator": "ceil exact equivalent calls with fixed seed; must use equal or weakly more total FLOPs",
+    "latency": "synchronized and separately reported; excluded from statistical and FLOP verdict"
+  },
+  "prospective": {
+    "episode_count": 300,
+    "no_sequential_expansion": true,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2017999991,
+    "histogram_seed": 2017888881,
+    "seeded_mixture_seed": 2017777771,
+    "bootstrap_unit": "episode-level paired",
+    "individual_interval": "one-sided decision uses lower endpoint of deterministic percentile 95 percent interval",
+    "simultaneous": "two fixed co-primary one-sided percentile lower bounds at alpha/2=0.025 each; Bonferroni familywise coverage at least 95 percent",
+    "required_positive_individual_lowers": [
+      "raw_vs_strongest_transition_independent_analytic_exact_total_compute_mixture",
+      "raw_vs_conservative_seeded_equal_or_weakly_more_compute_mixture",
+      "raw_vs_fixed_depth_1",
+      "raw_vs_within_episode_exact_call_histogram_randomization",
+      "native_whitened_vs_analytic_exact_total_compute_mixture",
+      "native_whitened_vs_within_episode_exact_call_histogram_randomization"
+    ],
+    "required_positive_simultaneous_lowers": [
+      "raw_vs_analytic",
+      "native_whitened_vs_analytic"
+    ],
+    "stagewise_requirement": "finite strictly positive score/gain Spearman sign at every one of the three stages"
+  },
+  "numerical_equivalence": {
+    "cross_batch_selected_latents_only": {
+      "rtol": 0.000002,
+      "atol": 0.0000002,
+      "maximum_absolute_error_ceiling": 0.000000476837158203125
+    },
+    "always_exact": [
+      "calls",
+      "stopping depths",
+      "call histograms",
+      "same-path gate scores features and outputs",
+      "manual sparse versus forward_selected"
+    ]
+  },
+  "terminal_mapping": {
+    "clean_execution_and_all_loss_and_stagewise_criteria_pass": "cycle_prospective_discovery_passed",
+    "clean_execution_but_any_loss_or_stagewise_criterion_fails": "cycle_prospective_discovery_failed",
+    "any_chronology_hash_path_seed_isolation_input_frozen_gradient_compute_sparse_or_numerical_defect": "cycle_execution_invalid"
+  },
+  "forbidden": [
+    "V3 test targets or NumPy-loading the combined V3 cache",
+    "released HDF5 corpus",
+    "contact or privileged gate input",
+    "post-selection head refit",
+    "post-seal normative patch",
+    "sequential prospective expansion",
+    "V5 outcome generation",
+    "first adaptive world model claim"
+  ],
+  "related_work": "LoopWM is relevant prior adaptive-computation work",
+  "v5_outcome_episodes": 0
+}

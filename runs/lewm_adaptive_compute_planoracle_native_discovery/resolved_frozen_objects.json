@@ -1,0 +1,17 @@
+{
+  "base_config": {
+    "bytes": 1313,
+    "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+    "sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+  },
+  "base_weights": {
+    "bytes": 72291425,
+    "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+    "sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+  },
+  "solver": {
+    "bytes": 2945961,
+    "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+    "sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+  }
+}

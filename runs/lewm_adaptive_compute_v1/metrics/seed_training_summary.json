@@ -1,0 +1,29 @@
+[
+  {
+    "best_calibration_objective": 0.003060628029610417,
+    "best_epoch": 10,
+    "checkpoint_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/checkpoints/refiner_seed_260713.pt",
+    "elapsed_seconds": 21.809686583001167,
+    "epochs_completed": 41,
+    "seed": 260713,
+    "trainable_parameters": 335360
+  },
+  {
+    "best_calibration_objective": 0.0030625896310509993,
+    "best_epoch": 11,
+    "checkpoint_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/checkpoints/refiner_seed_260714.pt",
+    "elapsed_seconds": 17.83345541699964,
+    "epochs_completed": 42,
+    "seed": 260714,
+    "trainable_parameters": 335360
+  },
+  {
+    "best_calibration_objective": 0.003076993080117462,
+    "best_epoch": 12,
+    "checkpoint_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/checkpoints/refiner_seed_260715.pt",
+    "elapsed_seconds": 16.608797207998578,
+    "epochs_completed": 43,
+    "seed": 260715,
+    "trainable_parameters": 335360
+  }
+]

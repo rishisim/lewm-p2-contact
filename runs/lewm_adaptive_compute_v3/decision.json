@@ -1,0 +1,201 @@
+{
+  "allocation_freeze": {
+    "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/metrics/test_allocations_frozen_pre_outcome.npz",
+    "sha256": "60b719cffdf67b4cb2ce7e4dd4f31b16e5180a1fa0d67bffe074b50c278a63df"
+  },
+  "compute": {
+    "base_latent_predict_flops_per_transition": 70529190,
+    "flop_convention": "2 FLOPs per multiply-add; norms/activations omitted",
+    "gate_flops_per_decision": 286336,
+    "latency": {
+      "device": "mps",
+      "gate_decisions": 6840,
+      "mean_depth": 2.0,
+      "median_seconds": 0.2692309169942746,
+      "repeats_seconds": [
+        0.8746950839995407,
+        0.26143858300929423,
+        0.2679175410012249,
+        0.2692309169942746,
+        0.2703743750025751
+      ],
+      "samples": 3420,
+      "total_calls": 6840
+    },
+    "primary_gate_decisions": 6840,
+    "primary_incremental_flops": 6535756800,
+    "primary_refiner_calls": 6840,
+    "primary_total_latent_inference_flops": 247745586600,
+    "refiner_flops_per_call": 669184,
+    "baseline_latency_artifact": {
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/metrics/latency_baselines.json",
+      "sha256": "851b8d0570ac3453efc1ab1e152b8ac20899bac5c43c61981bcda08f9280db93"
+    },
+    "matched_mixture_total_latent_inference_flops": 245787048360,
+    "matched_mixture_latency_seconds_median": 0.26133150000532623,
+    "adaptive_over_matched_flop_fraction": 0.007968435493522682,
+    "adaptive_over_matched_latency_fraction": 0.03022757298216016
+  },
+  "confirmatory": true,
+  "multi_step_rollout": {
+    "reason": "existing rollout evaluator does not expose a frozen one-step V3 refiner insertion with unambiguous future action alignment",
+    "status": "unsupported"
+  },
+  "primary": {
+    "adaptive_raw_mse": 0.01601628214120865,
+    "adaptive_vs_fixed_d1": {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.0011692337268229562,
+      "ci_low": 0.0009370310300088362,
+      "comparison": "adaptive_vs_fixed_d1",
+      "mean_benefit": 0.0010517756704497014,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "operating_point": "2.00",
+      "seed": 260913
+    },
+    "adaptive_vs_matched": {
+      "bootstrap_samples": 2000,
+      "ci_high": -0.0011493750831588143,
+      "ci_low": -0.0015328957736955094,
+      "comparison": "adaptive_vs_matched_mixture",
+      "mean_benefit": -0.0013366571108113473,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "operating_point": "2.00",
+      "seed": 260913
+    },
+    "adaptive_whitened_mse": 5.6185577346494995,
+    "depth0_raw_mse": 0.004202733747661114,
+    "fixed_d1_raw_mse": 0.017068058252334595,
+    "fixed_d4_raw_mse": 0.009941945783793926,
+    "fixed_d1_vs_depth0": {
+      "bootstrap_samples": 2000,
+      "ci_high": -0.01255006078812457,
+      "ci_low": -0.013198079266025458,
+      "mean_benefit": -0.012865323463947736,
+      "n": 3420,
+      "n_episodes": 90
+    },
+    "matched_raw_mse": 0.014679624699056149,
+    "primary_adaptive_depth_histogram": {
+      "1": 0,
+      "2": 3420,
+      "3": 0,
+      "4": 0
+    },
+    "nondominated_adaptive_point": false,
+    "oracle_advantage": {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.002009628876752345,
+      "ci_low": 0.0014158674191999418,
+      "comparison": "oracle_advantage_vs_matched",
+      "diagnostic_only": true,
+      "mean_benefit": 0.00171079954359822,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "operating_point": "2.00",
+      "seed": 260913
+    }
+  },
+  "primary_operating_point": "2.00",
+  "primary_seed": 260913,
+  "provenance": {
+    "cache_sha256": "21377c283136008ae07aa4d1e00407ab57eaba5ddda7d5b1c740c47e55afaba0",
+    "figures": {
+      "allocation": {
+        "height": 1100,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/02_allocation.png",
+        "sha256": "671f38767e6e1bb688efca4cc8043445cf0c09a9dcc7545e9bb7c3940124dac9",
+        "width": 1760
+      },
+      "calibration": {
+        "height": 1100,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/03_calibration_transfer.png",
+        "sha256": "574996ada5617d46727173c0aed19c429624e5b6aa799f31f8a2d0ce28b084aa",
+        "width": 1320
+      },
+      "pareto": {
+        "height": 1100,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/01_compute_error_pareto.png",
+        "sha256": "c80169db76a28616e9ca178e9036340808a7d055b200e718f035679d1f1e9382",
+        "width": 1540
+      },
+      "regimes": {
+        "height": 1100,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/05_posthoc_regimes.png",
+        "sha256": "15d8d141a466ae7818096224fb94db4b823a1a767aa0eb78bf652d13092053b4",
+        "width": 1760
+      },
+      "seeds": {
+        "height": 1100,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/04_seed_stability.png",
+        "sha256": "fa4db4cd112c6b9a99977a4ffc74b828b6461e676fe8e7467abb6dfe60a55681",
+        "width": 1540
+      }
+    },
+    "frozen_hashes": {
+      "base_config": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+      "base_weights": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+      "full_config": "63a83582217666eed01d2d5382d68c88b59e4aed3704792968aba2b5c57c8744",
+      "plan": "21efb81487e7eee4506f20318791a7d54fdfca7c33c5c356374e344089dce9bf",
+      "smoke_config": "bdd50bef8cdeb367b38086d004bf0ab73ff244071f10cf18b9e9a08b13041448",
+      "v1_refiner": "388a82fc30c96921083bfa4f2578cb296e6c3544510953d17578cf766cdf10f1"
+    },
+    "source_hashes": {
+      "model.py": "c08fdf28186fd918f6510e335526cb31a54b67876b500a5a3edfa81aadade78d",
+      "policy.py": "dbac206d88f7df521e080c89df3854ed027a139e49691b38d6e7649b08d1cb3c",
+      "run_experiment.py": "2e2d9710bf9c43a355eb86a7c24c8b74670b5fe537ef579b0db43b5f074bb177"
+    }
+  },
+  "robustness": {
+    "seed": "failed",
+    "seed_aggregation": {
+      "positive_seed_counts": {
+        "vs_fixed_d1": 2,
+        "vs_matched": 0
+      },
+      "vs_fixed_d1": {
+        "bootstrap_samples": 2000,
+        "ci_high": -0.00038283095798010504,
+        "ci_low": -0.0007234454517119814,
+        "mean_benefit": -0.0005494006778155075,
+        "n": 3420,
+        "n_episodes": 90
+      },
+      "vs_matched": {
+        "bootstrap_samples": 2000,
+        "ci_high": -0.0016118985727456249,
+        "ci_low": -0.001968726551973133,
+        "mean_benefit": -0.0017834785418305043,
+        "n": 3420,
+        "n_episodes": 90
+      }
+    },
+    "whitened": "failed"
+  },
+  "reason": "The selected jointly trained refiner lost the released LeWM and V1 depth-1 benefit: fixed depth 1 significantly degraded depth 0, so the preregistered refiner-headroom gate failed before a useful local-halting claim could be established.",
+  "training_diagnostics": {
+    "all_selected_epochs": [1, 1, 1],
+    "all_seed_primary_benefits_vs_matched_negative": true,
+    "calibration_objective_diverged_after_selected_epoch": true,
+    "primary_gate_collapsed_to_uniform_depth2": true,
+    "interpretation": "joint optimization instability; early stopping restored finite checkpoints but did not preserve useful refinement"
+  },
+  "validity": {
+    "base_prediction_cache_unchanged": true,
+    "causal_local_features_only": true,
+    "deterministic_policy_replay": true,
+    "finite_metrics": true,
+    "frozen_backbone": true,
+    "posthoc_labels_after_allocation": true,
+    "preregistration_hashes": true,
+    "primary_exact_budget": true,
+    "prior_and_split_isolation": true,
+    "test_allocation_frozen_before_outcome": true
+  },
+  "verdict": "adaptive_refiner_headroom_failed"
+}

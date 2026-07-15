@@ -1,0 +1,211 @@
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/__init__.py:215: UserWarning: ale-py not found; ALE/* envs are unavailable. Install with: pip install 'stable-worldmodel[env]' or pip install ale-py.
+  from stable_worldmodel.envs import ale  # noqa: F401
+objc[62127]: Class SDLApplication is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4890) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509152c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLAppDelegate is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb48e0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915318). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLTranslatorResponder is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4958) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915390). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLMessageBoxPresenter is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4980) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509153b8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_cocoametalview is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb49d0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915408). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLOpenGLContext is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4a20) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915458). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_ShapeData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4a98) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509154d0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_CocoaClosure is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4ae8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915520). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_VideoData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4b38) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915570). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_WindowData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4b88) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509155c0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLWindow is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4bb0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509155e8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class Cocoa_WindowListener is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4bd8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915610). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDLView is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4c50) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915688). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class METAL_RenderData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4cc8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915700). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class METAL_TextureData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4d18) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915750). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_RumbleMotor is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4d40) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x150915778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62127]: Class SDL_RumbleContext is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x140bb4d90) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x1509157c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py:729: UserWarning: [33mWARN: The environment is being initialised with render_mode='rgb_array' that is not in the possible render_modes ([]).[0m
+  logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:415: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+Traceback (most recent call last):
+  File "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_generator_forensics/audit.py", line 129, in <module>
+    if __name__ == "__main__": main()
+  File "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_generator_forensics/audit.py", line 89, in main
+    env.reset(seed=0, options={"variation": [], "variation_values": vals})
+  File "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/ogbench/cube_env.py", line 815, in reset
+    swm_spaces.reset_variation_space(
+  File "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/spaces.py", line 52, in reset_variation_space
+    variation_space.set_value(options['variation_values'])
+  File "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/spaces.py", line 793, in set_value
+    assert space.contains(v), (
+AssertionError: Value [-1.13369842] for key cube.start_yaw is not contained in the space
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/__init__.py:215: UserWarning: ale-py not found; ALE/* envs are unavailable. Install with: pip install 'stable-worldmodel[env]' or pip install ale-py.
+  from stable_worldmodel.envs import ale  # noqa: F401
+objc[63625]: Class SDLApplication is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464890) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e52c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLAppDelegate is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c4648e0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5318). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLTranslatorResponder is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464958) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5390). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLMessageBoxPresenter is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464980) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e53b8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_cocoametalview is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c4649d0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5408). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLOpenGLContext is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464a20) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5458). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_ShapeData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464a98) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e54d0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_CocoaClosure is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464ae8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5520). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_VideoData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464b38) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5570). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_WindowData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464b88) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e55c0). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLWindow is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464bb0) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e55e8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class Cocoa_WindowListener is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464bd8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5610). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDLView is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464c50) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5688). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class METAL_RenderData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464cc8) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5700). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class METAL_TextureData is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464d18) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5750). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_RumbleMotor is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464d40) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e5778). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[63625]: Class SDL_RumbleContext is implemented in both /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/cv2/.dylibs/libSDL2-2.0.0.dylib (0x13c464d90) and /Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/.dylibs/libSDL2-2.0.0.dylib (0x14c1e57c8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py:729: UserWarning: [33mWARN: The environment is being initialised with render_mode='rgb_array' that is not in the possible render_modes ([]).[0m
+  logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/spaces/box.py:415: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+{
+  "summary": {
+    "state_qpos": {
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "count": 1512
+    },
+    "state_qvel": {
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "count": 1440
+    },
+    "observation": {
+      "exact": false,
+      "max_abs": 1.0,
+      "mean_abs": 0.007944540204737423,
+      "count": 2016
+    },
+    "control_mapping": {
+      "exact": false,
+      "max_abs": 0.0027710284166331256,
+      "mean_abs": 0.0003880662936040196,
+      "count": 448
+    },
+    "action_transition_qpos": {
+      "exact": false,
+      "max_abs": 0.0014564449977447769,
+      "mean_abs": 6.478806009944338e-05,
+      "count": 1344
+    },
+    "action_transition_qvel": {
+      "exact": false,
+      "max_abs": 0.28359643396160744,
+      "mean_abs": 0.001959326859900745,
+      "count": 1280
+    },
+    "direct_control_transition_qpos": {
+      "exact": false,
+      "max_abs": 3.412507129258845e-05,
+      "mean_abs": 2.0027227666569135e-07,
+      "count": 1344
+    },
+    "direct_control_transition_qvel": {
+      "exact": false,
+      "max_abs": 0.0025156798239951428,
+      "mean_abs": 2.456434887003915e-05,
+      "count": 1280
+    },
+    "privileged": {
+      "joint_pos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 432
+      },
+      "joint_vel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 432
+      },
+      "effector_pos": {
+        "exact": false,
+        "max_abs": 0.0007034204517309961,
+        "mean_abs": 0.00018158078009283967,
+        "count": 216
+      },
+      "effector_yaw": {
+        "exact": false,
+        "max_abs": 0.0018559074166846212,
+        "mean_abs": 0.00045458054736414934,
+        "count": 72
+      },
+      "gripper_opening": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 72
+      },
+      "gripper_vel": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 72
+      },
+      "gripper_contact": {
+        "exact": false,
+        "max_abs": 1.0,
+        "mean_abs": 0.21641454320660505,
+        "count": 72
+      },
+      "block_pos": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 216
+      },
+      "block_quat": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "count": 288
+      },
+      "block_yaw": {
+        "exact": false,
+        "max_abs": 1.1102230246251565e-16,
+        "mean_abs": 9.25185853854297e-18,
+        "count": 72
+      }
+    },
+    "reset_qpos": {
+      "exact": false,
+      "max_abs": 3.5915056697445733,
+      "mean_abs": 0.07696158670997785,
+      "count": 168
+    },
+    "reset_qvel": {
+      "exact": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "count": 160
+    },
+    "pixels_best": {
+      "exact": false,
+      "max_abs": 122.0,
+      "mean_abs": 0.284632261107568,
+      "count": 3612672
+    }
+  },
+  "passes": {
+    "reset": false,
+    "state": true,
+    "observation": false,
+    "render": false,
+    "control": false,
+    "action_dynamics": false,
+    "direct_control_dynamics": false
+  }
+}

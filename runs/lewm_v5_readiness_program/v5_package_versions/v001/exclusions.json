@@ -1,0 +1,26 @@
+{
+  "analysis_exclusions": [],
+  "contact_exclusion": "contact, reward, success, privileged simulator state, and all future/target fields are forbidden from training, fitting, selection, whitening, gate features, stopping, exclusions, and terminal statistics; contact may be inspected only after the immutable terminal decision for interpretation",
+  "episode_exclusions": "none after a valid rollout is generated; generation replacement is allowed only for a mechanical exception or malformed rollout and never after inspecting outcome, loss, contact, reward, or success",
+  "forbidden_sources": [
+    "V3 test targets",
+    "combined V3 NumPy cache",
+    "released HDF5 corpus"
+  ],
+  "input_allowlist": ["action", "pixels"],
+  "missing_or_nonfinite_policy": "fail the execution as v5_execution_invalid; do not delete, replace, or impute an analyzed episode",
+  "no_sequential_expansion": true,
+  "package_smoke": {
+    "episode_count": 12,
+    "excluded_from_confirmation": true,
+    "identifiers_are_disjoint": true,
+    "outcomes_cannot_enter_power_or_confirmation_statistics": true
+  },
+  "schema_version": 1,
+  "v4_status": "consumed diagnostic only",
+  "v5_confirmation": {
+    "episode_count": 1600,
+    "replacement_only_before_outcome_inspection": true,
+    "retry_after_valid_failure": false
+  }
+}

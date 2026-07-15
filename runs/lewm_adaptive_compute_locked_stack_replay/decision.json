@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "outcome": "locked_stack_unavailable",
+  "provenance_statement": "exact released generator remains unproven",
+  "scientific_replay_executed": false,
+  "transition_nonidentifiable_from_partial_state": null,
+  "reason": "The immutable source commit declares stable-worldmodel 0.0.5 while its frozen uv.lock root entry declares 0.0.3; frozen sync installs source metadata 0.0.5, so the exact declared stack cannot be proven or constructed without modifying immutable inputs.",
+  "substitution_performed": false,
+  "hdf5_opened": false,
+  "new_policy_trajectories": 0,
+  "model_or_gate_rows": 0,
+  "v5_episodes": 0
+}

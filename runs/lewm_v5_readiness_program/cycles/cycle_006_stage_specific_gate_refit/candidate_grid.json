@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "family": "stage_specific_minimax_dual_linear",
+  "regularizations": [0.01, 1.0, 100.0],
+  "fit_score_quantiles": [0.65, 0.75, 0.85],
+  "candidate_count": 9,
+  "fit_episode_count": 240,
+  "selection_episode_count": 120,
+  "fit_and_selection_disjoint": true,
+  "feature_width_per_stage": 1046,
+  "heads_per_stage": 2,
+  "stage_count": 3,
+  "selection_eligibility": [
+    "all six exact-compute selection point contrasts are positive",
+    "all three out-of-fit score/gain Spearman coefficients are finite and positive",
+    "at least 400 selection rows reach stage 2",
+    "at least 100 selection rows reach stage 3",
+    "all four call depths contain at least 15 selection rows",
+    "seeded comparator has equal or weakly more exact total compute"
+  ],
+  "fixed_ranking": [
+    "maximize the minimum of the three out-of-fit stage Spearman coefficients",
+    "maximize the smaller standardized raw/native-whitened analytic effect",
+    "minimize exact total FLOPs",
+    "minimize regularization",
+    "minimize fit-score quantile",
+    "lexicographic candidate id"
+  ],
+  "no_selection_candidate": "preserve failure and generate no smoke or prospective episode",
+  "contact_or_privileged_inputs": false,
+  "v5_outcome_episodes": 0
+}

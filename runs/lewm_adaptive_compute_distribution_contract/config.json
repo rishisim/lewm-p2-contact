@@ -1,0 +1,185 @@
+{
+  "classification": "bounded_discovery_and_diagnostic_control_not_confirmation",
+  "comparison_metrics": {
+    "composition": "contact, impact, effector/block motion, phase, target task, final success",
+    "composition_role": "post-hoc only; excluded from training, inference, policy selection, primary thresholds",
+    "gate": "every causal feature block, frozen-normalized z summaries, scores, rankings, price exceedance, call histograms",
+    "latent_inputs": "history/target norms, moments, temporal changes, normalized actions",
+    "model": "d0 and d1-d4 raw/discovery-whitened losses; update norms; gains; positive-gain rates",
+    "raw_inputs": "pixel RGB moments/temporal change; observation moments; raw actions"
+  },
+  "decision_rules": {
+    "claims_forbidden": [
+      "V5 confirmation",
+      "confirmatory claim",
+      "contact-aware adaptive claim",
+      "first adaptive world model claim"
+    ],
+    "distribution_contract_passed": {
+      "all_required": [
+        "PlanOracle 90-episode core mean lies inside frozen joint offline max-T region",
+        "PlanOracle is materially closer than paired MarkovOracle: standardized Euclidean distance ratio <= 0.70 and closer on >=5/7 core coordinates",
+        "PlanOracle d1-to-d2 mean marginal gain is >0 (the two offline split-specific means and their frozen pooled band are reported descriptively)",
+        "frozen gate prospective discovery criteria all pass",
+        "all validity, isolation, hash, exact-call, FLOP, and dense/sparse audits pass"
+      ]
+    },
+    "distribution_matched_gate_failed": "PlanOracle matches the core/base distribution but frozen gate criteria fail; no V5; recommend smallest domain-robust gate discovery study",
+    "gate_prospective_discovery": {
+      "all_required": [
+        "95% episode-bootstrap CI lower bound >0 versus analytic strongest transition-independent exact-total-FLOP mixture",
+        "95% episode-bootstrap CI lower bound >0 versus conservative seeded integer exact-total-FLOP mixture",
+        "95% episode-bootstrap CI lower bound >0 versus fixed d1",
+        "95% episode-bootstrap CI lower bound >0 versus exact call-histogram randomization",
+        "discovery-whitened point benefit >0 versus analytic exact-total-FLOP mixture",
+        "score/gain Spearman is >0 at all three decisions",
+        "adaptive point is nondominated in both call and fully-counted-FLOP frontiers"
+      ]
+    },
+    "generator_reconstruction_failed": "PlanOracle misses the core offline region or is not materially closer than paired MarkovOracle; permit only the smallest bounded version/action-semantics/replay check, never gate tuning"
+  },
+  "environment_constructor": {
+    "callable": "stable_worldmodel.World",
+    "env_type": "single",
+    "environment": "swm/OGBCube-v0",
+    "height": 224,
+    "image_shape": [
+      224,
+      224
+    ],
+    "max_episode_steps": 200,
+    "mode": "data_collection",
+    "multiview": false,
+    "num_envs": 1,
+    "terminate_at_goal": false,
+    "visualize_info": false,
+    "width": 224
+  },
+  "frozen_adaptive_contract": {
+    "base_weights_sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+    "compute_price": 0.00014899746351320145,
+    "discovery_whitening_sha256": "6ac9f8a463921e8fc158ba2aca543f07dc46931a3f98b4d7ef9f10efd4add54f",
+    "gate_flops_per_evaluated_decision": 8196,
+    "gate_parameters": 1050,
+    "linear_student_sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302",
+    "stagewise_solver_sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+    "stopping_rule": "start at d1; continue at each of d1,d2,d3 iff frozen score > frozen compute price",
+    "tournament_sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+    "training_or_tuning_from_new_data": false
+  },
+  "policy_constructors": {
+    "markov_oracle": {
+      "action_noise": 0.1,
+      "callable": "stable_worldmodel.envs.ogbench.ExpertPolicy",
+      "min_norm": 0.4,
+      "noise_smoothing": 0.5,
+      "p_random_action": 0.0,
+      "policy_type": "markov_oracle",
+      "seed": null
+    },
+    "plan_oracle": {
+      "action_noise": 0.1,
+      "callable": "stable_worldmodel.envs.ogbench.ExpertPolicy",
+      "min_norm": 0.4,
+      "noise_smoothing": 0.5,
+      "p_random_action": 0.0,
+      "policy_type": "plan_oracle",
+      "seed": null
+    }
+  },
+  "preprocessing": {
+    "action_mean": [
+      0.010884696617722511,
+      -0.003141433000564575,
+      0.002646582666784525,
+      0.00042392866453155875,
+      0.1592525690793991
+    ],
+    "action_statistics_frozen_rows": 2000000,
+    "action_std": [
+      0.28941991925239563,
+      0.39371708035469055,
+      0.6431366801261902,
+      0.3928017318248749,
+      0.25030744075775146
+    ],
+    "blocked_action_dim": 25,
+    "frameskip": 5,
+    "history": 3,
+    "latent_dim": 192,
+    "pixels": {
+      "imagenet_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "imagenet_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resolution": [
+        224,
+        224
+      ],
+      "source": "uint8 RGB pixels",
+      "transform": "V2 model_io.pixel_transform"
+    },
+    "raw_action_dim": 5,
+    "target_alignment": "model steps 3..40; target latent at exactly the next model step"
+  },
+  "reference_region": {
+    "bootstrap_samples": 10000,
+    "contact_or_state_in_primary_region": false,
+    "core_metrics": [
+      "raw_action_abs_ge_0_99_rate",
+      "raw_action_rms",
+      "raw_action_coord4_mean",
+      "normalized_action_abs_gt3_rate",
+      "history_temporal_change_norm",
+      "target_norm",
+      "d0_raw_mse"
+    ],
+    "episode_estimand": "equal-weight episode mean; every episode has 38 prediction rows",
+    "fresh_sample_size": 90,
+    "joint_region": "95% max-|studentized mean deviation| region over frozen core metrics",
+    "marginal_interval": [
+      0.025,
+      0.975
+    ],
+    "sources": [
+      "offline_discovery_420",
+      "consumed_offline_calibration_90"
+    ]
+  },
+  "related_work_note": "LoopWM is relevant adaptive-computation work in text environments.",
+  "rng_contract": {
+    "environment": "world.reset(seed=env_seed) before policy RNG activation",
+    "oracle": "numpy.random.seed(oracle_np_seed) after environment reset and before first action; required because OGBench 1.2.1 PlanOracle and MarkovOracle use NumPy global RNG",
+    "pairing": "PlanOracle and MarkovOracle use identical environment seeds and separate wrapper/oracle streams",
+    "wrapper": "ExpertPolicy.set_seed(policy_seed)"
+  },
+  "runtime_benchmark": {
+    "batch_sizes": [
+      1,
+      32,
+      256,
+      1024
+    ],
+    "device": "mps",
+    "measurement": "synchronized end-to-end base prediction plus solver/gate path",
+    "repetitions": 5,
+    "statistical_and_flop_verdict_independent_of_latency": true,
+    "warmups": 2
+  },
+  "sample": {
+    "examples_per_episode": 38,
+    "paired_markov_diagnostic_episodes": 30,
+    "plan_discovery_episodes": 90,
+    "sequential_expansion_forbidden": true,
+    "smoke_episodes_per_policy": 12,
+    "v5_confirmation_episodes": 0
+  },
+  "schema_version": 1,
+  "study": "lewm_adaptive_compute_distribution_contract"
+}

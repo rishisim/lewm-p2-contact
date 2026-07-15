@@ -1,0 +1,450 @@
+{
+  "artifacts": {
+    "allocation_freeze": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/metrics/test_allocations_frozen_pre_outcome.npz",
+    "causal_feature_cache": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/cache/causal_post_call_features.npz",
+    "figures": {
+      "manifest": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/figures/figure_integrity.json",
+      "paths": {
+        "exact_allocation": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/figures/03_exact_allocation_histogram.png",
+        "gate_diagnostics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/figures/02_gate_calibration_quantiles.png",
+        "policy_performance": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/figures/01_policy_losses_and_comparisons.png",
+        "posthoc_regimes": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/figures/04_posthoc_regimes.png"
+      },
+      "pngs": {
+        "exact_allocation": {
+          "byte_count": 109877,
+          "channels": 4,
+          "height_px": 920,
+          "sha256": "62f7c3bf580124f6de9c062a05d39d28b53d95d0f72ebddf1dca483888e25bb2",
+          "width_px": 1856
+        },
+        "gate_diagnostics": {
+          "byte_count": 141245,
+          "channels": 4,
+          "height_px": 812,
+          "sha256": "ff58983f2c1a77e65f5b67f79d639add21f110ff27ad95f5017ef05e05000b68",
+          "width_px": 2216
+        },
+        "policy_performance": {
+          "byte_count": 221370,
+          "channels": 4,
+          "height_px": 1460,
+          "sha256": "a850250e57e18d56dbfc5624878d45fda8dd180b2bc0a41a9e654b1db0c68b17",
+          "width_px": 2535
+        },
+        "posthoc_regimes": {
+          "byte_count": 134690,
+          "channels": 4,
+          "height_px": 830,
+          "sha256": "026101059c7adc16edf4563f5b1cf45d332f53a4f071e3175a6bc8f491f59f21",
+          "width_px": 2144
+        }
+      },
+      "sources": {
+        "allocation_rows": {
+          "columns": [
+            "count",
+            "depth",
+            "fraction",
+            "policy",
+            "total_calls"
+          ],
+          "row_count": 18,
+          "sha256": "7cb02b2753a0594baac63d6ced0df797e97f93485fae8fba019e5c0d9e8df7f8"
+        },
+        "calibration_rows": {
+          "columns": [
+            "actual_mean",
+            "benefit",
+            "mae",
+            "pearson",
+            "predicted_mean",
+            "rmse",
+            "scope",
+            "spearman"
+          ],
+          "row_count": 2,
+          "sha256": "cd60e6e6c992b3f30dc74ae86acf456eba6b6334625eec049a5526915d94add4"
+        },
+        "comparison_rows": {
+          "columns": [
+            "comparison",
+            "raw_ci_lower",
+            "raw_ci_upper",
+            "raw_mean_difference",
+            "whitened_ci_lower",
+            "whitened_ci_upper",
+            "whitened_mean_difference"
+          ],
+          "row_count": 6,
+          "sha256": "2140c45fec9a017ee0c4315b88801e2a5d4aefe05406dd16bb931fb2b29ab121"
+        },
+        "policy_rows": {
+          "columns": [
+            "continuation_calls",
+            "depth_1",
+            "depth_2",
+            "depth_4",
+            "diagnostic_only",
+            "first_calls",
+            "mean_calls",
+            "policy",
+            "raw_mean_loss",
+            "total_calls",
+            "whitened_mean_loss"
+          ],
+          "row_count": 6,
+          "sha256": "0b8fd91b164287fe1e5907fa032670147b042d4b426c5b55802a35ce6f5f9183"
+        },
+        "quantile_rows": {
+          "columns": [
+            "benefit",
+            "count",
+            "mean_actual",
+            "mean_predicted",
+            "quantile"
+          ],
+          "row_count": 10,
+          "sha256": "b759cf31abd20532153bd24d04d72e00f4dbcaf2b13be2ab41c93b6efeb7f9a6"
+        },
+        "regime_rows": {
+          "columns": [
+            "count",
+            "depth",
+            "fraction",
+            "n",
+            "raw_benefit_vs_uniform",
+            "regime"
+          ],
+          "row_count": 12,
+          "sha256": "fbfc3a30bb0332fbeb728a9401e47dc6472d60873155395b24d5488e7194b1fa"
+        }
+      }
+    },
+    "metrics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/metrics",
+    "provenance": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/provenance.json"
+  },
+  "compute": {
+    "adaptive_continuation_calls": 3420,
+    "adaptive_first_calls": 3420,
+    "adaptive_refiner_flops": 4577218560,
+    "adaptive_refiner_plus_gate_flops": 5726776320,
+    "adaptive_total_calls": 6840,
+    "dense_exit_diagnostic_calls": 13680,
+    "device": "mps",
+    "gate_flops_per_transition": 336128,
+    "gate_parameter_count": 168258,
+    "latency": {
+      "adaptive_continuation": {
+        "batched_continuation_invocations": 21,
+        "continuation_calls": 3420,
+        "device": "mps",
+        "first_calls": 3420,
+        "latency_seconds_median": 0.08093654201366007,
+        "latency_seconds_repeats": [
+          0.49278366699581966,
+          0.07566854200558737,
+          0.07144675000745337,
+          0.08110566700634081,
+          0.08093654201366007
+        ],
+        "samples": 3420,
+        "total_calls": 6840
+      },
+      "first_call": {
+        "block_invocations": 7,
+        "device": "mps",
+        "latency_seconds_median": 0.016118958999868482,
+        "latency_seconds_repeats": [
+          0.028762166999513283,
+          0.02140349999535829,
+          0.01602279199869372,
+          0.01590766600565985,
+          0.016118958999868482
+        ],
+        "processed_rows": 3420
+      },
+      "gate_feature_mlp_allocation": {
+        "device": "mps",
+        "latency_seconds_median": 0.1404996250057593,
+        "latency_seconds_repeats": [
+          0.1436320000066189,
+          0.13870154198957607,
+          0.1404996250057593,
+          0.1418761670065578,
+          0.13843500000075437
+        ]
+      },
+      "uniform_depth2_execution": {
+        "batched_block_invocations": 14,
+        "continuation_calls": 3420,
+        "device": "mps",
+        "first_calls": 3420,
+        "latency_seconds_median": 0.019937167002353817,
+        "latency_seconds_repeats": [
+          0.031044375005876645,
+          0.022187791008036584,
+          0.019937167002353817,
+          0.019068875000812113,
+          0.018715790996793658
+        ],
+        "samples": 3420,
+        "total_calls": 6840
+      }
+    },
+    "refiner_flops_per_call": 669184,
+    "refiner_flops_per_call_recomputed": 669184,
+    "test_gate_total_flops": 1149557760
+  },
+  "confirmatory": true,
+  "mode": "full",
+  "paired_comparisons": [
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 1.783459695450547e-05,
+      "ci_low": 4.917691931545799e-06,
+      "comparison": "adaptive_vs_uniform_d2",
+      "diagnostic_only": false,
+      "mean_benefit": 1.1641742795588097e-05,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.000315643188701363,
+      "ci_low": -0.00029607579148391186,
+      "comparison": "adaptive_vs_uniform_d2",
+      "diagnostic_only": false,
+      "mean_benefit": 1.291349658139189e-05,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 2.1101656564302526e-06,
+      "ci_low": -7.829603052697811e-06,
+      "comparison": "adaptive_vs_fixed_d1",
+      "diagnostic_only": false,
+      "mean_benefit": -2.7649410919391157e-06,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.00024661026165810943,
+      "ci_low": -0.0003421694031893721,
+      "comparison": "adaptive_vs_fixed_d1",
+      "diagnostic_only": false,
+      "mean_benefit": -5.346915771345227e-05,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 1.985641358692116e-05,
+      "ci_low": 5.959495859630524e-06,
+      "comparison": "adaptive_vs_random",
+      "diagnostic_only": false,
+      "mean_benefit": 1.3282359269268892e-05,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.0012826730171504634,
+      "ci_low": 0.0007136489963994491,
+      "comparison": "adaptive_vs_random",
+      "diagnostic_only": false,
+      "mean_benefit": 0.000995719116451719,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 2.3673830873104136e-05,
+      "ci_low": 9.023276503016758e-06,
+      "comparison": "adaptive_vs_permutation",
+      "diagnostic_only": false,
+      "mean_benefit": 1.6484076428206937e-05,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 2000,
+      "ci_high": 0.0012874578194646761,
+      "ci_low": 0.0006379513427856032,
+      "comparison": "adaptive_vs_permutation",
+      "diagnostic_only": false,
+      "mean_benefit": 0.0009683002127049325,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 2000,
+      "ci_high": 6.778707019906242e-05,
+      "ci_low": 5.2748571002451346e-05,
+      "comparison": "oracle_regret",
+      "diagnostic_only": true,
+      "mean_benefit": 5.9649760823625615e-05,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 2000,
+      "ci_high": -0.0004140759338960898,
+      "ci_low": -0.0009514231663813002,
+      "comparison": "oracle_regret",
+      "diagnostic_only": true,
+      "mean_benefit": -0.0006887037348792329,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 2000,
+      "ci_high": 7.706880836252958e-05,
+      "ci_low": 6.552278627544478e-05,
+      "comparison": "oracle_advantage_vs_uniform_d2",
+      "diagnostic_only": true,
+      "mean_benefit": 7.129150361921371e-05,
+      "metric": "raw",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 2000,
+      "ci_high": -0.0004547627209775212,
+      "ci_low": -0.0008748008098659828,
+      "comparison": "oracle_advantage_vs_uniform_d2",
+      "diagnostic_only": true,
+      "mean_benefit": -0.000675790238297841,
+      "metric": "whitened",
+      "n": 3420,
+      "n_episodes": 90,
+      "positive_favors": "oracle"
+    }
+  ],
+  "policy_metrics": [
+    {
+      "continuation_calls": 3420,
+      "depth_1": 1532,
+      "depth_2": 1122,
+      "depth_4": 766,
+      "diagnostic_only": false,
+      "first_calls": 3420,
+      "mean_calls": 2.0,
+      "policy": "adaptive",
+      "raw_mean_loss": 0.0031297044837270416,
+      "total_calls": 6840,
+      "whitened_mean_loss": 0.11017430079309794
+    },
+    {
+      "continuation_calls": 3420,
+      "depth_1": 0,
+      "depth_2": 3420,
+      "depth_4": 0,
+      "diagnostic_only": false,
+      "first_calls": 3420,
+      "mean_calls": 2.0,
+      "policy": "uniform_d2",
+      "raw_mean_loss": 0.00314134622652263,
+      "total_calls": 6840,
+      "whitened_mean_loss": 0.11018721428967933
+    },
+    {
+      "continuation_calls": 0,
+      "depth_1": 3420,
+      "depth_2": 0,
+      "depth_4": 0,
+      "diagnostic_only": false,
+      "first_calls": 3420,
+      "mean_calls": 1.0,
+      "policy": "fixed_d1",
+      "raw_mean_loss": 0.0031269395426351022,
+      "total_calls": 3420,
+      "whitened_mean_loss": 0.11012083163538447
+    },
+    {
+      "continuation_calls": 3420,
+      "depth_1": 1736,
+      "depth_2": 816,
+      "depth_4": 868,
+      "diagnostic_only": false,
+      "first_calls": 3420,
+      "mean_calls": 2.0,
+      "policy": "random",
+      "raw_mean_loss": 0.0031429868429963107,
+      "total_calls": 6840,
+      "whitened_mean_loss": 0.11117001990954964
+    },
+    {
+      "continuation_calls": 3420,
+      "depth_1": 1532,
+      "depth_2": 1122,
+      "depth_4": 766,
+      "diagnostic_only": false,
+      "first_calls": 3420,
+      "mean_calls": 2.0,
+      "policy": "permutation",
+      "raw_mean_loss": 0.003146188560155249,
+      "total_calls": 6840,
+      "whitened_mean_loss": 0.11114260100580285
+    },
+    {
+      "continuation_calls": 3420,
+      "depth_1": 1766,
+      "depth_2": 771,
+      "depth_4": 883,
+      "diagnostic_only": true,
+      "first_calls": 3420,
+      "mean_calls": 2.0,
+      "policy": "oracle",
+      "raw_mean_loss": 0.003070054722903417,
+      "total_calls": 6840,
+      "whitened_mean_loss": 0.11086300452797716
+    }
+  ],
+  "reason": "Sequential oracle headroom exists, but the frozen gate failed at least one preregistered raw-MSE comparison or exact-budget requirement.",
+  "selected_gate_epoch": 3,
+  "selected_gate_seed": 260815,
+  "validity": {
+    "adaptive_uniform_exact_2n_calls": true,
+    "base_and_refiner_unchanged": true,
+    "causal_features_only": true,
+    "episode_splits_and_exclusions_valid": true,
+    "first_call_for_every_transition": true,
+    "gate_selected_on_calibration_only": true,
+    "posthoc_labels_after_allocation": true,
+    "refiner_output_consistency": true,
+    "strict_base_hash_and_load": true,
+    "strict_finite_artifacts": true,
+    "strict_refiner_hash_keys_and_freeze": true,
+    "test_allocation_frozen_before_outcome": true,
+    "v1_artifacts_unchanged": true
+  },
+  "verdict": "sequential_headroom_gate_failed"
+}

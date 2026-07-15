@@ -1,0 +1,9 @@
+{
+  "episodes": 12,
+  "evaluation_passed": true,
+  "may_influence_scientific_choices": false,
+  "outcome_manifest_sha256": "df1a866a61f5cfb117dd81cd9bb80da20a074a7c46b3e061702029deb92be768",
+  "rows": 456,
+  "schema_version": 1,
+  "status": "smoke_complete_and_forever_excluded_from_confirmation"
+}

@@ -1,0 +1,52 @@
+{
+  "excluded": {
+    "manifests": [
+      {
+        "episode_count": 600,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/cache/split_manifest.json",
+        "sha256": "3cc9bd4d7df229b0a4111a49933e98c5b72e916b5b5f98d7d5e023fc30ed544d"
+      },
+      {
+        "episode_count": 6,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/cache/split_manifest.json",
+        "sha256": "f5a4da6c0f37d6222e83085327e30a1b70f0ace6f96e9c97d37c1067d7b65940"
+      },
+      {
+        "episode_count": 600,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/cache/split_manifest.json",
+        "sha256": "ce34fa665fa0b7c0237a211e12c1f44e442408a404bf34eba2010c15dc83c1c0"
+      },
+      {
+        "episode_count": 6,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/cache/split_manifest.json",
+        "sha256": "ad1d2e1cf42deb48518009bffbd5262925db2ff202a01eb65f1909125535ffb3"
+      }
+    ],
+    "union_count": 1242,
+    "union_sorted_int32le_sha256": "ac71dbe795efdd0217983cd615a55ed81244303ae1243d559932d2a5def62915"
+  },
+  "pretraining_membership": "unknown",
+  "selection_seed": null,
+  "smoke_reserved": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "split_episode_ordinals": {
+    "calibration": [
+      46
+    ],
+    "test": [
+      47
+    ],
+    "train": [
+      42,
+      43,
+      44,
+      45
+    ]
+  }
+}

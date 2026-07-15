@@ -1,0 +1,321 @@
+{
+  "accepted_discovery_final_manifest_sha256": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+  "created_unix_ns": 1784152920727638000,
+  "file_count": 77,
+  "files": {
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/DGP.json": {
+      "bytes": 846,
+      "sha256": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/PACKAGE_READY.json": {
+      "bytes": 1745,
+      "sha256": "b8e9af99db4589af62175fd747d43826cae873116dc75bc56786228c8927ebab"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/PREREGISTRATION.md": {
+      "bytes": 5048,
+      "sha256": "04648638c85775da692f1727171bf8e8a3e82bbba1665a87622bdbb1f24a5e17"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/REPORT_TEMPLATE.md": {
+      "bytes": 1623,
+      "sha256": "dfe94176b95ec867a0a1218bddceb31254970ac585d864eb4f1d222782f603e8"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/analysis.py": {
+      "bytes": 18860,
+      "sha256": "9a4206fbd6b804a1f5f1603d78151889d2d9c7cdb1dbd6e8cc8489339e8f7a5e"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/flop_derivation_graph.json": {
+      "bytes": 339,
+      "sha256": "253808fbe53fc906eed7f28109a4610fff803c9d651f4e4e1f45bb15a639e15e"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/flop_derivation_symbolic.json": {
+      "bytes": 664,
+      "sha256": "d5181e7c1c361c8d70a4c6a46ad33e397ae1de9d04cf2e711640b5a58aab7cc4"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/inference_qualification.json": {
+      "bytes": 605,
+      "sha256": "94b1a668f79bf6d1e3cfe865464d5b674db9631566fae94563992920a6f519d6"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/package_smoke_verification.json": {
+      "bytes": 1645,
+      "sha256": "1345ece9bc541324f9ce150738e98891e8604b3a668c2ebb675b973edad06c12"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/pre_v5_seal.json": {
+      "bytes": 14897,
+      "sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/preseal_tests.json": {
+      "bytes": 1469,
+      "sha256": "0958d80f08e73a21cbcc812e7aed85bdbdf0205df75cd1a228608fc7ab856aeb"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/prior_identifier_snapshot.json": {
+      "bytes": 509,
+      "sha256": "ca8cecc5144765151924fc4c2351e743dc667e8bba0f9d973c5e4b0356b7de1f"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/runtime_qualification.json": {
+      "bytes": 6071,
+      "sha256": "a2216d3724cc33ca0b5cea7a180933137ccaa4df6e3584fe1cadfcfe818db458"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/build_seed_ledger.py": {
+      "bytes": 6074,
+      "sha256": "b328bc6861d635b84424cb48a773e80c3c225bf77da17db84cd0181ba3e338de"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/build_v5_ready.py": {
+      "bytes": 5868,
+      "sha256": "df03682f401595b79dde3211bf4e6bc840a5eca72c4330b684f662c4aadb7031"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/cohort_seed_ledger.json": {
+      "bytes": 389956,
+      "sha256": "d66ec0d86b41599d2f133f1e385cd5fe1bbb744d26cf3dda4cebe16a18fe840f"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/counted_features.py": {
+      "bytes": 9883,
+      "sha256": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/cycle_common.py": {
+      "bytes": 7264,
+      "sha256": "9809091dad51bccbd3899b941d7de574e9daa09a4ccffe577d29e9abe14b326a"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_execution.npz": {
+      "bytes": 3170800,
+      "sha256": "16e7db28060a562298be345e92c10d744b77fe704d685ca6ac80fe5cce38e166"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_execution_manifest.json": {
+      "bytes": 12127,
+      "sha256": "06e0a6099d34de5dfae2c5836961075660ec099ce582aed07f08e33dd753c509"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_latency_inputs.npz": {
+      "bytes": 392999,
+      "sha256": "8566d6b2687e4df0af9205739721755095d80f5e3e4aff179a1b242b5705c3bf"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-000.json": {
+      "bytes": 804,
+      "sha256": "36792a96ed7801fc81d0cba0c200f5e28ed854e9282b2a461614c6dc72ad0982"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-000.npz": {
+      "bytes": 3981186,
+      "sha256": "d74ef65edd90926beb64405b3ffd50244adba1adf2b7fe06f1f397178d8eea47"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-001.json": {
+      "bytes": 804,
+      "sha256": "b6f6d6f01f3d1524b8fefa1637ab34b3263a4d4a10c9930a5b543bb243e99c65"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-001.npz": {
+      "bytes": 3730613,
+      "sha256": "3dd91850d33dfd702a837c835abb1230e76f5e56c46818dadc863ca3bfc61dad"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-002.json": {
+      "bytes": 804,
+      "sha256": "1cd3b8cc0ff1db41e0811b51272d2f618921c4bd6c8f58949fd9aa7dd1df5899"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-002.npz": {
+      "bytes": 3507084,
+      "sha256": "7225abbde4335e6bbf4a17e71df4a713dd7cbd82414488cd377b421a16d3f8da"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-003.json": {
+      "bytes": 804,
+      "sha256": "d0aa1ec93dd6f6e63ec4d38bcf56e0d0559fcdf3bb9d34879ca2eb8d11d62d87"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-003.npz": {
+      "bytes": 3801414,
+      "sha256": "224b48d020522827d122f604da30a8520afdd0890e567673687af2674d0ce27f"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-004.json": {
+      "bytes": 804,
+      "sha256": "c8671f09572d35c3d09d4529aa73a56efcea6c55f0b2f0316c71210f84dc773e"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-004.npz": {
+      "bytes": 3834906,
+      "sha256": "5d0d0d20c8888047a44536dea8f43149abdbf1b77e6bddd44c75b8644281c653"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-005.json": {
+      "bytes": 804,
+      "sha256": "07823d2a031784fe934253eef9fec28cc06020798873c4edca4fe5424ba53237"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-005.npz": {
+      "bytes": 4028316,
+      "sha256": "3ef45386b1229cce462679c5a501a0ffaa02bed37099233502fa4a01b70a78dc"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-006.json": {
+      "bytes": 804,
+      "sha256": "11a02e6015d7dcdbc1bee12bfcb1fe7164f26c47b49d093e9d424d4eeeeed4c1"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-006.npz": {
+      "bytes": 3976436,
+      "sha256": "d5aec768762c1808992891ef1ae738d545c54ead415368f535ad9009cbbc62b9"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-007.json": {
+      "bytes": 804,
+      "sha256": "25b38165a09f33569e592daf99d0dd7ec64e0abbacdac9d6bc43e21cd58b84d3"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-007.npz": {
+      "bytes": 4220842,
+      "sha256": "c19506ed6ab67f79c6a62e4f5f240a0a69ac4aea38a387768f2853e63bcdc3cd"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-008.json": {
+      "bytes": 804,
+      "sha256": "456040ab1ae76290cf2e93f032296edd7195447fccdfd8e8fb78eea0daee12b0"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-008.npz": {
+      "bytes": 3924427,
+      "sha256": "048a500db5ddcf795c8a803cf5cdb31918b20cd936c5de6ecb1b4ce383a3c65d"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-009.json": {
+      "bytes": 804,
+      "sha256": "046df2bd854f39f3bc9813d7c52c1cefa5527e7561ceb75f7df1f1ed9174ff2c"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-009.npz": {
+      "bytes": 3818769,
+      "sha256": "c328171d2e0608b40cc41c68179edc936090f522b77df92e28d7158bc077e6a0"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-010.json": {
+      "bytes": 805,
+      "sha256": "d1678d489a2b73d0340043fbdcd728188ab75e43936c301d68e769eac222076a"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-010.npz": {
+      "bytes": 3907548,
+      "sha256": "f59a07675ab446c827e1a76a27e35598469febe3f8bdae8847646a8302840791"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-011.json": {
+      "bytes": 805,
+      "sha256": "5b78f878f4b3d353ca91ee08aacac7886ef5992fdb50580992eb963c9001bd5e"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw/v5v001-package-smoke-011.npz": {
+      "bytes": 3712137,
+      "sha256": "482d03780ce4d744813289ea29d28f6a3f5c49265fd0cfb6d52479c34b335eb7"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/data/package_smoke_raw_manifest.json": {
+      "bytes": 10966,
+      "sha256": "8d5399677db85d2e45e27553710bce82463f69be682ce4c96524527162a7c0ff"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/derive_flops_graph.py": {
+      "bytes": 1079,
+      "sha256": "27f2594dd56a0347f3fb6d6a9c258873d806db28cfcf0d0eafa45456dc90489d"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/derive_flops_symbolic.py": {
+      "bytes": 2270,
+      "sha256": "1e13ecd034ff8cb0f00eff297e5ee37cd0e3d1780680a9cd0b21d727a860b5d2"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/exclusions.json": {
+      "bytes": 1310,
+      "sha256": "a8bb337aa7cee48ce4e26c2383265f5b6412ffe4af518be5fe7d07fa4f38d049"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/expected_artifact_roles.json": {
+      "bytes": 1339,
+      "sha256": "f0f89d967db0f51b2e31fb05b3aa6800bc9faababde10948c1a6a37739a1233b"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/finalize_package.py": {
+      "bytes": 4997,
+      "sha256": "236011e567868810df62ca8d2e2a9b8777e4cad29eb3f8a2e97e090e9883dc05"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/compiled_gate.npz": {
+      "bytes": 24821,
+      "sha256": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/frozen_candidate_manifest.json": {
+      "bytes": 2463,
+      "sha256": "30ea1fa6c0a423b0aa935d16634a4bb4f6d011ac8807b3c335476a5b1e5317b4"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/gate_fit.npz": {
+      "bytes": 77896,
+      "sha256": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/gate_freeze.json": {
+      "bytes": 2934,
+      "sha256": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/gate_freeze_seal.json": {
+      "bytes": 3113,
+      "sha256": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/freeze/whitening.npz": {
+      "bytes": 289586,
+      "sha256": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/independent_verify.py": {
+      "bytes": 20345,
+      "sha256": "d1aac14a2ceeba8997872a7c10e9e198442fb51b314fbdf4ccf5ab360d3e4ca4"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/input_loader.py": {
+      "bytes": 1906,
+      "sha256": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/latency.py": {
+      "bytes": 7920,
+      "sha256": "055cec6a6246c859c8fa3c9cc83f55da7ec498df4a4eb4e2c6beb1eb431631c7"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/metrics/package_smoke_latency.json": {
+      "bytes": 8740,
+      "sha256": "652ae9649d5888ade37bc1c4008176fa8513391ae089c350e7df54e21df29bee"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/numerical_equivalence_contract.json": {
+      "bytes": 5310,
+      "sha256": "f97cc60ce21bc24cf9fe6c6d2e920bc0b104629750a44c7686e71fe33655fd51"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/operation_graph.json": {
+      "bytes": 8054,
+      "sha256": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/operation_ledger.json": {
+      "bytes": 8368,
+      "sha256": "f1857aa43fb5d460dc493ea9aaf03b0cb192129ed3bbace7808e5d95d8806617"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/outcome_mapping.json": {
+      "bytes": 2055,
+      "sha256": "a956a682aa737dd0ba2c9bc808600bd321eb30494ff3bd0971d1430c54359944"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/power_analysis.json": {
+      "bytes": 8857,
+      "sha256": "1e65ea2489eaf5336e90166e61e9915a0fe7fbe5baaa9f27904c0e3b6bfaec15"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/power_analysis.py": {
+      "bytes": 8161,
+      "sha256": "c36af0d9b204b1b602edc4a83c1f7c2ceeae88d41ca85f37d382955440df1c8c"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/prepare_package.py": {
+      "bytes": 12944,
+      "sha256": "a4fa961cbe08b8845a5ab0fe15d4f041293eadd9fa3e6e3e0a55bb3d43fa540c"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/preseal_tests.py": {
+      "bytes": 4418,
+      "sha256": "6c86828736a178bee0a2c66851ae9faa750fbc5e055d30aeca67d43587370f90"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/qualify_inference.py": {
+      "bytes": 3371,
+      "sha256": "5f6f7daa873fd981610625901edd2c4588517912638a43a36e631118ac263a0c"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/qualify_runtime.py": {
+      "bytes": 6435,
+      "sha256": "712609b55406acc2f0c47b0b5d4b0ab085e2cefba85f90e204c08c4bdd2f052d"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/runner.py": {
+      "bytes": 35308,
+      "sha256": "8c8405983561157785522774e89abf9472db6238acda06cadc643cb619d31955"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/semantic_feature_names.json": {
+      "bytes": 30216,
+      "sha256": "761dae2d63f56f3d88eec631a2c9e81c4f07bb013ce036c7b16558b6b5cb9d07"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/transitive_source_package_manifest.json": {
+      "bytes": 13500,
+      "sha256": "fc53801799a347507f214102b61b8f1d6af436408b420dd454c7085f6bc3d0b3"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/verify_final_package.py": {
+      "bytes": 1539,
+      "sha256": "5cc2fff9e2b02e1047cd28ec6697244719ed5ffc84cb8b80f8d9c6097cf491ca"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/verify_package_smoke.py": {
+      "bytes": 8508,
+      "sha256": "a4d6377228b2b320a81a09461d2a2b6f2a010bcacf9fa4d0b4c52766424c68bc"
+    },
+    "runs/lewm_v5_readiness_program/v5_package_versions/v001/verify_pre_v5.py": {
+      "bytes": 1823,
+      "sha256": "fb309a499edc4c2e360bed4e2be7dd803f86b2b1953b61b1cfdb76427f3724b9"
+    }
+  },
+  "package_smoke_verification_sha256": "1345ece9bc541324f9ce150738e98891e8604b3a668c2ebb675b973edad06c12",
+  "package_version": "v001",
+  "pre_v5_seal_sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd",
+  "schema_version": 1,
+  "status": "v5_package_ready",
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint_audits": {
+    "260813": {
+      "file_sha256": "115974801b1e8e6d1a71ad635c0875aa3a8594b41bb549569108330f269a28d0",
+      "state_tensor_hash": "bcbfb022a2b9ddb51366a17b67d84ad9dfca79f0637f2a849c9ba46918ace5f3"
+    }
+  },
+  "seed_order": [
+    260813
+  ],
+  "selected_best_epoch": 0,
+  "selected_seed": 260813,
+  "selection_rule": "largest mean Spearman; ties within 1e-12 use smaller calibration objective then seed order"
+}

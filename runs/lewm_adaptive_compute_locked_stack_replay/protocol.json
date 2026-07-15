@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_clone_environment_construction_or_scientific_execution",
+  "candidate": {
+    "source_commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+    "uv_lock_sha256": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d",
+    "python": "3.10.20",
+    "uv": "/opt/homebrew/bin/uv",
+    "sync": ["sync", "--frozen", "--extra", "env", "--extra", "format", "--no-dev"],
+    "required_packages": {"stable-worldmodel": "0.0.3", "ogbench": "1.2.1", "mujoco": "3.4.0", "dm-control": "1.0.36", "gymnasium": "1.2.3", "numpy": "2.2.6"},
+    "substitution_allowed": false
+  },
+  "sample": {
+    "episode_ids": [3316, 5355, 6405, 2420, 6763, 8240, 9767, 8510],
+    "episode_count": 8,
+    "population": "isolated V3 discovery allowlist only",
+    "v3_test_episode_intersection": []
+  },
+  "indices": {"transition_rows": [0, 1, 2, 5, 10, 25, 50, 100], "frame_rows": [0, 50, 200], "transition_count": 64, "frame_count": 24, "no_expansion": true},
+  "isolation": {"raw_reads_fail_closed_to_sample_episode_ids": [3316, 5355, 6405, 2420, 6763, 8240, 9767, 8510], "v3_test_targets_opened": false, "combined_v3_cache_opened_with_numpy": false},
+  "bounds": {"new_policy_trajectories": 0, "model_or_gate_rows": 0, "v5_episodes": 0, "candidate_versions": 1},
+  "restore_modes": {
+    "cold": "mj_resetData per probe; inject exact time,qpos,qvel,target mocap,ctrl; mj_forward",
+    "cold_zero_warmstart": "cold plus qacc_warmstart[:] = 0 before stepping",
+    "reused": "prior reused MjData behavior; inject exact time,qpos,qvel,target mocap,ctrl; mj_forward",
+    "hidden_state_optimization": false
+  },
+  "metrics": {
+    "observation_groups": {"stored_raw": ["joint_pos", "joint_vel", "gripper_opening", "gripper_vel", "block_pos", "block_quat", "block_yaw"], "kinematic_derived": ["effector_pos", "effector_yaw"], "contact": ["gripper_contact"], "full": "28-D observation", "contact_excluded": "28-D observation with contact coordinate excluded"},
+    "control": "stored normalized 5-D action through set_control versus next-row stored 7-D ctrl",
+    "dynamics": ["action-path qpos/qvel", "stored-control qpos/qvel"],
+    "render": "EGL availability first; pixel equality excluded from decision unless EGL genuinely runs",
+    "reset": "cube and goal fields only; robot reset/IK unidentified and descriptive"
+  },
+  "tolerances": {"rtol": 0.0, "state_restore_atol": 1e-12, "observation_atol": 1e-10, "control_atol": 1e-10, "transition_atol": 1e-9, "material_restore_mode_max_abs": 1e-9, "large_error_reduction_ratio": 0.5},
+  "comparison_rules": {"ratio": "locked_error/current_error; zero current error yields null", "absolute_change": "locked_error-current_error", "materially_closer": "all designated core max errors non-increasing and at least one <= 0.5 of current", "materially_unchanged": "not materially_closer and thresholds do not pass"},
+  "current_runtime_reference": {
+    "packages": {"mujoco": "3.10.0", "dm-control": "1.0.43", "gymnasium": "1.3.0", "ogbench": "1.2.1", "numpy": "2.2.6"},
+    "max_abs": {"effector_pos": 0.0007034204517309961, "effector_yaw": 0.0018559074166846212, "contact": 1.0, "full_observation": 1.0, "control_mapping": 0.0027710284166331256, "action_qpos": 0.0014564449977447769, "action_qvel": 0.28359643396160744, "stored_control_qpos": 0.00003412507129258845, "stored_control_qvel": 0.0025156798239951428},
+    "mean_abs": {"effector_pos": 0.00018158078009283967, "effector_yaw": 0.00045458054736414934, "contact": 0.21641454320660505, "full_observation": 0.007944540204737423, "control_mapping": 0.0003880662936040196, "action_qpos": 0.00006478806009944338, "action_qvel": 0.001959326859900745, "stored_control_qpos": 2.0027227666569135e-7, "stored_control_qvel": 0.00002456434887003915}
+  },
+  "decision_tree": {
+    "environment_failure": "locked_stack_unavailable",
+    "core_thresholds_pass_and_dynamics_pass_or_omitted_state_proven": "locked_stack_recovers_core_mechanics",
+    "large_predeclared_reduction_without_threshold_passage": "locked_stack_materially_closer_not_exact",
+    "otherwise": "locked_stack_no_material_improvement",
+    "separate_restore_mode_finding": "transition_nonidentifiable_from_partial_state",
+    "provenance_limit": "never claim exact released generator solely from mechanics match"
+  },
+  "source_hashes": {"source_h5": "0664d507c4ff12009010644c9ae950836f954e700c172ccf22e7423af1a55625", "split_manifest": "4b9344b6ff2acce4c58c3b296ba2017b0122f8f8158f45088239712ce94b7030", "prior_protocol": "ce0f5d1c25a8c0d25bdd2b44928f03c36572e1653d977a7781dd31c28bfba365"}
+}

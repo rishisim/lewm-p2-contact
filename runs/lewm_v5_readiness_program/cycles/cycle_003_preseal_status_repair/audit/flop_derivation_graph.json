@@ -1,0 +1,11 @@
+{
+  "method": "independent sum over executable primitive nodes",
+  "passed": true,
+  "schema_version": 1,
+  "totals": {
+    "dual_affine_score_flops_per_reached_evaluation": 4196,
+    "feature_flops_per_reached_evaluation": 3801,
+    "nonflop_comparison_min_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7997
+  }
+}

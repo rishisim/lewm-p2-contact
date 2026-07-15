@@ -1,0 +1,2787 @@
+{
+  "created_unix_ns": 1784147285739783000,
+  "files": {
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/PREREGISTRATION.md": {
+      "bytes": 3583,
+      "sha256": "340c0a0eb47a5b97e237fbc3d3265ad234337a4b0e475ce7eae5fc7926dca75a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/REPORT.md": {
+      "bytes": 318,
+      "sha256": "b626ed8a68b40741ba092117631d0dae350c427bc315c827f0a28d898ec59df6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/REPORT_TEMPLATE.md": {
+      "bytes": 250,
+      "sha256": "abe931ceb0895cf106a2af4dd453d342deac2a131a8a0d631c1fb29a38e90c9b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/analysis_result.json": {
+      "bytes": 4412,
+      "sha256": "23dab53f15a836ad36b769e3c6c6840cd7d9d2d9df3c56fba1660e19b9849b03"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/analyze.py": {
+      "bytes": 18285,
+      "sha256": "b3535e654d335fdc6e8d32f5ad8497bdb3f540eed0e7b310959d5ded9922cac8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/consumed_feature_gate_qualification.json": {
+      "bytes": 8545,
+      "sha256": "6558864e1cceb1a639dc57d127339dcd6dca8b0a0ea0e68c561feb0361b3dc3f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/diagnosis_input.json": {
+      "bytes": 632,
+      "sha256": "3bf214043394116a9a8a1482857c176134ecd5d349b57b60ebdabd7d1d27c050"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/flop_derivation_graph.json": {
+      "bytes": 339,
+      "sha256": "11da2d2e9d475725ab9ee4187f595318bc1de8c9e0ab9a71513bf57322a9d5e7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/flop_derivation_symbolic.json": {
+      "bytes": 664,
+      "sha256": "08e8e1bdc3184495a136c9e668ec92f71f3758734a4fa03edf76451a5465f5d1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/independent_verification.json": {
+      "bytes": 4126,
+      "sha256": "c615f788bfe1f6dab06e7f9779a3f1b1d0b66a7b17a73db8157bdd8c3b3ea018"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/pre_data_seal.json": {
+      "bytes": 14816,
+      "sha256": "0862e5b4e8b9ae6e8846de08f8e5835dac41950a4da058e1bb280c66bd532f21"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/preseal_tests.json": {
+      "bytes": 1469,
+      "sha256": "051ca91ca31ee9c0c9a38da3a7149bc285152697c79c266d8c2e0607c31e8fdd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/prior_identifier_snapshot.json": {
+      "bytes": 598,
+      "sha256": "d6f9d972cfd4d19a0ebb025afe5819f231aba06700f15dc2b7b84a708e6ec109"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/prospective_input_seal.json": {
+      "bytes": 58798,
+      "sha256": "bc6a7b410440ff116fac2a49d7b1ec4beb9a7dc40c15134733b0730a258a0193"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/runtime_qualification.json": {
+      "bytes": 6077,
+      "sha256": "69a03b3baef0cb2b2db27bf1cfc2f75929ed4913f86af63f656e6ee91e682fef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/simultaneous_inference_qualification.json": {
+      "bytes": 1447,
+      "sha256": "c4c745495ce80890dcd3d1a0ab2db6d36dd2f825152e9672e01d4b4375264bda"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/audit/threshold_recalibration_qualification.json": {
+      "bytes": 1676,
+      "sha256": "0b78dca8bdffb975584d67d843b6b3d3575a8d5be4e490963259fd3ab8c0d242"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/build_numerical_contract.py": {
+      "bytes": 7646,
+      "sha256": "d6b0fe1ad92b364de5f5fa54c6d2f4273d4a859368c4721190b96c1250953b22"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/cohort_seed_ledger.json": {
+      "bytes": 82537,
+      "sha256": "f6c96d01b53ebdfd6f00e716bba9c9fd042050db29cfbe7ceb911fbb90078594"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/compile_gate.py": {
+      "bytes": 2520,
+      "sha256": "fa5c48dfd3fc96e0df99d38f2df291d3da3b658d63cb0f7e1f3c24dde647616e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/counted_features.py": {
+      "bytes": 9884,
+      "sha256": "71adb7afc5e9f99a8d47fa459300ed8db2efb654be0196aa816295f6a98c969a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/cycle_common.py": {
+      "bytes": 6497,
+      "sha256": "0997740accf2ce2bb8d2902610ec52b89df69cd59f6555ab26968d469246553e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_execution.npz": {
+      "bytes": 80808980,
+      "sha256": "47f43fb58d6407ddb41c39a69c8e48b6e4169f43242756952499dc99f4d50096"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_execution_manifest.json": {
+      "bytes": 207956,
+      "sha256": "8939408bfb457dde3529744c24efe8271bfaf81c11389f1a82de2213da87ae8b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_latency_inputs.npz": {
+      "bytes": 880810,
+      "sha256": "8f8db305efd148ae7e1094973a1d52504471131b60b12b335b8626beb2b19bcc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-000.json": {
+      "bytes": 773,
+      "sha256": "20bf391060023f056685dcc9d14e7e25ad27a5a2a600c6b188773774074ae9d4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-000.npz": {
+      "bytes": 3697537,
+      "sha256": "6f36908ea666519bf0383ef27e97625f69f984794eac1d9b757b71676a5fe8a5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-001.json": {
+      "bytes": 773,
+      "sha256": "63fb4950e0aa69b3344b8d5e9c66e92b4c2f353305e724fe34128c5b46e4a516"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-001.npz": {
+      "bytes": 4312972,
+      "sha256": "eb2db46138ff293b03f66ab5d31657d4b0cc232a18fcb0cbb1d333a3569c7b63"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-002.json": {
+      "bytes": 773,
+      "sha256": "6fbde94506001c81ef07f66d628643020224f85a28d5fd5fd204fdcfa1b0b5e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-002.npz": {
+      "bytes": 3936903,
+      "sha256": "8a276786646d366014a2ee62f47f518f4249f870445a1ce1d7eea7859fc84298"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-003.json": {
+      "bytes": 773,
+      "sha256": "8064631bc9f1a83fe6c3ce34f6f2365534d6e888f95a40d2f5dd2f1fd32bf6ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-003.npz": {
+      "bytes": 3936079,
+      "sha256": "54bd461662bb2108437534130e63b36fd45913dff0a0c20e7d0109836a4e3f9b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-004.json": {
+      "bytes": 773,
+      "sha256": "c3ce0c0dc39fc457504cd258f76a109e6fdc88a303bc826da2f81f15af614b24"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-004.npz": {
+      "bytes": 3845857,
+      "sha256": "e9977cc81ebac4b64a654ba53e1b0bf687388241235d41072d99b19afb7c5b97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-005.json": {
+      "bytes": 773,
+      "sha256": "d9f832964456c32b9480a6633f4e040a70f1bb1f6d5c1040ddd4292b68de5338"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-005.npz": {
+      "bytes": 4026833,
+      "sha256": "c4deaab883b6a6b5cc111d36bde24466b6e32b1422fec1bbf4811051a49accef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-006.json": {
+      "bytes": 773,
+      "sha256": "24394df031d782f065a3d7afa3800073d423bfd2cf14dfc1bb84817d0d0e931a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-006.npz": {
+      "bytes": 3690205,
+      "sha256": "f926d5673fe4923d5b793c83eaef0d052cf08bd6fd475fe6e64a5cf093cff686"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-007.json": {
+      "bytes": 773,
+      "sha256": "61a98191279922fa634cddaaa5018a318c3289c661f5675c2379dc2ec3f4e1c3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-007.npz": {
+      "bytes": 4133794,
+      "sha256": "b451422d71e388f75b235c698acce2d9379cbed07c60a77da069402bdfab7a92"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-008.json": {
+      "bytes": 773,
+      "sha256": "3ac9e0cb93ef3d8b219064a368e39f756803bb3a744f68e5fdcf13f1e25095d7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-008.npz": {
+      "bytes": 3972572,
+      "sha256": "739e2e149b2c9d352071640c255d0a2905acd921fe5e36d308bc01245537b988"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-009.json": {
+      "bytes": 773,
+      "sha256": "4fd7bef64c4ff03e08f298b9e150f97cb1eea0b306c57cea1eb847b65e7ddaa9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-009.npz": {
+      "bytes": 3546872,
+      "sha256": "b6143521d0f0e8d9851b1671825a0828f266efa5b9c1867a4692598c60c95f78"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-010.json": {
+      "bytes": 774,
+      "sha256": "ebdaebff4095f3ab37ccef3ab0aa27f92547f9f765cea5f4b7e8292180558ae9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-010.npz": {
+      "bytes": 4188716,
+      "sha256": "1b37204170e13216b3562d6955b61a84fc3994b981cdd267a14fda7618912d98"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-011.json": {
+      "bytes": 774,
+      "sha256": "898112510200544b4634c7d5704a05b80d91faaccc95cc0df8a0342f79c2df30"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-011.npz": {
+      "bytes": 3966999,
+      "sha256": "9dead048825e0fb5bee607bdf86c48fd3ede830f2ca0ca0349732ba37cb1479f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-012.json": {
+      "bytes": 774,
+      "sha256": "26294c285046cfcacfa2059a9cb4fae27c326611eae11e2c65a063871ff3168f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-012.npz": {
+      "bytes": 3845089,
+      "sha256": "7d8e9b7c129102b80a6e791b95318e2cb2a80126c598ac008d013053def07602"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-013.json": {
+      "bytes": 774,
+      "sha256": "da53388929c1460ec017325216486a0c47e4173936e9a94dba0f4e91f09db421"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-013.npz": {
+      "bytes": 3420099,
+      "sha256": "cf3a0051bdca05b848ef8f459bf53a61954f50a565c6fb1e7bb83fe5e5d5fe04"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-014.json": {
+      "bytes": 774,
+      "sha256": "943c2c178818410839945a620651ab8e10f26e82e0d65167133dd260b55e6144"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-014.npz": {
+      "bytes": 3527323,
+      "sha256": "e8c2021e0655b4050da622cc884868bb2c0aea850c6d528f0aaadc4cf804d377"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-015.json": {
+      "bytes": 774,
+      "sha256": "74ce1e65e226d1bf8cb8896c319e5b15079b035ba4d32295628af8f81a41e0f3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-015.npz": {
+      "bytes": 3762931,
+      "sha256": "1195f3bb7b4a46672779f77a22e972aa0f6a17c302cb63e82eccef8f4e07f032"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-016.json": {
+      "bytes": 774,
+      "sha256": "d09379fc469f5703d2dc6f47c3a665170ab3f668febab94f73f0b90d9502a4ca"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-016.npz": {
+      "bytes": 3833799,
+      "sha256": "9a99b8124ac7bb0653806a71a3c5323b8fa4a75961be9459705c31d39afc2046"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-017.json": {
+      "bytes": 774,
+      "sha256": "681176930b0ddadd16fe0249de71b45ec627006f71baa880d8244a74c399556b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-017.npz": {
+      "bytes": 3769433,
+      "sha256": "028f71930d29ffa9924b353aea9488fd1d7958aff3928d12b08ae5dd418f7193"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-018.json": {
+      "bytes": 774,
+      "sha256": "407a9d0e5d9cbddf72258d8367cfec29de28ed12d61dd2e5d3b5c99d482d0b93"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-018.npz": {
+      "bytes": 3599047,
+      "sha256": "52f319440bb45d0bfca1b67f2178a9f8eb644557d1d6bf9eaef34f8b2e25ece1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-019.json": {
+      "bytes": 774,
+      "sha256": "0a2bd728900f1b64d79b62d315ef26391ef79e77f8e6e313ed76593ffe96ae5a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-019.npz": {
+      "bytes": 3847708,
+      "sha256": "7ac3813be33c9e1282f99db3e30710ebd7e8fd1ecd6b58b4c57970ae8f947d27"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-020.json": {
+      "bytes": 774,
+      "sha256": "cb14067f419ae8d9c8b99f27ebd71c96e26bcdd1cd75f1a02dd20aa1d0c91d14"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-020.npz": {
+      "bytes": 4005159,
+      "sha256": "98ddabd5bbe38fa31b7a1ffe8c10db615722cde421c4af561d2c2fd764b574db"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-021.json": {
+      "bytes": 774,
+      "sha256": "376ce3d549a25b56946027b835db329bd91e1fabc6508d09ac9d0545238fe109"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-021.npz": {
+      "bytes": 3516174,
+      "sha256": "a3596d68f385180957c04e5ab94bddd62b84edddc52e8f356eb8db3ab877c41e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-022.json": {
+      "bytes": 774,
+      "sha256": "7fa0923111da6974a5f9dd25ebc7d1cd7de47872d92c68bc272c2794f6005154"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-022.npz": {
+      "bytes": 3997073,
+      "sha256": "c9445b2593bc4e220a2a49156635c327e12a10a6751fde29f2555981822c3b3c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-023.json": {
+      "bytes": 774,
+      "sha256": "e23444c50fc199139ad09c5062e7048a2cd3e693ef5857c55e5ca40b815996a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-023.npz": {
+      "bytes": 4092599,
+      "sha256": "acfe73249d7bf36fe41a130f87fea3f7ec4fcb93380c008dbed6cb188ccd6e65"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-024.json": {
+      "bytes": 774,
+      "sha256": "fc812bdaedc7b2d13175c44e1c14c9bde8f17e0c5c8692355c8a8e3fefd2311f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-024.npz": {
+      "bytes": 3864515,
+      "sha256": "0ce9a8a6fcebd2b52b87277dc6f61736e036f3381beba30f6c22e8443bf0b6c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-025.json": {
+      "bytes": 774,
+      "sha256": "6688e47d4092e98c475e56e64e4bc2ddaf46206efdf300c0270331c07e5426aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-025.npz": {
+      "bytes": 3626116,
+      "sha256": "fa722aa23822d1c7dfb12852258245037e50df77a47e17ac44b4b5b506a116e7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-026.json": {
+      "bytes": 774,
+      "sha256": "a65183abdb62b0186464634a03b1f9d29022522dce44c33c590207517bdd5d73"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-026.npz": {
+      "bytes": 3770477,
+      "sha256": "479e8f66110bda288d2e0a4793e69486913056ef804bc9a975d119bf71a31086"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-027.json": {
+      "bytes": 774,
+      "sha256": "f19fe4bc2706161d457bf2ef990a60937a332cdf6262490a9cab80880ae2355b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-027.npz": {
+      "bytes": 3969481,
+      "sha256": "a8d42a89e6e2654afc8b32945bf821e85b1eebe5f8a5ad4f0f0950b292e5d580"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-028.json": {
+      "bytes": 774,
+      "sha256": "18535d1da89d42fc36c9e2943dca6e75454efaa6d155ce5b9572f0dad6eecc31"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-028.npz": {
+      "bytes": 4206407,
+      "sha256": "71359fe6aaa420d3445af679aee885153568e8aa03ec82d3772b3ee82788e908"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-029.json": {
+      "bytes": 774,
+      "sha256": "f86f1f6ef1c8e078ebba120d5f02366edb13608468f421acbddd288bb997c846"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-029.npz": {
+      "bytes": 3711359,
+      "sha256": "a7352fb42603d4e52c2241a51f3fb8dac3a677a1cd54a8e9babb355693dd707d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-030.json": {
+      "bytes": 774,
+      "sha256": "7ac266a9a00a4be18fb032cf72c63127b2fd0c3f86ef893792ebaa8d2548938c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-030.npz": {
+      "bytes": 4083140,
+      "sha256": "57e91a5f5469604d1d8c0270a27bb6fd50a637bdae24e3d85968200802545736"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-031.json": {
+      "bytes": 774,
+      "sha256": "4b063bcbd4aec2f2465b8390071409f8fa221df01ac9d907b87bd41690c99f6b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-031.npz": {
+      "bytes": 4091184,
+      "sha256": "9f99288e67c7365278de95de4e03f3a586d505a196c822a58babffce99c65571"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-032.json": {
+      "bytes": 774,
+      "sha256": "671be977e30a68266cd568afc8a17cf2cd6d7d61506ef31bef454a6199ee802f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-032.npz": {
+      "bytes": 4496891,
+      "sha256": "8aed68a19c51baf53d9c73f945d61155f5fb20af60349745fa43c7a4e3dff440"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-033.json": {
+      "bytes": 774,
+      "sha256": "3df575cbf383fc4ea22779ae748641d239c8f3940a297d652b362cbad018e81e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-033.npz": {
+      "bytes": 3867623,
+      "sha256": "8e77c74ecf96772b833ec21b89b960bc17fef56ca45e5a8792de884a5026446d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-034.json": {
+      "bytes": 774,
+      "sha256": "a725bcdf0f10a55ed4de3985834630fed83a455d61feb4363a01e448c050f072"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-034.npz": {
+      "bytes": 3724861,
+      "sha256": "43132db112a61c0ff95dba8729b11e28578931fc7b1fa9af07d9f5ef81313142"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-035.json": {
+      "bytes": 774,
+      "sha256": "93a1e9558bb240a06f1843a682c8ebdf779ac7ee1a2855c7abe4bf262beccbb3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-035.npz": {
+      "bytes": 3732000,
+      "sha256": "a07e451800089bf80cd94faa079777c7a981c3a7c0ff4af160f35a9d6dfe7c6a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-036.json": {
+      "bytes": 774,
+      "sha256": "f701a55aace46d22587aceb85337fd39c2e8eaa06124fdfc52f3ba44e2435c09"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-036.npz": {
+      "bytes": 3783509,
+      "sha256": "ff7b7eb6b66ba73fa94794e070e7f9944052d84f7521b24916e09c592ceb575e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-037.json": {
+      "bytes": 774,
+      "sha256": "3fcf17ae0c7a237324c4b9c57f3a2b4f30592e496a65a60e6ff12489513d3866"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-037.npz": {
+      "bytes": 3707618,
+      "sha256": "f5bbac5a51485d94d1570499ddfcd6764e86439a9209c20d27fe87ab58a74c16"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-038.json": {
+      "bytes": 774,
+      "sha256": "51458be89f051d3978664bb1d49b26fe322bb7e1bd65739193061328331c31e5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-038.npz": {
+      "bytes": 4028021,
+      "sha256": "040a153a6379b040ee15975be634c1314f29894acb4a440b5ed538ba946ab78f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-039.json": {
+      "bytes": 774,
+      "sha256": "7acb7487c5a9a1b4899968f2a690efba261b0ce9d15e06aa40af6836eab28985"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-039.npz": {
+      "bytes": 3470487,
+      "sha256": "7c36d02fabe2d36fc20849d30d65891780b8ef1f266e016d9965df89f3b4f110"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-040.json": {
+      "bytes": 774,
+      "sha256": "f0d9ba49734ae2aee50853219fb437cd85fcbebe865b1c26680e37b9bf9f0aa1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-040.npz": {
+      "bytes": 3831460,
+      "sha256": "21157a4451700129f7c0d2e3ce5df7fe3ca29d41144dd16ecc0ce945d68dd8ab"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-041.json": {
+      "bytes": 774,
+      "sha256": "28817d4d437a045c15741e779ca39c46bdf120bb8c4e7a9f720bb5b5e843194a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-041.npz": {
+      "bytes": 4058820,
+      "sha256": "9dbf69a98f80d6520707c5118a18acdacc6de96437015a32f85d87ba80fffc17"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-042.json": {
+      "bytes": 774,
+      "sha256": "1a5e7501d45095485055ae49f93b50ec193e88c503435a89f5b8e39ccc392d5e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-042.npz": {
+      "bytes": 4192353,
+      "sha256": "b7aa44f00c0266679761cb6b07a8676a2d909f05670360aa2fba5a2d6b6d769b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-043.json": {
+      "bytes": 774,
+      "sha256": "9e1e418b5b1013bfdadbce2323bdde73bb4f75ee477eabdb3d1c0742265e5f74"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-043.npz": {
+      "bytes": 4139518,
+      "sha256": "5e222f5d37a2adb33b48bbc9b346a5cdecc8429daf80147c026787106d1c0ca9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-044.json": {
+      "bytes": 774,
+      "sha256": "697ba591934619cdb98e8f244ebb1d647483a793be4454801c9b1f89208f823f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-044.npz": {
+      "bytes": 3564088,
+      "sha256": "4d6796be5b19514b5d7dff2e0f6707212d561bbbb1fbd13baabaa4ba76d01483"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-045.json": {
+      "bytes": 774,
+      "sha256": "7a9da35662813410a84e4b495c3e2e2143cdd7df31631ecb3759b7e770bfe5fa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-045.npz": {
+      "bytes": 3954769,
+      "sha256": "716b4e7413f95b13aa3db2d1eca4286f0209abf7f4fda9e6a77ef89f201cb799"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-046.json": {
+      "bytes": 774,
+      "sha256": "e3b490c827635fc30ad9715378d155033ae2209b4f1f0010e60a0ba2658e0f09"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-046.npz": {
+      "bytes": 3506059,
+      "sha256": "77730e108937500975bb1d1fb2e2eb2c12d06488d524a6272f0ed51d96951905"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-047.json": {
+      "bytes": 774,
+      "sha256": "d547ae9a800e8b107510ea192c4a089df184a51e8b8c3984ae5047dedeb809c5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-047.npz": {
+      "bytes": 4148497,
+      "sha256": "7c61a0232b50c1e82a8b05860b3a0e65dd80c9d4e7faa66a955c8c6f50f8f6ed"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-048.json": {
+      "bytes": 774,
+      "sha256": "ff44d2eb472cd29f1138c6fa69431c81435a7758b97b12ddad569566c322c75d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-048.npz": {
+      "bytes": 3853971,
+      "sha256": "b1ef3fb86f1bfcaa9beb5e0e7f929492a265eefa797b87bd05ac26b065786718"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-049.json": {
+      "bytes": 774,
+      "sha256": "d09ab7af17034b4d857053142034a6af674868d083da49aef98353c32d8bd603"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-049.npz": {
+      "bytes": 4327270,
+      "sha256": "938a26c338884ec9ae13af908586b1ceddff2a17c06da726b34fa342f8ab629a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-050.json": {
+      "bytes": 774,
+      "sha256": "0688311c50059a308dc185a0713dc62751d18b0fe50caa02a301c5d0aec6cc8c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-050.npz": {
+      "bytes": 3555845,
+      "sha256": "fc0b2993a78c90381b0020dfca2acd9c3748509a4757d0de80f047cbb1c743e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-051.json": {
+      "bytes": 774,
+      "sha256": "fb6160b934efb39e168ea2f7e65d57b3782d92605d69cf430b6891b428cb6467"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-051.npz": {
+      "bytes": 4264975,
+      "sha256": "6f849e3b0282d36e46240f7d296fd28bf0de5f172944ff73263a37028f63d2f3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-052.json": {
+      "bytes": 774,
+      "sha256": "91f665bed2bafff13a7e57f3a52624435cd5e81049e854804351b4052b59f28f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-052.npz": {
+      "bytes": 4263838,
+      "sha256": "1a5074751e33f6fcd219e7d282a0e92ff54a439dfd8f5fc91dfaa214614e0815"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-053.json": {
+      "bytes": 774,
+      "sha256": "adf83963477f29813cb250624060651ccced48965ecdd0dd3c0fa910ef5dd5b5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-053.npz": {
+      "bytes": 3685842,
+      "sha256": "112c49b0e1f4e2c8c28df4941dcba4b02367fba07623eb87c194d47c871b6031"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-054.json": {
+      "bytes": 774,
+      "sha256": "409b2f4c07b90e8d330fc77a84cf4ebd6e2e70c1c0169b616b7fc4069dbb7b03"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-054.npz": {
+      "bytes": 4152189,
+      "sha256": "922675ad3cfcbbafb1eb5739f721c3f85b4535451007f38ffc0d233f87e95d1e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-055.json": {
+      "bytes": 774,
+      "sha256": "47281a6a9100970bbca3dc549a7d692d9b05ac49e6e543cb7aaa6a90d67e77b9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-055.npz": {
+      "bytes": 4066516,
+      "sha256": "c7855c04f45e12dcd56258b7b11e3a5a2a623dacad3a2f5d06887e1e57fb6262"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-056.json": {
+      "bytes": 774,
+      "sha256": "1c8403f3565546bee6f553970dc1722e08c893082235c93e13173dba64646d63"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-056.npz": {
+      "bytes": 4348719,
+      "sha256": "67aed89c0a217f2356e3d38d3c39caba1ccc9af057ae8b2e00af42f227b8654f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-057.json": {
+      "bytes": 774,
+      "sha256": "f69d3d10be19896fc14491e65342e590df782669b8a155382bd61d142ac53776"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-057.npz": {
+      "bytes": 4423648,
+      "sha256": "dd2385faba962c5d22cf49c8592a9aa17f04f20f644038842a1e74fe0a1f82c2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-058.json": {
+      "bytes": 774,
+      "sha256": "dcd0f7e49410883b7ce2343eaf5023faaa888cec000489ef13249ea555bf2e63"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-058.npz": {
+      "bytes": 3873155,
+      "sha256": "02a9678a011477e09f5ea074f1c032875d04f9fa8e67fc7aab28e031a50f1871"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-059.json": {
+      "bytes": 774,
+      "sha256": "17cce24a4a8e03fca480cc74dd96135555ad2fa7ff1dc00dbdb8a51b89e0c58a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-059.npz": {
+      "bytes": 4187175,
+      "sha256": "572e33663d0bfcc15da3873429b350ace044cee02aed53a911c2beb98f1b1991"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-060.json": {
+      "bytes": 774,
+      "sha256": "a441e6cd2f5b0b1e5120599f4a8f79eb433c86d6349d462cfa34e5e1edac318c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-060.npz": {
+      "bytes": 3637907,
+      "sha256": "a5985971737b5fded2fda650ce03e30566c38d3a402917fc91f1343b26c6c391"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-061.json": {
+      "bytes": 774,
+      "sha256": "44d55d9aabb3af6eadf9517d29f501e8bd006b7c27ddc12768adaf08ac08be59"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-061.npz": {
+      "bytes": 4221801,
+      "sha256": "9e9d90fb009e4cf29073d79b936575d85731ddaa5205aa988ac6f0ba002764d4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-062.json": {
+      "bytes": 774,
+      "sha256": "1b6dea69dd49904eb099d5b851f9a171ff2e415928e28f2e30d543e2821c1f68"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-062.npz": {
+      "bytes": 4140942,
+      "sha256": "4f0c40f07b37a82e41b8467b9eb2a2ec9a46721fca7297a8f0040cba238a27a6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-063.json": {
+      "bytes": 774,
+      "sha256": "25d8f034f406fab9f4a300ee10dc84ca1bdc87c14a839d23b43261dd3b591f2b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-063.npz": {
+      "bytes": 3757554,
+      "sha256": "3f8ffad57b4222bff4b68825fa124b4646c769ad945daa7796a9f3ba5f5eeb24"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-064.json": {
+      "bytes": 774,
+      "sha256": "e2420b66f38fcb8d6a802f4c735ae4f9031b096f589e8db117c25716168ff89e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-064.npz": {
+      "bytes": 3896131,
+      "sha256": "9915c5c6b9d0a139a87f35951b518ae51b6eb12f324715055bbe915e930a9295"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-065.json": {
+      "bytes": 774,
+      "sha256": "ae3ee9759b4445343350d2a895695aa25ce57850138bfbc2c9291e1e25abfa3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-065.npz": {
+      "bytes": 4519342,
+      "sha256": "dbf7888d3cbbcccc93297fa131feb35cfc59f5da42ebbf46cb3b0c09a33eacc6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-066.json": {
+      "bytes": 774,
+      "sha256": "ccbcb5ca076ad16e4d34a93f454882c45b48d50f02fea20fb7e692c4319d6b15"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-066.npz": {
+      "bytes": 4340951,
+      "sha256": "8fa215c1d7ffc5239145b9655c413a6afd7e8cd3b84c10d06d3cfae1bd93b793"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-067.json": {
+      "bytes": 774,
+      "sha256": "3dfecafc49e4b76812778442b01248892928afbddc76310d9357cc1b29b24595"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-067.npz": {
+      "bytes": 3528112,
+      "sha256": "94dd85666bdb836b43b69a2ffc3346b6019723333d61e9fa5fede3b7fb33c457"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-068.json": {
+      "bytes": 774,
+      "sha256": "71c245f9cb933612cedf0b0fb018266c10bbc26e0dafa788386ec67268c08901"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-068.npz": {
+      "bytes": 4409332,
+      "sha256": "9614d41665ebadfc104d7ea7d71a388bc6331cced4e7b2402243e1b251df7ce0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-069.json": {
+      "bytes": 774,
+      "sha256": "1a3469d575c5caa2cff53cff6a6871f1b80a0c77887a56ab7497d3d1c1b5afa0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-069.npz": {
+      "bytes": 3589436,
+      "sha256": "36e9818223ee066371d906c8788d1a2cdacab29ba5ade7727b5677c3e59c49ab"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-070.json": {
+      "bytes": 774,
+      "sha256": "55917f8acf65d4d850b14dc03784d88a8cf4c0f0378a54cb26cb5b3774da54f8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-070.npz": {
+      "bytes": 3893062,
+      "sha256": "048854c5dba4e778b5b4d33f0504129d3ab90a0ba5572519ff9e903c4845925b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-071.json": {
+      "bytes": 774,
+      "sha256": "e1048a69ee43618f34147a2c13aece56e6347597e6dc50056042f579fb372ac9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-071.npz": {
+      "bytes": 4302751,
+      "sha256": "8b1065d76972cbf3e99a66c366bde770e88b5280fac75086c38fd05f489d024f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-072.json": {
+      "bytes": 774,
+      "sha256": "168e4887a2047e95c6c7f2c6a20e1456f3a0ce30b8dc523d157f643b35493ac5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-072.npz": {
+      "bytes": 3914929,
+      "sha256": "bb5f268c6b63cf3162639d6cbffbdd14c0a28e9d67e09fdf14095ffea9d9d22e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-073.json": {
+      "bytes": 774,
+      "sha256": "11ce067f6de408177c6052006c782acb28df2338385d19a0ec612f9a4cd4934b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-073.npz": {
+      "bytes": 3826084,
+      "sha256": "eec3233c61d015e593debc38a2395a300e1816fd17841f82db1557fedc8ba0fa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-074.json": {
+      "bytes": 774,
+      "sha256": "3fa76cf6feda68f62cafd684c40d25ed50ebe809fce544841652bcf2a818c48e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-074.npz": {
+      "bytes": 3630656,
+      "sha256": "921f8083883b9ad418237b7e86e992ab6de4597b6192b8b734cb4a33af763540"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-075.json": {
+      "bytes": 774,
+      "sha256": "f94c0795cbfbb4079582c95e1e4976f7b2e1208e607309b3a57f702c2602fa9d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-075.npz": {
+      "bytes": 4373454,
+      "sha256": "9cc523aaf729190f8ce8bedcd1cf5e4716d21cdfc6c12e45515484d1f86111c9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-076.json": {
+      "bytes": 774,
+      "sha256": "920e0a4233995646407be2bd32e8508f457003e1ccda173ca9de9d3097bf415d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-076.npz": {
+      "bytes": 4178301,
+      "sha256": "491193cadb497892de7fba7fbbf8c01826b421dbda5ea200815662452d45d722"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-077.json": {
+      "bytes": 774,
+      "sha256": "b76dde53754612d76ad83eb427cf3eb81bd715224b9ea7f2b9a00a330a526c40"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-077.npz": {
+      "bytes": 4296437,
+      "sha256": "894f032dfb3305eef7954f53726cd03d1e895a498ef9e13ca383c83f07d8001b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-078.json": {
+      "bytes": 774,
+      "sha256": "dddceceeb45737ba69879ed3ef2059fe22c38bc1f41926d74d87c43ce063833b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-078.npz": {
+      "bytes": 3942655,
+      "sha256": "c36ca6044f5a9e4c45262efc7e2f3522f677f0f64adc92f19636604bebe9788b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-079.json": {
+      "bytes": 774,
+      "sha256": "3213a5bb670acbe2a3785f304c1d9014e12a711a498de9aa72804085d03ade85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-079.npz": {
+      "bytes": 3724279,
+      "sha256": "55f2699778442d0c797036b6a1c239773c7ca4cd0400a3166d67edfa9b853623"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-080.json": {
+      "bytes": 774,
+      "sha256": "60040af5eb5d01a2fabf63890f6effdfc2f1fe6fcef2f18c852f56c217031e2a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-080.npz": {
+      "bytes": 3816375,
+      "sha256": "1abc5a6225a2f71a32ea45ff8d58dff92fcfd30949ac1e0c1b44d84603fd5bca"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-081.json": {
+      "bytes": 774,
+      "sha256": "a93811c87d559a48505ece21d34c36bc8c3af051383d8863be9e19966751d745"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-081.npz": {
+      "bytes": 3983412,
+      "sha256": "debef7bcf92a0250a3281dbd179cc4ee5971098aaa4c9faf9bb8acd959987c6e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-082.json": {
+      "bytes": 774,
+      "sha256": "17e71d93dd3d36a587c213d41bf04baff11233deea0b73d4669703742f96d956"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-082.npz": {
+      "bytes": 3946990,
+      "sha256": "d0f6a1c823091d0a38a66a2cff1c308234865fc97147df0d20d45cc41315e561"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-083.json": {
+      "bytes": 774,
+      "sha256": "7db53227c034195463529c5a63a6f8aafe4dd5da0439c0e9eae6ed224b36ccd3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-083.npz": {
+      "bytes": 3806062,
+      "sha256": "8cbaaddea936e76abcb3bf5fb1223c24d8b19bd1564e6d3f5776a388c4e384d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-084.json": {
+      "bytes": 774,
+      "sha256": "e283fd8a2846471e778f73b335502006e878276c802c22747e806b00c8dc48af"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-084.npz": {
+      "bytes": 4088652,
+      "sha256": "ad352667c5a28a34e96da62a33380ce4d269a26699ad450cb7b0c01eb2e131df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-085.json": {
+      "bytes": 774,
+      "sha256": "e0e9229c88faf8aec0cbff7dc0cbf7e64a93153dec8fcd0f8808eaa8edb3672a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-085.npz": {
+      "bytes": 4228550,
+      "sha256": "6b1af592b9d2308ae50a3715478788e2ea9832d3a785e9fcf3edcb64dce3e815"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-086.json": {
+      "bytes": 774,
+      "sha256": "beef78ddb38d06114f20c1a1e25356bd91f579c17fc9befb8dd19dbcd19d4e92"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-086.npz": {
+      "bytes": 3615342,
+      "sha256": "fa7f9592af5a0b5b20e54a95eacb073b2b8c3363af610b9856dbc88824c85490"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-087.json": {
+      "bytes": 774,
+      "sha256": "e5cfb10ed399198910335190fed01dd3bef915c361d1e2ec38e6937bc595953b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-087.npz": {
+      "bytes": 3377058,
+      "sha256": "f5b66a93a488ab3a82d6568adf3ad53a86040681be967217486e4b85d2661073"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-088.json": {
+      "bytes": 774,
+      "sha256": "1ecadce0c491e7786fdef9fd2012b31651ca50a1e1e37d093ab1ebee0b006edf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-088.npz": {
+      "bytes": 3676699,
+      "sha256": "fbe045708eaf62491c7782c9c9af369f95bdc44b0d739032d34eb5d478af023b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-089.json": {
+      "bytes": 774,
+      "sha256": "17fb2db21f5f8905f671260180a125cdab744ae3c4503f5ecbec5b38f4b33486"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-089.npz": {
+      "bytes": 4094741,
+      "sha256": "fc68c4b534dd002716bfabc466e84be55f92fe3cb8fa83fcc9997b8d674f19b2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-090.json": {
+      "bytes": 774,
+      "sha256": "f6bce64637edcb0bee9cc0777942d1c6d5b70ad981777fc914702c033baa400c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-090.npz": {
+      "bytes": 3608500,
+      "sha256": "8f23862ce549f5ed83ab025b76d3ddca6b0d9ec2336ca53f80080b6413b4d86c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-091.json": {
+      "bytes": 774,
+      "sha256": "bbccc609946d216fc45866d82317fce312f7b9df5c115698a9754b55ae268e45"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-091.npz": {
+      "bytes": 3851468,
+      "sha256": "8b417b3ca0c70e7e067a0aacecc29ce1b2c2fb87ada5e2ba1918c19d58612c74"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-092.json": {
+      "bytes": 774,
+      "sha256": "a6befbe3c73e72bb92aa725e04c31b3ba0b7c374a89384282f8d1a2386c38142"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-092.npz": {
+      "bytes": 4252742,
+      "sha256": "947f0c6d436f87fe5f991638eb007b8d9c269a5a2d94126959d9867292f34264"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-093.json": {
+      "bytes": 774,
+      "sha256": "a65e77dc56d9d95f48b29a17952ea74e640e084c758af5df4232691d8ccc55be"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-093.npz": {
+      "bytes": 4282014,
+      "sha256": "0908c1f95e6550c9999e340c2e11d1f688ecb52881d2dac09cfe029996c639eb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-094.json": {
+      "bytes": 774,
+      "sha256": "671979cd931fe68d08c245645d28fb2c1504df9301483d418a74f80fc316154f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-094.npz": {
+      "bytes": 3484822,
+      "sha256": "9cda4dc9a827a9c6cd1bd416aa21ef9c76bf05668d92e48975bb023b306ca2cc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-095.json": {
+      "bytes": 774,
+      "sha256": "0ba55effff83005d4157a0680cef4d5b771f5ca3afc61646013aed3a0ab07519"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-095.npz": {
+      "bytes": 4087260,
+      "sha256": "0486d5db8bf83bb824e3ef99897f6501534016da640750e44d6c769f3be1f0e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-096.json": {
+      "bytes": 774,
+      "sha256": "1897dc6c2e115685fb4045431567942dd54ded67dbd335807d160aabf284eac6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-096.npz": {
+      "bytes": 3841980,
+      "sha256": "214e2ba758b9bb169c914ffb222f10dae32e3e1ae70ebfef3b69c750e3ba8521"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-097.json": {
+      "bytes": 774,
+      "sha256": "24e0a9c6710b1962eb1277fafec0b69e9322e4161049bc30f077d09cd1c90743"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-097.npz": {
+      "bytes": 4186136,
+      "sha256": "618c98abb7104b50433d8207ce1c0f5947ae81f09707e224381c2e4855368db3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-098.json": {
+      "bytes": 774,
+      "sha256": "4bcdf53ef867f9f2df5176e3f60349bce32b3fc50ae5e5f28f7600ff2ccd191d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-098.npz": {
+      "bytes": 3601943,
+      "sha256": "b79a7af3231ab5696a5731e8c504916f1b75020c63affb90abfc218591798b1c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-099.json": {
+      "bytes": 774,
+      "sha256": "0ca487ebef52c5fbb3eb0a0f79364f4f8e40bcf11fef87324c02c8c654ab49e4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-099.npz": {
+      "bytes": 3814798,
+      "sha256": "67a770bac052fa47de0f12dfa25ea0a61b573a7038f64ad057e875c91ddf1cee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-100.json": {
+      "bytes": 775,
+      "sha256": "ec345031b37b57f3ca23041d76a083658b32520ed8b6446e9f80283768c7a9ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-100.npz": {
+      "bytes": 3834249,
+      "sha256": "c90b0c740ddb5faa33ca25ad00065cb635a48b6734f6aaedbbf886f483b5c1af"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-101.json": {
+      "bytes": 775,
+      "sha256": "e1b17f5c0f8de832aab439f0cc9f53bce4232c48914eaaffa6e8c4099aba98a5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-101.npz": {
+      "bytes": 4201101,
+      "sha256": "f0781b393d1937bd77d3a7a45e1e04d72c78b72637057150ff393b4943de9d3c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-102.json": {
+      "bytes": 775,
+      "sha256": "51e701c3437d4d981fdfc1a5ba38db59f233e0338b995d75e0f3b4d647d66339"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-102.npz": {
+      "bytes": 3667702,
+      "sha256": "15ba8afb9a5cebbf16aee280be288c421eb8f968b150e3852289a4beb34e2614"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-103.json": {
+      "bytes": 775,
+      "sha256": "760f09b88708a9f04ee076347c4a57323fbfac952351d563cb893e3b2ff7d585"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-103.npz": {
+      "bytes": 3655718,
+      "sha256": "fed2d4c1461f16897a767e6606b4e5fabd9acbf66a19a67b89bdafad662a72e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-104.json": {
+      "bytes": 775,
+      "sha256": "fb41d4273fcda33946693944e3e3f78dc0bb77efda5fa4bc7a4ec2287e391a6c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-104.npz": {
+      "bytes": 3720298,
+      "sha256": "db9d9d3a0c778ef121deb9bf2552f7e95a4047f48a02e57849de765bcbc4e6ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-105.json": {
+      "bytes": 775,
+      "sha256": "65ed080402779baa483eedd53f17db5ca55fe382b70cf448d59245f81c9ae1f6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-105.npz": {
+      "bytes": 3562870,
+      "sha256": "69f93128e1ba56541fc4594e1fb68c148b3fa3002771d42c08c4838adc90dea0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-106.json": {
+      "bytes": 775,
+      "sha256": "c8fc4c6fa0e06b9389d794c9b3047a82e3729548c133b78ff6acc555b39cdcdb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-106.npz": {
+      "bytes": 3903445,
+      "sha256": "042a93f740e3b28c27d31ec82ef30a34c1fde8ab10a8bbbe8245f37ecb4864cd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-107.json": {
+      "bytes": 775,
+      "sha256": "6b20d5ff18094c687c7fa5c0a75f5c3e0781bec07f2975005e6708b2238abbf3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-107.npz": {
+      "bytes": 3953325,
+      "sha256": "20acbc31baf1e9701fb71865f70f93098c2d7efc56c6381664e73b66bae7ec4a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-108.json": {
+      "bytes": 775,
+      "sha256": "1fdbb234ce4c478aa647e324a58c275f55891b67fb7fda5a4337ff6a2f1365fd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-108.npz": {
+      "bytes": 4090835,
+      "sha256": "b630c5720d2739191645b5a0b5d9a65f8fc522548412d44e804cca747630e556"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-109.json": {
+      "bytes": 775,
+      "sha256": "c4e0abf659a02bdbc2d3d098895dc72511905aebcd41d72f786830979e398140"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-109.npz": {
+      "bytes": 4339807,
+      "sha256": "8f24ca4a5041d6cc10d7845c908b3d1f4b7f3cb097f8c48c2030ac8385c35365"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-110.json": {
+      "bytes": 775,
+      "sha256": "7f9a35462a8a48904c05b5e66bc6eea30a5a4e94d9786d7daeb420c930ad6725"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-110.npz": {
+      "bytes": 3886915,
+      "sha256": "89739835415260022619e9ac4e29692d5da14605710561d487e1f68ea28ffc06"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-111.json": {
+      "bytes": 775,
+      "sha256": "0ce5d4476348f2ca7bf6f49cdd8f203ee02837dbeaeba561f8d30bd6db5c8c65"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-111.npz": {
+      "bytes": 3849133,
+      "sha256": "4ed9fa59717fc962502b8c4fe61e77dfbf60bd8ede864b89486e1bfb818acced"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-112.json": {
+      "bytes": 775,
+      "sha256": "cdd3765f4842266390778ffff2f125458801a6383e2ab52f97909858d8b26a7c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-112.npz": {
+      "bytes": 3832597,
+      "sha256": "776a23cc838925860d2b1fed1bf966da5217d285afdc3cc5244364155be98333"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-113.json": {
+      "bytes": 775,
+      "sha256": "09a2f5eaf6f4b2cf9d82a8f3a9c61f3e16b0719627cb347ed1fab3be8201f25d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-113.npz": {
+      "bytes": 3988159,
+      "sha256": "da48f448ff7b858725d4a6f0274abbc5890dae52e01f9c6593c28c4d0d464e81"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-114.json": {
+      "bytes": 775,
+      "sha256": "ac48bb13a97aa62d8ee858ba489d9df986879be40ddad94452b4f8c329e77ac6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-114.npz": {
+      "bytes": 3867490,
+      "sha256": "2c4fe56f046da6e0936863b1b40e822181fb2f818ff74319a3761df275200573"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-115.json": {
+      "bytes": 775,
+      "sha256": "7bbfc624199c034df1d9569854617591cd92c1c95d287f0cb1e32f27b7785cf2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-115.npz": {
+      "bytes": 4130444,
+      "sha256": "8500881a93fd1f506cf4a46525459f120e79a7fef70bca52a803f38613723894"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-116.json": {
+      "bytes": 775,
+      "sha256": "a78aee7b90d9eb210de4cdf2c9b96d6fc2bac1ae1eb1f3514146941de4a112d2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-116.npz": {
+      "bytes": 3776122,
+      "sha256": "2e48b23510ad4777bee405d21becd7b53d901316db87e3ec27ef141eb703f15e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-117.json": {
+      "bytes": 775,
+      "sha256": "1ea6951c6cfa388bacd40fc3c22ac76f7a7c0311ddf1db8c4d869bc63da34dac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-117.npz": {
+      "bytes": 3547554,
+      "sha256": "2b9874707a44e6343adb8ea8264a191f49aaab38802b60e457694828703aa371"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-118.json": {
+      "bytes": 775,
+      "sha256": "0be0d01e6d99e6e50a1c541afe85579cd1e8891841744b72058dc743e8c2ea15"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-118.npz": {
+      "bytes": 4064661,
+      "sha256": "4e9eb2a01282e2b7eee4d555ff75de33bbda62862f52cc6a2d5ac0c48409ef72"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-119.json": {
+      "bytes": 775,
+      "sha256": "d606dddddd6f2e1a2902570471764fcb2124bd34613ee12b16ae20b50f301de3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-119.npz": {
+      "bytes": 3613274,
+      "sha256": "628b73ae92855f41e5afa53d7049a03ff08b5c7d207ef1597a66578e5c7521a3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-120.json": {
+      "bytes": 775,
+      "sha256": "5b726df24558444b1a5a9423b96da056cf1ba5b572ab1d922746f22835c958ee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-120.npz": {
+      "bytes": 3355148,
+      "sha256": "c68e46bfeba1a0c4c14875909cd1a980cfcf232a3054f8e612378d1285bdf379"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-121.json": {
+      "bytes": 775,
+      "sha256": "84fa17df1ca03b376397d4edfaf2e70198348e72e1d23c27597a93ad5c8b8691"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-121.npz": {
+      "bytes": 3747959,
+      "sha256": "b47bc5cb16416cf59f1681c8f2a2530002df41e181875addbbf25dd025dc65a7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-122.json": {
+      "bytes": 775,
+      "sha256": "0cbc4d1fae12057e783780331537f18f07fa9e17d29d9d3bd0dfd89484b5bfa6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-122.npz": {
+      "bytes": 4188245,
+      "sha256": "6d86c3564a6449bbdc7144a3c5e3ab10ae6f702570cce18161227b6340040fe6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-123.json": {
+      "bytes": 775,
+      "sha256": "2e1dd1d6c1f187b20e963891618b02e4930e2699a8abfeab7722bb776710668d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-123.npz": {
+      "bytes": 3833410,
+      "sha256": "c730da1a51c230e88bc5934c96897bc746b50d0a4eaf50b346ea70f634995a5d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-124.json": {
+      "bytes": 775,
+      "sha256": "6c604ff714ef1e1086b371520b8dfed976e64334b44e6738fff6ba58cad03a2d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-124.npz": {
+      "bytes": 3929018,
+      "sha256": "dcf2bb04ad1fc0eb67a100cf8480d9d43182725681f55896cfc2948b617f368b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-125.json": {
+      "bytes": 775,
+      "sha256": "665d2eb97e22cadaad51067b2c293d984aef570716d0c1da59a253c75df06ea1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-125.npz": {
+      "bytes": 4098364,
+      "sha256": "0a264c792e56ed1606d91947f513ddc62c61ce605de0f5356869f592130452c2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-126.json": {
+      "bytes": 775,
+      "sha256": "cda8c03d6b7ab48c7de63550a6d0b8f245a8f256e14fbd7952fc2e1ef0e708b0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-126.npz": {
+      "bytes": 3369941,
+      "sha256": "95e4a372c1a65b287a55a0b30c393568e02c32f07f9accdb9c829f6c2edbbc74"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-127.json": {
+      "bytes": 775,
+      "sha256": "d49a6730daf2590156750484b7b11e5dd71f3d400b588adb93c5af40eaff410a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-127.npz": {
+      "bytes": 3852479,
+      "sha256": "4b520a9cbf1bf9942887ddcf63ead066e6ac12f0079f0f27446e734b199d83ce"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-128.json": {
+      "bytes": 775,
+      "sha256": "9dcbdc9bf0deadc57a6d8ca8b75da6b6a1764ab9f935e75df9372af4a9488599"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-128.npz": {
+      "bytes": 4430973,
+      "sha256": "bf0139b660aa6201a36757fc005be9d6f3a8701c88520ab4851f362795b28953"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-129.json": {
+      "bytes": 775,
+      "sha256": "9845472e765c8f59a90cf350d9da0c3f2bc691973769b363ff64c4ef4a54a870"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-129.npz": {
+      "bytes": 3564499,
+      "sha256": "cec173a3b1446c55b15c261f5647cf56ffe333c0f2d0f13e43154d830bc201f6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-130.json": {
+      "bytes": 775,
+      "sha256": "6fe0eca311f0cdcc8f8bf6c49f4af631c2d087ac5febd1287a181f5e93482cb4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-130.npz": {
+      "bytes": 3613284,
+      "sha256": "109d681dde5100117be50f431bacc892987534aec4b4a0bd51293c282fb2fc45"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-131.json": {
+      "bytes": 775,
+      "sha256": "5c407d27674dcbd0481b5428a64fcc30b363b937102f475a73ef33b1e1dc38b7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-131.npz": {
+      "bytes": 3923807,
+      "sha256": "183c69212da11f9c01b2b87d4013178764bc56ffe3d23726bbdf09e6b047ba3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-132.json": {
+      "bytes": 775,
+      "sha256": "898a22e7ea0f0cbc01d912042e50270a3168171bfe838ab37822f735caffae35"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-132.npz": {
+      "bytes": 3892896,
+      "sha256": "58ff980294d032ae71c14954e8457f245d1001cbf59f00ca1c5aab3b23faaa79"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-133.json": {
+      "bytes": 775,
+      "sha256": "0c4d0ba32712c310ea30b0f065b3db02756ced5d5d56884e644e86e8837839a7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-133.npz": {
+      "bytes": 4150773,
+      "sha256": "dc06306330dc4d8ef33704b99a655edbc909aa6213112664c9b1ec44300aaa0b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-134.json": {
+      "bytes": 775,
+      "sha256": "34349cec53b431eddd0c00e86bae9a315cff8c837612386a0cbbcf9aa2c07a13"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-134.npz": {
+      "bytes": 3657598,
+      "sha256": "3f770f303e56835340f75b59d5ebe52cee0692f511427de54397b818e0643569"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-135.json": {
+      "bytes": 775,
+      "sha256": "6ccf1db3cb125064f58e936e50acc67f7d3bd6cad8e62d4e8cdd1b67abf9f431"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-135.npz": {
+      "bytes": 3855342,
+      "sha256": "69fa7617dfca64a581f870d2cadd21c5b9d1b94a820631af02b73bd869112148"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-136.json": {
+      "bytes": 775,
+      "sha256": "486342c593dbcafa94db474f61b5d037a3f727877d5766f83267993c333e364e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-136.npz": {
+      "bytes": 3699497,
+      "sha256": "398b18a729d15f8ffed7a49dbb3a864d8f3843708e97d2eb5b9d6624e61015be"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-137.json": {
+      "bytes": 775,
+      "sha256": "0718c2c33640c128a24ad8e54761b433e7a143f87bd349a383a9b73e86ffeff0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-137.npz": {
+      "bytes": 4087557,
+      "sha256": "b6875c116ea9e21dde42cd3f787c8f0c94f7924d26b1589cc69a38e007f4c8bb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-138.json": {
+      "bytes": 775,
+      "sha256": "11f5c6047e258ef64edf8250bc0fa3403700cc3c8b1ed8c0a19ae35909eeed93"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-138.npz": {
+      "bytes": 3833728,
+      "sha256": "9bbd93d55067e26357fd329e5008ede628ae5bcab4a5e735c167cf937a9372e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-139.json": {
+      "bytes": 775,
+      "sha256": "fa9c42948af99d115b389741796ead7fd96c8d27513ad8bbc46c6bf8318fe604"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-139.npz": {
+      "bytes": 3917213,
+      "sha256": "fefdf2011044d3c0e79472601a95a61c92485bfa334c72c806578c6bbddb092b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-140.json": {
+      "bytes": 775,
+      "sha256": "8ea90e398ebe1edd544b843701e636bd621c50f2e4f91139ba56a097e5a457de"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-140.npz": {
+      "bytes": 3422309,
+      "sha256": "fb493977466f6ffac27951fbe8618d6bf4dd03d6b915bae482937cb54e69736c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-141.json": {
+      "bytes": 775,
+      "sha256": "3fc0d99200bdd2460a8e8ddef657cab81467f3e75a2fbc445fa721e16209cedb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-141.npz": {
+      "bytes": 3787072,
+      "sha256": "1dbf1855f9edf17c2f96633e456746be7b7c93e6dbde189bf26eaf6ae614c0dc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-142.json": {
+      "bytes": 775,
+      "sha256": "1af6f3fbf23b1d2611c8eac43168651a7355f16a95158060a5d12e1ffa6a3d63"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-142.npz": {
+      "bytes": 3785954,
+      "sha256": "91ed0591e3b26467e732ccef7fcbc122df688423e6e412362a937e6027b0493f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-143.json": {
+      "bytes": 775,
+      "sha256": "8cf53ab98c588023e634af0b69afc804db9e80a5bb8856db125696629306a9aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-143.npz": {
+      "bytes": 4051930,
+      "sha256": "f4afb32eea7186890221f57f411b21b88b4bee797c33f433d10ef8e9ba8089a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-144.json": {
+      "bytes": 775,
+      "sha256": "d45063e9d57044e760e6b4e3b2f21422922df01cfb58145a84ed2a3f3e880aad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-144.npz": {
+      "bytes": 4285436,
+      "sha256": "a6fd00ec64e02085577665b5282db81d84e1a7824d34165ae542d64a68ac9970"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-145.json": {
+      "bytes": 775,
+      "sha256": "f3a6d17261eea51cf85fd4b2a37e6670f4e480a2a5fc70b99a4c88d015e295a3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-145.npz": {
+      "bytes": 3675994,
+      "sha256": "c7747b81d342f798b299e057b20acb7dbe7524be2f19fde29ee765c6667ec5ca"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-146.json": {
+      "bytes": 775,
+      "sha256": "6de48468d95fdff19a0207d2691f00b6849c0fa1cae503248062ff5fcf0bdb9a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-146.npz": {
+      "bytes": 3873943,
+      "sha256": "381ffc43bd514c9152f178c25f3d059c5dfd8cfbb9d8dc4687e823882ad9be32"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-147.json": {
+      "bytes": 775,
+      "sha256": "a3b91f4862fbec318c8673934fc2d46316fc166f26eb21b47c5c4dcfd783eb79"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-147.npz": {
+      "bytes": 3754693,
+      "sha256": "510ca73600ee6c7c75dbdb88aea237e68205795b0e324e6aed01ceda751df443"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-148.json": {
+      "bytes": 775,
+      "sha256": "c162760b8e1544a489fff99c81dacf4faba8d6ab16a01a7bf648f88151223f83"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-148.npz": {
+      "bytes": 4114946,
+      "sha256": "0a05eb5e9c817baa3546b47351e691af24f0a64fccaa62083d214d63684ba203"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-149.json": {
+      "bytes": 775,
+      "sha256": "af092b0081f2e42e62117caf41ca8bea5f3da8ae9fe1c5073c47f62e11cbf633"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-149.npz": {
+      "bytes": 3691255,
+      "sha256": "3a310560970145f7db87f284d323b65729337e70c3a36fbfbd8dced3bb102b3f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-150.json": {
+      "bytes": 775,
+      "sha256": "e3700444c3b35b81d8ac2d870caa56f75db65771021402eda853a77f84545517"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-150.npz": {
+      "bytes": 3834218,
+      "sha256": "2fd6dc1ddd7949e0c4a1ab169381356fbdcb85c4093de7eda65569222127c4c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-151.json": {
+      "bytes": 775,
+      "sha256": "1ad562ec4148b6eb671c55067fcb9afa6c14be1381d42e0bce436728abf1d965"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-151.npz": {
+      "bytes": 3798167,
+      "sha256": "e47184249ddeaed13e93f7b2fec2bbdf455d9f7e982a1d8dc073693e77d2ca4c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-152.json": {
+      "bytes": 775,
+      "sha256": "5d63c5bf19b2accfce20470db06725b1cb8c45820021763059404801e0689c35"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-152.npz": {
+      "bytes": 3719100,
+      "sha256": "03878bb51e994d286c4a41a80689e9819b73d8b581572f961302ae46d2239c09"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-153.json": {
+      "bytes": 775,
+      "sha256": "15b11b3a3de11618152e6fa4352682eac09c73e898a7589547e4185cf4d323b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-153.npz": {
+      "bytes": 3843737,
+      "sha256": "40a438d1d18e83636c17937b19603de8263ca7f8bf99bc31b7299a8795b75788"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-154.json": {
+      "bytes": 775,
+      "sha256": "ee1686c33365adf214e1f9a22f72cf4360da3cd8df189cb2e142906dc272dd40"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-154.npz": {
+      "bytes": 3888657,
+      "sha256": "fdbecf28a3cf1906366bf250f0b7168bc746dea30991d89b64977a6c1a67a40d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-155.json": {
+      "bytes": 775,
+      "sha256": "68885cfc8d9a4c7d5ac80e2b3b678e6cf7f1201de5019c147ac83e9b1e0d042a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-155.npz": {
+      "bytes": 4026782,
+      "sha256": "671f49d25183aec892e5effa85865b607b4aa34236186045307105e0ac740532"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-156.json": {
+      "bytes": 775,
+      "sha256": "6b43e6d37c13d8f405b8f7efe6c5aa5c1a14255b3e8fbdc6a9acfa1f76acf772"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-156.npz": {
+      "bytes": 3891154,
+      "sha256": "0fcefc94d3ce5818d2d20e9fe21548988b00d64c6df380caedfbafd40e25440f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-157.json": {
+      "bytes": 775,
+      "sha256": "39b2dc1862af2a90877f901c8e80c15f0a38e0e5170d7dad35dab7fcc0d3cf53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-157.npz": {
+      "bytes": 3452936,
+      "sha256": "baad6991780f5bac2bf5fdb4080ac278ff80492b38478e15b6fee2e5933a867c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-158.json": {
+      "bytes": 775,
+      "sha256": "0c57726dc70ee8368aee262523844ca0bfe3cdd60adbdb53ecdc14a51c5766a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-158.npz": {
+      "bytes": 3518685,
+      "sha256": "db40d36ca5fbc94db40bcdfe0751674ccc8e004a719bb3f7b3d1667668c5a78d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-159.json": {
+      "bytes": 775,
+      "sha256": "afecd1d2850c5e25e23a2c8989b1cb365d9875562990f3f357b3454ab3fe6734"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-159.npz": {
+      "bytes": 3657105,
+      "sha256": "9930ae361e0aa43207561c6b7f1ff9f4d24e1cd3572f5f0bfa6d5cbf428f3db0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-160.json": {
+      "bytes": 775,
+      "sha256": "513e55a5b2edb18c7c7693d5d63ff9c9810864dccc6d35cc09a6674671635357"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-160.npz": {
+      "bytes": 4372309,
+      "sha256": "321af0f78166d22ab02ee0f0e6331205e3965ec1776c51310911158b85d356b7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-161.json": {
+      "bytes": 775,
+      "sha256": "736eed4fec3aab785ce1480d9b502692a047d9885cd31e76b0ae9a3278c710e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-161.npz": {
+      "bytes": 4033815,
+      "sha256": "f2a0a11590e47049b4120a9de554eb745075f027f0356ff86ffad89d0ccf6ccd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-162.json": {
+      "bytes": 775,
+      "sha256": "13aa1e8fc04d4f91ab668a79874712451de68437ad3a00ed407935f3f9afabd2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-162.npz": {
+      "bytes": 4306997,
+      "sha256": "06c665c8cabe59a10ccd4f51d4f932dd67702c0d298fdb6bd90c765a0c248f9c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-163.json": {
+      "bytes": 775,
+      "sha256": "647058365c66e29b7223396266ba20a7ca9e72973797b9dced6559f36f9896d1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-163.npz": {
+      "bytes": 3730437,
+      "sha256": "dfa7171cc61d60de01fb705c62eb45fbe7bca845f3ed99c6f76e1a86aa7716fd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-164.json": {
+      "bytes": 775,
+      "sha256": "674087d84a9e34db01aa206c57f9963eb43cf6801914a8f3d4392351d31b043a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-164.npz": {
+      "bytes": 4017703,
+      "sha256": "acc4b67e5fed3c367d9002c72bc21b1c6839b6e999a3c28ddf65cf716bceb625"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-165.json": {
+      "bytes": 775,
+      "sha256": "7a295372fe54f3af3bb353a49ce0aff523addfc329d788e7d1a3c744dedbc219"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-165.npz": {
+      "bytes": 3891314,
+      "sha256": "02d397f109d914e1c1f4b4b931710cddf13714cdb561299f11fe24c26205ea16"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-166.json": {
+      "bytes": 775,
+      "sha256": "7a43f8d7900e00290ade9d2b55878ddf3bdc8c09cf5d2f6b8b839abff58a2201"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-166.npz": {
+      "bytes": 3783641,
+      "sha256": "1a7386d50643499e11111cfd2aaa62ce3cd1fb7700e642614ecbec3d5d6b2f55"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-167.json": {
+      "bytes": 775,
+      "sha256": "ff2f1b6a32cda50e01751b9f770713d0ece81b9320f73d3e277f2a2c2ec8540a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-167.npz": {
+      "bytes": 4158431,
+      "sha256": "07620cedb1fbebda92c9db400f6e329057307cee6544bb003765cf5f0475c300"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-168.json": {
+      "bytes": 775,
+      "sha256": "61d807cdeabd7d8d90942e827c2999b89e384b910de401a27277adf4d9273ec4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-168.npz": {
+      "bytes": 3906192,
+      "sha256": "fb6fa6a3a36b60e75b2c11362bc00ba6323187561a45cb091819edb8833aa678"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-169.json": {
+      "bytes": 775,
+      "sha256": "16f12fc90c1384e886ec29d9a454813d5295f770afaa4a1abd08f0591e3e14e0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-169.npz": {
+      "bytes": 3412828,
+      "sha256": "6a6c03b36c0da5e79f19defd3c36f2903b916cf67525938cbc6ddaa5091cf2ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-170.json": {
+      "bytes": 775,
+      "sha256": "a2eb708817098c495a30f472cb870743595de4c6ff21a97d4f1ec8180b26cd05"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-170.npz": {
+      "bytes": 3760028,
+      "sha256": "f99b8cd795bdb2324d999a7e6006b28d3f424d7711ec83473445c0286b6109fc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-171.json": {
+      "bytes": 775,
+      "sha256": "cb85afd824dcbe657509311bf94cd7c7d4cfa2e8fd0a62f484c2e48140f65d28"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-171.npz": {
+      "bytes": 3567889,
+      "sha256": "bc04bbacd6a16be18edbdf9965a91ae75e9aec492697249bd50cd2aa1d1bc5d4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-172.json": {
+      "bytes": 775,
+      "sha256": "3a16d2b976346f08a6e22cefb67866bddea7e7917b2fdc6e473844b8bd327a42"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-172.npz": {
+      "bytes": 3682252,
+      "sha256": "ff8091e95ad293170ed5807fff793f4e4d7d1cca4f5d05c767c909d472da67ca"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-173.json": {
+      "bytes": 775,
+      "sha256": "237a79b36c78e1ea43fd8483c31d6721682cf1868489f27c7cf0a873a75efc59"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-173.npz": {
+      "bytes": 3926081,
+      "sha256": "f5b8f57efab3d5b70fd10364d490da475b5ba080cf16e987afb65d2315c45d89"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-174.json": {
+      "bytes": 775,
+      "sha256": "952d394f9a5db6a097117eea99f232adfcc363a4cca0670f8601b004eab64516"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-174.npz": {
+      "bytes": 3809479,
+      "sha256": "addb650ef9294ed72a99c09dab93a0e2c875d16be8d1cbeb549d7d2e2f2276ff"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-175.json": {
+      "bytes": 775,
+      "sha256": "e9d14ae347665a6efe32d36a14f0f4e99a4a5cd95f79f84188079aff1f4b52ac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-175.npz": {
+      "bytes": 4015130,
+      "sha256": "e3efbb3149784d0f88a39d115381079940b1f13872975772ec2b29a54272b486"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-176.json": {
+      "bytes": 775,
+      "sha256": "8018c4124518391205591dd12e875df2e81a139cd7602999af1edbb97a323bcb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-176.npz": {
+      "bytes": 3677393,
+      "sha256": "3932c471cb7f6bde2abdc11d026afd4372988f18e50ab925f8db2911bf75ffaf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-177.json": {
+      "bytes": 775,
+      "sha256": "b75d3ff5bfabcb2d089aeb059e89e5f644b8f2228c9c423c2315219a9783d600"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-177.npz": {
+      "bytes": 3793671,
+      "sha256": "81c4dc13305eada30e9b328a11feedfe39942886b888b0868441ec987920b4c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-178.json": {
+      "bytes": 775,
+      "sha256": "1d3df9fd87b9571b09c69077cd0160af8e53c39d80755028601c92b33a6b0ae0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-178.npz": {
+      "bytes": 3526621,
+      "sha256": "ff86cbac9d0d6b48f9f2adf0cd9d5aa5be990b32390d70c4f053cd2164fd7cab"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-179.json": {
+      "bytes": 775,
+      "sha256": "e5f99b0a8ae3702e4f74491e049a9e33d10777d3f0506223e9994cd2c1f24ea3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-179.npz": {
+      "bytes": 3562790,
+      "sha256": "fefbc789e7378e01f1df80f49b09f77eee92c46a739cd40b5fd3674fcbb95eb7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-180.json": {
+      "bytes": 775,
+      "sha256": "3e55f17df89a0ddbf09aa5b91eb503e2931527871d1bc1aac97a8f33bfccde44"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-180.npz": {
+      "bytes": 4158197,
+      "sha256": "9477706cb401a5b95c43532898bdf7b6747101cc1b1c6f9dacb5f85ddc2559ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-181.json": {
+      "bytes": 775,
+      "sha256": "87b258e19fbb12f5eb5fabf567d9a2e10a206719cf468db089a3ec22aff3f039"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-181.npz": {
+      "bytes": 3977975,
+      "sha256": "4d238febac8fc4598e9bc040b09dd2c0fb8702588bb8df8a484fec2940b59103"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-182.json": {
+      "bytes": 775,
+      "sha256": "1c4fc4bd9b82d01221763190e8b20c62c34e96c6b7f303b96c0d18c575235d85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-182.npz": {
+      "bytes": 3497779,
+      "sha256": "fa70fbb91900cb45db4dc203597216e34ad0338a29df1c636f33cfdad2de5249"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-183.json": {
+      "bytes": 775,
+      "sha256": "c3859f8e4a22e85cc6dbf6c9253c9c2a6a02a77e0ae5738a9d325488369a6a33"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-183.npz": {
+      "bytes": 3482903,
+      "sha256": "561fc048af1cf4c704399b1bfacb9f33cd4ccde1d80aeb9d2c290889395bb3a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-184.json": {
+      "bytes": 775,
+      "sha256": "a328e2adba4098a685c67c5b8459ca42b5f84aaac70636cbeb7af257fcbc0be3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-184.npz": {
+      "bytes": 4310553,
+      "sha256": "c4461b2c82cf90613f5377e4ad32f573982e0b84dee9f5f8124f1a8f2afe1488"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-185.json": {
+      "bytes": 775,
+      "sha256": "79f5f56f3afa25a5e9402aaf64e989948370a0ad5c2bd1d9680809c6071b264d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-185.npz": {
+      "bytes": 4123218,
+      "sha256": "421d61aac88fc9917d70a9682f00bcc200923ff822b64ebf9dbbbe6279131675"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-186.json": {
+      "bytes": 775,
+      "sha256": "0fa79e43c7a4ddcca0e50c5bd154e81c9e61cd70656d685c664ae1ab745e1b3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-186.npz": {
+      "bytes": 3855817,
+      "sha256": "20de3350e8acf71151b4344b63d5922e020634558be152ae894aa06202e5ecf2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-187.json": {
+      "bytes": 775,
+      "sha256": "0bbc67e27c7d379717f0d1eb41f22f37550ee172dae18e7ca7146bbc741927d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-187.npz": {
+      "bytes": 4266383,
+      "sha256": "4b89be6bc8c7baf1cc7d8ac464b31fe64cd60dc6c1c8628d87265163580fa41c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-188.json": {
+      "bytes": 775,
+      "sha256": "f8883ddc82e209d8c57e04b2bd6b814fa986ceb78bf3037114b26bc0dc8c21e8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-188.npz": {
+      "bytes": 3827504,
+      "sha256": "069ce54e647d5692262071e8b24eac214908537ff42ffd522d7582c221bd080a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-189.json": {
+      "bytes": 775,
+      "sha256": "81bbefcae7a873deb26b02b11cbb773d5a9b92f59cea32f132da3f43d9d7b856"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-189.npz": {
+      "bytes": 4097477,
+      "sha256": "f21c15872b5c012eaff1bc3cca710029867f3209bc0185bea3104ecc00dcb010"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-190.json": {
+      "bytes": 775,
+      "sha256": "f32078d73ce5c15f554d761629f4f6ab30436c668b87bf97827063d7ae5f39d8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-190.npz": {
+      "bytes": 3579715,
+      "sha256": "880c3cfa00d59f984e5a30cc94499687897c60af0e32b6a411d47ff7f04bf6c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-191.json": {
+      "bytes": 775,
+      "sha256": "21a88ee9278ad24c5bc9fed3e4c3172015d95ed2e81b5151d48a36fed7d0232a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-191.npz": {
+      "bytes": 3820712,
+      "sha256": "dea6fccb663de931ccce2f657c4cceae08c9e022a14dc15dc9f271eca35c05b8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-192.json": {
+      "bytes": 775,
+      "sha256": "2d4b95c8b7d77a50f5152fe91dab034917a2d5e00725b815ef108bb60fa030c5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-192.npz": {
+      "bytes": 4060624,
+      "sha256": "ebe748296607ef4f46861903d1fbf8eacdf380df20ea470622edf3ad4fe01519"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-193.json": {
+      "bytes": 775,
+      "sha256": "f7c4826bd9a097a9cc849b49ba19b54e706780efcfe649d91155f0b160284bef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-193.npz": {
+      "bytes": 3737926,
+      "sha256": "caae397062b961174ffb645b8a5d3af6e47b26bb61d4a2b7dd9206a0775839f4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-194.json": {
+      "bytes": 775,
+      "sha256": "4642248ab6f9ca43850ee22a139c33a16692067ca8a7d4cd3bb3468ab8bf332d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-194.npz": {
+      "bytes": 4159748,
+      "sha256": "c3e27ff738ffa7b15cce5946dacdb874f8917555f0067ecb0ad3eb1019c8b136"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-195.json": {
+      "bytes": 775,
+      "sha256": "288495d46ec7d72603b2e2b2a085146999806ee976f447d80cd8cb1fbd8f6fa8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-195.npz": {
+      "bytes": 3738283,
+      "sha256": "d2737767068e800abc69132743cdf601ad7363b945cf3bd75d1e61f59e2ba152"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-196.json": {
+      "bytes": 775,
+      "sha256": "6fdf3519d405a045fb7d9670663613c55cb7efeeffcc821ef35f86df1a06e9f9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-196.npz": {
+      "bytes": 3607448,
+      "sha256": "3fa581881294c39cceaba470c074eac2374c8a9d0e7e5561ae2b1caf7d79d607"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-197.json": {
+      "bytes": 775,
+      "sha256": "303b7b1016661d0ffa0c7eb60122b9de235269753f4618b06fd1e5bc139dc7e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-197.npz": {
+      "bytes": 3749316,
+      "sha256": "9d8097521646059c359bb5e22c1d67bd3fa73614b4db6b980191b6a1a290a505"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-198.json": {
+      "bytes": 775,
+      "sha256": "3ae30e73330191053790834ab9fba232a007feeff3ed896384d7ef166469d6a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-198.npz": {
+      "bytes": 3901949,
+      "sha256": "887c9be25f5e1027825cebd4d8879d8e5cf38d9d2c7d20bd008c9685e29b9402"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-199.json": {
+      "bytes": 775,
+      "sha256": "262fd26d2b263d32dfcf0587df7b1a1900593968abbb9db1cf0ee57b5390ea5b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-199.npz": {
+      "bytes": 3825329,
+      "sha256": "a535245ef88ad8aefc512d23d79f9d42126332a758c4aaab64c6a2f683e63c5a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-200.json": {
+      "bytes": 775,
+      "sha256": "dba1ca3d690d5137590448806b7874b0832163cd8ff368dcc27e42d56cc3d1ef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-200.npz": {
+      "bytes": 3719282,
+      "sha256": "80808f963a32aecdcfc0aed18a06e6676049357010707eab394a7533d76eebcc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-201.json": {
+      "bytes": 775,
+      "sha256": "f09a3727aafad0cc0302806b607d78f0b0c376e0f8043ce2ab86154b1a4eaa78"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-201.npz": {
+      "bytes": 3646883,
+      "sha256": "b42128a675bd0ad77140f4310835bf1e1d6e9994d1b2bdbbb54ac3c867eebc3e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-202.json": {
+      "bytes": 775,
+      "sha256": "a6915d8fb1398f5f790c8c5b747bd7a9411e6c391a1cc13e067afd217df21d7b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-202.npz": {
+      "bytes": 3635448,
+      "sha256": "60ee427c9b51d93ee03575d6ec1038cd5c06b049d4720126b7e25a7dc25c986e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-203.json": {
+      "bytes": 775,
+      "sha256": "51b9ecfe6376f4430875dbe1888359481f26715a946219bf0bb9ffac1d4f3803"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-203.npz": {
+      "bytes": 3957544,
+      "sha256": "628af57adf167508046cdf4c0cbea08502d0e0189c199bec14954d0dc08946a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-204.json": {
+      "bytes": 775,
+      "sha256": "64b93c601c444d71b26a1a423d6c27d8310598fc2128744376b3ee524c83fff4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-204.npz": {
+      "bytes": 4014294,
+      "sha256": "fa397a1a5ab856f19991d20a4c16787fe8f9df41195040fce40e18bc12eb5b9c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-205.json": {
+      "bytes": 775,
+      "sha256": "c650381adfee1cd824f71fb0d2aa655f4052c5f18a1b6bea709eacf7f6fcf3f0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-205.npz": {
+      "bytes": 3915912,
+      "sha256": "e0fa2053d95ac451ea67e6bdee03790da08ff24819784102bab1746b538b7f21"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-206.json": {
+      "bytes": 775,
+      "sha256": "87a462713b83f7e7d362232a84b7b5910048c888e1d564866c7f2db5f3d32b2c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-206.npz": {
+      "bytes": 3779424,
+      "sha256": "04f46b490299d78f1be8da9a5f97047715ac5f3ef367666688a83cc990abe106"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-207.json": {
+      "bytes": 775,
+      "sha256": "d33d94a6c6c8a3949c2f02728a2ce0920bf69d4c70e08ed4bff16931940f0d3c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-207.npz": {
+      "bytes": 3879240,
+      "sha256": "719f84c128a5468a5a73dedc7fb7b7584884c699ff0b1ff24161b39c1c9938b4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-208.json": {
+      "bytes": 775,
+      "sha256": "8ec7ccea875e30800e4ee59fc35c5d1a967920e412a2d0529848e771f78f49b1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-208.npz": {
+      "bytes": 4189422,
+      "sha256": "13bcbc0de891fb1864f6fb1049628281043830f5c58aa55da63a4169668f4e7c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-209.json": {
+      "bytes": 775,
+      "sha256": "45d5aeb84d626cac14188a39c5ae25c3f5c1d10aaf87b77c750a62a4b665e030"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-209.npz": {
+      "bytes": 3446393,
+      "sha256": "3c40a8530a24a115e86ea2058b09d0485c2df2eb5f2dcceceb455f90cf2f1b71"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-210.json": {
+      "bytes": 775,
+      "sha256": "9bb2202fcafdea75b9f397d17f9c1f9655954d3e7981e0671cd941513b95b9e9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-210.npz": {
+      "bytes": 3985006,
+      "sha256": "9965db8f5564ef6063a458d316aef12152bd3d19e0830033a9fb4bb6e8cfdcc6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-211.json": {
+      "bytes": 775,
+      "sha256": "31d2881f87b686223faf6c5ad082fd279b8a687431a4f3754004228f992e3316"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-211.npz": {
+      "bytes": 3629238,
+      "sha256": "b1a21ba283a19d89da44a350fa7cc33790dd61c8b356fa65aeac7d9bd9057d07"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-212.json": {
+      "bytes": 775,
+      "sha256": "44f91a6573c1a8be1de39985bcc863b97a3b62db449c966c249f720243fdb033"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-212.npz": {
+      "bytes": 3590465,
+      "sha256": "a3469bc4b73e006cfa2294e8f4b3d6754de34a2bb51b34d0dac8d49196aa205d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-213.json": {
+      "bytes": 775,
+      "sha256": "53d8240981d0290bf30063b32dd3f98baabfb1b6779fc73d16078e8578e6ffd7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-213.npz": {
+      "bytes": 3506367,
+      "sha256": "5fbdc67ed645e5c3f5711b629e9bfdeb8eb2016a20fd328faf17a89415e243f7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-214.json": {
+      "bytes": 775,
+      "sha256": "94522d92bea9a5c2c18ab92dff340dbee1df72b250ff9c0a3543f6dc133497d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-214.npz": {
+      "bytes": 4204570,
+      "sha256": "f33d0e412ddd74b6f7df06021271c80f19c2e433f7e531caf9866b649b549173"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-215.json": {
+      "bytes": 775,
+      "sha256": "715a0785967ef249112f1a43115b1147a39b7e9b60fb2884c22e4685cfb3f2e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-215.npz": {
+      "bytes": 4004891,
+      "sha256": "fa03c529838efbd25af6e27b56a9fc3c01740fd9011c5bf55518f860c03a9e87"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-216.json": {
+      "bytes": 775,
+      "sha256": "391c1ab2a9996dcfd15d34b6efc99895d711be0937354ebdbed2a66d514fa28d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-216.npz": {
+      "bytes": 3906757,
+      "sha256": "fd7ac4481f1472c735a93b8158f79f9f06acc39a639156af38e250918ad79107"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-217.json": {
+      "bytes": 775,
+      "sha256": "419e2355349dae86f2e64f41b4a53b9e36ebfa92a4f9cd7d16a1ebe2456f3439"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-217.npz": {
+      "bytes": 3759686,
+      "sha256": "02f4be0b1503a21ce53e3dd55eb218466e872dca1f0c070cd6526141c8531f25"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-218.json": {
+      "bytes": 775,
+      "sha256": "0fe17850ee2dd2431025a1916a2053a1dfb888d7af53f7dd49fc4cffe11303c3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-218.npz": {
+      "bytes": 3461778,
+      "sha256": "afa1e6d684a16d037ae3e2f9c2708f9b6b5e5bce558f07ba6ac9b58b1d1657bc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-219.json": {
+      "bytes": 775,
+      "sha256": "c30714c19301a976a9b89da6d54b2e1d40171523bdde4f55e7d768d69e836cf5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-219.npz": {
+      "bytes": 4057389,
+      "sha256": "1043dfad470e47834a6bc5cbb9b2c32c7e1871819264abbb7bf68dea8fc6246a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-220.json": {
+      "bytes": 775,
+      "sha256": "2474e3eeab56b51daf3e409bf25af9202f469cf787a2cef3de6902f23599798c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-220.npz": {
+      "bytes": 3445758,
+      "sha256": "83ffee9c37ef810981c0017ae7e8c782d7001c7a68c708646209d921edc94a9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-221.json": {
+      "bytes": 775,
+      "sha256": "0702e7d34c217a502cab072daca55ddbfbd31faccd51c3c04212d0d02d5c9f36"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-221.npz": {
+      "bytes": 3503109,
+      "sha256": "bb965ed5415071c4ba07317bf82da4057c49e3990aca94bb79d60c4d70539ccc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-222.json": {
+      "bytes": 775,
+      "sha256": "1ad9c8624d7e03c986657f0327108e23c594b7d075b34490c2bca021117fcbe2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-222.npz": {
+      "bytes": 3428000,
+      "sha256": "451e1694d4b939e6417f98b3f5112e598df68c27e233e6e842e301cadc254b3b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-223.json": {
+      "bytes": 775,
+      "sha256": "5c7210b187afae1d7b79bfc0fd60b47410438042daea9223efcdea3559ac89af"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-223.npz": {
+      "bytes": 3569543,
+      "sha256": "476aa4c6cd32c2b02677262006120537f691ef070fe099d4c0908315772b83c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-224.json": {
+      "bytes": 775,
+      "sha256": "1a0151df583289b58225bf77a856517a94623953bf8457be879745de6d8a7080"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-224.npz": {
+      "bytes": 3517228,
+      "sha256": "19d4381fbe76ff33b0e6ad142deb0380967fb021fdf53e5af084399724d58021"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-225.json": {
+      "bytes": 775,
+      "sha256": "26fae395248b286aad583ffd5e28da6864041c8a8f55a89593af698fd127e267"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-225.npz": {
+      "bytes": 3792695,
+      "sha256": "467a8e9cbc306adf5ff8660fe78a4d70bb9d2fc81c27dce4c9b1019d9b5ac60e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-226.json": {
+      "bytes": 775,
+      "sha256": "95840cc5713b3c9e516b255aa37617b3c4f0e94f37a39c07752739a5eb945860"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-226.npz": {
+      "bytes": 3972528,
+      "sha256": "c4ac8aa44d6530d24ef994e524c86fa0ca61a0767c039efbd2fe4b7267747e93"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-227.json": {
+      "bytes": 775,
+      "sha256": "0162622a88421d79ba5a14b31ceac2d54b4f48b1162f11eece0ca524aa1493d9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-227.npz": {
+      "bytes": 3704634,
+      "sha256": "9b5c79327e9d3eb71393f94b535d03cd31e16f14320d49c382ca3d328a78e5ce"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-228.json": {
+      "bytes": 775,
+      "sha256": "54c71c18ca2466ce3910448f6fdcc12968e4a1d479af4b287a8bc24f547e1e27"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-228.npz": {
+      "bytes": 3745991,
+      "sha256": "1967e6fc826b2672b62b5796b2b730ba6eb11c0e517bf137a60380a51e847bb9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-229.json": {
+      "bytes": 775,
+      "sha256": "cfba2534d13bad236fef7178f910cb37786b175cbb155286221f72f193868e33"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-229.npz": {
+      "bytes": 3436723,
+      "sha256": "a4339433ac2d5f4b46957b941bb21a6d9da0f61b11ae1fea017d08fd794f7891"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-230.json": {
+      "bytes": 775,
+      "sha256": "d6c0fe9caaf14f9064e5ff9c27ff50317abfdc7866d9ba4ab16b4c021a7aee53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-230.npz": {
+      "bytes": 3575804,
+      "sha256": "8d946d2ddca4072e468f08fe3f6b3da06ed8ed260a9f34899339a63a15b83b3c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-231.json": {
+      "bytes": 775,
+      "sha256": "959cd9b5756929693729c577d11280394a0f133cc09efc777eaaf3aa1e754790"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-231.npz": {
+      "bytes": 4064863,
+      "sha256": "d0ab2cde27527717b65e66e7fb5c1bb08027ec50e6cc4fa94e53403bde049b5c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-232.json": {
+      "bytes": 775,
+      "sha256": "9e670ca402b9cd469dc212f9d58b60c38cd66ca70fdb3baa8834f3a57134a3e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-232.npz": {
+      "bytes": 3673925,
+      "sha256": "65e7a89a5ed9d2a3419b0c16bc912029ddfafa99aec9ef1fea1afd635ef52053"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-233.json": {
+      "bytes": 775,
+      "sha256": "94d322e92454317484e7fae9b33eed96d7590250dbc631f23b5f0938e337a3c6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-233.npz": {
+      "bytes": 4351168,
+      "sha256": "4eefdac305a5d86d420d72ee71a86f5b488d024974e2ee722be05b16ad3a4019"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-234.json": {
+      "bytes": 775,
+      "sha256": "563e85b3ffea3966280e5c6f9764cdd2024bf1cb4256e35a3e7b580ca7588aca"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-234.npz": {
+      "bytes": 3427401,
+      "sha256": "d7b17c20789b6ac1386f6887305902d7cfa097749f5f33e2e7dd8821a693a16b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-235.json": {
+      "bytes": 775,
+      "sha256": "1015940f476efb6e42788b93d1759c0c4cf7fbf575a61cf005c7d56c8f90debf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-235.npz": {
+      "bytes": 4114319,
+      "sha256": "ee3850d9b053d2d58e1e29187604012cd49eea99abec84090489535e421a7853"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-236.json": {
+      "bytes": 775,
+      "sha256": "b1c980619688ffc9cb333fcb8c796682cb0124ed122c4b32fc99a3e380bf213b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-236.npz": {
+      "bytes": 3733848,
+      "sha256": "ca6f5f4d8104fcc538e46a3b5dc28e34471e3a04e98e0e5ac135c33278056b0f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-237.json": {
+      "bytes": 775,
+      "sha256": "50a6c77a1feb01ef1f4d431b287a6949f8dbf941af99f3e4c1aa3e592bca1256"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-237.npz": {
+      "bytes": 3556199,
+      "sha256": "04a8078c79fc1ea490e507189c289bd2d35ec9b4ea769a4c507fcc3dd788b662"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-238.json": {
+      "bytes": 775,
+      "sha256": "88e43bedfc54b82c2330bb19b40e765933dc18f3fdfd089c397bc2457c5efb4f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-238.npz": {
+      "bytes": 3895484,
+      "sha256": "9379dfdea3777907d671c9e7ddddf93e55edd2942126b0edd63c8a8bb12f6cee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-239.json": {
+      "bytes": 775,
+      "sha256": "f1615fdc3e53b86b21b12e293c0549aba8c780182209deb29477c89d0c23872e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-239.npz": {
+      "bytes": 4009368,
+      "sha256": "12d2113978b3be5fcda4c7f7480b46908ed44f7681d8a5a00e7ca36bd6b5f6db"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-240.json": {
+      "bytes": 775,
+      "sha256": "ab1c9675328bbe5bb212203ca03dc7d0602d40ecd31ed2c431659268abdf8fe5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-240.npz": {
+      "bytes": 4128757,
+      "sha256": "27536138ea2584d4c5259960bbebef5421fad321ff0555bc63ac7c00ac3977e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-241.json": {
+      "bytes": 775,
+      "sha256": "4a16c08c1ebb2573eae7b95eb48071919fe9eef16fd639e4597b297c54c4f265"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-241.npz": {
+      "bytes": 4066151,
+      "sha256": "95e352f0ecc5fd035f54a8fa254be050651e6100abac77b1e324987ca960c141"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-242.json": {
+      "bytes": 775,
+      "sha256": "efa18a3aec3ca9b34e2d6829caaf2928947a61c83bef7060861d88d5c1400b0c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-242.npz": {
+      "bytes": 4249399,
+      "sha256": "6272b3d4cbf33cc33933f024dc7445f1dcf25e2fdb316effcee0513b92a6be76"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-243.json": {
+      "bytes": 775,
+      "sha256": "e6e2a11c234ea8670f9d2b7c05a45b8e53b8e4cc4249426e7ccc5263e2a17a41"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-243.npz": {
+      "bytes": 4076895,
+      "sha256": "4bda0d86bd334cc2f25faa825268bacfa7570e0777e17e3bb79fca1812668a65"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-244.json": {
+      "bytes": 775,
+      "sha256": "8c545794b942407303ab3df16c174e8ed3a998d2258d3c55f32501daba560cd1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-244.npz": {
+      "bytes": 3587203,
+      "sha256": "793f1c974afc5cbb13b92676851738399ec3aaf8ee7e000bbdb63e2376dd5c75"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-245.json": {
+      "bytes": 775,
+      "sha256": "f12665a33db398b39016fc7c616c83b3af0ca2c97481093e75f18099df6c6d3a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-245.npz": {
+      "bytes": 3972309,
+      "sha256": "ca05d6ce1830205997d6dc03e536519a9778f432ab64509413c7c88782ce6d39"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-246.json": {
+      "bytes": 775,
+      "sha256": "d9efee3eab34ab5f075a06a591b36a57cc72727754ab0c0162b91ea20610211a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-246.npz": {
+      "bytes": 3884454,
+      "sha256": "69b7f88d56cc6722c0f8a393eb90f8a4b26a697c3f7bee962bb271a5f6763627"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-247.json": {
+      "bytes": 775,
+      "sha256": "9836af34d00f73f8decd88a61630d3bdfd1dda364b7782339ae97e903dca03f6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-247.npz": {
+      "bytes": 3940681,
+      "sha256": "aa44e8bf499818038da5e0f6ac14fd80bfd4991dec29acca135149d8c4d5dd5e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-248.json": {
+      "bytes": 775,
+      "sha256": "cd90b864997bfde96444f33294d59cbc70b8962824496a099a0731cb9dcdac9d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-248.npz": {
+      "bytes": 3984959,
+      "sha256": "86d66710fdfac3c1bac452f8d278d2dfd886aaff7e0945808cf272144535bdba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-249.json": {
+      "bytes": 775,
+      "sha256": "93d72ca2f5c0c09bd0f24a28ff18a2d4a8f50e54f45dc0e82838cb9a8932d948"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-249.npz": {
+      "bytes": 4371837,
+      "sha256": "a6b260f887a314b11efcdf98086bd3c9693bcde31bb28d8c2315124a4f4125ac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-250.json": {
+      "bytes": 775,
+      "sha256": "d43f4d4be140416236ca0e93f53c237cf30baeafb6bce0089d1db6fdc2647aba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-250.npz": {
+      "bytes": 3752768,
+      "sha256": "bde54758691a7b069a0fed815cf7b27533216c8124ddd76feeee95b50f8a7189"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-251.json": {
+      "bytes": 775,
+      "sha256": "75a184b155a929d35e17d4e46ec6669062bcfacced0322b8f923bc054093c7a7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-251.npz": {
+      "bytes": 3834628,
+      "sha256": "9eb862754fede3d50dce9ca327bd1c94c8ec8c3a60ecf7f0b3b6404da293f5c5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-252.json": {
+      "bytes": 775,
+      "sha256": "1f677ed73bdf348bb7983f783d687a7e8c84fc9ec3d26ef164d4d1e17779d3d1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-252.npz": {
+      "bytes": 3589146,
+      "sha256": "0f51f29c9694f7ad1d120a5b2c19a0913b31fee6a4e3366f28b1711096a8147e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-253.json": {
+      "bytes": 775,
+      "sha256": "bd4ce222fb3ed5e2dc1c23015abf518f66c59930e0d72d6b42f883d005617471"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-253.npz": {
+      "bytes": 3711419,
+      "sha256": "9a190d808ab23a183235ecee7dc0df5c8bdd3960eaa412c115b6e35e1fcd5138"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-254.json": {
+      "bytes": 775,
+      "sha256": "1e7c5eead5ef8bdedddc1c07e37ad28a1a94ea49b638c4c94f17aee0cc6cc9b0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-254.npz": {
+      "bytes": 4130194,
+      "sha256": "efdb1edece7ef9abc4281cb0123efa0c802324a76b7ef29a236a10277d9e11fb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-255.json": {
+      "bytes": 775,
+      "sha256": "f1e6c83219736f43c8b16310a1a310bc3440f5f165b18c59b30058d3e0d19ce6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-255.npz": {
+      "bytes": 3746966,
+      "sha256": "7c5fc6dbce439a7c018006996405a0bb6a76dea091311c30499cc81a577e3ccd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-256.json": {
+      "bytes": 775,
+      "sha256": "1a569ec671f974abaa78a9d1bbce8580692d62f34f53c27ab5acd1182ae984e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-256.npz": {
+      "bytes": 3608493,
+      "sha256": "fdeea245cc33413e765050e5de98a57bc71c42d6e01a32db7014fa0cee6e4007"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-257.json": {
+      "bytes": 775,
+      "sha256": "5e51b31a78367c572854790c7d2374c16ffa4354a891eea13b7106f603a47269"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-257.npz": {
+      "bytes": 3674918,
+      "sha256": "f81613bb25c546561b05f362b0de75e72277047f357ddc744910c78af6a8b082"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-258.json": {
+      "bytes": 775,
+      "sha256": "376ade552e2ff5ff080a73f0c1ef9170f3a854cefe110f1d78d3710eb3510ed1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-258.npz": {
+      "bytes": 3710699,
+      "sha256": "448d88d2c0bcb58f55a544018cb60e6427d2f7d5a5dfcf3f644b2c0c776bdc0b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-259.json": {
+      "bytes": 775,
+      "sha256": "97a68a0aa6cfe11557ae20aeef41ed59dc5ec94d349700814e4516003157ade3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-259.npz": {
+      "bytes": 3398633,
+      "sha256": "9981b3134e7239b00c622596cf1df62a3ddeef76bc436ebdaa07249c3219956e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-260.json": {
+      "bytes": 775,
+      "sha256": "3b75e66538dabd7fe5ced5fb67b9fc670fbe54bc1b009273b6f61c533a31c2d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-260.npz": {
+      "bytes": 4023667,
+      "sha256": "9999528b9251aa0823afb2ae7a220f22fb62a9d48d28ac6d85cb2667c95d03eb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-261.json": {
+      "bytes": 775,
+      "sha256": "9ce41957abba5c7ba57294813e4bbc29399c21549db93f401362a130f28fc737"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-261.npz": {
+      "bytes": 3731643,
+      "sha256": "98e52d270983a3f1cd8560a1cb57f04afd0be0fd857cd765874b88b3c317f9a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-262.json": {
+      "bytes": 775,
+      "sha256": "abbbf3f68e0b88967fe42e62cbad2a1ac6c65d7392d57db338afa2160e1a1426"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-262.npz": {
+      "bytes": 4221344,
+      "sha256": "b175159014462bdb2dcb23dbd4ce58523bcc5a7edb432b0ccc757f57d0c22626"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-263.json": {
+      "bytes": 775,
+      "sha256": "3054f4c7d6e386770e861228794cd26fcd7b8ac38f7955c37517ab2ec2a3e726"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-263.npz": {
+      "bytes": 3716620,
+      "sha256": "e33ffbcba7649f6b3d1ab918583082a54e0cfaa65449c555c9d6cf534a3ec78a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-264.json": {
+      "bytes": 775,
+      "sha256": "5eceea3dc4a6506a549dfa437fc62e3932c13ec198fd63a9734b71469ffd9bcd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-264.npz": {
+      "bytes": 4326940,
+      "sha256": "d87891360163e47e123cd4b657d41c2faf1bb2c013419106257380b0a1deac9b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-265.json": {
+      "bytes": 775,
+      "sha256": "3c26e271e3baa283e971de19804a5eef5de1d8fee268624f53d167560c9c33a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-265.npz": {
+      "bytes": 3793094,
+      "sha256": "a7d407ad2fc5e629c2e91113a333aabf22be0d2772517cc92ee00a0e56acc063"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-266.json": {
+      "bytes": 775,
+      "sha256": "622a6f2c55ac7106f34512770dd4a5a749f6053211c5da80c2291b343d1ffa53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-266.npz": {
+      "bytes": 4061320,
+      "sha256": "edd3abc5b2ee201eae50b698b4d54e5c6cefc195763f25bb067edf77831f95c4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-267.json": {
+      "bytes": 775,
+      "sha256": "fde7faf5e13dd0553b13f2f111cca1224974da6cd7529af1dbbeec29430b0f8b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-267.npz": {
+      "bytes": 3823370,
+      "sha256": "71cb3747ae09c2ab36cd7b00b2a0b26d229d60e7b714cc41343a22a5262b1f25"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-268.json": {
+      "bytes": 775,
+      "sha256": "f322b7d2c64e23374a420ec5099e314d04b03f8f5e59980cf19ade1ae00cdc27"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-268.npz": {
+      "bytes": 3418311,
+      "sha256": "e07f05f21298ea87a46d51064237b96bbb51e059abcd7ede20357d43b4edb74f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-269.json": {
+      "bytes": 775,
+      "sha256": "d10f303b5951dc1b37c4ae03ecfef665b6f7d367101de2c1d85aee5db9f2331b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-269.npz": {
+      "bytes": 4146399,
+      "sha256": "4e71806f48ddc4948da8efd4f3d295fd11a35da13a357c31e5f087389f0d4d81"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-270.json": {
+      "bytes": 775,
+      "sha256": "6d31dacb93256f6f794fae14a4823d6c3c3bdf426666302e644ce277f0e9ea53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-270.npz": {
+      "bytes": 3868683,
+      "sha256": "a4223c89bafd5653f31ac6a1b24bf265f99b1135dc6adff3d15cae22bd5f086d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-271.json": {
+      "bytes": 775,
+      "sha256": "06aec71e52bfcd8ea71427fd4ab0b5a0596022b9103840ca9653c626c809c77f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-271.npz": {
+      "bytes": 3539536,
+      "sha256": "1234a24208db0f1321ed9a28f454c511cc1eedfaff54763ae2ae1bad0ff7818d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-272.json": {
+      "bytes": 775,
+      "sha256": "6992ec0eed6d50b1329263cea6b7aefcc4c1e150677172bc8b5bd98373ed5059"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-272.npz": {
+      "bytes": 3873372,
+      "sha256": "840911fe6ee7a279c88f7ce4a2bbd4e659c76ea6fa682f65564507aa8fcc5321"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-273.json": {
+      "bytes": 775,
+      "sha256": "a12c49ca576f068f07ce9ed3e6f81f4496eda2a63c98f6e691007d748698bd47"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-273.npz": {
+      "bytes": 4068207,
+      "sha256": "fca883bc29c41a286e6a5c29c3207a764072717c4f1fd56ff3fa787ccc0d47b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-274.json": {
+      "bytes": 775,
+      "sha256": "977c046d9d7a673b2e0a880b50644cf707a6437cd12f4e2058e65acff3f7eaac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-274.npz": {
+      "bytes": 4272799,
+      "sha256": "bbd067b39e7163bf8029a471505b60035ed26376682895c0befd76d11c3750e7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-275.json": {
+      "bytes": 775,
+      "sha256": "9823a9cc0e7961cb95f0c7dbe7d1700d6e9d245b6e808e8b5d021b650ed5ab1e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-275.npz": {
+      "bytes": 3945311,
+      "sha256": "aad74596cab6ed89e4c5731133242e7d4a1e356607071a5070cbe01d0cbd8d5d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-276.json": {
+      "bytes": 775,
+      "sha256": "ca026ba9ad89e75848b21ced44f48766f1a141e8e61ad2776fe3e48bc9e079b0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-276.npz": {
+      "bytes": 3438597,
+      "sha256": "b71ff23fd299fd193f89a234fd9db1c4fc485428daa8018f595df56164007330"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-277.json": {
+      "bytes": 775,
+      "sha256": "f15494d51c16cd55d6d4dcc73fdf84fc60b166ac53ddc7c1f549b7141641b584"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-277.npz": {
+      "bytes": 3443247,
+      "sha256": "0105bcaaeeae99a93cd1149111ddd65dd28bc48de18d0d392bd6b8a30714a59d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-278.json": {
+      "bytes": 775,
+      "sha256": "421a71df6a200d8e952fff9442504660d57801ebedcd6bf7105d99f5ba73f1b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-278.npz": {
+      "bytes": 3822373,
+      "sha256": "c9744a7acb37f17d9de33b3eb83c9e4e6d40724e27c04e46f80891e4b8c8fea8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-279.json": {
+      "bytes": 775,
+      "sha256": "789a6b3d0fb5f97ac8beeadcde879c557be4f5327f02f44f4c535ed5af3fa4e9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-279.npz": {
+      "bytes": 3749209,
+      "sha256": "756e31b2cbcef6f4e23eb54373d38091d350f368e63d732f4bbb3fee057fc700"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-280.json": {
+      "bytes": 775,
+      "sha256": "7a92401afa676dc6fde8c3d7ca4ce7bce38a248ad5e74d0ddd0fc7e8e01a090e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-280.npz": {
+      "bytes": 4092896,
+      "sha256": "eb2a67c0dfa2b016b950ee6fb6e06a12f4e2afe445fdac8e80631834d48663dd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-281.json": {
+      "bytes": 775,
+      "sha256": "0e8e5da1846af1de2eef627bf80f81e76a712e018720c9fcc8b2c461a02f844f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-281.npz": {
+      "bytes": 3655610,
+      "sha256": "f3bf3bbc3345ea69c6d25d547df50280ce1aa7d4d34320fd21c4f9e662a6a551"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-282.json": {
+      "bytes": 775,
+      "sha256": "597556eb9eeeb2665e97087bece293b5ce97d567cc4d69b8313c4de1f52d6e73"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-282.npz": {
+      "bytes": 3591373,
+      "sha256": "71cfb921e6de086d3d59636a635fcdc2908470853781bd30df0e3f04cf104939"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-283.json": {
+      "bytes": 775,
+      "sha256": "ed8f906ba90ae396d6adc525fc58544dea03bc29f5e05dfb015c126820b88d4a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-283.npz": {
+      "bytes": 4082532,
+      "sha256": "75d157ad1ec8ca016e0a643618db92791e3b1f13b93697680fc6e84b4de3a089"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-284.json": {
+      "bytes": 775,
+      "sha256": "284885984d63f3fa9d92cbd831f398c77887ba90361eba4408ffcb03b077a7cf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-284.npz": {
+      "bytes": 4216907,
+      "sha256": "596076354838200df29b4ded0efe89f18e6742934fb7c23e2e85c71372ebd5bc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-285.json": {
+      "bytes": 775,
+      "sha256": "a9c0303321fb7d364a40eaf0322d8af337d861a091e36c16b7aa5cfdfaeb0159"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-285.npz": {
+      "bytes": 3536969,
+      "sha256": "c3044205236060ae2a9588acd118203b3ecc8f7ddfc85ea12e4610471631ab70"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-286.json": {
+      "bytes": 775,
+      "sha256": "292523367a1a74e4273880fed553ec2b978ec09c0419d703a79b4bd1a4a6bdd2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-286.npz": {
+      "bytes": 3735904,
+      "sha256": "3b9c6b455001a70cf282290c6d30fe29b56e7ef4f926e4d794e39a917fd1760d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-287.json": {
+      "bytes": 775,
+      "sha256": "4a277740fc7f0ffc96a856ed3f9b791a4f87bb330995656464e49aba9c68616b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-287.npz": {
+      "bytes": 3895401,
+      "sha256": "700eff38015d62cba2cd8492f3dd312a8adeb93dc1a316c79a94e6ee5ce55e3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-288.json": {
+      "bytes": 775,
+      "sha256": "175533788f40bca6a43629490d1b26b0587afae84a6d3753bbc488bf3f28decf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-288.npz": {
+      "bytes": 4158541,
+      "sha256": "60b43c19c4281eec7f44e096508912f6e29b03ad3257f4477ddda765fd1b2a66"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-289.json": {
+      "bytes": 775,
+      "sha256": "d6045cd53a4ddfad530f3e4eb5543d34ca46891c71fc0a0b4c804dc780aedf77"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-289.npz": {
+      "bytes": 3968877,
+      "sha256": "3110d5e370989f5aa3dd9890f75d2fc7be2d60c6716a0ec42d93150976c91a83"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-290.json": {
+      "bytes": 775,
+      "sha256": "4ba4b4fe465adf042ebe187193e04a79aad4e708a01ccaac3b98f6104910e4f5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-290.npz": {
+      "bytes": 4004783,
+      "sha256": "0e0e0b4c371efc1e62771f9d7dc4592ff322ca1a67220a3197c5526af06d5e8d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-291.json": {
+      "bytes": 775,
+      "sha256": "eb1f74f293043461b0ea2764981c5ad603fc874f0f3ebbe0f96df4cdae26ab85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-291.npz": {
+      "bytes": 3822529,
+      "sha256": "7a90607e4f583d7c49f662851d7e5f5cca64e5113e1d26e11862376463caa07b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-292.json": {
+      "bytes": 775,
+      "sha256": "3733b0d2774feb262aafc4eaa706199fd6033a250ca657ef8fa7426c9f5b6e6f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-292.npz": {
+      "bytes": 3958375,
+      "sha256": "2eb4b691008b453ccd80b6809950fdd5d2093c629dcb7c9ffa4025032ef9b01c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-293.json": {
+      "bytes": 775,
+      "sha256": "b438c2063401e3d34d3b9b8e9e9d65876735e92a105166821817906d03f697c7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-293.npz": {
+      "bytes": 4224019,
+      "sha256": "69b79323e987b2707e59d88e02b1f1cf50d65f907bfb7b9f97e0a858f49e94d5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-294.json": {
+      "bytes": 775,
+      "sha256": "b1f76d151f9d5abadd80303661d1d2a76edc62b3865ecebee5c034ec09b83f54"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-294.npz": {
+      "bytes": 4149287,
+      "sha256": "ed37edf2ed41d2a9f7838be602cde6c73bfa820bd42119d0d7ec70a5a4f5099b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-295.json": {
+      "bytes": 775,
+      "sha256": "e8a35a71840089d74fe4d12b7ebe6c3eef50e9a359f1dd732ffd6759d96792a7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-295.npz": {
+      "bytes": 3581382,
+      "sha256": "4b89585f962059dd6c0c5e09c2e7dc1cc86dcd85450f69fab66ff75629c9303a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-296.json": {
+      "bytes": 775,
+      "sha256": "9bed70765ae6b7c35c9e99bf11861f84d83655198db8cffcf5bb6bd0622da5e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-296.npz": {
+      "bytes": 3385673,
+      "sha256": "ce3d602358cdc2ba35fcf34188a5a6e5d4e94c2a098d925a8a04d4eaab702688"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-297.json": {
+      "bytes": 775,
+      "sha256": "78ed55c2a32aaab3b46c5e85c550090b64e120ea1eee59ba032bb1486365375e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-297.npz": {
+      "bytes": 3343139,
+      "sha256": "f4e27fa2b79c2c7d413b10f84da310e750a9a2dcd555df894c19270ac7a1c2a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-298.json": {
+      "bytes": 775,
+      "sha256": "ab1ec36dc57ea68b6bd1a761f87d6f98af677cd99678bb41a9e9b02a5578b4f7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-298.npz": {
+      "bytes": 3597718,
+      "sha256": "3b5424a7114aa5e24295fd81c28c6396fbe0071c20963182c66d5f68d28527b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-299.json": {
+      "bytes": 775,
+      "sha256": "2433a836099e9121e98e2cafea1843ac5e4f80c239d9a1b22c06629e59a9fefb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw/c004-prospective-299.npz": {
+      "bytes": 4002590,
+      "sha256": "6201ba62db60296943f565ac0adb73862891a29b2493e4b5c9234b22449a480c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/prospective_raw_manifest.json": {
+      "bytes": 254690,
+      "sha256": "6a16fc1de4581ee8fd749544badbd1f7d14d1910010f992f1f65027e39200502"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_execution.npz": {
+      "bytes": 3241395,
+      "sha256": "dd7b638542f55cfba43d0a99f691e644ab57a4bc705a317ac97f2a6eacf0e76b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_execution_manifest.json": {
+      "bytes": 12048,
+      "sha256": "c7fc1bd2b93efa4036e6d135c21d9e30a5c25c3f09e87eb203b48ee2c5b249e4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_latency_inputs.npz": {
+      "bytes": 392340,
+      "sha256": "4a3215247edd15bc5fdaf531650f6adc73890cff31bc92939d790995cca7f4d6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-000.json": {
+      "bytes": 743,
+      "sha256": "f2cf4192381c5c724892fdb86d7dcd04f3fb790404ef779cffaecf03bbeeac1f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-000.npz": {
+      "bytes": 4012265,
+      "sha256": "20f087372a800b9ba4b8c5df8b23b549e8cf967eaa14a69c540f4869e98cbdbb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-001.json": {
+      "bytes": 743,
+      "sha256": "adb9d850afc740df94f968dc580195745efefb290538ed833f9afbe41a0c0f70"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-001.npz": {
+      "bytes": 4009381,
+      "sha256": "dfe9f4ef127f8b2a9f60531a9029793936466f0a98220cf1d67ca1849964b02f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-002.json": {
+      "bytes": 743,
+      "sha256": "7ff1fe42cd0d1d161fb6b964c3d00457e32b1db9e2ef71dbcb68eb1ceb19b91d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-002.npz": {
+      "bytes": 3579811,
+      "sha256": "2a8a13c6c155232d57a6e5333965bdc75600e635c3a8fcae7a81338e200e93ae"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-003.json": {
+      "bytes": 743,
+      "sha256": "875006cc51390d4c1ca2920ac5f017d88c98416da88c8c904ba37f3f615dd58f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-003.npz": {
+      "bytes": 4026102,
+      "sha256": "447184f6f7522cabe07c11db4ce12daa4af4332a3d4791a2ce5166007268d5ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-004.json": {
+      "bytes": 743,
+      "sha256": "b76ff33ef25c38528f0fcc4bc453458ca8226fb87c4493441568e16b43bec7be"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-004.npz": {
+      "bytes": 4232044,
+      "sha256": "2d076c0c4e6d027671765701a47fdb34fe532528929129215bcd689e6784b181"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-005.json": {
+      "bytes": 743,
+      "sha256": "93774b4b1ecd582e74b01675b22e4362ceb400a8f41cbf9cd654f8fc67cfb436"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-005.npz": {
+      "bytes": 3412565,
+      "sha256": "74e684d43a7d9f02b4469790185604f793a70ec1ede495a605db3a2c2dbf8abc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-006.json": {
+      "bytes": 743,
+      "sha256": "b684ff01bd442ef5166b3c0eb51d82e7aee907d318ce0bc8106252376cefe255"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-006.npz": {
+      "bytes": 3776386,
+      "sha256": "867729e9be93217a2caee784448ebcba141575152e589f2220de0eb828086020"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-007.json": {
+      "bytes": 743,
+      "sha256": "b5c06ef61318ed717b72a8e0fe47b965d50bfab3d30b4e981d0123ddf94ee7cb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-007.npz": {
+      "bytes": 3905751,
+      "sha256": "f3ed25253700ce5ae5a8ff60f5000daac0dbbb1ed28fb1b61168987cccec3e3c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-008.json": {
+      "bytes": 743,
+      "sha256": "ce4fabb2f511f51533557cadc32f6197335f626e3aa6a55efe172f3c190b885c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-008.npz": {
+      "bytes": 3997137,
+      "sha256": "eb93d72e28742ee1da6ca9726417ec79a3d2445796a93020f8a8bbc58351a7f5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-009.json": {
+      "bytes": 743,
+      "sha256": "8de39435018ae8edb9ce71b3148a986ba82c6641ce7189db2fdc639c080110b5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-009.npz": {
+      "bytes": 3729463,
+      "sha256": "70f20d0e6fd0e39b32690799cc61ee5750dc7cd9ff74909cad1fabe158a14b7b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-010.json": {
+      "bytes": 744,
+      "sha256": "4b8a9eaa5b70e3cfcde983906afba10c1c377528d35bf187034c366dd5047d85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-010.npz": {
+      "bytes": 3850612,
+      "sha256": "bce7166ad877783f440ccf6c2120da68dbc3ee2ba60b0bc2ae2faafd328c5115"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-011.json": {
+      "bytes": 744,
+      "sha256": "48b28b9691af5987958e6bbf8f6106eee3707ee4bd31352bf850cd90b4225079"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw/c004-smoke-011.npz": {
+      "bytes": 3890782,
+      "sha256": "80115eba3a3916812505e6f9c6ab85fff4e5634aff4ba77908e729ae5bfe0f6f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/data/smoke_raw_manifest.json": {
+      "bytes": 10187,
+      "sha256": "cbef51bec024642e2ec6e180ff9b41d80c4fd6bf1f829ea938810193078d3045"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/decision.json": {
+      "bytes": 4103,
+      "sha256": "7578b8556b97cd3979d6831c408af91a9e67b5f46f28dfd8c867513c165bc233"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/derive_flops_graph.py": {
+      "bytes": 1080,
+      "sha256": "6fd625d0457697bc57d4f242f2f6c7a7e6533f74ce624936568483eaad1470d2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/derive_flops_symbolic.py": {
+      "bytes": 2271,
+      "sha256": "773522657991de460f9f489124926c0b935c94229c5b27dd2419e657c1b83389"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/development/cycle_001_consumed_diagnosis.json": {
+      "bytes": 15352,
+      "sha256": "1ed6639a65d93b7f77af34ce6e2f8ba2ffd6ed825c309e30f88bd2b9643e2160"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/development/cycle_001_cycle_003_diagnosis.json": {
+      "bytes": 21956,
+      "sha256": "d18bf37175113e36f7bc24ec8542a457688fcce92f6434f816eac08537136fcc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/development/selected_threshold.json": {
+      "bytes": 761,
+      "sha256": "d129d840d130aeb7f0c596211b2025d8b2c0e825dec88ffacc739de05f61bef8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/development/threshold_selection_protocol.json": {
+      "bytes": 2484,
+      "sha256": "3d0396a0c2c9530165de23377986e6a436196dd1f9c34456c9982c65530d9d98"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/development/threshold_selection_result.json": {
+      "bytes": 34721,
+      "sha256": "f64f530743174b1e5c119e9cbf0c402cdacf320a722c1dd81e1a96ed3dc5d2e2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/diagnose_consumed.py": {
+      "bytes": 12695,
+      "sha256": "de92c86868c47858c52cec15db99e4bdd26a1890dc5b404c17ca3d353999cec1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/expected_artifact_roles.json": {
+      "bytes": 705,
+      "sha256": "944278e5ed53563990019a596ebb208b3de9b19573a546a3a2d2f4c8a80f84c6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/finalize.py": {
+      "bytes": 5830,
+      "sha256": "d74b1f8fb8800179d67f41cda21eda1c6e6718ee952d659e2148c41601ea2d7f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/freeze/compiled_gate.npz": {
+      "bytes": 8957,
+      "sha256": "567ff791bf496d069588603a8b6dd760bd664288513c172a3392bc4da648d056"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/independent_verify.py": {
+      "bytes": 19136,
+      "sha256": "29166deb9b4c64b447f29c1d5df3e4295ceba3c51c2a53fb6bd9ef16465436d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/input_loader.py": {
+      "bytes": 1906,
+      "sha256": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/invalidate_cycle.py": {
+      "bytes": 1609,
+      "sha256": "54c41d8e80c57c7bba60bf088a9e79bbf932e1f1d7b93e9ccb757b1a261f16bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/latency.py": {
+      "bytes": 7578,
+      "sha256": "964f0cafc15fedfdcf5ca86bd11c31d02846e887128512d474361093cd151ed2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/bootstrap_replicates.npz": {
+      "bytes": 898781,
+      "sha256": "6711c53e4e76f8d4e0b88cc806d28fb562ee1c4fcca8fdbef0031e9c1801764e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/bootstrap_summary.json": {
+      "bytes": 1561,
+      "sha256": "f170294176ea274cf6e2902b83ead77ca97bc648cfcaf89e59d660919815c2d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/compute_ledger_realized.json": {
+      "bytes": 1126,
+      "sha256": "328a5c5f61174e025f98caa558397fd58dbfa507f7049ccf3a4bcc97b2621013"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/latency.json": {
+      "bytes": 10410,
+      "sha256": "de12eb27eefc6ea444383c082711158b13965ee8d8f210589fb5ac14c8eacb67"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/prospective_episode_metrics.npz": {
+      "bytes": 20739,
+      "sha256": "3180426cf65801daf3ccbfda1e970f44c33c1ea1a66291c710b006a849191730"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/stagewise_ranking.json": {
+      "bytes": 447,
+      "sha256": "bf8f01b7bbe2d9e9d6264441cd1cd9f121c32470190244378cc4aec58ddba928"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/metrics/within_episode_histogram_ledger.json": {
+      "bytes": 63131,
+      "sha256": "5c516663d2db8244b64dd99f85a710faf5455480465b8e5cfbc629f3751f33c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/numerical_equivalence_contract.json": {
+      "bytes": 5280,
+      "sha256": "9810a40704da5e0a7f712683961ba013b6ed1dd6bf31cd2fe066815ad52d7630"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/operation_graph.json": {
+      "bytes": 8054,
+      "sha256": "f03ed2ea185406ab6eff6ac3088271fea788e7702e514724c92846330b1b6b6e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/operation_ledger.json": {
+      "bytes": 1407,
+      "sha256": "4a4d638a8c5eb5435ace5d0fed3bb23d5438520eb329b03a808a96e0de751da0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/outcome_mapping.json": {
+      "bytes": 687,
+      "sha256": "ffe4eccbdfd1d4aa54cd28273ed8ac83fae51ccbb4f68b660226aec17fb78a5c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/prepare.py": {
+      "bytes": 26939,
+      "sha256": "9dff251c31d02102bfbcd9768bd82a13adbc3d9a18346b61d3a980483803909c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/preseal_tests.py": {
+      "bytes": 4419,
+      "sha256": "1b155b8a678761476c13015123f4a60ab78973ea913040b56733cfdf76c8e29b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/protocol.json": {
+      "bytes": 3536,
+      "sha256": "7139252791122855c0d2ae55b11e9c43cef7a73fa70a15017ce04a822036654b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/qualify_consumed.py": {
+      "bytes": 11820,
+      "sha256": "5c93b803c5f1d1dbb020caada829f16727babf2c0102a132eb24358222bb73b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/qualify_runtime.py": {
+      "bytes": 6435,
+      "sha256": "712609b55406acc2f0c47b0b5d4b0ab085e2cefba85f90e204c08c4bdd2f052d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/qualify_simultaneous.py": {
+      "bytes": 4788,
+      "sha256": "f28c4af3a8693394e73e297f6935e6f7e7d81c51a830c131cdc9f927c45bbd9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/qualify_threshold_recalibration.py": {
+      "bytes": 5312,
+      "sha256": "2b58d8eaaa517922256930c2b59fd57e4225a0e01ccba8921a02f1c8443826f2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/runner.py": {
+      "bytes": 27397,
+      "sha256": "89bebdb38062724f5ffc72f8ebd6d6e433439fb6a569e2ad2ac467cbf6cd76b3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/select_threshold.py": {
+      "bytes": 25177,
+      "sha256": "872c2a4666f969ab04350f38c604b5994da6746aba8c60c6dba669e358f0f734"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/semantic_feature_names.json": {
+      "bytes": 181120,
+      "sha256": "16446b37029244c2a99adc0318d9e6473efe6fdf6871e7623f0a1c7c2705a805"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/transitive_source_package_manifest.json": {
+      "bytes": 7260,
+      "sha256": "1d56cbc25abb0250c8c25ccef715c79e197c1126d19289ce7b392f7c50c7f5d7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/verify_final.py": {
+      "bytes": 1418,
+      "sha256": "a2f398744d935cbffdeda7e797c5970871c54a7dc6fef4a880fc81c523f196f4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration/verify_pre_data.py": {
+      "bytes": 1493,
+      "sha256": "299a2ad9814423f4a3946d85821cd0d057b9e793b02809c8bbf3a5f8d34000aa"
+    }
+  },
+  "path_set_complete": true,
+  "path_set_policy": "all durable files; interpreter caches, dot-temporaries, manifest, and manifest-verification file excluded",
+  "root": "runs/lewm_v5_readiness_program/cycles/cycle_004_threshold_recalibration",
+  "schema_version": 1,
+  "terminal_outcome": "cycle_execution_invalid",
+  "v5_outcome_episodes": 0
+}

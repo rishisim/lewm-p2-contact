@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sealed_files": {
+    "runs/lewm_adaptive_compute_distribution_contract/audit/v4_manifest_schema_compatibility_seal.json": "04c1e67c38b445f748a64e4241fd6f3a0f60a88861b125c198ef33cc9705762a",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/v4_raw_loss_arithmetic_compatibility.json": "51afd3ccf998486c86d3c3e1bf425d84126fdd4bed4e04f8e1c062afa683021f",
+    "runs/lewm_adaptive_compute_distribution_contract/evaluate_v4_numeric_compat.py": "ee29c181a6503b19e0dd0294f94ac1e2e51338f5c6b851b3794bbb79725b6e56",
+    "runs/lewm_adaptive_compute_v4/evaluate.py": "be0a66e50fe4cdbcdcb02e45697c61d181817224921b343bda141d7de64eef3f"
+  },
+  "status": "frozen_before_materializing_v4_diagnostic_recomputation",
+  "v3_test_targets_opened": false,
+  "v4_outcome_sha256": "e1fcae6089c8ff7a39ba5c30041105ac45bab1aac95eba3d1227bf2b5c30246e"
+}

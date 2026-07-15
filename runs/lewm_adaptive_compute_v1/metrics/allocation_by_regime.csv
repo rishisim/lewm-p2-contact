@@ -1,0 +1,5 @@
+regime,n,n_episodes,mean_selected_depth,mean_gain_vs_depth0,allocation_source
+impact,197,90,1.0,0.0010436793718639893,learned_adaptive
+interaction,1464,90,1.0,0.001100372712802191,learned_adaptive
+transport_free,1618,90,1.0,0.0011320468838608082,learned_adaptive
+static,141,76,1.0,0.0009928722898981074,learned_adaptive

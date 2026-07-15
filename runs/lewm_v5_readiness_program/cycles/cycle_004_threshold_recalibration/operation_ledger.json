@@ -1,0 +1,28 @@
+{
+  "additional_refiner_flops_per_call": 264960,
+  "base_flops_per_row": 70529190,
+  "convention": "one scalar subtraction, multiplication, reduction add, sqrt, division, affine bias add is one FLOP; comparison/clamp/min is separately reported non-FLOP; detach/view/flatten/concatenate/index/scatter/one-hot assignment are zero FLOP",
+  "derivations": {
+    "agree_exactly": true,
+    "executable_graph": {
+      "path": "audit/flop_derivation_graph.json",
+      "sha256": "11da2d2e9d475725ab9ee4187f595318bc1de8c9e0ab9a71513bf57322a9d5e7"
+    },
+    "independent_symbolic": {
+      "path": "audit/flop_derivation_symbolic.json",
+      "sha256": "08e8e1bdc3184495a136c9e668ec92f71f3758734a4fa03edf76451a5465f5d1"
+    }
+  },
+  "exact_total_compute_comparator": "adaptive refiner calls + reached_gate_evaluations*7997/264960 fractional adapter calls; analytic mixture exactly matches; seeded integer mixture rounds up",
+  "feature_construction_counted_at_every_reached_gate_decision": true,
+  "feature_graph_path": "operation_graph.json",
+  "gate": {
+    "dual_affine_score_flops_per_reached_evaluation": 4196,
+    "feature_flops_per_reached_evaluation": 3801,
+    "nonflop_comparison_min_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7997
+  },
+  "mandatory_depth1_refiner_flops_per_row": 669184,
+  "schema_version": 1,
+  "semantic_feature_names_path": "semantic_feature_names.json"
+}

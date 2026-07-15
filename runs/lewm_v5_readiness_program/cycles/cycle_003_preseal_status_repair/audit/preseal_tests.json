@@ -1,0 +1,47 @@
+{
+  "consumed_or_synthetic_inputs_only": true,
+  "internal_checks": {
+    "cpu_feature_order_values_bitwise_exact": true,
+    "cpu_feature_shape": true,
+    "feature_names_unique_and_complete": true,
+    "gradient_boundary_detached": true,
+    "mps_feature_values_bitwise_exact": true,
+    "mps_feature_values_within_repository_tolerance": true,
+    "operation_graph_feature_flops": true,
+    "operation_graph_gate_score_flops": true,
+    "operation_graph_nonflops": true,
+    "operation_graph_total_flops": true
+  },
+  "passed": true,
+  "prospective_episodes": 0,
+  "schema_version": 1,
+  "subprocess_tests": [
+    {
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "runs/lewm_adaptive_compute_discovery/tests/test_models.py"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "........                                                             [100%]\n8 passed, 4 subtests passed in 0.75s\n"
+    },
+    {
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "runs/lewm_adaptive_compute_distribution_contract/tests/test_contract.py"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ".............                                                            [100%]\n13 passed in 1.16s\n"
+    }
+  ],
+  "v5_outcome_episodes": 0
+}

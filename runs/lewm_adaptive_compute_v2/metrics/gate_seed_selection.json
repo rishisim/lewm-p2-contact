@@ -1,0 +1,24 @@
+{
+  "checkpoint_audits": {
+    "260813": {
+      "file_sha256": "6d2ac8dd7a06fa504df10bb633c496ea1ae5409bea81df722533ecf3f62f18cb",
+      "state_tensor_hash": "027dc37086758ab95f92b69cfb37bb80a1775df6993a6506cb16ae78e0a5593f"
+    },
+    "260814": {
+      "file_sha256": "e6222692297e901e81e14421d6df13aeb5efba965d93d74f54c149d8fd53784c",
+      "state_tensor_hash": "652c705e49a371920f0cd58db5f02309f5951022eb443a9ee095a3d2c0594105"
+    },
+    "260815": {
+      "file_sha256": "51fc721d382385f8b71be8e06b289e9f1a2b692643253a7b0aee017d6e50d08d",
+      "state_tensor_hash": "809d56e5b9ec155b8ce7e7df92a66aad684b59b45ea8cc84523591135f368aee"
+    }
+  },
+  "seed_order": [
+    260813,
+    260814,
+    260815
+  ],
+  "selected_best_epoch": 3,
+  "selected_seed": 260815,
+  "selection_rule": "largest mean Spearman; ties within 1e-12 use smaller calibration objective then seed order"
+}

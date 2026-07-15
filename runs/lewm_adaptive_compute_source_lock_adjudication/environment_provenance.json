@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "not_constructed_static_eligibility_failed",
+  "python_required": "3.10.20",
+  "candidate_clone_created": false,
+  "candidate_virtual_environment_created": false,
+  "frozen_sync_attempted": false,
+  "substitution_performed": false,
+  "source_or_lock_modified": false,
+  "scientific_environment_executed": false,
+  "hdf5_opened": false,
+  "import_locations": null,
+  "installed_packages": null,
+  "platform_binding": null,
+  "reason": "Protocol permits environment construction only after exactly one static candidate passes; zero passed."
+}

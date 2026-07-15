@@ -1,0 +1,22 @@
+{
+  "stages": [
+    {
+      "positive_sign": true,
+      "reached_rows": 11400,
+      "spearman_score_gain_rho": 0.2325999753386526,
+      "stage": 1
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 3172,
+      "spearman_score_gain_rho": 0.08540072288212121,
+      "stage": 2
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 909,
+      "spearman_score_gain_rho": 0.011630128496705023,
+      "stage": 3
+    }
+  ]
+}

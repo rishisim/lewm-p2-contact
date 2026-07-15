@@ -1,0 +1,48 @@
+{
+  "consumed_fit_episodes": 240,
+  "consumed_selection_episodes": 120,
+  "copied_artifact_hashes": {
+    "data/fit_evaluated.npz": "ad326f419bc7ae584b5cb4605da589e6e3a426d5c057f23d37089e8b95c17906",
+    "data/fit_evaluated_manifest.json": "0ce73bbd327fa2f7f7b7710e67593972dfabb46e8e0804d7f67f886e263c20d7",
+    "data/fit_raw_manifest.json": "a02840cd927bc0cc71984ae3f6de9a5386293d683bb5ac6b0d8f6cc714b98ed2",
+    "data/selection_evaluated.npz": "e025d591192d6541c960b48f3d5cf40ecfc46bdb9edce52367d53c4c7b217e34",
+    "data/selection_evaluated_manifest.json": "3fce2abf238f6ee8f055bcdf91e2f551a9a3289e573b19f013a71254897af5b9",
+    "data/selection_raw_manifest.json": "f52110c782e122b0eea9e824aca486f28564b4081207b8ba6850f332590dea79",
+    "development/fit_lock.json": "e98aae792d97a3cd57c16df6f1cdc2bd74d533afe08ceb887a71e4bc4dfd42aa",
+    "development/fitted_candidates.npz": "f4bffc40059f5890cf57b95891c62887d4b3b0ac7e58689e2a2d4aba3e75aab8",
+    "development/gate_selection_ledger.json": "3bfb1ee62fce7dacce490132a2c6d32ea31ecf47be9eaec6fe7df1f46f67a520",
+    "freeze/compiled_gate.npz": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "freeze/gate_fit.npz": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "freeze/gate_freeze.json": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "freeze/gate_freeze_seal.json": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36"
+  },
+  "maximum_absolute_threshold_cast_change": 6.588320083933397e-09,
+  "new_fit_episodes": 0,
+  "new_selection_episodes": 0,
+  "numeric_thresholds_float64_storage": [
+    0.19465729885363534,
+    0.1568665868361991,
+    0.15153321811129283
+  ],
+  "runtime_thresholds_float32": [
+    0.19465729594230652,
+    0.15686658024787903,
+    0.15153321623802185
+  ],
+  "schema_version": 1,
+  "selected_candidate_id": "stage_dual_r0.01_q0.85",
+  "sole_executable_repair": "materialize threshold comparison tensor as float32 instead of unsupported MPS float64",
+  "source_cycle": "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit",
+  "source_hashes": {
+    "artifact_manifest": "1b18578c5f69f55d7648c0c3ff1bcbc230e0bf88800c62e2accdb86afdaf0349",
+    "compiled_gate": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "decision": "3015a4fbe6275d781c86856c0198b30a0f99009c2520967f725d1148e94f522b",
+    "gate_fit": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "gate_freeze": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "gate_freeze_seal": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36"
+  },
+  "source_prospective_episodes": 0,
+  "source_smoke_episodes": 0,
+  "status": "exact_frozen_candidate_carried_from_consumed_cycle_006",
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,47 @@
+{
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 260818,
+  "calibration_episodes": 90,
+  "encode_batch_size": 64,
+  "final_depths": [
+    1,
+    2,
+    4
+  ],
+  "gate_batch_size": 256,
+  "gate_dropout": 0.05,
+  "gate_hidden_dims": [
+    128,
+    64
+  ],
+  "gate_learning_rate": 0.0003,
+  "gate_max_epochs": 150,
+  "gate_min_delta": 1e-05,
+  "gate_patience": 20,
+  "gate_ranking_weight": 0.25,
+  "gate_seeds": [
+    260813,
+    260814,
+    260815
+  ],
+  "gate_smooth_l1_beta": 0.5,
+  "gate_weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "latency_repeats": 5,
+  "mean_call_budget": 2,
+  "mode": "full",
+  "permutation_seed": 260817,
+  "predict_batch_size": 512,
+  "random_seed": 260816,
+  "reserved_smoke_episodes": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "selection_seed": 260813,
+  "test_episodes": 90,
+  "train_episodes": 420
+}

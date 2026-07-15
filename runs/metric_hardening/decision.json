@@ -1,0 +1,32 @@
+{
+  "decision": {
+    "cube_normalized_local_expansion_pass": true,
+    "cube_normalized_model_sensitivity_pass": true,
+    "fetch_convergent_local_expansion_pass": true,
+    "fetch_convergent_model_sensitivity_pass": true,
+    "fetch_convergent_support": true,
+    "part1_flags": {
+      "part1_survives_all_controls": false,
+      "targetnorm_double_match_pass": true,
+      "targetnorm_matched_position_pass": true,
+      "targetnorm_metric_pass": true,
+      "targetnorm_phase_pass": true,
+      "whitened_double_match_pass": false,
+      "whitened_matched_position_pass": false,
+      "whitened_metric_pass": false,
+      "whitened_phase_pass": false
+    },
+    "part1_survives_all_controls": false,
+    "verdict": "confirmed_motion_free_contact_difficulty"
+  },
+  "provenance": {
+    "bootstrap_samples": 1000,
+    "bootstrap_seed": 260727,
+    "cube_heldout_rows": 760,
+    "cube_rows": 1140,
+    "cube_whitened_recompute_max_abs_diff": 7.749132146273041e-05,
+    "fetch_val_rows": 9400,
+    "neighbor_k": 10,
+    "neighbor_k_min": 5
+  }
+}

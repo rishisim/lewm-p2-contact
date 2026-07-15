@@ -1,0 +1,24 @@
+{
+  "frozen_at": "2026-07-13T19:51:06-07:00",
+  "status": "frozen_before_v3_split_generation_or_outcome_access",
+  "files": {
+    "PLAN.md": "21efb81487e7eee4506f20318791a7d54fdfca7c33c5c356374e344089dce9bf",
+    "full_config.json": "63a83582217666eed01d2d5382d68c88b59e4aed3704792968aba2b5c57c8744",
+    "smoke_config.json": "bdd50bef8cdeb367b38086d004bf0ab73ff244071f10cf18b9e9a08b13041448"
+  },
+  "prior_exclusion_union_count": 1242,
+  "prior_exclusion_union_sorted_int32le_sha256": "ac71dbe795efdd0217983cd615a55ed81244303ae1243d559932d2a5def62915",
+  "amendments": [
+    {
+      "at": "2026-07-13T19:59:45-07:00",
+      "kind": "pre_data_clerical_source_size_correction",
+      "prior_plan_sha256": "c8b89b2715db9eef09158c479fa372bc42821d88571d4abaebf8c0abb16141f8",
+      "amended_plan_sha256": "21efb81487e7eee4506f20318791a7d54fdfca7c33c5c356374e344089dce9bf",
+      "smoke_reached_split_generation": false,
+      "smoke_accessed_hdf5": false,
+      "smoke_accessed_outcomes": false
+    }
+  ],
+  "v3_split_generated": false,
+  "v3_outcomes_inspected": false
+}

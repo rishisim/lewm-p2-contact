@@ -1,0 +1,11 @@
+[
+  {
+    "best_calibration_objective": 0.005016250070184469,
+    "best_epoch": 1,
+    "checkpoint_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/checkpoints/refiner_seed_260713.pt",
+    "elapsed_seconds": 0.3409002920088824,
+    "epochs_completed": 3,
+    "seed": 260713,
+    "trainable_parameters": 71200
+  }
+]

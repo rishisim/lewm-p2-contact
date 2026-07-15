@@ -1,0 +1,438 @@
+{
+  "artifacts": {
+    "allocation_freeze": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/metrics/test_allocations_frozen_pre_outcome.npz",
+    "causal_feature_cache": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/cache/causal_post_call_features.npz",
+    "figures": {
+      "manifest": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/figures/figure_integrity.json",
+      "paths": {
+        "exact_allocation": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/figures/03_exact_allocation_histogram.png",
+        "gate_diagnostics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/figures/02_gate_calibration_quantiles.png",
+        "policy_performance": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/figures/01_policy_losses_and_comparisons.png",
+        "posthoc_regimes": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/figures/04_posthoc_regimes.png"
+      },
+      "pngs": {
+        "exact_allocation": {
+          "byte_count": 99250,
+          "channels": 4,
+          "height_px": 920,
+          "sha256": "fc567535f70a4203b53de1310161fc1540e3ff4e4682206f24454800b0f8af8c",
+          "width_px": 1856
+        },
+        "gate_diagnostics": {
+          "byte_count": 143572,
+          "channels": 4,
+          "height_px": 812,
+          "sha256": "5a8e09757257fd0b93f739cc43cb6bb6397348d7a209991f57f9f6f757555b64",
+          "width_px": 2216
+        },
+        "policy_performance": {
+          "byte_count": 217447,
+          "channels": 4,
+          "height_px": 1460,
+          "sha256": "27676feff9861efb6296aec7a7897fd2ba47057a48b43d45f964f63694907ce7",
+          "width_px": 2526
+        },
+        "posthoc_regimes": {
+          "byte_count": 118072,
+          "channels": 4,
+          "height_px": 830,
+          "sha256": "28a53542403eb9395481dd72d7259aea5a7252047b03468803735fe8a1160986",
+          "width_px": 2144
+        }
+      },
+      "sources": {
+        "allocation_rows": {
+          "columns": [
+            "count",
+            "depth",
+            "fraction",
+            "policy",
+            "total_calls"
+          ],
+          "row_count": 18,
+          "sha256": "e228bc8527406986b2391946ac3ab251dbdf32fad73c52416377383a7fc7ff8e"
+        },
+        "calibration_rows": {
+          "columns": [
+            "actual_mean",
+            "benefit",
+            "mae",
+            "pearson",
+            "predicted_mean",
+            "rmse",
+            "scope",
+            "spearman"
+          ],
+          "row_count": 2,
+          "sha256": "967996cd9d9ad86e373fef37e8ac6204d59e35beb58534a8ccf0e34ca70314c4"
+        },
+        "comparison_rows": {
+          "columns": [
+            "comparison",
+            "raw_ci_lower",
+            "raw_ci_upper",
+            "raw_mean_difference",
+            "whitened_ci_lower",
+            "whitened_ci_upper",
+            "whitened_mean_difference"
+          ],
+          "row_count": 6,
+          "sha256": "ec417bf0b3782e199ed39e9253d6d2cc7432f0f57e04894c0bef1128e6ddcde2"
+        },
+        "policy_rows": {
+          "columns": [
+            "continuation_calls",
+            "depth_1",
+            "depth_2",
+            "depth_4",
+            "diagnostic_only",
+            "first_calls",
+            "mean_calls",
+            "policy",
+            "raw_mean_loss",
+            "total_calls",
+            "whitened_mean_loss"
+          ],
+          "row_count": 6,
+          "sha256": "7273a85d8c7ca287708253b87a9ada85860bf06c8d19e5aca8c957fac60eb9ee"
+        },
+        "quantile_rows": {
+          "columns": [
+            "benefit",
+            "count",
+            "mean_actual",
+            "mean_predicted",
+            "quantile"
+          ],
+          "row_count": 10,
+          "sha256": "6b0426c7275023f2efeff07b94c97ea70ba10a982eb4aaf52c7a9c94cc530d46"
+        },
+        "regime_rows": {
+          "columns": [
+            "count",
+            "depth",
+            "fraction",
+            "n",
+            "raw_benefit_vs_uniform",
+            "regime"
+          ],
+          "row_count": 9,
+          "sha256": "723a7192d75937c95cc57d91ec7b224644fccd1241a0b154abfbfc755102732b"
+        }
+      }
+    },
+    "metrics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/metrics",
+    "provenance": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v2/smoke_run/provenance.json"
+  },
+  "compute": {
+    "adaptive_continuation_calls": 38,
+    "adaptive_first_calls": 38,
+    "adaptive_refiner_flops": 50857984,
+    "adaptive_refiner_plus_gate_flops": 63630848,
+    "adaptive_total_calls": 76,
+    "dense_exit_diagnostic_calls": 152,
+    "device": "mps",
+    "gate_flops_per_transition": 336128,
+    "gate_parameter_count": 168258,
+    "latency": {
+      "adaptive_continuation": {
+        "batched_continuation_invocations": 3,
+        "continuation_calls": 38,
+        "device": "mps",
+        "first_calls": 38,
+        "latency_seconds_median": 0.12801504150411347,
+        "latency_seconds_repeats": [
+          0.24712975000147708,
+          0.008900333006749861
+        ],
+        "samples": 38,
+        "total_calls": 76
+      },
+      "first_call": {
+        "block_invocations": 1,
+        "device": "mps",
+        "latency_seconds_median": 0.00421941649983637,
+        "latency_seconds_repeats": [
+          0.004417874995851889,
+          0.0040209580038208514
+        ],
+        "processed_rows": 38
+      },
+      "gate_feature_mlp_allocation": {
+        "device": "mps",
+        "latency_seconds_median": 0.0036184584969305433,
+        "latency_seconds_repeats": [
+          0.0037197499914327636,
+          0.003517167002428323
+        ]
+      },
+      "uniform_depth2_execution": {
+        "batched_block_invocations": 2,
+        "continuation_calls": 38,
+        "device": "mps",
+        "first_calls": 38,
+        "latency_seconds_median": 0.004011812503449619,
+        "latency_seconds_repeats": [
+          0.0039301250071730465,
+          0.004093499999726191
+        ],
+        "samples": 38,
+        "total_calls": 76
+      }
+    },
+    "refiner_flops_per_call": 669184,
+    "refiner_flops_per_call_recomputed": 669184,
+    "test_gate_total_flops": 12772864
+  },
+  "confirmatory": false,
+  "mode": "smoke",
+  "paired_comparisons": [
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -4.546048627682921e-05,
+      "ci_low": -4.546048627682921e-05,
+      "comparison": "adaptive_vs_uniform_d2",
+      "diagnostic_only": false,
+      "mean_benefit": -4.546048627682921e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -0.7294294238930213,
+      "ci_low": -0.7294294238930213,
+      "comparison": "adaptive_vs_uniform_d2",
+      "diagnostic_only": false,
+      "mean_benefit": -0.7294294238930213,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -1.5076652869747228e-05,
+      "ci_low": -1.5076652869747228e-05,
+      "comparison": "adaptive_vs_fixed_d1",
+      "diagnostic_only": false,
+      "mean_benefit": -1.5076652869747228e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -0.18260105520527242,
+      "ci_low": -0.18260105520527242,
+      "comparison": "adaptive_vs_fixed_d1",
+      "diagnostic_only": false,
+      "mean_benefit": -0.18260105520527242,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -1.7943080196748945e-05,
+      "ci_low": -1.7943080196748945e-05,
+      "comparison": "adaptive_vs_random",
+      "diagnostic_only": false,
+      "mean_benefit": -1.7943080196748945e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -0.18711986529952443,
+      "ci_low": -0.18711986529952443,
+      "comparison": "adaptive_vs_random",
+      "diagnostic_only": false,
+      "mean_benefit": -0.18711986529952443,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -3.5606767514783e-05,
+      "ci_low": -3.5606767514783e-05,
+      "comparison": "adaptive_vs_permutation",
+      "diagnostic_only": false,
+      "mean_benefit": -3.5606767514783e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_samples": 100,
+      "ci_high": -0.7152302105579702,
+      "ci_low": -0.7152302105579702,
+      "comparison": "adaptive_vs_permutation",
+      "diagnostic_only": false,
+      "mean_benefit": -0.7152302105579702,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "adaptive"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 100,
+      "ci_high": 8.429148233610387e-05,
+      "ci_low": 8.429148233610387e-05,
+      "comparison": "oracle_regret",
+      "diagnostic_only": true,
+      "mean_benefit": 8.429148233610387e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 100,
+      "ci_high": 1.405747675363465,
+      "ci_low": 1.405747675363465,
+      "comparison": "oracle_regret",
+      "diagnostic_only": true,
+      "mean_benefit": 1.405747675363465,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 100,
+      "ci_high": 3.883099605927465e-05,
+      "ci_low": 3.883099605927465e-05,
+      "comparison": "oracle_advantage_vs_uniform_d2",
+      "diagnostic_only": true,
+      "mean_benefit": 3.883099605927465e-05,
+      "metric": "raw",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "oracle"
+    },
+    {
+      "bootstrap_procedure": "episode_cluster_resample_then_reoptimize_raw_oracle",
+      "bootstrap_samples": 100,
+      "ci_high": 0.6763182514704436,
+      "ci_low": 0.6763182514704436,
+      "comparison": "oracle_advantage_vs_uniform_d2",
+      "diagnostic_only": true,
+      "mean_benefit": 0.6763182514704436,
+      "metric": "whitened",
+      "n": 38,
+      "n_episodes": 1,
+      "positive_favors": "oracle"
+    }
+  ],
+  "policy_metrics": [
+    {
+      "continuation_calls": 38,
+      "depth_1": 18,
+      "depth_2": 11,
+      "depth_4": 9,
+      "diagnostic_only": false,
+      "first_calls": 38,
+      "mean_calls": 2.0,
+      "policy": "adaptive",
+      "raw_mean_loss": 0.002774302602820042,
+      "total_calls": 76,
+      "whitened_mean_loss": 42.41245473167531
+    },
+    {
+      "continuation_calls": 38,
+      "depth_1": 0,
+      "depth_2": 38,
+      "depth_4": 0,
+      "diagnostic_only": false,
+      "first_calls": 38,
+      "mean_calls": 2.0,
+      "policy": "uniform_d2",
+      "raw_mean_loss": 0.002728842116543212,
+      "total_calls": 76,
+      "whitened_mean_loss": 41.68302530778229
+    },
+    {
+      "continuation_calls": 0,
+      "depth_1": 38,
+      "depth_2": 0,
+      "depth_4": 0,
+      "diagnostic_only": false,
+      "first_calls": 38,
+      "mean_calls": 1.0,
+      "policy": "fixed_d1",
+      "raw_mean_loss": 0.002759225949950294,
+      "total_calls": 38,
+      "whitened_mean_loss": 42.22985367647004
+    },
+    {
+      "continuation_calls": 38,
+      "depth_1": 22,
+      "depth_2": 5,
+      "depth_4": 11,
+      "diagnostic_only": false,
+      "first_calls": 38,
+      "mean_calls": 2.0,
+      "policy": "random",
+      "raw_mean_loss": 0.0027563595226232926,
+      "total_calls": 76,
+      "whitened_mean_loss": 42.22533486637579
+    },
+    {
+      "continuation_calls": 38,
+      "depth_1": 18,
+      "depth_2": 11,
+      "depth_4": 9,
+      "diagnostic_only": false,
+      "first_calls": 38,
+      "mean_calls": 2.0,
+      "policy": "permutation",
+      "raw_mean_loss": 0.0027386958353052583,
+      "total_calls": 76,
+      "whitened_mean_loss": 41.69722452111734
+    },
+    {
+      "continuation_calls": 38,
+      "depth_1": 18,
+      "depth_2": 11,
+      "depth_4": 9,
+      "diagnostic_only": true,
+      "first_calls": 38,
+      "mean_calls": 2.0,
+      "policy": "oracle",
+      "raw_mean_loss": 0.0026900111204839375,
+      "total_calls": 76,
+      "whitened_mean_loss": 41.006707056311846
+    }
+  ],
+  "reason": "Sequential oracle headroom exists, but the frozen gate failed at least one preregistered raw-MSE comparison or exact-budget requirement.",
+  "selected_gate_epoch": 0,
+  "selected_gate_seed": 260813,
+  "validity": {
+    "adaptive_uniform_exact_2n_calls": true,
+    "base_and_refiner_unchanged": true,
+    "causal_features_only": true,
+    "episode_splits_and_exclusions_valid": true,
+    "first_call_for_every_transition": true,
+    "gate_selected_on_calibration_only": true,
+    "posthoc_labels_after_allocation": true,
+    "refiner_output_consistency": true,
+    "strict_base_hash_and_load": true,
+    "strict_finite_artifacts": true,
+    "strict_refiner_hash_keys_and_freeze": true,
+    "test_allocation_frozen_before_outcome": true,
+    "v1_artifacts_unchanged": true
+  },
+  "verdict": "sequential_headroom_gate_failed"
+}

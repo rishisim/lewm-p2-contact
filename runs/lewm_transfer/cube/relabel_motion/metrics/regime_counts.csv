@@ -1,0 +1,7 @@
+split,regime,n_rows,n_episodes
+calibration,transport_free,184,10
+calibration,interaction,184,10
+calibration,static,12,7
+heldout,transport_free,358,20
+heldout,interaction,371,20
+heldout,static,31,19

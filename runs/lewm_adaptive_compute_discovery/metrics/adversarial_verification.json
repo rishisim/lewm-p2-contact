@@ -1,0 +1,14 @@
+{
+  "all_anchor_audits_passed": true,
+  "all_gradient_boundaries_passed": true,
+  "all_runtime_call_audits_passed": true,
+  "calibration_consumed": false,
+  "compact_critic_flops_per_decision": 5280,
+  "decision": "discovery_gate_failed",
+  "failure_mechanism": "full critics retain allocation signal but are FLOP-dominated; compact critics restore cheap gating but lose matched-mixture ranking and reverse whitened robustness",
+  "focused_tests": 27,
+  "full_critic_flops_per_decision": 852864,
+  "stage_adapter_flops_per_call": 264960,
+  "test_targets_consumed": false,
+  "v4_created": false
+}

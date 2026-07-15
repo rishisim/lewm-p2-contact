@@ -1,0 +1,4 @@
+regime,n,mean_depth,depth_1_fraction,depth_2_fraction,depth_4_fraction,mean_gain_vs_depth1,post_hoc_only
+impact,2,1.5,0.5,0.5,0.0,1.4139849888097217e-05,True
+contact,16,2.1875,0.5625,0.0625,0.375,-6.538340904756505e-05,True
+transport_free,20,1.9,0.4,0.45,0.15,2.224710179672258e-05,True

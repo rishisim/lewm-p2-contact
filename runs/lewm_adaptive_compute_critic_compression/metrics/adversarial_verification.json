@@ -1,0 +1,180 @@
+{
+  "data_isolation": {
+    "calibration_cache_sha256": "ab85cb4fb760131bf16f6a9753b1e9551e1c855d626efbd57fbaceafa4103313",
+    "calibration_episodes": 90,
+    "calibration_receipt": {
+      "calibration_role": "v3_calibration_once",
+      "status": "consumed_before_target_io",
+      "tournament_sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+      "v3_test_targets": "forbidden"
+    },
+    "discovery_episodes": 420,
+    "v3_test_targets_consumed": false,
+    "v4_created": false
+  },
+  "immutable_evidence": {
+    "isolated_train_cache_sha256": "276e70728ce387161096aa37f6575220925e195bd1180bbf123c1b994bbaea70",
+    "opaque_combined_cache_audit": {
+      "opened_with_numpy": "false",
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/cache/cube_inputs.npz",
+      "sha256": "21377c283136008ae07aa4d1e00407ab57eaba5ddda7d5b1c740c47e55afaba0"
+    },
+    "prior_decision_sha256": "aa7e3951a4b6c2af798b613c87713edb163329147867484c3e806b1379ad70d3",
+    "prior_report_sha256": "0f64370a14c093ac41187165195672b7998d32c5dad0e422fda629c2a50e7ae8",
+    "selected_solver_checkpoint_sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+  },
+  "mechanical_audits": {
+    "all_metrics_finite": true,
+    "causal_features": {
+      "feature_count": 1046,
+      "forbidden_names": [],
+      "passed": true,
+      "transition_local_builder_has_no_target_argument": true,
+      "unique": true
+    },
+    "exact_calls": {
+      "exact_total_match": true,
+      "expected_match": true,
+      "expected_mean_calls": 1.2538011695906432,
+      "histogram": {
+        "1": 2552,
+        "2": 868
+      },
+      "n": 3420,
+      "realized_mean_calls": 1.2538011695906432,
+      "realized_minus_expected": 0.0,
+      "target_total_calls": 4288,
+      "total_call_error": 0,
+      "total_calls": 4288
+    },
+    "hard_flop_budget": {
+      "activation_flops_estimate": 0,
+      "control_flow_flops": 1,
+      "feature_bytes_float32": 4196,
+      "feature_construction_flops": 3998,
+      "hard_budget": 66240,
+      "input_dim_with_depth_encoding": 1049,
+      "normalization_flops": 2098,
+      "notes": "Arithmetic FLOPs are not latency or energy; GELU is a conservative 10-operation estimate.",
+      "parameter_bytes_float32": 4200,
+      "parameters": 1050,
+      "solver_flops": 0,
+      "student_linear_flops": 2099,
+      "total_incremental_gate_flops_per_evaluated_decision": 8196,
+      "within_budget": true
+    },
+    "runtime_passed": true,
+    "sparse_runtime": [
+      {
+        "batch_size": 256,
+        "calls_exact": true,
+        "calls_match_frozen_policy": true,
+        "expected_solver_rows": 4288,
+        "max_abs_output_difference": 2.384185791015625e-07,
+        "outputs_close": true,
+        "processed_solver_rows": 4288
+      },
+      {
+        "batch_size": 1024,
+        "calls_exact": true,
+        "calls_match_frozen_policy": true,
+        "expected_solver_rows": 4288,
+        "max_abs_output_difference": 2.384185791015625e-07,
+        "outputs_close": true,
+        "processed_solver_rows": 4288
+      }
+    ],
+    "unit_tests": {
+      "commands": [
+        [
+          "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/tests",
+          "-v"
+        ],
+        [
+          "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/tests",
+          "-v"
+        ]
+      ],
+      "log_sha256": "7d8273a9ca5cea413ac1ee32523fb03ee6d30a9a785de95e3c3deb1ca152e131",
+      "passed": true
+    }
+  },
+  "negative_controls": {
+    "compact11_discovery_passed": false,
+    "score_permutation_calibration": {
+      "bootstrap_samples": 4000,
+      "bootstrap_standard_error": 3.5776698247824957e-06,
+      "ci_high": 1.2384324709167268e-05,
+      "ci_low": -1.5623569152810144e-06,
+      "confidence": 0.95,
+      "estimate": 5.139393093029026e-06,
+      "mean_benefit": 5.139393093029026e-06,
+      "n": 3420,
+      "n_episodes": 90,
+      "seed": 271838
+    },
+    "stable_sparse_discovery_passed": false
+  },
+  "passed": true,
+  "schema_version": 1,
+  "solver_preservation": {
+    "calibration": {
+      "all_solver_gradients_absent": true,
+      "d0_bitwise": true,
+      "d0_identity": true,
+      "d1_bitwise": true,
+      "passed": true,
+      "solver_state_sha256_after": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+      "solver_state_sha256_before": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa"
+    },
+    "checkpoint_unchanged_through_discovery": true,
+    "prepare": {
+      "all_solver_gradients_absent": true,
+      "cache": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/cache/stagewise_train_outputs.npz",
+      "cache_sha256": "54a9aee889e5ad103d34011f2c3b418ae255afe0c3f1176816785f31a7381549",
+      "checkpoint_sha256_after": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+      "checkpoint_sha256_before": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+      "combined_v3_target_npz_opened": false,
+      "d0_bitwise": true,
+      "d0_identity": true,
+      "d1_bitwise": true,
+      "episodes": 420,
+      "feature_dim": 1046,
+      "no_checkpoint_change": true,
+      "no_solver_state_change": true,
+      "no_v1_state_change": true,
+      "old_internal_validation_fixed_exit_raw_mse": [
+        0.0031202247020546176,
+        0.0030725308741667667,
+        0.003057936628948781,
+        0.0030489319825645175
+      ],
+      "rows": 15960,
+      "schema_version": 1,
+      "solver_state_sha256_after": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+      "solver_state_sha256_before": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+      "v1_state_sha256_after": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+      "v1_state_sha256_before": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+      "v3_test_targets_loaded": false
+    }
+  },
+  "tournament": {
+    "cross_fitted_teacher_labels": true,
+    "fold_local_sparse_selection": true,
+    "grouped_nested_repeated_cv": true,
+    "sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+    "single_student": true,
+    "teacher_deployed": false,
+    "threshold_isolation": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "cache_sha256": "21377c283136008ae07aa4d1e00407ab57eaba5ddda7d5b1c740c47e55afaba0",
+  "figures": {
+    "allocation": {
+      "height": 1100,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/02_allocation.png",
+      "sha256": "671f38767e6e1bb688efca4cc8043445cf0c09a9dcc7545e9bb7c3940124dac9",
+      "width": 1760
+    },
+    "calibration": {
+      "height": 1100,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/03_calibration_transfer.png",
+      "sha256": "574996ada5617d46727173c0aed19c429624e5b6aa799f31f8a2d0ce28b084aa",
+      "width": 1320
+    },
+    "pareto": {
+      "height": 1100,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/01_compute_error_pareto.png",
+      "sha256": "c80169db76a28616e9ca178e9036340808a7d055b200e718f035679d1f1e9382",
+      "width": 1540
+    },
+    "regimes": {
+      "height": 1100,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/05_posthoc_regimes.png",
+      "sha256": "15d8d141a466ae7818096224fb94db4b823a1a767aa0eb78bf652d13092053b4",
+      "width": 1760
+    },
+    "seeds": {
+      "height": 1100,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/figures/04_seed_stability.png",
+      "sha256": "fa4db4cd112c6b9a99977a4ffc74b828b6461e676fe8e7467abb6dfe60a55681",
+      "width": 1540
+    }
+  },
+  "frozen_hashes": {
+    "base_config": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "base_weights": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+    "full_config": "63a83582217666eed01d2d5382d68c88b59e4aed3704792968aba2b5c57c8744",
+    "plan": "21efb81487e7eee4506f20318791a7d54fdfca7c33c5c356374e344089dce9bf",
+    "smoke_config": "bdd50bef8cdeb367b38086d004bf0ab73ff244071f10cf18b9e9a08b13041448",
+    "v1_refiner": "388a82fc30c96921083bfa4f2578cb296e6c3544510953d17578cf766cdf10f1"
+  },
+  "source_hashes": {
+    "model.py": "c08fdf28186fd918f6510e335526cb31a54b67876b500a5a3edfa81aadade78d",
+    "policy.py": "dbac206d88f7df521e080c89df3854ed027a139e49691b38d6e7649b08d1cb3c",
+    "run_experiment.py": "2e2d9710bf9c43a355eb86a7c24c8b74670b5fe537ef579b0db43b5f074bb177"
+  }
+}

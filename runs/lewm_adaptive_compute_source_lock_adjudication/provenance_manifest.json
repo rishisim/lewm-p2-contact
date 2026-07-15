@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "public_repository": "https://github.com/galilai-group/stable-worldmodel.git",
+  "immutable_objects": [
+    {"kind": "tag target", "ref": "refs/tags/0.0.4", "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a"},
+    {"kind": "commit", "ref": null, "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4"}
+  ],
+  "object_source": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_generator_forensics/historical/source_repo",
+  "network_fetch_performed": false,
+  "mutable_branch_head_used_as_evidence": false,
+  "candidate_inventory": "candidate_inventory.json",
+  "contract_diffs": "source_lock_contract_diffs.json",
+  "released_hdf5_sha256_from_prior_immutable_manifest": "0664d507c4ff12009010644c9ae950836f954e700c172ccf22e7423af1a55625",
+  "released_hdf5_preserved_mtime": "2026-02-18T20:12:16-0700",
+  "upload_revision_from_prior_provenance": "f6fe469578297a910bd4c88b9857f572908d7a34",
+  "upload_date": "2026-03-26T20:49:37Z",
+  "prior_locked_run_manifest_sha256": "1bf76a5547f948f24f07c393548736d562e2169ef33cb6ac62494a93a6b0166d",
+  "hdf5_content_accessed": false
+}

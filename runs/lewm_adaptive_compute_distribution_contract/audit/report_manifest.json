@@ -1,0 +1,10 @@
+{
+  "amendment_applied_to_report": true,
+  "decision": "generator_reconstruction_failed",
+  "postdecision_completion_applied": true,
+  "postdecision_completion_sha256": "6cf418e5b6b566efb250fad0e6489eb47694daf46125ba7985b2aebd5aa6d720",
+  "protocol_amendment_01_sha256": "8c55f6a855eb20a987aac7473a085548f75b7006ff8c85d11c2d268bc273f57b",
+  "readme_sha256": "d7ff490812401c74a20105f300b7213e3e0bb56bf7f77f6027b9b30f3d1084fe",
+  "report_sha256": "284630811e8e04efbbc735a523305ba38cfb2a05bf6dc06bb37f0ce08b782c68",
+  "v5_authorized": false
+}

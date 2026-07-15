@@ -1,0 +1,129 @@
+{
+  "analysis_proposed_terminal_outcome": "cycle_execution_invalid",
+  "candidate_eligible_for_v5_package": false,
+  "compute": {
+    "adaptive_total_flops": 812738956763,
+    "additional_refiner_flops": 960744960,
+    "analytic_equivalent_mean_calls": 1.3567215584345071,
+    "base_flops": 804032766000,
+    "base_model_calls": 11400,
+    "call_histogram": [
+      8892,
+      1817,
+      264,
+      427
+    ],
+    "gate_dual_affine_score_flops": 61257404,
+    "gate_evaluations": 14599,
+    "gate_feature_flops": 55490799,
+    "gate_total_flops": 116748203,
+    "mandatory_depth1_flops": 7628697600,
+    "mean_refiner_calls": 1.3180701754385964,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09804167202180934,
+      "weight_upper": 0.35672155843450715
+    },
+    "nonflop_comparison_min_operations": 72995,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.0033461696467161,
+      "weight_upper": 0.35672155843450715
+    },
+    "refiner_model_calls": 15026,
+    "rows": 11400,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 99157,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 4067,
+      "seed": 2005777771,
+      "total_calls": 15467,
+      "total_flops": 812739055920
+    }
+  },
+  "created_unix_ns": 1784147280824826000,
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0005786113013359582,
+      "lower": 0.00031851722750023673,
+      "upper": 0.0008528040017971025
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.00045695184533580936,
+      "lower": 0.0003217751662281569,
+      "upper": 0.000594645525150616
+    },
+    "raw_vs_analytic": {
+      "estimate": 8.281764631369647e-06,
+      "lower": 4.339746977406348e-06,
+      "upper": 1.2467133389902378e-05
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 2.1108278910198727e-05,
+      "lower": 1.5886953374069933e-05,
+      "upper": 2.6699708229804585e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.601099646016377e-06,
+      "lower": 2.65825990853969e-06,
+      "upper": 1.2668770317835355e-05
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 6.8017063787048005e-06,
+      "lower": 3.3243117956871836e-06,
+      "upper": 1.0290143242056518e-05
+    }
+  },
+  "independent_audit_passed": true,
+  "integrity": {
+    "adaptive_native_whitened_mse_reproduced": true,
+    "adaptive_raw_mse_reproduced": true,
+    "analytic_mixture_mapping_reproduced": true,
+    "chronology": true,
+    "effects_and_individual_intervals_reproduced": true,
+    "exact_call_histogram_reproduced": true,
+    "exact_calls_reproduced_from_scores": true,
+    "exact_compute_reproduced": true,
+    "frozen_modules_and_gradients": true,
+    "input_isolation": true,
+    "latency_separate_and_smoke_validated": true,
+    "numerical_equivalence_reproduced": true,
+    "operation_graph_rederived": true,
+    "pre_data_seal": true,
+    "raw_path_set_complete": true,
+    "required_path_set_present": true,
+    "seed_isolation": true,
+    "seeded_baseline_weakly_more_compute": true,
+    "simultaneous_bounds_reproduced": true,
+    "stagewise_ranks_reproduced": true,
+    "terminal_mapping_reproduced": true,
+    "within_episode_histograms_reproduced": true,
+    "zero_v5_outcomes": true
+  },
+  "latency_path": "metrics/latency.json",
+  "process_valid": false,
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0005786113013359582,
+      "familywise_alpha": 0.05,
+      "lower": 0.00031851722750023673,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 8.281764631369647e-06,
+      "familywise_alpha": 0.05,
+      "lower": 4.339746977406348e-06,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "statistical_pass": true,
+  "terminal_outcome": "cycle_execution_invalid",
+  "v5_launched": false,
+  "v5_outcome_episodes": 0
+}

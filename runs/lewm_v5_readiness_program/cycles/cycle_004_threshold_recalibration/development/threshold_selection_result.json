@@ -1,0 +1,1145 @@
+{
+  "created_unix_ns": 1784146223112277000,
+  "new_prospective_eligible": true,
+  "one_shot_cycle_003_validation": {
+    "all_interval_lowers_positive": true,
+    "all_simultaneous_lowers_positive": true,
+    "all_stage_signs_positive": true,
+    "call_histogram": [
+      8915,
+      1847,
+      237,
+      401
+    ],
+    "contiguous_50_episode_stability": [
+      {
+        "episodes": [
+          0,
+          49
+        ],
+        "mean_calls": 1.348421052631579,
+        "native_whitened_vs_analytic": 0.0008841738844231786,
+        "raw_vs_analytic": 1.5329162618729638e-05
+      },
+      {
+        "episodes": [
+          50,
+          99
+        ],
+        "mean_calls": 1.3094736842105261,
+        "native_whitened_vs_analytic": 0.0004962937837347997,
+        "raw_vs_analytic": -1.2123193369650923e-06
+      },
+      {
+        "episodes": [
+          100,
+          149
+        ],
+        "mean_calls": 1.32,
+        "native_whitened_vs_analytic": 0.0004803622022926185,
+        "raw_vs_analytic": 8.112283401557474e-06
+      },
+      {
+        "episodes": [
+          150,
+          199
+        ],
+        "mean_calls": 1.2621052631578948,
+        "native_whitened_vs_analytic": 0.00023035646269710784,
+        "raw_vs_analytic": 1.6527956458648542e-06
+      },
+      {
+        "episodes": [
+          200,
+          249
+        ],
+        "mean_calls": 1.340526315789474,
+        "native_whitened_vs_analytic": 0.0007875332564507698,
+        "raw_vs_analytic": 4.386700389130182e-06
+      },
+      {
+        "episodes": [
+          250,
+          299
+        ],
+        "mean_calls": 1.2742105263157895,
+        "native_whitened_vs_analytic": 0.0005377430360873054,
+        "raw_vs_analytic": 1.1680834396352303e-06
+      }
+    ],
+    "criteria": {
+      "native_whitened_vs_analytic": {
+        "bootstrap_sd": 0.00014399547735311185,
+        "estimate": 0.0005694104376142967,
+        "lower": 0.0002937979417541574,
+        "standardized_margin": 3.954363345856788,
+        "upper": 0.0008576629775258936
+      },
+      "native_whitened_vs_within_episode_histogram": {
+        "bootstrap_sd": 7.371752088596755e-05,
+        "estimate": 0.0005340951724981221,
+        "lower": 0.0003940368636970836,
+        "standardized_margin": 7.2451591708341,
+        "upper": 0.0006807065759327656
+      },
+      "raw_vs_analytic": {
+        "bootstrap_sd": 1.7966787381874876e-06,
+        "estimate": 4.906117692992048e-06,
+        "lower": 1.4331133694178231e-06,
+        "standardized_margin": 2.730659404330349,
+        "upper": 8.523227812537334e-06
+      },
+      "raw_vs_fixed_d1": {
+        "bootstrap_sd": 2.3333427762897597e-06,
+        "estimate": 2.1517111367926404e-05,
+        "lower": 1.707597588839939e-05,
+        "standardized_margin": 9.221581838113254,
+        "upper": 2.623026462483886e-05
+      },
+      "raw_vs_seeded": {
+        "bootstrap_sd": 2.2129183395083906e-06,
+        "estimate": 5.958155826320006e-06,
+        "lower": 1.6563628839592954e-06,
+        "standardized_margin": 2.6924426988316417,
+        "upper": 1.034918577625497e-05
+      },
+      "raw_vs_within_episode_histogram": {
+        "bootstrap_sd": 1.6215350861482166e-06,
+        "estimate": 6.657061595735615e-06,
+        "lower": 3.4921126673878753e-06,
+        "standardized_margin": 4.105407063098927,
+        "upper": 9.873529699951445e-06
+      }
+    },
+    "eligible": true,
+    "exact_total_compute_mean_calls": 1.34757297725178,
+    "gate_equivalent_calls_per_row": 0.03845017023423595,
+    "gate_evaluations": 14523,
+    "histograms_preserved": true,
+    "mean_actual_calls": 1.3091228070175438,
+    "minimum_standardized_margin": 2.6924426988316417,
+    "native_whitened_analytic_mapping": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "weight_upper": 0.34757297725177994
+    },
+    "raw_analytic_mapping": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "weight_upper": 0.34757297725177994
+    },
+    "seeded_total_flops": 812711500080,
+    "seeded_weakly_more_compute": true,
+    "simultaneous": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0005694104376142967,
+        "lower": 0.0002937979417541574
+      },
+      "raw_vs_analytic": {
+        "estimate": 4.906117692992048e-06,
+        "lower": 1.4331133694178231e-06
+      }
+    },
+    "stagewise": [
+      {
+        "positive_sign": true,
+        "reached_rows": 11400,
+        "rho": 0.20335982198609864,
+        "stage": 1
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 2485,
+        "rho": 0.06368324794805184,
+        "stage": 2
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 638,
+        "rho": 0.032359809297296295,
+        "stage": 3
+      }
+    ],
+    "threshold": 0.2719204773217412,
+    "total_flops": 812711323071
+  },
+  "protocol_sha256": "3d0396a0c2c9530165de23377986e6a436196dd1f9c34456c9982c65530d9d98",
+  "schema_version": 1,
+  "selected_on_cycle_001": {
+    "all_interval_lowers_positive": true,
+    "all_simultaneous_lowers_positive": true,
+    "all_stage_signs_positive": true,
+    "call_histogram": [
+      8893,
+      1906,
+      217,
+      384
+    ],
+    "contiguous_50_episode_stability": [
+      {
+        "episodes": [
+          0,
+          49
+        ],
+        "mean_calls": 1.2942105263157897,
+        "native_whitened_vs_analytic": 0.0007857945687161998,
+        "raw_vs_analytic": 5.848953160761754e-06
+      },
+      {
+        "episodes": [
+          50,
+          99
+        ],
+        "mean_calls": 1.3068421052631578,
+        "native_whitened_vs_analytic": 0.0007634236353365545,
+        "raw_vs_analytic": 5.374639607654005e-06
+      },
+      {
+        "episodes": [
+          100,
+          149
+        ],
+        "mean_calls": 1.3047368421052632,
+        "native_whitened_vs_analytic": 0.0007381598283960831,
+        "raw_vs_analytic": 4.455639727931646e-06
+      },
+      {
+        "episodes": [
+          150,
+          199
+        ],
+        "mean_calls": 1.3405263157894738,
+        "native_whitened_vs_analytic": 0.001069652221032656,
+        "raw_vs_analytic": 9.683511974334896e-06
+      },
+      {
+        "episodes": [
+          200,
+          249
+        ],
+        "mean_calls": 1.2857894736842104,
+        "native_whitened_vs_analytic": 0.0005255297110963982,
+        "raw_vs_analytic": 5.719307332087044e-06
+      },
+      {
+        "episodes": [
+          250,
+          299
+        ],
+        "mean_calls": 1.3057894736842106,
+        "native_whitened_vs_analytic": 0.0008152511806423167,
+        "raw_vs_analytic": 1.148665055696981e-05
+      }
+    ],
+    "criteria": {
+      "native_whitened_vs_analytic": {
+        "bootstrap_sd": 0.00014380411413818998,
+        "estimate": 0.0007829685242033681,
+        "lower": 0.0005130321950323193,
+        "standardized_margin": 5.444687927710933,
+        "upper": 0.0010733691753240463
+      },
+      "native_whitened_vs_within_episode_histogram": {
+        "bootstrap_sd": 8.676862089015012e-05,
+        "estimate": 0.0006466548332878929,
+        "lower": 0.00047991987459595017,
+        "standardized_margin": 7.4526346812238025,
+        "upper": 0.0008186699426033798
+      },
+      "raw_vs_analytic": {
+        "bootstrap_sd": 1.8430483075173804e-06,
+        "estimate": 7.094783726623192e-06,
+        "lower": 3.5018018960966407e-06,
+        "standardized_margin": 3.8494833248185416,
+        "upper": 1.0722422429252404e-05
+      },
+      "raw_vs_fixed_d1": {
+        "bootstrap_sd": 2.2236745428805434e-06,
+        "estimate": 1.946091808278526e-05,
+        "lower": 1.5175727792827179e-05,
+        "standardized_margin": 8.751693517872281,
+        "upper": 2.3887201616920913e-05
+      },
+      "raw_vs_seeded": {
+        "bootstrap_sd": 2.3681349749369657e-06,
+        "estimate": 6.677051987095354e-06,
+        "lower": 2.059303064900351e-06,
+        "standardized_margin": 2.8195402955328093,
+        "upper": 1.1299151447978234e-05
+      },
+      "raw_vs_within_episode_histogram": {
+        "bootstrap_sd": 1.7193557671234554e-06,
+        "estimate": 5.574591616136591e-06,
+        "lower": 2.203625814458644e-06,
+        "standardized_margin": 3.242256037249978,
+        "upper": 8.911228134064169e-06
+      }
+    },
+    "eligible": true,
+    "exact_total_compute_mean_calls": 1.344726246662853,
+    "gate_equivalent_calls_per_row": 0.03841045718916857,
+    "gate_evaluations": 14508,
+    "histograms_preserved": true,
+    "mean_actual_calls": 1.3063157894736843,
+    "minimum_standardized_margin": 2.8195402955328093,
+    "native_whitened_analytic_mapping": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "weight_upper": 0.3447262466628529
+    },
+    "raw_analytic_mapping": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "weight_upper": 0.3447262466628529
+    },
+    "seeded_total_flops": 812702756400,
+    "seeded_weakly_more_compute": true,
+    "simultaneous": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0007829685242033681,
+        "lower": 0.0005130321950323193
+      },
+      "raw_vs_analytic": {
+        "estimate": 7.094783726623192e-06,
+        "lower": 3.5018018960966407e-06
+      }
+    },
+    "stagewise": [
+      {
+        "positive_sign": true,
+        "reached_rows": 11400,
+        "rho": 0.2325999753386526,
+        "stage": 1
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 2507,
+        "rho": 0.08845912794580134,
+        "stage": 2
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 601,
+        "rho": 0.0017701394685490962,
+        "stage": 3
+      }
+    ],
+    "threshold": 0.2719204773217412,
+    "total_flops": 812702724396
+  },
+  "selection_candidates": [
+    {
+      "all_interval_lowers_positive": true,
+      "all_simultaneous_lowers_positive": true,
+      "all_stage_signs_positive": true,
+      "call_histogram": [
+        8228,
+        2263,
+        303,
+        606
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.405263157894737,
+          "native_whitened_vs_analytic": 0.0009215289837542717,
+          "raw_vs_analytic": 6.984886594314434e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.4210526315789478,
+          "native_whitened_vs_analytic": 0.0009009520658553032,
+          "raw_vs_analytic": 4.044349083350112e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.4052631578947368,
+          "native_whitened_vs_analytic": 0.0006564900246307637,
+          "raw_vs_analytic": 1.6345241295984874e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.4463157894736844,
+          "native_whitened_vs_analytic": 0.0010658215563158027,
+          "raw_vs_analytic": 9.012312721711695e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.376842105263158,
+          "native_whitened_vs_analytic": 0.0004151503885407445,
+          "raw_vs_analytic": 6.184707102386289e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.412105263157895,
+          "native_whitened_vs_analytic": 0.001021326433339139,
+          "raw_vs_analytic": 1.2134188693893993e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.00014483330439585694,
+          "estimate": 0.0008302115754060042,
+          "lower": 0.00055553677124558,
+          "standardized_margin": 5.732186936347722,
+          "upper": 0.0011201395008554609
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 9.468383952757466e-05,
+          "estimate": 0.0007887409433976451,
+          "lower": 0.000607828420280322,
+          "standardized_margin": 8.330259390969681,
+          "upper": 0.0009754880816828911
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.965269535619378e-06,
+          "estimate": 6.665828054209169e-06,
+          "lower": 2.847368752385135e-06,
+          "standardized_margin": 3.3918136588365493,
+          "upper": 1.057000462200319e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.4375594379189853e-06,
+          "estimate": 2.288467289799201e-05,
+          "lower": 1.819439976478048e-05,
+          "standardized_margin": 9.388354819987205,
+          "upper": 2.7730707846810314e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.5479161317287765e-06,
+          "estimate": 5.679287559857158e-06,
+          "lower": 6.650659248018164e-07,
+          "standardized_margin": 2.228993132518741,
+          "upper": 1.0653544819340478e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.7579345285426652e-06,
+          "estimate": 6.502943801153786e-06,
+          "lower": 3.0771701102054573e-06,
+          "standardized_margin": 3.69919567285862,
+          "upper": 9.988226323724979e-06
+        }
+      },
+      "eligible": true,
+      "exact_total_compute_mean_calls": 1.4521268609230655,
+      "gate_equivalent_calls_per_row": 0.04098651004587253,
+      "gate_evaluations": 15481,
+      "histograms_preserved": true,
+      "mean_actual_calls": 1.411140350877193,
+      "minimum_standardized_margin": 2.228993132518741,
+      "native_whitened_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.45212686092306553
+      },
+      "raw_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.45212686092306553
+      },
+      "seeded_total_flops": 813027332400,
+      "seeded_weakly_more_compute": true,
+      "simultaneous": {
+        "native_whitened_vs_analytic": {
+          "estimate": 0.0008302115754060042,
+          "lower": 0.00055553677124558
+        },
+        "raw_vs_analytic": {
+          "estimate": 6.665828054209169e-06,
+          "lower": 2.847368752385135e-06
+        }
+      },
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 3172,
+          "rho": 0.08540072288212121,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 909,
+          "rho": 0.011630128496705023,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.18128031821449414,
+      "total_flops": 813027132677
+    },
+    {
+      "all_interval_lowers_positive": true,
+      "all_simultaneous_lowers_positive": true,
+      "all_stage_signs_positive": true,
+      "call_histogram": [
+        8563,
+        2094,
+        262,
+        481
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.3521052631578947,
+          "native_whitened_vs_analytic": 0.0008641392028471944,
+          "raw_vs_analytic": 6.954585366750827e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.3526315789473682,
+          "native_whitened_vs_analytic": 0.000863789108282248,
+          "raw_vs_analytic": 5.666516669761517e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.348421052631579,
+          "native_whitened_vs_analytic": 0.0006741148227621345,
+          "raw_vs_analytic": 4.055449216008832e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.394736842105263,
+          "native_whitened_vs_analytic": 0.0010709043627228016,
+          "raw_vs_analytic": 9.820652193127126e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.33,
+          "native_whitened_vs_analytic": 0.0004392967230634634,
+          "raw_vs_analytic": 5.936794331092035e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.3594736842105264,
+          "native_whitened_vs_analytic": 0.0009406248409494034,
+          "raw_vs_analytic": 1.165650491418075e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.00014438980644785647,
+          "estimate": 0.0008088115101045408,
+          "lower": 0.0005341658552270927,
+          "standardized_margin": 5.601583172677963,
+          "upper": 0.0010991796895879985
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 9.037746345354265e-05,
+          "estimate": 0.0007088433323693942,
+          "lower": 0.0005358681137560227,
+          "standardized_margin": 7.84314258536107,
+          "upper": 0.0008879865319802653
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.926154271028936e-06,
+          "estimate": 7.348417115153514e-06,
+          "lower": 3.624029697773819e-06,
+          "standardized_margin": 3.815071941889706,
+          "upper": 1.1176097137204404e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.3488302411038337e-06,
+          "estimate": 2.1549848772337323e-05,
+          "lower": 1.7042397998485755e-05,
+          "standardized_margin": 9.174715309442696,
+          "upper": 2.623028675421322e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.464806032691739e-06,
+          "estimate": 6.838831285680608e-06,
+          "lower": 2.0141717054391128e-06,
+          "standardized_margin": 2.7745920753902613,
+          "upper": 1.164205510269626e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.7916147503190952e-06,
+          "estimate": 6.512506035809824e-06,
+          "lower": 3.0018760424805884e-06,
+          "standardized_margin": 3.6349924193523835,
+          "upper": 1.0118666006522925e-05
+        }
+      },
+      "eligible": true,
+      "exact_total_compute_mean_calls": 1.3958881645160608,
+      "gate_equivalent_calls_per_row": 0.039660094340622086,
+      "gate_evaluations": 14980,
+      "histograms_preserved": true,
+      "mean_actual_calls": 1.3562280701754386,
+      "minimum_standardized_margin": 2.7745920753902613,
+      "native_whitened_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.3958881645160608
+      },
+      "raw_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.3958881645160608
+      },
+      "seeded_total_flops": 812857493040,
+      "seeded_weakly_more_compute": true,
+      "simultaneous": {
+        "native_whitened_vs_analytic": {
+          "estimate": 0.0008088115101045408,
+          "lower": 0.0005341658552270927
+        },
+        "raw_vs_analytic": {
+          "estimate": 7.348417115153514e-06,
+          "lower": 3.624029697773819e-06
+        }
+      },
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 2837,
+          "rho": 0.10018620469405881,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 743,
+          "rho": 0.004740181174485033,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.2266003977681177,
+      "total_flops": 812857261220
+    },
+    {
+      "all_interval_lowers_positive": true,
+      "all_simultaneous_lowers_positive": true,
+      "all_stage_signs_positive": true,
+      "call_histogram": [
+        8893,
+        1906,
+        217,
+        384
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.2942105263157897,
+          "native_whitened_vs_analytic": 0.0007857945687161998,
+          "raw_vs_analytic": 5.848953160761754e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.3068421052631578,
+          "native_whitened_vs_analytic": 0.0007634236353365545,
+          "raw_vs_analytic": 5.374639607654005e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.3047368421052632,
+          "native_whitened_vs_analytic": 0.0007381598283960831,
+          "raw_vs_analytic": 4.455639727931646e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.3405263157894738,
+          "native_whitened_vs_analytic": 0.001069652221032656,
+          "raw_vs_analytic": 9.683511974334896e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.2857894736842104,
+          "native_whitened_vs_analytic": 0.0005255297110963982,
+          "raw_vs_analytic": 5.719307332087044e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.3057894736842106,
+          "native_whitened_vs_analytic": 0.0008152511806423167,
+          "raw_vs_analytic": 1.148665055696981e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.00014380411413818998,
+          "estimate": 0.0007829685242033681,
+          "lower": 0.0005130321950323193,
+          "standardized_margin": 5.444687927710933,
+          "upper": 0.0010733691753240463
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 8.676862089015012e-05,
+          "estimate": 0.0006466548332878929,
+          "lower": 0.00047991987459595017,
+          "standardized_margin": 7.4526346812238025,
+          "upper": 0.0008186699426033798
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.8430483075173804e-06,
+          "estimate": 7.094783726623192e-06,
+          "lower": 3.5018018960966407e-06,
+          "standardized_margin": 3.8494833248185416,
+          "upper": 1.0722422429252404e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.2236745428805434e-06,
+          "estimate": 1.946091808278526e-05,
+          "lower": 1.5175727792827179e-05,
+          "standardized_margin": 8.751693517872281,
+          "upper": 2.3887201616920913e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.3681349749369657e-06,
+          "estimate": 6.677051987095354e-06,
+          "lower": 2.059303064900351e-06,
+          "standardized_margin": 2.8195402955328093,
+          "upper": 1.1299151447978234e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.7193557671234554e-06,
+          "estimate": 5.574591616136591e-06,
+          "lower": 2.203625814458644e-06,
+          "standardized_margin": 3.242256037249978,
+          "upper": 8.911228134064169e-06
+        }
+      },
+      "eligible": true,
+      "exact_total_compute_mean_calls": 1.344726246662853,
+      "gate_equivalent_calls_per_row": 0.03841045718916857,
+      "gate_evaluations": 14508,
+      "histograms_preserved": true,
+      "mean_actual_calls": 1.3063157894736843,
+      "minimum_standardized_margin": 2.8195402955328093,
+      "native_whitened_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.3447262466628529
+      },
+      "raw_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.3447262466628529
+      },
+      "seeded_total_flops": 812702756400,
+      "seeded_weakly_more_compute": true,
+      "simultaneous": {
+        "native_whitened_vs_analytic": {
+          "estimate": 0.0007829685242033681,
+          "lower": 0.0005130321950323193
+        },
+        "raw_vs_analytic": {
+          "estimate": 7.094783726623192e-06,
+          "lower": 3.5018018960966407e-06
+        }
+      },
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 2507,
+          "rho": 0.08845912794580134,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 601,
+          "rho": 0.0017701394685490962,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.2719204773217412,
+      "total_flops": 812702724396
+    },
+    {
+      "all_interval_lowers_positive": true,
+      "all_simultaneous_lowers_positive": true,
+      "all_stage_signs_positive": false,
+      "call_histogram": [
+        9197,
+        1727,
+        173,
+        303
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.255263157894737,
+          "native_whitened_vs_analytic": 0.0008081815056200329,
+          "raw_vs_analytic": 5.994275921179255e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.2547368421052632,
+          "native_whitened_vs_analytic": 0.000689560269052315,
+          "raw_vs_analytic": 4.533864493603436e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.2589473684210526,
+          "native_whitened_vs_analytic": 0.0007160753325201827,
+          "raw_vs_analytic": 4.924983698210243e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.291052631578947,
+          "native_whitened_vs_analytic": 0.0009510997136266872,
+          "raw_vs_analytic": 9.670844105415611e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.2442105263157894,
+          "native_whitened_vs_analytic": 0.0005013079532722779,
+          "raw_vs_analytic": 6.263553433720021e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.2652631578947366,
+          "native_whitened_vs_analytic": 0.0007526294654076336,
+          "raw_vs_analytic": 1.1593339626739557e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.0001412821636866738,
+          "estimate": 0.0007364757065831882,
+          "lower": 0.0004710806988159946,
+          "standardized_margin": 5.212800309432514,
+          "upper": 0.0010231786874604271
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 8.307945584577402e-05,
+          "estimate": 0.0005974490652718188,
+          "lower": 0.0004377467476415361,
+          "standardized_margin": 7.191297285106244,
+          "upper": 0.0007634954895045754
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.826326984872593e-06,
+          "estimate": 7.163476879811353e-06,
+          "lower": 3.6134963378276164e-06,
+          "standardized_margin": 3.9223408180168167,
+          "upper": 1.0768459200967548e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.157243949680172e-06,
+          "estimate": 1.7884052838334602e-05,
+          "lower": 1.3755124127428821e-05,
+          "standardized_margin": 8.290232006902164,
+          "upper": 2.218578079420486e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.3342696759384677e-06,
+          "estimate": 7.753066019501159e-06,
+          "lower": 3.1932874365634744e-06,
+          "standardized_margin": 3.3214097323112948,
+          "upper": 1.2311160297706433e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.7407086518984898e-06,
+          "estimate": 6.115173054147327e-06,
+          "lower": 2.6803650236687012e-06,
+          "standardized_margin": 3.513036513880633,
+          "upper": 9.505517828123203e-06
+        }
+      },
+      "eligible": false,
+      "exact_total_compute_mean_calls": 1.2988536114686626,
+      "gate_equivalent_calls_per_row": 0.03727466410024155,
+      "gate_evaluations": 14079,
+      "histograms_preserved": true,
+      "mean_actual_calls": 1.2615789473684211,
+      "minimum_standardized_margin": 3.3214097323112948,
+      "native_whitened_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.2988536114686626
+      },
+      "raw_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.2988536114686626
+      },
+      "seeded_total_flops": 812564182320,
+      "seeded_weakly_more_compute": true,
+      "simultaneous": {
+        "native_whitened_vs_analytic": {
+          "estimate": 0.0007364757065831882,
+          "lower": 0.0004710806988159946
+        },
+        "raw_vs_analytic": {
+          "estimate": 7.163476879811353e-06,
+          "lower": 3.6134963378276164e-06
+        }
+      },
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 2203,
+          "rho": 0.09461930209483528,
+          "stage": 2
+        },
+        {
+          "positive_sign": false,
+          "reached_rows": 476,
+          "rho": -0.044883685351002366,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.31724055687536473,
+      "total_flops": 812564164083
+    },
+    {
+      "all_interval_lowers_positive": true,
+      "all_simultaneous_lowers_positive": true,
+      "all_stage_signs_positive": false,
+      "call_histogram": [
+        9490,
+        1534,
+        146,
+        230
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.2110526315789474,
+          "native_whitened_vs_analytic": 0.0007128809492577603,
+          "raw_vs_analytic": 5.000919378715771e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.2194736842105265,
+          "native_whitened_vs_analytic": 0.0006685588813656215,
+          "raw_vs_analytic": 3.879957515369356e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.2142105263157896,
+          "native_whitened_vs_analytic": 0.0005672964661633138,
+          "raw_vs_analytic": 5.033328033099188e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.2494736842105265,
+          "native_whitened_vs_analytic": 0.0008878558118053341,
+          "raw_vs_analytic": 9.859309259646998e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.2078947368421051,
+          "native_whitened_vs_analytic": 0.0004512043143608485,
+          "raw_vs_analytic": 6.245850753808279e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.2221052631578948,
+          "native_whitened_vs_analytic": 0.0006734476532253167,
+          "raw_vs_analytic": 1.0443525288762557e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.0001337159189187456,
+          "estimate": 0.0006602073460296993,
+          "lower": 0.0004095899899074204,
+          "standardized_margin": 4.937387794723856,
+          "upper": 0.0009324506078017236
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 7.695755272378867e-05,
+          "estimate": 0.0005236170427756825,
+          "lower": 0.00037541032797752433,
+          "standardized_margin": 6.803972115056942,
+          "upper": 0.0006760789814058461
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.7596768280385979e-06,
+          "estimate": 6.743815038233691e-06,
+          "lower": 3.317194499925254e-06,
+          "standardized_margin": 3.832416799936271,
+          "upper": 1.0201306557071773e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.013764187356655e-06,
+          "estimate": 1.5960706252592775e-05,
+          "lower": 1.2089377647770527e-05,
+          "standardized_margin": 7.92580698018243,
+          "upper": 1.999705336900297e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.2094255652409638e-06,
+          "estimate": 6.916552677945946e-06,
+          "lower": 2.650368436832295e-06,
+          "standardized_margin": 3.130475534798845,
+          "upper": 1.1213481795060562e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.6482738755431753e-06,
+          "estimate": 5.741883423461301e-06,
+          "lower": 2.4945579687606345e-06,
+          "standardized_margin": 3.4835736394651704,
+          "upper": 8.976505257137475e-06
+        }
+      },
+      "eligible": false,
+      "exact_total_compute_mean_calls": 1.2569359367054411,
+      "gate_equivalent_calls_per_row": 0.03623418231947623,
+      "gate_evaluations": 13686,
+      "histograms_preserved": true,
+      "mean_actual_calls": 1.2207017543859648,
+      "minimum_standardized_margin": 3.130475534798845,
+      "native_whitened_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.2569359367054411
+      },
+      "raw_analytic_mapping": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "weight_upper": 0.2569359367054411
+      },
+      "seeded_total_flops": 812437796400,
+      "seeded_weakly_more_compute": true,
+      "simultaneous": {
+        "native_whitened_vs_analytic": {
+          "estimate": 0.0006602073460296993,
+          "lower": 0.0004095899899074204
+        },
+        "raw_vs_analytic": {
+          "estimate": 6.743815038233691e-06,
+          "lower": 3.317194499925254e-06
+        }
+      },
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 1910,
+          "rho": 0.09892720042477146,
+          "stage": 2
+        },
+        {
+          "positive_sign": false,
+          "reached_rows": 376,
+          "rho": -0.10750809865116541,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.3625606364289883,
+      "total_flops": 812437549902
+    }
+  ],
+  "threshold_frozen": true,
+  "v5_outcome_episodes": 0,
+  "validation_passed": true
+}

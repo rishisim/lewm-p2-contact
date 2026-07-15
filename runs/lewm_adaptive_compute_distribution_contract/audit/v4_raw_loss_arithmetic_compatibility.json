@@ -1,0 +1,19 @@
+{
+  "diagnosis": "V4 evaluate.py line 259 subtracts and squares float32 exits/targets, then casts the mean to float64; the distribution-contract evaluator casts exits to float64 before subtraction and squaring",
+  "failed_first_recomputation_materialized_output": false,
+  "fixed_audit_rule": "retain canonical float64-residual raw losses for cross-role metrics; also recompute V4's float32-residual legacy losses and require exact d1-d4 equality, exact whitened losses, exact scores, and exact calls",
+  "read_only_diagnostic": {
+    "calls_exact": true,
+    "canonical_double_vs_v4_raw_loss_max_abs": 2.774697009932936e-07,
+    "score_max_abs": 0.0,
+    "whitened_max_abs": 0.0
+  },
+  "schema_version": 1,
+  "status": "frozen_before_materializing_v4_diagnostic_recomputation",
+  "thresholds_models_gate_or_stopping_rule_changed": false,
+  "v3_test_targets_opened": false,
+  "v4_evaluator_sha256": "be0a66e50fe4cdbcdcb02e45697c61d181817224921b343bda141d7de64eef3f",
+  "v4_outcome_sha256": "e1fcae6089c8ff7a39ba5c30041105ac45bab1aac95eba3d1227bf2b5c30246e",
+  "v4_used_for_training_selection_tuning_or_thresholds": false,
+  "v5_confirmation_episodes": 0
+}

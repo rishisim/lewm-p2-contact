@@ -1,0 +1,8 @@
+{
+  "compute_response_passed": true,
+  "meaningful_headroom_threshold": 2.0908259032932057e-05,
+  "n": 3420,
+  "n_episodes": 90,
+  "oracle_headroom_passed": true,
+  "scope": "calibration"
+}

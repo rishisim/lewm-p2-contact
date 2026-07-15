@@ -1,0 +1,143 @@
+{
+  "adaptive_planoracle_native_whitened_mse": 0.09804141919796588,
+  "adaptive_raw_mse": 0.0038438023098318545,
+  "compute": {
+    "adaptive_total_flops": 813027132677,
+    "additional_refiner_flops": 1241867520,
+    "analytic_equivalent_mean_calls": 1.4521268609230655,
+    "base_flops": 804032766000,
+    "base_model_calls": 11400,
+    "call_histogram": [
+      8228,
+      2263,
+      303,
+      606
+    ],
+    "gate_dual_affine_score_flops": 64958276,
+    "gate_evaluations": 15481,
+    "gate_feature_flops": 58843281,
+    "gate_total_flops": 123801557,
+    "mandatory_depth1_flops": 7628697600,
+    "mean_refiner_calls": 1.411140350877193,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09887163109829436,
+      "weight_upper": 0.45212686092306553
+    },
+    "nonflop_comparison_min_operations": 77405,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.003850468137049592,
+      "weight_upper": 0.45212686092306553
+    },
+    "refiner_model_calls": 16087,
+    "rows": 11400,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 199723,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 5155,
+      "seed": 1965777771,
+      "total_calls": 16555,
+      "total_flops": 813027332400
+    }
+  },
+  "created_unix_ns": 1784144475574651000,
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0008302119003284984,
+      "lower": 0.0005516380707502069,
+      "upper": 0.0011206264420550874
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.0007047791010541171,
+      "lower": 0.0005354589814546402,
+      "upper": 0.0008788218086247006
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.665827217736782e-06,
+      "lower": 2.806210365944296e-06,
+      "upper": 1.0533878142172575e-05
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 2.2884672061519642e-05,
+      "lower": 1.8240606526984424e-05,
+      "upper": 2.7774064801463388e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.189908839686145e-06,
+      "lower": 2.5556445145664953e-06,
+      "upper": 1.1808718354772969e-05
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 5.537162584991318e-06,
+      "lower": 1.7994547078496154e-06,
+      "upper": 9.425377001940297e-06
+    }
+  },
+  "independent_verification_required_before_final_terminal_outcome": true,
+  "integrity": {
+    "chronology": true,
+    "contact_input_exclusion": true,
+    "exact_compute_two_derivations": true,
+    "exact_episode_count": true,
+    "exact_row_count": true,
+    "finite_arrays": true,
+    "frozen_modules": true,
+    "gradient_absence": true,
+    "hashes": true,
+    "histograms_preserved": true,
+    "input_key_allowlist": true,
+    "manual_sparse_forward_selected_exact": true,
+    "pre_data_seal": true,
+    "same_path_repeat_exact": true,
+    "seed_isolation": true,
+    "seeded_comparator_weakly_more_total_compute": true,
+    "sparse_dense_calls_and_histograms_exact": true,
+    "sparse_dense_numerical_contract": true,
+    "sparse_scores_reproduce_calls_exactly": true,
+    "stagewise_positive": true,
+    "zero_v5_outcomes": true
+  },
+  "latency_excluded_from_terminal_mapping": true,
+  "process_valid": true,
+  "proposed_terminal_outcome": "cycle_prospective_discovery_failed",
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0008302119003284984,
+      "lower": 0.0005959595190624219,
+      "shared_centered_max_error_quantile_95": 0.00023425238126607647
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.665827217736782e-06,
+      "lower": -0.00022758655404833968,
+      "shared_centered_max_error_quantile_95": 0.00023425238126607647
+    }
+  },
+  "stagewise_rank": [
+    {
+      "positive_sign": true,
+      "reached_rows": 11400,
+      "spearman_score_gain_rho": 0.2325999753386526,
+      "stage": 1
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 3172,
+      "spearman_score_gain_rho": 0.08540072288212121,
+      "stage": 2
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 909,
+      "spearman_score_gain_rho": 0.011630128496705023,
+      "stage": 3
+    }
+  ],
+  "statistical_pass": false,
+  "v5_launched": false,
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "PREREGISTRATION.md_seal": true,
+    "archive_hash": true,
+    "evidence_mapping": true,
+    "exact_revisions": true,
+    "linear_history": true,
+    "packaging_match": true,
+    "payload_cap": true,
+    "pointer_namespaces": true,
+    "prior_manifest_preserved": true,
+    "protocol.json_seal": true,
+    "range_behavior": true,
+    "raw_response_hashes": true,
+    "request_cap": true,
+    "tar_header": true,
+    "zero_prohibited": true
+  },
+  "independent_implementation_imported_collection": false,
+  "passed": true
+}

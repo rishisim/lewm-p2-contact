@@ -1,0 +1,53 @@
+{
+  "blocker": "Immutable commit pyproject.toml declares stable-worldmodel 0.0.5 while its frozen uv.lock root package entry declares 0.0.3; uv sync --frozen installs the run-local source with 0.0.5 distribution metadata.",
+  "checks": {
+    "head_matches": true,
+    "lock_declares_root_0_0_3": true,
+    "lock_hash_matches": true,
+    "locked_dependencies_match": true,
+    "no_import_from_current_project_environment": true,
+    "python_matches": true,
+    "run_local_interpreter": true,
+    "run_local_source_import": true,
+    "source_declares_0_0_5": true,
+    "stable_worldmodel_distribution_matches_lock": false
+  },
+  "combined_v3_cache_opened_with_numpy": false,
+  "git_head": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+  "hashes": {
+    "pyproject.toml": "dc7d98c83e84352d527833c853cd79f013f0599fd630fe407c782b63f13717b0",
+    "stable_worldmodel/__init__.py": "9a357d7ce7cb54b53c1f85132d10a0e82d9e712cb02e7974fb1c465e70df0e00",
+    "uv.lock": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d"
+  },
+  "hdf5_opened": false,
+  "import_locations": {
+    "dm_control": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/dm_control/__init__.py",
+    "gymnasium": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/gymnasium/__init__.py",
+    "h5py": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/h5py/__init__.py",
+    "hdf5plugin": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/hdf5plugin/__init__.py",
+    "mujoco": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/mujoco/__init__.py",
+    "numpy": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/numpy/__init__.py",
+    "ogbench": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/lib/python3.10/site-packages/ogbench/__init__.py",
+    "stable_worldmodel": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/source_repo/stable_worldmodel/__init__.py"
+  },
+  "installed_packages": {
+    "dm-control": "1.0.36",
+    "gymnasium": "1.2.3",
+    "h5py": "3.15.1",
+    "hdf5plugin": "6.0.0",
+    "mujoco": "3.4.0",
+    "numpy": "2.2.6",
+    "ogbench": "1.2.1",
+    "stable-worldmodel": "0.0.5"
+  },
+  "interpreter": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_locked_stack_replay/.venv/bin/python",
+  "model_or_gate_rows": 0,
+  "new_policy_trajectories": 0,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.10.20",
+  "schema_version": 1,
+  "scientific_environment_executed": false,
+  "status": "blocked_exact_environment",
+  "v3_test_targets_opened": false,
+  "v5_episodes": 0
+}

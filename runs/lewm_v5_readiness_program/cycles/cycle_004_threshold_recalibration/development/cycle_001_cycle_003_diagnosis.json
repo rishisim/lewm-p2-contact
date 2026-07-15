@@ -1,0 +1,734 @@
+{
+  "all_inputs_permanently_consumed": true,
+  "created_unix_ns": 1784146223103549000,
+  "cycle_001_selection": {
+    "calibration": [
+      {
+        "rho": 0.2325999753386526,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.007738009107406422,
+            "mean_score": -0.9501611664629819
+          },
+          {
+            "mean_combined_gain": 0.09921026387318066,
+            "mean_score": -0.41607052066869904
+          },
+          {
+            "mean_combined_gain": 0.1902555038422972,
+            "mean_score": -0.12366955588784134
+          },
+          {
+            "mean_combined_gain": 0.3086770592592367,
+            "mean_score": 0.1514050337829088
+          },
+          {
+            "mean_combined_gain": 0.5217275215008943,
+            "mean_score": 0.5859893570343654
+          }
+        ],
+        "stage": 1
+      },
+      {
+        "rho": 0.08540072288212121,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.11720834264983417,
+            "mean_score": -0.474817177911443
+          },
+          {
+            "mean_combined_gain": 0.16502107256712162,
+            "mean_score": -0.15780706959446583
+          },
+          {
+            "mean_combined_gain": 0.1651679253571359,
+            "mean_score": -0.0031100150538543796
+          },
+          {
+            "mean_combined_gain": 0.23425851487147867,
+            "mean_score": 0.17129712949039808
+          },
+          {
+            "mean_combined_gain": 0.305926128797944,
+            "mean_score": 0.4741984317167324
+          }
+        ],
+        "stage": 2
+      },
+      {
+        "rho": 0.011630128496705023,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.3345354673704749,
+            "mean_score": -0.041047564902148406
+          },
+          {
+            "mean_combined_gain": 0.23177351540089336,
+            "mean_score": 0.1606497607388339
+          },
+          {
+            "mean_combined_gain": 0.3524571958781238,
+            "mean_score": 0.27693281592903557
+          },
+          {
+            "mean_combined_gain": 0.40983037689212387,
+            "mean_score": 0.4055813200526185
+          },
+          {
+            "mean_combined_gain": 0.22417796143476096,
+            "mean_score": 0.670678551684427
+          }
+        ],
+        "stage": 3
+      }
+    ],
+    "compute_price_at_current_threshold": {
+      "exact_total_compute_mean_calls": 1.4521268609230655,
+      "gate_equivalent_calls_per_row": 0.04098651004587253,
+      "gate_evaluations": 15481,
+      "mean_actual_calls": 1.411140350877193,
+      "total_flops": 813027132677
+    },
+    "dgp_stability_at_current_threshold": [
+      {
+        "episodes": [
+          0,
+          49
+        ],
+        "mean_calls": 1.405263157894737,
+        "native_whitened_vs_analytic": 0.0009215289837542717,
+        "raw_vs_analytic": 6.984886594314434e-06
+      },
+      {
+        "episodes": [
+          50,
+          99
+        ],
+        "mean_calls": 1.4210526315789478,
+        "native_whitened_vs_analytic": 0.0009009520658553032,
+        "raw_vs_analytic": 4.044349083350112e-06
+      },
+      {
+        "episodes": [
+          100,
+          149
+        ],
+        "mean_calls": 1.4052631578947368,
+        "native_whitened_vs_analytic": 0.0006564900246307637,
+        "raw_vs_analytic": 1.6345241295984874e-06
+      },
+      {
+        "episodes": [
+          150,
+          199
+        ],
+        "mean_calls": 1.4463157894736844,
+        "native_whitened_vs_analytic": 0.0010658215563158027,
+        "raw_vs_analytic": 9.012312721711695e-06
+      },
+      {
+        "episodes": [
+          200,
+          249
+        ],
+        "mean_calls": 1.376842105263158,
+        "native_whitened_vs_analytic": 0.0004151503885407445,
+        "raw_vs_analytic": 6.184707102386289e-06
+      },
+      {
+        "episodes": [
+          250,
+          299
+        ],
+        "mean_calls": 1.412105263157895,
+        "native_whitened_vs_analytic": 0.001021326433339139,
+        "raw_vs_analytic": 1.2134188693893993e-05
+      }
+    ],
+    "gate_margins": [
+      {
+        "fraction_abs_margin_le_1e4": 8.771929824561403e-05,
+        "minimum_absolute_margin": 9.394021232739247e-05,
+        "quantiles": {
+          "0.05": -1.2879980000992597,
+          "0.25": -0.6797221484919371,
+          "0.5": -0.30543840260704175,
+          "0.75": 0.043583479211729614,
+          "0.95": 0.5124099102477241
+        },
+        "stage": 1
+      },
+      {
+        "fraction_abs_margin_le_1e4": 0.00031525851197982345,
+        "minimum_absolute_margin": 7.104544441088878e-05,
+        "quantiles": {
+          "0.05": -0.740841529085237,
+          "0.25": -0.37665021748741284,
+          "0.5": -0.1864783498783888,
+          "0.75": 0.03692935077945575,
+          "0.95": 0.3699148174981294
+        },
+        "stage": 2
+      },
+      {
+        "fraction_abs_margin_le_1e4": 0.0011001100110011,
+        "minimum_absolute_margin": 1.8056915205566515e-05,
+        "quantiles": {
+          "0.05": -0.27096749873359816,
+          "0.25": -0.04982430072029248,
+          "0.5": 0.09094088940421924,
+          "0.75": 0.2612528171996294,
+          "0.95": 0.5625477161864446
+        },
+        "stage": 3
+      }
+    ],
+    "heterogeneity_at_current_threshold": {
+      "native_whitened_vs_analytic": {
+        "mean": 0.0008302115754060042,
+        "positive_fraction": 0.6033333333333334,
+        "q05": -0.0022605171842992383,
+        "q50": 0.0003727126689073442,
+        "q95": 0.005075774991960655,
+        "sample_sd": 0.002507196442022702
+      },
+      "raw_vs_analytic": {
+        "mean": 6.665828054209169e-06,
+        "positive_fraction": 0.5633333333333334,
+        "q05": -4.2816357479774506e-05,
+        "q50": 4.254156931988443e-06,
+        "q95": 6.766141214444389e-05,
+        "sample_sd": 3.385520165726312e-05
+      }
+    },
+    "selected_threshold_summary": {
+      "call_histogram": [
+        8893,
+        1906,
+        217,
+        384
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.2942105263157897,
+          "native_whitened_vs_analytic": 0.0007857945687161998,
+          "raw_vs_analytic": 5.848953160761754e-06
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.3068421052631578,
+          "native_whitened_vs_analytic": 0.0007634236353365545,
+          "raw_vs_analytic": 5.374639607654005e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.3047368421052632,
+          "native_whitened_vs_analytic": 0.0007381598283960831,
+          "raw_vs_analytic": 4.455639727931646e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.3405263157894738,
+          "native_whitened_vs_analytic": 0.001069652221032656,
+          "raw_vs_analytic": 9.683511974334896e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.2857894736842104,
+          "native_whitened_vs_analytic": 0.0005255297110963982,
+          "raw_vs_analytic": 5.719307332087044e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.3057894736842106,
+          "native_whitened_vs_analytic": 0.0008152511806423167,
+          "raw_vs_analytic": 1.148665055696981e-05
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.00014380411413818998,
+          "estimate": 0.0007829685242033681,
+          "lower": 0.0005130321950323193,
+          "standardized_margin": 5.444687927710933,
+          "upper": 0.0010733691753240463
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 8.676862089015012e-05,
+          "estimate": 0.0006466548332878929,
+          "lower": 0.00047991987459595017,
+          "standardized_margin": 7.4526346812238025,
+          "upper": 0.0008186699426033798
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.8430483075173804e-06,
+          "estimate": 7.094783726623192e-06,
+          "lower": 3.5018018960966407e-06,
+          "standardized_margin": 3.8494833248185416,
+          "upper": 1.0722422429252404e-05
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.2236745428805434e-06,
+          "estimate": 1.946091808278526e-05,
+          "lower": 1.5175727792827179e-05,
+          "standardized_margin": 8.751693517872281,
+          "upper": 2.3887201616920913e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.3681349749369657e-06,
+          "estimate": 6.677051987095354e-06,
+          "lower": 2.059303064900351e-06,
+          "standardized_margin": 2.8195402955328093,
+          "upper": 1.1299151447978234e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.7193557671234554e-06,
+          "estimate": 5.574591616136591e-06,
+          "lower": 2.203625814458644e-06,
+          "standardized_margin": 3.242256037249978,
+          "upper": 8.911228134064169e-06
+        }
+      },
+      "exact_total_compute_mean_calls": 1.344726246662853,
+      "gate_equivalent_calls_per_row": 0.03841045718916857,
+      "mean_actual_calls": 1.3063157894736843,
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.2325999753386526,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 2507,
+          "rho": 0.08845912794580134,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 601,
+          "rho": 0.0017701394685490962,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.2719204773217412,
+      "total_flops": 812702724396
+    },
+    "stagewise_gains": [
+      {
+        "mean_native_whitened_gain": 0.003757943068187476,
+        "mean_raw_gain": 3.5872331961587774e-05,
+        "positive_native_whitened_gain_fraction": 0.6292982456140351,
+        "positive_raw_gain_fraction": 0.5472807017543859,
+        "reached_rows": 11400,
+        "stage": 1
+      },
+      {
+        "mean_native_whitened_gain": 0.0017353035555498228,
+        "mean_raw_gain": 1.5122967561823241e-05,
+        "positive_native_whitened_gain_fraction": 0.6311475409836066,
+        "positive_raw_gain_fraction": 0.5583228247162674,
+        "reached_rows": 3172,
+        "stage": 2
+      },
+      {
+        "mean_native_whitened_gain": 0.0019080712639562465,
+        "mean_raw_gain": 1.7799233948145148e-05,
+        "positive_native_whitened_gain_fraction": 0.6974697469746974,
+        "positive_raw_gain_fraction": 0.6160616061606161,
+        "reached_rows": 909,
+        "stage": 3
+      }
+    ]
+  },
+  "cycle_003_one_shot_validation": {
+    "calibration": [
+      {
+        "rho": 0.20335982198609864,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.08206183634111051,
+            "mean_score": -0.9783122496123899
+          },
+          {
+            "mean_combined_gain": 0.16388551665757747,
+            "mean_score": -0.4293949728472191
+          },
+          {
+            "mean_combined_gain": 0.2513932216726645,
+            "mean_score": -0.1326850508127296
+          },
+          {
+            "mean_combined_gain": 0.3101334651405846,
+            "mean_score": 0.1475586016188588
+          },
+          {
+            "mean_combined_gain": 0.5223362997317454,
+            "mean_score": 0.5818932702143987
+          }
+        ],
+        "stage": 1
+      },
+      {
+        "rho": 0.06693903596404233,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.19091011618059175,
+            "mean_score": -0.4188544061214594
+          },
+          {
+            "mean_combined_gain": 0.2299940050308296,
+            "mean_score": -0.12583416096650518
+          },
+          {
+            "mean_combined_gain": 0.2539036496200101,
+            "mean_score": 0.029417723513109506
+          },
+          {
+            "mean_combined_gain": 0.24473813842675737,
+            "mean_score": 0.20049935214569412
+          },
+          {
+            "mean_combined_gain": 0.3653236463358314,
+            "mean_score": 0.48528627765735377
+          }
+        ],
+        "stage": 2
+      },
+      {
+        "rho": 0.06461597683156227,
+        "score_quintile_mean_gain": [
+          {
+            "mean_combined_gain": 0.21728772418960293,
+            "mean_score": -0.048296132878442505
+          },
+          {
+            "mean_combined_gain": 0.3359294191484737,
+            "mean_score": 0.15743928124206236
+          },
+          {
+            "mean_combined_gain": 0.35509653725732004,
+            "mean_score": 0.2738867359932023
+          },
+          {
+            "mean_combined_gain": 0.38833662649471157,
+            "mean_score": 0.3950962939045646
+          },
+          {
+            "mean_combined_gain": 0.3791074658923748,
+            "mean_score": 0.6493361983636413
+          }
+        ],
+        "stage": 3
+      }
+    ],
+    "compute_price_at_current_threshold": {
+      "exact_total_compute_mean_calls": 1.4577885516648659,
+      "gate_equivalent_calls_per_row": 0.041034165699953384,
+      "gate_evaluations": 15499,
+      "mean_actual_calls": 1.4167543859649123,
+      "total_flops": 813044234063
+    },
+    "dgp_stability_at_current_threshold": [
+      {
+        "episodes": [
+          0,
+          49
+        ],
+        "mean_calls": 1.4642105263157896,
+        "native_whitened_vs_analytic": 0.0008150575132988712,
+        "raw_vs_analytic": 1.5171949128101724e-05
+      },
+      {
+        "episodes": [
+          50,
+          99
+        ],
+        "mean_calls": 1.4173684210526316,
+        "native_whitened_vs_analytic": 0.00039960806122477495,
+        "raw_vs_analytic": 1.871614182237477e-06
+      },
+      {
+        "episodes": [
+          100,
+          149
+        ],
+        "mean_calls": 1.4268421052631581,
+        "native_whitened_vs_analytic": 0.0004022119952981877,
+        "raw_vs_analytic": 5.236273450613424e-06
+      },
+      {
+        "episodes": [
+          150,
+          199
+        ],
+        "mean_calls": 1.3673684210526311,
+        "native_whitened_vs_analytic": 8.514982421349253e-05,
+        "raw_vs_analytic": 2.2942221144578542e-07
+      },
+      {
+        "episodes": [
+          200,
+          249
+        ],
+        "mean_calls": 1.4542105263157896,
+        "native_whitened_vs_analytic": 0.0008012981077240448,
+        "raw_vs_analytic": 1.3923273858377968e-06
+      },
+      {
+        "episodes": [
+          250,
+          299
+        ],
+        "mean_calls": 1.3705263157894734,
+        "native_whitened_vs_analytic": 0.0003601026899875376,
+        "raw_vs_analytic": -2.2108615787872337e-06
+      }
+    ],
+    "gate_margins": [
+      {
+        "fraction_abs_margin_le_1e4": 0.00017543859649122806,
+        "minimum_absolute_margin": 5.293221672192372e-05,
+        "quantiles": {
+          "0.05": -1.3337770316143813,
+          "0.25": -0.6951228413124861,
+          "0.5": -0.31428337426384106,
+          "0.75": 0.037268396900099365,
+          "0.95": 0.5061835732917008
+        },
+        "stage": 1
+      },
+      {
+        "fraction_abs_margin_le_1e4": 0.0,
+        "minimum_absolute_margin": 0.00019073157111987316,
+        "quantiles": {
+          "0.05": -0.6903824839134993,
+          "0.25": -0.3475490841408552,
+          "0.5": -0.15323797197540417,
+          "0.75": 0.06902989415923938,
+          "0.95": 0.38013677267829754
+        },
+        "stage": 2
+      },
+      {
+        "fraction_abs_margin_le_1e4": 0.0,
+        "minimum_absolute_margin": 0.00020283131400927745,
+        "quantiles": {
+          "0.05": -0.2977557811280073,
+          "0.25": -0.05270701976020947,
+          "0.5": 0.09710877804557666,
+          "0.75": 0.2510090437392412,
+          "0.95": 0.515944656417769
+        },
+        "stage": 3
+      }
+    ],
+    "heterogeneity_at_current_threshold": {
+      "native_whitened_vs_analytic": {
+        "mean": 0.00047723803195781807,
+        "positive_fraction": 0.5766666666666667,
+        "q05": -0.0033894232251444048,
+        "q50": 0.0003201875235440793,
+        "q95": 0.004510028282660022,
+        "sample_sd": 0.0026933338582046276
+      },
+      "raw_vs_analytic": {
+        "mean": 3.615120796574829e-06,
+        "positive_fraction": 0.55,
+        "q05": -4.95994383381978e-05,
+        "q50": 2.262171956410773e-06,
+        "q95": 5.9443836184136154e-05,
+        "sample_sd": 3.4217846369745916e-05
+      }
+    },
+    "selected_threshold_summary": {
+      "call_histogram": [
+        8915,
+        1847,
+        237,
+        401
+      ],
+      "contiguous_50_episode_stability": [
+        {
+          "episodes": [
+            0,
+            49
+          ],
+          "mean_calls": 1.348421052631579,
+          "native_whitened_vs_analytic": 0.0008841738844231786,
+          "raw_vs_analytic": 1.5329162618729638e-05
+        },
+        {
+          "episodes": [
+            50,
+            99
+          ],
+          "mean_calls": 1.3094736842105261,
+          "native_whitened_vs_analytic": 0.0004962937837347997,
+          "raw_vs_analytic": -1.2123193369650923e-06
+        },
+        {
+          "episodes": [
+            100,
+            149
+          ],
+          "mean_calls": 1.32,
+          "native_whitened_vs_analytic": 0.0004803622022926185,
+          "raw_vs_analytic": 8.112283401557474e-06
+        },
+        {
+          "episodes": [
+            150,
+            199
+          ],
+          "mean_calls": 1.2621052631578948,
+          "native_whitened_vs_analytic": 0.00023035646269710784,
+          "raw_vs_analytic": 1.6527956458648542e-06
+        },
+        {
+          "episodes": [
+            200,
+            249
+          ],
+          "mean_calls": 1.340526315789474,
+          "native_whitened_vs_analytic": 0.0007875332564507698,
+          "raw_vs_analytic": 4.386700389130182e-06
+        },
+        {
+          "episodes": [
+            250,
+            299
+          ],
+          "mean_calls": 1.2742105263157895,
+          "native_whitened_vs_analytic": 0.0005377430360873054,
+          "raw_vs_analytic": 1.1680834396352303e-06
+        }
+      ],
+      "criteria": {
+        "native_whitened_vs_analytic": {
+          "bootstrap_sd": 0.00014399547735311185,
+          "estimate": 0.0005694104376142967,
+          "lower": 0.0002937979417541574,
+          "standardized_margin": 3.954363345856788,
+          "upper": 0.0008576629775258936
+        },
+        "native_whitened_vs_within_episode_histogram": {
+          "bootstrap_sd": 7.371752088596755e-05,
+          "estimate": 0.0005340951724981221,
+          "lower": 0.0003940368636970836,
+          "standardized_margin": 7.2451591708341,
+          "upper": 0.0006807065759327656
+        },
+        "raw_vs_analytic": {
+          "bootstrap_sd": 1.7966787381874876e-06,
+          "estimate": 4.906117692992048e-06,
+          "lower": 1.4331133694178231e-06,
+          "standardized_margin": 2.730659404330349,
+          "upper": 8.523227812537334e-06
+        },
+        "raw_vs_fixed_d1": {
+          "bootstrap_sd": 2.3333427762897597e-06,
+          "estimate": 2.1517111367926404e-05,
+          "lower": 1.707597588839939e-05,
+          "standardized_margin": 9.221581838113254,
+          "upper": 2.623026462483886e-05
+        },
+        "raw_vs_seeded": {
+          "bootstrap_sd": 2.2129183395083906e-06,
+          "estimate": 5.958155826320006e-06,
+          "lower": 1.6563628839592954e-06,
+          "standardized_margin": 2.6924426988316417,
+          "upper": 1.034918577625497e-05
+        },
+        "raw_vs_within_episode_histogram": {
+          "bootstrap_sd": 1.6215350861482166e-06,
+          "estimate": 6.657061595735615e-06,
+          "lower": 3.4921126673878753e-06,
+          "standardized_margin": 4.105407063098927,
+          "upper": 9.873529699951445e-06
+        }
+      },
+      "exact_total_compute_mean_calls": 1.34757297725178,
+      "gate_equivalent_calls_per_row": 0.03845017023423595,
+      "mean_actual_calls": 1.3091228070175438,
+      "stagewise": [
+        {
+          "positive_sign": true,
+          "reached_rows": 11400,
+          "rho": 0.20335982198609864,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 2485,
+          "rho": 0.06368324794805184,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 638,
+          "rho": 0.032359809297296295,
+          "stage": 3
+        }
+      ],
+      "threshold": 0.2719204773217412,
+      "total_flops": 812711323071
+    },
+    "stagewise_gains": [
+      {
+        "mean_native_whitened_gain": 0.004338063211830739,
+        "mean_raw_gain": 4.779138414693683e-05,
+        "positive_native_whitened_gain_fraction": 0.6401754385964912,
+        "positive_raw_gain_fraction": 0.5623684210526316,
+        "reached_rows": 11400,
+        "stage": 1
+      },
+      {
+        "mean_native_whitened_gain": 0.0021112135082965366,
+        "mean_raw_gain": 2.0596972179304508e-05,
+        "positive_native_whitened_gain_fraction": 0.6428571428571429,
+        "positive_raw_gain_fraction": 0.575933075933076,
+        "reached_rows": 3108,
+        "stage": 2
+      },
+      {
+        "mean_native_whitened_gain": 0.0021487234291413097,
+        "mean_raw_gain": 1.6194247137187428e-05,
+        "positive_native_whitened_gain_fraction": 0.6801210898082745,
+        "positive_raw_gain_fraction": 0.5812310797174571,
+        "reached_rows": 991,
+        "stage": 3
+      }
+    ]
+  },
+  "diagnostic_dimensions_complete": [
+    "heterogeneity",
+    "calibration",
+    "compute_price",
+    "stagewise_gains",
+    "gate_margins",
+    "DGP_stability"
+  ],
+  "schema_version": 1,
+  "v5_outcome_episodes": 0
+}

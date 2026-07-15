@@ -1,0 +1,34 @@
+{
+  "stagewise__compact": {
+    "component_sum_median_seconds": 0.0476506670092931,
+    "critic_mlp_median_seconds": 0.0009899169963318855,
+    "critic_mlp_seconds_repeats": [
+      0.01179016700189095,
+      0.000978374999249354,
+      0.0009899169963318855,
+      0.000999500000034459,
+      0.0009479170112172142
+    ],
+    "excludes": "common base predictor and causal feature construction",
+    "mean_calls": 1.4671052631578947,
+    "operating_point": "z0.00_b1.50",
+    "solver_sparse_seconds": 0.046660750012961216,
+    "transitions": 3192
+  },
+  "stagewise__full": {
+    "component_sum_median_seconds": 0.060331749002216384,
+    "critic_mlp_median_seconds": 0.0045847080036764964,
+    "critic_mlp_seconds_repeats": [
+      0.014102665998507291,
+      0.0045847080036764964,
+      0.0048533340013818815,
+      0.004092000002856366,
+      0.004402375008794479
+    ],
+    "excludes": "common base predictor and causal feature construction",
+    "mean_calls": 1.443922305764411,
+    "operating_point": "z0.00_b1.50",
+    "solver_sparse_seconds": 0.05574704099853989,
+    "transitions": 3192
+  }
+}

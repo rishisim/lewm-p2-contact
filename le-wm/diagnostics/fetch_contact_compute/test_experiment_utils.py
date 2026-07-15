@@ -19,6 +19,7 @@ from run_recurrent_refiner import (
     calibrate_depth_thresholds,
     uniform_curve_at_budget,
 )
+from run_persistence_control import persistence_mse
 
 
 class ExperimentUtilsTest(unittest.TestCase):
@@ -39,6 +40,12 @@ class ExperimentUtilsTest(unittest.TestCase):
 
     def test_probability_superiority_counts_ties_as_half(self) -> None:
         self.assertAlmostEqual(probability_superiority([2.0, 3.0], [1.0, 3.0]), 0.625)
+
+    def test_persistence_mse_matches_mean_squared_state_delta(self) -> None:
+        current = [[1.0, 2.0], [3.0, 5.0]]
+        target = [[2.0, 4.0], [5.0, 1.0]]
+        self.assertEqual(persistence_mse(current, target).tolist(), [2.5, 10.0])
+        self.assertEqual(persistence_mse(current, target, scale=[1.0, 2.0]).tolist(), [1.0, 4.0])
 
     def test_bias_variance_components_decompose_mean_member_error(self) -> None:
         components = bias_variance_components(

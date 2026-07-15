@@ -1,0 +1,44 @@
+{
+  "base_config": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+  "base_weights": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+  "calibration_cache_exists": false,
+  "calibration_receipt_exists": false,
+  "checkpoints": {
+    "contractive__compact_critics.pt": "fb7ead0a874166760c33b92c7edc9b2ab68ac0062dca34080691cc8c79317e6b",
+    "contractive__full_critics.pt": "a24eb38151fdd414e1763e189672d7e0bfc7f6ccf538ff502afcd5372208a6a5",
+    "contractive_seed_261101.pt": "4ad33ce2200f7a8003ff9f17d04eab95bdc5d79ce0d719125fbdfaf4f936a1c8",
+    "contractive_seed_261102.pt": "d7a51f13ab01ee098bedaae7b6e7e9e905e0b179636d50ac4651e7b332622a68",
+    "stagewise__compact_critics.pt": "d725034e1ee55a46a65741d07680579f03fb18242ebaaca5699fa9f485e8edae",
+    "stagewise__full_critics.pt": "c5ec122ec4a040013434f69a0356ca577b0e73fc54b1ce94a6fe4f83fc390a74",
+    "stagewise_seed_261101.pt": "4a80dcaf4141122e69ab517753886251124da297a027eabe06f4050b3d8fec5e",
+    "stagewise_seed_261102.pt": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+    "stagewise_seed_261103.pt": "a3543ddacede8b63df3f2421e1ae1b85d5f740fa46d161c616399079a09be7f3",
+    "v3_repair__compact_critics.pt": "0896452f8df283041e055dd18bab5162cdbdddd9040d414d587b24b1d467a85a",
+    "v3_repair__full_critics.pt": "80ef7feb18cb797813d907e651af25b88e1045eff017730140c6567403493726",
+    "v3_repair_seed_261101.pt": "1bf46aac596c732f2576e883c0b26d5c7e8d2162d608ad880b759c3beda3a136",
+    "v3_repair_seed_261102.pt": "fae79ebc2f34916e03f7cc9a7f5e9f0cbcd95d4db06b4c386c5c0e12bab01e8b",
+    "verifier_v1__compact_critics.pt": "771a418cd50800ac1429cbf09ff57f71cb59dea0a366ef369b5ecd95cce6d702",
+    "verifier_v1__full_critics.pt": "37b86dd1f4a9e8eebe58eae7858c3e2d27dcd50fcdcf2c792db8db31cc646aa3"
+  },
+  "combined_v3_cache": {
+    "opened_with_numpy": false,
+    "sha256": "21377c283136008ae07aa4d1e00407ab57eaba5ddda7d5b1c740c47e55afaba0"
+  },
+  "sources": {
+    "PLAN.md": "bedd910db229284018bf6abe25ba0f1bd532ca694e43c1a7c0eb1d9503f477d2",
+    "REPORT.md": "0f64370a14c093ac41187165195672b7998d32c5dad0e422fda629c2a50e7ae8",
+    "config.json": "7ebab5b16bbef452621ebb260f76b0b59212b478086062f56e7da540cc131b87",
+    "critics.py": "099352a85d580df888f065968d94643dde389e72551423cd93bdc8e677dceebd",
+    "data_isolation.py": "09e0619730f06cfe174e360433870408bfd796aaf27b852eef58c37448f13dce",
+    "decision.json": "aa7e3951a4b6c2af798b613c87713edb163329147867484c3e806b1379ad70d3",
+    "extract_isolated.py": "6f7529ad613d768cbc486f47b5e85fb6a44e8ae1b525becd543697dda3abf9aa",
+    "make_artifacts.py": "8fc33ca9acc594572ee9a53ffc561f60cb9a9080e528fe9cf0ea65b99825f7de",
+    "models.py": "87833a79b447f48fdd7ead7cccbf9a7fa9e95e4f60b364fe7566bbab5cadb025",
+    "policy.py": "97b816caa76568748fe78e77db332de59721eb89b0a38537f82b1fbe3fd2279a",
+    "run_discovery.py": "239deee709187d4e05a21818f8ca460ded147193a37d482165e6fb052f4b5199"
+  },
+  "train_only_cache": "276e70728ce387161096aa37f6575220925e195bd1180bbf123c1b994bbaea70",
+  "v1_checkpoint": "388a82fc30c96921083bfa4f2578cb296e6c3544510953d17578cf766cdf10f1",
+  "v3_manifest": "4b9344b6ff2acce4c58c3b296ba2017b0122f8f8158f45088239712ce94b7030",
+  "v4_directory_exists": false
+}

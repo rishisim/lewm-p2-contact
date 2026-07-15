@@ -1,0 +1,515 @@
+{
+  "adaptive_raw_mse": 0.07681037062364467,
+  "adaptive_whitened_mse": 0.45388158332383777,
+  "bootstrap_artifact": {
+    "path": "runs/lewm_adaptive_compute_v4/metrics/primary_bootstrap_replicates.npz",
+    "replicates_per_comparison": 10000,
+    "sha256": "f77c6b5a416b4747849234793533a85464c792b1d3f650ea983ca171eae2affb"
+  },
+  "call_histogram": {
+    "1": 7492,
+    "2": 3605,
+    "3": 153,
+    "4": 150
+  },
+  "comparisons": {
+    "raw_vs_equal_call_analytic_secondary": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 6.873959309394143e-06,
+      "ci_high": -1.650044177497451e-05,
+      "ci_low": -4.328300394279187e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.9822732425016592e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431003
+    },
+    "raw_vs_equal_call_seeded_secondary": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 8.072056521861623e-06,
+      "ci_high": -1.2993846088903138e-05,
+      "ci_low": -4.4846796966515274e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.8829549586302355e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431004
+    },
+    "raw_vs_exact_total_flop_analytic": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 6.714562834817445e-06,
+      "ci_high": -1.5800503053812888e-05,
+      "ci_low": -4.1832467336952796e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.88053238201942e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431001
+    },
+    "raw_vs_exact_total_flop_seeded": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 7.81635614787426e-06,
+      "ci_high": -6.40370367016243e-06,
+      "ci_low": -3.712240812749594e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.1478225366751614e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431002
+    },
+    "raw_vs_fixed_d1": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 8.126296641851077e-06,
+      "ci_high": -2.3310279736107456e-05,
+      "ci_low": -5.500584609833088e-05,
+      "confidence": 0.95,
+      "mean_benefit": -3.901090481106127e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431005
+    },
+    "raw_vs_histogram": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 7.426285761464422e-06,
+      "ci_high": 5.831337128990538e-06,
+      "ci_low": -2.328341874792322e-05,
+      "confidence": 0.95,
+      "mean_benefit": -8.867079240939858e-06,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431006
+    },
+    "score_permutation_vs_own_exact_total_analytic": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 6.561023489840173e-06,
+      "ci_high": -1.089648666371745e-05,
+      "ci_low": -3.667280877863652e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.3880487148237546e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431007
+    },
+    "score_permutation_vs_own_exact_total_seeded": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 7.48541034604577e-06,
+      "ci_high": -1.2023237367413873e-05,
+      "ci_low": -4.132903603634698e-05,
+      "confidence": 0.95,
+      "mean_benefit": -2.6763164246324123e-05,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431008
+    },
+    "whitened_vs_exact_total_flop_analytic": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 0.0002160897052746011,
+      "ci_high": 0.0001540107428337523,
+      "ci_low": -0.0006979849604817681,
+      "confidence": 0.95,
+      "mean_benefit": -0.00027689917534331034,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431009
+    },
+    "whitened_vs_exact_total_flop_seeded": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 0.00024091428213335664,
+      "ci_high": 0.00024696805013708516,
+      "ci_low": -0.0006998045699200083,
+      "confidence": 0.95,
+      "mean_benefit": -0.00023203482787061684,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431010
+    },
+    "whitened_vs_histogram": {
+      "benefit_direction": "baseline_loss_minus_candidate_loss",
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 0.00020429907368945855,
+      "ci_high": 0.0005590636068027768,
+      "ci_low": -0.00024179335111277736,
+      "confidence": 0.95,
+      "mean_benefit": 0.00015678951935277667,
+      "n_episodes": 300,
+      "n_rows": 11400,
+      "seed": 940431011
+    }
+  },
+  "compute_price": 0.00014899746351320145,
+  "episodes": 300,
+  "equal_call_analytic_raw_mse_secondary": 0.07678054789121966,
+  "equal_call_mixture_secondary": {
+    "analytic_expected_mean_calls": 1.3825438596491229,
+    "analytic_probabilities": [
+      0.8724853801169591,
+      0.0,
+      0.0,
+      0.12751461988304094
+    ],
+    "assignment_seed": 940430002,
+    "exact_audit": {
+      "exact_total_match": true,
+      "expected_match": true,
+      "expected_mean_calls": 1.3825438596491229,
+      "histogram": {
+        "1": 9946,
+        "3": 1,
+        "4": 1453
+      },
+      "n": 11400,
+      "realized_mean_calls": 1.3825438596491229,
+      "realized_minus_expected": 0.0,
+      "target_total_calls": 15761,
+      "total_call_error": 0,
+      "total_calls": 15761
+    },
+    "exact_counts": [
+      9946,
+      0,
+      1,
+      1453
+    ],
+    "fixed_exit_mean_loss_used_by_oracle": [
+      0.07677135971883361,
+      0.07685517655787663,
+      0.0768470304538884,
+      0.07684341555364274
+    ],
+    "transition_independence": "depth counts use only the aggregate fixed-exit loss vector; seeded assignment is independent of every transition feature, score, target row, episode, and regime"
+  },
+  "equal_call_seeded_raw_mse_secondary": 0.07678154107405837,
+  "exact_total_flop_analytic_raw_mse": 0.07678156529982447,
+  "exact_total_flop_budget": {
+    "adaptive_gate_decisions": 15611,
+    "adaptive_gate_total_flops": 127947756,
+    "adaptive_solver_total_calls": 15761,
+    "adaptive_total_flops": 812944901916,
+    "analytic_exact_flop_match": true,
+    "analytic_target_mean_calls": 1.4249030360094075,
+    "analytic_target_total_calls": 16243.894610507246,
+    "integer_baseline_minus_adaptive_flops": 27924,
+    "integer_baseline_total_flops": 812944929840,
+    "integer_baseline_weakly_more_compute": true,
+    "integer_rounding": "ceiling_conservative_for_adaptive_claim",
+    "integer_target_mean_calls": 1.4249122807017545,
+    "integer_target_total_calls": 16244,
+    "rows": 11400
+  },
+  "exact_total_flop_mixture": {
+    "analytic_expected_mean_calls": 1.4249030360094075,
+    "analytic_probabilities": [
+      0.8583656546635309,
+      0.0,
+      0.0,
+      0.14163434533646915
+    ],
+    "assignment_seed": 940430001,
+    "exact_audit": {
+      "exact_total_match": true,
+      "expected_match": true,
+      "expected_mean_calls": 1.4249122807017545,
+      "histogram": {
+        "1": 9785,
+        "3": 1,
+        "4": 1614
+      },
+      "n": 11400,
+      "realized_mean_calls": 1.4249122807017545,
+      "realized_minus_expected": 0.0,
+      "target_total_calls": 16244,
+      "total_call_error": 0,
+      "total_calls": 16244
+    },
+    "exact_counts": [
+      9785,
+      0,
+      1,
+      1614
+    ],
+    "fixed_exit_mean_loss_used_by_oracle": [
+      0.07677135971883361,
+      0.07685517655787663,
+      0.0768470304538884,
+      0.07684341555364274
+    ],
+    "transition_independence": "depth counts use only the aggregate fixed-exit loss vector; seeded assignment is independent of every transition feature, score, target row, episode, and regime"
+  },
+  "exact_total_flop_seeded_raw_mse": 0.07678889239827792,
+  "family": "full_linear",
+  "fixed_exit_raw_mse": {
+    "d1": 0.07677135971883361,
+    "d2": 0.07685517655787663,
+    "d3": 0.0768470304538884,
+    "d4": 0.07684341555364274
+  },
+  "fixed_exit_whitened_mse": {
+    "d1": 0.4541202362638594,
+    "d2": 0.45388854756862346,
+    "d3": 0.4510652776467638,
+    "d4": 0.45048021438823277
+  },
+  "frontier": [
+    {
+      "block_call_nondominated": true,
+      "fully_counted_flop_nondominated": true,
+      "fully_counted_flops_per_transition": 71198374.0,
+      "kind": "fixed",
+      "mean_block_calls": 1.0,
+      "name": "fixed_d1",
+      "raw_mse": 0.07677135971883361
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71463334.0,
+      "kind": "fixed",
+      "mean_block_calls": 2.0,
+      "name": "fixed_d2",
+      "raw_mse": 0.07685517655787663
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71728294.0,
+      "kind": "fixed",
+      "mean_block_calls": 3.0,
+      "name": "fixed_d3",
+      "raw_mse": 0.0768470304538884
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71993254.0,
+      "kind": "fixed",
+      "mean_block_calls": 4.0,
+      "name": "fixed_d4",
+      "raw_mse": 0.07684341555364274
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71299732.82105263,
+      "kind": "matched_mixture_secondary",
+      "mean_block_calls": 1.3825438596491229,
+      "name": "equal_call_analytic_mixture",
+      "raw_mse": 0.07678054789121966
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71299732.82105263,
+      "kind": "matched_mixture_secondary",
+      "mean_block_calls": 1.3825438596491229,
+      "name": "equal_call_seeded_exact_mixture",
+      "raw_mse": 0.07678154107405837
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71310956.30842105,
+      "kind": "primary_exact_total_flop_mixture",
+      "mean_block_calls": 1.4249030360094075,
+      "name": "exact_total_flop_analytic_mixture",
+      "raw_mse": 0.07678156529982447
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71310958.75789474,
+      "kind": "primary_exact_total_flop_mixture",
+      "mean_block_calls": 1.4249122807017545,
+      "name": "exact_total_flop_seeded_integer_mixture",
+      "raw_mse": 0.07678889239827792
+    },
+    {
+      "block_call_nondominated": false,
+      "fully_counted_flop_nondominated": false,
+      "fully_counted_flops_per_transition": 71310956.30842105,
+      "kind": "adaptive",
+      "mean_block_calls": 1.3825438596491229,
+      "name": "adaptive_b1.25",
+      "raw_mse": 0.07681037062364467
+    }
+  ],
+  "histogram_raw_mse": 0.07680150354440372,
+  "interpretation_limit": "This verdict concerns one frozen operating point in one visual latent physical world model; physical-regime claims are not part of this primary verdict.",
+  "mean_gate_decisions": 1.3693859649122806,
+  "operating_point": "b1.25",
+  "oracle_headroom": 0.0003869935409410996,
+  "oracle_mean_calls": 1.3825438596491229,
+  "oracle_raw_mse": 0.07642337708270357,
+  "phase": "one_shot_v4_confirmation_primary",
+  "raw_criteria": {
+    "adaptive_block_call_nondominated": false,
+    "adaptive_fully_counted_flop_nondominated": false,
+    "score_permutation_not_significantly_better_than_own_analytic_baseline": true,
+    "score_permutation_not_significantly_better_than_own_seeded_baseline": true,
+    "vs_exact_total_flop_analytic_ci_low_gt_zero": false,
+    "vs_exact_total_flop_seeded_ci_low_gt_zero": false,
+    "vs_fixed_d1_ci_low_gt_zero": false,
+    "vs_histogram_ci_low_gt_zero": false
+  },
+  "raw_passed": false,
+  "realized_mean_calls": 1.3825438596491229,
+  "realized_total_calls": 15761,
+  "rows": 11400,
+  "runtime_deployment_status": "pending_separate_benchmark",
+  "schema_version": 1,
+  "score_permutation_raw_mse": 0.0768047557006541,
+  "seed_blocks": [
+    {
+      "adaptive_raw_mse": 0.08002622681397234,
+      "block": 1,
+      "episode_slots": [
+        0,
+        99
+      ],
+      "episodes": 100,
+      "realized_mean_calls": 1.3610526315789473,
+      "rows": 3800,
+      "vs_exact_total_flop_analytic": {
+        "benefit_direction": "baseline_loss_minus_candidate_loss",
+        "bootstrap_samples": 10000,
+        "bootstrap_standard_error": 1.2132954290401409e-05,
+        "ci_high": 1.5121441145577098e-06,
+        "ci_low": -4.6676770285919276e-05,
+        "confidence": 0.95,
+        "mean_benefit": -2.17365032472547e-05,
+        "n_episodes": 100,
+        "n_rows": 3800,
+        "seed": 940431101
+      }
+    },
+    {
+      "adaptive_raw_mse": 0.0736989348049055,
+      "block": 2,
+      "episode_slots": [
+        100,
+        199
+      ],
+      "episodes": 100,
+      "realized_mean_calls": 1.39,
+      "rows": 3800,
+      "vs_exact_total_flop_analytic": {
+        "benefit_direction": "baseline_loss_minus_candidate_loss",
+        "bootstrap_samples": 10000,
+        "bootstrap_standard_error": 1.0839406668416097e-05,
+        "ci_high": 6.223435741333949e-06,
+        "ci_low": -3.600733318150937e-05,
+        "confidence": 0.95,
+        "mean_benefit": -1.5470439458077193e-05,
+        "n_episodes": 100,
+        "n_rows": 3800,
+        "seed": 940431102
+      }
+    },
+    {
+      "adaptive_raw_mse": 0.07670595025205618,
+      "block": 3,
+      "episode_slots": [
+        200,
+        299
+      ],
+      "episodes": 100,
+      "realized_mean_calls": 1.3965789473684211,
+      "rows": 3800,
+      "vs_exact_total_flop_analytic": {
+        "benefit_direction": "baseline_loss_minus_candidate_loss",
+        "bootstrap_samples": 10000,
+        "bootstrap_standard_error": 1.1472078287689958e-05,
+        "ci_high": -2.6442247232778777e-05,
+        "ci_low": -7.181933958745455e-05,
+        "confidence": 0.95,
+        "mean_benefit": -4.920902875525069e-05,
+        "n_episodes": 100,
+        "n_rows": 3800,
+        "seed": 940431103
+      }
+    }
+  ],
+  "validity": {
+    "causality_audit_passed": true,
+    "checkpoint_and_gate_hashes_passed": true,
+    "confirmation_receipt_preceded_target_io": true,
+    "data_isolation_passed": true,
+    "exact_call_audits": {
+      "adaptive_supported_integer_calls": true,
+      "equal_call_seeded_total_exact": true,
+      "exact_total_analytic_flop_match": true,
+      "exact_total_integer_baseline_weakly_more_flops": true,
+      "exact_total_integer_target_exact": true,
+      "histogram_exact": true,
+      "permuted_exact_total_integer_target_exact": true
+    },
+    "finite_metrics": true,
+    "freshness_duplicate_audit_passed": true,
+    "frozen_objects": {
+      "base_config": {
+        "bytes": 1313,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+        "sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+      },
+      "base_weights": {
+        "bytes": 72291425,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+        "sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+      },
+      "contract": {
+        "compute_price": true,
+        "family": true,
+        "gate_flops": true,
+        "operating_point": true,
+        "parameters": true
+      },
+      "solver_checkpoint": {
+        "bytes": 2945961,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+        "sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+      },
+      "student_checkpoint": {
+        "bytes": 1250325,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/final_student.pt",
+        "sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302"
+      },
+      "tournament": {
+        "bytes": 12987,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/audit/frozen_tournament.json",
+        "sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66"
+      },
+      "whitening": {
+        "bytes": 298994,
+        "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/discovery_whitening.npz",
+        "sha256": "6ac9f8a463921e8fc158ba2aca543f07dc46931a3f98b4d7ef9f10efd4add54f"
+      }
+    },
+    "no_gradient_audit_passed": true,
+    "outcome_evaluation_audit_passed": true,
+    "passed": true,
+    "sparse_equivalence_passed": true,
+    "v3_test_targets_opened": false
+  },
+  "verdict": "v4_confirmatory_failed",
+  "whitening_classification_input": {
+    "benefit_direction": "baseline_loss_minus_candidate_loss",
+    "bootstrap_samples": 10000,
+    "bootstrap_standard_error": 0.0002160897052746011,
+    "ci_high": 0.0001540107428337523,
+    "ci_low": -0.0006979849604817681,
+    "confidence": 0.95,
+    "mean_benefit": -0.00027689917534331034,
+    "n_episodes": 300,
+    "n_rows": 11400,
+    "seed": 940431009
+  }
+}

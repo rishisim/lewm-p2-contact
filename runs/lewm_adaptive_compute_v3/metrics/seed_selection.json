@@ -1,0 +1,26 @@
+{
+  "rule": "smallest calibration objective; ties seed order",
+  "seeds": [
+    {
+      "best_epoch": 1,
+      "calibration_objective": 13.44239973436322,
+      "checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/checkpoints/joint_seed_260913.pt",
+      "checkpoint_sha256": "7f21db75cfaeae7ad6eb6b869dd4297cc7673be77a02c68bb597fc7a24593e41",
+      "seed": 260913
+    },
+    {
+      "best_epoch": 1,
+      "calibration_objective": 14.600592821801616,
+      "checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/checkpoints/joint_seed_260914.pt",
+      "checkpoint_sha256": "8475542f594c0607b816ef3f480ff95dddbdcb3a5c1ec5c02ee0550e640138a1",
+      "seed": 260914
+    },
+    {
+      "best_epoch": 1,
+      "calibration_objective": 15.976196570145456,
+      "checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/checkpoints/joint_seed_260915.pt",
+      "checkpoint_sha256": "99d8541d9e38fbea5344b4aeae019a719ccc3e69ed07a0855dfc74f1a59c432c",
+      "seed": 260915
+    }
+  ]
+}

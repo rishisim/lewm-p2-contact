@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "not_executed_no_unique_coherent_candidate",
+  "candidate_count": 2,
+  "eligible_candidate_count": 0,
+  "episode_count_frozen": 8,
+  "transition_count_frozen": 64,
+  "frame_count_frozen": 24,
+  "transition_count_executed": 0,
+  "frame_count_executed": 0,
+  "hdf5_rows_read": 0,
+  "restore_mode_comparison": null,
+  "current_candidate_side_by_side": null,
+  "environment_metrics": null,
+  "reason": "The sealed static eligibility gate failed before environment binding and scientific execution."
+}

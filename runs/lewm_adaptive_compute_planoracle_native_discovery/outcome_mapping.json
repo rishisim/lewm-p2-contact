@@ -1,0 +1,28 @@
+{
+  "benefit_definition": "comparator episode mean MSE minus adaptive episode mean MSE; positive favors adaptive",
+  "bootstrap": "episode resampling, 10000 replicates, percentile [0.025,0.975], seed 1750999999",
+  "prospective_pass": [
+    "lower CI > 0 for raw vs analytic",
+    "lower CI > 0 for raw vs conservative seeded",
+    "lower CI > 0 for raw vs fixed depth 1",
+    "lower CI > 0 for raw vs histogram randomization",
+    "lower CI > 0 for native-whitened vs analytic",
+    "lower CI > 0 for native-whitened vs histogram randomization",
+    "nondominated in calls and total FLOPs",
+    "all integrity audits pass",
+    "positive stagewise score/gain rank correlation at every stage"
+  ],
+  "selection_qualifier": [
+    "raw benefit vs analytic exact-total-FLOP mixture > 0",
+    "native-whitened benefit vs analytic exact-total-FLOP mixture > 0",
+    "all call depths represented and mean calls strictly between 1 and 4",
+    "causal/contact/gradient/sparse-dense audits pass"
+  ],
+  "terminal_mapping": {
+    "DGP_or_integrity_failure": "planoracle_dgp_execution_invalid",
+    "all_pass": "planoracle_prospective_discovery_passed",
+    "no_selection_candidate": "gate_family_selection_failed",
+    "other_valid_prospective_failure": "planoracle_no_adaptive_advantage",
+    "raw_all_but_native_failure": "planoracle_raw_only_not_robust"
+  }
+}

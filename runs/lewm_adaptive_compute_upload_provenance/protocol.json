@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "sealed_before_all_new_network_api_git_and_archive_requests",
+  "repository": {"type": "huggingface_dataset", "id": "quentinll/lewm-cube", "archive": "cube_single_expert.tar.zst"},
+  "immutable_revisions": ["de75ff3cef0851c208b849c58570d765a2ae0637", "f6fe469578297a910bd4c88b9857f572908d7a34", "116b5467ac69094027b3e2cfda48c79f482356d3", "63c01ba443b5ebdfd363b46ead9912b612218d96", "54324364f20a0002c075958c49c7027ffa2ffd71", "02a19a67a0dc8c9d6215f89c19e0a597691e152a"],
+  "known_archive_namespaces": {"git_oid": "01e3f03328086b91750f474872e03428f4d63e9a", "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600", "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf", "size": 46184624478, "upload_revision": "f6fe469578297a910bd4c88b9857f572908d7a34"},
+  "allowed_source_classes": ["huggingface_primary_api", "huggingface_immutable_revision_url", "dataset_immutable_git_object", "directly_tied_signed_release_or_workflow"],
+  "allowed_endpoint_templates": ["https://huggingface.co/api/datasets/quentinll/lewm-cube/revision/{revision}", "https://huggingface.co/api/datasets/quentinll/lewm-cube/commits/{revision}", "https://huggingface.co/api/datasets/quentinll/lewm-cube/tree/{revision}", "https://huggingface.co/datasets/quentinll/lewm-cube/raw/{revision}/{path}", "https://huggingface.co/datasets/quentinll/lewm-cube/resolve/{revision}/cube_single_expert.tar.zst", "https://api.github.com/repos/{owner}/{repo}/releases", "https://api.github.com/repos/{owner}/{repo}/actions/runs"],
+  "caps": {"maximum_http_requests": 48, "maximum_archive_payload_bytes": 16777216},
+  "archive_range": {"initial_prefix_bytes": 1048576, "maximum_prefix_bytes": 16777216, "require_status": 206, "require_valid_content_range": true, "reject_full_body_200": true, "stop_after_first_tar_or_pax_header": true},
+  "revision_fields": ["commit", "parents", "author", "committer", "author_timestamp", "committer_timestamp", "signature", "message", "tree", "siblings", "readme_sha256", "readme_diff", "gitattributes", "archive_file_action", "archive_pointer_bytes", "git_oid", "lfs_sha256", "xet_hash", "size", "storage_metadata"],
+  "response_fields": ["request_index", "url", "method", "request_headers", "status", "redirect_chain", "etag", "content_range", "content_length", "body_bytes", "body_sha256"],
+  "binding_evidence": "exact source commit plus coherent same-commit lock, or immutable container digest plus build/source record, explicitly tied to exact archive OID/hash/upload revision",
+  "narrowing_evidence": "exact collector command/config, dependency versions, environment variables, seed handling, renderer/backend, or source tag explicitly tied to exact archive but lacking coherent complete binding",
+  "descriptive_only": ["timestamps", "names", "uploader_identity", "file_sizes", "storage_hashes", "generic_project_links", "archive_member_metadata_without_source_linkage", "filesystem_mtime", "xet_chunking", "mutable_head"],
+  "outcomes": ["upload_metadata_binds_coherent_generator", "upload_metadata_narrows_generator_without_binding", "upload_metadata_contains_no_generator_binding", "upload_metadata_unavailable"],
+  "stopping_rules": ["reconstruct all six revisions and immutable trees", "inspect upload pointer/storage metadata", "inspect only explicitly tied signed artifacts", "attempt one bounded range header recovery", "stat local extracted file", "never replay mechanics"],
+  "prohibitions": {"hdf5_open": false, "hdf5_hash_recompute": false, "cube_environment_executions": 0, "v3_test_targets_opened": false, "combined_v3_cache_numpy_loaded": false, "policy_trajectories": 0, "model_or_gate_rows": 0, "v5_episodes": 0, "author_contact": false}
+}

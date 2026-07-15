@@ -1,0 +1,10 @@
+{
+  "collapse_passed": true,
+  "contrast_passed": false,
+  "coverage_passed": false,
+  "matched_passed": false,
+  "phase_passed": false,
+  "reason": "held-out interaction/free coverage gate failed, so the preregistered transfer contrast is void",
+  "transfer_supported": false,
+  "verdict": "contrast_void_insufficient_free"
+}

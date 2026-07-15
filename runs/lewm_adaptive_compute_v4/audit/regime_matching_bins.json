@@ -1,0 +1,61 @@
+{
+  "action_magnitude": "sqrt(mean over five raw actions of sum over five action coordinates of action^2))",
+  "coarse": {
+    "action_magnitude_interior_edges": [
+      0.5706170586030015,
+      0.8339987156293334,
+      1.1266778087504472
+    ],
+    "phase_interior_edges": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "target_motion_interior_edges": [
+      0.000654639647109434,
+      0.06707299686968327,
+      0.0952151268720627
+    ]
+  },
+  "derivation": "discovery_fit episodes only; frozen before any V4 episode generation",
+  "discovery_train_cache_sha256": "276e70728ce387161096aa37f6575220925e195bd1180bbf123c1b994bbaea70",
+  "fine": {
+    "action_magnitude_interior_edges": [
+      0.4070325248238468,
+      0.5706170586030015,
+      0.6995143716273691,
+      0.8339987156293334,
+      0.990580981296575,
+      1.1266778087504472,
+      1.3147632099808855
+    ],
+    "phase_interior_edges": [
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875
+    ],
+    "target_motion_interior_edges": [
+      0.0,
+      0.000654639647109434,
+      0.03053746256045997,
+      0.06707299686968327,
+      0.0909903421998024,
+      0.10898197330534455
+    ]
+  },
+  "fit_episode_count": 336,
+  "fit_row_count": 12768,
+  "regime_definitions": {
+    "contact": "current five-step contact window positive and not impact",
+    "high_transport_threshold_discovery_q75": 0.06765174865722656,
+    "impact": "current five-step contact window positive and preceding window negative",
+    "other_free_motion": "no current contact and block displacement > 0.0",
+    "static": "no current contact and block displacement <= 0.0"
+  },
+  "schema_version": 1,
+  "target_motion": "Euclidean block-position displacement over the target five-step interval"
+}

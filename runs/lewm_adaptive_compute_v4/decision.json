@@ -1,0 +1,16 @@
+{
+  "confirmation_outcome_sha256": "e1fcae6089c8ff7a39ba5c30041105ac45bab1aac95eba3d1227bf2b5c30246e",
+  "contact_aware_claim_supported": false,
+  "decision": "v4_confirmatory_failed",
+  "physical_claim": "contact_aware_claim_not_supported",
+  "physical_regime_metrics_sha256": "54636aeb30d78d38a6b5317410f10180010efcece3e4667cb4db1040a22cd38a",
+  "primary_metrics_sha256": "94db508deaf0a778f724fb07cc4ed8cdf2e41eca3b480339f471aca2b08409cc",
+  "primary_verdict_written_before_secondary_physical_regime_analysis": true,
+  "raw_criteria_passed": false,
+  "runtime_deployment_status": "latency_regressed",
+  "runtime_metrics_sha256": "8627b96aa6afde5ef726bd0d48979511f50233e0e36d10206f89c6e29f444a02",
+  "schema_version": 1,
+  "validity_passed": true,
+  "whitened_ci_low": -0.0006979849604817681,
+  "whitened_point_benefit": -0.00027689917534331034
+}

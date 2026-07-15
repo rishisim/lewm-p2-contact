@@ -1,0 +1,17 @@
+{
+  "files": {
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/PREREGISTRATION.md": "8a3993f14651eeafd6e70bc1a4e186d89e709d68475cb48adb79342249f94b4d",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/candidate_grid.json": "fd5a4373264c6d21cac0247810d927173b3a33c87b197feabf561038b0ad06d2",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/cohort_seed_ledger.json": "f08d2256f95053ab8a9a9e427040ddd62b8e5cbaacd25751a0f3f34285fc1bd8",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/outcome_mapping.json": "972db7de2244452d68e2884e95cb4715581cb265c0130dc05df08d42a4430098",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/prepare.py": "853e920348287350a30f993150860926c293beb179569e2f4c7943a518e6f3e1",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/protocol.json": "eb7adc13b72f71807ae9a9f73596905e812887ac431ee4ec7dbeae9472ccd0c0",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/resolved_frozen_objects.json": "1a1de544214da7b44407a610408d1936208e87b5ee7d2817eaad4d353c6a70ea"
+  },
+  "new_episode_files_at_seal": 0,
+  "released_hdf5_opened": false,
+  "schema_version": 1,
+  "status": "frozen_before_any_new_episode_or_fit",
+  "v3_targets_opened": false,
+  "v5_episodes": 0
+}

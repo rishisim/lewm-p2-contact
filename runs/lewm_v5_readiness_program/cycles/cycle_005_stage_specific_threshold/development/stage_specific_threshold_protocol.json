@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-07-15T20:32:37Z",
+  "status": "frozen_before_any_candidate_specific_counterfactual",
+  "purpose": "one_bounded_stage_specific_upward_threshold_change_using_consumed_cycle_004_only",
+  "diagnosis_sha256": "66e935ef938b7c2dbf01add5b1ffbb130b406b7e4519e73808e0ea842db413d4",
+  "hypothesis": "The uniform threshold preserves strong stage-one ranking and positive loss contrasts but admits a later-stage population on which the frozen gate score is nearly rank-neutral. Stricter stage-one and stage-two thresholds can restrict later decisions to higher-confidence subsets while preserving complete counterfactual paths.",
+  "single_change_family": {
+    "parameter": "stage_specific_continuation_thresholds",
+    "base_threshold": 0.2719204773217412,
+    "decision_1_multipliers": [1.0, 1.25, 1.5, 1.75, 2.0],
+    "decision_2_multipliers": [1.0, 1.25, 1.5, 1.75, 2.0],
+    "decision_3_multiplier": 1.0,
+    "candidate_count": 25,
+    "upward_only": true,
+    "counterfactual_completeness_contract": "For every row and stage, a candidate may continue only where cycle 004 continued. Candidate calls must be elementwise no greater than observed cycle-004 calls, and every score needed for a candidate decision must be finite in the consumed trace.",
+    "unchanged": [
+      "base model",
+      "stagewise refiner",
+      "dual affine gate weights and biases",
+      "native whitening",
+      "counted 1046-feature causal graph and semantic order",
+      "PlanOracle DGP and deterministic reset amendment",
+      "all six individual loss criteria",
+      "both simultaneous co-primary criteria",
+      "positive score/gain rank at every stage",
+      "exact fully counted compute comparators",
+      "sparse execution and numerical-equivalence contract"
+    ]
+  },
+  "development_split": {
+    "source": "permanently consumed cycle-004 prospective cohort",
+    "selection": "150 even-numbered episode slots",
+    "validation": "150 odd-numbered episode slots",
+    "selection_and_validation_disjoint": true,
+    "reason": "deterministic interleaving balances acquisition order without outcome-dependent reassignment",
+    "candidate_specific_validation_access_before_selection_lock": false,
+    "development_only_not_prospective_evidence": true
+  },
+  "selection": {
+    "evaluate_all_25_candidates_on_selection_only": true,
+    "bootstrap_replicates": 0,
+    "eligibility": [
+      "counterfactual completeness holds exactly",
+      "at least 400 selection rows reach stage 2",
+      "at least 120 selection rows reach stage 3",
+      "all four call depths contain at least 20 selection rows",
+      "all six selection point contrasts are positive",
+      "all three selection score/gain Spearman coefficients are finite and strictly positive",
+      "seeded comparator has equal or weakly more exact total compute"
+    ],
+    "fixed_ranking": [
+      "maximize the minimum of the three selection Spearman coefficients",
+      "then minimize the sum of decision-1 and decision-2 multipliers",
+      "then minimize decision-1 multiplier",
+      "then minimize decision-2 multiplier"
+    ],
+    "no_eligible_candidate": "preserve a negative development attempt and do not launch new smoke or prospective episodes"
+  },
+  "one_shot_validation": {
+    "access": "only after the selected candidate and selection ledger are durably written",
+    "episodes": 150,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2006999951,
+    "histogram_seed": 2006888841,
+    "seeded_mixture_seed": 2006777731,
+    "requirements": [
+      "all six individual one-sided 95 percent percentile lower bounds exceed zero",
+      "both Bonferroni simultaneous co-primary lower bounds exceed zero",
+      "all three validation score/gain Spearman signs are strictly positive",
+      "counterfactual completeness, exact calls, histograms, exact compute, and weakly-more-compute seeded comparator pass",
+      "at least 400 validation rows reach stage 2 and at least 120 validation rows reach stage 3",
+      "all four validation call depths contain at least 20 rows"
+    ],
+    "failure": "preserve the consumed validation failure and do not launch new smoke or prospective episodes",
+    "pass": "freeze exactly the validated threshold vector for a wholly fresh cycle-005 smoke and 300-episode prospective cohort"
+  },
+  "future_freshness": {
+    "required_if_validation_passes": true,
+    "excluded_smoke_episodes": 12,
+    "prospective_episodes": 300,
+    "no_sequential_expansion": true,
+    "all_identifiers_and_rng_streams_disjoint": true
+  },
+  "forbidden": [
+    "changing a criterion after candidate evaluation",
+    "downward thresholds or any path not complete in cycle 004",
+    "gate-weight or whitening refit in this study",
+    "contact or privileged inputs",
+    "V3 targets or combined V3 cache",
+    "released HDF5 corpus",
+    "V5 outcome generation"
+  ],
+  "candidate_counterfactuals_evaluated_before_this_protocol": 0,
+  "v5_outcome_episodes": 0
+}

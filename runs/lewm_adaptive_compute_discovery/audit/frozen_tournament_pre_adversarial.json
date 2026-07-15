@@ -1,0 +1,50 @@
+{
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 261301,
+  "budgets": [
+    1.25,
+    1.5,
+    2.0,
+    2.5
+  ],
+  "candidates": {
+    "stagewise": {
+      "accepted_depth": 4,
+      "internal_pass": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_critics.pt",
+      "selected_seed": 261102,
+      "sha256": "f44fd1dc24206800011e7246d2077876a3b46c783660fd90d7ddc6d2d69323c9",
+      "supported_calls": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "v3_repair": {
+      "accepted_depth": 4,
+      "internal_pass": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/v3_repair_critics.pt",
+      "selected_seed": 261101,
+      "sha256": "5347103bb5a3398d001c0a9de4556159db83426a14e8eb01305b6870424b1eb6",
+      "supported_calls": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "config_sha256": "0755c247464f42c8f4fab7f06c3e6303fa4644bfde4d0b1850ea96b32597a658",
+  "critic_lcb_z": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "plan_sha256": "4955ee38ce13073c6481c13ac867afba9ad976a010bae4c7381d29879c56aaf7",
+  "schema_version": 1,
+  "selection_rule": "among candidates passing every internal gate, require all final discovery gates and choose lowest calibration raw MSE at a passing nondominated operating point; ties lower calls then family name",
+  "status": "frozen_before_v3_calibration_target_access",
+  "test_targets": "forbidden",
+  "v3_manifest_sha256": "4b9344b6ff2acce4c58c3b296ba2017b0122f8f8158f45088239712ce94b7030"
+}

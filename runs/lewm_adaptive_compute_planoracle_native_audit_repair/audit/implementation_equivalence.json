@@ -1,0 +1,38 @@
+{
+  "all_exact": true,
+  "branch_rule": "compiled float32 affine iff exact decisions/calls/exits/histograms on all consumed fit, selection, prior prospective rows",
+  "chosen": "compiled_float32_folded_affine",
+  "datasets": [
+    {
+      "call_histogram_equal": true,
+      "calls_equal": true,
+      "max_abs_score_delta": 7.306342951096667e-06,
+      "role": "fit",
+      "rows": 4560,
+      "selected_exits_equal": true,
+      "stage_decisions_equal": true
+    },
+    {
+      "call_histogram_equal": true,
+      "calls_equal": true,
+      "max_abs_score_delta": 6.55611358152397e-06,
+      "role": "selection",
+      "rows": 2280,
+      "selected_exits_equal": true,
+      "stage_decisions_equal": true
+    },
+    {
+      "call_histogram_equal": true,
+      "calls_equal": true,
+      "max_abs_score_delta": 7.929085889507581e-06,
+      "role": "prospective",
+      "rows": 6840,
+      "selected_exits_equal": true,
+      "stage_decisions_equal": true
+    }
+  ],
+  "dtype": "float32",
+  "minimum_float64_threshold_margin": 3.19167074674942e-06,
+  "no_tuning": true,
+  "schema_version": 1
+}

@@ -1,0 +1,320 @@
+{
+  "checks": {
+    "distinct_trajectory_ids": true,
+    "identical_environment_seeds": true,
+    "identical_initial_states": true,
+    "paired_count_exact": true,
+    "physically_separate_paths": true,
+    "separate_oracle_np_rng": true,
+    "separate_wrapper_rng": true,
+    "v3_test_targets_opened": false
+  },
+  "markov_manifest_sha256": "deb67c298e59317a0d5ce947fca44be309b46cda65cd7456aefe1ab26b823824",
+  "pairs": [
+    {
+      "env_seed": 1640200000,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 0,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200001,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 1,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200002,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 2,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200003,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 3,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200004,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 4,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200005,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 5,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200006,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 6,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200007,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 7,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200008,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 8,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200009,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 9,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200010,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 10,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200011,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 11,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200012,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 12,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200013,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 13,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200014,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 14,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200015,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 15,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200016,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 16,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200017,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 17,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200018,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 18,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200019,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 19,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200020,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 20,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200021,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 21,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200022,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 22,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200023,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 23,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200024,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 24,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200025,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 25,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200026,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 26,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200027,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 27,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200028,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 28,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640200029,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": true,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 29,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    }
+  ],
+  "passed": true,
+  "phase": "main",
+  "plan_manifest_sha256": "67c30c7c9f84a1a566df506020e1db6227b2f992dfebb56ab799f8208fe2d04a",
+  "schema_version": 1,
+  "v5_confirmation_episodes": 0
+}

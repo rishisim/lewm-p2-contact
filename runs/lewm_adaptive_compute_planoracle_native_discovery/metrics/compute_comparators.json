@@ -1,0 +1,27 @@
+{
+  "adaptive_total_flops": 487826333110,
+  "analytic_equivalent_mean_calls": 1.4576741529561121,
+  "analytic_raw_mixture": {
+    "depth_hi": 2,
+    "depth_lo": 1,
+    "weight_hi": 0.45767415295611213
+  },
+  "analytic_white_mixture": {
+    "depth_hi": 2,
+    "depth_lo": 1,
+    "weight_hi": 0.45767415295611213
+  },
+  "call_histogram": [
+    4798,
+    1482,
+    181,
+    379
+  ],
+  "gate_evaluations": 9442,
+  "gate_flops_per_evaluation": 4195,
+  "mean_calls": 1.4358187134502924,
+  "model_calls": 9821,
+  "rows": 6840,
+  "seeded_total_calls": 9971,
+  "seeded_total_flops": 487826467920
+}

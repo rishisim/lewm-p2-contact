@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "analysis_seeds_match_frozen_ledger": true,
+    "bootstrap_replicates_fixed_20000": true,
+    "episode_aggregation_two_implementations_exact": true,
+    "linear_quantile_independent_implementation_exact": true,
+    "mixture_two_implementations_exact": true,
+    "no_retry_frozen": true,
+    "sample_size_fixed_1600": true,
+    "six_individual_criteria_frozen": true,
+    "terminal_labels_frozen": true,
+    "two_co_primary_criteria_frozen": true
+  },
+  "package_smoke_episodes": 0,
+  "passed": true,
+  "schema_version": 1,
+  "synthetic_inputs_only": true,
+  "v5_outcome_episodes": 0
+}

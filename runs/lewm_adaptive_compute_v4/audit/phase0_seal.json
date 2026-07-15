@@ -1,0 +1,113 @@
+{
+  "evaluation_runtime_source_files": [
+    "runs/lewm_adaptive_compute_v4/audit_prior.py",
+    "runs/lewm_adaptive_compute_v4/benchmark_runtime.py",
+    "runs/lewm_adaptive_compute_v4/common.py",
+    "runs/lewm_adaptive_compute_v4/evaluate.py",
+    "runs/lewm_adaptive_compute_v4/finalize.py",
+    "runs/lewm_adaptive_compute_v4/flops.py",
+    "runs/lewm_adaptive_compute_v4/freshness.py",
+    "runs/lewm_adaptive_compute_v4/generator.py",
+    "runs/lewm_adaptive_compute_v4/prepare_preregistration.py",
+    "runs/lewm_adaptive_compute_v4/receipt.py",
+    "runs/lewm_adaptive_compute_v4/report.py",
+    "runs/lewm_adaptive_compute_v4/run_tests.py",
+    "runs/lewm_adaptive_compute_v4/runtime.py",
+    "runs/lewm_adaptive_compute_v4/seal.py",
+    "runs/lewm_adaptive_compute_v4/secondary.py",
+    "runs/lewm_adaptive_compute_v4/statistics.py",
+    "runs/lewm_adaptive_compute_v4/tests/conftest.py",
+    "runs/lewm_adaptive_compute_v4/tests/test_flops_and_budget.py",
+    "runs/lewm_adaptive_compute_v4/tests/test_frozen_contract.py",
+    "runs/lewm_adaptive_compute_v4/tests/test_mixture_and_isolation.py",
+    "runs/lewm_adaptive_compute_v4/tests/test_runtime_equivalence.py"
+  ],
+  "files": {
+    "runs/lewm_adaptive_compute_v4/PREREGISTRATION.md": "97b1683a6a81fd0c51ffab577885c9cdf7180002b8ffcabe5748c4d11664ac22",
+    "runs/lewm_adaptive_compute_v4/audit/prior_evidence_audit.json": "f1f66d46179f0bb1e60fc60114131c9a38a78de6604db59975e8d123798e8d0a",
+    "runs/lewm_adaptive_compute_v4/audit/prior_identifier_inventory.json": "a8d0ee09a7425e8dc5f87842e0f270da34ad8fe63c0a2c2bcb47d81761e11b2c",
+    "runs/lewm_adaptive_compute_v4/audit/regime_matching_bins.json": "b3ed602853957f078431117a0d354cd89275392a076c66e7489a1966fd0fbb1a",
+    "runs/lewm_adaptive_compute_v4/audit_prior.py": "123d66fd776f015e2c3314ad5c46cb66a2be461b47d2bc3dd0b19e6b180e2b3f",
+    "runs/lewm_adaptive_compute_v4/benchmark_runtime.py": "d085abd06e872a4cd9782bdf74b90dfa83f0952956e54f62845c56290463fa17",
+    "runs/lewm_adaptive_compute_v4/checkpoint_manifest.json": "a89f241714eef573c9adb373bc96e46a9adad38102690172272686765907a401",
+    "runs/lewm_adaptive_compute_v4/common.py": "eceeb9c1b83e6b2b5eef607823035df0495e719b15c8cf1fca63a661a3a5159b",
+    "runs/lewm_adaptive_compute_v4/config.json": "3749619ee3c591a204d88f712ab9bc0c45e719be45b35b68e9e74316a1450646",
+    "runs/lewm_adaptive_compute_v4/decision_rule.json": "173d9829e8cb723f96e935fa949f0937e4544c56b59f4c33e572ac459d90aa9e",
+    "runs/lewm_adaptive_compute_v4/evaluate.py": "be0a66e50fe4cdbcdcb02e45697c61d181817224921b343bda141d7de64eef3f",
+    "runs/lewm_adaptive_compute_v4/finalize.py": "820c9f695b61407e07994e6fa40d227149abec06b2e0e6b4463fe0b565234b56",
+    "runs/lewm_adaptive_compute_v4/flops.py": "95cfceced0a52bca197028ebf55312d7c216ed28e8fe3f2aba4ba461dc4c6722",
+    "runs/lewm_adaptive_compute_v4/freshness.py": "18c57687c351e69a16a531cb76dc490658090fd0a1f748c9003d999dfe1fd87a",
+    "runs/lewm_adaptive_compute_v4/generator.py": "d7077ca29c2099456ffeefe775fbb580779328f0ca602ecd6ab5ba2134020a05",
+    "runs/lewm_adaptive_compute_v4/logs/phase0_tests.json": "b7ef2400191e0525fc610601d676fffd7326fb693ee93c152b1a3068bceed295",
+    "runs/lewm_adaptive_compute_v4/prepare_preregistration.py": "cb9346eb884c4b7fc5c324ef254fc9f42cc97d308fe6d2fbed55c53dd2d781ac",
+    "runs/lewm_adaptive_compute_v4/provenance_manifest.json": "3c0ce0a9128dddc0e801689f78b86f33394b8ad5744dcf4c2aeacbc09cedd697",
+    "runs/lewm_adaptive_compute_v4/receipt.py": "7b2b8c4eb35c629de26ecb6c138ce354efbbd295efc679f39c84cfa6f3b93895",
+    "runs/lewm_adaptive_compute_v4/report.py": "f8a3eaa50b568f6d1bed8e34e6b5390d96653adbea8b220dc237cfcf59620e7a",
+    "runs/lewm_adaptive_compute_v4/run_tests.py": "b6e1f9305d80ca7399241b06d34e1ff24d089ad4805387af440eec54dbccf93a",
+    "runs/lewm_adaptive_compute_v4/runtime.py": "801b160ad9c457f7eabb4b92395c90cb7eb2f9d1809a627bd0202df8a210bfdf",
+    "runs/lewm_adaptive_compute_v4/seal.py": "5c7de3fad8ba9ebaa7d624bfe96ae70133a778e95c60731b073e939d9ede424b",
+    "runs/lewm_adaptive_compute_v4/secondary.py": "bcef3aa71b2b14ff1e490c20624efccd79d7c8c56897dba3411c8c327fcba9fc",
+    "runs/lewm_adaptive_compute_v4/seed_manifest.json": "36c1ed920d8537cce0f2c44827aa62a08581af8739d1e9608f1bb1db0eeceed0",
+    "runs/lewm_adaptive_compute_v4/source_manifest.json": "3f0e5b54a5d65f2d4f7b43baea80ce5c8d2b8465a026a446867a487d8130acc7",
+    "runs/lewm_adaptive_compute_v4/statistics.py": "a54c7c7399fcfd189b83d1ff5fe1c168861d8681616ab3099cf7740e8c4129a1",
+    "runs/lewm_adaptive_compute_v4/tests/conftest.py": "b27497bb2044366f021a57d94950439658ae00be58f7502d60ad69dee7f21ef2",
+    "runs/lewm_adaptive_compute_v4/tests/test_flops_and_budget.py": "2cd52e9fb264b0210dc6c806a8ceed461d5102d143ddacc2ae092025d1c2d71a",
+    "runs/lewm_adaptive_compute_v4/tests/test_frozen_contract.py": "a3c5223b8e1c5dc80db3ed498782ca392e12f1d335b78e80aa210153c7575f71",
+    "runs/lewm_adaptive_compute_v4/tests/test_mixture_and_isolation.py": "ca9f3caae092ef4b179da51f0d0473b8e673a9433f0d55ae4bc000e08b3bb921",
+    "runs/lewm_adaptive_compute_v4/tests/test_runtime_equivalence.py": "f044213b1bc03e4a1946fc712def1137e335e2ed3cb9a8f12a1d7275ad02b05b"
+  },
+  "frozen_objects": {
+    "base_config": {
+      "bytes": 1313,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+      "sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+    },
+    "base_weights": {
+      "bytes": 72291425,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+      "sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+    },
+    "contract": {
+      "compute_price": true,
+      "family": true,
+      "gate_flops": true,
+      "operating_point": true,
+      "parameters": true
+    },
+    "solver_checkpoint": {
+      "bytes": 2945961,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+      "sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+    },
+    "student_checkpoint": {
+      "bytes": 1250325,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/final_student.pt",
+      "sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302"
+    },
+    "tournament": {
+      "bytes": 12987,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/audit/frozen_tournament.json",
+      "sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66"
+    },
+    "whitening": {
+      "bytes": 298994,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/discovery_whitening.npz",
+      "sha256": "6ac9f8a463921e8fc158ba2aca543f07dc46931a3f98b4d7ef9f10efd4add54f"
+    }
+  },
+  "immutable_preregistration_files": [
+    "runs/lewm_adaptive_compute_v4/PREREGISTRATION.md",
+    "runs/lewm_adaptive_compute_v4/config.json",
+    "runs/lewm_adaptive_compute_v4/decision_rule.json",
+    "runs/lewm_adaptive_compute_v4/seed_manifest.json",
+    "runs/lewm_adaptive_compute_v4/source_manifest.json",
+    "runs/lewm_adaptive_compute_v4/checkpoint_manifest.json",
+    "runs/lewm_adaptive_compute_v4/provenance_manifest.json",
+    "runs/lewm_adaptive_compute_v4/audit/prior_evidence_audit.json",
+    "runs/lewm_adaptive_compute_v4/audit/prior_identifier_inventory.json",
+    "runs/lewm_adaptive_compute_v4/audit/regime_matching_bins.json"
+  ],
+  "schema_version": 1,
+  "status": "sealed_before_any_v4_episode_generation",
+  "v3_test_targets_opened": false
+}

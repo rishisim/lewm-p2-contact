@@ -1,0 +1,12 @@
+{
+  "files": {
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/cohort_seed_ledger.json": "f08d2256f95053ab8a9a9e427040ddd62b8e5cbaacd25751a0f3f34285fc1bd8",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/fit_only_normalization_whitening.npz": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/freeze/gate_contract.npz": "2a953b7f441098c552fa8d725e581ab570c8692b3747b409004e57844520a869",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/freeze/gate_freeze.json": "9aea029cfc6467a1bef58d3e53f63289700e2336a1b70a70e31424e2790f53cf",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/freeze/gate_weights.npz": "a9e42f735a55b10e8bdac594cc0cc152cde0b66781fa942749e5c903dc5a33a8",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/metrics/candidate_selection_ledger.json": "6c5214bf581e7242ee56d994461dd4505f0ceb7d280ce08b48afd94ea1566b49",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/select_freeze.py": "7b7fdab128baf2cc6ed25e7e79b542321042481d1c1d2c13eba58a5b63a8c37d"
+  },
+  "status": "immutable_gate_freeze_before_prospective"
+}

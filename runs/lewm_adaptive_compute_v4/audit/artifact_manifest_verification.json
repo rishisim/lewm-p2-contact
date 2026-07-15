@@ -1,0 +1,10 @@
+{
+  "failures": [],
+  "manifest_path": "runs/lewm_adaptive_compute_v4/artifact_manifest.json",
+  "manifest_self_hash_recorded_here": true,
+  "manifest_sha256": "6773d8fd3da9ecd1b642f90630b6056033876078b87245c096dbd89f56683873",
+  "passed": true,
+  "schema_version": 1,
+  "v3_test_targets_opened": false,
+  "verified_entries": 702
+}

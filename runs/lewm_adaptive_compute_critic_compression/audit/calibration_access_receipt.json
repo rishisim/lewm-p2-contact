@@ -1,0 +1,6 @@
+{
+  "calibration_role": "v3_calibration_once",
+  "status": "consumed_before_target_io",
+  "tournament_sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+  "v3_test_targets": "forbidden"
+}

@@ -1,0 +1,130 @@
+{
+  "alignment": {
+    "freeze_output": "alignment.json must be written before environment comparison",
+    "hypotheses_in_order": [
+      "row_t_is_pre_action_state_and_action_t_produces_row_t_plus_1",
+      "row_t_is_post_action_state_and_prev_state_is_pre_action_state"
+    ],
+    "tests": [
+      "prev_qpos[t] == qpos[t-1] and prev_qvel[t] == qvel[t-1] for t=1..200",
+      "prev_qpos[t] == qpos[t] and prev_qvel[t] == qvel[t]",
+      "step_idx/time increments and row-200 terminal sentinel",
+      "control/action association by same-row versus one-row shift"
+    ]
+  },
+  "bounds": {
+    "model_or_gate_rows": 0,
+    "new_policy_trajectories": 0,
+    "v5_episodes": 0
+  },
+  "decision_tree": {
+    "action_control_fails_first": "action_control_mismatch",
+    "all_layers_pass": "current_local_mechanics_matched",
+    "dynamics_fails_first": "dynamics_mismatch",
+    "historical_direct_evidence_and_all_checks_pass": "exact_historical_generator_recovered",
+    "observation_or_render_fails_first": "render_or_observation_mismatch",
+    "otherwise_after_bounded_candidates": "generator_provenance_unresolved",
+    "reset_fails_first": "reset_only_mismatch"
+  },
+  "historical_candidates": {
+    "maximum": 3,
+    "requires_direct_repository_or_release_evidence": true
+  },
+  "indices": {
+    "frame_rows": [
+      0,
+      50,
+      200
+    ],
+    "frames_per_episode": 3,
+    "initial_row": 0,
+    "no_sequential_expansion": true,
+    "transition_rows": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      25,
+      50,
+      100
+    ],
+    "transitions_per_episode": 8
+  },
+  "isolation": {
+    "combined_v3_cache_opened_with_numpy": false,
+    "raw_reads_fail_closed_to_sample_episode_ids": [
+      3316,
+      5355,
+      6405,
+      2420,
+      6763,
+      8240,
+      9767,
+      8510
+    ],
+    "v3_test_targets_opened": false
+  },
+  "sample": {
+    "count": 8,
+    "episode_ids": [
+      3316,
+      5355,
+      6405,
+      2420,
+      6763,
+      8240,
+      9767,
+      8510
+    ],
+    "episode_scores": {
+      "2420": "0324ad91f426ab01b52da58f3b51883997fd40d05e572faafe5a83f1ea0c80fc",
+      "3316": "004d772a71c4907151d812b36ac26be98bb8abd47c031c8014056aedf03b41a9",
+      "5355": "00df4ba717eac907e9d02cf3e72d332c413d83b0db2e8af4a5326e43fb98568e",
+      "6405": "018d813e0ca0a7fa9498d5b55a3f724b35672fe996e43f3630fb99ea30c1ed6e",
+      "6763": "03a0ab7cc6ee5f781f755d944f1e60cfc4eb5567e38d988b712305fef9caf4c5",
+      "8240": "0416d18a9fbd1736cf468c2ddafe9d2255ab2d2cc2ff5fe1aec534526706dabe",
+      "8510": "0463f69afcbd39c8bc207580b99b2a51fbe402799c91ced856c2c37571ea9f0f",
+      "9767": "041b68e65f4bcb3286913c8caf2aeb83e8c68dc166c1520d0b5ec8381d285c9f"
+    },
+    "population": "isolated V3 discovery allowlist only",
+    "rule": "ascending SHA256(salt + ':' + decimal episode_id), tie episode_id",
+    "salt": "lewm-generator-forensics-v1-exactly-8-discovery",
+    "v3_test_episode_intersection": []
+  },
+  "schema_version": 1,
+  "source_hashes": {
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/envs/cube_env.py": "6f8457ffd634f6620411c788c86e871f44ea5b5b5eecf76cd694fc04d12d678d",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/envs/manipspace_env.py": "03524eb1c95155bbc2ec3d29e9836fccffe8eb9fce1be15b6f0e7062cc1bb5fd",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/ogbench/cube_env.py": "143e5e81f424ff7a4d7fdde287dee88b722c09082a6fc9e68721839788e94c19",
+    "source_h5": "0664d507c4ff12009010644c9ae950836f954e700c172ccf22e7423af1a55625",
+    "split_manifest": "4b9344b6ff2acce4c58c3b296ba2017b0122f8f8158f45088239712ce94b7030"
+  },
+  "status": "frozen_before_selected_hdf5_outcomes_or_environment_execution",
+  "tolerances": {
+    "exact": 0.0,
+    "float32_action_atol": 1e-06,
+    "float64_control_atol": 1e-10,
+    "float64_observation_atol": 1e-10,
+    "float64_state_restore_atol": 1e-12,
+    "float64_transition_atol": 1e-09,
+    "pixels_pass": "bit equality after one predeclared convention; metrics descriptive otherwise",
+    "rtol": 0.0
+  },
+  "transforms": {
+    "action": "installed set_control on stored normalized 5-D action; compare resulting float64 7-D ctrl",
+    "observation": "installed compute_observation, plus independently assembled 28-D vector from stored privileged/proprio fields",
+    "pixels": [
+      "identity",
+      "vertical_flip",
+      "horizontal_flip",
+      "vertical_horizontal_flip",
+      "rgb_to_bgr_after_each_orientation"
+    ],
+    "psnr": "20*log10(255/rmse), infinity for exact",
+    "ssim": "skimage.metrics.structural_similarity(channel_axis=-1,data_range=255) when installed; otherwise explicitly unavailable",
+    "state": "inject exact float64 qpos/qvel then mj_forward; preserve stored target mocap/task",
+    "transition_action": "restore pre-state and target, invoke installed step(action)",
+    "transition_control": "restore pre-state and target, assign stored ctrl, run mj_step(nstep=installed _n_steps), rnePostConstraint/post_step"
+  }
+}

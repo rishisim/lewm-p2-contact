@@ -1,0 +1,15 @@
+{
+  "bad_hashes": [],
+  "final_artifact_manifest_path": "runs/lewm_adaptive_compute_planoracle_native_audit_repair/artifact_manifest.json",
+  "final_artifact_manifest_sha256": "d357f0a100312b91d2a925ca42dfaec670d5fd858ade3abbcdc82a618feec61a",
+  "path_set_complete": true,
+  "pre_data_seal_path": "runs/lewm_adaptive_compute_planoracle_native_audit_repair/audit/pre_data_seal.json",
+  "pre_data_seal_sha256": "ba67855f116e39b2834b6d604524e13ab1e0c7b681014f3b24cbea34ef1134f9",
+  "prior_normative_patch_after_seal": false,
+  "prior_prospective_episodes": 0,
+  "prior_smoke_episodes": 12,
+  "prior_terminal_outcome": "planoracle_audit_repair_invalid",
+  "prior_v5_outcome_episodes": 0,
+  "schema_version": 1,
+  "verified_utc": "2026-07-15T19:00:11Z"
+}

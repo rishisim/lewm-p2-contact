@@ -1,0 +1,7 @@
+bootstrap_samples,ci_high,ci_low,estimate_contact_minus_noncontact,matched_strata,matching,outcome,overlap_effective_rows_per_arm,positive_weight_contact_rows,positive_weight_noncontact_rows,seed,unmatched_contact_rows,unmatched_noncontact_rows,weighting
+10000,-0.10448030322821637,-0.31912945114417735,-0.21165720742201755,35,fine,calls,270.0,1993,297,940432201,267,8843,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling
+10000,0.0004714151343038695,-0.0001285520051618837,0.00017023331130378044,35,fine,prediction_benefit,270.0,1993,297,940432202,267,8843,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling
+10000,0.0005828319655820848,-0.0001422831556237659,0.00021902076162129693,35,fine,cumulative_gain,270.0,1993,297,940432203,267,8843,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling
+10000,-0.1527581239336423,-0.3423800638283836,-0.24422154935249796,12,coarse,calls,300.0,2260,300,940432301,0,8840,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling
+10000,0.0004098842075988741,-0.00015124830605472346,0.00013602267914008767,12,coarse,prediction_benefit,300.0,2260,300,940432302,0,8840,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling
+10000,0.0005286433543009774,-0.00014504841756771668,0.00019574997737286423,12,coarse,cumulative_gain,300.0,2260,300,940432303,0,8840,fixed full-sample coarsened-exact overlap weights; episode-cluster resampling

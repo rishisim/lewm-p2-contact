@@ -1,0 +1,13 @@
+{
+  "terminal_outcome": "planoracle_audit_repair_invalid",
+  "reason": "The post-seal excluded smoke execution failed the mandatory exact sparse-selected-output versus dense-selected-output equivalence check.",
+  "failure_stage": "smoke_sparse_dense_equivalence",
+  "prospective_episodes_generated": 0,
+  "prospective_targets_opened": false,
+  "statistical_evaluation_performed": false,
+  "normative_code_patched_after_seal": false,
+  "v3_test_targets_opened": false,
+  "released_hdf5_opened": false,
+  "v5_launched": false,
+  "terminal_mapping_basis": "Any sparse/dense failure maps to planoracle_audit_repair_invalid."
+}

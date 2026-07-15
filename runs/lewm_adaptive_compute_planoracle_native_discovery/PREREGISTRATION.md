@@ -1,0 +1,3 @@
+# PlanOracle-native adaptive-computation discovery preregistration
+
+This prospective program freezes the complete DGP, split, candidate grid, fit-only whitening, exact-FLOP comparators, bootstrap, audits, and terminal mapping before any new rollout. Existing PlanOracle/V4/HDF5 artifacts are development context only and supply no episode, whitening statistic, target, threshold, or selection outcome. Contact is excluded from all pre-freeze and decision paths. V5 will not be launched. See `protocol.json`, `cohort_seed_ledger.json`, `candidate_grid.json`, and `outcome_mapping.json` for the normative machine-readable contract.

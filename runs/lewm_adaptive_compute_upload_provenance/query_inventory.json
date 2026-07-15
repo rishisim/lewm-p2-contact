@@ -1,0 +1,11 @@
+{
+  "all_urls_immutable_for_evidence": true,
+  "archive_payload_bytes": 1048576,
+  "archive_redirect_http_requests": 2,
+  "curl_logical_requests": 23,
+  "failed_endpoint_requests": 1,
+  "git_http_requests": 3,
+  "maximum_archive_payload_bytes": 16777216,
+  "maximum_http_requests": 48,
+  "total_http_requests_conservative": 28
+}

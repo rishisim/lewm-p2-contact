@@ -1,0 +1,49 @@
+{
+  "individual": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0008302119003284984,
+      "lower": 0.0005516380707502069,
+      "upper": 0.0011206264420550874
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.0007047791010541171,
+      "lower": 0.0005354589814546402,
+      "upper": 0.0008788218086247006
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.665827217736782e-06,
+      "lower": 2.806210365944296e-06,
+      "upper": 1.0533878142172575e-05
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 2.2884672061519642e-05,
+      "lower": 1.8240606526984424e-05,
+      "upper": 2.7774064801463388e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.189908839686145e-06,
+      "lower": 2.5556445145664953e-06,
+      "upper": 1.1808718354772969e-05
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 5.537162584991318e-06,
+      "lower": 1.7994547078496154e-06,
+      "upper": 9.425377001940297e-06
+    }
+  },
+  "replicates": 20000,
+  "schema_version": 1,
+  "seed": 1965999991,
+  "simultaneous": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0008302119003284984,
+      "lower": 0.0005959595190624219,
+      "shared_centered_max_error_quantile_95": 0.00023425238126607647
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.665827217736782e-06,
+      "lower": -0.00022758655404833968,
+      "shared_centered_max_error_quantile_95": 0.00023425238126607647
+    }
+  }
+}

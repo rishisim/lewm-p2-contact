@@ -1,0 +1,324 @@
+{
+  "bounded_replay_sha256": "d7da3065815a18422fa95ca1f4f1adf8b6f42c622056265a59f1dca159c2cc96",
+  "checks": {
+    "all_30_main_pairs_independently_exact": true,
+    "all_seals_recomputed_exact": true,
+    "amended_smoke_honestly_labels_original_failure": true,
+    "bounded_replay_exact_zero_new_episodes": true,
+    "decision_and_postdecision_forbid_v5": true,
+    "failed_smoke_evidence_retained": true,
+    "main_counts_exact_no_replacements": true,
+    "report_hashes_current": true,
+    "v3_test_targets_opened": false,
+    "v4_calls_exact": true,
+    "v4_legacy_raw_losses_exact": true,
+    "v4_scores_exact": true,
+    "v4_whitened_losses_exact": true,
+    "v5_confirmation_episodes": 0
+  },
+  "main_pair_recomputation": [
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 0,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 1,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 2,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 3,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 4,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 5,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 6,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 7,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 8,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 9,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 10,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 11,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 12,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 13,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 14,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 15,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 16,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 17,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 18,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 19,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 20,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 21,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 22,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 23,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 24,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 25,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 26,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 27,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 28,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    },
+    {
+      "digests_match_manifests": true,
+      "env_seed_exact": true,
+      "independent_initial_digest_exact": true,
+      "oracle_seed_distinct": true,
+      "slot": 29,
+      "variation_values_digest_exact": true,
+      "wrapper_seed_distinct": true
+    }
+  ],
+  "passed": true,
+  "schema_version": 1,
+  "seals": [
+    {
+      "mismatches": [],
+      "passed": true,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/pre_generation_seal.json",
+      "sealed_file_count": 19,
+      "sha256": "e59480b81715f28d32ea8fddb9735f3bfcc293b6aad5669c46234ec33a5c9a02"
+    },
+    {
+      "mismatches": [],
+      "passed": true,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/protocol_amendment_01_seal.json",
+      "sealed_file_count": 8,
+      "sha256": "cf3ae7fe8e6ca14a857baa29f0b373bc8032c3ca8143c346699971b1aa0d6144"
+    },
+    {
+      "mismatches": [],
+      "passed": true,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_manifest_schema_compatibility_seal.json",
+      "sealed_file_count": 3,
+      "sha256": "04c1e67c38b445f748a64e4241fd6f3a0f60a88861b125c198ef33cc9705762a"
+    },
+    {
+      "mismatches": [],
+      "passed": true,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_raw_loss_arithmetic_compatibility_seal.json",
+      "sealed_file_count": 4,
+      "sha256": "66ad1fa73f0ca352de9f89a2aa2ed977b049734cd13f55ed49f42a93c39fc944"
+    }
+  ],
+  "v4_canonical_vs_legacy_max_abs": 2.774697009932936e-07
+}

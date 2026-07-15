@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "sealed_before_history_fetch_environment_construction_or_scientific_hdf5_access",
+  "repository": "https://github.com/galilai-group/stable-worldmodel.git",
+  "candidate_discovery": {
+    "algorithm": [
+      "candidate_1 is the immutable refs/tags/0.0.4 peeled target 089efbb87746e153e9ee051bf228b9c12aa3889a",
+      "candidate_2 is the existing-provenance history-boundary commit a265229cb29688715651cbd831a3b4c10b8f98b4 named fix cube script",
+      "fetch only missing exact objects or the exact tag; do not consult mutable branch heads for evidence",
+      "select no other commit or version"
+    ],
+    "maximum_candidates": 2,
+    "candidates": [
+      {"commit": "089efbb87746e153e9ee051bf228b9c12aa3889a", "tag": "0.0.4", "basis": "latest immutable release before preserved HDF5 mtime"},
+      {"commit": "a265229cb29688715651cbd831a3b4c10b8f98b4", "tag": null, "basis": "existing strongest direct collector evidence and sealed history boundary"}
+    ]
+  },
+  "source_lock_normalization": {
+    "requirement_parser": "packaging.requirements.Requirement",
+    "name": "packaging.utils.canonicalize_name",
+    "extras": "sorted lowercase canonical names",
+    "specifier": "canonical string emitted by packaging",
+    "markers": "canonical marker string emitted by packaging",
+    "url": "preserved",
+    "comparison": "sorted canonical requirement tuples with source base compared to lock root requires_dist entries without extra marker and source env compared to entries whose marker activates extra env"
+  },
+  "eligibility": {
+    "same_commit_only": true,
+    "source_project_version_equals_lock_editable_root_version": true,
+    "normalized_base_requirements_equal": true,
+    "normalized_env_extra_requirements_equal": true,
+    "required_files": [
+      "scripts/data/collect_cube.py",
+      "scripts/data/config/ogb.yaml",
+      "stable_worldmodel/envs/ogbench/cube_env.py",
+      "stable_worldmodel/envs/ogbench/expert_policy.py"
+    ],
+    "collector_contract": {"environment_id": "swm/OGBCube-v0", "env_type": "single", "policy": "ExpertPolicy", "trajectory_count": 10000, "action_horizon": 200, "seed": 3072, "terminate_at_goal": false, "multiview": true, "image_shape": [224, 224]},
+    "temporal_rule": "commit must predate immutable 2026-03-26 upload; preserved 2026-02-18 HDF5 mtime is supportive only and a post-mtime commit requires explicit caveat",
+    "frozen_install": {"python": "3.10.20", "command": ["/opt/homebrew/bin/uv", "sync", "--frozen", "--extra", "env", "--no-dev"], "substitution": false, "lock_modification": false}
+  },
+  "tie_behavior": "zero or multiple candidates passing static source-lock, file, collector, and temporal rules => coherent_generator_candidate_not_identified and no install or scientific execution",
+  "sample": {"episode_ids": [3316, 5355, 6405, 2420, 6763, 8240, 9767, 8510], "transition_rows": [0, 1, 2, 5, 10, 25, 50, 100], "frame_rows": [0, 50, 200], "episode_count": 8, "transition_count": 64, "frame_count": 24, "no_expansion": true},
+  "restore_modes": {
+    "cold": "fresh MjData; inject exact time,qpos,qvel,target mocap,appropriate ctrl; mj_forward then step",
+    "cold_zero_warmstart": "cold plus qacc_warmstart[:] = 0 before step",
+    "reused": "reuse prior MjData; overwrite exact time,qpos,qvel,target mocap,appropriate ctrl; mj_forward then step",
+    "hidden_state_optimization": false
+  },
+  "metrics": {
+    "observation_groups": {"stored_raw": ["joint_pos", "joint_vel", "gripper_opening", "gripper_vel", "block_pos", "block_quat", "block_yaw"], "kinematic_derived": ["effector_pos", "effector_yaw"], "contact": ["gripper_contact"], "full": "28-D", "contact_excluded": "28-D excluding contact coordinate"},
+    "control": "5-D normalized action through candidate mapping versus stored 7-D ctrl",
+    "dynamics": ["action-path qpos", "action-path qvel", "stored-control qpos", "stored-control qvel"],
+    "reset": "cube and goal fields only",
+    "render": "EGL causal only if available; otherwise descriptive GLFW excluded"
+  },
+  "tolerances": {"rtol": 0.0, "state_restore_atol": 1e-12, "observation_atol": 1e-10, "control_atol": 1e-10, "transition_atol": 1e-9, "material_restore_mode_max_abs": 1e-9, "large_error_reduction_ratio": 0.5},
+  "current_runtime_reference_max_abs": {"effector_pos": 0.0007034204517309961, "effector_yaw": 0.0018559074166846212, "contact": 1.0, "full_observation": 1.0, "control_mapping": 0.0027710284166331256, "action_qpos": 0.0014564449977447769, "action_qvel": 0.28359643396160744, "stored_control_qpos": 0.00003412507129258845, "stored_control_qvel": 0.0025156798239951428},
+  "comparison_rules": {"ratio": "candidate_error/current_error; null when denominator zero", "absolute_change": "candidate_error-current_error", "materially_closer": "all designated core maximum errors non-increasing and at least one <= 0.5 of current", "exact_core": "observation and control <= respective tolerance and dynamics <= transition tolerance"},
+  "decision_tree": {
+    "zero_or_multiple_static_candidates": "coherent_generator_candidate_not_identified",
+    "unique_static_candidate_install_or_binding_failure": "coherent_candidate_environment_unavailable",
+    "exact_core_and_dynamics_or_omitted_state_proven": "coherent_candidate_recovers_core_mechanics",
+    "materially_closer_not_exact": "coherent_candidate_materially_closer_not_exact",
+    "otherwise": "coherent_candidate_no_material_improvement",
+    "separate_finding": "transition_nonidentifiable_from_partial_state",
+    "provenance_limit": "never claim exact released generator solely from mechanics match"
+  },
+  "prohibitions": {"new_policy_trajectories": 0, "model_or_gate_rows": 0, "v5_episodes": 0, "v3_test_targets_opened": false, "combined_v3_cache_numpy_loaded": false, "contact_gate_input": false, "flops_or_latency": false}
+}

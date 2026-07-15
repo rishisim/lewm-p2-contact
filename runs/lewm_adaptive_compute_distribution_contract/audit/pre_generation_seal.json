@@ -1,0 +1,28 @@
+{
+  "reference_bands_sha256": "65eb4fd44e2782520176c990bea05dde295d084d9692794509981dc4843bd720",
+  "schema_version": 1,
+  "sealed_files": {
+    "runs/lewm_adaptive_compute_distribution_contract/PREREGISTRATION.md": "76c3a35b545fce723ff2cb6a4bf1b661b8069d97eb281401104fe19e9c71affc",
+    "runs/lewm_adaptive_compute_distribution_contract/analyze.py": "fc4d347e740c1c0d15bf735c26fa7ab3a1093d3e40d0e58979e884339e55c667",
+    "runs/lewm_adaptive_compute_distribution_contract/audit.py": "ca19986fb2042ef1301f3635a3d4da0fb0fded219f705c68f99486f776823e45",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/offline_isolation.json": "2cfb81916a592b9b477f0f894ba2fe7109ee1832f366657cca50c6a5734d4883",
+    "runs/lewm_adaptive_compute_distribution_contract/audit/raw_reference_access.json": "742e38905a0cf088411347de4ac80cab70b6f335fb65288ea8d3e69b2b622eaa",
+    "runs/lewm_adaptive_compute_distribution_contract/bounded_check.py": "03ab5444d6c6a051488cf97577f5d6c141546e658ca15db502de315f4a7cc108",
+    "runs/lewm_adaptive_compute_distribution_contract/common.py": "52db77ee31ac44f5438270d818cd36832ec74c1a19764bf2df63b0570a4ea4c2",
+    "runs/lewm_adaptive_compute_distribution_contract/config.json": "d1871906f77b7c0ff949cd6fec61bf6b7d71cce7656baeb292f62af89e3ffba0",
+    "runs/lewm_adaptive_compute_distribution_contract/evaluate.py": "7cce117f66b95cd18eca94cd25ff08fe0015a88fc5e1d9bc6eab3b46100cadff",
+    "runs/lewm_adaptive_compute_distribution_contract/generator.py": "1784280d566ac4df62ed891186e837a611aac1ded22e7dc69a73fde0a86527e6",
+    "runs/lewm_adaptive_compute_distribution_contract/latency.py": "5d5510ddb37b7a48ceed73f9fd365813fa328ea93fd491278bb23983513e6531",
+    "runs/lewm_adaptive_compute_distribution_contract/prepare.py": "59edd0ca86ad17a0cf4f141275a6ceb0e4088c22bef9f0f7cb079f36cc0885f4",
+    "runs/lewm_adaptive_compute_distribution_contract/reference/offline_episode_metrics.npz": "50fa665941931c1b5764819d9c06e49c255a9e150c2eb0220337637185d1fef7",
+    "runs/lewm_adaptive_compute_distribution_contract/reference/reference_bands.json": "65eb4fd44e2782520176c990bea05dde295d084d9692794509981dc4843bd720",
+    "runs/lewm_adaptive_compute_distribution_contract/report.py": "3b2e2a70c66da5d4a78862e3dcd87a64817da34e6d008db42c22931b225927f7",
+    "runs/lewm_adaptive_compute_distribution_contract/seed_manifest.json": "259e4c1e4f6481a50043627e497c18eecd88796f22fef6b11fd7acb27b523adb",
+    "runs/lewm_adaptive_compute_distribution_contract/source_manifest.json": "c8fba7645ac30060812723830b5bd5aca05771c53bbef547a6c063c6a3b46569",
+    "runs/lewm_adaptive_compute_distribution_contract/tests/test_contract.py": "e7396952a12752ba0cea86431efec34f9b601e7e6912e6b1078a3560ce609b5b",
+    "runs/lewm_adaptive_compute_distribution_contract/verify.py": "b17599956a3418fe0de860bc3950dacbf1a221c0b069b327ed32f5d25e4f17f7"
+  },
+  "status": "frozen_before_any_smoke_or_main_rollout",
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "outcome": "cycle_development_validation_failed",
+  "scientific_interpretation": "Upward stage-specific thresholding preserved positive exact-compute loss contrasts but did not produce stable positive deeper-stage score/gain rank signs across the disjoint consumed validation role.",
+  "selected_candidate": "d1_200_d2_100",
+  "selected_thresholds": [
+    0.5438409546434824,
+    0.2719204773217412,
+    0.2719204773217412
+  ],
+  "selection_stagewise_rho": [
+    0.21333815302191517,
+    0.023027057361731558,
+    0.03578012364974342
+  ],
+  "validation_stagewise_rho": [
+    0.24369007010251761,
+    -0.034050274916067616,
+    -0.008523662481465863
+  ],
+  "validation_all_six_loss_bounds_positive": true,
+  "validation_both_simultaneous_bounds_positive": true,
+  "candidate_eligible_for_fresh_discovery": false,
+  "new_fit_episodes": 0,
+  "new_selection_episodes": 0,
+  "new_smoke_episodes": 0,
+  "new_prospective_episodes": 0,
+  "v5_outcome_episodes": 0,
+  "artifact_hashes": {
+    "diagnosis": "66e935ef938b7c2dbf01add5b1ffbb130b406b7e4519e73808e0ea842db413d4",
+    "protocol": "cf10b001a891d10c8efb850d89988d35a8e0b679cf54852cea79d9c67b8a07a2",
+    "split_manifest": "2a6cde9041b3c886a796fb0c8f00d82e3f7851765186e21db637687b859c6b24",
+    "selection_ledger": "99598660fb8883e492082e7ce2bf0fc04b15f0143641c497da40ad20160f6916",
+    "selection_lock": "c4a7e5ad5ba05966f488c52d1eb1daaf4cb30c411464874ad6b9f19bfaa4f87d",
+    "validation_result": "b66026c0d1b8a6554b968a0ba98b25c500ce6e9eae9a5033c5ad39cf748ceca1",
+    "validation_bootstrap": "e8651085b459a94658ecb9d6de2521ead34860fe206e97e208eb5ac9380cfd66"
+  }
+}

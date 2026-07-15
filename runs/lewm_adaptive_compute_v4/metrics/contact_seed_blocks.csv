@@ -1,0 +1,7 @@
+block,episode_slots,outcome,unmatched_contact_minus_noncontact
+1,0-99,calls,0.5611925237455917
+1,0-99,prediction_benefit,-1.4462684143137285e-05
+2,100-199,calls,0.5187457724552547
+2,100-199,prediction_benefit,0.0001124481169041037
+3,200-299,calls,0.5341921901382862
+3,200-299,prediction_benefit,2.8180582869882586e-06

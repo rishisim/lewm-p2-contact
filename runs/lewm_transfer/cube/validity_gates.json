@@ -1,0 +1,35 @@
+{
+  "collapse_persistence": {
+    "model_mse_mean": 0.14306448651845322,
+    "model_persistence_ratio": 0.4652603623311143,
+    "passed": true,
+    "persistence_mse_mean": 0.30749339101584106,
+    "reason": "heldout model/persistence ratio=0.46526; void if approximately 1 or worse"
+  },
+  "coverage_interaction_free": {
+    "free_episodes": 0,
+    "free_rows": 0,
+    "interaction_episodes": 20,
+    "interaction_rows": 371,
+    "passed": false,
+    "reason": "requires >=5 held-out episodes and >=30 held-out rows in both interaction and free"
+  },
+  "latent_isotropy": {
+    "condition_number": 517275.4888904555,
+    "latent_dim": 192,
+    "passed": false,
+    "per_dim_variance_max": 1.679593410225292,
+    "per_dim_variance_min": 0.5858585388842782,
+    "per_dim_variance_spread": 2.866892430080385,
+    "reason": "target latent covariance condition and per-dim spread within preregistered thresholds",
+    "whitened_metrics_required": true
+  },
+  "no_circular_labels": {
+    "passed": true,
+    "reason": "interaction uses proprio_gripper_contact sensor; support uses block-height geometry only; no velocity/orientation/latent/error labels"
+  },
+  "split_thresholds": {
+    "passed": true,
+    "reason": "support threshold and optional whitening are fit on calibration episodes and evaluated on held-out episodes"
+  }
+}

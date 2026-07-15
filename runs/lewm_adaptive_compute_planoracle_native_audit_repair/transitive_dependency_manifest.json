@@ -1,0 +1,48 @@
+{
+  "actual_import_trace_scope": "all transitive local sources loaded by runner through distribution common/runtime/discovery modules",
+  "files": {
+    "runs/lewm_adaptive_compute_discovery/critics.py": "099352a85d580df888f065968d94643dde389e72551423cd93bdc8e677dceebd",
+    "runs/lewm_adaptive_compute_discovery/models.py": "87833a79b447f48fdd7ead7cccbf9a7fa9e95e4f60b364fe7566bbab5cadb025",
+    "runs/lewm_adaptive_compute_discovery/policy.py": "97b816caa76568748fe78e77db332de59721eb89b0a38537f82b1fbe3fd2279a",
+    "runs/lewm_adaptive_compute_discovery/run_discovery.py": "239deee709187d4e05a21818f8ca460ded147193a37d482165e6fb052f4b5199",
+    "runs/lewm_adaptive_compute_distribution_contract/common.py": "52db77ee31ac44f5438270d818cd36832ec74c1a19764bf2df63b0570a4ea4c2",
+    "runs/lewm_adaptive_compute_distribution_contract/generator.py": "1784280d566ac4df62ed891186e837a611aac1ded22e7dc69a73fde0a86527e6",
+    "runs/lewm_adaptive_compute_distribution_contract/generator_seedfix.py": "f8a6a79d3ea6d093bbab18d4e903bc8f1611717d85e2d31ae88128a98199357d",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/PREREGISTRATION.md": "87385b5b96286ad6452d0ddfa99e03f1ed12c0a817b1144921877408ae3a97ec",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/REPORT.md": "9d449dc7178fb1c19bca9f3a37e4fb3fb8ad09b2205665ed5a745197288b1c59",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/analyze.py": "e8bc293251045cef501d3f3e211666021d31d4a76e3c17acca14086a57e22257",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/audit/implementation_equivalence.json": "7253ed1af9754bc8ae2279309ff27cd0131dc1599c3186d032dd507627e16afc",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/cohort_seed_ledger.json": "04265d72a4d716eb811af8652e788d85d8f6664ee15031b6e25c1773272eb231",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/finalize.py": "6969cc686ea114e22be5a793e184e4d7a86a945e9834a839e5d05f52a72a8606",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/freeze/compiled_gate.npz": "efadf8c820ca083b4f9cade249fd71599a41fff75bbe5d13bebcf05247a17faf",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/operation_ledger.json": "21b22b04a7fe4b164fa0fa3f3cde78552a1344fc8936e9e77c8ea62f0bec9532",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/outcome_mapping.json": "696c627f5e277131094d5fa4933ee3c23cf581db11943db74da5b37930d18f3c",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/prepare.py": "995102ee165f859ae86c8f20f7130881accd6c0a7f34b429136fca616b4c7453",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/protocol.json": "f1c78ad3b1deeaf4744ae6c47b5cfc5fc896554618853ea3dcbe7fe8e4955727",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/runner.py": "9e6c948c35985c654cde6cc5d7277ebb8dee261eb8b85f9c607f2e685fdfe7eb",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/verify_final.py": "475c94f53ca493e414b524d7a12e1853efe7e7e5a524347baf7b6a025599cf2c",
+    "runs/lewm_adaptive_compute_planoracle_native_audit_repair/verify_pre_data.py": "db233822ce53b23256e4da6531649bf5693fda91047ad3ffeed1972f62111fcf",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/fit_only_normalization_whitening.npz": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/freeze/gate_contract.npz": "2a953b7f441098c552fa8d725e581ab570c8692b3747b409004e57844520a869",
+    "runs/lewm_adaptive_compute_planoracle_native_discovery/freeze/gate_weights.npz": "a9e42f735a55b10e8bdac594cc0cc152cde0b66781fa942749e5c903dc5a33a8",
+    "runs/lewm_adaptive_compute_v2/model_io.py": "5505e529ba17aeb0c641e7d4e8dc511d0ed61decdc13a596915ba8964b954874",
+    "runs/lewm_adaptive_compute_v4/common.py": "eceeb9c1b83e6b2b5eef607823035df0495e719b15c8cf1fca63a661a3a5159b",
+    "runs/lewm_adaptive_compute_v4/runtime.py": "801b160ad9c457f7eabb4b92395c90cb7eb2f9d1809a627bd0202df8a210bfdf",
+    "runs/lewm_transfer/cube/cache/model/config.json": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+  },
+  "frozen_object_expected_hashes": {
+    "base_config": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "base_weights": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+    "stagewise_refiner": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+  },
+  "packages": {
+    "gymnasium": null,
+    "mujoco": null,
+    "numpy": "2.4.3",
+    "ogbench": null,
+    "scipy": "1.17.1",
+    "stable-worldmodel": null,
+    "torch": null
+  },
+  "schema_version": 1
+}

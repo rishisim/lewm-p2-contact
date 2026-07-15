@@ -1,0 +1,29 @@
+{
+  "all_solver_gradients_absent": true,
+  "cache": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/cache/stagewise_train_outputs.npz",
+  "cache_sha256": "54a9aee889e5ad103d34011f2c3b418ae255afe0c3f1176816785f31a7381549",
+  "checkpoint_sha256_after": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+  "checkpoint_sha256_before": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+  "combined_v3_target_npz_opened": false,
+  "d0_bitwise": true,
+  "d0_identity": true,
+  "d1_bitwise": true,
+  "episodes": 420,
+  "feature_dim": 1046,
+  "no_checkpoint_change": true,
+  "no_solver_state_change": true,
+  "no_v1_state_change": true,
+  "old_internal_validation_fixed_exit_raw_mse": [
+    0.0031202247020546176,
+    0.0030725308741667667,
+    0.003057936628948781,
+    0.0030489319825645175
+  ],
+  "rows": 15960,
+  "schema_version": 1,
+  "solver_state_sha256_after": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+  "solver_state_sha256_before": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+  "v1_state_sha256_after": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+  "v1_state_sha256_before": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+  "v3_test_targets_loaded": false
+}

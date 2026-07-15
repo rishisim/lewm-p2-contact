@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "outcome": "coherent_generator_candidate_not_identified",
+  "eligible_candidate_count": 0,
+  "eligible_candidates": [],
+  "scientific_replay_executed": false,
+  "candidate_environment_constructed": false,
+  "hdf5_opened": false,
+  "transition_nonidentifiable_from_partial_state": null,
+  "provenance_statement": "No coherent historically plausible same-commit source/lock candidate was identified; the exact released generator remains unproven.",
+  "reason": "Tag 0.0.4 has source version 0.0.4 versus lock root 0.0.3, base dependency drift, lacks the preregistered ogbench wrapper path, and is single-view. Commit a265229 matches the collector contract and required files but has source version 0.0.5 versus lock root 0.0.3 and base dependency drift.",
+  "new_policy_trajectories": 0,
+  "model_or_gate_rows": 0,
+  "v5_episodes": 0,
+  "v3_test_targets_opened": false,
+  "combined_v3_cache_numpy_loaded": false
+}

@@ -1,0 +1,33 @@
+{
+  "immutable_dependency_sources": {
+    "le-wm/jepa.py": "41bad7fd21e0f14aea4c9c3d39a9c87037e787746d953ab62cdc0677e938ce96",
+    "le-wm/module.py": "0b258a9e8dc24c29fcb1e8c50a09ec78b8ea85aeb79e21dd8adf712396646620",
+    "runs/lewm_adaptive_compute_discovery/data_isolation.py": "09e0619730f06cfe174e360433870408bfd796aaf27b852eef58c37448f13dce",
+    "runs/lewm_adaptive_compute_discovery/extract_isolated.py": "6f7529ad613d768cbc486f47b5e85fb6a44e8ae1b525becd543697dda3abf9aa",
+    "runs/lewm_adaptive_compute_discovery/models.py": "87833a79b447f48fdd7ead7cccbf9a7fa9e95e4f60b364fe7566bbab5cadb025",
+    "runs/lewm_adaptive_compute_discovery/policy.py": "97b816caa76568748fe78e77db332de59721eb89b0a38537f82b1fbe3fd2279a",
+    "runs/lewm_adaptive_compute_discovery/run_discovery.py": "239deee709187d4e05a21818f8ca460ded147193a37d482165e6fb052f4b5199",
+    "runs/lewm_adaptive_compute_v1/refiner.py": "0bbecfe76eeaa51678900ee3678c0af63c8153f40efc93d17dfa59f9bd41e0ac",
+    "runs/lewm_adaptive_compute_v2/model_io.py": "5505e529ba17aeb0c641e7d4e8dc511d0ed61decdc13a596915ba8964b954874"
+  },
+  "schema_version": 1,
+  "v3_test_targets_opened": false,
+  "v4_sources": {
+    "runs/lewm_adaptive_compute_v4/audit_prior.py": "123d66fd776f015e2c3314ad5c46cb66a2be461b47d2bc3dd0b19e6b180e2b3f",
+    "runs/lewm_adaptive_compute_v4/benchmark_runtime.py": "d085abd06e872a4cd9782bdf74b90dfa83f0952956e54f62845c56290463fa17",
+    "runs/lewm_adaptive_compute_v4/common.py": "eceeb9c1b83e6b2b5eef607823035df0495e719b15c8cf1fca63a661a3a5159b",
+    "runs/lewm_adaptive_compute_v4/evaluate.py": "be0a66e50fe4cdbcdcb02e45697c61d181817224921b343bda141d7de64eef3f",
+    "runs/lewm_adaptive_compute_v4/finalize.py": "820c9f695b61407e07994e6fa40d227149abec06b2e0e6b4463fe0b565234b56",
+    "runs/lewm_adaptive_compute_v4/flops.py": "95cfceced0a52bca197028ebf55312d7c216ed28e8fe3f2aba4ba461dc4c6722",
+    "runs/lewm_adaptive_compute_v4/freshness.py": "18c57687c351e69a16a531cb76dc490658090fd0a1f748c9003d999dfe1fd87a",
+    "runs/lewm_adaptive_compute_v4/generator.py": "d7077ca29c2099456ffeefe775fbb580779328f0ca602ecd6ab5ba2134020a05",
+    "runs/lewm_adaptive_compute_v4/prepare_preregistration.py": "cb9346eb884c4b7fc5c324ef254fc9f42cc97d308fe6d2fbed55c53dd2d781ac",
+    "runs/lewm_adaptive_compute_v4/receipt.py": "7b2b8c4eb35c629de26ecb6c138ce354efbbd295efc679f39c84cfa6f3b93895",
+    "runs/lewm_adaptive_compute_v4/report.py": "f8a3eaa50b568f6d1bed8e34e6b5390d96653adbea8b220dc237cfcf59620e7a",
+    "runs/lewm_adaptive_compute_v4/run_tests.py": "b6e1f9305d80ca7399241b06d34e1ff24d089ad4805387af440eec54dbccf93a",
+    "runs/lewm_adaptive_compute_v4/runtime.py": "801b160ad9c457f7eabb4b92395c90cb7eb2f9d1809a627bd0202df8a210bfdf",
+    "runs/lewm_adaptive_compute_v4/seal.py": "5c7de3fad8ba9ebaa7d624bfe96ae70133a778e95c60731b073e939d9ede424b",
+    "runs/lewm_adaptive_compute_v4/secondary.py": "bcef3aa71b2b14ff1e490c20624efccd79d7c8c56897dba3411c8c327fcba9fc",
+    "runs/lewm_adaptive_compute_v4/statistics.py": "a54c7c7399fcfd189b83d1ff5fe1c168861d8681616ab3099cf7740e8c4129a1"
+  }
+}

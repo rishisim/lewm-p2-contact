@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "confirmation_count_exact": true,
+    "no_exact_observation_action_duplicate_against_accessible_prior": true,
+    "no_smoke_confirmation_exact_duplicate": true,
+    "performance_based_exclusions_absent": true,
+    "physical_paths_disjoint": true,
+    "seed_nonoverlap_with_all_recorded_numeric_ids": true,
+    "smoke_count_exact": true,
+    "trajectory_identifiers_disjoint": true,
+    "v3_test_targets_opened": false
+  },
+  "confirmation_data_manifest_sha256": "6a19bc4101cb8fd13e3585030dd61fb1513861415791851e0592d1423ccbdf39",
+  "cross_role_exact_duplicates": [],
+  "passed": true,
+  "path_overlap": [],
+  "pretraining_membership_caveat": "The released LeWM checkpoint has no original pretraining episode manifest; mechanical nonmembership cannot be proven even though V4 trajectories were generated now from new frozen seeds and are not exact duplicates of every accessible recorded prior episode outside the untouched V3 test set.",
+  "prior_exact_duplicates": [],
+  "prior_raw_hash_index_sha256": "2ef92128d3452b3f7d8ee0a7aec9050096f514914f8bc59d2962e574dd5b3cd7",
+  "released_checkpoint_pretraining_manifest_available": false,
+  "schema_version": 1,
+  "seed_overlap": [],
+  "smoke_data_manifest_sha256": "2b707c5029903c34bd2380c448a7b7cc4a3f465a27d5a97b20d3ecb8f3721dee",
+  "trajectory_overlap": []
+}

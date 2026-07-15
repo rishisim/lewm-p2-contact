@@ -1,0 +1,7 @@
+independent verifier: python3 independent_verify.py
+status: pass
+checks passed: protocol and preregistration seals; exact candidate IDs and tag peel; source/lock version mismatch; normalized base drift; normalized env agreement; file and collector eligibility; exact allowlist/counts; decision mapping; zero prohibited work; no network fetch; prior locked-run manifest SHA-256 1bf76a5547f948f24f07c393548736d562e2169ef33cb6ac62494a93a6b0166d
+candidate-selection implementation imported: false
+mechanics implementation imported: false
+candidate environment imported: false
+scientific HDF5 opened: false

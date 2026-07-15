@@ -1,0 +1,127 @@
+{
+  "exclusions": {
+    ".venv/": "represented by environment_provenance.json, environment_requirements.txt, and environment_sync.log",
+    "source_repo/": "represented by detached commit, uv.lock hash, and selected hashes in environment_provenance.json",
+    "source_repo/.git/": "immutable git commit representation"
+  },
+  "record_count": 23,
+  "records": [
+    {
+      "bytes": 2628,
+      "path": "PREREGISTRATION.md",
+      "sha256": "a3c3c04caafcab06a23b59f8c357f1e56246877f8a9c6815edd60036f7dcf7a9"
+    },
+    {
+      "bytes": 908,
+      "path": "README.md",
+      "sha256": "b478cb06acfe849ae12e17df34ec7be71fc4dd87d4c254aa75522fbd1642a2ef"
+    },
+    {
+      "bytes": 4249,
+      "path": "REPORT.md",
+      "sha256": "bc3d2999b31786fe5af987407fca1a257faa401f36e3203b3cf379b72969f642"
+    },
+    {
+      "bytes": 3855,
+      "path": "__pycache__/audit_environment.cpython-310.pyc",
+      "sha256": "353ae3d8672fc529c33ca817251fc3fb42d8958e4d3fe715aeff5e9a5ae0da66"
+    },
+    {
+      "bytes": 1280,
+      "path": "__pycache__/build_manifest.cpython-310.pyc",
+      "sha256": "ad6898474eab13bad4872e15b77f43f9d8f30526b524855838de708cebca45fd"
+    },
+    {
+      "bytes": 2945,
+      "path": "__pycache__/independent_verify.cpython-310.pyc",
+      "sha256": "b9d7944ef90b198ba673ed8bdfaa1805ec0322a003287e835980ed6ed94b8fd8"
+    },
+    {
+      "bytes": 717,
+      "path": "__pycache__/verify_manifest_readonly.cpython-310.pyc",
+      "sha256": "652e7b6a36af4c6ba441f33540192f6ab87ef3cff5a806e0e1b762c92a8068b9"
+    },
+    {
+      "bytes": 349,
+      "path": "artifact_hashes.sha256",
+      "sha256": "705d2c48c648479df39d350b3814ec722f498302a9dc6d3991e7a72e9cb36d27"
+    },
+    {
+      "bytes": 3610,
+      "path": "audit_environment.py",
+      "sha256": "b82851456caddd903e07e2a01e6762e4f6f89c01c9789e668ffe5b644a8116ae"
+    },
+    {
+      "bytes": 952,
+      "path": "build_manifest.py",
+      "sha256": "0bdd7d81947193e6a869aa4a836c0bad18393c19d8ce286e4b92ad02283f39fb"
+    },
+    {
+      "bytes": 640,
+      "path": "decision.json",
+      "sha256": "75bb19d4437e6892e08d0c30644a7d1f1a623a54575b859a7a9a3d4f399f4e49"
+    },
+    {
+      "bytes": 260,
+      "path": "environment_audit.log",
+      "sha256": "e52168d61282cbdf0d8721b844a047facbf6e1b4aaaa5510972454e775bef6ca"
+    },
+    {
+      "bytes": 3111,
+      "path": "environment_provenance.json",
+      "sha256": "a9f7843a7f5c26b6608543ba253e57785e6e427f2d2f33245971c6a5210aec20"
+    },
+    {
+      "bytes": 181268,
+      "path": "environment_requirements.txt",
+      "sha256": "c8c7ac5748e4cd86e5f27156f58d2b47bdad431800c4ea449ff15fcd534d58c5"
+    },
+    {
+      "bytes": 4434,
+      "path": "environment_sync.log",
+      "sha256": "d854dc9b2c7427361129e1ff0f41fd08973a1bc734722f172202250c0c057764"
+    },
+    {
+      "bytes": 651,
+      "path": "independent_verification.json",
+      "sha256": "7331e941e702e4abb8fb7cb4e293add25fa4462b38c5a0720ad9493fd2d79e0d"
+    },
+    {
+      "bytes": 301,
+      "path": "independent_verification.log",
+      "sha256": "fd2761fba5874bc278c57c368d7981de80d164fb41f4c3b029243a5999f52647"
+    },
+    {
+      "bytes": 2679,
+      "path": "independent_verify.py",
+      "sha256": "2d2894cb4ff1f949431d15f8c9282977867246fa41132e871dcf02c74644d7b9"
+    },
+    {
+      "bytes": 465,
+      "path": "metrics.json",
+      "sha256": "5f9e948f333cfedd932db3074dc18bca189174208e5202d9343165d979e9b83b"
+    },
+    {
+      "bytes": 165,
+      "path": "preregistration.sha256",
+      "sha256": "bac03603fe6ba0c9f37b63f6c298e88eb7f28c1f30448f68667ffa04b082e7fc"
+    },
+    {
+      "bytes": 4581,
+      "path": "protocol.json",
+      "sha256": "9d6fd38e9a1be045dc7cc0012099795cc2d18839e650db572fb7f6b866cd0993"
+    },
+    {
+      "bytes": 165,
+      "path": "protocol.sha256",
+      "sha256": "bac03603fe6ba0c9f37b63f6c298e88eb7f28c1f30448f68667ffa04b082e7fc"
+    },
+    {
+      "bytes": 533,
+      "path": "verify_manifest_readonly.py",
+      "sha256": "09accf3aea1c9e70654557155992afce02a0e49476cf0823548e5ad61df7685c"
+    }
+  ],
+  "schema_version": 1,
+  "total_bytes": 220746
+}

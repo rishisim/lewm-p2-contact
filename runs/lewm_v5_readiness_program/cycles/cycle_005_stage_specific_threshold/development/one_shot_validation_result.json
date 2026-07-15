@@ -1,0 +1,112 @@
+{
+  "adaptive_total_flops": 406077648185,
+  "analytic_equivalent_mean_calls": 1.1634913346734892,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 2006999951,
+  "call_histogram": [
+    5239,
+    297,
+    48,
+    116
+  ],
+  "candidate_eligible_for_fresh_cycle_005": false,
+  "checks": {
+    "all_four_depths_at_least_20": true,
+    "all_six_individual_lowers_positive": true,
+    "all_three_stage_rhos_positive": false,
+    "both_simultaneous_lowers_positive": true,
+    "counterfactual_complete": true,
+    "exact_150_episode_validation_role": true,
+    "seeded_comparator_weakly_more_compute": true,
+    "selection_lock_preceded_validation": true,
+    "stage_2_reached_at_least_400": true,
+    "stage_3_reached_at_least_120": true,
+    "within_episode_histograms_exact": true,
+    "zero_v5_outcomes": true
+  },
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.00026775041564996717,
+      "lower": 4.1289890516910806e-05,
+      "upper": 0.0005271206503503295
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.000319486872771452,
+      "lower": 0.00019216755945404947,
+      "upper": 0.0004575434953654938
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.2014752833419515e-06,
+      "lower": 2.4424684846265354e-06,
+      "upper": 1.029447296827789e-05
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 1.1643231844471813e-05,
+      "lower": 6.94433429977201e-06,
+      "upper": 1.6760626192246468e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 8.802190278895137e-06,
+      "lower": 4.043203446103899e-06,
+      "upper": 1.3787818528142994e-05
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 5.314024795612078e-06,
+      "lower": 1.9834172584757357e-06,
+      "upper": 8.746331854990476e-06
+    }
+  },
+  "development_only_not_prospective_evidence": true,
+  "gate_evaluations": 6325,
+  "mean_calls": 1.13,
+  "protocol_sha256": "cf10b001a891d10c8efb850d89988d35a8e0b679cf54852cea79d9c67b8a07a2",
+  "schema_version": 1,
+  "seeded_minus_adaptive_flops": 26335,
+  "seeded_total_flops": 406077674520,
+  "selected_candidate_id": "d1_200_d2_100",
+  "selection_lock_sha256": "c4a7e5ad5ba05966f488c52d1eb1daaf4cb30c411464874ad6b9f19bfaa4f87d",
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.00026775041564996717,
+      "familywise_alpha": 0.05,
+      "lower": 4.1289890516910806e-05,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.2014752833419515e-06,
+      "familywise_alpha": 0.05,
+      "lower": 2.4424684846265354e-06,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "stagewise_rank": [
+    {
+      "positive": true,
+      "reached_rows": 5700,
+      "rho": 0.24369007010251761,
+      "stage": 1
+    },
+    {
+      "positive": false,
+      "reached_rows": 461,
+      "rho": -0.034050274916067616,
+      "stage": 2
+    },
+    {
+      "positive": false,
+      "reached_rows": 164,
+      "rho": -0.008523662481465863,
+      "stage": 3
+    }
+  ],
+  "status": "one_shot_validation_failed",
+  "thresholds": [
+    0.5438409546434824,
+    0.2719204773217412,
+    0.2719204773217412
+  ],
+  "v5_outcome_episodes": 0,
+  "validation_input_sha256": "94092f7a30fcd19a2a8808ec0ca7b8120ad7147fc9e1cda1fe48bcf1ede3e40f"
+}

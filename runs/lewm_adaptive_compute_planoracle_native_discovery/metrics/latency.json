@@ -1,0 +1,10 @@
+{
+  "device": "mps",
+  "excluded_from_decision": true,
+  "median_ms": 0.7735209946986288,
+  "operation": "selected sealed gate normalization + dual-linear score (model latency not remeasured)",
+  "p05_ms": 0.6160786346299574,
+  "p95_ms": 1.5747977056889784,
+  "post_decision_only": true,
+  "rows": 1024
+}

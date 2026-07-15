@@ -1,0 +1,35 @@
+{
+  "collapse_persistence": {
+    "model_mse_mean": 0.1430644865184532,
+    "model_persistence_ratio": 0.46526036233111423,
+    "passed": true,
+    "persistence_mse_mean": 0.30749339101584106,
+    "reason": "heldout model/persistence ratio=0.46526; void if approximately 1 or worse"
+  },
+  "coverage_interaction_transport_free": {
+    "interaction_episodes": 20,
+    "interaction_rows": 371,
+    "passed": true,
+    "reason": "requires >=5 held-out episodes and >=30 held-out rows in interaction and transport_free",
+    "transport_free_episodes": 20,
+    "transport_free_rows": 358
+  },
+  "latent_isotropy": {
+    "condition_number": 517275.4888904555,
+    "latent_dim": 192,
+    "passed": false,
+    "per_dim_variance_max": 1.679593410225292,
+    "per_dim_variance_min": 0.5858585388842782,
+    "per_dim_variance_spread": 2.866892430080385,
+    "reason": "target latent covariance condition and per-dim spread within preregistered thresholds",
+    "whitened_metrics_required": true
+  },
+  "no_circular_labels": {
+    "passed": true,
+    "reason": "interaction uses sensor contact; transport_free/static use raw effector/block motion only; no latent/error labels"
+  },
+  "split_thresholds": {
+    "passed": true,
+    "reason": "motion thresholds and optional whitening were fit on calibration episodes and evaluated on held-out episodes"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "statistical_criteria": {
+    "all_six_individual_lower_bounds_strictly_positive": true,
+    "both_simultaneous_co_primary_lower_bounds_strictly_positive": true,
+    "all_three_stagewise_score_gain_ranks_strictly_positive": true
+  },
+  "process_criteria": [
+    "pre-data seal and chronology",
+    "exact 300-episode and 11400-row cohort",
+    "complete finite path set and hashes",
+    "fit/selection isolation and frozen selected gate",
+    "unique disjoint identifiers and seeds",
+    "action,pixels-only input isolation",
+    "contact and privileged exclusion",
+    "frozen modules and absent gradients",
+    "exact calls stopping depths and histograms",
+    "manual sparse versus forward_selected exactness",
+    "cross-batch numerical-equivalence contract",
+    "two agreeing exact operation-count derivations",
+    "seeded comparator weakly more total compute",
+    "zero V5 outcomes"
+  ],
+  "mapping": {
+    "process_clean_and_all_statistical_criteria_pass": "cycle_prospective_discovery_passed",
+    "process_clean_and_any_statistical_criterion_fails": "cycle_prospective_discovery_failed",
+    "any_process_criterion_fails": "cycle_execution_invalid"
+  },
+  "independent_audit_required_before_acceptance": true,
+  "v5_outcome_episodes": 0
+}

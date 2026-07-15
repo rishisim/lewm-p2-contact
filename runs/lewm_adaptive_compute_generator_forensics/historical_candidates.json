@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_historical_candidate_execution",
+  "candidates": [
+    {
+      "id": "stable_worldmodel_a265229_ogbench_v1_2_1",
+      "stable_worldmodel_repository": "https://github.com/galilai-group/stable-worldmodel.git",
+      "stable_worldmodel_commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "ogbench_version": "1.2.1",
+      "ogbench_commit": "1d4140997f60c52c6fb0702ec100dc988b18c548",
+      "direct_evidence": "The public collect_cube.py and ogb.yaml at this stable-worldmodel commit specify swm/OGBCube-v0, single cube, ExpertPolicy, 10000 trajectories, max_episode_steps=200, 224x224 multiview, seed 3072, and terminate_at_goal=false.",
+      "provenance_limitation": "The public output name differs and neither HDF5 metadata nor dataset card links this commit to the released archive.",
+      "execution": "run-local detached source checkout on the existing dependency runtime; same frozen sample/indices/tolerances; no policy rollout"
+    }
+  ],
+  "candidate_count": 1,
+  "maximum_allowed": 3,
+  "weaker_timestamp_candidate_not_executed": "stable-worldmodel 0.0.4 has only archive-mtime support, not direct generator evidence",
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

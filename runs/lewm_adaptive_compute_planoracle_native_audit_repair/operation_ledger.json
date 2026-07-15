@@ -1,0 +1,38 @@
+{
+  "additional_refiner_flops_per_call": 264960,
+  "base_flops_per_row": 70529190,
+  "biases_explicitly_counted": 2,
+  "convention": "one scalar add, subtract, multiply, divide, or comparison is one FLOP except comparisons/min are reported non-FLOP; tensor views/concatenation/indexing are zero FLOP",
+  "feature_graph": {
+    "actions_flatten_view": 0,
+    "concatenate_and_depth_onehot": 0,
+    "current_view": 0,
+    "history_flatten_view": 0,
+    "last_update_view": 0,
+    "scalar_summaries": {
+      "current_abs_mean": 384,
+      "current_l2_rms": 576,
+      "current_mean": 192,
+      "current_std_population": 576,
+      "current_update_dot_mean": 384,
+      "total": 4032,
+      "update_abs_max": 192,
+      "update_abs_mean": 384,
+      "update_l2_rms": 576,
+      "update_mean": 192,
+      "update_std_population": 576
+    }
+  },
+  "gate_feature_flops_per_reached_evaluation": 4032,
+  "gate_score_per_reached_evaluation": {
+    "flops": 4196,
+    "min_nonflop": 1,
+    "threshold_comparison_nonflop": 1,
+    "two_affine_heads_each_1049_multiplies_1048_adds_plus_bias": 4196
+  },
+  "gate_total_flops_per_reached_evaluation": 8228,
+  "independent_symbolic_check": "2*(1049 multiplications + 1048 reduction adds + 1 bias add)=4196; features=4032 from sealed scalar expressions",
+  "mandatory_depth1_refiner_flops_per_row": 669184,
+  "nonflop_per_gate_evaluation": 2,
+  "schema_version": 1
+}

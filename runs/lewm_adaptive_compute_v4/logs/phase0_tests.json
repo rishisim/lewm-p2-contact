@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v4/tests"
+  ],
+  "frozen_objects": {
+    "base_config": {
+      "bytes": 1313,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+      "sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999"
+    },
+    "base_weights": {
+      "bytes": 72291425,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+      "sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+    },
+    "contract": {
+      "compute_price": true,
+      "family": true,
+      "gate_flops": true,
+      "operating_point": true,
+      "parameters": true
+    },
+    "solver_checkpoint": {
+      "bytes": 2945961,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt",
+      "sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782"
+    },
+    "student_checkpoint": {
+      "bytes": 1250325,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/final_student.pt",
+      "sha256": "fb59da4fd2a3895679a2cbba006c2a1f4c6619968b594f9ab1117531560f6302"
+    },
+    "tournament": {
+      "bytes": 12987,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/audit/frozen_tournament.json",
+      "sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66"
+    },
+    "whitening": {
+      "bytes": 298994,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_critic_compression/checkpoints/discovery_whitening.npz",
+      "sha256": "6ac9f8a463921e8fc158ba2aca543f07dc46931a3f98b4d7ef9f10efd4add54f"
+    }
+  },
+  "output": "...........                                                              [100%]\n11 passed in 1.95s\n",
+  "passed": true,
+  "phase": "phase0",
+  "returncode": 0,
+  "schema_version": 1,
+  "v3_test_targets_opened": false
+}

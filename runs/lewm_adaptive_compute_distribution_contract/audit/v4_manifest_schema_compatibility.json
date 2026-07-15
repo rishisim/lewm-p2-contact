@@ -1,0 +1,11 @@
+{
+  "compatibility_action": "verify cache_sha256, load the same NPZ, and rename episode_slot to episode_id in memory; no numerical array or outcome is changed",
+  "diagnosis": "the preserved V4 manifest names its encoded file hash cache_sha256, while the new evaluator expected encoded_sha256",
+  "schema_version": 1,
+  "status": "frozen_before_v4_diagnostic_recomputation",
+  "v3_test_targets_opened": false,
+  "v4_cache_sha256": "4ed83d1da176f3813189d246a4153c44d0ec4bb843f40d61cc9c6e77bb64802b",
+  "v4_manifest_sha256": "e6993c44e08a0884c2c1bd988c7ed598157b8e7ca17037363e35f8bd4e0bf24f",
+  "v4_used_for_thresholds_training_or_selection": false,
+  "v5_confirmation_episodes": 0
+}

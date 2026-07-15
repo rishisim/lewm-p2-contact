@@ -1,0 +1,5 @@
+# Preregistration: PlanOracle native audit-repair
+
+This is a prospective audit-repair discovery run, not V5 or confirmation. The source minimax dual-linear gate, normalization, whitening, threshold, features, model, solver, and prices are immutable. Twelve post-seal smoke episodes are excluded. Exactly 300 fresh PlanOracle episodes are generated from the sealed ledger. The evaluator loads only `pixels` and `action`; contact and privileged values cannot enter execution, exclusions, stopping, statistics, or terminal mapping.
+
+All raw generation, sparse online execution, dense shadows, and their hashes must complete before loss or gate-outcome analysis. The adaptive output comes from the actual sparse stage loop; dense execution is comparator-only. Six individual episode-bootstrap lower bounds and simultaneous raw/whitened analytic lower bounds must exceed zero, with all integrity checks, for a pass. A valid statistical miss is failure; any process defect is invalid. No tuning, candidate search, or V5 launch is permitted.

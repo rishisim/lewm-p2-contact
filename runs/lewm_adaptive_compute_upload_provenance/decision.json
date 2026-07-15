@@ -1,0 +1,12 @@
+{
+  "archive_header_available": true,
+  "archive_payload_bytes": 1048576,
+  "binding_evidence_count": 0,
+  "close_local_generator_archaeology": true,
+  "decision": "upload_metadata_contains_no_generator_binding",
+  "immutable_revisions_reconstructed": 6,
+  "mechanics_replayed": false,
+  "narrowing_evidence_count": 0,
+  "payload_cap_respected": true,
+  "request_cap_respected": true
+}

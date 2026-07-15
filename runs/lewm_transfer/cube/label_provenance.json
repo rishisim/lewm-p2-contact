@@ -1,0 +1,64 @@
+{
+  "calibration_episodes": 10,
+  "config": "runs/lewm_transfer/cube/cache/model/config.json",
+  "contact_stats": {
+    "bouts_per_episode": 2.0,
+    "contact_fraction": 0.4235489220563847,
+    "median_bout_length": 42.0,
+    "median_onsets_per_traj": 2.0,
+    "total_onsets": 70
+  },
+  "frameskip": 5,
+  "gripper_geometry_agreement_pct": 81.54228855721392,
+  "heldout_episodes": 20,
+  "history_size": 3,
+  "interaction_source": "sensor: proprio_gripper_contact > 1e-9, block-reduced over prediction transition rows",
+  "lance_rows": 6030,
+  "lance_subset": "runs/lewm_transfer/cube/cache/cube_first30_pixel_subset.lance",
+  "model_repo": "quentinll/lewm-cube",
+  "num_trajectories": 30,
+  "precheck_contact_divergence": [],
+  "regime_counts": [
+    {
+      "n_episodes": 10,
+      "n_rows": 196,
+      "regime": "support",
+      "split": "calibration"
+    },
+    {
+      "n_episodes": 10,
+      "n_rows": 184,
+      "regime": "interaction",
+      "split": "calibration"
+    },
+    {
+      "n_episodes": 20,
+      "n_rows": 389,
+      "regime": "support",
+      "split": "heldout"
+    },
+    {
+      "n_episodes": 20,
+      "n_rows": 371,
+      "regime": "interaction",
+      "split": "heldout"
+    }
+  ],
+  "regime_precedence": [
+    "interaction",
+    "support",
+    "free"
+  ],
+  "source_h5": "/Users/rishisim/.stable_worldmodel/source_downloads/lewm-cube/extracted/cube_single_expert.h5",
+  "source_step_count": 6030,
+  "support_source": "geometry: privileged_block_0_pos[:,2] <= calibration_median_non_interaction_z + max(0.0025, 10*MAD)",
+  "support_threshold": {
+    "calibration_mad": 1.3877787807814457e-17,
+    "source": "geometry: privileged_block_0_pos[:,2] <= calibration_median_non_interaction_z + max(0.0025, 10*MAD)",
+    "support_z_threshold": 0.0224607247131208,
+    "table_height_median": 0.0199607247131208,
+    "tolerance": 0.0025,
+    "unit": "meters"
+  },
+  "weights": "runs/lewm_transfer/cube/cache/model/weights.pt"
+}

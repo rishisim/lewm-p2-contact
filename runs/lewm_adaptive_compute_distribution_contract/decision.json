@@ -1,0 +1,51 @@
+{
+  "bootstrap_sha256": "9a8a5894c89cc3092eab7569bb3c9eace2d03c82f139acec245814a1ca0de753",
+  "confirmatory_claim": false,
+  "contact_aware_claim": false,
+  "decision": "generator_reconstruction_failed",
+  "distribution_checks": {
+    "paired_environment_seed_and_initial_state_audit": true,
+    "plan_d1_to_d2_gain_positive": true,
+    "plan_inside_frozen_joint_core_region": false,
+    "plan_materially_closer_than_paired_markov": true
+  },
+  "distribution_comparison_sha256": "577daf776b9e9b64e91c1ea47ee8b01f8f21cc7e071b909f58da5558bc18a3b9",
+  "distribution_matched": false,
+  "episode_metrics_sha256": "31f67e224c99370a28d3a5469409d8d8feb3e07f69b4a01a853a886180ffb692",
+  "first_adaptive_world_model_claim": false,
+  "frozen_gate_prospective_discovery_passed": false,
+  "future_entirely_fresh_v5_confirmation_authorized": false,
+  "gate_criteria": {
+    "all_score_gain_spearman_gt_zero": true,
+    "call_nondominated": true,
+    "exact_analytic_ci_low_gt_zero": true,
+    "exact_histogram_preserved": true,
+    "exact_seeded_ci_low_gt_zero": true,
+    "exact_total_analytic_flops_match": true,
+    "fixed_d1_ci_low_gt_zero": true,
+    "fully_counted_flop_nondominated": true,
+    "histogram_ci_low_gt_zero": true,
+    "seeded_integer_baseline_weakly_more_flops": true,
+    "whitened_exact_analytic_point_gt_zero": false
+  },
+  "gate_metrics_sha256": "d929d0bf50bcc6a67ac66409bbcdb2f0f4638111bd14baf485ea3070d6f59fc7",
+  "next_step": "Run only the smallest bounded environment/version/action-semantics or replay check; do not tune the gate.",
+  "schema_version": 1,
+  "v4_retained_negative_result_for_markov_oracle": true,
+  "v4_used_for_training_selection_tuning_or_thresholds": false,
+  "v5_launched": false,
+  "validity_checks": {
+    "all_evaluations_passed": true,
+    "all_evaluations_report_no_v3_test_access": true,
+    "freshness_audit_passed": true,
+    "frozen_object_hashes_passed": true,
+    "main_pairing_passed": true,
+    "offline_isolation_passed": true,
+    "pre_generation_seal_valid": true,
+    "smoke_pairing_passed": true,
+    "v3_test_targets_opened": false,
+    "v4_recomputed_as_diagnostic_only": true,
+    "v5_confirmation_episodes": 0
+  },
+  "validity_passed": true
+}

@@ -1,0 +1,213 @@
+{
+  "adaptive_raw_mse": 0.003333030832510088,
+  "adaptive_whitened_mse": 0.0801037129106964,
+  "analytic_probabilities": [
+    0.7100346030383929,
+    0.289965396961607,
+    0.0,
+    0.0
+  ],
+  "call_histogram": {
+    "1": 2622,
+    "2": 759,
+    "3": 16,
+    "4": 23
+  },
+  "comparisons": {
+    "raw_vs_exact_total_flop_analytic": {
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 2.2058659635371546e-06,
+      "ci_high": 1.2447989077363619e-05,
+      "ci_low": 3.8077355726667473e-06,
+      "direction": "baseline_loss_minus_adaptive_loss",
+      "episodes": 90,
+      "mean_benefit": 8.062081564809931e-06,
+      "rows": 3420,
+      "seed": 1646000101
+    },
+    "raw_vs_exact_total_flop_seeded": {
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 2.7428692817863285e-06,
+      "ci_high": 1.3167375812375133e-05,
+      "ci_low": 2.5018743942332278e-06,
+      "direction": "baseline_loss_minus_adaptive_loss",
+      "episodes": 90,
+      "mean_benefit": 7.792048151716327e-06,
+      "rows": 3420,
+      "seed": 1646000102
+    },
+    "raw_vs_fixed_d1": {
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 2.8173636413784506e-06,
+      "ci_high": 2.230158498168083e-05,
+      "ci_low": 1.1233990451430772e-05,
+      "direction": "baseline_loss_minus_adaptive_loss",
+      "episodes": 90,
+      "mean_benefit": 1.673133716660043e-05,
+      "rows": 3420,
+      "seed": 1646000103
+    },
+    "raw_vs_histogram": {
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 3.105283544765633e-06,
+      "ci_high": 1.6979927309104576e-05,
+      "ci_low": 4.813213570953261e-06,
+      "direction": "baseline_loss_minus_adaptive_loss",
+      "episodes": 90,
+      "mean_benefit": 1.0878586412956666e-05,
+      "rows": 3420,
+      "seed": 1646000104
+    },
+    "whitened_vs_exact_total_flop_analytic": {
+      "bootstrap_samples": 10000,
+      "bootstrap_standard_error": 0.00016431661060414628,
+      "ci_high": 0.0002411208392371017,
+      "ci_low": -0.0004064948345151901,
+      "direction": "baseline_loss_minus_adaptive_loss",
+      "episodes": 90,
+      "mean_benefit": -0.000108273602589332,
+      "rows": 3420,
+      "seed": 1646000105
+    }
+  },
+  "confirmation_claim": false,
+  "criteria": {
+    "all_score_gain_spearman_gt_zero": true,
+    "call_nondominated": true,
+    "exact_analytic_ci_low_gt_zero": true,
+    "exact_histogram_preserved": true,
+    "exact_seeded_ci_low_gt_zero": true,
+    "exact_total_analytic_flops_match": true,
+    "fixed_d1_ci_low_gt_zero": true,
+    "fully_counted_flop_nondominated": true,
+    "histogram_ci_low_gt_zero": true,
+    "seeded_integer_baseline_weakly_more_flops": true,
+    "whitened_exact_analytic_point_gt_zero": false
+  },
+  "episodes": 90,
+  "exact_total_flop_budget": {
+    "adaptive_gate_decisions": 4257,
+    "adaptive_gate_total_flops": 34890372,
+    "adaptive_solver_total_calls": 4280,
+    "adaptive_total_flops": 243761195052,
+    "analytic_exact_flop_match": true,
+    "analytic_target_mean_calls": 1.289965396961607,
+    "analytic_target_total_calls": 4411.681657608696,
+    "integer_baseline_minus_adaptive_flops": 84348,
+    "integer_baseline_total_flops": 243761279400,
+    "integer_baseline_weakly_more_compute": true,
+    "integer_rounding": "ceiling_conservative_for_adaptive_claim",
+    "integer_target_mean_calls": 1.2900584795321637,
+    "integer_target_total_calls": 4412,
+    "rows": 3420
+  },
+  "frontier": [
+    {
+      "call_nondominated": true,
+      "flop_nondominated": true,
+      "flops": 71198374.0,
+      "mean_calls": 1.0,
+      "name": "fixed_d1",
+      "raw_mse": 0.0033497621696766964
+    },
+    {
+      "call_nondominated": true,
+      "flop_nondominated": true,
+      "flops": 71463334.0,
+      "mean_calls": 2.0,
+      "name": "fixed_d2",
+      "raw_mse": 0.0033198646174424327
+    },
+    {
+      "call_nondominated": true,
+      "flop_nondominated": true,
+      "flops": 71728294.0,
+      "mean_calls": 3.0,
+      "name": "fixed_d3",
+      "raw_mse": 0.003307216907781902
+    },
+    {
+      "call_nondominated": true,
+      "flop_nondominated": true,
+      "flops": 71993254.0,
+      "mean_calls": 4.0,
+      "name": "fixed_d4",
+      "raw_mse": 0.0032976788247950643
+    },
+    {
+      "call_nondominated": false,
+      "flop_nondominated": false,
+      "flops": 71275203.23157895,
+      "mean_calls": 1.289965396961607,
+      "name": "exact_total_analytic",
+      "raw_mse": 0.003341092914074898
+    },
+    {
+      "call_nondominated": false,
+      "flop_nondominated": false,
+      "flops": 71275227.89473684,
+      "mean_calls": 1.2900584795321637,
+      "name": "exact_total_seeded_conservative",
+      "raw_mse": 0.0033408228806618046
+    },
+    {
+      "call_nondominated": true,
+      "flop_nondominated": true,
+      "flops": 71275203.23157895,
+      "mean_calls": 1.2514619883040936,
+      "name": "adaptive_frozen_gate",
+      "raw_mse": 0.003333030832510088
+    }
+  ],
+  "fully_counted_flops_include_gate_overhead": true,
+  "mean_calls": 1.2514619883040936,
+  "passed": false,
+  "rankings": [
+    {
+      "decision_stage": 1,
+      "gain_mean": 2.98975522342694e-05,
+      "score_mean": 0.00011931908034190381,
+      "score_price_exceed_rate": 0.23333333333333334,
+      "spearman_score_gain": 0.07162583461915986
+    },
+    {
+      "decision_stage": 2,
+      "gain_mean": 1.2647709660513631e-05,
+      "score_mean": 4.76952275383485e-05,
+      "score_price_exceed_rate": 0.011403508771929825,
+      "spearman_score_gain": 0.08135378862586892
+    },
+    {
+      "decision_stage": 3,
+      "gain_mean": 9.538082986834914e-06,
+      "score_mean": 3.211005759543409e-05,
+      "score_price_exceed_rate": 0.006725146198830409,
+      "spearman_score_gain": 0.05244027040423206
+    }
+  ],
+  "role": "fresh_plan_oracle_discovery_evidence",
+  "rows": 3420,
+  "schema_version": 1,
+  "seeded_exact_audit": {
+    "exact_total_match": true,
+    "expected_match": true,
+    "expected_mean_calls": 1.2900584795321637,
+    "histogram": {
+      "1": 2428,
+      "2": 992
+    },
+    "n": 3420,
+    "realized_mean_calls": 1.2900584795321637,
+    "realized_minus_expected": 0.0,
+    "target_total_calls": 4412,
+    "total_call_error": 0,
+    "total_calls": 4412
+  },
+  "seeded_exact_counts": [
+    2428,
+    992,
+    0,
+    0
+  ],
+  "v4_used_for_gate_evaluation_or_thresholds": false
+}

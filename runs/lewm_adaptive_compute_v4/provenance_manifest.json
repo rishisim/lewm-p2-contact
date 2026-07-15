@@ -1,0 +1,20 @@
+{
+  "environment": {
+    "cwd": "/Users/rishisim/Documents/research/lewm-p2-contact",
+    "git_head": "2d92e9d97511f66a4d491e0be4e4a4050b70043b",
+    "git_status_short": " M le-wm/diagnostics/fetch_contact_compute/test_experiment_utils.py\n?? le-wm/diagnostics/fetch_contact_compute/run_persistence_control.py\n?? runs/\n",
+    "machine": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.10.20",
+    "timestamp_policy": "timestamps are excluded from sealed scientific inputs"
+  },
+  "evaluation_python": "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+  "generation_python": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python",
+  "no_commit_or_push": true,
+  "prior_evidence_audit_sha256": "f1f66d46179f0bb1e60fc60114131c9a38a78de6604db59975e8d123798e8d0a",
+  "prior_identifier_inventory_sha256": "a8d0ee09a7425e8dc5f87842e0f270da34ad8fe63c0a2c2bcb47d81761e11b2c",
+  "regime_matching_bins_sha256": "b3ed602853957f078431117a0d354cd89275392a076c66e7489a1966fd0fbb1a",
+  "schema_version": 1,
+  "status": "preregistered_before_fresh_v4_generation",
+  "v3_test_targets_opened": false
+}

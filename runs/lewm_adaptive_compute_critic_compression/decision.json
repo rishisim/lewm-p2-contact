@@ -1,0 +1,12 @@
+{
+  "calibration_consumed_once": true,
+  "calibration_passed": true,
+  "decision": "critic_compression_discovery_passed",
+  "operating_point": "b1.25",
+  "phase": "one_shot_v3_calibration",
+  "recommendation": "separate preregistered V4 confirmation",
+  "tournament_sha256": "5f474b17a37cc05c39b66495aad0baceb7c7ec4913eb3d6b2966eae230e52b66",
+  "v3_test_targets_consumed": false,
+  "v4_created": false,
+  "winner": "full_linear"
+}

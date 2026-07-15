@@ -1,0 +1,73 @@
+{
+  "bootstrap": {
+    "interval": "equal-tailed percentile 95%",
+    "replicates": 20000,
+    "simultaneous": "bootstrap max-t: use 95th percentile of max of centered estimate-minus-bootstrap-mean errors for raw and whitened analytic contrasts; lower=estimate-q95",
+    "tie": "strict lower bound > 0",
+    "unit": "episode"
+  },
+  "contact_posthoc_only": true,
+  "criteria": [
+    "raw_vs_analytic",
+    "raw_vs_seeded",
+    "raw_vs_fixed_d1",
+    "raw_vs_within_episode_histogram",
+    "white_vs_analytic",
+    "white_vs_within_episode_histogram"
+  ],
+  "dgp": {
+    "action_noise": 0.1,
+    "agents": 1,
+    "deterministic_reset_amendment": true,
+    "environment": "swm/OGBCube-v0",
+    "environment_steps": 200,
+    "frameskip": 5,
+    "gymnasium": "1.3.0",
+    "history": 3,
+    "image": [
+      224,
+      224
+    ],
+    "min_norm": 0.4,
+    "model_steps": [
+      3,
+      40
+    ],
+    "mujoco": "3.10.0",
+    "noise_smoothing": 0.5,
+    "ogbench": "1.2.1",
+    "p_random_action": 0,
+    "policy": "PlanOracle",
+    "stable-worldmodel": "0.1.0"
+  },
+  "exclusions": "only predeclared smoke and mechanical generation corruption; no outcome exclusions",
+  "forbidden_gate_model_keys": [
+    "contact",
+    "observation",
+    "qpos",
+    "qvel",
+    "privileged_target_block_pos",
+    "privileged_target_block_yaw",
+    "reward",
+    "terminated",
+    "truncated"
+  ],
+  "input_key_allowlist": [
+    "pixels",
+    "action"
+  ],
+  "latency": "post-decision only; synchronized MPS; full sparse path",
+  "not_v5": true,
+  "rows_per_episode": 38,
+  "sample_sizes": {
+    "excluded_smoke": 12,
+    "prospective": 300
+  },
+  "schema_version": 1,
+  "selected_gate": "minimax_dual_linear-r0.01-q0.85",
+  "stagewise_rank": "Spearman score/gain rho must be >0 at each reached stage; ties use scipy average ranks",
+  "stopping": "exactly 300 valid prospective episodes; no sequential expansion",
+  "study": "PlanOracle native audit-repair prospective discovery",
+  "threshold": 0.18128031821449414,
+  "unblinding": "only after 300 raw episodes, sparse traces, and dense shadows complete and input-hash sealed"
+}

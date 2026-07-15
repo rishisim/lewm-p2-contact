@@ -1,0 +1,177 @@
+{
+  "cache": {
+    "elapsed_seconds": 5.008293125007185,
+    "examples": 228,
+    "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/smoke_run/cache/fresh_cube_inputs.npz",
+    "shapes": {
+      "action": [
+        228,
+        3,
+        25
+      ],
+      "base_pred": [
+        228,
+        192
+      ],
+      "history": [
+        228,
+        3,
+        192
+      ],
+      "target": [
+        228,
+        192
+      ]
+    },
+    "split_examples": {
+      "calibration": 38,
+      "test": 38,
+      "train": 152
+    }
+  },
+  "model": {
+    "all_parameters_frozen": true,
+    "config_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+    "contract": {
+      "blocked_action_dim": 25,
+      "frameskip": 5,
+      "history_size": 3,
+      "image_size": 224,
+      "latent_dim": 192,
+      "raw_action_dim": 5
+    },
+    "parameter_count": 18034628,
+    "strict_key_mapping": "identity",
+    "weights_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+    "weights_sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+  },
+  "preprocessing": {
+    "action_mean": [
+      0.010884696617722511,
+      -0.003141433000564575,
+      0.002646582666784525,
+      0.00042392866453155875,
+      0.1592525690793991
+    ],
+    "action_normalization": "released-training dataset-wide finite action mean/std (unbiased std)",
+    "action_stats_rows": 2000000,
+    "action_std": [
+      0.28941991925239563,
+      0.39371708035469055,
+      0.6431366801261902,
+      0.3928017318248749,
+      0.25030744075775146
+    ],
+    "pixel_normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "selection": {
+    "excluded_episode_ordinals": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "seed": 260713,
+    "split_episode_ordinals": {
+      "calibration": [
+        34
+      ],
+      "test": [
+        35
+      ],
+      "train": [
+        30,
+        31,
+        32,
+        33
+      ]
+    }
+  },
+  "source": {
+    "episode_count": 10000,
+    "h5_path": "/Users/rishisim/.stable_worldmodel/source_downloads/lewm-cube/extracted/cube_single_expert.h5",
+    "h5_size_bytes": 101942558720,
+    "row_count": 2010000
+  },
+  "trajectory_records": [
+    {
+      "episode_id": 30,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "train"
+    },
+    {
+      "episode_id": 31,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "train"
+    },
+    {
+      "episode_id": 32,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "train"
+    },
+    {
+      "episode_id": 33,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "train"
+    },
+    {
+      "episode_id": 34,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "calibration"
+    },
+    {
+      "episode_id": 35,
+      "examples": 38,
+      "model_steps": 41,
+      "raw_length": 201,
+      "split": "test"
+    }
+  ]
+}

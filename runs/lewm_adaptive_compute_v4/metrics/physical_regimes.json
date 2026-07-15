@@ -1,0 +1,485 @@
+{
+  "analytic_comparator": "primary exact-total-FLOP transition-independent mixture",
+  "claim": "contact_aware_claim_not_supported",
+  "contact_and_regime_labels_forbidden_to_solver_and_gate": true,
+  "contact_aware_claim_supported": false,
+  "contact_vs_noncontact_matched": {
+    "coarse": {
+      "bins": {
+        "action_magnitude_interior_edges": [
+          0.5706170586030015,
+          0.8339987156293334,
+          1.1266778087504472
+        ],
+        "phase_interior_edges": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "target_motion_interior_edges": [
+          0.000654639647109434,
+          0.06707299686968327,
+          0.0952151268720627
+        ]
+      },
+      "calls": {
+        "bootstrap_samples": 10000,
+        "ci_high": -0.1527581239336423,
+        "ci_low": -0.3423800638283836,
+        "estimate_contact_minus_noncontact": -0.24422154935249796,
+        "seed": 940432301,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      },
+      "cumulative_gain": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.0005286433543009774,
+        "ci_low": -0.00014504841756771668,
+        "estimate_contact_minus_noncontact": 0.00019574997737286423,
+        "seed": 940432303,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      },
+      "overlap": {
+        "matched_strata": 12,
+        "overlap_effective_rows_per_arm": 300.0,
+        "positive_weight_contact_rows": 2260,
+        "positive_weight_noncontact_rows": 300,
+        "unmatched_contact_rows": 0,
+        "unmatched_noncontact_rows": 8840
+      },
+      "prediction_benefit": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.0004098842075988741,
+        "ci_low": -0.00015124830605472346,
+        "estimate_contact_minus_noncontact": 0.00013602267914008767,
+        "seed": 940432302,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      }
+    },
+    "fine": {
+      "bins": {
+        "action_magnitude_interior_edges": [
+          0.4070325248238468,
+          0.5706170586030015,
+          0.6995143716273691,
+          0.8339987156293334,
+          0.990580981296575,
+          1.1266778087504472,
+          1.3147632099808855
+        ],
+        "phase_interior_edges": [
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875
+        ],
+        "target_motion_interior_edges": [
+          0.0,
+          0.000654639647109434,
+          0.03053746256045997,
+          0.06707299686968327,
+          0.0909903421998024,
+          0.10898197330534455
+        ]
+      },
+      "calls": {
+        "bootstrap_samples": 10000,
+        "ci_high": -0.10448030322821637,
+        "ci_low": -0.31912945114417735,
+        "estimate_contact_minus_noncontact": -0.21165720742201755,
+        "seed": 940432201,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      },
+      "cumulative_gain": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.0005828319655820848,
+        "ci_low": -0.0001422831556237659,
+        "estimate_contact_minus_noncontact": 0.00021902076162129693,
+        "seed": 940432203,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      },
+      "overlap": {
+        "matched_strata": 35,
+        "overlap_effective_rows_per_arm": 270.0,
+        "positive_weight_contact_rows": 1993,
+        "positive_weight_noncontact_rows": 297,
+        "unmatched_contact_rows": 267,
+        "unmatched_noncontact_rows": 8843
+      },
+      "prediction_benefit": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.0004714151343038695,
+        "ci_low": -0.0001285520051618837,
+        "estimate_contact_minus_noncontact": 0.00017023331130378044,
+        "seed": 940432202,
+        "weighting": "fixed full-sample coarsened-exact overlap weights; episode-cluster resampling"
+      }
+    }
+  },
+  "contact_vs_noncontact_unmatched": {
+    "calls": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.5797795547380395,
+      "ci_low": 0.4959513804955909,
+      "contact_rows": 2260,
+      "estimate_contact_minus_noncontact": 0.5377868360411302,
+      "noncontact_rows": 9140,
+      "seed": 940432101
+    },
+    "cumulative_gain": {
+      "bootstrap_samples": 10000,
+      "ci_high": 0.0001117052948292833,
+      "ci_low": 4.2231907631930466e-06,
+      "contact_rows": 2260,
+      "estimate_contact_minus_noncontact": 5.718828938377412e-05,
+      "noncontact_rows": 9140,
+      "seed": 940432103
+    },
+    "prediction_benefit": {
+      "bootstrap_samples": 10000,
+      "ci_high": 7.847879684409508e-05,
+      "ci_low": -1.0357264954301123e-05,
+      "contact_rows": 2260,
+      "estimate_contact_minus_noncontact": 3.437840101490679e-05,
+      "noncontact_rows": 9140,
+      "seed": 940432102
+    }
+  },
+  "interpretation": "A null physical contrast limits the contact-specific motivation but does not alter the already-written primary adaptive-compute verdict.",
+  "onset_localized": [
+    {
+      "mean_calls": 1.7222222222222223,
+      "mean_cumulative_gain_vs_d1": -0.00013861805459277498,
+      "mean_prediction_benefit_vs_exact_total_analytic": -0.00010989893942936771,
+      "model_step_offset_from_impact_onset": -2,
+      "rows": 180
+    },
+    {
+      "mean_calls": 1.767515923566879,
+      "mean_cumulative_gain_vs_d1": -0.0004088365959276439,
+      "mean_prediction_benefit_vs_exact_total_analytic": -0.00031253149630109425,
+      "model_step_offset_from_impact_onset": -1,
+      "rows": 314
+    },
+    {
+      "mean_calls": 1.7203791469194314,
+      "mean_cumulative_gain_vs_d1": -0.00019733150163003335,
+      "mean_prediction_benefit_vs_exact_total_analytic": -0.00018396616041825654,
+      "model_step_offset_from_impact_onset": 0,
+      "rows": 422
+    },
+    {
+      "mean_calls": 1.7109004739336493,
+      "mean_cumulative_gain_vs_d1": 5.456887768201918e-05,
+      "mean_prediction_benefit_vs_exact_total_analytic": 4.8126139589272656e-05,
+      "model_step_offset_from_impact_onset": 1,
+      "rows": 422
+    },
+    {
+      "mean_calls": 1.7180094786729858,
+      "mean_cumulative_gain_vs_d1": 1.0642375337992799e-05,
+      "mean_prediction_benefit_vs_exact_total_analytic": 1.5631135380871295e-05,
+      "model_step_offset_from_impact_onset": 2,
+      "rows": 422
+    },
+    {
+      "mean_calls": 1.8293838862559242,
+      "mean_cumulative_gain_vs_d1": 2.5370038253524432e-05,
+      "mean_prediction_benefit_vs_exact_total_analytic": 1.3930657135119552e-05,
+      "model_step_offset_from_impact_onset": 3,
+      "rows": 422
+    }
+  ],
+  "primary_decision": "v4_confirmatory_failed",
+  "regime_definitions": {
+    "contact": "current five-step contact window positive and not impact",
+    "high_transport_threshold_discovery_q75": 0.06765174865722656,
+    "impact": "current five-step contact window positive and preceding window negative",
+    "other_free_motion": "no current contact and block displacement > 0.0",
+    "static": "no current contact and block displacement <= 0.0"
+  },
+  "regimes": [
+    {
+      "calls_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 1.784092952910399,
+        "ci_low": 1.6568843225777896,
+        "episodes_with_rows": 298,
+        "estimate": 1.7203791469194314,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 422,
+        "seed": 940432000
+      },
+      "cumulative_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -5.8257033162047776e-05,
+        "ci_low": -0.00033656615494935294,
+        "episodes_with_rows": 298,
+        "estimate": -0.00019733150163003335,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 422,
+        "seed": 940432001
+      },
+      "episodes_with_rows": 298,
+      "last_marginal_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -7.542259831806935e-05,
+        "ci_low": -0.000337045570860888,
+        "episodes_with_rows": 298,
+        "estimate": -0.00020693260757031882,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 422,
+        "seed": 940432002
+      },
+      "mean_calls": 1.7203791469194314,
+      "mean_cumulative_gain_vs_d1": -0.00019733150163003335,
+      "mean_last_accepted_marginal_gain": -0.00020693260757031882,
+      "mean_prediction_benefit_vs_exact_total_analytic": -0.00018396616041825654,
+      "positive_gain_rate_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.5096153846153846,
+        "ci_low": 0.41421568627450983,
+        "episodes_with_rows": 298,
+        "estimate": 0.46208530805687204,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 422,
+        "seed": 940432004
+      },
+      "positive_prediction_benefit_rate": 0.46208530805687204,
+      "prediction_benefit_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -6.815694842028683e-05,
+        "ci_low": -0.0002996251530313225,
+        "episodes_with_rows": 298,
+        "estimate": -0.00018396616041825654,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 422,
+        "seed": 940432003
+      },
+      "regime": "impact",
+      "rows": 422
+    },
+    {
+      "calls_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 1.8751967492695278,
+        "ci_low": 1.7959827863732463,
+        "episodes_with_rows": 296,
+        "estimate": 1.8351468988030468,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1838,
+        "seed": 940432101
+      },
+      "cumulative_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.00010575169515582678,
+        "ci_low": 4.0027656856379844e-07,
+        "episodes_with_rows": 296,
+        "estimate": 5.3717313695119306e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1838,
+        "seed": 940432102
+      },
+      "episodes_with_rows": 296,
+      "last_marginal_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 8.997262577773768e-05,
+        "ci_low": 8.257819851197567e-07,
+        "episodes_with_rows": 296,
+        "estimate": 4.48177283086588e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1838,
+        "seed": 940432103
+      },
+      "mean_calls": 1.8351468988030468,
+      "mean_cumulative_gain_vs_d1": 5.3717313695119306e-05,
+      "mean_last_accepted_marginal_gain": 4.48177283086588e-05,
+      "mean_prediction_benefit_vs_exact_total_analytic": 4.0710633428831205e-05,
+      "positive_gain_rate_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.5447336491639903,
+        "ci_low": 0.5,
+        "episodes_with_rows": 296,
+        "estimate": 0.5223068552774756,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1838,
+        "seed": 940432105
+      },
+      "positive_prediction_benefit_rate": 0.5223068552774756,
+      "prediction_benefit_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 8.40618475190602e-05,
+        "ci_low": -4.369695020138819e-06,
+        "episodes_with_rows": 296,
+        "estimate": 4.0710633428831205e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1838,
+        "seed": 940432104
+      },
+      "regime": "contact",
+      "rows": 1838
+    },
+    {
+      "calls_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 1.2474175867563795,
+        "ci_low": 1.1918605978994314,
+        "episodes_with_rows": 295,
+        "estimate": 1.2194076383476227,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 7698,
+        "seed": 940432202
+      },
+      "cumulative_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -2.7992375517233488e-05,
+        "ci_low": -5.71876280536963e-05,
+        "episodes_with_rows": 295,
+        "estimate": -4.2522706147781766e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 7698,
+        "seed": 940432203
+      },
+      "episodes_with_rows": 295,
+      "last_marginal_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -2.8186500201912206e-05,
+        "ci_low": -5.8069754129400734e-05,
+        "episodes_with_rows": 295,
+        "estimate": -4.2544742851382835e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 7698,
+        "seed": 940432204
+      },
+      "mean_calls": 1.2194076383476227,
+      "mean_cumulative_gain_vs_d1": -4.2522706147781766e-05,
+      "mean_last_accepted_marginal_gain": -4.2544742851382835e-05,
+      "mean_prediction_benefit_vs_exact_total_analytic": -3.0260962299073574e-05,
+      "positive_gain_rate_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.5183337359219269,
+        "ci_low": 0.4880026073176583,
+        "episodes_with_rows": 295,
+        "estimate": 0.5031176929072486,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 7698,
+        "seed": 940432206
+      },
+      "positive_prediction_benefit_rate": 0.5031176929072486,
+      "prediction_benefit_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -1.849731502936763e-05,
+        "ci_low": -4.244744077453294e-05,
+        "episodes_with_rows": 295,
+        "estimate": -3.0260962299073574e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 7698,
+        "seed": 940432205
+      },
+      "regime": "static",
+      "rows": 7698
+    },
+    {
+      "calls_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 1.6256234221210386,
+        "ci_low": 1.5294107830047905,
+        "episodes_with_rows": 300,
+        "estimate": 1.5776699029126213,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1442,
+        "seed": 940432303
+      },
+      "cumulative_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -1.405691428218809e-05,
+        "ci_low": -0.00016846736292200695,
+        "episodes_with_rows": 300,
+        "estimate": -9.212416907366825e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1442,
+        "seed": 940432304
+      },
+      "episodes_with_rows": 300,
+      "last_marginal_gain_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -3.9662802586947714e-05,
+        "ci_low": -0.0001789001685460773,
+        "episodes_with_rows": 300,
+        "estimate": -0.00010970216383317927,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1442,
+        "seed": 940432305
+      },
+      "mean_calls": 1.5776699029126213,
+      "mean_cumulative_gain_vs_d1": -9.212416907366825e-05,
+      "mean_last_accepted_marginal_gain": -0.00010970216383317927,
+      "mean_prediction_benefit_vs_exact_total_analytic": -6.423316804274128e-05,
+      "positive_gain_rate_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": 0.5291646379061469,
+        "ci_low": 0.478511176531899,
+        "episodes_with_rows": 300,
+        "estimate": 0.5041608876560333,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1442,
+        "seed": 940432307
+      },
+      "positive_prediction_benefit_rate": 0.5041608876560333,
+      "prediction_benefit_ci": {
+        "bootstrap_samples": 10000,
+        "ci_high": -1.0676240207044027e-07,
+        "ci_low": -0.00012728222528731438,
+        "episodes_with_rows": 300,
+        "estimate": -6.423316804274128e-05,
+        "finite_bootstrap_replicates": 10000,
+        "rows": 1442,
+        "seed": 940432306
+      },
+      "regime": "other_free_motion",
+      "rows": 1442
+    }
+  ],
+  "schema_version": 1,
+  "seed_block_consistency": [
+    {
+      "block": 1,
+      "episode_slots": "0-99",
+      "outcome": "calls",
+      "unmatched_contact_minus_noncontact": 0.5611925237455917
+    },
+    {
+      "block": 1,
+      "episode_slots": "0-99",
+      "outcome": "prediction_benefit",
+      "unmatched_contact_minus_noncontact": -1.4462684143137285e-05
+    },
+    {
+      "block": 2,
+      "episode_slots": "100-199",
+      "outcome": "calls",
+      "unmatched_contact_minus_noncontact": 0.5187457724552547
+    },
+    {
+      "block": 2,
+      "episode_slots": "100-199",
+      "outcome": "prediction_benefit",
+      "unmatched_contact_minus_noncontact": 0.0001124481169041037
+    },
+    {
+      "block": 3,
+      "episode_slots": "200-299",
+      "outcome": "calls",
+      "unmatched_contact_minus_noncontact": 0.5341921901382862
+    },
+    {
+      "block": 3,
+      "episode_slots": "200-299",
+      "outcome": "prediction_benefit",
+      "unmatched_contact_minus_noncontact": 2.8180582869882586e-06
+    }
+  ],
+  "status": "executed_after_primary_verdict"
+}

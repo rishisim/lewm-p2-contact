@@ -1,0 +1,32 @@
+test_cross_fit_and_episode_permutation (test_critics.CriticTests) ... ok
+test_torch_inputs_rejected_to_enforce_gradient_boundary (test_critics.CriticTests) ... ok
+test_cache_role_rejects_test_episode (test_data_isolation.IsolationTests) ... ok
+test_calibration_receipt_is_one_shot (test_data_isolation.IsolationTests) ... ok
+test_grouped_split_and_allowlists_exclude_test (test_data_isolation.IsolationTests) ... ok
+test_causal_features_are_row_local_target_free_and_detached (test_models.ModelTests) ... ok
+test_causal_name_validator_rejects_privileged_columns (test_models.ModelTests) ... ok
+test_contractive_shared_cascade_factor_and_epoch_zero (test_models.ModelTests) ... ok
+test_frozen_anchor_is_bitwise_v1_and_cannot_train (test_models.ModelTests) ... ok
+test_gradient_boundary_audit_proves_detached_critic_path (test_models.ModelTests) ... ok
+test_stagewise_detaches_preceding_exit_and_counts_calls (test_models.ModelTests) ... ok
+test_stagewise_epoch_zero_and_only_one_stage_trainable (test_models.ModelTests) ... ok
+test_v3_repair_reproduces_v1_and_excludes_call_zero_params (test_models.ModelTests) ... ok
+test_exact_strongest_randomized_baseline_and_determinism (test_policy.MatchedBaselineTests) ... ok
+test_expected_mixture_uses_strongest_feasible_depths (test_policy.MatchedBaselineTests) ... ok
+test_infeasible_integer_budget_is_rejected (test_policy.MatchedBaselineTests) ... ok
+test_fixed_exit_gather_and_audit (test_policy.SequentialPolicyTests) ... ok
+test_prefix_halting_and_future_score_causality (test_policy.SequentialPolicyTests) ... ok
+test_price_calibration_hits_nearest_budget_without_external_data (test_policy.SequentialPolicyTests) ... ok
+test_threshold_price_and_nonconsecutive_call_cost (test_policy.SequentialPolicyTests) ... ok
+test_clustered_bootstrap_is_deterministic_and_paired_direction_is_benefit (test_policy.StatisticalTests) ... ok
+test_constant_scores_return_json_null_not_nan (test_policy.StatisticalTests) ... ok
+test_ordered_gain_ranking_and_calibration_metrics (test_policy.StatisticalTests) ... ok
+test_pareto_frontier (test_policy.StatisticalTests) ... ok
+test_permutation_null_is_label_free_and_preserves_marginals (test_policy.StatisticalTests) ... ok
+test_nonfinite_or_shape_errors_fail_closed (test_policy.ValidationTests) ... ok
+test_solver_critic_policy_exact_call_pipeline (test_smoke_protocol.SmokeProtocolTests) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 1.170s
+
+OK

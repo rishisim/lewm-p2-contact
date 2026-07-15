@@ -1,0 +1,10 @@
+*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***
+Error while reading block header 
+Error while parsing "raw/archive/prefix.bin" 
+raw/archive/prefix.bin 
+# Zstandard Frames: 0
+DictID: 0
+Window Size: 1.000 MiB (1048576 B)
+Compressed Size: 1.000 MiB (1048576 B)
+Check: None
+

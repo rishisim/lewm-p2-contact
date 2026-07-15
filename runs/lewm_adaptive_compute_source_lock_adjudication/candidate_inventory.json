@@ -1,0 +1,657 @@
+{
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "checks": {
+        "base_requirements_coherent": false,
+        "collector_contract_matches": false,
+        "env_requirements_coherent": true,
+        "required_files_exist": false,
+        "temporal_outer_bound": true,
+        "version_coherent": false
+      },
+      "collector_facts": {
+        "action_horizon": 200,
+        "dataset_name": "ogbench/cube_single_expert",
+        "env_type": "single",
+        "environment_id": "swm/OGBCube-v0",
+        "explicit_plan_oracle": true,
+        "image_shape": [
+          224,
+          224
+        ],
+        "multiview": false,
+        "policy": "ExpertPolicy",
+        "seed": 3072,
+        "terminate_at_goal": false,
+        "trajectory_count": 10000
+      },
+      "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+      "contract_diffs": {
+        "base": {
+          "lock_only": [
+            {
+              "extras": [],
+              "name": "stable-baselines3",
+              "suffix": ">=2.7.1"
+            }
+          ],
+          "source_only": []
+        },
+        "env": {
+          "lock_only": [],
+          "source_only": []
+        }
+      },
+      "files": {
+        "scripts/data/collect_cube.py": {
+          "bytes": 1242,
+          "git_blob": "17d46e90eee5f1e8f3773e960cb5a84e5615bc79",
+          "sha256": "96cc71afdc8a039c53ec7c24a3c2f8a815ea10ddaa458c8e64b03091880b0829"
+        },
+        "scripts/data/config/ogb.yaml": {
+          "bytes": 479,
+          "git_blob": "21ca2f8548dd0c20b6cdffb522aac1281415e3a1",
+          "sha256": "d66b27b74fa4d9b0c2315e8e8a0065bcfb9453634468fdfc01319227a4b3b611"
+        },
+        "stable_worldmodel/envs/ogbench/__init__.py": null,
+        "stable_worldmodel/envs/ogbench/cube_env.py": null,
+        "stable_worldmodel/envs/ogbench/expert_policy.py": null,
+        "stable_worldmodel/envs/ogbench_manip/__init__.py": {
+          "bytes": 154,
+          "git_blob": "fbd8892d8a80b4db637894f5f3ee15bcabc744b8",
+          "sha256": "90bdf8f7836ceafd17e9a6f3e6445353b8be97193e968d1408c8228fafd90c02"
+        },
+        "stable_worldmodel/envs/ogbench_manip/cube_env.py": {
+          "bytes": 68463,
+          "git_blob": "f4ff77a57a3854102d84409a67ab7c0409d4b29d",
+          "sha256": "fb935231798a94c012c7a7413f0803b25b91215b77ba9a4fe122f797d4fd1105"
+        },
+        "stable_worldmodel/envs/ogbench_manip/expert_policy.py": {
+          "bytes": 9786,
+          "git_blob": "c5fee3acd04aea1f7faa68318e7decc86c9c69f2",
+          "sha256": "71ce1466d08d77ff350a8b3df00970d1d5ceaf275451c09c1d393b6679408ef8"
+        }
+      },
+      "hashes": {
+        "pyproject.toml": "0e000a17c3e5f80a5c99b61b4aa1d22e9663ea46ac47e23e22e0696b68b222a2",
+        "uv.lock": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d"
+      },
+      "identity": {
+        "author_date": "2026-02-16T18:15:42-05:00",
+        "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+        "committer_date": "2026-02-16T18:15:42-05:00",
+        "message": "update version",
+        "parents": [
+          "2d531f4909ab56dda91ba3c0df8eef5eb641fed1"
+        ]
+      },
+      "lock_last_change": {
+        "commit": "2ef4e90ac3228317e3793946cce83ed8d22149ac",
+        "date": "2026-02-11T18:45:31-05:00",
+        "message": "feat: expert policy for DMC (#138)"
+      },
+      "lock_root": {
+        "base_metadata": [
+          {
+            "extras": [],
+            "name": "einops",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gdown",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "h5py",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "hdf5plugin",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "loguru",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "numpy",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ">=2.7.1"
+          },
+          {
+            "extras": [],
+            "name": "tabulate",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torch",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torchvision",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tqdm",
+            "suffix": ""
+          }
+        ],
+        "env_metadata": [
+          {
+            "extras": [
+              "all"
+            ],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "minigrid",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "ogbench",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "opencv-python",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pygame",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pymunk",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "shapely",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ""
+          }
+        ],
+        "project_version": "0.0.3"
+      },
+      "mtime_caveat": "commit predates preserved HDF5 mtime",
+      "source": {
+        "base": [
+          {
+            "extras": [],
+            "name": "einops",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gdown",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "h5py",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "hdf5plugin",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "loguru",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "numpy",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tabulate",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torch",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torchvision",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tqdm",
+            "suffix": ""
+          }
+        ],
+        "env": [
+          {
+            "extras": [
+              "all"
+            ],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "minigrid",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "ogbench",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "opencv-python",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pygame",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pymunk",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "shapely",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ""
+          }
+        ],
+        "project_version": "0.0.4"
+      },
+      "static_eligible": false,
+      "tag_identity": {
+        "matches": true,
+        "peeled_commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+        "ref": "refs/tags/0.0.4"
+      }
+    },
+    {
+      "checks": {
+        "base_requirements_coherent": false,
+        "collector_contract_matches": true,
+        "env_requirements_coherent": true,
+        "required_files_exist": true,
+        "temporal_outer_bound": true,
+        "version_coherent": false
+      },
+      "collector_facts": {
+        "action_horizon": 200,
+        "dataset_name": "ogbench/cube_single_multiview_expert",
+        "env_type": "single",
+        "environment_id": "swm/OGBCube-v0",
+        "explicit_plan_oracle": false,
+        "image_shape": [
+          224,
+          224
+        ],
+        "multiview": true,
+        "policy": "ExpertPolicy",
+        "seed": 3072,
+        "terminate_at_goal": false,
+        "trajectory_count": 10000
+      },
+      "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "contract_diffs": {
+        "base": {
+          "lock_only": [
+            {
+              "extras": [],
+              "name": "stable-baselines3",
+              "suffix": ">=2.7.1"
+            }
+          ],
+          "source_only": [
+            {
+              "extras": [],
+              "name": "rich",
+              "suffix": ""
+            },
+            {
+              "extras": [],
+              "name": "typer",
+              "suffix": ""
+            }
+          ]
+        },
+        "env": {
+          "lock_only": [],
+          "source_only": []
+        }
+      },
+      "files": {
+        "scripts/data/collect_cube.py": {
+          "bytes": 1194,
+          "git_blob": "5ba48d47aaf7c946589658fa25c81943348d96aa",
+          "sha256": "ab064e1640f7510df7342a2e8aafaf87f27b5645d7027b7cf14a69ed68f1ae03"
+        },
+        "scripts/data/config/ogb.yaml": {
+          "bytes": 479,
+          "git_blob": "21ca2f8548dd0c20b6cdffb522aac1281415e3a1",
+          "sha256": "d66b27b74fa4d9b0c2315e8e8a0065bcfb9453634468fdfc01319227a4b3b611"
+        },
+        "stable_worldmodel/envs/ogbench/__init__.py": {
+          "bytes": 210,
+          "git_blob": "8d2246e3f21b271f8caf189ba3622333311699b7",
+          "sha256": "b6baaf7c63d609eb03fcb8c0bca360796d61f4359c43abcc2d986af396e058d2"
+        },
+        "stable_worldmodel/envs/ogbench/cube_env.py": {
+          "bytes": 68886,
+          "git_blob": "6b731c8c706207b0a56725ebfef5f7e6104481ba",
+          "sha256": "77bb4baf7bd035a9cee5da0083e9d07b34256863fc759dfbfe80471e3cde3b3d"
+        },
+        "stable_worldmodel/envs/ogbench/expert_policy.py": {
+          "bytes": 11167,
+          "git_blob": "d6e938ae1c8763ebaf93a7848245579a23b3e063",
+          "sha256": "4f4410d45ea12a2cf3a75e08ee0c82d23f9570b0d7354e93191a713b6867b0fe"
+        },
+        "stable_worldmodel/envs/ogbench_manip/__init__.py": null,
+        "stable_worldmodel/envs/ogbench_manip/cube_env.py": null,
+        "stable_worldmodel/envs/ogbench_manip/expert_policy.py": null
+      },
+      "hashes": {
+        "pyproject.toml": "dc7d98c83e84352d527833c853cd79f013f0599fd630fe407c782b63f13717b0",
+        "uv.lock": "0d1659e36b8cb4b054b95ae69cfabb174cc15193dbba126e0c8cb5da5751724d"
+      },
+      "identity": {
+        "author_date": "2026-02-24T22:00:17-05:00",
+        "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+        "committer_date": "2026-02-24T22:00:17-05:00",
+        "message": "fix cube script",
+        "parents": [
+          "3a85ac6888c39db90af648993fd0b23ac4c0a51d"
+        ]
+      },
+      "lock_last_change": {
+        "commit": "2ef4e90ac3228317e3793946cce83ed8d22149ac",
+        "date": "2026-02-11T18:45:31-05:00",
+        "message": "feat: expert policy for DMC (#138)"
+      },
+      "lock_root": {
+        "base_metadata": [
+          {
+            "extras": [],
+            "name": "einops",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gdown",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "h5py",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "hdf5plugin",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "loguru",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "numpy",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ">=2.7.1"
+          },
+          {
+            "extras": [],
+            "name": "tabulate",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torch",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torchvision",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tqdm",
+            "suffix": ""
+          }
+        ],
+        "env_metadata": [
+          {
+            "extras": [
+              "all"
+            ],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "minigrid",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "ogbench",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "opencv-python",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pygame",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pymunk",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "shapely",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ""
+          }
+        ],
+        "project_version": "0.0.3"
+      },
+      "mtime_caveat": "commit postdates preserved HDF5 mtime; mtime is not proof of generation time",
+      "source": {
+        "base": [
+          {
+            "extras": [],
+            "name": "einops",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gdown",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "h5py",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "hdf5plugin",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "loguru",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "numpy",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "rich",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tabulate",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torch",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "torchvision",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "tqdm",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "typer",
+            "suffix": ""
+          }
+        ],
+        "env": [
+          {
+            "extras": [
+              "all"
+            ],
+            "name": "gymnasium",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "minigrid",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "ogbench",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "opencv-python",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pygame",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "pymunk",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "shapely",
+            "suffix": ""
+          },
+          {
+            "extras": [],
+            "name": "stable-baselines3",
+            "suffix": ""
+          }
+        ],
+        "project_version": "0.0.5"
+      },
+      "static_eligible": false,
+      "tag_identity": null
+    }
+  ],
+  "commands": [
+    "git cat-file -t 089efbb87746e153e9ee051bf228b9c12aa3889a",
+    "git show 089efbb87746e153e9ee051bf228b9c12aa3889a:pyproject.toml",
+    "git show 089efbb87746e153e9ee051bf228b9c12aa3889a:uv.lock",
+    "git cat-file -t a265229cb29688715651cbd831a3b4c10b8f98b4",
+    "git show a265229cb29688715651cbd831a3b4c10b8f98b4:pyproject.toml",
+    "git show a265229cb29688715651cbd831a3b4c10b8f98b4:uv.lock"
+  ],
+  "eligible_candidates": [],
+  "network_fetch_performed": false,
+  "repository": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_generator_forensics/historical/source_repo",
+  "repository_remote": "https://github.com/galilai-group/stable-worldmodel.git",
+  "schema_version": 1
+}

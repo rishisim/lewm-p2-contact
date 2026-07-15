@@ -1,0 +1,59 @@
+{
+  "interaction_source": "sensor: proprio_gripper_contact > 1e-9, block-reduced over prediction transition rows",
+  "motion_source": "calibration non-interaction kinematics; transport_free if no gripper contact and effector_disp > effector_p10 or block_disp > max(1mm, block_p95)",
+  "motion_thresholds": {
+    "block_floor_m": 0.001,
+    "block_motion_threshold_m": 0.001,
+    "block_motion_threshold_raw_m": 0.0008288022246663222,
+    "block_percentile": 95.0,
+    "effector_motion_threshold_m": 0.019620060651773956,
+    "effector_percentile": 10.0,
+    "source": "calibration non-interaction kinematics; transport_free if no gripper contact and effector_disp > effector_p10 or block_disp > max(1mm, block_p95)"
+  },
+  "regime_counts": [
+    {
+      "n_episodes": 10,
+      "n_rows": 184,
+      "regime": "transport_free",
+      "split": "calibration"
+    },
+    {
+      "n_episodes": 10,
+      "n_rows": 184,
+      "regime": "interaction",
+      "split": "calibration"
+    },
+    {
+      "n_episodes": 7,
+      "n_rows": 12,
+      "regime": "static",
+      "split": "calibration"
+    },
+    {
+      "n_episodes": 20,
+      "n_rows": 358,
+      "regime": "transport_free",
+      "split": "heldout"
+    },
+    {
+      "n_episodes": 20,
+      "n_rows": 371,
+      "regime": "interaction",
+      "split": "heldout"
+    },
+    {
+      "n_episodes": 19,
+      "n_rows": 31,
+      "regime": "static",
+      "split": "heldout"
+    }
+  ],
+  "regime_precedence": [
+    "interaction",
+    "transport_free",
+    "static"
+  ],
+  "source_h5": "/Users/rishisim/.stable_worldmodel/source_downloads/lewm-cube/extracted/cube_single_expert.h5",
+  "source_residuals": "runs/lewm_transfer/cube/residuals.npz",
+  "source_step_records": "runs/lewm_transfer/cube/step_records.csv"
+}

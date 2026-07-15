@@ -1,0 +1,9 @@
+{
+  "all_episode_audits_record_seed_forwarding_correction": true,
+  "manifest_sha256": "deb67c298e59317a0d5ce947fca44be309b46cda65cd7456aefe1ab26b823824",
+  "policy_type": "markov_oracle",
+  "protocol_amendment_01_seal_sha256": "cf3ae7fe8e6ca14a857baa29f0b373bc8032c3ca8143c346699971b1aa0d6144",
+  "schema_version": 1,
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

@@ -1,0 +1,129 @@
+{
+  "analysis_proposed_terminal_outcome": "cycle_prospective_discovery_failed",
+  "candidate_eligible_for_v5_package": false,
+  "compute": {
+    "adaptive_total_flops": 813044234063,
+    "additional_refiner_flops": 1258824960,
+    "analytic_equivalent_mean_calls": 1.4577885516648659,
+    "base_flops": 804032766000,
+    "base_model_calls": 11400,
+    "call_histogram": [
+      8292,
+      2117,
+      339,
+      652
+    ],
+    "gate_dual_affine_score_flops": 65033804,
+    "gate_evaluations": 15499,
+    "gate_feature_flops": 58911699,
+    "gate_total_flops": 123945503,
+    "mandatory_depth1_flops": 7628697600,
+    "mean_refiner_calls": 1.4167543859649123,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09920853431929474,
+      "weight_upper": 0.4577885516648659
+    },
+    "nonflop_comparison_min_operations": 77495,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.0035134909313689943,
+      "weight_upper": 0.4577885516648659
+    },
+    "refiner_model_calls": 16151,
+    "rows": 11400,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 55777,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 5219,
+      "seed": 1985777771,
+      "total_calls": 16619,
+      "total_flops": 813044289840
+    }
+  },
+  "created_unix_ns": 1784145949042761000,
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0004772376263850959,
+      "lower": 0.00017301007377111462,
+      "upper": 0.0007880153510803813
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.000563122535810107,
+      "lower": 0.0004087937037012545,
+      "upper": 0.0007236357450974978
+    },
+    "raw_vs_analytic": {
+      "estimate": 3.6151198503268625e-06,
+      "lower": -2.2618941552713688e-07,
+      "upper": 7.547963358744409e-06
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 2.549346838101231e-05,
+      "lower": 2.0474515968610195e-05,
+      "upper": 3.080169624976319e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 1.8856429863487335e-06,
+      "lower": -2.5984942167945037e-06,
+      "upper": 6.33259977230078e-06
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 6.1708548383565606e-06,
+      "lower": 2.4821030093398547e-06,
+      "upper": 9.961221742028061e-06
+    }
+  },
+  "independent_audit_passed": true,
+  "integrity": {
+    "adaptive_native_whitened_mse_reproduced": true,
+    "adaptive_raw_mse_reproduced": true,
+    "analytic_mixture_mapping_reproduced": true,
+    "chronology": true,
+    "effects_and_individual_intervals_reproduced": true,
+    "exact_call_histogram_reproduced": true,
+    "exact_calls_reproduced_from_scores": true,
+    "exact_compute_reproduced": true,
+    "frozen_modules_and_gradients": true,
+    "input_isolation": true,
+    "latency_separate_and_smoke_validated": true,
+    "numerical_equivalence_reproduced": true,
+    "operation_graph_rederived": true,
+    "pre_data_seal": true,
+    "raw_path_set_complete": true,
+    "required_path_set_present": true,
+    "seed_isolation": true,
+    "seeded_baseline_weakly_more_compute": true,
+    "simultaneous_bounds_reproduced": true,
+    "stagewise_ranks_reproduced": true,
+    "terminal_mapping_reproduced": true,
+    "within_episode_histograms_reproduced": true,
+    "zero_v5_outcomes": true
+  },
+  "latency_path": "metrics/latency.json",
+  "process_valid": true,
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0004772376263850959,
+      "familywise_alpha": 0.05,
+      "lower": 0.00017301007377111462,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 3.6151198503268625e-06,
+      "familywise_alpha": 0.05,
+      "lower": -2.2618941552713688e-07,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "statistical_pass": false,
+  "terminal_outcome": "cycle_prospective_discovery_failed",
+  "v5_launched": false,
+  "v5_outcome_episodes": 0
+}

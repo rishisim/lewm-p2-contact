@@ -1,0 +1,1 @@
+{"blocker": "Immutable commit pyproject.toml declares stable-worldmodel 0.0.5 while its frozen uv.lock root package entry declares 0.0.3; uv sync --frozen installs the run-local source with 0.0.5 distribution metadata.", "status": "blocked_exact_environment"}

@@ -1,0 +1,122 @@
+{
+  "checks": {
+    "adaptive_native_whitened_mse_reproduced": true,
+    "adaptive_raw_mse_reproduced": true,
+    "analytic_mixture_mapping_reproduced": true,
+    "chronology": true,
+    "effects_and_individual_intervals_reproduced": true,
+    "exact_call_histogram_reproduced": true,
+    "exact_calls_reproduced_from_scores": true,
+    "exact_compute_reproduced": true,
+    "frozen_modules_and_gradients": true,
+    "input_isolation": true,
+    "latency_separate_and_smoke_validated": true,
+    "numerical_equivalence_reproduced": true,
+    "operation_graph_rederived": true,
+    "pre_data_seal": true,
+    "raw_path_set_complete": true,
+    "required_path_set_present": true,
+    "seed_isolation": true,
+    "seeded_baseline_weakly_more_compute": true,
+    "simultaneous_bounds_reproduced": true,
+    "stagewise_ranks_reproduced": true,
+    "terminal_mapping_reproduced": true,
+    "within_episode_histograms_reproduced": true,
+    "zero_v5_outcomes": true
+  },
+  "created_unix_ns": 1784144547630815000,
+  "implementation_independent_of_analyze_py": true,
+  "interval_matches": {
+    "native_whitened_vs_analytic": true,
+    "native_whitened_vs_within_episode_histogram": true,
+    "raw_vs_analytic": true,
+    "raw_vs_fixed_d1": true,
+    "raw_vs_seeded": true,
+    "raw_vs_within_episode_histogram": true
+  },
+  "passed": true,
+  "read_only_scientific_inputs": true,
+  "recomputed": {
+    "adaptive_planoracle_native_whitened_mse": 0.09804141919796588,
+    "adaptive_raw_mse": 0.0038438023098318545,
+    "adaptive_total_flops": 813027132677,
+    "calls": 16087,
+    "criteria": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0008302119003284982,
+        "lower": 0.0005516380707502066,
+        "upper": 0.0011206264420550874
+      },
+      "native_whitened_vs_within_episode_histogram": {
+        "estimate": 0.0007047791010541174,
+        "lower": 0.0005354589814546408,
+        "upper": 0.0008788218086247004
+      },
+      "raw_vs_analytic": {
+        "estimate": 6.665827217736802e-06,
+        "lower": 2.8062103659443034e-06,
+        "upper": 1.0533878142172567e-05
+      },
+      "raw_vs_fixed_d1": {
+        "estimate": 2.2884672061519642e-05,
+        "lower": 1.8240606526984424e-05,
+        "upper": 2.7774064801463388e-05
+      },
+      "raw_vs_seeded": {
+        "estimate": 7.189908839686145e-06,
+        "lower": 2.5556445145664953e-06,
+        "upper": 1.1808718354772969e-05
+      },
+      "raw_vs_within_episode_histogram": {
+        "estimate": 5.537162584991318e-06,
+        "lower": 1.7994547078496154e-06,
+        "upper": 9.425377001940297e-06
+      }
+    },
+    "gate_evaluations": 15481,
+    "operation_graph": {
+      "feature_flops": 3801,
+      "nonflop_operations": 5,
+      "score_flops": 4196
+    },
+    "seeded_total_flops": 813027332400,
+    "simultaneous_co_primary": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0008302119003284982,
+        "lower": 0.0005959595190624215
+      },
+      "raw_vs_analytic": {
+        "estimate": 6.665827217736802e-06,
+        "lower": -0.00022758655404833998
+      }
+    },
+    "stagewise_rank": [
+      {
+        "positive_sign": true,
+        "reached_rows": 11400,
+        "spearman_score_gain_rho": 0.2325999753386526,
+        "stage": 1
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 3172,
+        "spearman_score_gain_rho": 0.08540072288212121,
+        "stage": 2
+      },
+      {
+        "positive_sign": true,
+        "reached_rows": 909,
+        "spearman_score_gain_rho": 0.011630128496705023,
+        "stage": 3
+      }
+    ],
+    "terminal_mapping": "cycle_prospective_discovery_failed"
+  },
+  "schema_version": 1,
+  "simultaneous_matches": {
+    "native_whitened_vs_analytic": true,
+    "raw_vs_analytic": true
+  },
+  "terminal_outcome_after_independent_audit": "cycle_prospective_discovery_failed",
+  "v5_outcome_episodes": 0
+}

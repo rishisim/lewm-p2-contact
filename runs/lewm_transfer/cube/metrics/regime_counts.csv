@@ -1,0 +1,5 @@
+split,regime,n_rows,n_episodes
+calibration,support,196,10
+calibration,interaction,184,10
+heldout,support,389,20
+heldout,interaction,371,20

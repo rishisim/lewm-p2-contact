@@ -1,0 +1,8 @@
+{
+  "failure": "planoracle_prospective_audit_repair_failed",
+  "failure_when": "valid sealed run but statistical criterion fails",
+  "invalid": "planoracle_audit_repair_invalid",
+  "invalid_when": "any seal, DGP, chronology, isolation, sparse/dense, hash, or exact-compute failure",
+  "pass": "planoracle_prospective_audit_repair_passed",
+  "pass_requires": "all six individual lower bounds, both simultaneous analytic lower bounds, stagewise signs, and every integrity check"
+}

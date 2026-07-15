@@ -1,0 +1,3115 @@
+{
+  "created_unix_ns": 1784150107474488000,
+  "files": {
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/FIT_SELECTION_PREREGISTRATION.md": {
+      "bytes": 1781,
+      "sha256": "9ea1565b6c0bfc711a112591e4f006139b1440f6a924883d063e4ddf501913dc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/PREREGISTRATION.md": {
+      "bytes": 1617,
+      "sha256": "122fbb36ef5fbab68c7c784e147e6ab77e8010bf5de57f597a881c5bd7c76303"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/REPORT.md": {
+      "bytes": 320,
+      "sha256": "cd82d08070e33b73693913fab0e163d1eeb07251e1649a8ea5dd919c6bffb682"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/REPORT_TEMPLATE.md": {
+      "bytes": 881,
+      "sha256": "d87d628d01bd5c2b0d02ea2d72227fc55a17eaee2e391fadd2b619f134128cd2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/analyze.py": {
+      "bytes": 18637,
+      "sha256": "3505d56f2183bad5bb656345d17bbad1869b23f5ee0d70010ff82498fbc1fa2f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/design_seal.json": {
+      "bytes": 12964,
+      "sha256": "e6ffd418c7a81fb8593985b4ddf9a6806d258ae77b3b814e1930fa9209cd2a17"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/flop_derivation_graph.json": {
+      "bytes": 339,
+      "sha256": "253808fbe53fc906eed7f28109a4610fff803c9d651f4e4e1f45bb15a639e15e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/flop_derivation_symbolic.json": {
+      "bytes": 664,
+      "sha256": "d5181e7c1c361c8d70a4c6a46ad33e397ae1de9d04cf2e711640b5a58aab7cc4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/gate_fit_qualification.json": {
+      "bytes": 1572,
+      "sha256": "671896a2e2c389639a0ba7d6ce9ce95e4e75b834fecd632a0d4d76ae864ac088"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/preseal_tests.json": {
+      "bytes": 1469,
+      "sha256": "81931c1de6dfa9c1573cf3236752c1888712f394dc37ac036d76ca70263804bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/prior_identifier_snapshot.json": {
+      "bytes": 512,
+      "sha256": "bc76a4c4113accc1cef67ef0a69cb9ea92b76ae42b30ab8bc891a049029432dc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/audit/runtime_qualification_failure.json": {
+      "bytes": 1479,
+      "sha256": "ccbec0a047bb3f68346d3ec69bb43a6737adf6099a9e471280f907c8194c7679"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/build_numerical_contract.py": {
+      "bytes": 7683,
+      "sha256": "ad4da70cd58d728d0a62f36cd25e41f66f198475843508cb261d39499caf8f4f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/candidate_grid.json": {
+      "bytes": 1260,
+      "sha256": "d492134eaf217b17832bf9d3fc570d5bbdea2b57356da7e05e072b0545b43cfa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/cohort_seed_ledger.json": {
+      "bytes": 165613,
+      "sha256": "4dddaf37f9bd9a3a6f96f17fb1ffb7a6b9fe2ea0e62c6e1c5c982df83ac2ac35"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/compile_gate.py": {
+      "bytes": 2436,
+      "sha256": "cbc279b180002a44af4464cfd75e84983fcab9b5df447dbcf5873bd93fc58d5f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/counted_features.py": {
+      "bytes": 9883,
+      "sha256": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/cycle_common.py": {
+      "bytes": 6560,
+      "sha256": "88b229ed3be8cf218339a2d62c42c4566c2d8c4e64202d421fe0ac20b704874b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_evaluated.npz": {
+      "bytes": 81738696,
+      "sha256": "ad326f419bc7ae584b5cb4605da589e6e3a426d5c057f23d37089e8b95c17906"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_evaluated_manifest.json": {
+      "bytes": 3446,
+      "sha256": "0ce73bbd327fa2f7f7b7710e67593972dfabb46e8e0804d7f67f886e263c20d7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-000.json": {
+      "bytes": 735,
+      "sha256": "d4a018a67b1ee1fe0e3cca710d6929535d91acb1f0c4287270452502a672a56f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-000.npz": {
+      "bytes": 3748005,
+      "sha256": "59c9c6d09f946617e6ddc86154f3e1677161f6adc9c32bb81caa68ad4f8dee32"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-001.json": {
+      "bytes": 735,
+      "sha256": "48a9ab513fad20f8ecc11b611db8f5fc10850bd853249948589725205710d287"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-001.npz": {
+      "bytes": 3503906,
+      "sha256": "1de5c2a9c430b140f3ae8a6d416a37b82afe3e0695800170111e207b6b41a66a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-002.json": {
+      "bytes": 735,
+      "sha256": "b53764c1d881ce45e3e07305b69b53e41e574fdf0057a93d7d63509e9e9b5281"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-002.npz": {
+      "bytes": 4029021,
+      "sha256": "e9438d1476cdc4367c0161d4d71ff8718cbe56656e2b0c742342ecce780316bc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-003.json": {
+      "bytes": 735,
+      "sha256": "b8a93933a983639e5ea2e89143d084158e8f68ce413159999f08862b58b003a5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-003.npz": {
+      "bytes": 4430151,
+      "sha256": "13e184fc782b1dbfcac955036e2673bf87d2344b31f89b13a86a33ff8b9f6d1b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-004.json": {
+      "bytes": 735,
+      "sha256": "4d760f45900393aa30f5b201f81453219a69c658f7c2c27996c443e545a8bcd1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-004.npz": {
+      "bytes": 3727671,
+      "sha256": "4a83130ec6fda565b80102327df4a0da175b5ec6cf2a4bfee59f2c0cdbd24f25"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-005.json": {
+      "bytes": 735,
+      "sha256": "489e15015f9922c38b2eb05d8a171322d5b9cba01dc29e45690dece554e8e978"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-005.npz": {
+      "bytes": 3781929,
+      "sha256": "91a1de5dee1905ea7575dc012aa8a22121ff4e1b9122af4fd3ff0da8e75b80ea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-006.json": {
+      "bytes": 735,
+      "sha256": "1f32c928f12c5b95e1d3529da0d6d33e120afd0bd2eea65fafd7f9b7fca628e9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-006.npz": {
+      "bytes": 3826180,
+      "sha256": "0136cd7c827b7f420eb5bd6f0076a5b83bccd3d23a1d6c4e997e67e9ce320eed"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-007.json": {
+      "bytes": 735,
+      "sha256": "a6b74f4aa0b8a891aef2e31c02d1a3abc0afbe80faf265cb4c105c9a490ffc32"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-007.npz": {
+      "bytes": 3627157,
+      "sha256": "7b0f72c1e36efc894281eb5e0dbe218d71e6c652fc27580299fceb93b1ba3ec2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-008.json": {
+      "bytes": 735,
+      "sha256": "e37f3c1d44435ae30c96f7396b3f51a7c7fad8445e259bb6f4a6cec0f656029a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-008.npz": {
+      "bytes": 3654922,
+      "sha256": "c4fb03924c0eb94e6fdb20e5800fc42fb3a3d245589efa786e42aa2495a01c83"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-009.json": {
+      "bytes": 735,
+      "sha256": "8750aa5ef27c8972e646ca8c251ca855b496b0200b80f0ca24fe8170a450ad41"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-009.npz": {
+      "bytes": 3759813,
+      "sha256": "4b09d83e242d88f7612264426d24218a46758119d5e893c262807731a5e070d6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-010.json": {
+      "bytes": 736,
+      "sha256": "918e2b4b8277aa1c1648f7b81978bacfbbb0db5f7008b6b623e6cf9b699c7780"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-010.npz": {
+      "bytes": 3870527,
+      "sha256": "7f832a1e9417dc35c88e6f417a7a535d4b20ba00dc0508c7ed3fb8fabb139d44"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-011.json": {
+      "bytes": 736,
+      "sha256": "f8773f63b4b24bf431407057c30ce13e6a40448da96aa7766bdcd49523de3412"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-011.npz": {
+      "bytes": 3759724,
+      "sha256": "cdabc884a0b1e8ef1d44fe48071d2b82cd58aed7790d8f058d09b4aa69414006"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-012.json": {
+      "bytes": 736,
+      "sha256": "a2c9bb7b175789e54fb1774290f4a5b86cf2511c08f76c4a18ff57196b04288e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-012.npz": {
+      "bytes": 3484896,
+      "sha256": "643ae86033f387d258b632b5303529061b7f58fa60cb808de5708111ca60fa40"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-013.json": {
+      "bytes": 736,
+      "sha256": "cc9a756e4cb699111aa9b736b0b7bb83bf9ed29508dbbd5544126f88b540df9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-013.npz": {
+      "bytes": 3654321,
+      "sha256": "c956dbeb11ff27b314a5cda9dac4947b1b7989453fbefef4a4883931d9e5b2f0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-014.json": {
+      "bytes": 736,
+      "sha256": "646ddb8472035929b9152543d72fa08f534a35447a215d96da5bd44a63cd0098"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-014.npz": {
+      "bytes": 4138085,
+      "sha256": "3483e791c7fddcd42125454e8373ba9d54c690db66d669baaeaa324be52c7b9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-015.json": {
+      "bytes": 736,
+      "sha256": "b75ae1a99535ed5cebe39ba03a7ea00cbafcddb808f55ccede8ec39598f33c9b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-015.npz": {
+      "bytes": 3984527,
+      "sha256": "7a1800cc94199961302b90bd26ce53435f5d7988806ed1dfbe8df2c879186199"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-016.json": {
+      "bytes": 736,
+      "sha256": "d185894a0b8e54126a947cb8fa423b49a4f7eb5cb576b21d3af7ceb1b3f6656d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-016.npz": {
+      "bytes": 3786376,
+      "sha256": "99589ba10ea4f03af251490166ca3bba625e486da8facc3b45c740df3b6c8004"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-017.json": {
+      "bytes": 736,
+      "sha256": "4663668f1c64858b5aba276139cbc80b7aeda9e512a8bd3c4b01f0748e44bba5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-017.npz": {
+      "bytes": 3851572,
+      "sha256": "8216906f5b73ea45b6c0660a041fd6c2a590348b664680949e3be10d11d56fd3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-018.json": {
+      "bytes": 736,
+      "sha256": "553c79d1fffc31518baf22c65d11f7cf5a93de33265cd93656f4098052babac7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-018.npz": {
+      "bytes": 3857236,
+      "sha256": "255ad1f55574d170b464336ab0ed2fc65e14b94320b9065bc507a74f053b08c1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-019.json": {
+      "bytes": 736,
+      "sha256": "9254f47e28dc509f8c10abe80ae7a302a42cb47cec6407067cdfde6a75789b83"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-019.npz": {
+      "bytes": 3440840,
+      "sha256": "f3442cbcdac6a9432b10be7abf85d94c91cf3c45d5c653a33c794df2d97f04eb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-020.json": {
+      "bytes": 736,
+      "sha256": "27253b4da9a3af0ff19f77ab67824fb7504703747e68edae52850bae799e5e3e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-020.npz": {
+      "bytes": 4439899,
+      "sha256": "9040c6a27653184181cb58f348fbab6ecef86023590f6cb1a29862b8043240bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-021.json": {
+      "bytes": 736,
+      "sha256": "3783fad1a6b36960478a158c47f1d8b547db68c900cb45d6783078d3ecd06383"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-021.npz": {
+      "bytes": 3841413,
+      "sha256": "e392ae9bc98b7e0442cac7acbe39111055954173778a9979f416ba4049b81b6c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-022.json": {
+      "bytes": 736,
+      "sha256": "977191d5b71a81c747cbd0ba87b433033fa6caf2e66e28c0a654331115104369"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-022.npz": {
+      "bytes": 3814170,
+      "sha256": "2255f7ef8928dbafc4d355bce89888345422f2168c9af4a3daf8db82ae47422d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-023.json": {
+      "bytes": 736,
+      "sha256": "269d16de3ae3e9879396457d8ad2868432953e638109a5628b69a4112d64e7f8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-023.npz": {
+      "bytes": 3785988,
+      "sha256": "b66fccc141776be6d93de5479b1a8ec9edefb6a02df15f386cb9053f04e8c864"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-024.json": {
+      "bytes": 736,
+      "sha256": "96c88c33d2113e93de4d5ff198758c90686e3c936d2a7cddaf64c75a8174c7a4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-024.npz": {
+      "bytes": 4179047,
+      "sha256": "92099c1d8879358bc7c005c3b4e6c15623bc18c90b3f1b28f8922934a98f5ea0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-025.json": {
+      "bytes": 736,
+      "sha256": "9406659a7d8fcd720b7777ebe77ff2b21e86a3110b2bc6f0f162b786b1c2ea19"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-025.npz": {
+      "bytes": 3527348,
+      "sha256": "ca2f28e09a7dbc21edff3be20898a794eea5346e429c67671fd39968168053d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-026.json": {
+      "bytes": 736,
+      "sha256": "69735c6ef831bb381eee877659da0a5d9c5ea83f2ad3d42f97827dcc3184bf65"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-026.npz": {
+      "bytes": 3762272,
+      "sha256": "51fa38c7a8e6f9eb7babf7e290c5aa7deb899dcc19ac6f9931688101d8f3a5e4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-027.json": {
+      "bytes": 736,
+      "sha256": "c2ad4fb5bf8732c564ca8aad224f7802053b6f3823518e0458d8dadc54d5daaa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-027.npz": {
+      "bytes": 4174190,
+      "sha256": "dbdc97d9a0aa1235a9b1fcbd4652e882e91e0e222c6a57ba94040b949439bc0a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-028.json": {
+      "bytes": 736,
+      "sha256": "dc3f6a60b2077e86a2b36d9d8fbb80ae199cb11ecd24ba6b1322a12f5adcb6df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-028.npz": {
+      "bytes": 3543634,
+      "sha256": "0642bfcc11a349307863c232457a4cc8404cdccf7c28b96ce69337f7ed79c5c4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-029.json": {
+      "bytes": 736,
+      "sha256": "8072dd4d9fad80ed364117704568afec5819e5dfe3108caea17ac2a4c4067602"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-029.npz": {
+      "bytes": 4193957,
+      "sha256": "b2691918fc0a23020db8e792e3ca933535203d082b15ced5f731d5bce10c1fc8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-030.json": {
+      "bytes": 736,
+      "sha256": "223713b77706e1cf5b7e764029e4b8c388aab0b7d56d41fb8c3f0dfd0649ee6f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-030.npz": {
+      "bytes": 3742725,
+      "sha256": "c1c83840597f115db036903d42e2fc8cdc88ff724ed09f3024acf69068f1b16c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-031.json": {
+      "bytes": 736,
+      "sha256": "de9b71aac7242bc33b4496bebc951ed1ab9a2efcd1d60c068b366f4d91242a78"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-031.npz": {
+      "bytes": 4470159,
+      "sha256": "ca6c519827e3d80f0805cfc4e1d27208213453544889cd83e084b47b36d4b80b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-032.json": {
+      "bytes": 736,
+      "sha256": "6728e04ad26614ac27e5031b65e9cb71176d16e43c67f10e20dbfb4ae8ae9b9c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-032.npz": {
+      "bytes": 3975488,
+      "sha256": "7d4d5cd0df3aa553e482b8d6cb793f80bcb6cded2650b3f85dcacbbad1882a7a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-033.json": {
+      "bytes": 736,
+      "sha256": "efc84add8ffef197fcdeb3124b84d879c71244b53c6f258247158e900f267795"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-033.npz": {
+      "bytes": 3943957,
+      "sha256": "e82f35eb56daaf6d9be1ca27f13569d59dbb42b2db3e986c44c4616a06124e26"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-034.json": {
+      "bytes": 736,
+      "sha256": "18f208352dbaef88bfd13c7c121eeddc8e73af711fce708a53ef3410ae19a112"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-034.npz": {
+      "bytes": 3599140,
+      "sha256": "30a6ffa5253ad759281095a26f6e466a8d94b97c0e2fe8c22097cd549cdfb3cb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-035.json": {
+      "bytes": 736,
+      "sha256": "7cfca0e72404a746b52e7589f51b6498d87585783b589ba690ff8ddc04258242"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-035.npz": {
+      "bytes": 3948428,
+      "sha256": "e35c6d49683748d2b38c19099ac0a11401fd856b86de496b89747fcfbee19681"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-036.json": {
+      "bytes": 736,
+      "sha256": "087327f6d70def6c97e4438f0512543e4bf624d1ffdb49bf60fcb6ac39f8f5e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-036.npz": {
+      "bytes": 3372881,
+      "sha256": "9c4a056c6ad2bc8fe0405ea50320adbccae9f19416c97ecd0286024406f73f21"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-037.json": {
+      "bytes": 736,
+      "sha256": "abbb506a8d274a49650fd097b45cd5043cf68e603f4b5d138b3de10ca587f2b1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-037.npz": {
+      "bytes": 3865639,
+      "sha256": "e251f3206c70deff9e676179fae611f4d7e903b4a1a088c1986a031d962522cb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-038.json": {
+      "bytes": 736,
+      "sha256": "70ff4ade572b9828dda368f68d9fe66749c99cd213f15443373f11ffacb408e8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-038.npz": {
+      "bytes": 3879313,
+      "sha256": "4fcf06c9cec66c1ee82240db4fc6f4a50cd1da875bfbdffa1429bb55cdb99244"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-039.json": {
+      "bytes": 736,
+      "sha256": "c1e111ea29f979933bf5101418edc05b45dcdf7799161222f5b83c0537dfc5c3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-039.npz": {
+      "bytes": 3735718,
+      "sha256": "1b5654853ffb67d9a140fcd11dbc93738ad5d51e1ca9de880645dcd3189fee62"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-040.json": {
+      "bytes": 736,
+      "sha256": "95c84089fd447f58245634d83eab2ee6b9b5866c3256fcb8947b2288bb8ccdc6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-040.npz": {
+      "bytes": 4154336,
+      "sha256": "ee877028f5a1fe12e0d316d0824dc324a9b099977c98559f9d9ad4e2597c9889"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-041.json": {
+      "bytes": 736,
+      "sha256": "5b0f46d3260b6caa6211cf53e74886b978b8d15ff8fdac5d59ed3138d7d6cedc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-041.npz": {
+      "bytes": 3563095,
+      "sha256": "4984e9b257eda0433fe44904e4cde468f95133d75072355a49792648540b7f7a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-042.json": {
+      "bytes": 736,
+      "sha256": "55465f4750da7bff378a106131b22b3c619bb3c73b0a8599d8ac6238f2f8203b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-042.npz": {
+      "bytes": 3778034,
+      "sha256": "0951530a59cc4496e06e918a087955286061c2131699b3b8f1502c5a257a3cf7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-043.json": {
+      "bytes": 736,
+      "sha256": "e0a6ad8e871b9878e872f39caff29551578b026836d689f0d47b22d9497bde1e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-043.npz": {
+      "bytes": 4081134,
+      "sha256": "2a09752ffed8194663347ab5d715beffcdce0873d76ba5b40070ceda173eb3af"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-044.json": {
+      "bytes": 736,
+      "sha256": "350ef48c4e9f465e4d6564f9b4a0b08c2827518d8a63d389a34981bfa9c03af8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-044.npz": {
+      "bytes": 3510608,
+      "sha256": "9ce90ee5294f7562efa154cecae741d40ff0203c227ca9692340b38d81fe3c95"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-045.json": {
+      "bytes": 736,
+      "sha256": "e1c652dacb7deca4be28519aa08fccd347a808d1a7ba5781160a4046a6c5cc3e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-045.npz": {
+      "bytes": 3994822,
+      "sha256": "4a743ab31e08c790fc969de5afb4c6bbf0601ac797457f17b3c7946b73de7bff"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-046.json": {
+      "bytes": 736,
+      "sha256": "99cf2bf0cf6327ac3ed385d58ad1444bbd443f2c086452c78fb2d919b9830ec8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-046.npz": {
+      "bytes": 4237539,
+      "sha256": "56dcd92612a39ec08633cdba4d923fdbaff3838c72c82cc2c4aea779cfc42e38"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-047.json": {
+      "bytes": 736,
+      "sha256": "912116556deb26d83c5e1bb6214dc3cfd65af8356778a63c36ef648b18b38849"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-047.npz": {
+      "bytes": 3904951,
+      "sha256": "496341e2f7fe9d17be40b2ce1682b6dea3e3d42b5fc8dd4a895e551fd3994db6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-048.json": {
+      "bytes": 736,
+      "sha256": "3020731c80ec6949168faa290bf69486afbed003767f830c0173b93fe2cb9aea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-048.npz": {
+      "bytes": 4383778,
+      "sha256": "b419f37540319fbbc9c7ab342daaa7e0ac6409007e5586530e1cc7deadcdb507"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-049.json": {
+      "bytes": 736,
+      "sha256": "4358e851f34defe2f26ab389bf7602f43b15acae077a6f88d722b24e827c8f87"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-049.npz": {
+      "bytes": 3776780,
+      "sha256": "55ac62d658ca5eb9e6a75cfee8d18bc223e94803a91fe9e3a8521cba99e14525"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-050.json": {
+      "bytes": 736,
+      "sha256": "724c0f6cb58e8b42fd2583ca20292ad978ac5580baa8a8ab57e36b33e0aa2dda"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-050.npz": {
+      "bytes": 3874970,
+      "sha256": "ab5c33da9731bbc3c7b0f918f30cb0f2aa0d165f2c70b11d081eba34c9c010c9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-051.json": {
+      "bytes": 736,
+      "sha256": "ac28c02850cd48fa8d48000dee4a7c0a9763ecf8c91bab92d45a811c9d81b591"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-051.npz": {
+      "bytes": 3649727,
+      "sha256": "33cf9799353996d4e8406954cbe0d202d88dc6664d75d19f892cb508220d4c11"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-052.json": {
+      "bytes": 736,
+      "sha256": "610dd88c3725a2e4352db85d92bed114b060d0f7f755eef9761052513bae3e2c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-052.npz": {
+      "bytes": 3986026,
+      "sha256": "81e0f874e522bad7982da75460eb26ef9264ab5cefefc5e6c21934bad8897935"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-053.json": {
+      "bytes": 736,
+      "sha256": "dc2025ecca02158e3a4c7219f330c1ad5a3bf18e38f4a950a7a442f682924b29"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-053.npz": {
+      "bytes": 4098112,
+      "sha256": "23e751ad9a29dc42ab733d0e5c690d55d1873c1bec54806f6e52b2584a2f5a68"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-054.json": {
+      "bytes": 736,
+      "sha256": "40622d0862dd2d295a72b42a28aa296201945b2943668d364634d49c76e69e9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-054.npz": {
+      "bytes": 3806740,
+      "sha256": "c43143a59c3e1c8778ddfbc2d8bb3463299e10493658eb5c8a7c662fe88c2d61"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-055.json": {
+      "bytes": 736,
+      "sha256": "0e9ee40cef280d63b9f6d4c74ff90d26cef36b9a0820de11c19da4b62045f379"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-055.npz": {
+      "bytes": 4104635,
+      "sha256": "26b846340edee032de108bd4ccaf4c623ef71c5545c64c1781da8df9039ba148"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-056.json": {
+      "bytes": 736,
+      "sha256": "7a7d71276ba0d956e34e0f4ccc9a8a0be6165fee0a530767c4f67e78f2f093e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-056.npz": {
+      "bytes": 3816187,
+      "sha256": "653bfd23ed2c1021fe91dc48d20a01df5a9bdc280643071ade230181ab8618da"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-057.json": {
+      "bytes": 736,
+      "sha256": "d6c2f8091a37f847eb5aed19e2ab31b33dd417478f29bb9b378701da0661ddcb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-057.npz": {
+      "bytes": 3910466,
+      "sha256": "802a3050a18bea80e526617fc4f6ca325ccad7971a04b8f6a331cad49c1d3c91"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-058.json": {
+      "bytes": 736,
+      "sha256": "2f56c2b6e2986a94b8c43e3522907db20938965495fb51007ab9734e20b81453"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-058.npz": {
+      "bytes": 3643590,
+      "sha256": "0e74a0f4725ba2b0f75a92ec17cf24c5037fd19e9c783aaec51658a061bfc3f4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-059.json": {
+      "bytes": 736,
+      "sha256": "27b2a6bdb97a8f4676e9113d1b96a3c9c414dd0e42c4724dec193a7d2dfcf805"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-059.npz": {
+      "bytes": 4090194,
+      "sha256": "b352b276fca5329cb091dcf8edbd0540aa4cf9ebabfb892675f6b4952f9ef14d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-060.json": {
+      "bytes": 736,
+      "sha256": "377132379848bfdb09dd031b024c8d1c9a32fc2fbd4bfe662a9eae33a10257b5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-060.npz": {
+      "bytes": 3567921,
+      "sha256": "e5a30a592f31f4a1af225f5bb3a9bf30132fe8e76cf23d67d7234509b0f945f2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-061.json": {
+      "bytes": 736,
+      "sha256": "f0b4625c9a84aef4bc574d77f2e66cf8aa35b32dc1d85bfdc88e0765926289e7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-061.npz": {
+      "bytes": 3808545,
+      "sha256": "cbfc4eaf77cecd8462ab2b26dc68b4ce6ab19ad5df3b373658bc859e179aefc2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-062.json": {
+      "bytes": 736,
+      "sha256": "97206ad6d30a3cc491b78e5d179f8a22a7513c76c263efc9ae4b34a4fc39004d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-062.npz": {
+      "bytes": 3545395,
+      "sha256": "af1e947afee833e82feb0e28a3175d2f0ee54c4efc93ab04a1e268f441e85cf9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-063.json": {
+      "bytes": 736,
+      "sha256": "89ff55d65adb21ae4898871c461e2457d4a190ccc8917eeb494631c1de32cc92"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-063.npz": {
+      "bytes": 4185546,
+      "sha256": "8e5bf7fe529c82117c15d020052b636c3edeb956e4a42732589542333e03b8ec"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-064.json": {
+      "bytes": 736,
+      "sha256": "d6cb739038593dce39dc29eaa1a333ab9820b0146fe5d8c8de22d2c572151d0f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-064.npz": {
+      "bytes": 3924619,
+      "sha256": "fc954d95d3e4d2462a85c656681956b21c98a7943fcddae1f0786b660329e2e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-065.json": {
+      "bytes": 736,
+      "sha256": "04cfab69c1de7819362d6a684af097255263f420f6894a161960681ed8d25d60"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-065.npz": {
+      "bytes": 3953256,
+      "sha256": "6e21a39a1f889e8cceb7bb01798d441d9a2fe6f609273c1582ed56c329f21e9d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-066.json": {
+      "bytes": 736,
+      "sha256": "5e32475d9985e25cf2c53c5dad3e5459f9f82918ab1226899ab2e947f3a30831"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-066.npz": {
+      "bytes": 4145333,
+      "sha256": "8b06466d5d39cb188de7fc876c98a94aa29b9c3ea16dc5f9947e36f14eb9a317"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-067.json": {
+      "bytes": 736,
+      "sha256": "3ae4592bff003e0ef3a727852d62e111ee3f5dac5e7125a85a69069cba1e52a6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-067.npz": {
+      "bytes": 4139636,
+      "sha256": "8d4859729a9791542427453227e8362f90897368d5d560bd585ad3318fa2c4b2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-068.json": {
+      "bytes": 736,
+      "sha256": "34ef56c5ea080a58948417536c3218c0f2f1822a39463dd4e0d385e94cba84d1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-068.npz": {
+      "bytes": 4206191,
+      "sha256": "e411464dff024787f408c17856a9c62eca6e2c8f9a1b2ab99d2818e62eaf2828"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-069.json": {
+      "bytes": 736,
+      "sha256": "eed69018b1f118241905b68c9c6eb8e290bba5787486e50d817e5d66b91acdda"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-069.npz": {
+      "bytes": 3620860,
+      "sha256": "f167368c1b63d7ffd3e7789f0995e8245ff3bc328ddd367ad2e383b087f151e2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-070.json": {
+      "bytes": 736,
+      "sha256": "b14f57e01e8d8250d2b56e03740f5ab7c901a4ecdab7503050ac5100f818e99f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-070.npz": {
+      "bytes": 3915589,
+      "sha256": "d853706c16956a1d5088a7f3654422ac097c9fd299795ae5f730d77f5ed20c8b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-071.json": {
+      "bytes": 736,
+      "sha256": "39600bee8bfeac00f650aef111f235070752c10bfc5097570d28122c7d0585b8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-071.npz": {
+      "bytes": 3747252,
+      "sha256": "9a9694211c284338628ec24016a8e2cbb9312c3c5686fee9b6602e9df7d66ea7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-072.json": {
+      "bytes": 736,
+      "sha256": "1c1a44216fbb58ecc70b9a70ef9d5546379b3336608e9d4a89a3520170665566"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-072.npz": {
+      "bytes": 3836027,
+      "sha256": "260642ae47469ff4e12ad39789af4c92348eeab7cb092d228a30976805487f35"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-073.json": {
+      "bytes": 736,
+      "sha256": "6517c5cf0f03ccc80541b3d234d880b3274bf3800e51a59c4394bb732bf47d06"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-073.npz": {
+      "bytes": 4254131,
+      "sha256": "b2b87e2678b4792633660f81f705983d3e2a6fe1bd2be42c67d71c5b046ce447"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-074.json": {
+      "bytes": 736,
+      "sha256": "4c676e27294e61de5f0aa10367c2f4c7432e32f21fab9cb70fbbe4d55890ade5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-074.npz": {
+      "bytes": 3721992,
+      "sha256": "2caacfe671e7d3a6e1d8ebb0f49af2a1406a97e40f78c8790fad52e3574e1a09"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-075.json": {
+      "bytes": 736,
+      "sha256": "865b4ef3d61ef1fcf2482d22e326fad275811058e5b898a63f3a9fb70b5ce501"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-075.npz": {
+      "bytes": 3790947,
+      "sha256": "098b0669ee1ad3453f6ed6d060a69a2f5a74e318848253d1401ab8580d019e97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-076.json": {
+      "bytes": 736,
+      "sha256": "df805cc7899841b3660febefccd242b69b11d5901d1cb7ed957c1b1728efd4f2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-076.npz": {
+      "bytes": 4132972,
+      "sha256": "3ce8b5dbb7b082ef9cfdbd86c49a1cfbfed0de3185eb72fb8dd69c6eb11bc09c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-077.json": {
+      "bytes": 736,
+      "sha256": "d5757b0640d60da4830ded878a739499459db7c30292d0feb119c44f3e8a4460"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-077.npz": {
+      "bytes": 3423566,
+      "sha256": "cd602183ee0040b4dc5a8ad32eb0719e40faa62f9ab4fdb25efbaf64655c02ee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-078.json": {
+      "bytes": 736,
+      "sha256": "37e3b865949cfa8c86eb9ee9d68daee521ad2727d7282221c9acaa34c05729ea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-078.npz": {
+      "bytes": 4440291,
+      "sha256": "2d5703bc2f34bfdf091e8cd27f090e8a911fea5fecbe3427ec9bfa2921f0a97f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-079.json": {
+      "bytes": 736,
+      "sha256": "9d56506b14f8dd22f66b8598fc9e1a9223115f94fc3031c0c1d71d67d930a050"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-079.npz": {
+      "bytes": 3749679,
+      "sha256": "a5ef995679ad97311a0af5344f19a516149aabc041868be5ee8eaad47878b5b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-080.json": {
+      "bytes": 736,
+      "sha256": "277c0b5aee745a4387ebc601d658ec6d0dfd2241ae21f151a6bb4edb1f0493eb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-080.npz": {
+      "bytes": 3982419,
+      "sha256": "b9bb9146fd04f02e9fb08f244fc1c8d6db7b823c3a77bff3b749a885a26ae583"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-081.json": {
+      "bytes": 736,
+      "sha256": "e934020193c3e5eac99993604e18a9896f170aa4cd7b361d1be4ce4cbefb252a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-081.npz": {
+      "bytes": 3690836,
+      "sha256": "4ad839425331179fb4210df0c3447ec0194650fcd16e385d9977886273e8d383"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-082.json": {
+      "bytes": 736,
+      "sha256": "bf251eaef63501948a450ce284177858d4284c06443393f4bcb3020b586b9fc3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-082.npz": {
+      "bytes": 3713134,
+      "sha256": "0d32a62642a6fdee9ff7b8e7911d468c15ae58b3b550587f390b6d7503cfedcb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-083.json": {
+      "bytes": 736,
+      "sha256": "e6581e545aae77d82b64012ea17b6e577bc11c6eb74a2d0e366acbe42ff669ef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-083.npz": {
+      "bytes": 3832966,
+      "sha256": "557f62c3fc68a9d3068e3c768d0f6e142ee0a1ad511f4e6e9c62de04b556f300"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-084.json": {
+      "bytes": 736,
+      "sha256": "40003ed8d3c783c35f8759fe7468791a66bdb828167b10bb96e617428722bf03"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-084.npz": {
+      "bytes": 3662022,
+      "sha256": "47016c3ab55a25aad657f471bf63d1ae6d5f909f3555210e9100fc62bdc2d286"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-085.json": {
+      "bytes": 736,
+      "sha256": "9499b45c26c424f467e7516a5da2d2e311bebf33489608a7deb929c3dfe2a2df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-085.npz": {
+      "bytes": 3422934,
+      "sha256": "19b0b48f19a1bb01a82ace723b414223530c6950d4d7a825dda3be819c5ae8c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-086.json": {
+      "bytes": 736,
+      "sha256": "9ba97e193716f7aa113016274859d022e593f8c2a6c1a9176ec1ee77ee914a85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-086.npz": {
+      "bytes": 4092067,
+      "sha256": "4b3752f15547e9376caa36f90c147602883f43f09fe86b2c9625a11de8f47cde"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-087.json": {
+      "bytes": 736,
+      "sha256": "e5848f53e8e368bb68864f449e43fc49a2bd31a0368d2c896510d0e0a26f2275"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-087.npz": {
+      "bytes": 4221722,
+      "sha256": "7b5474088aab2d7c7616e46b7f9e161c4276c0018333d91996a60d74e2c0277c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-088.json": {
+      "bytes": 736,
+      "sha256": "49a1ce8f372859466ca7124cdd5b180b39f5ad987d11a887ecef258cdc8a3bf2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-088.npz": {
+      "bytes": 4010480,
+      "sha256": "b3c2b91e38f90896a410d53134f56cbced69ca5af60f83ea836e2df7e1bc8c47"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-089.json": {
+      "bytes": 736,
+      "sha256": "a0f9d0e7f942ab369f9c7c6157d2ee41ad9657e4148fb09134cda227515e9c6f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-089.npz": {
+      "bytes": 3639550,
+      "sha256": "b34979aac043de4a1c9cdeab95ab8ad756bc4a043949a3c9a7c2e94d3830f8a1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-090.json": {
+      "bytes": 736,
+      "sha256": "fa722e5526f7898ea04d47267c5af856942e8c6411acdaa9db03633e65d4a90d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-090.npz": {
+      "bytes": 3786477,
+      "sha256": "715018e949aeddffb56696e4a1fe90449e9427139542fbab753ce54d987b399d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-091.json": {
+      "bytes": 736,
+      "sha256": "7b586dbf20ae233de6b4d63600858bcdd1550ff3d7accb1f66938c9bdb5b416b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-091.npz": {
+      "bytes": 3957036,
+      "sha256": "95084653745a07d1440174024723ff35100bdf96814d30b68cf3de1d94d43ccb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-092.json": {
+      "bytes": 736,
+      "sha256": "86360aa91bb149015bde11d45193539a42fba0fdd65f3906b11932c2b9bc0e7f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-092.npz": {
+      "bytes": 3954076,
+      "sha256": "a55ff571acc97ad4a7c9a061adfbb9e4ae5c08077fb13c84e98c62016dbae809"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-093.json": {
+      "bytes": 736,
+      "sha256": "8b0849cd61c7cd48345693902300aea667964c6fa0535d41a7e377cc5268a547"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-093.npz": {
+      "bytes": 4224352,
+      "sha256": "3cb9ec99aedcc7ead46a652e8c401a6aab29b19acd236128e507dc5f458600b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-094.json": {
+      "bytes": 736,
+      "sha256": "b5aa42ca77c239a1a4a910f47968ef9fe540a9ecf2950e338da9dfd79aae4249"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-094.npz": {
+      "bytes": 3898802,
+      "sha256": "0d7e6919272506fdb02a2c937a97d94ad4056c109c2e938e929eeead594ebc63"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-095.json": {
+      "bytes": 736,
+      "sha256": "24c4778d6d176e42f08662ab457c3a30d7f520f5ba595c2442b5222b603d9bef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-095.npz": {
+      "bytes": 3354096,
+      "sha256": "960994dbf6ee0e4f7cd2d4c594fa2e6ebf89506bbf89ad88412f1fe8b70b0bec"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-096.json": {
+      "bytes": 736,
+      "sha256": "2960f9d10fedfd71ffc475bbfa2136b4d203366ba717e8ab43100baac317811b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-096.npz": {
+      "bytes": 3985448,
+      "sha256": "b7b2d9604c3d0142c49e4c6453d3e5ce434081e6641b3b70f4606dbf4284a671"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-097.json": {
+      "bytes": 736,
+      "sha256": "531738d1c33528dec6b25c1f58458a110e28cf3179399d7d47db59ae36a3011c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-097.npz": {
+      "bytes": 3681777,
+      "sha256": "1efa141e78d68df722aae34a4377f4e2cf92add117c82e2f2e8adc8862238d3f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-098.json": {
+      "bytes": 736,
+      "sha256": "d425cb05d02eb2160da9dee57b2215aab6e5b53e0727d0f115975a5341f64ecf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-098.npz": {
+      "bytes": 3684243,
+      "sha256": "8e636264a27d01c72decafa322ed25635866ffe33600c648a46a866e93ad56f9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-099.json": {
+      "bytes": 736,
+      "sha256": "97e989e21992efcdc106db52b6c3faff7403516121693c7b573a988cd9e15c5f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-099.npz": {
+      "bytes": 3920731,
+      "sha256": "04868a540ddc296d02fc2197e0104dd0be4a8c9d7b1ae0829b192c1878d5652c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-100.json": {
+      "bytes": 737,
+      "sha256": "7097fc8eebc5cd008e71d41e755a581975218f7c7c92f727cdfd1eeefdc17884"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-100.npz": {
+      "bytes": 3366322,
+      "sha256": "37f20f7e7a86b4c8669418e5b4868f965add9149bd12c7298339ffbcb589d9dd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-101.json": {
+      "bytes": 737,
+      "sha256": "2f9c65f6d7e2407a78aed90ea973c09debcfffd87b40bf9408ec2a4aa78dc798"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-101.npz": {
+      "bytes": 3938648,
+      "sha256": "874a7d923e562688ac60b47c1e2b0c428468d331f74176ad826500c909d24a1b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-102.json": {
+      "bytes": 737,
+      "sha256": "8cc41a1f2dda5e68c53d677ad7359f95e6dcb31e7d54fe32250771471a7a46ce"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-102.npz": {
+      "bytes": 4142480,
+      "sha256": "f3daae91358d99f3625267bb2a42f70e91966438774a1e49d63b0d87bafb39fd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-103.json": {
+      "bytes": 737,
+      "sha256": "541363b939b673221db3d94cf8ef58caaa88db5d14784ddbfca7de3ec422ee99"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-103.npz": {
+      "bytes": 3741789,
+      "sha256": "67e18e0d6ce8ce29cb53a88801e9bf507df274ddbf4df6e8122d2b0697404694"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-104.json": {
+      "bytes": 737,
+      "sha256": "6dc7957cd7663b7cfd3356c01759bce1152d5902a8ea8b776fcd2374e472e15d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-104.npz": {
+      "bytes": 3989480,
+      "sha256": "3e3692da3f4eb61db97642a7eae7c70bf1700b7158a8e0dc362c0ca2136bb724"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-105.json": {
+      "bytes": 737,
+      "sha256": "a3eae8e4d5f434b1f8f3b900b91ad57adc7fdef9c052cfe70e30aa501ca00504"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-105.npz": {
+      "bytes": 3374538,
+      "sha256": "861ad2cca9609ff5cf5941e014c74723711bdad6ea54ff1f7cd67a522eac42c5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-106.json": {
+      "bytes": 737,
+      "sha256": "ea6b9a8199ce07d08a228fb6701e854f3b22094ef9df9b1c4832cb665a63ae0d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-106.npz": {
+      "bytes": 3464073,
+      "sha256": "8813d48f990f2e450f0227e4710ebf4e1378cd9cc5b0691c955b498c1e67fe18"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-107.json": {
+      "bytes": 737,
+      "sha256": "aab2b4e8a826bb5b4d90cf4e05df1017c68a56b0b7167a67520d383c270c18a7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-107.npz": {
+      "bytes": 3642571,
+      "sha256": "fd7cf4ece1d502d5d61b8b5f847cf4eed3e986cf36e0c69a3a0374e83e38a7a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-108.json": {
+      "bytes": 737,
+      "sha256": "6683231068467c87c79b7dd872f16b9508e09b5bb7972a3c5c59fe2c051d1353"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-108.npz": {
+      "bytes": 3269854,
+      "sha256": "a2c63236a852a4c66582e1f26ff05685eb7c808a338cf119ac367431e7a7a228"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-109.json": {
+      "bytes": 737,
+      "sha256": "361b1d04fd96be77e73482f1e2574d1b4f5a098751de757a630cfa413956cc33"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-109.npz": {
+      "bytes": 3548779,
+      "sha256": "78d904180f9d8258123d0cf03a5ed6bdd4d5c45bdd7d84d55764d3fd350b22e5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-110.json": {
+      "bytes": 737,
+      "sha256": "6b87be079d640a19c7ec6b26d6a1c9db7d68c8f129afabfa9599e054cbf3f6fe"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-110.npz": {
+      "bytes": 3654423,
+      "sha256": "bff90479b76c292dea131b84671b5b8359976c31ac107204b80e23a9c41c28c2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-111.json": {
+      "bytes": 737,
+      "sha256": "1558e1aced38bf3c66de3b87af34f71685a46f3eaf00853ecdee445551ea855c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-111.npz": {
+      "bytes": 3737484,
+      "sha256": "08417cf50dcde451ca706f93fd41408140d3f111898b3de1c384346444a0255c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-112.json": {
+      "bytes": 737,
+      "sha256": "fc4809f430b66dc9a9e53070ee64ebc8bf287713269056809962570f40294f87"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-112.npz": {
+      "bytes": 3600438,
+      "sha256": "f04ba5200f73e91d112e9c37dba5dd837547f224255d93bb4d1d219ebd174bed"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-113.json": {
+      "bytes": 737,
+      "sha256": "1180960e95187e914ddf4ff66685bd44f9d5cc624d5651031686c47da199cf3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-113.npz": {
+      "bytes": 3418509,
+      "sha256": "f6ed05349f0bfc424eb021e81a6c6c97b051ce3da733a8230e9fe8237625a88a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-114.json": {
+      "bytes": 737,
+      "sha256": "ff08e5c64ae4d26bc4a3b8fbcd181bcacf73489f10d89aff97d6cb156fc0953e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-114.npz": {
+      "bytes": 4122335,
+      "sha256": "75efe3e4ab4e4b86b7b729091a35af5a490bf7d1cb048eef863560ce1c61c6c4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-115.json": {
+      "bytes": 737,
+      "sha256": "f7faec775e7554d57f61cb3d7fd043e49e7156b3fafaca20e468c92fddfde78f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-115.npz": {
+      "bytes": 4025465,
+      "sha256": "cd89d01f7a6d1b09dc8d28d8fbed81e64d6e71bf7aed55734c696fea9b565495"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-116.json": {
+      "bytes": 737,
+      "sha256": "a165fb08b3dc22ba86405ec520a8e63083d6771b45a000bb7089f1ad3c641304"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-116.npz": {
+      "bytes": 3467882,
+      "sha256": "341c20b0708f732ace745292063434b5ce3f1322a25469bb099aaea4345077fa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-117.json": {
+      "bytes": 737,
+      "sha256": "e0cc99b567d3ebfab8f7de5a30a0986b8bffce20dab7a184edc36a4fe530c088"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-117.npz": {
+      "bytes": 3821289,
+      "sha256": "6eb303b67ac0ae842ee0d645edcbcd8de1b79caf5b54348a5e4521bdc2e4b29a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-118.json": {
+      "bytes": 737,
+      "sha256": "e574be0c35b32d96071d60a31fdef54dba548b26522b9f21511b7bdeb5a0766b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-118.npz": {
+      "bytes": 3934020,
+      "sha256": "5f86bd4e4f62fb233e24ed2747323cba642c2818f3858e45a35b108a31eda796"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-119.json": {
+      "bytes": 737,
+      "sha256": "f3b9a1feb51c8ab89237a89ea08383a896cbba196a040163903a558f752813a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-119.npz": {
+      "bytes": 3592492,
+      "sha256": "5ce23367c415d033076432cbdf18b444b98a397d9ec95ce6954d8b46a71435a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-120.json": {
+      "bytes": 737,
+      "sha256": "0e3bf52cb8acf4f9fed404d3ca799fe02aed9cd702fa219534820c741fcf5d59"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-120.npz": {
+      "bytes": 3836185,
+      "sha256": "697c02b927e77388cfcea81386856db56d1fa529107ab198eb6317aaf0b2db4e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-121.json": {
+      "bytes": 737,
+      "sha256": "cf7e59e227aa81e9153851bf9e35b093be5300e13884dca5e9a27bcde39b28ac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-121.npz": {
+      "bytes": 3621983,
+      "sha256": "7b32d57189a49fd366d30a348ddb8df44cc74a1ba8de3a04907347453032d955"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-122.json": {
+      "bytes": 737,
+      "sha256": "2d2720e8ceed7d4835ba392c74b1653ec947e8510bd3066764b8a1ad7f65e92e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-122.npz": {
+      "bytes": 4091888,
+      "sha256": "6e3f3bf9c297c418cbeecc50fc806b75e8c5a0aee8e087a494cd73635e7dfa88"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-123.json": {
+      "bytes": 737,
+      "sha256": "8c2c257869d713cdb6e2394be65a91597e1d7aa4fdcf41d2ee13e28f49c45600"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-123.npz": {
+      "bytes": 3890308,
+      "sha256": "07e60f1d276df71692207551515176aa70a531e8ee4893255dd5ea0f47d64f5c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-124.json": {
+      "bytes": 737,
+      "sha256": "a943922040fcb9a3a6ad39d4e7f4b864d12242db073b1cd9fa962816146d0b44"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-124.npz": {
+      "bytes": 3997594,
+      "sha256": "eca37f67877b5d74f94caefd7cfe88596427c5ddc9f96ea07def32e038ed0c72"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-125.json": {
+      "bytes": 737,
+      "sha256": "43e276fdd35a18921146a0a09e00eadb506c71c4e1fd8fab735f5265aa8b4f94"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-125.npz": {
+      "bytes": 3738714,
+      "sha256": "15dd9f3b1cee9d9dab131cf2e3b6258017880005e6926c00f32b81d453fb5642"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-126.json": {
+      "bytes": 737,
+      "sha256": "ebf9290e75d0bb2bc70192ce26065b7a5de0e20f4b4adc8c3df9df5197900024"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-126.npz": {
+      "bytes": 4330519,
+      "sha256": "699b946a5636de7364f1fe832a80e0a4b978648fa1c931c23bc8a0da53842512"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-127.json": {
+      "bytes": 737,
+      "sha256": "1ff067808e7f968a6cf6de576a5e2db86a2bcb671c66bd731a2112d0ca9330cc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-127.npz": {
+      "bytes": 3805855,
+      "sha256": "98aa7b46d8e1823f77676daef5112654e50608aa411c1f2010526b29a3632b83"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-128.json": {
+      "bytes": 737,
+      "sha256": "1983cad7041adb62beace4b9d014d48aabcadedb6f862c64ab75307d32747e31"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-128.npz": {
+      "bytes": 3972455,
+      "sha256": "d206fd597b2a037c342bb25f84b984abd85d667a09803725962d4b950184b686"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-129.json": {
+      "bytes": 737,
+      "sha256": "62e2063057fc18c7107e50ef048927b60898335d69d94aef94cd5c5bc432322a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-129.npz": {
+      "bytes": 3246252,
+      "sha256": "eab8dd49b436dfe0f9df044f90c060e3ec46885bf3c16748b672d69398eab85f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-130.json": {
+      "bytes": 737,
+      "sha256": "1f3ee36f78f896dc2d13d5de4b94a5064701e74859dabd034793103978c8fd43"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-130.npz": {
+      "bytes": 4138049,
+      "sha256": "d699e3264b32460b40929b543df01f1de66a446b99f90639983674c81dbe1c5c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-131.json": {
+      "bytes": 737,
+      "sha256": "a0abc035f3c10ad3714e17b3a4d03d5a32386fc421a8692709dcd42a37cc9147"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-131.npz": {
+      "bytes": 4182148,
+      "sha256": "192444bcf5e9a8d875ff415ecfd0815b73f4ffc928e554418786ace3a95d318d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-132.json": {
+      "bytes": 737,
+      "sha256": "bfbe8830bc7035390990b075cefa09384ba18411edb2c0be97d55a2dd458f2db"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-132.npz": {
+      "bytes": 3387997,
+      "sha256": "2fcf21c3b2c59ace8404116c195b0e1f733089f2cd2e05e208d4017b451f8969"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-133.json": {
+      "bytes": 737,
+      "sha256": "839c4f11004a39e0bee14726e4c7c0d3588d1039e86f978cb6ba82ad359de1fb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-133.npz": {
+      "bytes": 3839445,
+      "sha256": "6e2338573a9a952f0a8229a3da0b15d0b343b59a9341e005edb4584a7ce06c28"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-134.json": {
+      "bytes": 737,
+      "sha256": "e0ce374de84f5516b1826b89e4166ff79a5e0470cfc86f3fd19e9c2e4859fcb3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-134.npz": {
+      "bytes": 4139902,
+      "sha256": "8cc49f292923c81ad47b1914033443b3a0c7bb1905e0b1bc384c723f39c60994"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-135.json": {
+      "bytes": 737,
+      "sha256": "849c8301c0a71aadacaf8afa0fededd09c5abbe2c368f2b5123cd5684e838d95"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-135.npz": {
+      "bytes": 4226913,
+      "sha256": "1bea382db65594ab136c92e2766b9cbaca4725c862a64be801b01fdd7ecc0345"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-136.json": {
+      "bytes": 737,
+      "sha256": "adae1bf48816e304ceb7d49275a06d4d1bcf984e86e0949080db421300b5e0cb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-136.npz": {
+      "bytes": 3813261,
+      "sha256": "580759a7d08e67ad8101cd24781dc1a0b4082671aacb7414dec9448482e62bfc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-137.json": {
+      "bytes": 737,
+      "sha256": "e6980065c58da53a43d2dc098293753a4f34ac724f0763e87d6af95e07c14e89"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-137.npz": {
+      "bytes": 4575470,
+      "sha256": "75e4ff3415475bad099b9cabedd55fd1cbe3edaee0e5f07f932c73a418abedbc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-138.json": {
+      "bytes": 737,
+      "sha256": "3973cb8842dd9c71d82ac79771b8372292378ca55ec32f17259b417d63124ddb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-138.npz": {
+      "bytes": 3765528,
+      "sha256": "671cb13ef4f9bc32da9938ab425288d7db307de0bfdcd679b985b84a2a35a0a8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-139.json": {
+      "bytes": 737,
+      "sha256": "44dfcf938581e91992b76329a86115ad234aba9c875a0f983ff6e069fc361bb5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-139.npz": {
+      "bytes": 3865575,
+      "sha256": "d4cc6d2376cf3ab6b94c32ba6da7a4103a3cf6f538c9f3cfec60aea0c85b8d26"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-140.json": {
+      "bytes": 737,
+      "sha256": "05c6c367dff869a0cea2abb02e6f1f89147ada23664fc42c7014481230294cbe"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-140.npz": {
+      "bytes": 3742124,
+      "sha256": "5afec8753ee599ab85355b98f4b4a0f6209e665ba12d649254a560c477e54661"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-141.json": {
+      "bytes": 737,
+      "sha256": "761a1493ec341981ccbd707c8040fbc0ea80bfa333d1bea2b285acb00e5f45ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-141.npz": {
+      "bytes": 3728805,
+      "sha256": "56119f0864ddd6a6fce1c8975ceac612045d4c7db69e726fa6a0a7822d7b0dbb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-142.json": {
+      "bytes": 737,
+      "sha256": "403708ec250e1591fba1322cb44eededf9c1949c10c62f58f0d3af9556530f1c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-142.npz": {
+      "bytes": 3623863,
+      "sha256": "654825727a56272c8773963460224188f8f198c207e662485c75d02d8b89ae03"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-143.json": {
+      "bytes": 737,
+      "sha256": "4a84c38a18d0cacef4b25f82d0e020a41799f85a667b243dc5032822c1b69e20"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-143.npz": {
+      "bytes": 3833157,
+      "sha256": "548fec0477caf4ed0b29013a0398e4714afb293c1e64307f36c1a80836adb573"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-144.json": {
+      "bytes": 737,
+      "sha256": "5711e26f157d11a3322033c0e71319a8a05e258fae420ecc454bd4d11ef90efe"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-144.npz": {
+      "bytes": 3923279,
+      "sha256": "cd648a7e658ad3ea1a35ff13f3d03ffde32d95b3fe38200bf2163c0eead4f659"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-145.json": {
+      "bytes": 737,
+      "sha256": "c06386a59899e35826d91698c753b0cf03efe9d51aee7e4d811ead0a4a172b9d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-145.npz": {
+      "bytes": 3892890,
+      "sha256": "ea675579e88a3eab7de6bfd35e59ddf9c7b2decb79c307ff73301e77bba7c92a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-146.json": {
+      "bytes": 737,
+      "sha256": "1f1924257a6e5662f2a9915c2a46978cd467ed31feb7b7b602b643df394d5e13"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-146.npz": {
+      "bytes": 3401457,
+      "sha256": "7a62202f0e6007ed18b5c66cf334e48c01af7d1375d60d6b6299f3d3e9a87df8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-147.json": {
+      "bytes": 737,
+      "sha256": "33c67f2e8ce53874e74c4839790799a99a267ed1b21252979da21a54628e48a2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-147.npz": {
+      "bytes": 4438666,
+      "sha256": "8dc8260bc5a0af889c004258a460b22e94fce2f59261e8329b879761a22dd1cc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-148.json": {
+      "bytes": 737,
+      "sha256": "96d275b4b472dc97dc6bb7bae5297f617b759b237b80bb415f87fa19d4f2c106"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-148.npz": {
+      "bytes": 3858703,
+      "sha256": "ac975d8f62a3be693525f17d49c6b8c114f50f5197d038d746134d9e65809d48"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-149.json": {
+      "bytes": 737,
+      "sha256": "faaa94fc1c0370bbdf6ddf51024904ea5846d3b99fd324afa7ab1601ed82f2b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-149.npz": {
+      "bytes": 3979952,
+      "sha256": "47aadea7989e63af58cf99224dae0b2d63cdf7eb90922befb77f7a3cd8788ede"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-150.json": {
+      "bytes": 737,
+      "sha256": "10711195bea37e9b38dd201de37b6aaa26c10bd7d44ae12cda402cb96e1f0163"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-150.npz": {
+      "bytes": 3376422,
+      "sha256": "00079c34cc72c920e46443a6a67402163761970255a52822f8cd7dcfe19974ea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-151.json": {
+      "bytes": 737,
+      "sha256": "5ded9549da9eb7ae6f0eeb649104fb02cc3aa4e1d75bc44d78e2ba7fa6eedcf1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-151.npz": {
+      "bytes": 4027739,
+      "sha256": "14eab6805d0792c5414b3751f8b3035eef5c19979691189f4606b02bd288893c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-152.json": {
+      "bytes": 737,
+      "sha256": "65c19fba210e7d98a17b269638a299fbba24afbe1435bd424f696e4bb0351844"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-152.npz": {
+      "bytes": 3860248,
+      "sha256": "53b302560ed5aea8ba0f0764082b31f3d97b288df134d631052bd4a072b0a3f8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-153.json": {
+      "bytes": 737,
+      "sha256": "c38ede81000d2b49aba77e07c36fbb76c9ca7ac4fb904058edc82bdd1f00451a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-153.npz": {
+      "bytes": 4299285,
+      "sha256": "760765f84d578eb7bc9a782b99f7dc436a622f337149e5512d70ced77c61ba25"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-154.json": {
+      "bytes": 737,
+      "sha256": "c9c28aa630563b89767b4d26ead66c0a861a695b7a180848962e8af639cfe64b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-154.npz": {
+      "bytes": 3772169,
+      "sha256": "38475c7573985de1a72cafff62a2270b7c7730bdfb0a5c35bcf280199e233ed0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-155.json": {
+      "bytes": 737,
+      "sha256": "4a64dfd4d0be7de888646fa187ab58d1f1d14f8af4b0d8fe93088f55a9ccf063"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-155.npz": {
+      "bytes": 4298779,
+      "sha256": "c60a0ba98448f952612dfed106345b0a95d0a1427613a3cea5c9ac9d532ddd14"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-156.json": {
+      "bytes": 737,
+      "sha256": "402b6a6a6af37b612081874e53a3b54afe30e32e1159e6905b3d9d26f9be5397"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-156.npz": {
+      "bytes": 4086563,
+      "sha256": "db2f6d593989a524ee44d95c94b58ba3df28e15fa81f4c55324230ce52ff1f12"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-157.json": {
+      "bytes": 737,
+      "sha256": "f842ccf9212a430cb4d2b759205970ab5e5139afe087e79704c70d04c404b2fe"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-157.npz": {
+      "bytes": 3715256,
+      "sha256": "87622d393f936df161ec7645338959406b9fe15535cdfad4d0b47b06d1f8dc53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-158.json": {
+      "bytes": 737,
+      "sha256": "81bfd2cd4b97550171675c8010dd6cfcb017df8875a296459c516a7aa7f9fcfb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-158.npz": {
+      "bytes": 3867060,
+      "sha256": "c84164efca3b1a6b37adcd0dbdc37a2b7d4121ba5378b51e7646ff28bf0b2fa2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-159.json": {
+      "bytes": 737,
+      "sha256": "b6b1e8bed892a033b488722807a739e75460ae69de7417c61c829367b9f0adbc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-159.npz": {
+      "bytes": 3612200,
+      "sha256": "fbb26044fad1396bdab8abe8acbd2d1569b4f0a65a0459f6d1b4e5ac5255186b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-160.json": {
+      "bytes": 737,
+      "sha256": "35ef51532feec5edf5baae4c132ac4c27ca486cb22b005ae306d980b1d1ce350"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-160.npz": {
+      "bytes": 4455708,
+      "sha256": "a50e46ccd32ceea9b2818a82920ac5f2f3c7fc940c618739ba462040d5fb8918"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-161.json": {
+      "bytes": 737,
+      "sha256": "39b03d9c3ed02a728c5544c150965c1e585074d407e396a619470af4d853b2ab"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-161.npz": {
+      "bytes": 3914253,
+      "sha256": "648c5200b9c3c38e1d9e962aaeb904111e3668bf2d861fb0a5008302c82d8642"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-162.json": {
+      "bytes": 737,
+      "sha256": "447fc5803b5f73959731fb1d20eee0e0ceeba9ad438623e2862fb344997ae722"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-162.npz": {
+      "bytes": 3767576,
+      "sha256": "2904f6370021f85da73dd56fd66d74b51fe91cf4da5e71fda1c0291e85ba377c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-163.json": {
+      "bytes": 737,
+      "sha256": "9e206904a8aebec600bfe130eccb5dfcf14d820cb82d48822c7274842efe9a68"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-163.npz": {
+      "bytes": 3852817,
+      "sha256": "cf76a455e3930d4b4f58410c3a092234c412a17770dc9f4405bf7e21cf5a1714"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-164.json": {
+      "bytes": 737,
+      "sha256": "68189f3417938531c754432752c972e7bbb11c0ae4231d6648725a5b67c1f489"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-164.npz": {
+      "bytes": 3657005,
+      "sha256": "db73a7021308a1c87d6887828d08c605f959287820dc512dc148fadec9f604e1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-165.json": {
+      "bytes": 737,
+      "sha256": "2d387ec9f75aab258bb45749f801fb76b7d85f15e43f321f4ebf0c20303170c2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-165.npz": {
+      "bytes": 3902431,
+      "sha256": "bc5024066dfb1c0c2ebbb963bb8baf58dfd3c8d63b461db619d970ef9b934ad4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-166.json": {
+      "bytes": 737,
+      "sha256": "92632c430bff70dcadb91cd1ed39b927d1f15229e89f39f3f299665309c39137"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-166.npz": {
+      "bytes": 3448634,
+      "sha256": "88e218d62fe798c12ac3fb990a1c95746ea8278f8a3a7cf843fb9be0b1298bb3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-167.json": {
+      "bytes": 737,
+      "sha256": "7f319e733e8f60f0509895cfd103fc24e156d1c7f13a5a2cecd759db72180358"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-167.npz": {
+      "bytes": 3693247,
+      "sha256": "bb30f02c85405edbf625ebdc4557a5f2c8e689ccbcd9c51350a5c133d6179d6b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-168.json": {
+      "bytes": 737,
+      "sha256": "3fc509e7a6f0b5488a969d83d6b3aab70f9cfcd5cddf0ab0abec074c85e60d61"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-168.npz": {
+      "bytes": 3610244,
+      "sha256": "fb7acb6676e0c962a4ae8886f550b7e301c8cae1b494c0b338f00c6b9c41b041"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-169.json": {
+      "bytes": 737,
+      "sha256": "4372972257e52a7f89c8878fff5bffce352aa8d7dc80e4ae2b17c14dd4c0a51d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-169.npz": {
+      "bytes": 4203311,
+      "sha256": "24fa1cbf36078f426c6c56efde82104259c7f7f3fef68d4213ff64f699752460"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-170.json": {
+      "bytes": 737,
+      "sha256": "d7d01407c0b97e8677e47fe8f10cf5d05d488d690e2ff84eaa87ab93834a0e5a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-170.npz": {
+      "bytes": 3904865,
+      "sha256": "7255f6a781cc88571bba8d63ef2734bc65d5b7c4f693b76453c86657ef88ad20"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-171.json": {
+      "bytes": 737,
+      "sha256": "490a2c5b84af983231c890e68de65d4d8e7e2612343d417b805c4f4c260983b0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-171.npz": {
+      "bytes": 3646134,
+      "sha256": "fecad262ebe29c901a1fc8adeeb8d86b0bb59947b7e7b643263d9a09f5722b04"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-172.json": {
+      "bytes": 737,
+      "sha256": "656c3ddfa839b21c9e2bc040369d693bee4a2fd302e57950d8c3a9a42c6e7a61"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-172.npz": {
+      "bytes": 3622674,
+      "sha256": "eaa4c77bb860f3121f7610f35ccb75e4d0f0bd4fe21b8a4d352b14b78f495a45"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-173.json": {
+      "bytes": 737,
+      "sha256": "3fb799fe0ce352920073a02794513e4bf8bfc2bdacdbaa1828b995e1c518223b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-173.npz": {
+      "bytes": 3305448,
+      "sha256": "70abfcbc20f57489fdf44962d74c680b5de42d7479008d6c2185ae809cdd8ff4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-174.json": {
+      "bytes": 737,
+      "sha256": "74a89892947f1e5a030de3dfa501fd6815d508c2b7c6e88a541f4f3532bc4a3f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-174.npz": {
+      "bytes": 3809506,
+      "sha256": "56073a06605123f28a951ec61517765fe5a8406e173780fcc3a0faa2179278a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-175.json": {
+      "bytes": 737,
+      "sha256": "af498eb750d778dcd81606f248809492b95a2c217d1e3aeb4de46b2d739b93c3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-175.npz": {
+      "bytes": 3783917,
+      "sha256": "2bf5e1b3a318f1adab7aab649d91d300804403f26ca689eb7c1d5694401aae36"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-176.json": {
+      "bytes": 737,
+      "sha256": "ae031be9e989f5ef41431eda66704a8a2d67b6e9180fb4fde3766331d532ab84"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-176.npz": {
+      "bytes": 4092401,
+      "sha256": "c7c7c6479779a3e858c85f24227b890f216d1dde364beb61dbf7d87f80eddf1b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-177.json": {
+      "bytes": 737,
+      "sha256": "b0a49a3b51151abf0270476d40fec079755dc9d1846df6ac6f42697f26da7253"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-177.npz": {
+      "bytes": 4011954,
+      "sha256": "fe3b1a58db70f81972a5025ef856bbdd42f9d125a785a6e07adcb4e78da95c70"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-178.json": {
+      "bytes": 737,
+      "sha256": "16530886d7dd4a4564b08425501acc6f8e00ccde851f183039fd0410a1aedf87"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-178.npz": {
+      "bytes": 3713866,
+      "sha256": "b22c3ec3c3962c28c372728f301a52b75b871e81c2371da434d73faf8d2ae248"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-179.json": {
+      "bytes": 737,
+      "sha256": "e3a4e6201a3b23b85caf93b5dcd0ab468f95cfd28549ea802623799cf552d412"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-179.npz": {
+      "bytes": 3834204,
+      "sha256": "38f0512c248d9d3775b0aeb78140baa8719061473c2e6d2dab4df83af062ed54"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-180.json": {
+      "bytes": 737,
+      "sha256": "acb74c7f9581788fcecb6777d390a02ec5e690cd8ee54b563879751f8d3c78cd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-180.npz": {
+      "bytes": 3531611,
+      "sha256": "fb7ec15a7e86e920d0a6bdd7d7a2e07b018d5b63bb3753c6a46e56ee3cb0f83a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-181.json": {
+      "bytes": 737,
+      "sha256": "5160d2b884bea32557fe6aa94ded85762d47ab53e470a9eb47a0cff869d9051f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-181.npz": {
+      "bytes": 3844960,
+      "sha256": "3c82f2bafc0d4bdbfa6894f74e114e699c69fb80c7172747e3cb6aeedaad3522"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-182.json": {
+      "bytes": 737,
+      "sha256": "1e186a91dc6efd535d12c85c5090794c3ee5af491580baa8fa56f0e2d7f2b770"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-182.npz": {
+      "bytes": 4119572,
+      "sha256": "47af59e3e24be898380e043ccdd018fb0410c2f4a24f1cd53ef26c25e14c9a06"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-183.json": {
+      "bytes": 737,
+      "sha256": "907966e87f38600087f385c10f65ccaf93ebe08995c2a35d64ff5f196cb96134"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-183.npz": {
+      "bytes": 3656133,
+      "sha256": "377b607c51d27077fb58b67cdead67190ab11d53cb73e8bb538ec5249c803532"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-184.json": {
+      "bytes": 737,
+      "sha256": "04a6d098f316dc6966f1e57eb9994f6aa8008b454985c0df649ad74500d42b3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-184.npz": {
+      "bytes": 3887089,
+      "sha256": "0c993ae2a4ebc9aafd3ebbca597b83e30f5ad235a6ada2b2c39ea094f95188ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-185.json": {
+      "bytes": 737,
+      "sha256": "a6277b337d9972fb1c0334905ab0a0498e1c37d3bf74a5a5abaae7e085308fff"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-185.npz": {
+      "bytes": 3458110,
+      "sha256": "b938660d61556382d7d87a2d0e3d66825364bbdae15ca2c154d05d049af2193c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-186.json": {
+      "bytes": 737,
+      "sha256": "9b56afea222e43080d244c29166fc3f84739f8cc7926878e8029a49837574fc5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-186.npz": {
+      "bytes": 3704357,
+      "sha256": "f50e23fe996672994008ce8351addf2b9173dd842a32e2abfe2f3cbd5249f643"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-187.json": {
+      "bytes": 737,
+      "sha256": "95939ff32ed4e5590da9767a30481c41f3226cf6ee1ff8b7b097fd8b8cffe8c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-187.npz": {
+      "bytes": 3531487,
+      "sha256": "bc13de08a1fa88e07f44200f5a7537f98325b8ae2b47a851d7a4ba8d16e1d091"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-188.json": {
+      "bytes": 737,
+      "sha256": "23f8b23ce8fb6b31a1638372e30ec7ea7c079da36b6a7231a28262ddc5e6bf47"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-188.npz": {
+      "bytes": 3770062,
+      "sha256": "1d812e53b785a4ad70121c5d99925ec4ca4b6d5a1abf31a4c70d6af8882627ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-189.json": {
+      "bytes": 737,
+      "sha256": "808e3335075253349f3299bf31d189e9067a03d3304ffde8aec516bd1211bf2c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-189.npz": {
+      "bytes": 3897992,
+      "sha256": "cb87692d0241b3e9f7087a9b3d7c1acda597322a03ebb525ccf07417be28b7d6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-190.json": {
+      "bytes": 737,
+      "sha256": "e0491bd848572c594a3a78db6777152008a56c32ef6856309f07d2be043c3e6b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-190.npz": {
+      "bytes": 3425277,
+      "sha256": "452a32866ecb01f2aed11dd07c8644e4fa496308fe99eb63887b5cc6171cdf4f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-191.json": {
+      "bytes": 737,
+      "sha256": "e2ad40a173b7d4277cb2b55d54d3a54d41967e81c2bc76dd125aa3372c0af86e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-191.npz": {
+      "bytes": 4062452,
+      "sha256": "c45bef2ed10523aec1e1917359f4b4a5d12291191415f5370b82901cb73c0d39"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-192.json": {
+      "bytes": 737,
+      "sha256": "edb56b52047fa146a0626da8f6e85a49121f892d0dbe38aa5202c2034a6a3078"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-192.npz": {
+      "bytes": 4216958,
+      "sha256": "8af82af2d99641099692a721a7b75fd3b8a29c4fb2464a0cca872a3e87a8d0df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-193.json": {
+      "bytes": 737,
+      "sha256": "18548cfc3cb54eefe08700b5187f59e93194e29f3c6a577949472a7c5790a0f1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-193.npz": {
+      "bytes": 4006385,
+      "sha256": "ab9dde169962305e519f2979738b1ca6619e3573fe60cefa6e39f91ec5cdf2fc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-194.json": {
+      "bytes": 737,
+      "sha256": "871702642582cbf6c7bdc7f2df4f0fcd8922071a5649c48ab1e5cbc041cd2875"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-194.npz": {
+      "bytes": 4059235,
+      "sha256": "26fcd14ec76befc349fd50b0d41405dede6812377036c0ca41ab61b8d6137372"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-195.json": {
+      "bytes": 737,
+      "sha256": "887f8a285671349d6363990a3644075d8978a258efa2718368ba5507187d2103"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-195.npz": {
+      "bytes": 3728633,
+      "sha256": "cbe4c7faabfdf24737af8ab2576a7e855248ccd53dd6d4a236f9278425acaea4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-196.json": {
+      "bytes": 737,
+      "sha256": "23b9aff26343e5efb6e73d0be0c21717fc03effa87ff2312bfd3d6fcb01a857b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-196.npz": {
+      "bytes": 3932967,
+      "sha256": "fe264b5aaf4b84afa758122779a397b8354f6e7520bde3765c33e01257dcb336"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-197.json": {
+      "bytes": 737,
+      "sha256": "ad19d2c29e45f3adc605d971e438dae41a93e9a19ec27ee405a3f7393438dbc3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-197.npz": {
+      "bytes": 4075323,
+      "sha256": "b175ab84e8bc5ecc9cc4595c0ada79360642e5abb4155c2d660111b8c9a780ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-198.json": {
+      "bytes": 737,
+      "sha256": "fe747fc362e6f69af7dca98a8e55f483ac6891b74ba806d6b125617bd27a1c43"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-198.npz": {
+      "bytes": 3636603,
+      "sha256": "b0f4e3904377e002c157f941bbddf8e8292b2971d6c9c5c2e27d08fbf437f779"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-199.json": {
+      "bytes": 737,
+      "sha256": "7afa9556311ba77e660b68a716ac4dd4831967f8912fa1edfc5bad577d377593"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-199.npz": {
+      "bytes": 4231839,
+      "sha256": "25d427c0506d40b6e33a55addd20e7a067f2e191dead23608f6b06fe2478b0b3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-200.json": {
+      "bytes": 737,
+      "sha256": "835dbb100627374c399e8a0a865ac48d3690638632c75904012788317a8b7da1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-200.npz": {
+      "bytes": 3843425,
+      "sha256": "b2afe7d1cfd29fbc05c2c11a9f32fa651202770b5f96fb8ac20535d85443abba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-201.json": {
+      "bytes": 737,
+      "sha256": "7c8001e876be2de2a57726d938b791cf3f3a7d8660e2e5b1a1be233c6fedb4f8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-201.npz": {
+      "bytes": 3609363,
+      "sha256": "7c7b8341d3c7f6dfcdc83be639e14ceaa21a674a9209211fd2d5c1b0c8551510"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-202.json": {
+      "bytes": 737,
+      "sha256": "0644f602c9793563ad9d8f90068657ed62e88ed90091c0fe630f555467abaf15"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-202.npz": {
+      "bytes": 3823695,
+      "sha256": "7e806da45758cf365e29d0e156ec0717f10dc0b708d1c3c8376f65e2c5a6ddcb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-203.json": {
+      "bytes": 737,
+      "sha256": "3f9355fbc4a2c3349f6006f7c8c1d0cdfbdcc84ceb7d16873cd268387720f8bb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-203.npz": {
+      "bytes": 3476901,
+      "sha256": "355fa4828a76e944e9df48ec45ac265bd525fc7afa4f7f6c4ce59b019da4ceac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-204.json": {
+      "bytes": 737,
+      "sha256": "1ba0cffbc579b8fdfca7c7b50c29bbe3593decf9d796c8137e9f4ceaaac67316"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-204.npz": {
+      "bytes": 4183685,
+      "sha256": "19d17e98933bd1f4626ee7f8788908c0d5b7ab758d944a0a3b6d181e25672c14"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-205.json": {
+      "bytes": 737,
+      "sha256": "d3baeaf15322d8569b107d74e50a4fd958d9fe2e51af3aab7c72f2fc5a18393b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-205.npz": {
+      "bytes": 4041631,
+      "sha256": "0ece0751fd38e3a5eed05ef45160a1de9ff2194f1d890b6fc5774fa6b46a0be7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-206.json": {
+      "bytes": 737,
+      "sha256": "f9822718212cd7973c4785c9cd41d00e27a8711c095868f6ef5676a8aeb706bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-206.npz": {
+      "bytes": 3901531,
+      "sha256": "3a5d1260c1ba4643242fe1ae2b6723eb85d47dce856afa9a483309e72264552f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-207.json": {
+      "bytes": 737,
+      "sha256": "17a7da2c5602480ebd2e58cde2ab6a6bcb64304ec8eff7abc1c28fdd1069909b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-207.npz": {
+      "bytes": 4042678,
+      "sha256": "ee847998bfacb882567a8187e45177faf9c6a26279040889154e81dbb44176a1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-208.json": {
+      "bytes": 737,
+      "sha256": "e2b9e902f3b20e71b87daeff8e6c9ff9562c40f80f4d0418499eb6d2eebe9cdc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-208.npz": {
+      "bytes": 3693537,
+      "sha256": "1eb04a5ce1b9f40c1f5f0b64d38c570d04716ca7a5e6097ddf58906d8cda05d5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-209.json": {
+      "bytes": 737,
+      "sha256": "4a905053bbe476308218b160e2b54095dae75426d9f1aa6daa1f00a886710e87"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-209.npz": {
+      "bytes": 4275783,
+      "sha256": "63a11464357c77ac1d3067108e8b87638256e20f42e9edc53c7d225b6667c12f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-210.json": {
+      "bytes": 737,
+      "sha256": "144f175e4cc034bf31bd20d8bf1296ee5b81568270423b532941c6afe84ddddc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-210.npz": {
+      "bytes": 3945949,
+      "sha256": "f527811c5a3f6d9046bc2cb3765e12c5d4d31686bbfb71a4b1e05eac42842048"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-211.json": {
+      "bytes": 737,
+      "sha256": "5b48ec9b0e25500512a25ea7aed67d76571d06882e597b792e3ff20399fd7de0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-211.npz": {
+      "bytes": 3810754,
+      "sha256": "650804b1244a45e4ccf100251dc3d3f22e41093663136b137a07490285a73fc8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-212.json": {
+      "bytes": 737,
+      "sha256": "37925f834fd023e55c92bbc671f439b81ff93bc3f07ee2e660860f19afc0a7c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-212.npz": {
+      "bytes": 3789228,
+      "sha256": "2559837800146654eb1a96b7c954d992584bc43c6a71bbb0a3937b3c3d49e281"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-213.json": {
+      "bytes": 737,
+      "sha256": "b36973a82853dc0c709d095bc0777cb02ee683d1835a41b6d9a04dd6075c1d7b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-213.npz": {
+      "bytes": 4136383,
+      "sha256": "40698c7f4d0cbdba628e4630db6f649cb2f909743dda431e6d3b55a5e26e69ce"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-214.json": {
+      "bytes": 737,
+      "sha256": "a5d64eb4fdd3ad3ae5fde392ab28383829ab52cae65e029ae97b3997e3320afb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-214.npz": {
+      "bytes": 3745803,
+      "sha256": "817547d49ade22f378a7381ec21584328141077c0b15f3a4611d77f5858573f3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-215.json": {
+      "bytes": 737,
+      "sha256": "66d3d657c1e375cc2c5d3aa3c8b3f46d79bf8dff078026b38072803f0daaa3af"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-215.npz": {
+      "bytes": 3998578,
+      "sha256": "bfda02f8ca44d5a8ff75541196499e75368b627322354ad10132ec7fd9d3dbf7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-216.json": {
+      "bytes": 737,
+      "sha256": "74db57139404d8735599fde7556cad0e5fdc12cfddd2bc0102547d847da02fd0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-216.npz": {
+      "bytes": 3957199,
+      "sha256": "4be901ea5d4566dc7da1fcd37ba724b97853c58b2435f3a71d6e5b90e7a54261"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-217.json": {
+      "bytes": 737,
+      "sha256": "64b992dcde542f7447c63975a9032eaf996e907892fe219233ae0e06487eccf6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-217.npz": {
+      "bytes": 3537666,
+      "sha256": "fc5eac85dc78d0466b3b185c83855e55fa9aaa8a50dd87d87d987c150d489c2a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-218.json": {
+      "bytes": 737,
+      "sha256": "a705aaef05ee34d2b4e3a8496b6e502ff12767181e9ef5924d304f52b1972751"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-218.npz": {
+      "bytes": 3743724,
+      "sha256": "b55647078cd92cc1ffe8380c86ce1015036344d74a2a9e5eb9a7be23afebcb7c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-219.json": {
+      "bytes": 737,
+      "sha256": "9bfc2ace4fea8342eefc457d42fe7c3bd0c00beb76254062a1a59a6628f368f6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-219.npz": {
+      "bytes": 3863676,
+      "sha256": "3894af017eeae14dc4dcf7aa7ee35e4c9d10883ed4dcf5b8a842f87005bf384c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-220.json": {
+      "bytes": 737,
+      "sha256": "f7195888d53ac621e8c322a2f8e39392a72801cd0ee3ce85a34161fd6c90c76b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-220.npz": {
+      "bytes": 4093900,
+      "sha256": "4478d81207de4c7f757596bd624a418801e221d25a948e40ca4cad8748344dd0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-221.json": {
+      "bytes": 737,
+      "sha256": "797146b193aadfc4c16befd812e8f7ce1c1a04309669d9b1b197eb5ba029dbd5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-221.npz": {
+      "bytes": 3933211,
+      "sha256": "e52645ba68994fd23a5724bd875d913a52742468a8405a2abaa3211b9bd81664"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-222.json": {
+      "bytes": 737,
+      "sha256": "b9eca74ee04088261f2afd9fb6b6bb0c057d2f1195283214b90a6371894b9a41"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-222.npz": {
+      "bytes": 3939461,
+      "sha256": "70bb509efa2b0ff38ac8a7fbda308e4d864f48f73e43e2726ea5fdc4734fd33e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-223.json": {
+      "bytes": 737,
+      "sha256": "95a8dcd9d590d55f3574a885ffd22a7dd8ff0f5329c3b5f1758a1c2f46a002b5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-223.npz": {
+      "bytes": 3628470,
+      "sha256": "94b2a8fdddd8fa5b6a7f8cec776fafadafb141cd2f63fd8c0967115c3937330a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-224.json": {
+      "bytes": 737,
+      "sha256": "7b8869f2e02a65548e277aa054f63cb75082c01f434d8d6f39f4e3d2c5b4b9e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-224.npz": {
+      "bytes": 3570255,
+      "sha256": "b88d17546f0907d881cfbed80e5bd1b6cb20fc057cb1286d434d6c72b3eff611"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-225.json": {
+      "bytes": 737,
+      "sha256": "22b2dda832085ef9ea2658a7d1deffc7356ad74011820e2f93334f5cd2a6ace7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-225.npz": {
+      "bytes": 3875080,
+      "sha256": "6ce6a7e04a3b5d481d1653894da08bb84b5617a30cda155daf9b60e969fa1a27"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-226.json": {
+      "bytes": 737,
+      "sha256": "739403162c64c5785edc3121e794ab56b17334419fddba8c0fa1d95019026bb6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-226.npz": {
+      "bytes": 3447420,
+      "sha256": "e3e9ae54875d1555228ed8f61b051081fab5c21adcc9e330b8a061e615afd65c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-227.json": {
+      "bytes": 737,
+      "sha256": "6618bb578b3ee9cebba1571a6be6ada2122179e7defbbba439d067343dd92e61"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-227.npz": {
+      "bytes": 3529973,
+      "sha256": "ab735b74f25c7b1929d4e6eec9204fa26024ad0f720bfc1ead76706fd6042916"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-228.json": {
+      "bytes": 737,
+      "sha256": "87d834259bd2ddefbd2b2be1303f078d8a86e9d36b6cd05498f02272c962e3bc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-228.npz": {
+      "bytes": 3835514,
+      "sha256": "3845afa175d619607d3b9b7738dd1e0d8c413e92f377990e4d3e8934d4df757c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-229.json": {
+      "bytes": 737,
+      "sha256": "da4144ac3776414405a704755d1aa7ff5490feb55edbb8e5b042bede582169bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-229.npz": {
+      "bytes": 4417567,
+      "sha256": "cf5b3ed450da9124461bd0fe386a5765de35fe6d3562b556fae5faa82cdeef91"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-230.json": {
+      "bytes": 737,
+      "sha256": "8c1a5a1ff9e6a1e48dd7466c269ffcf723007f440cc93360e5b7ea39ece45347"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-230.npz": {
+      "bytes": 4072410,
+      "sha256": "022cae11ea01f1fb2d92340622a8c215b8c36c312fcc9fabc38072c7759c1143"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-231.json": {
+      "bytes": 737,
+      "sha256": "b273d51972a9bb2137c1a08153163584639739e3085e89b1d0563537960fa384"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-231.npz": {
+      "bytes": 3923076,
+      "sha256": "158ca9adc97c9b85285ad387acc8806a309510fa2d66a36c04e3a2ade519e382"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-232.json": {
+      "bytes": 737,
+      "sha256": "b73d2d2871849de49f8ff73f457ce718bf4cd711f422d52b423f8a9d1907cc92"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-232.npz": {
+      "bytes": 4110188,
+      "sha256": "f64da60e07f35710d4a5c75d6d8c6923b799453a0629a580e409880e218935ba"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-233.json": {
+      "bytes": 737,
+      "sha256": "f155313e4ac44491a07c59a566088cc879828392901861390f44e04efc032dd2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-233.npz": {
+      "bytes": 3904033,
+      "sha256": "4dc020d6f39c3a4aaada83275edb07cc8bc1d5716128980a20e3887c5d4d208e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-234.json": {
+      "bytes": 737,
+      "sha256": "9a530c441d611a716aede19b4cd33278b76f92845f644081d7bcc72697dcc32a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-234.npz": {
+      "bytes": 4170840,
+      "sha256": "71df78fe5cbc1bab10ac77108826a421c6218b6752e1ae78e18fdeda19136cfd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-235.json": {
+      "bytes": 737,
+      "sha256": "f05d24c6d4923be11f1335ca1a1d027e31b7aa1018b0f71bc58d8cfe31159337"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-235.npz": {
+      "bytes": 4227823,
+      "sha256": "2f8c0abb9abdb906c25af650c87415756a6cec1fc4297a9e0e6c30834158be81"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-236.json": {
+      "bytes": 737,
+      "sha256": "3b346e73fe0d4b332e7ed33ff420cc21b9788cae00e38a95e2cdf69e03f2f4b9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-236.npz": {
+      "bytes": 3733623,
+      "sha256": "eb006586d568b5dc12de88b17dee366c7ac6b9bf9fc42b29401bfb25f9b04473"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-237.json": {
+      "bytes": 737,
+      "sha256": "1338297c7db0702fa89a1252dad8bd9e618978b902ac4e4c6b5e06df6d99aef2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-237.npz": {
+      "bytes": 4285055,
+      "sha256": "5dcabfdb012ae392b330608fcac24c5d9fd95da12aa92f4e92030dc625c06107"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-238.json": {
+      "bytes": 737,
+      "sha256": "84930fcf8c705f794486ed0f0c84f88c1b5e6b0723ae6ccb573de246ff96ffe5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-238.npz": {
+      "bytes": 3668749,
+      "sha256": "0f7b5d827cc80c4090d0bace4e25064cd5711336403f1e3ba6c0936f70a44274"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-239.json": {
+      "bytes": 737,
+      "sha256": "c0d9aafc83b980df15772cd8d91862c3efd13e6363918c1b6eb2ab3a28d61e38"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw/c006-fit-239.npz": {
+      "bytes": 4551893,
+      "sha256": "c49c44d5e60fdee71dc95d89d3f63b41739f55ce8b708ccd1e8ba9cc1bad81d4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw_manifest.json": {
+      "bytes": 194682,
+      "sha256": "a02840cd927bc0cc71984ae3f6de9a5386293d683bb5ac6b0d8f6cc714b98ed2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_evaluated.npz": {
+      "bytes": 40873919,
+      "sha256": "e025d591192d6541c960b48f3d5cf40ecfc46bdb9edce52367d53c4c7b217e34"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_evaluated_manifest.json": {
+      "bytes": 3458,
+      "sha256": "3fce2abf238f6ee8f055bcdf91e2f551a9a3289e573b19f013a71254897af5b9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-000.json": {
+      "bytes": 765,
+      "sha256": "73a36aacf300f2a65ddcf0d814f6615ae99c8ddac0aacca7948e060ef722ca8e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-000.npz": {
+      "bytes": 4046508,
+      "sha256": "90faa0247fcc175bc23e02dcd162a8e0b360d0f817add356f56db69caa6d60fb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-001.json": {
+      "bytes": 765,
+      "sha256": "7fab960dbb86a8b8dc519b3dd62b7c77c69730e9f2aed8373fe165c741a25016"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-001.npz": {
+      "bytes": 3789805,
+      "sha256": "5ffb6df5454dec622b836b0ff7f174095c8a73f53ca59de3d999a0f783107f1a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-002.json": {
+      "bytes": 765,
+      "sha256": "344b3a06ac7d58e6d9dbe97b82f7feabfc2751e8c6f35f42fcb861928e3fc4aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-002.npz": {
+      "bytes": 3671485,
+      "sha256": "fc302655c835820947567afce109db35f8fa120bfcd4d42d094f8afe4aab1223"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-003.json": {
+      "bytes": 765,
+      "sha256": "fdfb90bf2fe18ba613efb8f1c0a4bdcf70af8fd3607ed270cb21f0f7d2380db4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-003.npz": {
+      "bytes": 3918567,
+      "sha256": "4c54735baf872fd30fa8b0dbc3cb8b1e40374757feae95ad6ddb292ed3baa772"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-004.json": {
+      "bytes": 765,
+      "sha256": "c867a740aaf1a06da94006041267ed01775c976bc0d58feba0ba55dad78d296d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-004.npz": {
+      "bytes": 3737878,
+      "sha256": "0ec10056174c3cb8ccd4dbb64df064d21595f3ea81917a1d59da2ef3517d074a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-005.json": {
+      "bytes": 765,
+      "sha256": "3954d7886cd4b8f167ea48e121048a53c26531e9265978284ca53df60dcaa5d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-005.npz": {
+      "bytes": 4090962,
+      "sha256": "3e8067b7bd2537add4f2623d4cede40c98db2ad7bf3ced1161fdb293b67d8c3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-006.json": {
+      "bytes": 765,
+      "sha256": "d8c913ea0425331457864f82d0a2dad465a19935e94db32fda5422c6af1d1014"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-006.npz": {
+      "bytes": 3752237,
+      "sha256": "9d04c1be2e585bf1bd3ba08effaf5d2abaacec6d25b6d39e245d6ce027419edf"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-007.json": {
+      "bytes": 765,
+      "sha256": "1664a198a7204f12a568010798a286d8d21e504f83aca76aa00225af6d939f74"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-007.npz": {
+      "bytes": 3841559,
+      "sha256": "d542ce9560abfc8e2ececbba1512b7d13e29f42d18b0fd1f6a41569980529789"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-008.json": {
+      "bytes": 765,
+      "sha256": "3b3c0cb60c72a14fca142b230e8ea530a4b5ed22a6dcd5b1c7261a7ccd8f61f5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-008.npz": {
+      "bytes": 3738698,
+      "sha256": "0106982e3105874cd194075cb309e0633d2ec734321683b82943c8145f928a8b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-009.json": {
+      "bytes": 765,
+      "sha256": "2b1228066c92aa5dd9623c334522d287dc781a7a7405f1563fff4c50b184db97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-009.npz": {
+      "bytes": 3796932,
+      "sha256": "b90c78d69763ddb77c9f84d14aa9f3e527d03f264cbeb4f551ab9d785a37b5df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-010.json": {
+      "bytes": 766,
+      "sha256": "50e0280915319cc497dad4109f995b18828b72184e65fb9e45941122eb35502d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-010.npz": {
+      "bytes": 4079460,
+      "sha256": "c580e15585b2b4397ee65fa89b316332c3551041a2e6d94c05352a46b8ac8c0e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-011.json": {
+      "bytes": 766,
+      "sha256": "c6b0ea55feade491a281aa4c0c1865c0f12879716d2e02c2d9cc7f81bd6d9236"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-011.npz": {
+      "bytes": 3784796,
+      "sha256": "8de5bd7dec65348e388a479c08ea1df5da6c93cc8d5259cb68a4adef7364a61f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-012.json": {
+      "bytes": 766,
+      "sha256": "58ae42da723bfce3c7b12ed7a6d5c4c06293ac1043e27f7a4fc7ac80378bc50b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-012.npz": {
+      "bytes": 3497382,
+      "sha256": "b5e79afcd2d41527d63331276ae41cfa1f4020ede3602b531496e5618f643296"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-013.json": {
+      "bytes": 766,
+      "sha256": "882522b1aad464fac57012ba4be853c097de2a760ed2ce279a7b5ddbae74eb40"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-013.npz": {
+      "bytes": 3660191,
+      "sha256": "30b8ba5e91f690a90ef1733711b67dd78c6410485c9d720d45125c6a357d56ea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-014.json": {
+      "bytes": 766,
+      "sha256": "bc2b5774a8ff4d6f4d8fbb6dfc752907710b332a502172ec0983e0b63a613555"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-014.npz": {
+      "bytes": 3635500,
+      "sha256": "3254489e22022fc1af49bdfba94ecf612746f739b2ba6cbbbc9a6aeb6b5f23bb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-015.json": {
+      "bytes": 766,
+      "sha256": "089662a8145a35e0aef90205739492a45500bf416044bf136530c1ff850268ae"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-015.npz": {
+      "bytes": 3709769,
+      "sha256": "73b3b81c851c5f62fc9b008b9515cfa59a38a17b6841550ba2576162bfc96a7f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-016.json": {
+      "bytes": 766,
+      "sha256": "a370bb8e167508487e386fa45e1c5da18c4bbaf76f9d8bd642bfc68c51a9a146"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-016.npz": {
+      "bytes": 4380732,
+      "sha256": "c2e9f0587de399344dee045703805d76b13eaf8bbee1b55b6c01ff94afb3fe81"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-017.json": {
+      "bytes": 766,
+      "sha256": "7d8c1f947372d11fa5f29f48d893d548a262dc15dc4c8523fb92e89da2c602c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-017.npz": {
+      "bytes": 4048575,
+      "sha256": "9043e25e27aa6d71850c0e0bcf0cb0871c3da6159cb3349808d382439b63e71b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-018.json": {
+      "bytes": 766,
+      "sha256": "271c1422ea3e68eec77a12e568438aa858e8ad6b2ab8087b405ee53af93ea8a2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-018.npz": {
+      "bytes": 3607755,
+      "sha256": "825227a62ad21c7e202432a8c50761af9dde049b412785e2af46bf595fa61ce8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-019.json": {
+      "bytes": 766,
+      "sha256": "0d0aa7de3f3d80cc45976dcb8595451a9d7dfdf19045105f4adbc94018d28ee9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-019.npz": {
+      "bytes": 3608197,
+      "sha256": "a3657202afbd116ccfdafae475b1a74ff00e65c53b9f42993f9f2d023288e924"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-020.json": {
+      "bytes": 766,
+      "sha256": "16b87343d6e90223d221213708cf9d41945c52616e28b2368798e952f6605a37"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-020.npz": {
+      "bytes": 3831474,
+      "sha256": "6b43aff994722c59d89bb58745a436925ee8268750d1d0959da87745863da8c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-021.json": {
+      "bytes": 766,
+      "sha256": "fe134fb240c0a247cf02c2faad8873732ce063ecca2615b925f3529b1c8cad79"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-021.npz": {
+      "bytes": 3616418,
+      "sha256": "bfb56d788190e3f6fdc2eab895f454f20852a69251de529001249b887e325997"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-022.json": {
+      "bytes": 766,
+      "sha256": "5f4414cefcc654247d80616ebb8abf3d656dcf536c40a7df83baa14bd2928080"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-022.npz": {
+      "bytes": 3981453,
+      "sha256": "254a66b68aca9d8aa9488a6e4615ad593ebbd114404461b4b81775a295e59ffa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-023.json": {
+      "bytes": 766,
+      "sha256": "37640c48f40d17441e6da2fcda831b90e9493a8ee5caf719a79756ef0a9e41fc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-023.npz": {
+      "bytes": 3483849,
+      "sha256": "220b3c109d955d5804ae9426968744452068ab5afa8fc1eea64c92a0c3ebdd84"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-024.json": {
+      "bytes": 766,
+      "sha256": "ff453e271367a4f4e9c246067910b9703a5e0cc62f31bdb645a489100707c03e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-024.npz": {
+      "bytes": 3901122,
+      "sha256": "93d3b64976378fef5de053b567d34ab71511e79b0e3eb946b8b839d7afbe2f97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-025.json": {
+      "bytes": 766,
+      "sha256": "5d4a73d0b671c5547c5de459bbfdbc74d59cd918a5fbd5ecaee2378450990f8a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-025.npz": {
+      "bytes": 3882875,
+      "sha256": "0c40b3c087298051f0f0f64496f44aaca659516edc5b47a2837c9d5da84d266e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-026.json": {
+      "bytes": 766,
+      "sha256": "d29f909d1bc18053d0853a7892fe13989d24f2cb6b158ae9bbc83ece3bc990b9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-026.npz": {
+      "bytes": 4123504,
+      "sha256": "b71b87e3a656f0bcbc02fed87e212ad3640ffb76b0bc39b3ad5de87d23fc9f6c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-027.json": {
+      "bytes": 766,
+      "sha256": "76d9f4db604663a66681cebdd26b1c166e59d3fa279428f90317f14ce0d1636c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-027.npz": {
+      "bytes": 4100297,
+      "sha256": "125f82fd0af5be8b4df6712882c369ff02a1eeb78b17ab47d3f898004f53c2f2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-028.json": {
+      "bytes": 766,
+      "sha256": "cf42885da67023f23d5fb57f9f51a198d1283e5f3c4aabd3976265fcbd534da7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-028.npz": {
+      "bytes": 3623780,
+      "sha256": "3c23c586e03de9574eaf2f814c3127ade07a197721ae7d33f4f84782a28fb61b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-029.json": {
+      "bytes": 766,
+      "sha256": "0ee72130aefac4fc02f4a7a1791f2fc4a83037d6ead5d04d10813519e15393d2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-029.npz": {
+      "bytes": 3728659,
+      "sha256": "9b1b5a099c1fa3d7079b98156756a07e07f851bb6b414a895ea06301d3ca602a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-030.json": {
+      "bytes": 766,
+      "sha256": "29a09bbdad20d1a804a022be6cea02ebf33ed34f49f3078f0513d70ed493ddd5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-030.npz": {
+      "bytes": 3988257,
+      "sha256": "bd6d46d639be158de00fa5cfcfdb34bfc0cd474bf9083e5f42ffd4307f4cae95"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-031.json": {
+      "bytes": 766,
+      "sha256": "947bee113307153e1eae77b81e3bdacea2426206b8f37fb8a929fe44a9d261a5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-031.npz": {
+      "bytes": 3559662,
+      "sha256": "1fffa4656f28495c97f3dfb8868b8c5cab5b693e83f4cfbb705f5121dee9a0d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-032.json": {
+      "bytes": 766,
+      "sha256": "2fe3c38071cc55b5c878b46d65adccd7d600a181fca2bb050a0cf5abb72af64a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-032.npz": {
+      "bytes": 3879189,
+      "sha256": "301f828934746ba3e351719271fd4a64cd0419cc6b26aa3d43d8d85cea3a21ac"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-033.json": {
+      "bytes": 766,
+      "sha256": "0ed3059496e4617afbf213a120102c4ba2d590392cd8b04ad28591557c9da15a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-033.npz": {
+      "bytes": 4066949,
+      "sha256": "7dc6326fdb3a22a7d2c40efbbe00d55871f0f1dd38e4b8728c809a11a457366c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-034.json": {
+      "bytes": 766,
+      "sha256": "197d96d20c7afa779965dedaeaa553237d7667c3c34b3410191fd163e5db4775"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-034.npz": {
+      "bytes": 4289424,
+      "sha256": "fd650ac708b6730f575c68cb967f4ffce65573c6fcccc8ed3491a5b2619cd5aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-035.json": {
+      "bytes": 766,
+      "sha256": "c0e9657a21b09cd5a2a90181cef127cf8874295bf87de90caacc67c7f5191ac7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-035.npz": {
+      "bytes": 3540973,
+      "sha256": "e83c2172acd5fc75f3f6190c3e866a51ab84912d57e26492e4f2d5865d7d2671"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-036.json": {
+      "bytes": 766,
+      "sha256": "1e93ec67b16ab873b887f249718cdd45342b045674fd717a7f5ef7fb27e125ad"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-036.npz": {
+      "bytes": 3759802,
+      "sha256": "e92b77b6d4465803974286fbc08c0076d6d76016f2d862b0e2574e14b521a1ff"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-037.json": {
+      "bytes": 766,
+      "sha256": "b23ece7710ca487ff662366db87cb67bb82b78a990e4681ccaf0102303fa5910"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-037.npz": {
+      "bytes": 4013184,
+      "sha256": "440f81f5170d7c3fb91ba72391b534fd12d8c4787c0e6803d058e6782bcd486f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-038.json": {
+      "bytes": 766,
+      "sha256": "4b0c0e0b5a6563bcc0100f84718d5dd39fc890bebb73671ec51c13f0565e0f43"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-038.npz": {
+      "bytes": 3525645,
+      "sha256": "007f16ae17a0f786541d051624174a63bd2cc25f3f82a5e244c85ab46c0b8944"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-039.json": {
+      "bytes": 766,
+      "sha256": "31d57bb95c791078f5027c7dce8beb7da538a516f17b2794ddaa35a8901c6fb7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-039.npz": {
+      "bytes": 3558430,
+      "sha256": "e09f541ad2ab24dcff12ef351d2cd20ba1a2bbbd56fa91b587d92da6cbdcb28a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-040.json": {
+      "bytes": 766,
+      "sha256": "4b720fae09f111ed5ad3296155d798dad046fbf4d78c21c22960b8973b9e3864"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-040.npz": {
+      "bytes": 3844094,
+      "sha256": "342a87177aceed89b05af6aae137540661c9ad59d9123c8294ebb0864d532fb4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-041.json": {
+      "bytes": 766,
+      "sha256": "95201595d6e49654ec26d116159bcce4eb911700a8aee9f7e9ecb6a47e2b4f1f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-041.npz": {
+      "bytes": 3630794,
+      "sha256": "de30824d159cd19c27587027e07135f36782b97bdbdc9d63a19409fc2bc45581"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-042.json": {
+      "bytes": 766,
+      "sha256": "6317c1f9d89f551fa7ddd20aa6a8e34647653df162359320f5daa4a8a705cb7e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-042.npz": {
+      "bytes": 3397055,
+      "sha256": "18b0f8ed618ad12587bb9d92bb6a1073f78f0cadc5e7cc4ad2aaf9086b3dda20"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-043.json": {
+      "bytes": 766,
+      "sha256": "1f7c25450b97a07559dcfaac57b95ab0616c50ec5561637d024b5774aa4c1465"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-043.npz": {
+      "bytes": 4030124,
+      "sha256": "61a580273337883e275760bee14d4672a7bd19f0df8df8cecddb6beb3a95e685"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-044.json": {
+      "bytes": 766,
+      "sha256": "f6449a70db2d59ea3bbb33a511839e7e611d97a8c3a4c7b800d04fb228ced7db"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-044.npz": {
+      "bytes": 3804525,
+      "sha256": "eb6de44769dc5d5785c3c16b49b8060f0a4715eba0ddd9dded8c835600b64ee2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-045.json": {
+      "bytes": 766,
+      "sha256": "7b388d6f4a6d82ae36738bf67b68a0534194a48df2b6df491e2febda09699524"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-045.npz": {
+      "bytes": 3869667,
+      "sha256": "8b55953902f0f072c0c048ac900532cebe96c204d87ce1f0b85e9df7fbe499b7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-046.json": {
+      "bytes": 766,
+      "sha256": "972c7905891a9d9f57c46802a0b6b6a9f606ec3d025a2cf262754d2949cd736a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-046.npz": {
+      "bytes": 3699164,
+      "sha256": "7be849d47d42f64ac0afcb2906c8a2995606419f206487f069f1f0b50c0a06c0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-047.json": {
+      "bytes": 766,
+      "sha256": "3083512ff0b912903e87add2950bee2e3ae2f44afd1906645a9081bab5a6fdd1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-047.npz": {
+      "bytes": 4094039,
+      "sha256": "53392a3bbfb4f0ce44d7fc3133800d2860dd4500182e701446a4081cc63b32fc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-048.json": {
+      "bytes": 766,
+      "sha256": "50c2812e5bf60c8f7f3e2fb8b737bc79c4ce33a7722c711a1a48eff952f2fd27"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-048.npz": {
+      "bytes": 3760609,
+      "sha256": "5b57bf2122cacd8514e271e92eea504e3a7e2df97b1eb3f9b2a28ceafe1f3eb3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-049.json": {
+      "bytes": 766,
+      "sha256": "48052aea042ce77a093a4efde144a8a8d0b4260f92b986c464528f2e9a5317ee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-049.npz": {
+      "bytes": 3586471,
+      "sha256": "a1c5e43793c38d28ba0b3d4ed9d985ca05d80010114c08f0e845ae17bbe4e7d9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-050.json": {
+      "bytes": 766,
+      "sha256": "c90ec0f1c5c3bef8dbe3e862aa20ea6b1fc0818baa7a53846cd9a732ec5f4f7e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-050.npz": {
+      "bytes": 4168062,
+      "sha256": "fa54bd30eca9f6a5ff9eb3d55e3c863e3de3cba7df1db22884da7e69ff0da079"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-051.json": {
+      "bytes": 766,
+      "sha256": "cc5d737e80f0bef025c190b78cb9364238eedc81b89ffc464015a4a1dccfb38e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-051.npz": {
+      "bytes": 4281768,
+      "sha256": "8e37058687413747a3aaad5bc3c3ed004bb3bb30b4d94c29c3e677228f7d5b48"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-052.json": {
+      "bytes": 766,
+      "sha256": "af658a5ea6da1c87ec3c4494207a7e5d296f71ecd3d901fd27d11c56e12e54d8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-052.npz": {
+      "bytes": 3890366,
+      "sha256": "058e36dc3c50261a96828896ae4b3a22dd13f649923d26f861da7aa986560d92"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-053.json": {
+      "bytes": 766,
+      "sha256": "fb6f064fc2ffc2f1f7767185d5802b101c09e7c82b85f57e5d202e85b40953ae"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-053.npz": {
+      "bytes": 3800214,
+      "sha256": "ea1693dcc5e67eddaf5939963d89bce546917f0f18794666200eee126fefb988"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-054.json": {
+      "bytes": 766,
+      "sha256": "5ccacd771fed0a0c0ea4e592dc0c6dfd9169606e6b8f8ffe2485d6e20df2a2f9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-054.npz": {
+      "bytes": 4124648,
+      "sha256": "5a9d90289915a130f15ffcc4c51f15bb8e7bba0a13a71b00fd3771bb9e681f5e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-055.json": {
+      "bytes": 766,
+      "sha256": "e1403daefc27ebeaadd6df71df7bad458a699998231db2a1e6706731336d08aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-055.npz": {
+      "bytes": 3835428,
+      "sha256": "a4a4039d0317f37fa629c8260ed3a4a88e4d130a6119c4bcea4a4e1f5cf0b339"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-056.json": {
+      "bytes": 766,
+      "sha256": "3ef1298fd5c6133d19202ac1d6a2d2d3d73d5960004a40bed5d8bcf7c4173eee"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-056.npz": {
+      "bytes": 3714674,
+      "sha256": "690d7c5d5ec930f6c39937a08b340b46e69c9f96caa5dca61bfc7f61fcd50354"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-057.json": {
+      "bytes": 766,
+      "sha256": "b8a24dba3c7ccbde727ef53835942bd6ced8815e3f7aed1d6cda8b7fbcf4685d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-057.npz": {
+      "bytes": 3688190,
+      "sha256": "a75b4dbb09e15545fb505f6431738cfdca74561b04555665a41e316d81cdbfea"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-058.json": {
+      "bytes": 766,
+      "sha256": "eb276223e2bd2c6d0618fbdc694821e492ef48a7f288e5eab9b4baf38d9ea422"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-058.npz": {
+      "bytes": 3995148,
+      "sha256": "3666ad1807850f1ca623b3925a51dd241f6489177e96614f7ebf5bc9b81e6c6d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-059.json": {
+      "bytes": 766,
+      "sha256": "e698faf4c6f171ed01b55444a7deac23dc3954a04664d5b1ad220ad1b3f419d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-059.npz": {
+      "bytes": 3378503,
+      "sha256": "19fe0857244d69dec1e3f388e7f25d916c0bce283bb03b882ef4911796e11d0d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-060.json": {
+      "bytes": 766,
+      "sha256": "f22a0e985ba28a975b882b7c4f6654628e2602c4f84c0b1d364c18aff4ec0afb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-060.npz": {
+      "bytes": 3733935,
+      "sha256": "c2e2814412fd54b8db717aa24e7ff0acb99d902da0edfaf3ac3a57d2be7b5d79"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-061.json": {
+      "bytes": 766,
+      "sha256": "b3726f59408db85402ac6b3ec819548e7dbe71f209c4e346a31683e01444a191"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-061.npz": {
+      "bytes": 4019718,
+      "sha256": "27792f1391373608299e467df073dc5247c4b36cba9cbea2dbd4b882d6b07919"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-062.json": {
+      "bytes": 766,
+      "sha256": "e4d14b962ce0ae8c0383ae1ac52f4cfe534c75b6eb63c6e9cfbb003b4e108184"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-062.npz": {
+      "bytes": 4172190,
+      "sha256": "6ce2dbc5b9e49924401c7b9033b452aee3fb9b7a97b2d508d317018293e6745a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-063.json": {
+      "bytes": 766,
+      "sha256": "1f933aec4a36262ef5bd8025db0480fa4e2be38a9dc0f8f533df58309adc96cd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-063.npz": {
+      "bytes": 3464690,
+      "sha256": "2c55b3a0c625b3821d6849e3c62b82518907affe7ab2b098caa4e690e8621349"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-064.json": {
+      "bytes": 766,
+      "sha256": "27a6cbbd0f37c3fea6ae4218529ab2f83156ad1445b365e748c419eee0167fc2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-064.npz": {
+      "bytes": 4119626,
+      "sha256": "9a73f9cd01567837ebf760c4b369ca44485d79d4431054df388e0f844ee1281b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-065.json": {
+      "bytes": 766,
+      "sha256": "e193b79d97b8288fbb995f0dbd1c759a45f93adc43218a91206db5216f404668"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-065.npz": {
+      "bytes": 4178526,
+      "sha256": "941f067e2872e70774d6d4f5bae2829d9efab5e9a0dd82eae5ed38f44183326f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-066.json": {
+      "bytes": 766,
+      "sha256": "6059e93024fc9d3d6b3cbf77be54f5e92ea7af3b06580fca9e59959e3e497611"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-066.npz": {
+      "bytes": 4254163,
+      "sha256": "87974cf64fb8b49ded4fd985db8810c66075948e40c8867901c7cd59fba5c041"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-067.json": {
+      "bytes": 766,
+      "sha256": "cc7cea065966ab108943acbe4d53819a6569297eed4104d092775ece311f3463"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-067.npz": {
+      "bytes": 3870532,
+      "sha256": "eb49672978d1757e2bdd2220fae178b238d840670141fa040be90edef68fd243"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-068.json": {
+      "bytes": 766,
+      "sha256": "d536c8e06adaa124d9780e5e85d980e713a67a59decf7e03453246362b9350de"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-068.npz": {
+      "bytes": 4232122,
+      "sha256": "ba0171f5fc1dc6207e05dd588efa8b206512572395c705240c79298b234937ae"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-069.json": {
+      "bytes": 766,
+      "sha256": "963ff863a3419c609a58d490e474a43380e99eb9438b74bc648ffca6abe73d6a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-069.npz": {
+      "bytes": 3885910,
+      "sha256": "97748ba7db01c8a64b28633a8522e844059766b30e0b0b3bba90253ba7ff24eb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-070.json": {
+      "bytes": 766,
+      "sha256": "b9653c9f981d346fade47fa6b2b6392711f71f5ac81ec23ac2493949ea096bf9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-070.npz": {
+      "bytes": 4540285,
+      "sha256": "599de53c1ff0dc0a6573a3d9df7d5886fb4dbafc4b327dffb9ff73aa50b21487"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-071.json": {
+      "bytes": 766,
+      "sha256": "b719abcb5c61bc4c4af2375315d76864fecd771792e229cc97469c15687dc05d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-071.npz": {
+      "bytes": 3588198,
+      "sha256": "52ef5b1d218e05ba0075344887b904bf4892403d5aa2d6088922cca847777cfa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-072.json": {
+      "bytes": 766,
+      "sha256": "a45f39cdc194b09220c6dcdf69671fc5a2e50fff9d9cae19721163a84a5a153b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-072.npz": {
+      "bytes": 3734440,
+      "sha256": "3203b42514e6cc17fd885cb8f7f682aea4dbdcf8ff08da7c5986d7fdf7e5e95b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-073.json": {
+      "bytes": 766,
+      "sha256": "95fae0c00722e4f0843a6913e5dd032d2573023c38be06b300afa00a0473ea22"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-073.npz": {
+      "bytes": 3916087,
+      "sha256": "a6c9d5da178f74acdddee7ca77d835a6266125e73717d014586028bef7f463f1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-074.json": {
+      "bytes": 766,
+      "sha256": "ccb5dc6c5bfacb4c73b353f782cd0406c20391306eb94392fef8fecd61c6503f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-074.npz": {
+      "bytes": 4382543,
+      "sha256": "cb465e0eca515d2b3a96ffbd5527a30159fdb123e65280a00a2981008ec7bfde"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-075.json": {
+      "bytes": 766,
+      "sha256": "7abda84b35c02951bccfcbba2f378c25fa36a734573111d2edc821bb94cbb57e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-075.npz": {
+      "bytes": 4009297,
+      "sha256": "e6365b1d858fd8bff16d86cf725b168508865b243c8e9d933eb97c69de898fb7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-076.json": {
+      "bytes": 766,
+      "sha256": "f7b91a2800a9092285a09b83dccca602abcefbf4ddd7994483a152d487796291"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-076.npz": {
+      "bytes": 3448800,
+      "sha256": "781506048151645e2965d2556342b149fdfb8f5608b032d17b67c34bfff156a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-077.json": {
+      "bytes": 766,
+      "sha256": "76168cf122ecce08d581da179c47f58a223eaecc9ce4250a145ffafc00454f88"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-077.npz": {
+      "bytes": 3711530,
+      "sha256": "bf780a4a7a959d595d67f721e95728910d3a3292c53bba402ae92dc085665804"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-078.json": {
+      "bytes": 766,
+      "sha256": "8cb585385e7ab2149a270ef82836286a13036d785d719c423edd73bcd7aff2e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-078.npz": {
+      "bytes": 3870777,
+      "sha256": "3a10a4798a6f3a43b2cab0a9d58d5f78169e24c5925d841274cb87d2fb3eeca5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-079.json": {
+      "bytes": 766,
+      "sha256": "175d73712df004c64ef25eac597d14539cb103b3e3bf4cf91549874b9a4f388d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-079.npz": {
+      "bytes": 3822726,
+      "sha256": "e5413c83e645ddc3c429cf6afedab63d956f6d07bb9c8dcf687dfcd5f3a85f16"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-080.json": {
+      "bytes": 766,
+      "sha256": "2ed89af096f4ca90614ab4539e075d9cba8e0d8b0de0dba069c8de0c8be62ef3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-080.npz": {
+      "bytes": 3523004,
+      "sha256": "64bf1b39e326939740a9c115fbb34696a8b1549f6b1544d0b3fd804067a508e2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-081.json": {
+      "bytes": 766,
+      "sha256": "5d6fdcee05c6e4a9d3877732d5c0742e6a61110ee0de6c7e8198cccb8ba092a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-081.npz": {
+      "bytes": 3607365,
+      "sha256": "fb9d048ce10453e01bf02c2014dac07a43de2890176631b094c221cce4aaa630"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-082.json": {
+      "bytes": 766,
+      "sha256": "fd46e1c8ebfcff6c20f889633369aaf9f3ab013c10d43e9507390ff74f6526c9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-082.npz": {
+      "bytes": 3706714,
+      "sha256": "d83951b14ada2fa2740f397f653ea03eb7db2534946d260acd006fb3ff848063"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-083.json": {
+      "bytes": 766,
+      "sha256": "3e5290c7d68f877ec0197d8b486f076bebdccf188a7af0fc7b1b9e32836522d0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-083.npz": {
+      "bytes": 3716695,
+      "sha256": "ef155229d21e5e5478b710d6b6ea38f1857f5c7071f8427793650b549f3d4615"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-084.json": {
+      "bytes": 766,
+      "sha256": "404256bce7d351c25cf44826af47d1e028ad5aa1c70223cfba9f4d47bf631a56"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-084.npz": {
+      "bytes": 4124365,
+      "sha256": "efc8fadba44a53bf1363c520c56669615470706822a4c5e3a0d1c02a5326cc53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-085.json": {
+      "bytes": 766,
+      "sha256": "6d531f752efebdd20c9290c474f1c3aa3c75ce4e1fbd19c6c0e673d1d02bdb85"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-085.npz": {
+      "bytes": 3797959,
+      "sha256": "1553d452ffcf4d47e95c407273c027c18a8c762dbc20346f2963648a5ad9e4fc"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-086.json": {
+      "bytes": 766,
+      "sha256": "60e2c322042e2d022a431fb912d55639aa9dd0f3ed16995cd210968d50080548"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-086.npz": {
+      "bytes": 3577066,
+      "sha256": "8d1b40acab325d39e1f7abc468097a3e120c60d9a6ee1465fc74a7f1c4c9143e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-087.json": {
+      "bytes": 766,
+      "sha256": "c9d144248db7a7f512b16a9528898273ffddc052071df212f7f69ecca0bf7d44"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-087.npz": {
+      "bytes": 3592189,
+      "sha256": "9d006e74b0e3e1fffac670191d25bfcdaa6453fa97fd673ea600cf039c5277c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-088.json": {
+      "bytes": 766,
+      "sha256": "c7c28ee605c16139610ecd9cb5dc594dca2c6cd0c371e3c71cb525eda3313501"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-088.npz": {
+      "bytes": 3377366,
+      "sha256": "266b566bece38a9c02dc4d4221239147c10b34e5442ada8cd6d2019333ac813c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-089.json": {
+      "bytes": 766,
+      "sha256": "c8acdad56e23caa1f72bec0a498556d109f8d09b718aff98f6c10b4156e4260c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-089.npz": {
+      "bytes": 4298380,
+      "sha256": "0cd6480bf72d14f552f57ec0cce6805beb9df1790d54f554cfc7cedd49f657f7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-090.json": {
+      "bytes": 766,
+      "sha256": "940cd518b1a8b284034d4a274f41a92743f9017d660fb5e31c7b35d8efc2d3f1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-090.npz": {
+      "bytes": 3634882,
+      "sha256": "e981dbd9c758a5893414878f848c9e858a7cea1f528d3f478ffea888af5e04e6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-091.json": {
+      "bytes": 766,
+      "sha256": "6a2e31701cb0e6a2e3be4a4956dfc5a17ef33d3f1e80c54b684df792d7155539"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-091.npz": {
+      "bytes": 3870990,
+      "sha256": "d3f59f48d477cdb0388547dc1f240a312096f37a4a93cd1c29e03050a7498853"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-092.json": {
+      "bytes": 766,
+      "sha256": "44af154501dc57ed7e3d9aaa044727067d09700505298b8a971856b58b0beedd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-092.npz": {
+      "bytes": 3579441,
+      "sha256": "f4845e2d1d3e858bbcd76ac488f13017a04af242ae5abb15858e2f51c9ba713b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-093.json": {
+      "bytes": 766,
+      "sha256": "dcd6ac8bfce586ba7dfa2d162cd013c91efc49961140f5697b69c6bbbf5f29b2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-093.npz": {
+      "bytes": 4035420,
+      "sha256": "a78cd759b3e5995ee5cf5562972ca3563dfa995771ac489128dc2f0be8239310"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-094.json": {
+      "bytes": 766,
+      "sha256": "9946c43bdd457692b64a7e9ac5df4c7e09a3a215a4a0b8c4b0a4af003d3c1fe4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-094.npz": {
+      "bytes": 3564632,
+      "sha256": "76daffc6f6126c7e59c0005ad7f5ba2f2c0593a27763ad67e7e3ff9ce44af5d3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-095.json": {
+      "bytes": 766,
+      "sha256": "54e7b220c0ac1f1347e015ecabb2bc0d62d52cf92ca88f1e19f636363f342548"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-095.npz": {
+      "bytes": 3643911,
+      "sha256": "aa1de104ac4dd27731000e4701f7da74f6c2cfb2f946ebc19017f62286bdc289"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-096.json": {
+      "bytes": 766,
+      "sha256": "07afd7035a66b47791183833101274aeed7e7b8497c16b586f266f96069b5301"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-096.npz": {
+      "bytes": 3313335,
+      "sha256": "b252eba36781e9d24de6b0b8466bb5c51928d4868ee3cdb6c5ee928edfcd9109"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-097.json": {
+      "bytes": 766,
+      "sha256": "ed040f184b7abe6f9e77822f1d680fda43ed7f9a8ce945db16561098fcb7059c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-097.npz": {
+      "bytes": 3945254,
+      "sha256": "ae5dbbfb9db7c232d3800a2d176ec7b6564dbb2bb3f52c0b56e56141739a8ac7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-098.json": {
+      "bytes": 766,
+      "sha256": "f94242a67d6d5e2b0a44bb1c0ea54b516985688644e4fbe1016a97e75a9ca2df"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-098.npz": {
+      "bytes": 3611665,
+      "sha256": "687a9cde4ebb4a5674c25a0e91374ef50a8f53af9d63991111178049d12c5a53"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-099.json": {
+      "bytes": 766,
+      "sha256": "6ff51df33fb8d5a0183a0b136d4384885a236f9e0c9044554d4f4944f271cdef"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-099.npz": {
+      "bytes": 3855963,
+      "sha256": "2bb353163ebf2224589a0894382ac5483a69556ca26a93b7742533f87d0050a0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-100.json": {
+      "bytes": 767,
+      "sha256": "bcac8554bbaf607c812e60547a37be1f85ca26e267ac5c9c5da024235e0d7991"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-100.npz": {
+      "bytes": 4211857,
+      "sha256": "29a0b743fc34c29d2340813a2fcbce4bdcbc22a2fc356b31338f075572fb9b95"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-101.json": {
+      "bytes": 767,
+      "sha256": "e838fb95c4e0e818302ea99d6d8a5bf81840ff8ae2639eb2418488ba71611a66"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-101.npz": {
+      "bytes": 3763046,
+      "sha256": "5852be8e39ff5191e8b27ed777561d00d7466fd1c295fef0890b7e9cb5e93f66"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-102.json": {
+      "bytes": 767,
+      "sha256": "90e6565306ca7682410d8fb61506c9ab09036a5ae007babcf0d45ff5f288e396"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-102.npz": {
+      "bytes": 3933732,
+      "sha256": "004aedd29d1fdfb54d8e773e5931007bb6db609b806f227e0cf1ec70533d2049"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-103.json": {
+      "bytes": 767,
+      "sha256": "b7873c5129e0d293c291f8ac19dd61643653dabacc434696b0ff14eef9fcb97c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-103.npz": {
+      "bytes": 3675237,
+      "sha256": "218c86c96b1ee0ce8154c461769d91136c12cde34ac01018842b68075833fa8f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-104.json": {
+      "bytes": 767,
+      "sha256": "a7e83ea2dd7c66bc84294113ff26a6006a27fd6646957bdc4bfa35c8d7669438"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-104.npz": {
+      "bytes": 3860558,
+      "sha256": "e01cf30937821fa2f1f96226f53b647d647a7026f5571f148bafa8f64b4a6088"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-105.json": {
+      "bytes": 767,
+      "sha256": "751a3bb3871c4194e30b0aeb2b861f2ee0b6ee54e3fc1771946758e436db0505"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-105.npz": {
+      "bytes": 3717602,
+      "sha256": "6f847ad1640df30a7826cf1a072c41444571434bda034df7fc151685bdb90329"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-106.json": {
+      "bytes": 767,
+      "sha256": "3675542601a1e7f44a992f917301c72342b4e57c41020b1c0b19d6137e2eca49"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-106.npz": {
+      "bytes": 3682235,
+      "sha256": "77f2b0fbe08aa54e4ecbb55aa3687f6dca3d13937a788f04f350e227040ea5aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-107.json": {
+      "bytes": 767,
+      "sha256": "1151257038edd7cb5b729401540b6ad95dc768439bfcfaa239dbe181a77c0cc0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-107.npz": {
+      "bytes": 4075260,
+      "sha256": "b2fcb18186ec1d00c59a13be07a4dc707c6bec100f7f041e94f8caca8149b9f2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-108.json": {
+      "bytes": 767,
+      "sha256": "5280d72d1781a24dae580bcc70aa397f75f9fbb470880bcbfb8cec26e5f624b7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-108.npz": {
+      "bytes": 3957977,
+      "sha256": "c68ca819a3c0acfc34e1c101b62bb13643f1d86abcc68dcb09d0b712818809a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-109.json": {
+      "bytes": 767,
+      "sha256": "23f0e399fb70bb0d75685867365d66a747249ddff10acd3a891355adc3b01617"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-109.npz": {
+      "bytes": 3531019,
+      "sha256": "68c6d78dda268a9e7aa693b9029c17b26c114d45d9ae7d988a1e0ca7abc0ab7e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-110.json": {
+      "bytes": 767,
+      "sha256": "01a301ccf67922bda323220c7a2bf7ef9c8c2158d24b8930b5ff0ac20c0f4a15"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-110.npz": {
+      "bytes": 3793092,
+      "sha256": "9e8b923ae63d7c8e3722aeff166aa0b2086da7ffbdd8ff8686d88bef476dc888"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-111.json": {
+      "bytes": 767,
+      "sha256": "11d34114afd87dd992b6f5b78815dd2337739b6788168d1799475795139863fb"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-111.npz": {
+      "bytes": 3663142,
+      "sha256": "b4bb5e930a1a2e70ca2fd385ec1e51762a494fd12e45f51d27310bde6dadad71"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-112.json": {
+      "bytes": 767,
+      "sha256": "596fffb952d04811d585501fb36730e138a8adec845f496acf8f036ae3cab133"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-112.npz": {
+      "bytes": 4344975,
+      "sha256": "1102512b6e5be91e74e72170808479dad1228da31661b77a1817ab9a91e59b47"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-113.json": {
+      "bytes": 767,
+      "sha256": "6948b640132126d0a83a179b7a04ac4bd779b04e02b93889fb2df4e62e69c6bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-113.npz": {
+      "bytes": 4249632,
+      "sha256": "dfaefc21d109a4b915101f409bef4b6da04a7094da666fa150256f4b75a474a3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-114.json": {
+      "bytes": 767,
+      "sha256": "653e9bebf7eeb9dd54032559be32e2183363dc5b9ae34b908af3d23a9367d730"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-114.npz": {
+      "bytes": 3947142,
+      "sha256": "c8afd00ee4859d9d07208011ed536881e2f96d60c04995aba29e105cfe851400"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-115.json": {
+      "bytes": 767,
+      "sha256": "008e95a43c6cb69f066854372895bd5cc3031ced21c700936cada79d52dad8a9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-115.npz": {
+      "bytes": 4214231,
+      "sha256": "dce3094088d401965a483c9197f2bb6c0ecfe403c6396475f81c309f089dd89b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-116.json": {
+      "bytes": 767,
+      "sha256": "0cab294acb2f46d9fbca6ff48881ff0b0565d9d974514bee99dda39f9dde3250"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-116.npz": {
+      "bytes": 3634366,
+      "sha256": "100d9740aa976877bbff408511a93fc0a1f1b02139953acf12e5183c282403ab"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-117.json": {
+      "bytes": 767,
+      "sha256": "ff557427a6314e74547e2a7d8cfa8a72ab48bf6042123cf7333ea64c14a422e3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-117.npz": {
+      "bytes": 3759801,
+      "sha256": "c0df687465ff5f889dfeea359a7ef71c5cf7862c1aa44747a44a7e4af5a5ff99"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-118.json": {
+      "bytes": 767,
+      "sha256": "a56b40fefe7d45c47e202070c8eefccadd992a01b74b795fab01f25fff23ff97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-118.npz": {
+      "bytes": 3614470,
+      "sha256": "d9a7471f91ae0a0ef83072325af039190e31df62eaad4f281800276ecf12856e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-119.json": {
+      "bytes": 767,
+      "sha256": "f737e2846989d6d9c11729ed2b2c098452c779d713fcacd045fc040633dfd3b0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw/c006-selection-119.npz": {
+      "bytes": 4140125,
+      "sha256": "32db53d8b877f355d5f0e7dc7dcb0c849dba1523c4310de1d887b37897c33070"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw_manifest.json": {
+      "bytes": 101088,
+      "sha256": "f52110c782e122b0eea9e824aca486f28564b4081207b8ba6850f332590dea79"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/decision.json": {
+      "bytes": 1959,
+      "sha256": "3015a4fbe6275d781c86856c0198b30a0f99009c2520967f725d1148e94f522b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/derive_flops_graph.py": {
+      "bytes": 1079,
+      "sha256": "27f2594dd56a0347f3fb6d6a9c258873d806db28cfcf0d0eafa45456dc90489d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/derive_flops_symbolic.py": {
+      "bytes": 2270,
+      "sha256": "1e13ecd034ff8cb0f00eff297e5ee37cd0e3d1780680a9cd0b21d727a860b5d2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/fit_lock.json": {
+      "bytes": 797,
+      "sha256": "e98aae792d97a3cd57c16df6f1cdc2bd74d533afe08ceb887a71e4bc4dfd42aa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/fitted_candidates.npz": {
+      "bytes": 174460,
+      "sha256": "f4bffc40059f5890cf57b95891c62887d4b3b0ac7e58689e2a2d4aba3e75aab8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/gate_selection_ledger.json": {
+      "bytes": 19463,
+      "sha256": "3bfb1ee62fce7dacce490132a2c6d32ea31ecf47be9eaec6fe7df1f46f67a520"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/finalize.py": {
+      "bytes": 6000,
+      "sha256": "b581ecb8bf045fb5c687653114e5e8ca16396c304452f4e197e83e1703bd2247"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/fit_select_gate.py": {
+      "bytes": 21459,
+      "sha256": "1abaa79694dcb922c4fcc607babcc4cc1bf992607e4a7dfb1212d5879f3513d9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/compiled_gate.npz": {
+      "bytes": 24821,
+      "sha256": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/gate_fit.npz": {
+      "bytes": 77896,
+      "sha256": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/gate_freeze.json": {
+      "bytes": 2934,
+      "sha256": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/gate_freeze_seal.json": {
+      "bytes": 3113,
+      "sha256": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/independent_verify.py": {
+      "bytes": 19950,
+      "sha256": "0eb6565e168f44279bf46ca03f171558293b96de3823efd31aa79adbe326d147"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/input_loader.py": {
+      "bytes": 1906,
+      "sha256": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/invalidate_cycle.py": {
+      "bytes": 1609,
+      "sha256": "54c41d8e80c57c7bba60bf088a9e79bbf932e1f1d7b93e9ccb757b1a261f16bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/latency.py": {
+      "bytes": 7578,
+      "sha256": "964f0cafc15fedfdcf5ca86bd11c31d02846e887128512d474361093cd151ed2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/numerical_equivalence_contract.json": {
+      "bytes": 5317,
+      "sha256": "86abf62658f6bb0ff47197ba58b8399c530107f81f47a4d731fd925e325a9e25"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/operation_graph.json": {
+      "bytes": 8054,
+      "sha256": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/outcome_mapping.json": {
+      "bytes": 1278,
+      "sha256": "5901d0bd302384332233a7b9e65200de16ef975523d59f5ff87c51e6b49123c3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/prepare.py": {
+      "bytes": 9881,
+      "sha256": "61d6607cb646bd19bdab82e7fdbfcf95bed4960f0c3a7e486ffdc8aeb9038da7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/prepare_design.py": {
+      "bytes": 11981,
+      "sha256": "2a3fae04efebb3cba560ee17d8d94cd8680ebf0be48842d88cd137487a32e355"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/preseal_tests.py": {
+      "bytes": 4418,
+      "sha256": "6c86828736a178bee0a2c66851ae9faa750fbc5e055d30aeca67d43587370f90"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/protocol.json": {
+      "bytes": 4854,
+      "sha256": "0d2ee603eea7c12459241e9d4fd1488642df631a6d97839fa9a0497768ed544a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/qualify_gate_fit.py": {
+      "bytes": 7411,
+      "sha256": "4260228de67c451c23ca488d523cb8b5212af00913347d1d9dc15d8bfe753e0a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/qualify_runtime.py": {
+      "bytes": 6435,
+      "sha256": "712609b55406acc2f0c47b0b5d4b0ab085e2cefba85f90e204c08c4bdd2f052d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/qualify_simultaneous.py": {
+      "bytes": 4537,
+      "sha256": "06699098218502c6c300b9036d6a0b4823762129c986b56fd8125da074815518"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/runner.py": {
+      "bytes": 34483,
+      "sha256": "7dac9700fca9d6be04f12baaf6f3b730ce306f7197c03165a76a65a955a1c368"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/transitive_source_package_manifest.json": {
+      "bytes": 11019,
+      "sha256": "4062ee8b6ea03b968ee354cb116e3d59248652424bafab522d9f87642e39827a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/verify_design.py": {
+      "bytes": 1701,
+      "sha256": "abd73e6e3cf64c67434b287b24c238c2218afbcfd6a7cefab3acc24e6ddcc986"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/verify_final.py": {
+      "bytes": 1418,
+      "sha256": "a2f398744d935cbffdeda7e797c5970871c54a7dc6fef4a880fc81c523f196f4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/verify_gate_freeze.py": {
+      "bytes": 1393,
+      "sha256": "3be4bb038189e3bb979eb11c0c2310e73dbcb420cb4c21e1c6604291e1d2ae7a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/verify_pre_data.py": {
+      "bytes": 1627,
+      "sha256": "c2fd51e71cf137c012447f33aae3dd12ca84b1194fd6e74abfa1f6bff36dbb34"
+    }
+  },
+  "path_set_complete": true,
+  "path_set_policy": "all durable files; interpreter caches, dot-temporaries, manifest, and manifest-verification file excluded",
+  "root": "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit",
+  "schema_version": 1,
+  "terminal_outcome": "cycle_execution_invalid",
+  "v5_outcome_episodes": 0
+}

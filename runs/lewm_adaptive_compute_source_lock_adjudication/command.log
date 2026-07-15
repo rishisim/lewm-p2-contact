@@ -1,0 +1,9 @@
+sealed protocol verification: shasum -a 256 -c preregistration.sha256; shasum -a 256 -c protocol.sha256
+immutable object availability: git cat-file -t 089efbb87746e153e9ee051bf228b9c12aa3889a; git cat-file -t a265229cb29688715651cbd831a3b4c10b8f98b4
+candidate audit: python3 audit_candidates.py
+candidate evidence operations: git show/git ls-tree/git log/git rev-parse against only the two sealed commits and exact tag
+network fetch performed: false
+candidate checkout or environment construction performed: false
+scientific HDF5 rows read: 0
+V3 test targets opened: false
+combined V3 cache NumPy-loaded: false

@@ -1,0 +1,22 @@
+{
+  "positive_seed_counts": {
+    "vs_fixed_d1": 1,
+    "vs_matched": 0
+  },
+  "vs_fixed_d1": {
+    "bootstrap_samples": 100,
+    "ci_high": 9.549870370200982e-05,
+    "ci_low": 9.549870370200982e-05,
+    "mean_benefit": 9.549870370200982e-05,
+    "n": 38,
+    "n_episodes": 1
+  },
+  "vs_matched": {
+    "bootstrap_samples": 100,
+    "ci_high": 0.0,
+    "ci_low": 0.0,
+    "mean_benefit": 0.0,
+    "n": 38,
+    "n_episodes": 1
+  }
+}

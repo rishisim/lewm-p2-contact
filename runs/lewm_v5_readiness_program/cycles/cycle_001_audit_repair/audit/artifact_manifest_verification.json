@@ -1,0 +1,8 @@
+{
+  "bad_hashes": [],
+  "expected_path_set_equals_actual": true,
+  "file_count": 683,
+  "manifest_sha256": "41a1235355e5c167759d5d19a055fb48d2cde6372ea20c66a4d46f00f6056e0e",
+  "passed": true,
+  "schema_version": 1
+}

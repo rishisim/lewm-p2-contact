@@ -1,0 +1,10 @@
+{
+  "actual_adaptive_execution": "manual sparse stage loop",
+  "dense_execution": "comparator and numerical shadow only",
+  "fit": "240 consumed cycle-006 episodes carried only as immutable gate-fit provenance; no cycle-007 refit",
+  "prospective": "exactly 300 fresh episodes used once for discovery inference",
+  "schema_version": 1,
+  "selection": "120 consumed cycle-006 episodes carried only as immutable one-shot selection provenance; no cycle-007 reselection or refit",
+  "smoke": "12 fresh excluded implementation-validation episodes",
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,195 @@
+{
+  "created_unix_ns": 1784145043661050000,
+  "files": {
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/PREREGISTRATION.md": {
+      "bytes": 3542,
+      "sha256": "590378230bf9fbc03ccfdaffddbbc8036d8103332b3c246dbced5529a7763bf3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/REPORT.md": {
+      "bytes": 319,
+      "sha256": "66545bc3e55128c2a456edb5901f50aa982be5a51d1d2eb03049b8a448944640"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/REPORT_TEMPLATE.md": {
+      "bytes": 250,
+      "sha256": "abe931ceb0895cf106a2af4dd453d342deac2a131a8a0d631c1fb29a38e90c9b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/analyze.py": {
+      "bytes": 18285,
+      "sha256": "5082237e944f7454d4435166b5a5f3a589742092787f4cf80ae6e97ec232bcf5"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/consumed_feature_gate_qualification.json": {
+      "bytes": 8543,
+      "sha256": "f3812f840d2d7cbe1142097acab9729ec651da172be013653c15e189e816efd1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/diagnosis_input.json": {
+      "bytes": 632,
+      "sha256": "3bf214043394116a9a8a1482857c176134ecd5d349b57b60ebdabd7d1d27c050"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/flop_derivation_graph.json": {
+      "bytes": 339,
+      "sha256": "11da2d2e9d475725ab9ee4187f595318bc1de8c9e0ab9a71513bf57322a9d5e7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/flop_derivation_symbolic.json": {
+      "bytes": 664,
+      "sha256": "08e8e1bdc3184495a136c9e668ec92f71f3758734a4fa03edf76451a5465f5d1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/pre_data_seal.json": {
+      "bytes": 13552,
+      "sha256": "d76e8091abf2d0820ac86d9bc16da35a63466ff78b6da416e42c59cbc6755d20"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/pre_data_verification_failure.json": {
+      "bytes": 872,
+      "sha256": "ef59a0a4d6af7df6fef28c36a35bb28333e73803e218a33ad23cee1c8eb0645c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/preseal_tests.json": {
+      "bytes": 1469,
+      "sha256": "c2e930e37aa2573700d523e1ac9ed29ccfe55325dfa22d7221aee8d323fe6399"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/prior_identifier_snapshot.json": {
+      "bytes": 598,
+      "sha256": "ffaa79c8c6b1cff82f5017676b059827940ed0ed0159fffc7049295041f2d0c8"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/runtime_qualification.json": {
+      "bytes": 6020,
+      "sha256": "2f949cd2011b9861ff28966cda07b626d0894e58f920771e98d3b0e8aa67ee9a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/audit/simultaneous_inference_qualification.json": {
+      "bytes": 1447,
+      "sha256": "3e453743182df85f65fad93c522f85338c76ea280a401cbb9de3cf3393f014b9"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/build_numerical_contract.py": {
+      "bytes": 7646,
+      "sha256": "5684a4d69b7658fbe14b953f13b490f998983dfe94a0ffdb7572609b2609c58e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/cohort_seed_ledger.json": {
+      "bytes": 82537,
+      "sha256": "91cf617ed51dbc044455fdb5f27460b91d7dd40921190650cd41c5e0d0671b1b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/compile_gate.py": {
+      "bytes": 2520,
+      "sha256": "fa5c48dfd3fc96e0df99d38f2df291d3da3b658d63cb0f7e1f3c24dde647616e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/counted_features.py": {
+      "bytes": 9884,
+      "sha256": "71adb7afc5e9f99a8d47fa459300ed8db2efb654be0196aa816295f6a98c969a"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/cycle_common.py": {
+      "bytes": 6498,
+      "sha256": "8a795fcd751be631cae89f940beb704ea53686b968357e71e66147b12a07059b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/decision.json": {
+      "bytes": 1333,
+      "sha256": "8d0cc1b166c7c708fe7afef15cba5e963f0db2b5fafb841ee583f3d104cf07fa"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/derive_flops_graph.py": {
+      "bytes": 1080,
+      "sha256": "6fd625d0457697bc57d4f242f2f6c7a7e6533f74ce624936568483eaad1470d2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/derive_flops_symbolic.py": {
+      "bytes": 2271,
+      "sha256": "773522657991de460f9f489124926c0b935c94229c5b27dd2419e657c1b83389"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/development/cycle_001_consumed_diagnosis.json": {
+      "bytes": 15352,
+      "sha256": "1ed6639a65d93b7f77af34ce6e2f8ba2ffd6ed825c309e30f88bd2b9643e2160"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/diagnose_consumed.py": {
+      "bytes": 12695,
+      "sha256": "de92c86868c47858c52cec15db99e4bdd26a1890dc5b404c17ca3d353999cec1"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/expected_artifact_roles.json": {
+      "bytes": 606,
+      "sha256": "2c9d6139131d505b5c52bb0c599b967b1f677a17fdfce85abb606a5752192619"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/finalize.py": {
+      "bytes": 5832,
+      "sha256": "ad579314c49dd6f17f50675437ea14d50173ad90027967df721df066db3da3cd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/freeze/compiled_gate.npz": {
+      "bytes": 8957,
+      "sha256": "b68e3d161edf45e4bdd46ab9a7878ea2be0cc51bd8fc8b04b37c4131cfa9aa19"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/independent_verify.py": {
+      "bytes": 19136,
+      "sha256": "444499fa1e86166672340ccf49efcbea983774d6eacf46833e02af020e45e513"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/input_loader.py": {
+      "bytes": 1906,
+      "sha256": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/invalidate_cycle.py": {
+      "bytes": 1609,
+      "sha256": "54c41d8e80c57c7bba60bf088a9e79bbf932e1f1d7b93e9ccb757b1a261f16bd"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/latency.py": {
+      "bytes": 7578,
+      "sha256": "964f0cafc15fedfdcf5ca86bd11c31d02846e887128512d474361093cd151ed2"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/numerical_equivalence_contract.json": {
+      "bytes": 5281,
+      "sha256": "0a7c901d2310672b020b3d152ec31e831c7e71b6dfa62c663257777de344fce3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/operation_graph.json": {
+      "bytes": 8054,
+      "sha256": "f03ed2ea185406ab6eff6ac3088271fea788e7702e514724c92846330b1b6b6e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/operation_ledger.json": {
+      "bytes": 1407,
+      "sha256": "4a4d638a8c5eb5435ace5d0fed3bb23d5438520eb329b03a808a96e0de751da0"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/outcome_mapping.json": {
+      "bytes": 687,
+      "sha256": "ffe4eccbdfd1d4aa54cd28273ed8ac83fae51ccbb4f68b660226aec17fb78a5c"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/prepare.py": {
+      "bytes": 26372,
+      "sha256": "8727563b837ef04db2d8622bf135f5e9b79a6eac9a38a2c71c02c1e9f7140b6e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/preseal_tests.py": {
+      "bytes": 4419,
+      "sha256": "1b155b8a678761476c13015123f4a60ab78973ea913040b56733cfdf76c8e29b"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/protocol.json": {
+      "bytes": 3510,
+      "sha256": "8464ced2a372a253872cbc2169ed6f8f506ffc6b0997ab3f5d67e4ac3d7b0a13"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/qualify_consumed.py": {
+      "bytes": 11820,
+      "sha256": "5c93b803c5f1d1dbb020caada829f16727babf2c0102a132eb24358222bb73b6"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/qualify_runtime.py": {
+      "bytes": 6435,
+      "sha256": "712609b55406acc2f0c47b0b5d4b0ab085e2cefba85f90e204c08c4bdd2f052d"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/qualify_simultaneous.py": {
+      "bytes": 4788,
+      "sha256": "f28c4af3a8693394e73e297f6935e6f7e7d81c51a830c131cdc9f927c45bbd9e"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/runner.py": {
+      "bytes": 27397,
+      "sha256": "89bebdb38062724f5ffc72f8ebd6d6e433439fb6a569e2ad2ac467cbf6cd76b3"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/semantic_feature_names.json": {
+      "bytes": 181120,
+      "sha256": "16446b37029244c2a99adc0318d9e6473efe6fdf6871e7623f0a1c7c2705a805"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/transitive_source_package_manifest.json": {
+      "bytes": 7260,
+      "sha256": "1d56cbc25abb0250c8c25ccef715c79e197c1126d19289ce7b392f7c50c7f5d7"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/verify_final.py": {
+      "bytes": 1418,
+      "sha256": "a2f398744d935cbffdeda7e797c5970871c54a7dc6fef4a880fc81c523f196f4"
+    },
+    "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous/verify_pre_data.py": {
+      "bytes": 1493,
+      "sha256": "0c4cd8e43c12ddb32501e675e19b63ca4f971c82fd10a2014689e152402929d7"
+    }
+  },
+  "path_set_complete": true,
+  "path_set_policy": "all durable files; interpreter caches, dot-temporaries, manifest, and manifest-verification file excluded",
+  "root": "runs/lewm_v5_readiness_program/cycles/cycle_002_scale_valid_simultaneous",
+  "schema_version": 1,
+  "terminal_outcome": "cycle_execution_invalid",
+  "v5_outcome_episodes": 0
+}

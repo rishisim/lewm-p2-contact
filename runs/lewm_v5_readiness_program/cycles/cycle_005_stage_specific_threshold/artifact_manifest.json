@@ -1,0 +1,28 @@
+{
+  "created_unix_ns": 1784147952418128000,
+  "files": {
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/DEVELOPMENT_OUTCOME.json": "b5ee4ce8148ecee269bfbd66865394bb34131a78d0fdec78aa0e93a1cfbaab2b",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/__pycache__/select_stage_thresholds.cpython-310.pyc": "ecaf72b4fb135b7245680f3a6d40df62ae269d8340a633934ba1e044cbc91817",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/__pycache__/validate_stage_thresholds.cpython-310.pyc": "64a7e4a406150ad5a30789065d64e12209aab2d3d9695e8a44151e8fa7ffdc1f",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/candidate_selection_ledger.json": "99598660fb8883e492082e7ce2bf0fc04b15f0143641c497da40ad20160f6916",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/consumed_cycle_004_diagnosis.json": "66e935ef938b7c2dbf01add5b1ffbb130b406b7e4519e73808e0ea842db413d4",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/one_shot_validation_bootstrap.npz": "e8651085b459a94658ecb9d6de2521ead34860fe206e97e208eb5ac9380cfd66",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/one_shot_validation_result.json": "b66026c0d1b8a6554b968a0ba98b25c500ce6e9eae9a5033c5ad39cf748ceca1",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/selected_stage_thresholds.json": "c4a7e5ad5ba05966f488c52d1eb1daaf4cb30c411464874ad6b9f19bfaa4f87d",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/selection_consumed.npz": "281fafd6c1e0f560123a23b21023f8a6b7e476823fa3e788caad3fe78c06cbb3",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/split_manifest.json": "2a6cde9041b3c886a796fb0c8f00d82e3f7851765186e21db637687b859c6b24",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/stage_specific_threshold_protocol.json": "cf10b001a891d10c8efb850d89988d35a8e0b679cf54852cea79d9c67b8a07a2",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/development/validation_consumed.npz": "94092f7a30fcd19a2a8808ec0ca7b8120ad7147fc9e1cda1fe48bcf1ede3e40f",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/diagnose_consumed.py": "6ed01c0002c4e73f9909864b896c79b755c2efd6287d93738ae0f531b0eab43e",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/finalize_development.py": "3c10e694b1bc08a3166d157631d10a03aa21ff6b5ce85024644c495d35312489",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/materialize_development_split.py": "88b726d940c1481a695a48aaf2adcd980940cca70e37d48afeac9b765760f285",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/select_stage_thresholds.py": "5e0a285a028b4df8079a29df6e5fd91f985a9c40f4e1f75e8b98f8d8f2b328dd",
+    "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold/validate_stage_thresholds.py": "140d2c2853ead33e8e6db88fcf630f30d6c33ebc9396eb299fdc51ae6688ba09"
+  },
+  "new_episode_count": 0,
+  "outcome": "cycle_development_validation_failed",
+  "path_set_complete": true,
+  "root": "runs/lewm_v5_readiness_program/cycles/cycle_005_stage_specific_threshold",
+  "schema_version": 1,
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,15 @@
+{
+  "first_consumed_smoke_episode": {
+    "call_decisions_affected": false,
+    "depth_one_rows_bitwise_exact": true,
+    "manual_sparse_vs_forward_selected_bitwise_exact": true,
+    "mean_absolute_difference": 3.3818203792890245e-09,
+    "rmse": 1.552313300123842e-08,
+    "sparse_dense_allclose_default": true,
+    "sparse_dense_bitwise_equal": false,
+    "sparse_dense_maximum_absolute_difference": 2.384185791015625e-07
+  },
+  "origin": "independent orchestrator diagnosis supplied before cycle 001",
+  "prior_invalid_manifest_sha256": "d357f0a100312b91d2a925ca42dfaec670d5fd858ade3abbcdc82a618feec61a",
+  "schema_version": 1
+}

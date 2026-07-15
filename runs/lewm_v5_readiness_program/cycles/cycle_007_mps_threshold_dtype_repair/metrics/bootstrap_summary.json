@@ -1,0 +1,53 @@
+{
+  "individual": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006087347715632226,
+      "lower": 0.0004154267275268045,
+      "upper": 0.0008114536582685709
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.000635609950092656,
+      "lower": 0.0005006791326764962,
+      "upper": 0.0007753027183016466
+    },
+    "raw_vs_analytic": {
+      "estimate": 7.1186992257295895e-06,
+      "lower": 4.058252005859696e-06,
+      "upper": 1.0390723547917975e-05
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 1.968147439384832e-05,
+      "lower": 1.5695480811056142e-05,
+      "upper": 2.4053513359001076e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.4460255926762195e-06,
+      "lower": 3.5102446154288465e-06,
+      "upper": 1.1652355440215466e-05
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 6.137979301102366e-06,
+      "lower": 2.8402165216928344e-06,
+      "upper": 9.55198854432655e-06
+    }
+  },
+  "replicates": 20000,
+  "schema_version": 1,
+  "seed": 2017999991,
+  "simultaneous": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006087347715632226,
+      "familywise_alpha": 0.05,
+      "lower": 0.0004154267275268045,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 7.1186992257295895e-06,
+      "familywise_alpha": 0.05,
+      "lower": 4.058252005859696e-06,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  }
+}

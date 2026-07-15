@@ -1,0 +1,4 @@
+focused tests: python3 -m pytest -q test_adjudication.py
+result: 4 passed in 0.01s
+scientific HDF5 accessed by tests: false
+candidate environment imported by tests: false

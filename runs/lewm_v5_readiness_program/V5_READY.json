@@ -1,0 +1,125 @@
+{
+  "accepted_discovery_compute": {
+    "adaptive_total_flops": 812433135415,
+    "additional_refiner_flops": 661870080,
+    "analytic_equivalent_mean_calls": 1.255474449304496,
+    "base_flops": 804032766000,
+    "base_model_calls": 11400,
+    "call_histogram": [
+      9484,
+      1481,
+      288,
+      147
+    ],
+    "gate_dual_affine_score_flops": 57534184,
+    "gate_evaluations": 13751,
+    "gate_feature_flops": 52267551,
+    "gate_total_flops": 109801735,
+    "mandatory_depth1_flops": 7628697600,
+    "mean_refiner_calls": 1.219122807017544,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09851294223208834,
+      "weight_upper": 0.25547444930449603
+    },
+    "nonflop_comparison_min_operations": 68755,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.00345262997312412,
+      "weight_upper": 0.25547444930449603
+    },
+    "refiner_model_calls": 13898,
+    "rows": 11400,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 156665,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 2913,
+      "seed": 2017777771,
+      "total_calls": 14313,
+      "total_flops": 812433292080
+    }
+  },
+  "accepted_discovery_cycle": 7,
+  "accepted_discovery_effects": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006087347715632228,
+      "lower": 0.0004154267275268048,
+      "upper": 0.0008114536582685712
+    },
+    "raw_vs_analytic": {
+      "estimate": 7.118699225729594e-06,
+      "lower": 4.058252005859703e-06,
+      "upper": 1.0390723547917983e-05
+    },
+    "simultaneous_co_primary": {
+      "native_whitened_vs_analytic": {
+        "estimate": 0.0006087347715632228,
+        "familywise_alpha": 0.05,
+        "lower": 0.0004154267275268048,
+        "method": "bonferroni_two_endpoint_one_sided_percentile",
+        "per_endpoint_alpha": 0.025
+      },
+      "raw_vs_analytic": {
+        "estimate": 7.118699225729594e-06,
+        "familywise_alpha": 0.05,
+        "lower": 4.058252005859703e-06,
+        "method": "bonferroni_two_endpoint_one_sided_percentile",
+        "per_endpoint_alpha": 0.025
+      }
+    }
+  },
+  "accepted_discovery_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/cycles/cycle_007_mps_threshold_dtype_repair",
+  "accepted_discovery_terminal_outcome": "cycle_prospective_discovery_passed",
+  "created_unix_ns": 1784152937251993000,
+  "criteria": {
+    "complete_preregistration_cohort_runner_analysis_decision_and_verifier": true,
+    "excluded_package_smoke_passed": true,
+    "final_package_manifest_verifies": true,
+    "fresh_prospective_discovery_passed": true,
+    "independent_discovery_reproduction_passed": true,
+    "integrity_and_isolation_audits_passed": true,
+    "one_candidate_and_claim_frozen": true,
+    "power_at_least_90_percent_for_both_co_primary_joint_design": true,
+    "pre_v5_seal_verifies": true,
+    "zero_v5_outcome_episodes": true
+  },
+  "frozen_candidate_id": "stage_dual_r0.01_q0.85",
+  "frozen_claim": "lower episode-averaged raw and PlanOracle-native-whitened latent MSE than the strongest transition-independent analytic exact-total-compute mixture under the frozen PlanOracle DGP",
+  "package_final_file_count": 77,
+  "package_final_manifest_sha256": "3946e32be7fadcf54b6b2831d8fd31a63ccb234a5c92d28142a45d58067e3feb",
+  "package_smoke_verification_sha256": "1345ece9bc541324f9ce150738e98891e8604b3a668c2ebb675b973edad06c12",
+  "power_assumptions": {
+    "alpha_per_endpoint": 0.025,
+    "conservative_effects": {
+      "native_whitened_vs_analytic": 0.00030253918840189136,
+      "raw_vs_analytic": 3.2466016046877627e-06
+    },
+    "effect_definition": "80 percent of the smaller of the independently reproduced simultaneous discovery lower bound and the minimum contiguous 50-episode block mean",
+    "method": "one-sided normal paired-mean power with Bonferroni alpha .025 per fixed co-primary endpoint; joint power lower bounded by the union bound",
+    "primary_design_effect": 1.5,
+    "primary_joint_power_lower": 0.9659810650707059,
+    "stress_design_effect": 2.0,
+    "stress_joint_power_lower": 0.9046395064401636
+  },
+  "pre_v5_seal_sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd",
+  "remaining_irreducible_statistical_uncertainty": "Power depends on future DGP stability, paired-episode variance, the conservative effect floor, and design-effect adequacy; no calculation guarantees a V5 pass.",
+  "schema_version": 1,
+  "selected_v5_sample_size": 1600,
+  "source_hashes": {
+    "accepted_decision": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+    "accepted_final_manifest": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+    "accepted_independent_verification": "ee719a50d4bffe4df7fff9a74f21712564e2f2d7c09be21a627c36bd88323a72",
+    "compiled_gate": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "frozen_candidate_manifest": "30ea1fa6c0a423b0aa935d16634a4bb4f6d011ac8807b3c335476a5b1e5317b4",
+    "gate_fit": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "whitening": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796"
+  },
+  "status": "V5_READY",
+  "v5_confirmation_launched": false,
+  "v5_outcome_episodes": 0,
+  "v5_package_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/v5_package_versions/v001",
+  "v5_package_version": "v001"
+}

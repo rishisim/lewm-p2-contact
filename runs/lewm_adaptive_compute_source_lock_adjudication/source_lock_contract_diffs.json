@@ -1,0 +1,70 @@
+{
+  "candidates": [
+    {
+      "checks": {
+        "base_requirements_coherent": false,
+        "collector_contract_matches": false,
+        "env_requirements_coherent": true,
+        "required_files_exist": false,
+        "temporal_outer_bound": true,
+        "version_coherent": false
+      },
+      "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+      "diffs": {
+        "base": {
+          "lock_only": [
+            {
+              "extras": [],
+              "name": "stable-baselines3",
+              "suffix": ">=2.7.1"
+            }
+          ],
+          "source_only": []
+        },
+        "env": {
+          "lock_only": [],
+          "source_only": []
+        }
+      }
+    },
+    {
+      "checks": {
+        "base_requirements_coherent": false,
+        "collector_contract_matches": true,
+        "env_requirements_coherent": true,
+        "required_files_exist": true,
+        "temporal_outer_bound": true,
+        "version_coherent": false
+      },
+      "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "diffs": {
+        "base": {
+          "lock_only": [
+            {
+              "extras": [],
+              "name": "stable-baselines3",
+              "suffix": ">=2.7.1"
+            }
+          ],
+          "source_only": [
+            {
+              "extras": [],
+              "name": "rich",
+              "suffix": ""
+            },
+            {
+              "extras": [],
+              "name": "typer",
+              "suffix": ""
+            }
+          ]
+        },
+        "env": {
+          "lock_only": [],
+          "source_only": []
+        }
+      }
+    }
+  ],
+  "schema_version": 1
+}

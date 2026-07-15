@@ -1,0 +1,345 @@
+{
+  "base_model_provenance": {
+    "config_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json",
+    "config_sha256": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "contract": {
+      "blocked_action_dim": 25,
+      "frameskip": 5,
+      "history_size": 3,
+      "image_size": 224,
+      "latent_dim": 192,
+      "raw_action_dim": 5
+    },
+    "frozen_audit": {
+      "all_parameters_frozen": true,
+      "buffer_count": 8194,
+      "no_parameter_gradients": true,
+      "parameter_count": 18034628,
+      "state_sha256": "8a82902703c10e49732893e6e30802ee840f39436f0108eb4ce683df0865736f",
+      "training": false
+    },
+    "strict_key_mapping": "legacy_to_modern",
+    "weights_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt",
+    "weights_sha256": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+  },
+  "base_prediction_checks": [
+    {
+      "batch_size": 256,
+      "close": true,
+      "max_abs_difference_vs_cached_base": 0.0
+    },
+    {
+      "batch_size": 1024,
+      "close": true,
+      "max_abs_difference_vs_cached_base": 0.0
+    }
+  ],
+  "batch_sizes": [
+    256,
+    1024
+  ],
+  "device": "mps",
+  "gate_cost": {
+    "activation_flops_estimate": 0,
+    "control_flow_flops": 1,
+    "feature_bytes_float32": 4196,
+    "feature_construction_flops": 3998,
+    "hard_budget": 66240,
+    "input_dim_with_depth_encoding": 1049,
+    "normalization_flops": 2098,
+    "notes": "Arithmetic FLOPs are not latency or energy; GELU is a conservative 10-operation estimate.",
+    "parameter_bytes_float32": 4200,
+    "parameters": 1050,
+    "solver_flops": 0,
+    "student_linear_flops": 2099,
+    "total_incremental_gate_flops_per_evaluated_decision": 8196,
+    "within_budget": true
+  },
+  "includes": [
+    "common frozen base prediction",
+    "feature construction",
+    "student normalization/scoring",
+    "dynamic routing",
+    "solver adapters",
+    "synchronization",
+    "control flow"
+  ],
+  "interpretation": "Analytic FLOPs, latency, and energy are different notions; energy was not measured.",
+  "passed": true,
+  "rows": 3420,
+  "schema_version": 1,
+  "sparse_dense_equivalence": [
+    {
+      "batch_size": 256,
+      "calls_exact": true,
+      "calls_match_frozen_policy": true,
+      "expected_solver_rows": 4288,
+      "max_abs_output_difference": 2.384185791015625e-07,
+      "outputs_close": true,
+      "processed_solver_rows": 4288
+    },
+    {
+      "batch_size": 1024,
+      "calls_exact": true,
+      "calls_match_frozen_policy": true,
+      "expected_solver_rows": 4288,
+      "max_abs_output_difference": 2.384185791015625e-07,
+      "outputs_close": true,
+      "processed_solver_rows": 4288
+    }
+  ],
+  "timings": [
+    {
+      "all_seconds": [
+        0.22741420901729725,
+        0.22493866601143964,
+        0.23679495800752193,
+        0.2249148749979213,
+        0.22665708299609832,
+        0.22569241700693965,
+        0.2300370830052998
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.23679495800752193,
+      "median_seconds": 0.22665708299609832,
+      "minimum_seconds": 0.2249148749979213,
+      "path": "fixed_d1",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.279068333999021,
+        0.2356497079890687,
+        0.2530328330176417,
+        0.24297712501720525,
+        0.2371789579920005,
+        0.24002391600515693,
+        0.2333955419890117
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.279068333999021,
+      "median_seconds": 0.24002391600515693,
+      "minimum_seconds": 0.2333955419890117,
+      "path": "fixed_d2",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.23097120900638402,
+        0.2347918750019744,
+        0.23036149999825284,
+        0.2316704999830108,
+        0.23065937499632128,
+        0.23149783301050775,
+        0.23646575000020675
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.23646575000020675,
+      "median_seconds": 0.23149783301050775,
+      "minimum_seconds": 0.23036149999825284,
+      "path": "fixed_d3",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.23973137501161546,
+        0.24549800000386313,
+        0.24170716700609773,
+        0.2409166669822298,
+        0.24092945898883045,
+        0.2422076249786187,
+        0.2327073750202544
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.24549800000386313,
+      "median_seconds": 0.24092945898883045,
+      "minimum_seconds": 0.2327073750202544,
+      "path": "fixed_d4",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.2561851250065956,
+        0.2580958750040736,
+        0.2569582080177497,
+        0.2589906250068452,
+        0.2664366670069285,
+        0.27637612499529496,
+        0.2594063750002533
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.27637612499529496,
+      "median_seconds": 0.2589906250068452,
+      "minimum_seconds": 0.2561851250065956,
+      "path": "matched_transition_independent_mixture",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.30928666700492613,
+        0.309400166006526,
+        0.3157565830042586,
+        0.3289198749989737,
+        0.33459062498877756,
+        0.3286206249904353,
+        0.34659529200871475
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.34659529200871475,
+      "median_seconds": 0.3286206249904353,
+      "minimum_seconds": 0.30928666700492613,
+      "path": "adaptive_dense_all_exits",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.3224397919839248,
+        0.38212225001188926,
+        0.35144954099087045,
+        0.3289135830127634,
+        0.37364666600478813,
+        0.3323830420267768,
+        0.36095566701260395
+      ],
+      "batch_size": 256,
+      "maximum_seconds": 0.38212225001188926,
+      "median_seconds": 0.35144954099087045,
+      "minimum_seconds": 0.3224397919839248,
+      "path": "adaptive_realistic_sparse",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.2186657499987632,
+        0.2232581659918651,
+        0.2293070000014268,
+        0.22563779199845158,
+        0.2296222499862779,
+        0.22661741700721905,
+        0.22849949999363162
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.2296222499862779,
+      "median_seconds": 0.22661741700721905,
+      "minimum_seconds": 0.2186657499987632,
+      "path": "fixed_d1",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.22465320798801258,
+        0.22541929100407287,
+        0.22579745901748538,
+        0.22690491698449478,
+        0.22503145798691548,
+        0.22555854200618342,
+        0.22500829098862596
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.22690491698449478,
+      "median_seconds": 0.22541929100407287,
+      "minimum_seconds": 0.22465320798801258,
+      "path": "fixed_d2",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.22461533299065195,
+        0.2253618329996243,
+        0.24454820901155472,
+        0.22631037500104867,
+        0.2266609159996733,
+        0.2299980410025455,
+        0.22856699998374097
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.24454820901155472,
+      "median_seconds": 0.2266609159996733,
+      "minimum_seconds": 0.22461533299065195,
+      "path": "fixed_d3",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.22795591698377393,
+        0.23719424998853356,
+        0.23720508301630616,
+        0.2466895840188954,
+        0.23753375001251698,
+        0.23284662500373088,
+        0.22806562497862615
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.2466895840188954,
+      "median_seconds": 0.23719424998853356,
+      "minimum_seconds": 0.22795591698377393,
+      "path": "fixed_d4",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.23561458301264793,
+        0.2351389579998795,
+        0.24245150000206195,
+        0.23628750001080334,
+        0.23857091699028388,
+        0.24186149999150075,
+        0.24363824998727068
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.24363824998727068,
+      "median_seconds": 0.23857091699028388,
+      "minimum_seconds": 0.2351389579998795,
+      "path": "matched_transition_independent_mixture",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.2714755419874564,
+        0.26171216601505876,
+        0.25674612500006333,
+        0.2567302500247024,
+        0.2581145000003744,
+        0.25828429200919345,
+        0.26068529099575244
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.2714755419874564,
+      "median_seconds": 0.25828429200919345,
+      "minimum_seconds": 0.2567302500247024,
+      "path": "adaptive_dense_all_exits",
+      "repetitions": 7,
+      "rows": 3420
+    },
+    {
+      "all_seconds": [
+        0.2752463329816237,
+        0.26599345900467597,
+        0.28613304198370315,
+        0.3802734169876203,
+        0.32021249999525025,
+        0.2644634590251371,
+        0.26254033399163745
+      ],
+      "batch_size": 1024,
+      "maximum_seconds": 0.3802734169876203,
+      "median_seconds": 0.2752463329816237,
+      "minimum_seconds": 0.26254033399163745,
+      "path": "adaptive_realistic_sparse",
+      "repetitions": 7,
+      "rows": 3420
+    }
+  ]
+}

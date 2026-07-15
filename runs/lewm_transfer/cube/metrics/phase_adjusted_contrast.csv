@@ -1,0 +1,2 @@
+contrast,metric,n_deciles,weight_sum,delta_mean,delta_median,delta_trimmed_mean,p_superiority,delta_mean_ci_low,delta_mean_ci_high,delta_median_ci_low,delta_median_ci_high,delta_trimmed_mean_ci_low,delta_trimmed_mean_ci_high,p_superiority_ci_low,p_superiority_ci_high
+interaction_vs_free_phase_decile_adjusted,excess,0,0,,,,,,,,,,,,

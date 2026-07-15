@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "failure_stage": "postseal_predata_verification_before_smoke",
+  "cause": "The sealed verifier retained the cycle-001 status literal frozen_before_any_cycle_001_smoke_or_prospective_episode while the cycle-002 seal correctly emitted frozen_before_any_cycle_002_smoke_or_prospective_episode.",
+  "evaluation_runtime_failed": true,
+  "generation_runtime_failed": true,
+  "observed_checks": {
+    "all_hashes_match": true,
+    "status_frozen": false,
+    "zero_new_raw_at_seal": true,
+    "zero_prospective_at_seal": true,
+    "zero_v5_at_seal": true
+  },
+  "pre_data_seal_sha256": "d76e8091abf2d0820ac86d9bc16da35a63466ff78b6da416e42c59cbc6755d20",
+  "sealed_file_count": 82,
+  "new_smoke_episodes": 0,
+  "new_prospective_episodes": 0,
+  "v5_outcome_episodes": 0,
+  "normative_code_patched_after_seal": false,
+  "version_forward_required": true
+}

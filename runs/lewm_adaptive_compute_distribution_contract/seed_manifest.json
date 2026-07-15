@@ -1,0 +1,1438 @@
+{
+  "failure_replacement_rule": "Only an exception or mechanically malformed trajectory may consume the next unused policy-specific replacement triple. Outcomes, success, loss, calls, contact, motion, or any comparison metric may never trigger replacement.",
+  "intentional_paired_environment_seed_reuse": [
+    1640100000,
+    1640100001,
+    1640100002,
+    1640100003,
+    1640100004,
+    1640100005,
+    1640100006,
+    1640100007,
+    1640100008,
+    1640100009,
+    1640100010,
+    1640100011,
+    1640200000,
+    1640200001,
+    1640200002,
+    1640200003,
+    1640200004,
+    1640200005,
+    1640200006,
+    1640200007,
+    1640200008,
+    1640200009,
+    1640200010,
+    1640200011,
+    1640200012,
+    1640200013,
+    1640200014,
+    1640200015,
+    1640200016,
+    1640200017,
+    1640200018,
+    1640200019,
+    1640200020,
+    1640200021,
+    1640200022,
+    1640200023,
+    1640200024,
+    1640200025,
+    1640200026,
+    1640200027,
+    1640200028,
+    1640200029
+  ],
+  "overlap_with_recorded_prior_identifiers": [],
+  "policy_and_oracle_rng_streams_are_never_reused_across_policies": true,
+  "prior_identifier_inventory": {
+    "path": "runs/lewm_adaptive_compute_v4/audit/prior_identifier_inventory.json",
+    "sha256": "a8d0ee09a7425e8dc5f87842e0f270da34ad8fe63c0a2c2bcb47d81761e11b2c",
+    "unique_numeric_id_count": 2107
+  },
+  "roles": {
+    "main": {
+      "markov_oracle": [
+        {
+          "env_seed": 1640200000,
+          "oracle_np_seed": 1644200000,
+          "policy_seed": 1643200000,
+          "slot": 0,
+          "trajectory_id": "dc-markov-control-000"
+        },
+        {
+          "env_seed": 1640200001,
+          "oracle_np_seed": 1644200001,
+          "policy_seed": 1643200001,
+          "slot": 1,
+          "trajectory_id": "dc-markov-control-001"
+        },
+        {
+          "env_seed": 1640200002,
+          "oracle_np_seed": 1644200002,
+          "policy_seed": 1643200002,
+          "slot": 2,
+          "trajectory_id": "dc-markov-control-002"
+        },
+        {
+          "env_seed": 1640200003,
+          "oracle_np_seed": 1644200003,
+          "policy_seed": 1643200003,
+          "slot": 3,
+          "trajectory_id": "dc-markov-control-003"
+        },
+        {
+          "env_seed": 1640200004,
+          "oracle_np_seed": 1644200004,
+          "policy_seed": 1643200004,
+          "slot": 4,
+          "trajectory_id": "dc-markov-control-004"
+        },
+        {
+          "env_seed": 1640200005,
+          "oracle_np_seed": 1644200005,
+          "policy_seed": 1643200005,
+          "slot": 5,
+          "trajectory_id": "dc-markov-control-005"
+        },
+        {
+          "env_seed": 1640200006,
+          "oracle_np_seed": 1644200006,
+          "policy_seed": 1643200006,
+          "slot": 6,
+          "trajectory_id": "dc-markov-control-006"
+        },
+        {
+          "env_seed": 1640200007,
+          "oracle_np_seed": 1644200007,
+          "policy_seed": 1643200007,
+          "slot": 7,
+          "trajectory_id": "dc-markov-control-007"
+        },
+        {
+          "env_seed": 1640200008,
+          "oracle_np_seed": 1644200008,
+          "policy_seed": 1643200008,
+          "slot": 8,
+          "trajectory_id": "dc-markov-control-008"
+        },
+        {
+          "env_seed": 1640200009,
+          "oracle_np_seed": 1644200009,
+          "policy_seed": 1643200009,
+          "slot": 9,
+          "trajectory_id": "dc-markov-control-009"
+        },
+        {
+          "env_seed": 1640200010,
+          "oracle_np_seed": 1644200010,
+          "policy_seed": 1643200010,
+          "slot": 10,
+          "trajectory_id": "dc-markov-control-010"
+        },
+        {
+          "env_seed": 1640200011,
+          "oracle_np_seed": 1644200011,
+          "policy_seed": 1643200011,
+          "slot": 11,
+          "trajectory_id": "dc-markov-control-011"
+        },
+        {
+          "env_seed": 1640200012,
+          "oracle_np_seed": 1644200012,
+          "policy_seed": 1643200012,
+          "slot": 12,
+          "trajectory_id": "dc-markov-control-012"
+        },
+        {
+          "env_seed": 1640200013,
+          "oracle_np_seed": 1644200013,
+          "policy_seed": 1643200013,
+          "slot": 13,
+          "trajectory_id": "dc-markov-control-013"
+        },
+        {
+          "env_seed": 1640200014,
+          "oracle_np_seed": 1644200014,
+          "policy_seed": 1643200014,
+          "slot": 14,
+          "trajectory_id": "dc-markov-control-014"
+        },
+        {
+          "env_seed": 1640200015,
+          "oracle_np_seed": 1644200015,
+          "policy_seed": 1643200015,
+          "slot": 15,
+          "trajectory_id": "dc-markov-control-015"
+        },
+        {
+          "env_seed": 1640200016,
+          "oracle_np_seed": 1644200016,
+          "policy_seed": 1643200016,
+          "slot": 16,
+          "trajectory_id": "dc-markov-control-016"
+        },
+        {
+          "env_seed": 1640200017,
+          "oracle_np_seed": 1644200017,
+          "policy_seed": 1643200017,
+          "slot": 17,
+          "trajectory_id": "dc-markov-control-017"
+        },
+        {
+          "env_seed": 1640200018,
+          "oracle_np_seed": 1644200018,
+          "policy_seed": 1643200018,
+          "slot": 18,
+          "trajectory_id": "dc-markov-control-018"
+        },
+        {
+          "env_seed": 1640200019,
+          "oracle_np_seed": 1644200019,
+          "policy_seed": 1643200019,
+          "slot": 19,
+          "trajectory_id": "dc-markov-control-019"
+        },
+        {
+          "env_seed": 1640200020,
+          "oracle_np_seed": 1644200020,
+          "policy_seed": 1643200020,
+          "slot": 20,
+          "trajectory_id": "dc-markov-control-020"
+        },
+        {
+          "env_seed": 1640200021,
+          "oracle_np_seed": 1644200021,
+          "policy_seed": 1643200021,
+          "slot": 21,
+          "trajectory_id": "dc-markov-control-021"
+        },
+        {
+          "env_seed": 1640200022,
+          "oracle_np_seed": 1644200022,
+          "policy_seed": 1643200022,
+          "slot": 22,
+          "trajectory_id": "dc-markov-control-022"
+        },
+        {
+          "env_seed": 1640200023,
+          "oracle_np_seed": 1644200023,
+          "policy_seed": 1643200023,
+          "slot": 23,
+          "trajectory_id": "dc-markov-control-023"
+        },
+        {
+          "env_seed": 1640200024,
+          "oracle_np_seed": 1644200024,
+          "policy_seed": 1643200024,
+          "slot": 24,
+          "trajectory_id": "dc-markov-control-024"
+        },
+        {
+          "env_seed": 1640200025,
+          "oracle_np_seed": 1644200025,
+          "policy_seed": 1643200025,
+          "slot": 25,
+          "trajectory_id": "dc-markov-control-025"
+        },
+        {
+          "env_seed": 1640200026,
+          "oracle_np_seed": 1644200026,
+          "policy_seed": 1643200026,
+          "slot": 26,
+          "trajectory_id": "dc-markov-control-026"
+        },
+        {
+          "env_seed": 1640200027,
+          "oracle_np_seed": 1644200027,
+          "policy_seed": 1643200027,
+          "slot": 27,
+          "trajectory_id": "dc-markov-control-027"
+        },
+        {
+          "env_seed": 1640200028,
+          "oracle_np_seed": 1644200028,
+          "policy_seed": 1643200028,
+          "slot": 28,
+          "trajectory_id": "dc-markov-control-028"
+        },
+        {
+          "env_seed": 1640200029,
+          "oracle_np_seed": 1644200029,
+          "policy_seed": 1643200029,
+          "slot": 29,
+          "trajectory_id": "dc-markov-control-029"
+        }
+      ],
+      "plan_oracle": [
+        {
+          "env_seed": 1640200000,
+          "oracle_np_seed": 1642200000,
+          "policy_seed": 1641200000,
+          "slot": 0,
+          "trajectory_id": "dc-plan-discovery-000"
+        },
+        {
+          "env_seed": 1640200001,
+          "oracle_np_seed": 1642200001,
+          "policy_seed": 1641200001,
+          "slot": 1,
+          "trajectory_id": "dc-plan-discovery-001"
+        },
+        {
+          "env_seed": 1640200002,
+          "oracle_np_seed": 1642200002,
+          "policy_seed": 1641200002,
+          "slot": 2,
+          "trajectory_id": "dc-plan-discovery-002"
+        },
+        {
+          "env_seed": 1640200003,
+          "oracle_np_seed": 1642200003,
+          "policy_seed": 1641200003,
+          "slot": 3,
+          "trajectory_id": "dc-plan-discovery-003"
+        },
+        {
+          "env_seed": 1640200004,
+          "oracle_np_seed": 1642200004,
+          "policy_seed": 1641200004,
+          "slot": 4,
+          "trajectory_id": "dc-plan-discovery-004"
+        },
+        {
+          "env_seed": 1640200005,
+          "oracle_np_seed": 1642200005,
+          "policy_seed": 1641200005,
+          "slot": 5,
+          "trajectory_id": "dc-plan-discovery-005"
+        },
+        {
+          "env_seed": 1640200006,
+          "oracle_np_seed": 1642200006,
+          "policy_seed": 1641200006,
+          "slot": 6,
+          "trajectory_id": "dc-plan-discovery-006"
+        },
+        {
+          "env_seed": 1640200007,
+          "oracle_np_seed": 1642200007,
+          "policy_seed": 1641200007,
+          "slot": 7,
+          "trajectory_id": "dc-plan-discovery-007"
+        },
+        {
+          "env_seed": 1640200008,
+          "oracle_np_seed": 1642200008,
+          "policy_seed": 1641200008,
+          "slot": 8,
+          "trajectory_id": "dc-plan-discovery-008"
+        },
+        {
+          "env_seed": 1640200009,
+          "oracle_np_seed": 1642200009,
+          "policy_seed": 1641200009,
+          "slot": 9,
+          "trajectory_id": "dc-plan-discovery-009"
+        },
+        {
+          "env_seed": 1640200010,
+          "oracle_np_seed": 1642200010,
+          "policy_seed": 1641200010,
+          "slot": 10,
+          "trajectory_id": "dc-plan-discovery-010"
+        },
+        {
+          "env_seed": 1640200011,
+          "oracle_np_seed": 1642200011,
+          "policy_seed": 1641200011,
+          "slot": 11,
+          "trajectory_id": "dc-plan-discovery-011"
+        },
+        {
+          "env_seed": 1640200012,
+          "oracle_np_seed": 1642200012,
+          "policy_seed": 1641200012,
+          "slot": 12,
+          "trajectory_id": "dc-plan-discovery-012"
+        },
+        {
+          "env_seed": 1640200013,
+          "oracle_np_seed": 1642200013,
+          "policy_seed": 1641200013,
+          "slot": 13,
+          "trajectory_id": "dc-plan-discovery-013"
+        },
+        {
+          "env_seed": 1640200014,
+          "oracle_np_seed": 1642200014,
+          "policy_seed": 1641200014,
+          "slot": 14,
+          "trajectory_id": "dc-plan-discovery-014"
+        },
+        {
+          "env_seed": 1640200015,
+          "oracle_np_seed": 1642200015,
+          "policy_seed": 1641200015,
+          "slot": 15,
+          "trajectory_id": "dc-plan-discovery-015"
+        },
+        {
+          "env_seed": 1640200016,
+          "oracle_np_seed": 1642200016,
+          "policy_seed": 1641200016,
+          "slot": 16,
+          "trajectory_id": "dc-plan-discovery-016"
+        },
+        {
+          "env_seed": 1640200017,
+          "oracle_np_seed": 1642200017,
+          "policy_seed": 1641200017,
+          "slot": 17,
+          "trajectory_id": "dc-plan-discovery-017"
+        },
+        {
+          "env_seed": 1640200018,
+          "oracle_np_seed": 1642200018,
+          "policy_seed": 1641200018,
+          "slot": 18,
+          "trajectory_id": "dc-plan-discovery-018"
+        },
+        {
+          "env_seed": 1640200019,
+          "oracle_np_seed": 1642200019,
+          "policy_seed": 1641200019,
+          "slot": 19,
+          "trajectory_id": "dc-plan-discovery-019"
+        },
+        {
+          "env_seed": 1640200020,
+          "oracle_np_seed": 1642200020,
+          "policy_seed": 1641200020,
+          "slot": 20,
+          "trajectory_id": "dc-plan-discovery-020"
+        },
+        {
+          "env_seed": 1640200021,
+          "oracle_np_seed": 1642200021,
+          "policy_seed": 1641200021,
+          "slot": 21,
+          "trajectory_id": "dc-plan-discovery-021"
+        },
+        {
+          "env_seed": 1640200022,
+          "oracle_np_seed": 1642200022,
+          "policy_seed": 1641200022,
+          "slot": 22,
+          "trajectory_id": "dc-plan-discovery-022"
+        },
+        {
+          "env_seed": 1640200023,
+          "oracle_np_seed": 1642200023,
+          "policy_seed": 1641200023,
+          "slot": 23,
+          "trajectory_id": "dc-plan-discovery-023"
+        },
+        {
+          "env_seed": 1640200024,
+          "oracle_np_seed": 1642200024,
+          "policy_seed": 1641200024,
+          "slot": 24,
+          "trajectory_id": "dc-plan-discovery-024"
+        },
+        {
+          "env_seed": 1640200025,
+          "oracle_np_seed": 1642200025,
+          "policy_seed": 1641200025,
+          "slot": 25,
+          "trajectory_id": "dc-plan-discovery-025"
+        },
+        {
+          "env_seed": 1640200026,
+          "oracle_np_seed": 1642200026,
+          "policy_seed": 1641200026,
+          "slot": 26,
+          "trajectory_id": "dc-plan-discovery-026"
+        },
+        {
+          "env_seed": 1640200027,
+          "oracle_np_seed": 1642200027,
+          "policy_seed": 1641200027,
+          "slot": 27,
+          "trajectory_id": "dc-plan-discovery-027"
+        },
+        {
+          "env_seed": 1640200028,
+          "oracle_np_seed": 1642200028,
+          "policy_seed": 1641200028,
+          "slot": 28,
+          "trajectory_id": "dc-plan-discovery-028"
+        },
+        {
+          "env_seed": 1640200029,
+          "oracle_np_seed": 1642200029,
+          "policy_seed": 1641200029,
+          "slot": 29,
+          "trajectory_id": "dc-plan-discovery-029"
+        },
+        {
+          "env_seed": 1640200030,
+          "oracle_np_seed": 1642200030,
+          "policy_seed": 1641200030,
+          "slot": 30,
+          "trajectory_id": "dc-plan-discovery-030"
+        },
+        {
+          "env_seed": 1640200031,
+          "oracle_np_seed": 1642200031,
+          "policy_seed": 1641200031,
+          "slot": 31,
+          "trajectory_id": "dc-plan-discovery-031"
+        },
+        {
+          "env_seed": 1640200032,
+          "oracle_np_seed": 1642200032,
+          "policy_seed": 1641200032,
+          "slot": 32,
+          "trajectory_id": "dc-plan-discovery-032"
+        },
+        {
+          "env_seed": 1640200033,
+          "oracle_np_seed": 1642200033,
+          "policy_seed": 1641200033,
+          "slot": 33,
+          "trajectory_id": "dc-plan-discovery-033"
+        },
+        {
+          "env_seed": 1640200034,
+          "oracle_np_seed": 1642200034,
+          "policy_seed": 1641200034,
+          "slot": 34,
+          "trajectory_id": "dc-plan-discovery-034"
+        },
+        {
+          "env_seed": 1640200035,
+          "oracle_np_seed": 1642200035,
+          "policy_seed": 1641200035,
+          "slot": 35,
+          "trajectory_id": "dc-plan-discovery-035"
+        },
+        {
+          "env_seed": 1640200036,
+          "oracle_np_seed": 1642200036,
+          "policy_seed": 1641200036,
+          "slot": 36,
+          "trajectory_id": "dc-plan-discovery-036"
+        },
+        {
+          "env_seed": 1640200037,
+          "oracle_np_seed": 1642200037,
+          "policy_seed": 1641200037,
+          "slot": 37,
+          "trajectory_id": "dc-plan-discovery-037"
+        },
+        {
+          "env_seed": 1640200038,
+          "oracle_np_seed": 1642200038,
+          "policy_seed": 1641200038,
+          "slot": 38,
+          "trajectory_id": "dc-plan-discovery-038"
+        },
+        {
+          "env_seed": 1640200039,
+          "oracle_np_seed": 1642200039,
+          "policy_seed": 1641200039,
+          "slot": 39,
+          "trajectory_id": "dc-plan-discovery-039"
+        },
+        {
+          "env_seed": 1640200040,
+          "oracle_np_seed": 1642200040,
+          "policy_seed": 1641200040,
+          "slot": 40,
+          "trajectory_id": "dc-plan-discovery-040"
+        },
+        {
+          "env_seed": 1640200041,
+          "oracle_np_seed": 1642200041,
+          "policy_seed": 1641200041,
+          "slot": 41,
+          "trajectory_id": "dc-plan-discovery-041"
+        },
+        {
+          "env_seed": 1640200042,
+          "oracle_np_seed": 1642200042,
+          "policy_seed": 1641200042,
+          "slot": 42,
+          "trajectory_id": "dc-plan-discovery-042"
+        },
+        {
+          "env_seed": 1640200043,
+          "oracle_np_seed": 1642200043,
+          "policy_seed": 1641200043,
+          "slot": 43,
+          "trajectory_id": "dc-plan-discovery-043"
+        },
+        {
+          "env_seed": 1640200044,
+          "oracle_np_seed": 1642200044,
+          "policy_seed": 1641200044,
+          "slot": 44,
+          "trajectory_id": "dc-plan-discovery-044"
+        },
+        {
+          "env_seed": 1640200045,
+          "oracle_np_seed": 1642200045,
+          "policy_seed": 1641200045,
+          "slot": 45,
+          "trajectory_id": "dc-plan-discovery-045"
+        },
+        {
+          "env_seed": 1640200046,
+          "oracle_np_seed": 1642200046,
+          "policy_seed": 1641200046,
+          "slot": 46,
+          "trajectory_id": "dc-plan-discovery-046"
+        },
+        {
+          "env_seed": 1640200047,
+          "oracle_np_seed": 1642200047,
+          "policy_seed": 1641200047,
+          "slot": 47,
+          "trajectory_id": "dc-plan-discovery-047"
+        },
+        {
+          "env_seed": 1640200048,
+          "oracle_np_seed": 1642200048,
+          "policy_seed": 1641200048,
+          "slot": 48,
+          "trajectory_id": "dc-plan-discovery-048"
+        },
+        {
+          "env_seed": 1640200049,
+          "oracle_np_seed": 1642200049,
+          "policy_seed": 1641200049,
+          "slot": 49,
+          "trajectory_id": "dc-plan-discovery-049"
+        },
+        {
+          "env_seed": 1640200050,
+          "oracle_np_seed": 1642200050,
+          "policy_seed": 1641200050,
+          "slot": 50,
+          "trajectory_id": "dc-plan-discovery-050"
+        },
+        {
+          "env_seed": 1640200051,
+          "oracle_np_seed": 1642200051,
+          "policy_seed": 1641200051,
+          "slot": 51,
+          "trajectory_id": "dc-plan-discovery-051"
+        },
+        {
+          "env_seed": 1640200052,
+          "oracle_np_seed": 1642200052,
+          "policy_seed": 1641200052,
+          "slot": 52,
+          "trajectory_id": "dc-plan-discovery-052"
+        },
+        {
+          "env_seed": 1640200053,
+          "oracle_np_seed": 1642200053,
+          "policy_seed": 1641200053,
+          "slot": 53,
+          "trajectory_id": "dc-plan-discovery-053"
+        },
+        {
+          "env_seed": 1640200054,
+          "oracle_np_seed": 1642200054,
+          "policy_seed": 1641200054,
+          "slot": 54,
+          "trajectory_id": "dc-plan-discovery-054"
+        },
+        {
+          "env_seed": 1640200055,
+          "oracle_np_seed": 1642200055,
+          "policy_seed": 1641200055,
+          "slot": 55,
+          "trajectory_id": "dc-plan-discovery-055"
+        },
+        {
+          "env_seed": 1640200056,
+          "oracle_np_seed": 1642200056,
+          "policy_seed": 1641200056,
+          "slot": 56,
+          "trajectory_id": "dc-plan-discovery-056"
+        },
+        {
+          "env_seed": 1640200057,
+          "oracle_np_seed": 1642200057,
+          "policy_seed": 1641200057,
+          "slot": 57,
+          "trajectory_id": "dc-plan-discovery-057"
+        },
+        {
+          "env_seed": 1640200058,
+          "oracle_np_seed": 1642200058,
+          "policy_seed": 1641200058,
+          "slot": 58,
+          "trajectory_id": "dc-plan-discovery-058"
+        },
+        {
+          "env_seed": 1640200059,
+          "oracle_np_seed": 1642200059,
+          "policy_seed": 1641200059,
+          "slot": 59,
+          "trajectory_id": "dc-plan-discovery-059"
+        },
+        {
+          "env_seed": 1640200060,
+          "oracle_np_seed": 1642200060,
+          "policy_seed": 1641200060,
+          "slot": 60,
+          "trajectory_id": "dc-plan-discovery-060"
+        },
+        {
+          "env_seed": 1640200061,
+          "oracle_np_seed": 1642200061,
+          "policy_seed": 1641200061,
+          "slot": 61,
+          "trajectory_id": "dc-plan-discovery-061"
+        },
+        {
+          "env_seed": 1640200062,
+          "oracle_np_seed": 1642200062,
+          "policy_seed": 1641200062,
+          "slot": 62,
+          "trajectory_id": "dc-plan-discovery-062"
+        },
+        {
+          "env_seed": 1640200063,
+          "oracle_np_seed": 1642200063,
+          "policy_seed": 1641200063,
+          "slot": 63,
+          "trajectory_id": "dc-plan-discovery-063"
+        },
+        {
+          "env_seed": 1640200064,
+          "oracle_np_seed": 1642200064,
+          "policy_seed": 1641200064,
+          "slot": 64,
+          "trajectory_id": "dc-plan-discovery-064"
+        },
+        {
+          "env_seed": 1640200065,
+          "oracle_np_seed": 1642200065,
+          "policy_seed": 1641200065,
+          "slot": 65,
+          "trajectory_id": "dc-plan-discovery-065"
+        },
+        {
+          "env_seed": 1640200066,
+          "oracle_np_seed": 1642200066,
+          "policy_seed": 1641200066,
+          "slot": 66,
+          "trajectory_id": "dc-plan-discovery-066"
+        },
+        {
+          "env_seed": 1640200067,
+          "oracle_np_seed": 1642200067,
+          "policy_seed": 1641200067,
+          "slot": 67,
+          "trajectory_id": "dc-plan-discovery-067"
+        },
+        {
+          "env_seed": 1640200068,
+          "oracle_np_seed": 1642200068,
+          "policy_seed": 1641200068,
+          "slot": 68,
+          "trajectory_id": "dc-plan-discovery-068"
+        },
+        {
+          "env_seed": 1640200069,
+          "oracle_np_seed": 1642200069,
+          "policy_seed": 1641200069,
+          "slot": 69,
+          "trajectory_id": "dc-plan-discovery-069"
+        },
+        {
+          "env_seed": 1640200070,
+          "oracle_np_seed": 1642200070,
+          "policy_seed": 1641200070,
+          "slot": 70,
+          "trajectory_id": "dc-plan-discovery-070"
+        },
+        {
+          "env_seed": 1640200071,
+          "oracle_np_seed": 1642200071,
+          "policy_seed": 1641200071,
+          "slot": 71,
+          "trajectory_id": "dc-plan-discovery-071"
+        },
+        {
+          "env_seed": 1640200072,
+          "oracle_np_seed": 1642200072,
+          "policy_seed": 1641200072,
+          "slot": 72,
+          "trajectory_id": "dc-plan-discovery-072"
+        },
+        {
+          "env_seed": 1640200073,
+          "oracle_np_seed": 1642200073,
+          "policy_seed": 1641200073,
+          "slot": 73,
+          "trajectory_id": "dc-plan-discovery-073"
+        },
+        {
+          "env_seed": 1640200074,
+          "oracle_np_seed": 1642200074,
+          "policy_seed": 1641200074,
+          "slot": 74,
+          "trajectory_id": "dc-plan-discovery-074"
+        },
+        {
+          "env_seed": 1640200075,
+          "oracle_np_seed": 1642200075,
+          "policy_seed": 1641200075,
+          "slot": 75,
+          "trajectory_id": "dc-plan-discovery-075"
+        },
+        {
+          "env_seed": 1640200076,
+          "oracle_np_seed": 1642200076,
+          "policy_seed": 1641200076,
+          "slot": 76,
+          "trajectory_id": "dc-plan-discovery-076"
+        },
+        {
+          "env_seed": 1640200077,
+          "oracle_np_seed": 1642200077,
+          "policy_seed": 1641200077,
+          "slot": 77,
+          "trajectory_id": "dc-plan-discovery-077"
+        },
+        {
+          "env_seed": 1640200078,
+          "oracle_np_seed": 1642200078,
+          "policy_seed": 1641200078,
+          "slot": 78,
+          "trajectory_id": "dc-plan-discovery-078"
+        },
+        {
+          "env_seed": 1640200079,
+          "oracle_np_seed": 1642200079,
+          "policy_seed": 1641200079,
+          "slot": 79,
+          "trajectory_id": "dc-plan-discovery-079"
+        },
+        {
+          "env_seed": 1640200080,
+          "oracle_np_seed": 1642200080,
+          "policy_seed": 1641200080,
+          "slot": 80,
+          "trajectory_id": "dc-plan-discovery-080"
+        },
+        {
+          "env_seed": 1640200081,
+          "oracle_np_seed": 1642200081,
+          "policy_seed": 1641200081,
+          "slot": 81,
+          "trajectory_id": "dc-plan-discovery-081"
+        },
+        {
+          "env_seed": 1640200082,
+          "oracle_np_seed": 1642200082,
+          "policy_seed": 1641200082,
+          "slot": 82,
+          "trajectory_id": "dc-plan-discovery-082"
+        },
+        {
+          "env_seed": 1640200083,
+          "oracle_np_seed": 1642200083,
+          "policy_seed": 1641200083,
+          "slot": 83,
+          "trajectory_id": "dc-plan-discovery-083"
+        },
+        {
+          "env_seed": 1640200084,
+          "oracle_np_seed": 1642200084,
+          "policy_seed": 1641200084,
+          "slot": 84,
+          "trajectory_id": "dc-plan-discovery-084"
+        },
+        {
+          "env_seed": 1640200085,
+          "oracle_np_seed": 1642200085,
+          "policy_seed": 1641200085,
+          "slot": 85,
+          "trajectory_id": "dc-plan-discovery-085"
+        },
+        {
+          "env_seed": 1640200086,
+          "oracle_np_seed": 1642200086,
+          "policy_seed": 1641200086,
+          "slot": 86,
+          "trajectory_id": "dc-plan-discovery-086"
+        },
+        {
+          "env_seed": 1640200087,
+          "oracle_np_seed": 1642200087,
+          "policy_seed": 1641200087,
+          "slot": 87,
+          "trajectory_id": "dc-plan-discovery-087"
+        },
+        {
+          "env_seed": 1640200088,
+          "oracle_np_seed": 1642200088,
+          "policy_seed": 1641200088,
+          "slot": 88,
+          "trajectory_id": "dc-plan-discovery-088"
+        },
+        {
+          "env_seed": 1640200089,
+          "oracle_np_seed": 1642200089,
+          "policy_seed": 1641200089,
+          "slot": 89,
+          "trajectory_id": "dc-plan-discovery-089"
+        }
+      ]
+    },
+    "replacement": {
+      "markov_oracle": [
+        {
+          "env_seed": 1640910000,
+          "oracle_np_seed": 1644900000,
+          "policy_seed": 1643900000,
+          "slot": 0,
+          "trajectory_id": "dc-markov-replacement-000"
+        },
+        {
+          "env_seed": 1640910001,
+          "oracle_np_seed": 1644900001,
+          "policy_seed": 1643900001,
+          "slot": 1,
+          "trajectory_id": "dc-markov-replacement-001"
+        },
+        {
+          "env_seed": 1640910002,
+          "oracle_np_seed": 1644900002,
+          "policy_seed": 1643900002,
+          "slot": 2,
+          "trajectory_id": "dc-markov-replacement-002"
+        },
+        {
+          "env_seed": 1640910003,
+          "oracle_np_seed": 1644900003,
+          "policy_seed": 1643900003,
+          "slot": 3,
+          "trajectory_id": "dc-markov-replacement-003"
+        },
+        {
+          "env_seed": 1640910004,
+          "oracle_np_seed": 1644900004,
+          "policy_seed": 1643900004,
+          "slot": 4,
+          "trajectory_id": "dc-markov-replacement-004"
+        },
+        {
+          "env_seed": 1640910005,
+          "oracle_np_seed": 1644900005,
+          "policy_seed": 1643900005,
+          "slot": 5,
+          "trajectory_id": "dc-markov-replacement-005"
+        },
+        {
+          "env_seed": 1640910006,
+          "oracle_np_seed": 1644900006,
+          "policy_seed": 1643900006,
+          "slot": 6,
+          "trajectory_id": "dc-markov-replacement-006"
+        },
+        {
+          "env_seed": 1640910007,
+          "oracle_np_seed": 1644900007,
+          "policy_seed": 1643900007,
+          "slot": 7,
+          "trajectory_id": "dc-markov-replacement-007"
+        },
+        {
+          "env_seed": 1640910008,
+          "oracle_np_seed": 1644900008,
+          "policy_seed": 1643900008,
+          "slot": 8,
+          "trajectory_id": "dc-markov-replacement-008"
+        },
+        {
+          "env_seed": 1640910009,
+          "oracle_np_seed": 1644900009,
+          "policy_seed": 1643900009,
+          "slot": 9,
+          "trajectory_id": "dc-markov-replacement-009"
+        },
+        {
+          "env_seed": 1640910010,
+          "oracle_np_seed": 1644900010,
+          "policy_seed": 1643900010,
+          "slot": 10,
+          "trajectory_id": "dc-markov-replacement-010"
+        },
+        {
+          "env_seed": 1640910011,
+          "oracle_np_seed": 1644900011,
+          "policy_seed": 1643900011,
+          "slot": 11,
+          "trajectory_id": "dc-markov-replacement-011"
+        },
+        {
+          "env_seed": 1640910012,
+          "oracle_np_seed": 1644900012,
+          "policy_seed": 1643900012,
+          "slot": 12,
+          "trajectory_id": "dc-markov-replacement-012"
+        },
+        {
+          "env_seed": 1640910013,
+          "oracle_np_seed": 1644900013,
+          "policy_seed": 1643900013,
+          "slot": 13,
+          "trajectory_id": "dc-markov-replacement-013"
+        },
+        {
+          "env_seed": 1640910014,
+          "oracle_np_seed": 1644900014,
+          "policy_seed": 1643900014,
+          "slot": 14,
+          "trajectory_id": "dc-markov-replacement-014"
+        },
+        {
+          "env_seed": 1640910015,
+          "oracle_np_seed": 1644900015,
+          "policy_seed": 1643900015,
+          "slot": 15,
+          "trajectory_id": "dc-markov-replacement-015"
+        },
+        {
+          "env_seed": 1640910016,
+          "oracle_np_seed": 1644900016,
+          "policy_seed": 1643900016,
+          "slot": 16,
+          "trajectory_id": "dc-markov-replacement-016"
+        },
+        {
+          "env_seed": 1640910017,
+          "oracle_np_seed": 1644900017,
+          "policy_seed": 1643900017,
+          "slot": 17,
+          "trajectory_id": "dc-markov-replacement-017"
+        },
+        {
+          "env_seed": 1640910018,
+          "oracle_np_seed": 1644900018,
+          "policy_seed": 1643900018,
+          "slot": 18,
+          "trajectory_id": "dc-markov-replacement-018"
+        },
+        {
+          "env_seed": 1640910019,
+          "oracle_np_seed": 1644900019,
+          "policy_seed": 1643900019,
+          "slot": 19,
+          "trajectory_id": "dc-markov-replacement-019"
+        },
+        {
+          "env_seed": 1640910020,
+          "oracle_np_seed": 1644900020,
+          "policy_seed": 1643900020,
+          "slot": 20,
+          "trajectory_id": "dc-markov-replacement-020"
+        },
+        {
+          "env_seed": 1640910021,
+          "oracle_np_seed": 1644900021,
+          "policy_seed": 1643900021,
+          "slot": 21,
+          "trajectory_id": "dc-markov-replacement-021"
+        },
+        {
+          "env_seed": 1640910022,
+          "oracle_np_seed": 1644900022,
+          "policy_seed": 1643900022,
+          "slot": 22,
+          "trajectory_id": "dc-markov-replacement-022"
+        },
+        {
+          "env_seed": 1640910023,
+          "oracle_np_seed": 1644900023,
+          "policy_seed": 1643900023,
+          "slot": 23,
+          "trajectory_id": "dc-markov-replacement-023"
+        }
+      ],
+      "plan_oracle": [
+        {
+          "env_seed": 1640900000,
+          "oracle_np_seed": 1642900000,
+          "policy_seed": 1641900000,
+          "slot": 0,
+          "trajectory_id": "dc-plan-replacement-000"
+        },
+        {
+          "env_seed": 1640900001,
+          "oracle_np_seed": 1642900001,
+          "policy_seed": 1641900001,
+          "slot": 1,
+          "trajectory_id": "dc-plan-replacement-001"
+        },
+        {
+          "env_seed": 1640900002,
+          "oracle_np_seed": 1642900002,
+          "policy_seed": 1641900002,
+          "slot": 2,
+          "trajectory_id": "dc-plan-replacement-002"
+        },
+        {
+          "env_seed": 1640900003,
+          "oracle_np_seed": 1642900003,
+          "policy_seed": 1641900003,
+          "slot": 3,
+          "trajectory_id": "dc-plan-replacement-003"
+        },
+        {
+          "env_seed": 1640900004,
+          "oracle_np_seed": 1642900004,
+          "policy_seed": 1641900004,
+          "slot": 4,
+          "trajectory_id": "dc-plan-replacement-004"
+        },
+        {
+          "env_seed": 1640900005,
+          "oracle_np_seed": 1642900005,
+          "policy_seed": 1641900005,
+          "slot": 5,
+          "trajectory_id": "dc-plan-replacement-005"
+        },
+        {
+          "env_seed": 1640900006,
+          "oracle_np_seed": 1642900006,
+          "policy_seed": 1641900006,
+          "slot": 6,
+          "trajectory_id": "dc-plan-replacement-006"
+        },
+        {
+          "env_seed": 1640900007,
+          "oracle_np_seed": 1642900007,
+          "policy_seed": 1641900007,
+          "slot": 7,
+          "trajectory_id": "dc-plan-replacement-007"
+        },
+        {
+          "env_seed": 1640900008,
+          "oracle_np_seed": 1642900008,
+          "policy_seed": 1641900008,
+          "slot": 8,
+          "trajectory_id": "dc-plan-replacement-008"
+        },
+        {
+          "env_seed": 1640900009,
+          "oracle_np_seed": 1642900009,
+          "policy_seed": 1641900009,
+          "slot": 9,
+          "trajectory_id": "dc-plan-replacement-009"
+        },
+        {
+          "env_seed": 1640900010,
+          "oracle_np_seed": 1642900010,
+          "policy_seed": 1641900010,
+          "slot": 10,
+          "trajectory_id": "dc-plan-replacement-010"
+        },
+        {
+          "env_seed": 1640900011,
+          "oracle_np_seed": 1642900011,
+          "policy_seed": 1641900011,
+          "slot": 11,
+          "trajectory_id": "dc-plan-replacement-011"
+        },
+        {
+          "env_seed": 1640900012,
+          "oracle_np_seed": 1642900012,
+          "policy_seed": 1641900012,
+          "slot": 12,
+          "trajectory_id": "dc-plan-replacement-012"
+        },
+        {
+          "env_seed": 1640900013,
+          "oracle_np_seed": 1642900013,
+          "policy_seed": 1641900013,
+          "slot": 13,
+          "trajectory_id": "dc-plan-replacement-013"
+        },
+        {
+          "env_seed": 1640900014,
+          "oracle_np_seed": 1642900014,
+          "policy_seed": 1641900014,
+          "slot": 14,
+          "trajectory_id": "dc-plan-replacement-014"
+        },
+        {
+          "env_seed": 1640900015,
+          "oracle_np_seed": 1642900015,
+          "policy_seed": 1641900015,
+          "slot": 15,
+          "trajectory_id": "dc-plan-replacement-015"
+        },
+        {
+          "env_seed": 1640900016,
+          "oracle_np_seed": 1642900016,
+          "policy_seed": 1641900016,
+          "slot": 16,
+          "trajectory_id": "dc-plan-replacement-016"
+        },
+        {
+          "env_seed": 1640900017,
+          "oracle_np_seed": 1642900017,
+          "policy_seed": 1641900017,
+          "slot": 17,
+          "trajectory_id": "dc-plan-replacement-017"
+        },
+        {
+          "env_seed": 1640900018,
+          "oracle_np_seed": 1642900018,
+          "policy_seed": 1641900018,
+          "slot": 18,
+          "trajectory_id": "dc-plan-replacement-018"
+        },
+        {
+          "env_seed": 1640900019,
+          "oracle_np_seed": 1642900019,
+          "policy_seed": 1641900019,
+          "slot": 19,
+          "trajectory_id": "dc-plan-replacement-019"
+        },
+        {
+          "env_seed": 1640900020,
+          "oracle_np_seed": 1642900020,
+          "policy_seed": 1641900020,
+          "slot": 20,
+          "trajectory_id": "dc-plan-replacement-020"
+        },
+        {
+          "env_seed": 1640900021,
+          "oracle_np_seed": 1642900021,
+          "policy_seed": 1641900021,
+          "slot": 21,
+          "trajectory_id": "dc-plan-replacement-021"
+        },
+        {
+          "env_seed": 1640900022,
+          "oracle_np_seed": 1642900022,
+          "policy_seed": 1641900022,
+          "slot": 22,
+          "trajectory_id": "dc-plan-replacement-022"
+        },
+        {
+          "env_seed": 1640900023,
+          "oracle_np_seed": 1642900023,
+          "policy_seed": 1641900023,
+          "slot": 23,
+          "trajectory_id": "dc-plan-replacement-023"
+        }
+      ]
+    },
+    "smoke": {
+      "markov_oracle": [
+        {
+          "env_seed": 1640100000,
+          "oracle_np_seed": 1644100000,
+          "policy_seed": 1643100000,
+          "slot": 0,
+          "trajectory_id": "dc-smoke-markov-000"
+        },
+        {
+          "env_seed": 1640100001,
+          "oracle_np_seed": 1644100001,
+          "policy_seed": 1643100001,
+          "slot": 1,
+          "trajectory_id": "dc-smoke-markov-001"
+        },
+        {
+          "env_seed": 1640100002,
+          "oracle_np_seed": 1644100002,
+          "policy_seed": 1643100002,
+          "slot": 2,
+          "trajectory_id": "dc-smoke-markov-002"
+        },
+        {
+          "env_seed": 1640100003,
+          "oracle_np_seed": 1644100003,
+          "policy_seed": 1643100003,
+          "slot": 3,
+          "trajectory_id": "dc-smoke-markov-003"
+        },
+        {
+          "env_seed": 1640100004,
+          "oracle_np_seed": 1644100004,
+          "policy_seed": 1643100004,
+          "slot": 4,
+          "trajectory_id": "dc-smoke-markov-004"
+        },
+        {
+          "env_seed": 1640100005,
+          "oracle_np_seed": 1644100005,
+          "policy_seed": 1643100005,
+          "slot": 5,
+          "trajectory_id": "dc-smoke-markov-005"
+        },
+        {
+          "env_seed": 1640100006,
+          "oracle_np_seed": 1644100006,
+          "policy_seed": 1643100006,
+          "slot": 6,
+          "trajectory_id": "dc-smoke-markov-006"
+        },
+        {
+          "env_seed": 1640100007,
+          "oracle_np_seed": 1644100007,
+          "policy_seed": 1643100007,
+          "slot": 7,
+          "trajectory_id": "dc-smoke-markov-007"
+        },
+        {
+          "env_seed": 1640100008,
+          "oracle_np_seed": 1644100008,
+          "policy_seed": 1643100008,
+          "slot": 8,
+          "trajectory_id": "dc-smoke-markov-008"
+        },
+        {
+          "env_seed": 1640100009,
+          "oracle_np_seed": 1644100009,
+          "policy_seed": 1643100009,
+          "slot": 9,
+          "trajectory_id": "dc-smoke-markov-009"
+        },
+        {
+          "env_seed": 1640100010,
+          "oracle_np_seed": 1644100010,
+          "policy_seed": 1643100010,
+          "slot": 10,
+          "trajectory_id": "dc-smoke-markov-010"
+        },
+        {
+          "env_seed": 1640100011,
+          "oracle_np_seed": 1644100011,
+          "policy_seed": 1643100011,
+          "slot": 11,
+          "trajectory_id": "dc-smoke-markov-011"
+        }
+      ],
+      "plan_oracle": [
+        {
+          "env_seed": 1640100000,
+          "oracle_np_seed": 1642100000,
+          "policy_seed": 1641100000,
+          "slot": 0,
+          "trajectory_id": "dc-smoke-plan-000"
+        },
+        {
+          "env_seed": 1640100001,
+          "oracle_np_seed": 1642100001,
+          "policy_seed": 1641100001,
+          "slot": 1,
+          "trajectory_id": "dc-smoke-plan-001"
+        },
+        {
+          "env_seed": 1640100002,
+          "oracle_np_seed": 1642100002,
+          "policy_seed": 1641100002,
+          "slot": 2,
+          "trajectory_id": "dc-smoke-plan-002"
+        },
+        {
+          "env_seed": 1640100003,
+          "oracle_np_seed": 1642100003,
+          "policy_seed": 1641100003,
+          "slot": 3,
+          "trajectory_id": "dc-smoke-plan-003"
+        },
+        {
+          "env_seed": 1640100004,
+          "oracle_np_seed": 1642100004,
+          "policy_seed": 1641100004,
+          "slot": 4,
+          "trajectory_id": "dc-smoke-plan-004"
+        },
+        {
+          "env_seed": 1640100005,
+          "oracle_np_seed": 1642100005,
+          "policy_seed": 1641100005,
+          "slot": 5,
+          "trajectory_id": "dc-smoke-plan-005"
+        },
+        {
+          "env_seed": 1640100006,
+          "oracle_np_seed": 1642100006,
+          "policy_seed": 1641100006,
+          "slot": 6,
+          "trajectory_id": "dc-smoke-plan-006"
+        },
+        {
+          "env_seed": 1640100007,
+          "oracle_np_seed": 1642100007,
+          "policy_seed": 1641100007,
+          "slot": 7,
+          "trajectory_id": "dc-smoke-plan-007"
+        },
+        {
+          "env_seed": 1640100008,
+          "oracle_np_seed": 1642100008,
+          "policy_seed": 1641100008,
+          "slot": 8,
+          "trajectory_id": "dc-smoke-plan-008"
+        },
+        {
+          "env_seed": 1640100009,
+          "oracle_np_seed": 1642100009,
+          "policy_seed": 1641100009,
+          "slot": 9,
+          "trajectory_id": "dc-smoke-plan-009"
+        },
+        {
+          "env_seed": 1640100010,
+          "oracle_np_seed": 1642100010,
+          "policy_seed": 1641100010,
+          "slot": 10,
+          "trajectory_id": "dc-smoke-plan-010"
+        },
+        {
+          "env_seed": 1640100011,
+          "oracle_np_seed": 1642100011,
+          "policy_seed": 1641100011,
+          "slot": 11,
+          "trajectory_id": "dc-smoke-plan-011"
+        }
+      ]
+    }
+  },
+  "schema_version": 1,
+  "selection_rule": "Preallocated contiguous blocks beginning at 1,640,100,000, chosen without rollout access and accepted only after exact nonmembership in the frozen prior identifier inventory and V4 seed manifest.",
+  "statistical_seeds": {
+    "exact_total_assignment": 1646000201,
+    "gate_exact_analytic": 1646000101,
+    "gate_exact_seeded": 1646000102,
+    "gate_fixed_d1": 1646000103,
+    "gate_histogram": 1646000104,
+    "gate_white_exact": 1646000105,
+    "histogram_randomization": 1646000202,
+    "independent_bootstrap": 1646000401,
+    "latency_order": 1646000301,
+    "plan_d1_d2_gain_ci": 1646000003,
+    "reference_joint_max_t": 1646000001,
+    "reference_marginal_bands": 1646000002
+  },
+  "status": "frozen_before_any_new_rollout",
+  "unique_seed_count": 546,
+  "unique_seeds_sha256": "b51f62ba5719186cad04a1eb4d28f41aaef6de8a161dd5247eae6dd13b44686f",
+  "v4_seed_manifest_sha256": "36c1ed920d8537cce0f2c44827aa62a08581af8739d1e9608f1bb1db0eeceed0"
+}

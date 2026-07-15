@@ -1,0 +1,7 @@
+{
+  "fit_episodes_only": true,
+  "labels_attached_after_decision": true,
+  "operating_point": "z0.00_b1.50",
+  "static_q25": 0.0,
+  "transport_q75": 0.06765174865722656
+}

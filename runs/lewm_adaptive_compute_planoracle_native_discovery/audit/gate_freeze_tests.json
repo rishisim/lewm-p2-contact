@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_package_arrays_finite": true,
+    "contact_token_absent": true,
+    "exact_call_histogram": true,
+    "feature_order_exact": true,
+    "gate_flops_recomputed": true,
+    "gate_freeze_hash": true,
+    "gate_parameters_recomputed": true,
+    "gradient_isolation": true,
+    "prospective_absent": true,
+    "selection_non_degenerate": true,
+    "sparse_dense_calls_exact": true,
+    "sparse_dense_outputs_exact": true
+  },
+  "numpy_fitting_warnings_audited": "saved inputs/outputs/package all finite; independent score/call recomputation exact",
+  "passed": true,
+  "schema_version": 1,
+  "selected_candidate": "minimax_dual_linear-r0.01-q0.85",
+  "v3_hdf5_v4_access": false,
+  "v5_episodes": 0
+}

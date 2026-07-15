@@ -1,0 +1,18 @@
+{
+  "additional_refiner_flops_per_call": 264960,
+  "analytic_equivalent_calls": "sum(calls) + sum(min(calls,3))*7985/264960",
+  "base_flops_per_row": 70529190,
+  "convention": "subtraction multiplication reduction-add sqrt division and affine bias-add count as FLOPs; comparison clamp and minimum are separately reported non-FLOPs; detach view flatten concatenate index scatter and stage coefficient selection are zero FLOP",
+  "feature_graph_path": "operation_graph.json",
+  "formula": "N*(base+mandatory_depth1) + (sum(calls)-N)*additional_refiner + sum(min(calls,3))*gate_total",
+  "gate": {
+    "dual_affine_score_flops_per_reached_evaluation": 4184,
+    "feature_flops_per_reached_evaluation": 3801,
+    "nonflop_comparison_min_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7985
+  },
+  "mandatory_depth1_refiner_flops_per_row": 669184,
+  "nonflop_operations_reported_separately": true,
+  "schema_version": 1,
+  "semantic_feature_names_path": "semantic_feature_names.json"
+}

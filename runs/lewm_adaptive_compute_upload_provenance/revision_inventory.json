@@ -1,0 +1,822 @@
+{
+  "linear_history": true,
+  "releases": [],
+  "revision_count": 6,
+  "revisions": [
+    {
+      "archive": null,
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-26T20:41:03Z"
+      },
+      "commit": "de75ff3cef0851c208b849c58570d765a2ae0637",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-26T20:41:03Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "initial commit",
+      "parents": [],
+      "readme": {
+        "bytes": 24,
+        "git_blob": "7be5fc7f47d5db027d120b8024982df93db95b74",
+        "sha256": "d8d7a46d41a1a37fe4f0a5f637bf55c649310185329127d8a2204632e480be17"
+      },
+      "readme_diff_from_parent": null,
+      "siblings": [
+        ".gitattributes",
+        "README.md"
+      ],
+      "signature_key": "6A528E38E0733467",
+      "signature_status": "E",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "7be5fc7f47d5db027d120b8024982df93db95b74",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 24,
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "file_action": "added",
+        "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+        "last_commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+        "lfs_pointer_size": 136,
+        "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+        "size": 46184624478,
+        "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+      },
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-26T20:49:37Z"
+      },
+      "commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-26T20:49:37Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "Upload cube_single_expert.tar.zst with huggingface_hub",
+      "parents": [
+        "de75ff3cef0851c208b849c58570d765a2ae0637"
+      ],
+      "readme": {
+        "bytes": 24,
+        "git_blob": "7be5fc7f47d5db027d120b8024982df93db95b74",
+        "sha256": "d8d7a46d41a1a37fe4f0a5f637bf55c649310185329127d8a2204632e480be17"
+      },
+      "readme_diff_from_parent": "\n",
+      "siblings": [
+        ".gitattributes",
+        "README.md",
+        "cube_single_expert.tar.zst"
+      ],
+      "signature_key": "6A528E38E0733467",
+      "signature_status": "E",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "7be5fc7f47d5db027d120b8024982df93db95b74",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 24,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:49:37.000Z",
+            "id": "f6fe469578297a910bd4c88b9857f572908d7a34",
+            "title": "Upload cube_single_expert.tar.zst with huggingface_hub"
+          },
+          "lfs": {
+            "oid": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+            "pointerSize": 136,
+            "size": 46184624478
+          },
+          "oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+          "path": "cube_single_expert.tar.zst",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "unscanned",
+              "version": "1.5.2/27952"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "unscanned",
+            "virusTotalScan": {
+              "message": "File not scanned in VirusTotal",
+              "reportLink": "https://www.virustotal.com/gui/file/3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600?utm_source=huggingface",
+              "status": "unscanned"
+            }
+          },
+          "size": 46184624478,
+          "type": "file",
+          "xetHash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "file_action": "unchanged",
+        "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+        "last_commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+        "lfs_pointer_size": 136,
+        "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+        "size": 46184624478,
+        "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+      },
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-26T21:07:28Z"
+      },
+      "commit": "116b5467ac69094027b3e2cfda48c79f482356d3",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-26T21:07:28Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "Update README.md",
+      "parents": [
+        "f6fe469578297a910bd4c88b9857f572908d7a34"
+      ],
+      "readme": {
+        "bytes": 91,
+        "git_blob": "0671c0700fa6b0dc7b93b565b3d886da36b0533d",
+        "sha256": "951c486112e920dc9b907cfffea678f25b27ecd75688c6f28cf33b0678d59391"
+      },
+      "readme_diff_from_parent": "--- f6fe469578297a910bd4c88b9857f572908d7a34\n+++ 116b5467ac69094027b3e2cfda48c79f482356d3\n@@ -1,3 +1,5 @@\n ---\n license: mit\n ---\n+\n+Dataset for the OGBench-Cube manipulation task. Used in LeWorldModel.\n",
+      "siblings": [
+        ".gitattributes",
+        "README.md",
+        "cube_single_expert.tar.zst"
+      ],
+      "signature_key": "6A528E38E0733467",
+      "signature_status": "E",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T21:07:28.000Z",
+            "id": "116b5467ac69094027b3e2cfda48c79f482356d3",
+            "title": "Update README.md"
+          },
+          "oid": "0671c0700fa6b0dc7b93b565b3d886da36b0533d",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "queued"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "queued",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 91,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:49:37.000Z",
+            "id": "f6fe469578297a910bd4c88b9857f572908d7a34",
+            "title": "Upload cube_single_expert.tar.zst with huggingface_hub"
+          },
+          "lfs": {
+            "oid": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+            "pointerSize": 136,
+            "size": 46184624478
+          },
+          "oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+          "path": "cube_single_expert.tar.zst",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "unscanned",
+              "version": "1.5.2/27952"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "unscanned",
+            "virusTotalScan": {
+              "message": "File not scanned in VirusTotal",
+              "reportLink": "https://www.virustotal.com/gui/file/3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600?utm_source=huggingface",
+              "status": "unscanned"
+            }
+          },
+          "size": 46184624478,
+          "type": "file",
+          "xetHash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "file_action": "unchanged",
+        "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+        "last_commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+        "lfs_pointer_size": 136,
+        "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+        "size": 46184624478,
+        "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+      },
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-26T21:08:04Z"
+      },
+      "commit": "63c01ba443b5ebdfd363b46ead9912b612218d96",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-26T21:08:04Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "Update README.md",
+      "parents": [
+        "116b5467ac69094027b3e2cfda48c79f482356d3"
+      ],
+      "readme": {
+        "bytes": 118,
+        "git_blob": "01de081312d389111b9d6e5b8b9ace8bce475d46",
+        "sha256": "c7820270183582312d33c997c611089e0f04a6b9f535cc9c8556daf50dde189b"
+      },
+      "readme_diff_from_parent": "--- 116b5467ac69094027b3e2cfda48c79f482356d3\n+++ 63c01ba443b5ebdfd363b46ead9912b612218d96\n@@ -2,4 +2,4 @@\n license: mit\n ---\n \n-Dataset for the OGBench-Cube manipulation task. Used in LeWorldModel.\n+Dataset for the OGBench-Cube manipulation task. Used in [LeWorldModel](https://le-wm.github.io).\n",
+      "siblings": [
+        ".gitattributes",
+        "README.md",
+        "cube_single_expert.tar.zst"
+      ],
+      "signature_key": "6A528E38E0733467",
+      "signature_status": "E",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T21:08:04.000Z",
+            "id": "63c01ba443b5ebdfd363b46ead9912b612218d96",
+            "title": "Update README.md"
+          },
+          "oid": "01de081312d389111b9d6e5b8b9ace8bce475d46",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "queued"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "queued",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 118,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:49:37.000Z",
+            "id": "f6fe469578297a910bd4c88b9857f572908d7a34",
+            "title": "Upload cube_single_expert.tar.zst with huggingface_hub"
+          },
+          "lfs": {
+            "oid": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+            "pointerSize": 136,
+            "size": 46184624478
+          },
+          "oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+          "path": "cube_single_expert.tar.zst",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "unscanned",
+              "version": "1.5.2/27952"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "unscanned",
+            "virusTotalScan": {
+              "message": "File not scanned in VirusTotal",
+              "reportLink": "https://www.virustotal.com/gui/file/3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600?utm_source=huggingface",
+              "status": "unscanned"
+            }
+          },
+          "size": 46184624478,
+          "type": "file",
+          "xetHash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "file_action": "unchanged",
+        "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+        "last_commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+        "lfs_pointer_size": 136,
+        "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+        "size": 46184624478,
+        "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+      },
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-26T21:29:57Z"
+      },
+      "commit": "54324364f20a0002c075958c49c7027ffa2ffd71",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-26T21:29:57Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "Update README.md",
+      "parents": [
+        "63c01ba443b5ebdfd363b46ead9912b612218d96"
+      ],
+      "readme": {
+        "bytes": 126,
+        "git_blob": "0424af56dd623eb274722d4173be38656aa11224",
+        "sha256": "1d4c1919bcfbbe4455dd0e8588493260a69c0afaaae9c57cca4ea137c6ce7f60"
+      },
+      "readme_diff_from_parent": "--- 63c01ba443b5ebdfd363b46ead9912b612218d96\n+++ 54324364f20a0002c075958c49c7027ffa2ffd71\n@@ -2,4 +2,4 @@\n license: mit\n ---\n \n-Dataset for the OGBench-Cube manipulation task. Used in [LeWorldModel](https://le-wm.github.io).\n+Official dataset for the OGBench-Cube manipulation task used in [LeWorldModel](https://le-wm.github.io).\n",
+      "siblings": [
+        ".gitattributes",
+        "README.md",
+        "cube_single_expert.tar.zst"
+      ],
+      "signature_key": "6A528E38E0733467",
+      "signature_status": "E",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T21:29:57.000Z",
+            "id": "54324364f20a0002c075958c49c7027ffa2ffd71",
+            "title": "Update README.md"
+          },
+          "oid": "0424af56dd623eb274722d4173be38656aa11224",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 126,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:49:37.000Z",
+            "id": "f6fe469578297a910bd4c88b9857f572908d7a34",
+            "title": "Upload cube_single_expert.tar.zst with huggingface_hub"
+          },
+          "lfs": {
+            "oid": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+            "pointerSize": 136,
+            "size": 46184624478
+          },
+          "oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+          "path": "cube_single_expert.tar.zst",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "unscanned",
+              "version": "1.5.2/27952"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "unscanned",
+            "virusTotalScan": {
+              "message": "File not scanned in VirusTotal",
+              "reportLink": "https://www.virustotal.com/gui/file/3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600?utm_source=huggingface",
+              "status": "unscanned"
+            }
+          },
+          "size": 46184624478,
+          "type": "file",
+          "xetHash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "file_action": "unchanged",
+        "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+        "last_commit": "f6fe469578297a910bd4c88b9857f572908d7a34",
+        "lfs_pointer_size": 136,
+        "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+        "size": 46184624478,
+        "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+      },
+      "author": {
+        "email": "quentinll@users.noreply.huggingface.co",
+        "name": "Quentin Le Lidec",
+        "timestamp": "2026-03-27T18:45:02Z"
+      },
+      "commit": "02a19a67a0dc8c9d6215f89c19e0a597691e152a",
+      "committer": {
+        "email": "system@huggingface.co",
+        "name": "system",
+        "timestamp": "2026-03-27T18:45:02Z"
+      },
+      "gitattributes": {
+        "bytes": 2504,
+        "git_blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+      },
+      "message": "Update README.md",
+      "parents": [
+        "54324364f20a0002c075958c49c7027ffa2ffd71"
+      ],
+      "readme": {
+        "bytes": 143,
+        "git_blob": "77ca56fb39d72b07ae0a891d9c63a96c483da646",
+        "sha256": "90478c4b722bcc0de291f3143ae88419e739ee84a200cb83c38b1727d95e53c7"
+      },
+      "readme_diff_from_parent": "--- 54324364f20a0002c075958c49c7027ffa2ffd71\n+++ 02a19a67a0dc8c9d6215f89c19e0a597691e152a\n@@ -2,4 +2,4 @@\n license: mit\n ---\n \n-Official dataset for the OGBench-Cube manipulation task used in [LeWorldModel](https://le-wm.github.io).\n+Official dataset for the OGBench-Cube manipulation task used in [LeWorldModel](https://huggingface.co/papers/2603.19312).\n",
+      "siblings": [
+        ".gitattributes",
+        "README.md",
+        "cube_single_expert.tar.zst"
+      ],
+      "signature_key": null,
+      "signature_status": "N",
+      "tree": [
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:41:03.000Z",
+            "id": "de75ff3cef0851c208b849c58570d765a2ae0637",
+            "title": "initial commit"
+          },
+          "oid": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "path": ".gitattributes",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 2504,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-27T18:45:02.000Z",
+            "id": "02a19a67a0dc8c9d6215f89c19e0a597691e152a",
+            "title": "Update README.md"
+          },
+          "oid": "77ca56fb39d72b07ae0a891d9c63a96c483da646",
+          "path": "README.md",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "No security issues detected",
+              "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface",
+              "status": "safe"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "safe",
+            "virusTotalScan": {
+              "status": "unscanned"
+            }
+          },
+          "size": 143,
+          "type": "file"
+        },
+        {
+          "lastCommit": {
+            "date": "2026-03-26T20:49:37.000Z",
+            "id": "f6fe469578297a910bd4c88b9857f572908d7a34",
+            "title": "Upload cube_single_expert.tar.zst with huggingface_hub"
+          },
+          "lfs": {
+            "oid": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+            "pointerSize": 136,
+            "size": 46184624478
+          },
+          "oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+          "path": "cube_single_expert.tar.zst",
+          "securityFileStatus": {
+            "avScan": {
+              "message": "",
+              "status": "unscanned",
+              "version": "1.5.2/27952"
+            },
+            "pickleImportScan": {
+              "pickleImports": [],
+              "status": "unscanned",
+              "version": "0.0.0"
+            },
+            "protectAiScan": {
+              "status": "unscanned"
+            },
+            "status": "unscanned",
+            "virusTotalScan": {
+              "message": "File not scanned in VirusTotal",
+              "reportLink": "https://www.virustotal.com/gui/file/3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600?utm_source=huggingface",
+              "status": "unscanned"
+            }
+          },
+          "size": 46184624478,
+          "type": "file",
+          "xetHash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf"
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "workflows": []
+}

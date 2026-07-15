@@ -1,0 +1,117 @@
+{
+  "policy": {
+    "eligible": "every regular file recursively",
+    "excluded": {
+      "artifact_manifest.json": "self-referential final manifest"
+    }
+  },
+  "record_count": 21,
+  "records": [
+    {
+      "bytes": 4666,
+      "path": "PREREGISTRATION.md",
+      "sha256": "9463c9f7c742387a5eb97fcd8182eb1ae935f534223a6f016d73fffbc01d2a46"
+    },
+    {
+      "bytes": 888,
+      "path": "README.md",
+      "sha256": "f5c68c778034eae303fd9730739cff88fc2e3db3eba6b695a69f0a537c74210d"
+    },
+    {
+      "bytes": 4722,
+      "path": "REPORT.md",
+      "sha256": "4f34d9b63f78cb06cae3838aad577d522b5e5e23a5ea41daf466c926fe1def32"
+    },
+    {
+      "bytes": 8751,
+      "path": "audit_candidates.py",
+      "sha256": "5bf7b3b29d0a54da38c657b4714a92afb1b2d1de13d2a9042d5c178683b6b26a"
+    },
+    {
+      "bytes": 791,
+      "path": "build_manifest.py",
+      "sha256": "d018b769803ec60c2a0721f1c06c337632f200ca2013aaebe13def2f1c61060f"
+    },
+    {
+      "bytes": 17318,
+      "path": "candidate_inventory.json",
+      "sha256": "6cdd18dc25a616bd5e697cf42080f13b720639081593dbcbf8c7c8497357c7c7"
+    },
+    {
+      "bytes": 611,
+      "path": "command.log",
+      "sha256": "5b7d88d7deea96d6c777de0289b92968620a3a6d6400a8363602739baa610903"
+    },
+    {
+      "bytes": 939,
+      "path": "decision.json",
+      "sha256": "fdec7017221fb9e45236e9c79f55281f87b4c5312316af4ea3bf2652ed405c07"
+    },
+    {
+      "bytes": 578,
+      "path": "environment_provenance.json",
+      "sha256": "d2c9daf3a4b6aa80b6cafafca6206f33bc57c40bd939a8ec6a9d983e37c2dc79"
+    },
+    {
+      "bytes": 1526,
+      "path": "independent_verification.json",
+      "sha256": "9b461dc29ea7fefc18ba532ebb272c9d0dfa9fade22cdcb2b9e6c71ba46a58c1"
+    },
+    {
+      "bytes": 602,
+      "path": "independent_verification.log",
+      "sha256": "c8562500a5adcdc6afdd41be3fb3cabee9b9eb3cc86f59fd1bb0e5a03e44eff0"
+    },
+    {
+      "bytes": 5908,
+      "path": "independent_verify.py",
+      "sha256": "b66394cb4f0cba5852c0135ba6ec5dba9c0d5eca23ef4e2bec986454761a547e"
+    },
+    {
+      "bytes": 534,
+      "path": "metrics.json",
+      "sha256": "17bf02667d2043abb7da4ed9a3325f0ded1a912cc4889e2f5591fd90bd7795e8"
+    },
+    {
+      "bytes": 85,
+      "path": "preregistration.sha256",
+      "sha256": "026420e95d534082cb53ccfbcdea7d5854ce07f97fb3584ad625d3995c796994"
+    },
+    {
+      "bytes": 5842,
+      "path": "protocol.json",
+      "sha256": "37f4f313d1d76c5dfc40bc7e9f0e13a339d76b928d2a6a4c2389fd1e1c6012d5"
+    },
+    {
+      "bytes": 80,
+      "path": "protocol.sha256",
+      "sha256": "23fe7eacefb249a70e8462bf4d48b1f36ec9a955d16727edf037016ac8e45a6a"
+    },
+    {
+      "bytes": 1126,
+      "path": "provenance_manifest.json",
+      "sha256": "5701829c656f21b56b8aa362ac04d05f962a53f91e029adf5f95404fbd891694"
+    },
+    {
+      "bytes": 1643,
+      "path": "source_lock_contract_diffs.json",
+      "sha256": "809fbbc051fb84a09851b9b746f4ee2d5ed22b691b58da6b41fe4a7eba5ecf7b"
+    },
+    {
+      "bytes": 171,
+      "path": "test.log",
+      "sha256": "372d087bba1e87806fb237d1aff5c870490cb2786c0cef74c3d445eb19563d97"
+    },
+    {
+      "bytes": 1535,
+      "path": "test_adjudication.py",
+      "sha256": "25fd1b7bb33645cd736ad0793f8a295ab41da35ae42a8e54071f6fbb47fbe50e"
+    },
+    {
+      "bytes": 989,
+      "path": "verify_manifest_readonly.py",
+      "sha256": "19ec5a9aeec39345ee1330a5b0f854d5d99ebd7b38cc9783f62877067d8f6828"
+    }
+  ],
+  "schema_version": 1
+}

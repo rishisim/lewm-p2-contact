@@ -1,0 +1,11 @@
+{
+  "device": "mps",
+  "git_head": "2d92e9d97511f66a4d491e0be4e4a4050b70043b",
+  "git_status_short": "M le-wm/diagnostics/fetch_contact_compute/test_experiment_utils.py\n?? le-wm/diagnostics/fetch_contact_compute/run_persistence_control.py\n?? runs/",
+  "machine": "arm64",
+  "mps_available": true,
+  "numpy": "2.2.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "torch": "2.12.0"
+}

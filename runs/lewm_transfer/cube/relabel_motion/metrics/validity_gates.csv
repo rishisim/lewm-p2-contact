@@ -1,0 +1,6 @@
+gate,passed,reason,model_mse_mean,persistence_mse_mean,model_persistence_ratio,latent_dim,condition_number,per_dim_variance_min,per_dim_variance_max,per_dim_variance_spread,whitened_metrics_required,interaction_rows,interaction_episodes,transport_free_rows,transport_free_episodes
+collapse_persistence,True,heldout model/persistence ratio=0.46526; void if approximately 1 or worse,0.1430644865184532,0.30749339101584106,0.46526036233111423,,,,,,,,,,
+latent_isotropy,False,target latent covariance condition and per-dim spread within preregistered thresholds,,,,192.0,517275.4888904555,0.5858585388842782,1.679593410225292,2.866892430080385,True,,,,
+no_circular_labels,True,interaction uses sensor contact; transport_free/static use raw effector/block motion only; no latent/error labels,,,,,,,,,,,,,
+split_thresholds,True,motion thresholds and optional whitening were fit on calibration episodes and evaluated on held-out episodes,,,,,,,,,,,,,
+coverage_interaction_transport_free,True,requires >=5 held-out episodes and >=30 held-out rows in interaction and transport_free,,,,,,,,,,371.0,20.0,358.0,20.0

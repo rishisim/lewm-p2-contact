@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "cache_manifest": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/cache/split_manifest.json",
+    "figures": {
+      "allocation_by_regime": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/figures/04_allocation_by_regime.png",
+      "budget_curve": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/figures/03_budget_curves.png",
+      "depth_curve": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/figures/01_error_vs_depth.png",
+      "gain_distribution": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/figures/02_compute_benefit_distribution.png"
+    },
+    "metrics": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/metrics"
+  },
+  "calibration_stage_a": {
+    "compute_response_passed": true,
+    "meaningful_headroom_threshold": 2.0908259032932057e-05,
+    "n": 3420,
+    "n_episodes": 90,
+    "oracle_headroom_passed": true,
+    "scope": "calibration"
+  },
+  "compute": {
+    "allocation_source": "learned_adaptive",
+    "device": "mps",
+    "flops_per_call": 669184,
+    "selected_estimated_flops": 2288609280,
+    "selected_latency": {
+      "batched_block_invocations": 7,
+      "device": "mps",
+      "latency_seconds_median": 0.029626457995618694,
+      "latency_seconds_repeats": [
+        0.09258637500170153,
+        0.029626457995618694,
+        0.022326750011416152
+      ],
+      "mean_calls": 1.0,
+      "samples": 3420,
+      "total_block_calls": 3420
+    },
+    "selected_latency_seconds_median": 0.029626457995618694,
+    "selected_total_calls": 3420,
+    "trainable_parameters": 335360,
+    "uniform_latency": {
+      "batched_block_invocations": 7,
+      "device": "mps",
+      "latency_seconds_median": 0.024612791996332817,
+      "latency_seconds_repeats": [
+        0.024612791996332817,
+        0.023610625008586794,
+        0.02800204200320877
+      ],
+      "mean_calls": 1.0,
+      "samples": 3420,
+      "total_block_calls": 3420
+    }
+  },
+  "gate_comparisons": [
+    {
+      "ci_high": 0.0011509151677399356,
+      "ci_low": 0.0010629315739607112,
+      "comparison": "adaptive_vs_depth0",
+      "mean_benefit": 0.0011076600405736943,
+      "passed": true
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "comparison": "adaptive_vs_uniform",
+      "mean_benefit": 0.0,
+      "passed": false
+    },
+    {
+      "ci_high": 0.00067807263825357,
+      "ci_low": 0.0006055996134890641,
+      "comparison": "adaptive_vs_random",
+      "mean_benefit": 0.0006413451153566331,
+      "passed": null
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "comparison": "adaptive_vs_permuted",
+      "mean_benefit": 0.0,
+      "passed": null
+    },
+    {
+      "ci_high": 5.347135035374711e-05,
+      "ci_low": 3.73479582276277e-05,
+      "comparison": "oracle_regret",
+      "mean_benefit": 4.497205172075605e-05,
+      "passed": null
+    }
+  ],
+  "gate_screen_failure_reason": null,
+  "gate_screened_in": true,
+  "mode": "full",
+  "primary_seed": 260713,
+  "reason": "The exact-budget oracle showed selective headroom, but the frozen causal gate failed at least one required test comparison.",
+  "selected_gate_mean_budget": 1,
+  "test_stage_a": {
+    "compute_response_passed": true,
+    "meaningful_headroom_threshold": 2.0652733178413507e-05,
+    "n": 3420,
+    "n_episodes": 90,
+    "oracle_headroom_passed": true,
+    "scope": "test"
+  },
+  "validity": {
+    "base_frozen": true,
+    "calibration_fit_whitening": true,
+    "causal_gate_features_only": true,
+    "depth0_bitwise_equal": true,
+    "episode_split_isolated": true,
+    "fresh_relative_to_prior_diagnostics_not_base_pretraining": true,
+    "prior_episodes_excluded": true,
+    "strict_checkpoint_load": true,
+    "test_evaluated_after_freeze": true
+  },
+  "verdict": "selective_headroom_gate_failed"
+}

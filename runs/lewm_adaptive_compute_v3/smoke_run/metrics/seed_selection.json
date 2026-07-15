@@ -1,0 +1,12 @@
+{
+  "rule": "smallest calibration objective; ties seed order",
+  "seeds": [
+    {
+      "best_epoch": 1,
+      "calibration_objective": 3.298243999481201,
+      "checkpoint": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v3/smoke_run/checkpoints/joint_seed_260913.pt",
+      "checkpoint_sha256": "9c2eea7cbca720f23724aba446a2de65665659de6eb6e229cc2fb136a5bd9385",
+      "seed": 260913
+    }
+  ]
+}

@@ -1,0 +1,3520 @@
+{
+  "file_count": 702,
+  "files": [
+    {
+      "bytes": 6509,
+      "path": "runs/lewm_adaptive_compute_v4/PREREGISTRATION.md",
+      "sha256": "97b1683a6a81fd0c51ffab577885c9cdf7180002b8ffcabe5748c4d11664ac22"
+    },
+    {
+      "bytes": 2498,
+      "path": "runs/lewm_adaptive_compute_v4/README.md",
+      "sha256": "6db486c9cba4bb43b40dc7d1fe37593a66578af5f2b953b2580c506b6a7ebf0c"
+    },
+    {
+      "bytes": 3247,
+      "path": "runs/lewm_adaptive_compute_v4/REPORT.md",
+      "sha256": "e9d107f784b1c3acad1b1371a5c65214d3d08c803f46e17c08b4d2e0c2d95e6e"
+    },
+    {
+      "bytes": 3438,
+      "path": "runs/lewm_adaptive_compute_v4/audit/confirmation_access_receipt.json",
+      "sha256": "35c4ffb394365045ebc8d4dacf98528855b0444bf1034c463b030d822870545a"
+    },
+    {
+      "bytes": 2565,
+      "path": "runs/lewm_adaptive_compute_v4/audit/final_verification.json",
+      "sha256": "2a1f5a41982eeb3329b006bdff581d3a1361c3042d1f93ffe4f02db31958508e"
+    },
+    {
+      "bytes": 1328,
+      "path": "runs/lewm_adaptive_compute_v4/audit/freshness_duplicate_audit.json",
+      "sha256": "d49c510e816f9d37ce95274b9973831c095cefff38021746bf9bae60eefb2cb9"
+    },
+    {
+      "bytes": 7764,
+      "path": "runs/lewm_adaptive_compute_v4/audit/phase0_seal.json",
+      "sha256": "b7268998e1d6dd2af07fb8107a90d4f60d23355eb123fc4adab92a384f5ecad7"
+    },
+    {
+      "bytes": 6877,
+      "path": "runs/lewm_adaptive_compute_v4/audit/pre_confirmation_seal.json",
+      "sha256": "7b6d8fb0becf2322c3c739e62ee4f20a0590bfb1f4b249c51ee0670a0294f322"
+    },
+    {
+      "bytes": 251,
+      "path": "runs/lewm_adaptive_compute_v4/audit/primary_decision_pre_secondary.json",
+      "sha256": "8a755c9d60ab18fd1d080a720620a02e8a135654ad0738c051a54469c5bfa5ae"
+    },
+    {
+      "bytes": 414720,
+      "path": "runs/lewm_adaptive_compute_v4/audit/prior_evidence_audit.json",
+      "sha256": "f1f66d46179f0bb1e60fc60114131c9a38a78de6604db59975e8d123798e8d0a"
+    },
+    {
+      "bytes": 4317557,
+      "path": "runs/lewm_adaptive_compute_v4/audit/prior_identifier_inventory.json",
+      "sha256": "a8d0ee09a7425e8dc5f87842e0f270da34ad8fe63c0a2c2bcb47d81761e11b2c"
+    },
+    {
+      "bytes": 780739,
+      "path": "runs/lewm_adaptive_compute_v4/audit/prior_raw_episode_hash_index.json",
+      "sha256": "2ef92128d3452b3f7d8ee0a7aec9050096f514914f8bc59d2962e574dd5b3cd7"
+    },
+    {
+      "bytes": 1771,
+      "path": "runs/lewm_adaptive_compute_v4/audit/regime_matching_bins.json",
+      "sha256": "b3ed602853957f078431117a0d354cd89275392a076c66e7489a1966fd0fbb1a"
+    },
+    {
+      "bytes": 299,
+      "path": "runs/lewm_adaptive_compute_v4/audit/smoke_completion.json",
+      "sha256": "06e7dab2c21be7b6068d886f30852ac2da2e0f31fd3e648fafdd46aa5bd6a432"
+    },
+    {
+      "bytes": 19310,
+      "path": "runs/lewm_adaptive_compute_v4/audit_prior.py",
+      "sha256": "123d66fd776f015e2c3314ad5c46cb66a2be461b47d2bc3dd0b19e6b180e2b3f"
+    },
+    {
+      "bytes": 13647,
+      "path": "runs/lewm_adaptive_compute_v4/benchmark_runtime.py",
+      "sha256": "d085abd06e872a4cd9782bdf74b90dfa83f0952956e54f62845c56290463fa17"
+    },
+    {
+      "bytes": 2140,
+      "path": "runs/lewm_adaptive_compute_v4/checkpoint_manifest.json",
+      "sha256": "a89f241714eef573c9adb373bc96e46a9adad38102690172272686765907a401"
+    },
+    {
+      "bytes": 12574,
+      "path": "runs/lewm_adaptive_compute_v4/common.py",
+      "sha256": "eceeb9c1b83e6b2b5eef607823035df0495e719b15c8cf1fca63a661a3a5159b"
+    },
+    {
+      "bytes": 5609,
+      "path": "runs/lewm_adaptive_compute_v4/config.json",
+      "sha256": "3749619ee3c591a204d88f712ab9bc0c45e719be45b35b68e9e74316a1450646"
+    },
+    {
+      "bytes": 2476475,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_data_manifest.json",
+      "sha256": "6a19bc4101cb8fd13e3585030dd61fb1513861415791851e0592d1423ccbdf39"
+    },
+    {
+      "bytes": 25972331,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_encoded.npz",
+      "sha256": "4ed83d1da176f3813189d246a4153c44d0ec4bb843f40d61cc9c6e77bb64802b"
+    },
+    {
+      "bytes": 5173,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_encoded_manifest.json",
+      "sha256": "e6993c44e08a0884c2c1bd988c7ed598157b8e7ca17037363e35f8bd4e0bf24f"
+    },
+    {
+      "bytes": 7107,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_outcome_manifest.json",
+      "sha256": "137187e6f0b22c4aef87e391107fb29fb8755d943705f6dfc5a094ee12d0a083"
+    },
+    {
+      "bytes": 8888253,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_outcome_once.npz",
+      "sha256": "e1fcae6089c8ff7a39ba5c30041105ac45bab1aac95eba3d1227bf2b5c30246e"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-000.json",
+      "sha256": "0432362e6ef311c3805bb18c72a893a0400087edafa984d327b0ad541e7627ff"
+    },
+    {
+      "bytes": 3565471,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-000.npz",
+      "sha256": "934b980360eb4b95bc9a6caa1bb75d48f0140d77475ac377b4e42221a52b84b3"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-001.json",
+      "sha256": "12141ffb35fe528139fa59e109dba260972b52e4f7f302672d615fc1c3fa2aa2"
+    },
+    {
+      "bytes": 3582388,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-001.npz",
+      "sha256": "5710bc48ef34a95d66f736ea3aedc3dfe97af605ef7126cfe789d70a927d797b"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-002.json",
+      "sha256": "024f44da951399ac45b53d2d0dda42425f9c8d4908e831b7c3d9c718dca39ba3"
+    },
+    {
+      "bytes": 3391799,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-002.npz",
+      "sha256": "165133b8e4f3361f10ac128c45db619b5b704f745e60bc6c1b9b59d402510dfd"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-003.json",
+      "sha256": "01b50871246f3687031e14f8a2d0dc4f382c357d2d16d5c811a43d0c66589a16"
+    },
+    {
+      "bytes": 3556622,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-003.npz",
+      "sha256": "31cb49c395312be8993759ccf9a21dd8b84b5aab12538fc093c782c86b437a4e"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-004.json",
+      "sha256": "f6a1baa3336cdb94824466d41d69dbdc0aea6b7cac2c17520ac269040d8183c7"
+    },
+    {
+      "bytes": 3339751,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-004.npz",
+      "sha256": "0de7326b91e677b87d2e9688568144869a07a39994bafbf371901ecd586c8df6"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-005.json",
+      "sha256": "a66be11b13a80afbb560119d874b366b99e0eda9a99d10958ee730261f2d6580"
+    },
+    {
+      "bytes": 3404965,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-005.npz",
+      "sha256": "838a4ae44c72294799e1840ae222466cecb1a1af19184d36e4b0004f7a4aa60c"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-006.json",
+      "sha256": "5ee71db1fb20f61cd21a14cc7998fae71ed775aae54468c934e07b749bca9692"
+    },
+    {
+      "bytes": 3433631,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-006.npz",
+      "sha256": "d7a41bed2043c2f9257de18a38ec86317dd3c7447f986645ffcacf2d3cffa77a"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-007.json",
+      "sha256": "8f30aba35d9a68886ec19e5253ced3fea9786e40a74885be62164ecb15bbe692"
+    },
+    {
+      "bytes": 3306127,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-007.npz",
+      "sha256": "2e60687c1056bb9b6e0f9cc4341c0c69af30ca3870f57cef3447480b03d32fa1"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-008.json",
+      "sha256": "f0f0918adf6b7058ca89ba9b691c5bd4249f5a7ee42e56f865a164dbec755ec2"
+    },
+    {
+      "bytes": 3444782,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-008.npz",
+      "sha256": "3dff470144372254d1f6eaf3deefd7abd1da3e629cb06a73b2db8b04df29ab58"
+    },
+    {
+      "bytes": 7132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-009.json",
+      "sha256": "60c5fb70819c82eb6eace2bb36ad67db685b18815ee46bb7cd4dc8df2ed53097"
+    },
+    {
+      "bytes": 3357049,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-009.npz",
+      "sha256": "93e3f309c84aa1207edfa710d57753b1afaa88e6675384fd58a8a6d997c89e7d"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-010.json",
+      "sha256": "9d5204b43dcd134b2ae0ace693bc2b0733e0015c7831deb4aeeec400f9d4d952"
+    },
+    {
+      "bytes": 3356208,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-010.npz",
+      "sha256": "36813c62b3cd247d835a3872ccaaed15ff000ad3d824a0af3775863e7ed9f2b3"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-011.json",
+      "sha256": "2b8428d874ad06d35a274d3e50fee4e4fa1317ece62d964b733cbc4b222df41a"
+    },
+    {
+      "bytes": 3587090,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-011.npz",
+      "sha256": "8b9b0a695a2bbe531aa80c041e40214e634217daa2bf4bf806f84f47da0604fc"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-012.json",
+      "sha256": "acddeb9e516b93633b53e26bb2a5b072f58953ed84d6c0c0acc451be6f7b4412"
+    },
+    {
+      "bytes": 3443397,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-012.npz",
+      "sha256": "c580a009f63133b264152686676d4db9a657e52f1d2bf444d5102a2570e45e6b"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-013.json",
+      "sha256": "83720945af0b40f5de3be3ff42aca8f9400aa854c2cb2d0f99c972c6b50c0ce2"
+    },
+    {
+      "bytes": 3567937,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-013.npz",
+      "sha256": "cb758540a41621678f7c57742caa0fb3f9415948c1effe327ccdccbfd20fe490"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-014.json",
+      "sha256": "ce9e4c7ec2dc5b95ce1f982ae0957c9244c0332f907049d9fb17ce23c7d07bb0"
+    },
+    {
+      "bytes": 3574905,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-014.npz",
+      "sha256": "bf50995cc763ef589502d10ab454eef34178d22d9f3dc0cb7c5993757edc032d"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-015.json",
+      "sha256": "f78d5f7eb7e1d2bf5dbefc6481d2c81da5db2a7e5c8e8f9a096abfde5c5b898b"
+    },
+    {
+      "bytes": 3435059,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-015.npz",
+      "sha256": "c507881306f4b448b9ebb20f06b13d5b229b77b8c53fc1f9d4f195c72a831158"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-016.json",
+      "sha256": "ac014b2fe6b4e2b8c4015e8246bd974d42b859b0cd4c079ca552cf69e42d9cba"
+    },
+    {
+      "bytes": 3528263,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-016.npz",
+      "sha256": "c7f2d5bf156ed3f0ea02fcb356a5fcbf1ea53ad28dd67659e931deacfebc870a"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-017.json",
+      "sha256": "ca28287c26f145da6d940c3e461ff231008ba76639fa96cacf2362372f55dee9"
+    },
+    {
+      "bytes": 3332294,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-017.npz",
+      "sha256": "e1beb80039099a56b39378ce46fd107b69e84268ad39887d0df34e391ea878f5"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-018.json",
+      "sha256": "2d0ed638b9092644be997a95d2f684a2f532e9624b90b9b00ab4573b2245f20b"
+    },
+    {
+      "bytes": 3361841,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-018.npz",
+      "sha256": "26a8cc45978660e6208f5ea7d08434d39ed54b5b56d1886a2f3edb41e0124cbe"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-019.json",
+      "sha256": "422c85cc511e82f1190dc01e0b8cac3d1cfb9d7189cdbbdf1c03ccd4f3a7a914"
+    },
+    {
+      "bytes": 3288714,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-019.npz",
+      "sha256": "168331d8baf3fc6df01f10e57754f154aa1df4e9389728a9723c61850a686c19"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-020.json",
+      "sha256": "dcece808804be95cfc8105813361c3f050726e96ff79d0e8ec1e5bc38c147d79"
+    },
+    {
+      "bytes": 3392150,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-020.npz",
+      "sha256": "0c92f5bd239e55e5a5353b76db72df819d297c7c6cc0222ecc79780f4770dfa4"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-021.json",
+      "sha256": "62597faeb01b079a1864bf53f091b331da1c33b15500b256fe49afcc660c54ce"
+    },
+    {
+      "bytes": 3509624,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-021.npz",
+      "sha256": "01d875baaf9d0ef12129142ba53f505b830c1f145b1742a0fa7740c8b792d63e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-022.json",
+      "sha256": "2b1ddcb58fea2e22c28eef9d85fae8302c6c15533d185e4fab1ca019e6c75c24"
+    },
+    {
+      "bytes": 3335250,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-022.npz",
+      "sha256": "1b7040d8463accb29cd3345887adecfb5d978e50857b02e5cd525b580e3ab891"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-023.json",
+      "sha256": "9e0142be64fe5adff0c9967d4ba35db876f1cabd3290e02dbc6818fa96a723fb"
+    },
+    {
+      "bytes": 3449163,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-023.npz",
+      "sha256": "ff1ddfd4470c723316d4f0b51392c0bfa46136995d861be1903a40e597aa2b33"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-024.json",
+      "sha256": "cb09d172434937d3f64d1f6db5497c9702d4667d686e51a8feb31c55cd3890e9"
+    },
+    {
+      "bytes": 3438956,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-024.npz",
+      "sha256": "3a3a3bd6294415ec4d3af663701d47f108384bdcf383bc86547d523328d268e9"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-025.json",
+      "sha256": "b8f044649bbfefeda3aeb9ba303c7c03a3d0b5631e462b1e7ff6d0923b7ad80d"
+    },
+    {
+      "bytes": 3487044,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-025.npz",
+      "sha256": "f20dcaf26018f0041fec98e723b83418f54e9f4741ac9b4ae21af30c977b40b0"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-026.json",
+      "sha256": "253566b16a337472a2ea0ee15d0bc6482a400f3243a4fd1292089e35d749d475"
+    },
+    {
+      "bytes": 3606028,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-026.npz",
+      "sha256": "f1c447cb01761a65e2f0593fcc5b366c6009fb020300719d5badc0342f23fe91"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-027.json",
+      "sha256": "a366219955a3fb5a7ed1df2f234e9f65d26a2d3465936963272afb1c3a02fca8"
+    },
+    {
+      "bytes": 3425347,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-027.npz",
+      "sha256": "e46ba90660366bd8c6403e53818a2646b25c7353596b0f11a6e43bdd2f22dd7f"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-028.json",
+      "sha256": "2903a20ed69d32e6ff70a7cdc89773375484bcd6c12adc28d392c9a5c8f073d5"
+    },
+    {
+      "bytes": 3535413,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-028.npz",
+      "sha256": "ef6307c057197ad732d5c28f74570b19e60d00d8f6a840550efb0c5a0d615aef"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-029.json",
+      "sha256": "2b0ee7ce8dc9061a6734b80902755ecbc24053428e91fefa2a02204b582d2248"
+    },
+    {
+      "bytes": 3455126,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-029.npz",
+      "sha256": "57a8498075a98f94ce35f97d5972407e9f52c44eeefca065d5fcdf7b6624bf2e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-030.json",
+      "sha256": "c68fcc3c026f15f3de13c704745e2f567a7c6cf676bf19761577b7b9ed100121"
+    },
+    {
+      "bytes": 3647361,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-030.npz",
+      "sha256": "1f222004eaf3ea11f97c623bc0bd2a34b96f2765d102c77187997c8bf599479e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-031.json",
+      "sha256": "d8824c3f97fa47f45b58915e248f950c393e23303b21072a76503e6c89c0a734"
+    },
+    {
+      "bytes": 3423483,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-031.npz",
+      "sha256": "56bd59fb4790af49a9feca6f5ec79c067c891ba146314fecc417ccfcb70f8eff"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-032.json",
+      "sha256": "c5081168cb226880e94c8eed23ee37932ee63dc85c1cecd1f23e3d5b25eb68b8"
+    },
+    {
+      "bytes": 3309736,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-032.npz",
+      "sha256": "412cbece50b584bb6f9bb023765794f638af29b108059050b93d0767ddc3e2c4"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-033.json",
+      "sha256": "bd8681341c39f8027987440e6d4df5a7aee726c96dce4a499871fe70f9bed114"
+    },
+    {
+      "bytes": 3619342,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-033.npz",
+      "sha256": "ca5609c4fcd2bfec62d346bcf889a1ab5de41c0ca8b2fb7b49060440ee8fddc4"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-034.json",
+      "sha256": "3dbca2e92c8aa955217f83f843794243d0ecc257dc0dfe73dbfdc7cdc083efd7"
+    },
+    {
+      "bytes": 3549362,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-034.npz",
+      "sha256": "5c64015736b7a305ce969a010acfd49a555081733a5c492316f7df17e921d461"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-035.json",
+      "sha256": "72a00e646e43e15c3573b76f71e3df5c73262ac1d049d0ad27436e843966534b"
+    },
+    {
+      "bytes": 3477297,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-035.npz",
+      "sha256": "99c535f8ca98463f61c6a3ec995c0c91084afd3b6a1f70d537cbc6bdd59cb984"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-036.json",
+      "sha256": "9f60ac4b534678b3632d2c08a637afebfbd0f5985dd63d5ead41b6556a78fd8b"
+    },
+    {
+      "bytes": 3584015,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-036.npz",
+      "sha256": "a0a58c6c867d05b5027b4af55d63025335486b2ad622b4d4469f41af28ad02c6"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-037.json",
+      "sha256": "07770437dce9c50320c18f412f4cb9fbc566811c0ccdeb2e974c4ea7ff139bd7"
+    },
+    {
+      "bytes": 3550262,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-037.npz",
+      "sha256": "29909698f4379e6cc5f48e53df444309c009ea8d420a872458a19705cc9e51f3"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-038.json",
+      "sha256": "83bf390e715a90b908e6a8a696b1cfd62a7c7842254d53858f925ee8b2108d5a"
+    },
+    {
+      "bytes": 3507278,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-038.npz",
+      "sha256": "336e8af17764f8138b5a36425e4912c9539dba7a6e087cc2ea4bb661062e015d"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-039.json",
+      "sha256": "b6f80134d56f48d1d96d3a7a2aa99bde8337c46629da5b49f41d5e1949ed9363"
+    },
+    {
+      "bytes": 3475140,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-039.npz",
+      "sha256": "d0e30f6f2e8d5123f42afaf8d7d5c62453e307d0e18bbf86193212c12b28eae0"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-040.json",
+      "sha256": "59a23d485c589bc291948a953222d24e8c93da4b269dcde00eff6302c8a7b31f"
+    },
+    {
+      "bytes": 3402153,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-040.npz",
+      "sha256": "bab2c1d57bd2c49efd878119fa096820c81b4d1689b7c0e9e206b7e527344885"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-041.json",
+      "sha256": "fe0bb3ab776277d332a708a767a21b1e3d46b1276d47b9414abc43efec9c3564"
+    },
+    {
+      "bytes": 3443036,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-041.npz",
+      "sha256": "e203ce04d70670cd00d17cd6b48d23f25bb75262fdddd8df08522243a8e6a3c6"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-042.json",
+      "sha256": "f562b768dbc67bfd09e6996b4f38bba7f67c91a8a2e1cb4c0dd2805448ccf528"
+    },
+    {
+      "bytes": 3712232,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-042.npz",
+      "sha256": "dfbab59af1bd5dcfd02a2d3d5964a9333b331e9d742bc46b33ff264229c8c2d2"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-043.json",
+      "sha256": "4316a4d78b21a0909da524f3a117fd2173a2926f10684052f801d2e3b007f616"
+    },
+    {
+      "bytes": 3504512,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-043.npz",
+      "sha256": "7dde3407e5afa205a8b3c92a8e52b9405d390fd3719430cfaf32e5ef82212495"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-044.json",
+      "sha256": "c7046bf0a52800efad5737d09fdaca8718babbe9e928b8212d48e1a1a03e1cfd"
+    },
+    {
+      "bytes": 3521881,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-044.npz",
+      "sha256": "9dec8500a00119ac89668a190271465ef04435d99eb8057607e26fa18245db2a"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-045.json",
+      "sha256": "6aa80a81c90bb719ac3b9f9f76ad0bb44ad63f028fd21919fc3694e95b9f669e"
+    },
+    {
+      "bytes": 3484596,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-045.npz",
+      "sha256": "7ea4e5a42d9885f20b2a84eec2ddb1d9d89b3b697cf74b0b89e2d21c021f1ffb"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-046.json",
+      "sha256": "82e7df7b003c174dcc5809dc6d2c9f28fe07168e6bbe781f987e7b8407260d74"
+    },
+    {
+      "bytes": 3433477,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-046.npz",
+      "sha256": "3b608ff355e74cd95a835faafc890928497e24435422765d304c35f099c86d77"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-047.json",
+      "sha256": "7d61d85c7f369f197ffb6c51eecde9811421a9e4e3c90d2334a5b83db3079f64"
+    },
+    {
+      "bytes": 3370461,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-047.npz",
+      "sha256": "55603d070489cbcdf1e55ce43a7a621975267d0ab6d5b962a520f588306a6566"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-048.json",
+      "sha256": "43e39d75d3147dc62726b6f88fb4b2334a741b0af1a76841f662cc3dc2c552f4"
+    },
+    {
+      "bytes": 3423390,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-048.npz",
+      "sha256": "72be0c05eaca2d675e32dedee7b728c2bd5db91d829fcb1c9455b677036ea15b"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-049.json",
+      "sha256": "d2d67eac44899c2cfe30078c5194c08e9045fd544d064fa3b46d3914fe9b3d60"
+    },
+    {
+      "bytes": 3342112,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-049.npz",
+      "sha256": "251efecfa06352d166343a284d5a0770092579e2e1f868498dfa2f00a48cfdca"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-050.json",
+      "sha256": "3543178846dedca32e4cc76ee0d2b8dc99de82ea61fd49dc70d5af5f7f6fee49"
+    },
+    {
+      "bytes": 3494671,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-050.npz",
+      "sha256": "5834e9aaa4666669e2de9c84ba675d00a62aae1b91a019ac0071c38b4e16ccf8"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-051.json",
+      "sha256": "b4a2ec80aedddba1460ce2b10c0b92f6c2625c1dd54f0172a46532e5e904360e"
+    },
+    {
+      "bytes": 3460039,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-051.npz",
+      "sha256": "428b8f87ea6e4488df4208e86bf22949d84250f605a3c2a3c2dfc9029d02c073"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-052.json",
+      "sha256": "d6abcdb2f053780e7bb6d3436adbc7d826f8a7f3ef4d6b9ce22a966a61c2b55d"
+    },
+    {
+      "bytes": 3420184,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-052.npz",
+      "sha256": "16540eed6d37de757338429ba025f2c8356f2c32c8020455d999a5099c9706b5"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-053.json",
+      "sha256": "66c7fdde04944f041664f6f997d987263cfe139d9c1ef08a79623e059d36b0f4"
+    },
+    {
+      "bytes": 3562399,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-053.npz",
+      "sha256": "e1b1c2c4474ffae15bec5522601c2d0d371fad8dcaa7cbdbf3c4d32f6eb8d4d2"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-054.json",
+      "sha256": "f50c44b8a8d9c7d6ca9a49b80d18956a24756b6f9bcdf58848cf44913a11e55b"
+    },
+    {
+      "bytes": 3411019,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-054.npz",
+      "sha256": "0b7090fd0dadb7920813e8b8aa62f0a228b8b121c3f6b6686e3ba6c7663f4a79"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-055.json",
+      "sha256": "e1776dc125daa3e6a78fb83507b480a01f31321f18405222e4f45ec9db4d864c"
+    },
+    {
+      "bytes": 3494454,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-055.npz",
+      "sha256": "16348d5d1164b8d6eae454e81a9ef3f319e77e40806b6987c15d048abc42cfa4"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-056.json",
+      "sha256": "d796901fbe40f87339ea7cec6e5f06856ec6f09b6b26d705de12e3ebeaf4a2c3"
+    },
+    {
+      "bytes": 3363657,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-056.npz",
+      "sha256": "5f5c7b3297cc5bb70bfdfae19b253fe6c5f67aa59a9e878ce2c8c11d9b5451db"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-057.json",
+      "sha256": "d819927f2423e48f65de98f3c1887915a9c59c8be2433009710b104f1ec4fafa"
+    },
+    {
+      "bytes": 3594972,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-057.npz",
+      "sha256": "4b41511d1a6b44183d3f3bbaf8333f5439ffa3df407d7f63241808fabbbffe8b"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-058.json",
+      "sha256": "52f05fc8479d13382371785a4337b1dd6f29d4e8372a26a7de984be6e314e0bd"
+    },
+    {
+      "bytes": 3553061,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-058.npz",
+      "sha256": "dd3cb142027d9ede8b0c8a0b7fa60782ed0857b49efed8440e2a0cc770603516"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-059.json",
+      "sha256": "e8b78c28935c1790b3a38a22af4c9129218ac5b4cea9e3b4e403d5927d5d27e0"
+    },
+    {
+      "bytes": 3466708,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-059.npz",
+      "sha256": "c3a22a8b13002aa3a7d5b91d1ad8afdedf70bf1ecbb9463ad2a9e97841e984dc"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-060.json",
+      "sha256": "43b27e67c02fd578c51b7fa1c1aa627a4ee84a78811499b5de97139ca01c9dc0"
+    },
+    {
+      "bytes": 3412252,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-060.npz",
+      "sha256": "7a373624e3fcb297fd016d3c2851a378c363b1616fbf27eff114133c297d909e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-061.json",
+      "sha256": "646b97011fd6a85a90eaa0007cea4e421049f6cdc35b8f3dc76db3d873d93b12"
+    },
+    {
+      "bytes": 3513875,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-061.npz",
+      "sha256": "9b455e3a4cd4f9b4c697ff121e1a00140b02d22a4e1047cc9be33003772d8a61"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-062.json",
+      "sha256": "fcb369b231d3897258ab41ca5c4d22f4ed08a407fad2852bb120e4acdff83664"
+    },
+    {
+      "bytes": 3371171,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-062.npz",
+      "sha256": "0a8c0ed5b8ef72cf137c6daa00019e2bea17472765868e9a1360626d1922c9d1"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-063.json",
+      "sha256": "50eacac72b3c3fd4266f574aece260597171c81b9b93fa790f7317c0bef96c01"
+    },
+    {
+      "bytes": 3576515,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-063.npz",
+      "sha256": "a2b48b7baced85a18186a48074eb12f215d6127c2b57ef1209cee75dfaff6fdb"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-064.json",
+      "sha256": "0cdd69d59296f5c8f5ab823dc077d255904f794133afd04d87e6ac76567ef398"
+    },
+    {
+      "bytes": 3360195,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-064.npz",
+      "sha256": "d47d0002edba78570a3f7058589a25ba7a0efcdcf3d668e03220a82aad296bd3"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-065.json",
+      "sha256": "21b3b7ac99761e2153a8d62d12097000ee82ff61dc216f8662cb73e31d5e4a93"
+    },
+    {
+      "bytes": 3388963,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-065.npz",
+      "sha256": "b48ce15afc0a250902b2affd3dfe156e83e078413fba1c853511253900c154bf"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-066.json",
+      "sha256": "de2c4e58a4c3a8432d4fe4089584c90a3a1262ecb85e7c072dc8353b293f6344"
+    },
+    {
+      "bytes": 3456609,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-066.npz",
+      "sha256": "1e011201eddb91d078dca68f3da21b13df2c16eb9fe88e568e8b126913457c3d"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-067.json",
+      "sha256": "aa6bb9b62ce354af33565f90ad175f1a365e42d4475564df12136a35a3f7fa5c"
+    },
+    {
+      "bytes": 3468937,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-067.npz",
+      "sha256": "c22ce3a3ddacdf76a14769dc01f08a43d07197b78e72a35751bdaee5d9d4f0fe"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-068.json",
+      "sha256": "54aa96e4ae8053f5077ca1b09722ef8a161df6c5a8e12167596e3e149ac4920a"
+    },
+    {
+      "bytes": 3418492,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-068.npz",
+      "sha256": "622b18206ce2b3daaa607a26a696027adb052a7171ed6fd2a58cf2659d374392"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-069.json",
+      "sha256": "08511daa19a5648afee1c1f112ab335fcd310939354fcbdaa25f1207d382e7a0"
+    },
+    {
+      "bytes": 3304385,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-069.npz",
+      "sha256": "188b951d2acbbe7561d307785539f00a2287a25607522c17393a855e7d2792f8"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-070.json",
+      "sha256": "400afe018614963777587a013686e3b25291bad343c8fd32f03ff367dcd3a733"
+    },
+    {
+      "bytes": 3360983,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-070.npz",
+      "sha256": "7d73ba983a8e95e5e9e169dda69af84b777c3e577cb55d107fdce8926ad86349"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-071.json",
+      "sha256": "6f60c96ee58c2c166988d0563f13593d16b66fb46f1333a1f777c2764f2b4f93"
+    },
+    {
+      "bytes": 3493987,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-071.npz",
+      "sha256": "b5e635bafa2883612f08e0e2d066048bf030ffacd4391befb2fc6b3a01bf412d"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-072.json",
+      "sha256": "5fd65f2498c65e1f9d32c5b7c24543904242617f653188ffcc1835bc3799ab39"
+    },
+    {
+      "bytes": 3556625,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-072.npz",
+      "sha256": "5af8027927c5136eb23156862f87f4e43642dc723f058ddcf35efb456009cb3a"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-073.json",
+      "sha256": "35b5aa94071670c16fb5564a9b1bd5cb4bf190d831c4de61e5278b199a1ed656"
+    },
+    {
+      "bytes": 3615494,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-073.npz",
+      "sha256": "67da34a09cabaafcc96dfa4b8b044b4f1f4f0b655d0bc694fdec34877c5cb055"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-074.json",
+      "sha256": "46356fdb3b072d37060489c43aa476ae88248d06f953f1aab7c2b10bf4458dfe"
+    },
+    {
+      "bytes": 3833541,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-074.npz",
+      "sha256": "92febb2bc02f6d619c076c35c9c019a2fa401f00f8a8252f6d2a38070d1e7265"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-075.json",
+      "sha256": "fedd282c6cf281b96b2d69599c51e16338b9add6d002d034188afc0895a0ab5a"
+    },
+    {
+      "bytes": 3539665,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-075.npz",
+      "sha256": "cf9a2b067329873952f6ec52ebc5c235854b606db8922dcce0010d3a7ae1d39e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-076.json",
+      "sha256": "8129c2f01bcb6b1fe663d2547d8ed7d19c6abc4cda3b22ba2ce7b3dfba5ef265"
+    },
+    {
+      "bytes": 3603810,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-076.npz",
+      "sha256": "101925199c8b059b1df52dcf0ddad566f3f67a81fb7f1008e2c351c6e3fc5086"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-077.json",
+      "sha256": "0b828a587c7e5777e2e4bba431fb6218ba10dcb85438e94cb8d0a4a1a29cbd4d"
+    },
+    {
+      "bytes": 3461881,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-077.npz",
+      "sha256": "72b073a092450128418a3cb95ac5c5c81ef16d690aceee7ab30564fdbe44828b"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-078.json",
+      "sha256": "e7ce7b2e126a13cb5d531e67004277f6bc8c33fee025d272939f01ef39c0de83"
+    },
+    {
+      "bytes": 3495010,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-078.npz",
+      "sha256": "9e68121bc49b628e88bd5933bbf3ad6ca3d74c02cedd3bbe772e92774129b50c"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-079.json",
+      "sha256": "7497cb943b9a3b18a88819980064f4d59a699a37996902fc18d3fd4f2b473cbd"
+    },
+    {
+      "bytes": 3518848,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-079.npz",
+      "sha256": "745cccd46e92b15f93cd0b6e4e83c31a87a9e722a371a55c6cf142019d578dd9"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-080.json",
+      "sha256": "684697119e3311c442352b2cc69e7ca17a47d38def7055f31e3f989ad08d1359"
+    },
+    {
+      "bytes": 3503382,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-080.npz",
+      "sha256": "74f2b0442aed9bc81208b6d99317bcd5df98d71ff3816ad52bf5604929d32bb5"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-081.json",
+      "sha256": "938442e7f68dbd9f5cc178ab3b72aaeeeaedd35dad6be5786d4c4dfb817a8278"
+    },
+    {
+      "bytes": 3484958,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-081.npz",
+      "sha256": "b2fe7fe3299a4bb67f56524f0a80e3547e9df27e278cf0702e5a9a9718e72e3f"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-082.json",
+      "sha256": "334a76e7911004e9969cfc238405ee8abe296e1d13caae029cfd495c33b2d103"
+    },
+    {
+      "bytes": 3431738,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-082.npz",
+      "sha256": "b73c9d17630f2aef1ce66666939dde9f52778b01b066cde298d4b090b73d0da1"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-083.json",
+      "sha256": "28c6a23049c78f6fdc44f5ea327c07bd83969e52fec0fa97552d91b2a4410cc7"
+    },
+    {
+      "bytes": 3452876,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-083.npz",
+      "sha256": "1b17758624b7de7c9b6820bec0d07f722dab1e560424c81a72723991c6c9d568"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-084.json",
+      "sha256": "91ab8f39d076bf757862299db3b1487074ce553850357327505093ea2ed0770f"
+    },
+    {
+      "bytes": 3358634,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-084.npz",
+      "sha256": "48597a82f2cc8f5620c59bc793c5aeeabbf89e9854df276f8e1ec2318e1fc969"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-085.json",
+      "sha256": "3943682fa3c248307c4db205a8a017a66118d6dc9a6d8f983295586a257c2e79"
+    },
+    {
+      "bytes": 3499751,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-085.npz",
+      "sha256": "9ecbac3955818a9aed9a7bdbbec4f4891ee3564e5481fcae03ffaed0c7e76969"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-086.json",
+      "sha256": "86be50b31a4b30b8d519cc78b276af9c1afb90f31009b4bbd3f9b8bc68bb0121"
+    },
+    {
+      "bytes": 3814214,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-086.npz",
+      "sha256": "acfeadcce4446eaacb306dd8f10ca24dcab3139532f11033fc4d87dfe2007fbd"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-087.json",
+      "sha256": "1ae514fabf5ce94bacd260a965d185117814ac514a43a8dfebbffd48830f6f7d"
+    },
+    {
+      "bytes": 3479212,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-087.npz",
+      "sha256": "5ca736f7cc65233d46200ff6dbccb441217c7c225b5187f9e38953916755a902"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-088.json",
+      "sha256": "98aa259e2c4adee5c45572bb549fb6a38130558e030ca2dd8a27acfd70f8ac7b"
+    },
+    {
+      "bytes": 3355833,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-088.npz",
+      "sha256": "8a0774ea44b661b510989bad5c9991f191c40f4e6dff40a67354fb4484e8e31e"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-089.json",
+      "sha256": "56bf0f8705020dda5db9f9f9576639873742fcf6cb63c3e9ee01f67be63cbc8b"
+    },
+    {
+      "bytes": 3483178,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-089.npz",
+      "sha256": "a628805f33ad3a0c573fcecab5936ccef9d629389115bd02faf5e61cbe6c0217"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-090.json",
+      "sha256": "c3d7994c7dd12407376738ff2420cc3e323fc0ecdf454704f2bbd0c21cd216e3"
+    },
+    {
+      "bytes": 3336841,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-090.npz",
+      "sha256": "37dd55a9f808375ee974106a136977b4e7ccd28ac491fdd19503817ffc5841fc"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-091.json",
+      "sha256": "d01a2c40f577e50b1980ba046ca604f20ae1b9550e6452d1709cd0f5bb78b8dd"
+    },
+    {
+      "bytes": 3347675,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-091.npz",
+      "sha256": "4310666dad029d01d3dbe5bf4421fd9d895a22ce10b699286758ee6ad90ce5b9"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-092.json",
+      "sha256": "57af4bb198d3e9482193f24beffa7e567705eb749493fe4b9479cc2635d3f5aa"
+    },
+    {
+      "bytes": 3569121,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-092.npz",
+      "sha256": "6aafec6c333e1b28e8af1b9c72910cb75ec5e7150a1830de8c84867c38863410"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-093.json",
+      "sha256": "34e06c99c339e17b739bb4b5a466aeaae8ef0f5e20c778e2915f7733a51636eb"
+    },
+    {
+      "bytes": 3341815,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-093.npz",
+      "sha256": "2e67523f099888c5eafff54d5636c368d85509d4e74d289ce73af9826ec1689a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-094.json",
+      "sha256": "baa3932366049782ff8e37df306dccbb553ffe2ee0c001e8b528f21b2ae848d9"
+    },
+    {
+      "bytes": 3678622,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-094.npz",
+      "sha256": "82ada08f286f94bb38e54ec7e7df7427b08604afcb7918c460156f903c934e52"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-095.json",
+      "sha256": "d6bdcebfd89c5a16aae4fa9366d06a43135fa4b93442f2c5ab5790257ac1368d"
+    },
+    {
+      "bytes": 3725434,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-095.npz",
+      "sha256": "80e9c304e2c3e40b014ab621d2d89c3f60fbbd9275d01d15a5465aa65a225897"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-096.json",
+      "sha256": "306b88d90c6c4127dcaa41862d8118ffc6a43bc8b26702abdd34f350613c0765"
+    },
+    {
+      "bytes": 3322768,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-096.npz",
+      "sha256": "fcb753a75e62f254518685b9325da7bbf6bd6cdb54806e7cf45d530b08a71ec9"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-097.json",
+      "sha256": "553b71126869e1c76ebf4758c29bdb4c59d35983ef72f05cecbb3de32633d20d"
+    },
+    {
+      "bytes": 3543037,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-097.npz",
+      "sha256": "e3d22c0d437ee0c4be190ba53977c3808bd3d8a846c6f177066be462700b5b75"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-098.json",
+      "sha256": "457ced1ea24553e2fa3c365d860cc1c4d7fa08ee8c1a21d601b1cb5b2c4ea27d"
+    },
+    {
+      "bytes": 3357355,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-098.npz",
+      "sha256": "e69cbdb91dc0adbe73434a431bac0a58ddca7123756be75f8809745e8209d3e2"
+    },
+    {
+      "bytes": 7133,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-099.json",
+      "sha256": "322a5a648db01ffceb6b5ce34faf906b3b2dcb9c10e57fec0767a88374c29a1f"
+    },
+    {
+      "bytes": 3579226,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-099.npz",
+      "sha256": "398fa2ddb7f6135dcccb701a63ebeac8c4100749c3716c835065697d2fa6fc02"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-100.json",
+      "sha256": "631270c150b2918e4e392db2ff12813c9fb00b23f7528a0d1b5cef25cfe1307e"
+    },
+    {
+      "bytes": 3497601,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-100.npz",
+      "sha256": "e927fb4c6c50c0bb4d20449b57f5165043b22ba4628036b1ebd5549ab89cdb23"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-101.json",
+      "sha256": "e11bd3dd49cc5c9ff258aba1f305aaf7a6516037b97d13e71f0e5b3cb4fe0716"
+    },
+    {
+      "bytes": 3512270,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-101.npz",
+      "sha256": "2b01b4215437fd5fd9c86bdd0f4f76ed461d572a881783f56988b697c420b6e6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-102.json",
+      "sha256": "11c17086fbaf69e518f5fdac37ac69aa1325256b5d7b027ca2bfbbf6a769b5a2"
+    },
+    {
+      "bytes": 3387665,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-102.npz",
+      "sha256": "0eeac69957b9ce49c1973dd979bf4b6a494b7fc6e61aeca6955115e25f35989b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-103.json",
+      "sha256": "18a62b55b11059d82bf31ffb5728cdc7c96dc222c9c3784b4bc76fcda080efbc"
+    },
+    {
+      "bytes": 3577436,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-103.npz",
+      "sha256": "aa57c263b878f30ad87cc8782723c71e9fffd12cc1abc91378488644217c5dfe"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-104.json",
+      "sha256": "653f1ed7cecc4a5e445ec1cbc868e5845926083150d2a2d2346f24a08bf8de42"
+    },
+    {
+      "bytes": 3509542,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-104.npz",
+      "sha256": "529f7906f95fa4c4fe79c756bfe99e0e1ab006aa5d73e391cfff87cfb84ed392"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-105.json",
+      "sha256": "1a2c1eb6eca5c12f68288b522bddaeb0886bb1f78fae36c66cb8c182a9629169"
+    },
+    {
+      "bytes": 3694960,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-105.npz",
+      "sha256": "325bdb6708a67bc00a73c5c62035d1c46190f8c3f6c0a1946fb55a5ae6e3d3f3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-106.json",
+      "sha256": "0511404214a768504a317fe230adda1a78aa232bcf832787fdda4c71d0832dd3"
+    },
+    {
+      "bytes": 3561606,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-106.npz",
+      "sha256": "cdb52de210476dbfb2aeb18f3b7c2d246d26a5c79644043dc1b69ffe9f8b9c42"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-107.json",
+      "sha256": "c628844ab48f392ee4fde91ed27cb3b4d17d62b35af3e5906dbcfef7ff718c2a"
+    },
+    {
+      "bytes": 3499701,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-107.npz",
+      "sha256": "21c793dca42729a9248516f32d2be63d17b830f0f5e7beaeb73cb7fa10a6ae5a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-108.json",
+      "sha256": "db6fd503427d2dfdb868bb0e1e6b1368e5e48c484558eb74c5c64e3afe5f4054"
+    },
+    {
+      "bytes": 3531646,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-108.npz",
+      "sha256": "90a8950025f5b74ce45bb675f35463427ad7e8282dd2c54fc9cfef3562e55f28"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-109.json",
+      "sha256": "c4e4e56ea53269aac0b2d8f287b5afe82ebab1687a77468aeb0f543f78d4c765"
+    },
+    {
+      "bytes": 3416969,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-109.npz",
+      "sha256": "495cd38c014dde95d22d2b786af11e49a55e27edd16062192049850abbb39788"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-110.json",
+      "sha256": "03e93a17fd0db01998d244852c6dcb1375f47a9b812bd0a8f26c19fc7ca8e8da"
+    },
+    {
+      "bytes": 3519017,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-110.npz",
+      "sha256": "d5eba07016367ce04845b95b0765cfb47bdcfe95a4c112d4e77ae97bb151e668"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-111.json",
+      "sha256": "4ac1e5e9cfcb3b415990d16211e9ec3023d356de25e3a6e2c644ec9306115538"
+    },
+    {
+      "bytes": 3415914,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-111.npz",
+      "sha256": "cc703d38e46b0c26b054e61ebbbf1f64ed5cb76dc9d5f2d87ede3497a71d5c2e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-112.json",
+      "sha256": "fdac6bbc2be63a76f01d96434d4696daa65ad301fb6b4cb596f03015b1e51e6a"
+    },
+    {
+      "bytes": 3448879,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-112.npz",
+      "sha256": "320bff1b70c8ce6023c42432a9800724d69cd510bf48eba6fede0b6dc8a4d872"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-113.json",
+      "sha256": "24040e3ffdecc2475569e397fb2a207f98aa1501786264b66063185da98bdc4f"
+    },
+    {
+      "bytes": 3555362,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-113.npz",
+      "sha256": "53ffcc3c96a603106dedbb7c9f516bf6603e31f8e5406907fda508915bac175a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-114.json",
+      "sha256": "2dcc1e71d42d1682c92910e5ee55a6bc0c1eaafe8f5c93482de23d1842384c0d"
+    },
+    {
+      "bytes": 3387726,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-114.npz",
+      "sha256": "6f81da1a1c846ab4ff0f421a32ca6462eefa52d5088053ab1ad47e8ef7c36388"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-115.json",
+      "sha256": "9ee1b90c0e29bd91e3dc541ec924a78ffa6df07a1bd73cc2b6823450f8ca1752"
+    },
+    {
+      "bytes": 3337332,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-115.npz",
+      "sha256": "9eb6cbaf930da41f9697a0a7555ab17c00adf10dff3263d2993b59e8b6944a77"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-116.json",
+      "sha256": "45956a8b92921640c64a5ec6dfc2d20c605fe105b03f8a8c89f5856670257db4"
+    },
+    {
+      "bytes": 3430264,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-116.npz",
+      "sha256": "691aebc2942624bc2d43e5c7b0573d228d61bb92799ad486de0b7919f78a0933"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-117.json",
+      "sha256": "972da4c18fc940f1988b85a7313368a20ba3c686982923714e93255a74b6f0eb"
+    },
+    {
+      "bytes": 3286116,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-117.npz",
+      "sha256": "170a59372b7e6e5d943bfda856b8464683431f84791d365c55383a66f92d3be5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-118.json",
+      "sha256": "1a826a7d45726a1d4bce470d58da89d03205158eaa8ccacea50ddd3095753626"
+    },
+    {
+      "bytes": 3436991,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-118.npz",
+      "sha256": "c06d248394858102f2d53ace6d9ee787a6fd6f404e579139687e2f597edd50c1"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-119.json",
+      "sha256": "f52cfdab74758df70a44a18663d7094534330b31405b0fc988db9256378bcd41"
+    },
+    {
+      "bytes": 3569175,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-119.npz",
+      "sha256": "4c8a30c8604a281dda26ef2cd3dd9483188dfc3664815ee9581f0d1bc4163fc8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-120.json",
+      "sha256": "8af1c35ed4311f9e83e9701dbfac9e75199f4796e92a82c1138feec363657d1c"
+    },
+    {
+      "bytes": 3495087,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-120.npz",
+      "sha256": "f599e432000622258159eb56bcc422c67d97b19d0a86386d0b9d2e5be35bebe0"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-121.json",
+      "sha256": "4ea499bade0123ed9c38d14fad53736c2d1b21d1dfce7b1164d5f751b86d8ea7"
+    },
+    {
+      "bytes": 3489389,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-121.npz",
+      "sha256": "44e31b669781931b1d885d8d8f186dd11675e1c6b182acd2fcfe423b5ad15182"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-122.json",
+      "sha256": "ba2563641d746744a5439d2b52d4e5fcb3d3a16af861f98fee519d69d7ddc36b"
+    },
+    {
+      "bytes": 3509326,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-122.npz",
+      "sha256": "1fc7989387b1c19000bca5cdc8c9ba4ba9034a457e567cf51a74dee95570ab09"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-123.json",
+      "sha256": "26c174683aefcb91b3225c74393d5c837aeea1a949570a2e86e1725e61387826"
+    },
+    {
+      "bytes": 3324769,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-123.npz",
+      "sha256": "785fe248d9a0f57185a53b8cf67b03428121c529aa5fcef864c96cb32aaa50d4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-124.json",
+      "sha256": "439b15a1df78a74fb974612f0e32462e68dfee244a49e60f33da5b8b7710d46b"
+    },
+    {
+      "bytes": 3657786,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-124.npz",
+      "sha256": "1bc7a3279e7522fe2e22793b644a33d8d338355cc7eb5a1a5e0547cb3fd739f5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-125.json",
+      "sha256": "c8bffac89e3985693f076aaa7bda5b6656d8b2371fe85fc49d52ee1e82d8096d"
+    },
+    {
+      "bytes": 3559984,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-125.npz",
+      "sha256": "9c34c39d5364f915c270ae6f013ffbd7c3b3f86a4cfb5999e374d891ed1fb195"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-126.json",
+      "sha256": "5f09a0c6ec44ded0206ec0b4504e703e72320d4a95f8e0eb0aa76385ed30f96b"
+    },
+    {
+      "bytes": 3445498,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-126.npz",
+      "sha256": "128eb2ef9d9145456f6251bf5632327c7086e1113e034c6e90c315379258bf7a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-127.json",
+      "sha256": "0b16f5eafe48839dd9508463c9f4b1941839adb780471093e5a024aa66e9cfd5"
+    },
+    {
+      "bytes": 3419660,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-127.npz",
+      "sha256": "b038c3f3304dc5a9ac921d7128dcf11abb5693143db0988e41c9965c7b53b92f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-128.json",
+      "sha256": "268efbd21e4b384c19f53ee0faa441d8822d88503a22f668932ee6d7352a4e53"
+    },
+    {
+      "bytes": 3383824,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-128.npz",
+      "sha256": "cf1b3b1f5d0c4f56df80ada7848ac69f3d6c7b16e36d820ae4e790c21e195c06"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-129.json",
+      "sha256": "58f68e6d2a9502235e9640e4a5ac568a7cf981460637f3375393c25ac1c88995"
+    },
+    {
+      "bytes": 3457279,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-129.npz",
+      "sha256": "0aeb9f50e236d6b5173640cff4873bc3a0a37ea835c3b70aec3bcc85751b8c3d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-130.json",
+      "sha256": "4232c8711a62a81895741be0c332cbe7953ae7daae14782c834efd46644d06d9"
+    },
+    {
+      "bytes": 3454154,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-130.npz",
+      "sha256": "c329c9c3a23e47184b67a5025d0455dc84dec817bc62073d78cf72824bd6f27b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-131.json",
+      "sha256": "48cdac47bac4545a0f6942521adadc556075183e3b1be8740f3c6e1561faa0c0"
+    },
+    {
+      "bytes": 3408942,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-131.npz",
+      "sha256": "e4b4cc5153e30600ccc2710bcc4213e7ee3530770ef823c4fec7b7592b649d48"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-132.json",
+      "sha256": "088902c70626227cc63bb69e6830ada610eebcec9e4db4cf66051e15310c5caa"
+    },
+    {
+      "bytes": 3284443,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-132.npz",
+      "sha256": "453a258deccea9d4abd50ea7b39b83a6298aae81379d9fe3d3829185f9c58aac"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-133.json",
+      "sha256": "cd3bf408d2284560be0f896986c2007dbca4231970f2e884981e8149dea705a7"
+    },
+    {
+      "bytes": 3546210,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-133.npz",
+      "sha256": "f8f078cb6e5c819e924e8ff0d5e7d965fb6688b10df81bce792886ead1181ab8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-134.json",
+      "sha256": "72722134c88ac33bed4a97cddaf1b934702932c834b5e1ef98f83166b577741e"
+    },
+    {
+      "bytes": 3318294,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-134.npz",
+      "sha256": "4503f516eb15b90408e8233090eab7969b717ccfa63ca97eb154015aaf30c4a6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-135.json",
+      "sha256": "9b74b49274c6e3a1d729a24aeaf59a7866791312564fb5faecc63833da1ac007"
+    },
+    {
+      "bytes": 3512239,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-135.npz",
+      "sha256": "a9895c82682c58d80f6b0cd136d786f1f9c3590b3b654f5b03ac9511756cb1e3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-136.json",
+      "sha256": "de1f167e3ee3bd3cb25cc7c115db6b1457b937137066837f2bb9361766c6c2f4"
+    },
+    {
+      "bytes": 3298415,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-136.npz",
+      "sha256": "991e57948e42e0c8ba14a1bafaae321fac44684103f0d61f6ad9960d40d669dd"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-137.json",
+      "sha256": "6705f0b573e1bed9505ba695d2183d315b5bd4219dd438db13ee2e2ddb1d0fa7"
+    },
+    {
+      "bytes": 3336403,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-137.npz",
+      "sha256": "d7f171a73b0e3ebb98add1b1fe24ca03a57a5e3724168efe2941c5867dafaf38"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-138.json",
+      "sha256": "8fdd905f7ef15109dee08072eb2c339d82ad90b9680dced2a15f0e3faae03b86"
+    },
+    {
+      "bytes": 3685839,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-138.npz",
+      "sha256": "bd0742333e9535c2e3410159dccd05f90ccf2b97f93a4230467c5be8fc70c85e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-139.json",
+      "sha256": "b00ced7640b0b51f6efb3f1429f2d5cd45add2979a35d1b93ef6d8a6b0e27233"
+    },
+    {
+      "bytes": 3435936,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-139.npz",
+      "sha256": "7d32cb356ca464c7876c60286742d75a3766e43fd4ebb05d012a73ac663ed951"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-140.json",
+      "sha256": "f0fb79283360b6f9e66aad1fe7032d14fc8afc9711448c389c3a396b7086840b"
+    },
+    {
+      "bytes": 3605526,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-140.npz",
+      "sha256": "9d9e57e5e4ded16f3fe831fe53eb42d0f06db6bf2d78dabf9e0fc20c1a3b3057"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-141.json",
+      "sha256": "1697bea0713435085f271c33cf4992a01960134812aa9336dec3d9f7d3ba6cd8"
+    },
+    {
+      "bytes": 3523746,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-141.npz",
+      "sha256": "fc063ffeea5b43a9a30c46683d4fcf0162887ca0bef33266013e4e74846fd711"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-142.json",
+      "sha256": "e0e26c0b6fa974fdd581f30db998ee104628b41f88d3def06d6c02a2ede539df"
+    },
+    {
+      "bytes": 3470614,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-142.npz",
+      "sha256": "dded41d5d3512b10e598b07e221e6a6c0b16cc8b30abb3264e5aef4b6a09fda6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-143.json",
+      "sha256": "d869890922f671b37890bd331b2730e1c89684dcf63f5cf3a31321c3489b8233"
+    },
+    {
+      "bytes": 3371226,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-143.npz",
+      "sha256": "dec81729149ac51daadcafedf9ffb088d356c4ff6c2d675dfc08db09ff7e5b9c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-144.json",
+      "sha256": "1a73842ac465cea5ae0044c9e4b2ac4082e6e5f6649e3d7a1746f5e8e46bd431"
+    },
+    {
+      "bytes": 3382707,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-144.npz",
+      "sha256": "2fcd6ccfc5451f9ec7f6e8ed3d8ea67341b973f06693f6b9d28fe06fdeee013c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-145.json",
+      "sha256": "b199a5408fd8411af7478ba670f111418b15d3f65935a7d56ee5e3a75071b9f3"
+    },
+    {
+      "bytes": 3508807,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-145.npz",
+      "sha256": "259dcc329e71e6675fafef81b22d86c4bd15661914f145cc0e7ec4e5189b873d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-146.json",
+      "sha256": "b2e9a9acc9776af584d46804cd1441aa95b039e67b45191201650ad3fb8bd834"
+    },
+    {
+      "bytes": 3285132,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-146.npz",
+      "sha256": "3f60747a5d9a00320506fdfaefe9cdd63b727db38387d6707c67d6ad9ac80a35"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-147.json",
+      "sha256": "97ec2adb3aac50b723637b91772b59586a8f6e1d48e1ed889fbb864b7e62de43"
+    },
+    {
+      "bytes": 3431102,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-147.npz",
+      "sha256": "47cc457faabeb04124171b7634849eca056f8c787a2fd0fe5554060c6f5e66c8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-148.json",
+      "sha256": "b5a760762cd789f5c2bd681a7b2e3df8d80dfdade8c35164f57f1db8e8fc29c7"
+    },
+    {
+      "bytes": 3464010,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-148.npz",
+      "sha256": "2603e8eb87a5dd62e815d5a294bb74fdb93567500071d2b5a920e6b8eb0cfb0b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-149.json",
+      "sha256": "c83e57fdc298285eff0cbf8d7b8967a13c642254ced9a06f85aaaa048022f9aa"
+    },
+    {
+      "bytes": 3575285,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-149.npz",
+      "sha256": "3f799d749f2e75e451e72fc74f0566cc454e4acae80d4e12cd4d7cfe0dee839d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-150.json",
+      "sha256": "afea880d233ee6ba585fcb23a41a7b05e6f2b72ffb15e076402788719646b94c"
+    },
+    {
+      "bytes": 3486787,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-150.npz",
+      "sha256": "3d20d07f4c40c5d1797795c0d4f4ff53e2814eb36358b569bbaf0bd3ad2d28b2"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-151.json",
+      "sha256": "833229b8a7a3d6f129055143fd4d64077b1fbb9b19dda5b2723e054b64d61d75"
+    },
+    {
+      "bytes": 3307229,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-151.npz",
+      "sha256": "d40a835585683b674441750a36d99dd833b06eef4b85d25329046a89abeef25e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-152.json",
+      "sha256": "c12e927ec53e2718555cbc0587ebc024bfa2b9af842623fe0b8e965cced9b5e0"
+    },
+    {
+      "bytes": 3560482,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-152.npz",
+      "sha256": "f4bcdc0b8a0675deeb7a7a8b3eab731f288a9b5942c383c5751b2081a4b6ff63"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-153.json",
+      "sha256": "20232877259c1db31e17999ed2831d3ea02338d16932c7e180cd9fc8d30eb3af"
+    },
+    {
+      "bytes": 3370317,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-153.npz",
+      "sha256": "68448af807d44ad6663ca5743783346c81b0571e25ed86bad64a5ef5d78940d5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-154.json",
+      "sha256": "95f5739dbb510b86eddc5da16431b3dfbd3893deeee2a2ea7a3ae653758edd77"
+    },
+    {
+      "bytes": 3382289,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-154.npz",
+      "sha256": "66539cc55a4f2d249c1cfa1e5ffeed7a294804e44d0b27c2e812093a213ed9b4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-155.json",
+      "sha256": "a8d8502ca2e81ca600d4a6d06d9df35cfe51d609ac319ae08978a7edf58c035b"
+    },
+    {
+      "bytes": 3445270,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-155.npz",
+      "sha256": "8662c87abf0653d45277e373dde3e12c8a1b502834eb05d5ca412d88d9021ca7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-156.json",
+      "sha256": "ba08abb1889f741c378a4fb8f6924be3ed71614df54d529e5184ce711b1c61e4"
+    },
+    {
+      "bytes": 3382884,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-156.npz",
+      "sha256": "ba3c32eeb0ac3d616072e4f7cd4daf8039de430406fa88360166079195dc5fd2"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-157.json",
+      "sha256": "1647f11d01c5c8e98bb00de35c73d49bb406ee8b2ed17810409ac82953bcd6bf"
+    },
+    {
+      "bytes": 3384306,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-157.npz",
+      "sha256": "70b23ff0b9883487765d9a013a1928a0abc0ff31e76938710d6f52a5e2fd8fd0"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-158.json",
+      "sha256": "899262131a225bc1c31c5ee1deb96b8f075906231f5b486313ef8c24633cf8c5"
+    },
+    {
+      "bytes": 3386780,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-158.npz",
+      "sha256": "d98060611eef88f34eb13bd29deaf5b52c88cb55ff118ac953aa07326c07d630"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-159.json",
+      "sha256": "e21e2d04a8711380c49b5613537d7066c4f8c73d91793e3f3cff24c3be64fa74"
+    },
+    {
+      "bytes": 3605375,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-159.npz",
+      "sha256": "66a1ff60e89d78c8322279e6cfdcc02afe5ed2c209df69bc23ec3846e4147332"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-160.json",
+      "sha256": "6f81b593b06fa0ad9f5dadcaab805d9d840da6ebbd47b54b382a2cda13be3ff7"
+    },
+    {
+      "bytes": 3507322,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-160.npz",
+      "sha256": "bb63c202e807ac199cff55924288a6bc98166aa5ee32180c39a0958a702bea68"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-161.json",
+      "sha256": "b8e54571e925dd95bc8ae1be3152e20fd75b8215c4ec7b2c8bc3a2db488222db"
+    },
+    {
+      "bytes": 3734097,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-161.npz",
+      "sha256": "d957fe627ce50de2b6a0ed5512400dae5d73fb8040932534a1606ca0711924bc"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-162.json",
+      "sha256": "14aeebecc54f394926b65961664fbd13a7cbcf5b6ffb7ac4f3647ff1898dcb05"
+    },
+    {
+      "bytes": 3910540,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-162.npz",
+      "sha256": "b4353b7e7e2cd16c08e7fd27a7c554f2e0dfaea77b7ca22bb53ad35e233ef590"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-163.json",
+      "sha256": "d88476cd04522b5f5e6782aafea435165d5da517b6278c60dd0206633f084575"
+    },
+    {
+      "bytes": 3528348,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-163.npz",
+      "sha256": "5fa65a33abdb6da2a1f2eb4b17691bf2f4d935abf48b38590a1eadfff28ddd3e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-164.json",
+      "sha256": "4d658fdc80380c36a200a75d1143a8f8456275b34d87637ea6260b3e06e2ad69"
+    },
+    {
+      "bytes": 3433121,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-164.npz",
+      "sha256": "1b45d7780a9f9480eae4e32d6f184cbe8636a4785e3cd90c2bc1d86e718c8a1e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-165.json",
+      "sha256": "1f8924cf17b1966c2b58cdfbbf68e00209553225a77aa5d5c90bde4c1fe0b99c"
+    },
+    {
+      "bytes": 3435184,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-165.npz",
+      "sha256": "c30085a15795e5d6bee8eea27940ad5143157e5b9cfbd6840b8fb92e400a11b6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-166.json",
+      "sha256": "9f670d328b2c248142f16d9f8077f883f6239750e944cef3e5a402833e2e313a"
+    },
+    {
+      "bytes": 3553474,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-166.npz",
+      "sha256": "b1d1cae8754cfe90b3c37c9bd4df7999bf6f08b196e57ee02bdc5ad5114937ae"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-167.json",
+      "sha256": "bdffe47ed8070fc9ac1400cfc64ac06d481f5ed726dc6d9f8772105984c5a0f0"
+    },
+    {
+      "bytes": 3554647,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-167.npz",
+      "sha256": "90783133efab7a45ac72c0026f23dc7f7b03df9eb7c0d538330db942e2dde75a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-168.json",
+      "sha256": "4f92eaf4072ef9bd89dc9ac817e2f78ede3aa73ba1e4db00307ca83d16bc86fe"
+    },
+    {
+      "bytes": 3773440,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-168.npz",
+      "sha256": "ed7cd5c596073eceecbc8e6140c2be2345d1ae9557f5cbe300bd6e9b1fdb36b8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-169.json",
+      "sha256": "111fc3bd0c9e859b77b7448429dc1ec776afb6eb589f389a5a6fb724ad2b5ab8"
+    },
+    {
+      "bytes": 3499411,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-169.npz",
+      "sha256": "524c9336b4d4fa152b4128f08248cdaa0666e3df17cb65daaf04c89e8592e0e0"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-170.json",
+      "sha256": "2287a27671d54756e8fcf1bcf899549b622ce5c9fbb0c0c70aabd8777932caaf"
+    },
+    {
+      "bytes": 3283025,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-170.npz",
+      "sha256": "63bdeeeb38807d93c37a66955ec19ada63b33d2314b27d76404a2b5e909f0e08"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-171.json",
+      "sha256": "af09751510d91e57765ccd13c97c16b3cfeb52adf5539303153c6e05c6e453b0"
+    },
+    {
+      "bytes": 3411230,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-171.npz",
+      "sha256": "8c21a03274c58d81c3efdfeabfdb6ab518bfdb31480bae1cee81a965b08354ed"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-172.json",
+      "sha256": "b34997699491fe6a513c0939a8b0d949d42a6afb4d8217fc7658a63d64c1f197"
+    },
+    {
+      "bytes": 3567580,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-172.npz",
+      "sha256": "364ef8a67d3d52420119c53970ddeff34f486236d4ae53d67eda7b8527e8a786"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-173.json",
+      "sha256": "0b2276c4ad51e20d6f139d0642c8a6046c7fca2999a34d9f4f9868eccab9dab6"
+    },
+    {
+      "bytes": 3474990,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-173.npz",
+      "sha256": "14e4f543f2f584f8e00841aa4494c9df6ea6593eddd645ee32441c17a5290fb5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-174.json",
+      "sha256": "911f0db58277a6b8fcbac51b9eb136946920ec31d5f14cfa24bf15aea85af309"
+    },
+    {
+      "bytes": 3557849,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-174.npz",
+      "sha256": "b73fd4a4a4a22442d68729a8720700003d0b730a8db1549ad44112459fb30d99"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-175.json",
+      "sha256": "42577a622604b560858755e533bc9421c69560c291145026868fbc8c8f8c2c70"
+    },
+    {
+      "bytes": 3411774,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-175.npz",
+      "sha256": "c1ece973cf2a38fadcaf6f294ba45dbaa3081c1d2eaf5479dd2e54f4b1eb03eb"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-176.json",
+      "sha256": "b01a360041d329b4d0418bb8422e3ec1e1f4465c4a6e5d6fe97e4978239b4ad8"
+    },
+    {
+      "bytes": 3524064,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-176.npz",
+      "sha256": "bd63f98a10821c64282189e3acf7248b2cad0744fd6790795d8c1776b87b0fbf"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-177.json",
+      "sha256": "9835a17fb32d287b72f8b2d9ed945074e36274306b2f5eb16973a2abfa7df361"
+    },
+    {
+      "bytes": 3522568,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-177.npz",
+      "sha256": "f9bc1edd94c91db4481995e46e06760238854d02862d68fb44593571f10eaa15"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-178.json",
+      "sha256": "9e6c9cc26f0183d57c818ac4e320d4b6a959a0995c236dd19d6857545698fcca"
+    },
+    {
+      "bytes": 3418156,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-178.npz",
+      "sha256": "703d796ee447d8a38712f0c6f4048bcf643f10895c3ec78351c7ce7142c968c0"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-179.json",
+      "sha256": "0f45732a3354d8ec87997f0a721e76aa02f773411343e053af4ee2ec8c211c3e"
+    },
+    {
+      "bytes": 3519381,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-179.npz",
+      "sha256": "3540961982b13ac9bd8c729b7005535f99f2cc39c40aa92a420647f7bfaed1fc"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-180.json",
+      "sha256": "e1ea48775067ad1639573bb66d12259e21140d11afcfbcf5383cf7778eef1ce8"
+    },
+    {
+      "bytes": 3638725,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-180.npz",
+      "sha256": "d163d0546a38edcf8aa6320bdefb104b705b56980cd31f80915d7a208ad96ad1"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-181.json",
+      "sha256": "09391db76832352f5f67bd3e023d3b3bc6eadf0a9dab396fd21eb6c5639aa548"
+    },
+    {
+      "bytes": 3511385,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-181.npz",
+      "sha256": "012e82422c16a144b2d2a7b2c7bf7be6ced3d91a795450fdac32788b7e69d35a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-182.json",
+      "sha256": "81299be0e246fa2cee9ba26b0ac0b7a30e97dba8a0c31d1313a610819032a367"
+    },
+    {
+      "bytes": 3416405,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-182.npz",
+      "sha256": "7305cee6af5e2ea3cb42b40888d253caee6f5134b446a29a8c2770935cee36d9"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-183.json",
+      "sha256": "6c185f08c312362fd5f789780dbe9c76b2656e4a5d0fa5aaad9f3a03ce06c83c"
+    },
+    {
+      "bytes": 3679293,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-183.npz",
+      "sha256": "b623ab955b7723ddf006f34c7677f5862f8d669b0b7e060ce0747293c90a2bf2"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-184.json",
+      "sha256": "f213360254499692a1077e89d0a00ed18f0cd7c4ef6b020445097e0871ead87c"
+    },
+    {
+      "bytes": 3458273,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-184.npz",
+      "sha256": "9512988cdf6a026fdcd6031f76e87258262c63712e4032eca2cc365af68b3ed2"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-185.json",
+      "sha256": "3257fb5fc19098e3a88731125c67dddaea4632006e1933a33509cbf24be704b0"
+    },
+    {
+      "bytes": 3568965,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-185.npz",
+      "sha256": "b9173fea4fef11200718b0112e26537a49d2911cd428c789f07558e33627e9be"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-186.json",
+      "sha256": "f55ad3910e20f65646971dd3fcb2053121742a00eabde6212688ce8a5fbc2bd2"
+    },
+    {
+      "bytes": 4075914,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-186.npz",
+      "sha256": "f43362313446ea105b71b5889e55262b1544bf009bcc35674552cb72f31eac61"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-187.json",
+      "sha256": "9250da4fd4f9f41e5b4146c643ae42a537ee59b80b37bde5b01822a0d7249ec9"
+    },
+    {
+      "bytes": 3354922,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-187.npz",
+      "sha256": "957d5823d8e92f5c688121b84fdfc04c0b95c10ac75f4508c12c7451e29191be"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-188.json",
+      "sha256": "f6a78446843990f17531e8cd311bca8ccdde7fb29ce89b6a0a53b67373730477"
+    },
+    {
+      "bytes": 3628333,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-188.npz",
+      "sha256": "4a3e632b7468ab2b527b966218452cd94d504749a0cef5cf8f7251300dad794e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-189.json",
+      "sha256": "5f7cb7a5ade9a3aaf4a475dae67cd22414c3cf1926384c132ed95eb36ac64b00"
+    },
+    {
+      "bytes": 3468028,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-189.npz",
+      "sha256": "70d83eff0a32304bd49aaf589769e9151f7cca9ed9e44ec87b433216a5a33b2f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-190.json",
+      "sha256": "e8c89385a63ff1cb5f3c9b7ef20b321ee7e1114d2632874b0e84e0b2ea898b70"
+    },
+    {
+      "bytes": 3413872,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-190.npz",
+      "sha256": "bad6685e2ad5bbf2868cd219fb4763810fad54a1fa211214837ba4d2ffa9ddc7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-191.json",
+      "sha256": "a1f0e6e1fcb02916de82ee4f7c368eb1776ba2fae103c318a741f4f2f61ecc54"
+    },
+    {
+      "bytes": 3536371,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-191.npz",
+      "sha256": "f1057069d36fdbf124383fbe33059cc48de1d85b3912355c23b42fcb87e1e00b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-192.json",
+      "sha256": "707b066bccf144926ee87b63e1df474a14c1e28fd00bc0d8cfed9dfcff9dcd50"
+    },
+    {
+      "bytes": 3368591,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-192.npz",
+      "sha256": "c1b05e4038da1d17bd11b1d92c19224528643a1ecf9fa4c858ba03a80f247d39"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-193.json",
+      "sha256": "970ad007006a73572fc4b85a5cc39531db9d867e0ba5b8c395e1c5c336526c36"
+    },
+    {
+      "bytes": 3475639,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-193.npz",
+      "sha256": "273cf4d11a379afcefb0a6366f6bfcc489729635b4811cab6b15b0b6fdea593f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-194.json",
+      "sha256": "9368889496b9aa222fa5e74f324a62f50c3ef498b631a3cd1dd9e9ddd287a253"
+    },
+    {
+      "bytes": 3485332,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-194.npz",
+      "sha256": "da51830bbd78956aaa705907a6e0bf2824726ed9290bcdf1fb01f9c236a2ec9c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-195.json",
+      "sha256": "30ba0f09811ed135dc86651e87e91e178e9c752ade9e45557b725bbca44d6220"
+    },
+    {
+      "bytes": 3407452,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-195.npz",
+      "sha256": "e52b4eb0d8dee57973a9840eed710400946fa483d5095dd4d695df065c802323"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-196.json",
+      "sha256": "51d2a34f0bdc4f552fca763b3077718a9ffe0b90534740507774db0f0ef29852"
+    },
+    {
+      "bytes": 3479429,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-196.npz",
+      "sha256": "7d850907c4ae4b2d0a8e99c627a6ffc67c340b27cffc17724664d563614acb32"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-197.json",
+      "sha256": "14a2d9119923963963e67139a244b7b8651210b523870682d3ce1bb727f8bae1"
+    },
+    {
+      "bytes": 3398185,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-197.npz",
+      "sha256": "50ab769787445555a45023748e3ba780a7b7e8a8d122be83365efb578ac49772"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-198.json",
+      "sha256": "f6707eebc1a5a7e0a037c20d9a359775e752308b019ba75a90d8238c0e3f782e"
+    },
+    {
+      "bytes": 3294291,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-198.npz",
+      "sha256": "e73686684d7bc08510bc4ddf93e4cbe377246c022e03245f2fe02f6541acab79"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-199.json",
+      "sha256": "fc402bed7bd6f2bf8f96f021738152bbf9ae5ada48f16db16549442af010d7c9"
+    },
+    {
+      "bytes": 3315855,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-199.npz",
+      "sha256": "3a193d1575289e286f0428917a0a29cc0c19bfd2ca335f80d80ec11eb2287e6f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-200.json",
+      "sha256": "4d6c53148f1352ed4eb0689028e5a1426c9978fa08f3dfb79d0ca1082bcd3164"
+    },
+    {
+      "bytes": 3418997,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-200.npz",
+      "sha256": "496075db322f432d95516d6b96b9455a12abd1b7421a7557c25526b8e6ee05f6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-201.json",
+      "sha256": "dc76dad797b123691aba2d18bbd211cd6e83389efe66e0a19a77d800d7dad1f9"
+    },
+    {
+      "bytes": 3510128,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-201.npz",
+      "sha256": "f9e979b377150647ddd93966527ddf83e4926f1118984037d3098e43e3f807dd"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-202.json",
+      "sha256": "c6dceed523e8606947ce9794137f2c7d0b2efa5b8804ed1568c8431eca9a5e87"
+    },
+    {
+      "bytes": 3406104,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-202.npz",
+      "sha256": "fcb80a0534e5862911afff96af2cecb6da31e2c6948a85b07a6a7d69b1ded827"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-203.json",
+      "sha256": "464e06efdb37a1cce9935f4267ffbb77fabfde44bcba8275b05de97e02ad8985"
+    },
+    {
+      "bytes": 3476690,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-203.npz",
+      "sha256": "b3102a1e48031a8bc5bf691ab90e9bb3fb80f63a9e9d5bde46104f8c90a54a71"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-204.json",
+      "sha256": "1e03cfc77ce74a3e68ac3ed19f8e0c08fc6a4b3083a8317a218e53724d7e9081"
+    },
+    {
+      "bytes": 3389286,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-204.npz",
+      "sha256": "9f4dc70244b3a842cc6c3ee1e6269bf3f8de5d43847cff09240605db10f04aaa"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-205.json",
+      "sha256": "ed6f81d0252c1db5165fa8670aa19531e2e6b4d9e1d6ea5029ff5c101d7ac89d"
+    },
+    {
+      "bytes": 3526181,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-205.npz",
+      "sha256": "7a7585519eb6a81b0fbc99bcb71a0216dc20a6d95caece3f1161d919512cc653"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-206.json",
+      "sha256": "6773a8163e29044f3886d294e42613d4cfe8353af7e387917ec5d53cf08d698d"
+    },
+    {
+      "bytes": 3474895,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-206.npz",
+      "sha256": "8eec1e82392fb7e92dd4f9b3005268271a2eba4fee9d7f38c4a8ec04a4a81e92"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-207.json",
+      "sha256": "44828fae3fe7d5bc188145b15cfa3bf6d63c11453201ddb4706496798610457d"
+    },
+    {
+      "bytes": 3404550,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-207.npz",
+      "sha256": "5a9bc3ec947a1ed632d1c0339cac6976866d66322df1d7c2136b7247de3be1a3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-208.json",
+      "sha256": "54c23828d6efa1f56a7268b65b90cba381f598e077cc1acb33d10d58cd75af6d"
+    },
+    {
+      "bytes": 3538099,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-208.npz",
+      "sha256": "ec4c9d10d89da7596481f01f6a85366e6be9a57ed5a983e7ec4212e9c3bcdac3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-209.json",
+      "sha256": "b383438b38b21a04173ea58905cb2565d419600975ee827d616c412f39e698f8"
+    },
+    {
+      "bytes": 3713563,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-209.npz",
+      "sha256": "b247fa67b5d7ab985a2188a3d3dec5efca96b9708b003131a6dcb21974605189"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-210.json",
+      "sha256": "e5d3e459f0762665f36e47fe483084e26e4ecd0fb472e8f06523786dab60bd84"
+    },
+    {
+      "bytes": 3515847,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-210.npz",
+      "sha256": "d1d37f92ac6ec047ce70f83e8e963558cf5b79424c34859b57071f742a5d2eb3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-211.json",
+      "sha256": "6babd01870e2836db5b5b58502d27a18ae23d20b881f9ead88139e243f6b474d"
+    },
+    {
+      "bytes": 3525051,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-211.npz",
+      "sha256": "b6c68082936a1524d2bb4a9c1a805420ae88f382709b956216e045729d0a6c29"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-212.json",
+      "sha256": "9ec8cfeec750e918746cc400af09eb02478f0cdc7f33cfde5124698fc72815ca"
+    },
+    {
+      "bytes": 3516195,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-212.npz",
+      "sha256": "6f455f1bb970d4ab20096d03c812220a6e9217ab4df0ad88a462bb99d885bb4d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-213.json",
+      "sha256": "c7b1846a091c050d3753a73d1b0a42cc565bdb5b2fe4766f4456c08e16354041"
+    },
+    {
+      "bytes": 3425012,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-213.npz",
+      "sha256": "35134fff73b5efae267c2abded58aa1fdea804720787701a70167e6e5a415de7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-214.json",
+      "sha256": "16525a693efbf923ad2c537c187d0973b016b494e4ec5ee184386330d2f9e291"
+    },
+    {
+      "bytes": 3442461,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-214.npz",
+      "sha256": "906e0a03b0b1d138153aa4b41bcb830d8e8cd0520dad1fce398b475e0548cd0a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-215.json",
+      "sha256": "83c17d777d2aeba7d66211369cda08e236e930d1a29550261d3f9c7aca458edc"
+    },
+    {
+      "bytes": 3513361,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-215.npz",
+      "sha256": "c17c8f6ac4c6777e680de2cb2a77c8c85796c4d85c00c09e03e248d78640c419"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-216.json",
+      "sha256": "63e554908b7726276683babbe558900229092d0935f1e2192f9d8f30079e7a07"
+    },
+    {
+      "bytes": 3420292,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-216.npz",
+      "sha256": "a4caea111cd9cea91cd79292021bfa724e8b9cec72898d65b5a11b7539cbf29a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-217.json",
+      "sha256": "88007daac48aef23ae620e0f83fdd76c41ba880a655071da579a5f4d8e1ad1fd"
+    },
+    {
+      "bytes": 3494694,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-217.npz",
+      "sha256": "680db298a8865fa3ced05f5adbfc5c448198b440db37092cfce0cb75760ff55b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-218.json",
+      "sha256": "08908d7dd784f424d1ecaaa09a9ae0448f1829fe10b355d070b8282d533add6b"
+    },
+    {
+      "bytes": 3410782,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-218.npz",
+      "sha256": "b5ff705e32193114e6850808ee236ce39b3dea6b4a0184c20f15233437feddcd"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-219.json",
+      "sha256": "190348d7076f6e7cd14ccbcf4f6a788e3e4e296249334388e323ba348283abd4"
+    },
+    {
+      "bytes": 3260288,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-219.npz",
+      "sha256": "0b6aa42303f0f40cfb9419c2ff538adcfe5aed2f6c1b3d598168d82f347ecb17"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-220.json",
+      "sha256": "3bc24466a0560f04fc103be8eda167ef001d5cf628e379bd78bb9e957ba94521"
+    },
+    {
+      "bytes": 3563527,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-220.npz",
+      "sha256": "cc5cd937b19eb27a5e852ee7576b97a97bcc0a2d2a5d5e84d436c0b44ca7cae9"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-221.json",
+      "sha256": "1882c8eb6ef81e11d81f1b625db120170e3f2e8185fba5cef8b30007c893650b"
+    },
+    {
+      "bytes": 3490916,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-221.npz",
+      "sha256": "4506ecd64e3b9a673f8abc5bb772b517fa9e4782bde7e2451532e528fb522d71"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-222.json",
+      "sha256": "24cc72d20aafdbb39a2ddd4cdddf7206bb7ba1856fd099c92caeabd3f5d28eba"
+    },
+    {
+      "bytes": 3561895,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-222.npz",
+      "sha256": "260e0a99bc7042dc359550721c423a51adf565139bf8b9aa5a8a361bec61f713"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-223.json",
+      "sha256": "c0f73f0e6bad68a2d510bd64aaa87fb9c744ae184a7d33f578288f59a4c4958f"
+    },
+    {
+      "bytes": 3381541,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-223.npz",
+      "sha256": "f8beb3c9264e05b18b35e800fe0335e24e3da3214b59e7acaf259be7169a8de8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-224.json",
+      "sha256": "effc225559956d44a03b5c317e080c91520ed72d3ce95666fb970ce45f87b71c"
+    },
+    {
+      "bytes": 3448626,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-224.npz",
+      "sha256": "a81a004e4a0258ad8f337fcc945b8534646236ebcc93df3943a69c3cc5b60b7e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-225.json",
+      "sha256": "d3b8e0f1486a3034127dcb50cdbe71c7fd54889f6cb8fdcd5d1897f20033b2f5"
+    },
+    {
+      "bytes": 3403433,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-225.npz",
+      "sha256": "0eae4d9dd577f85babf31fd4eb6a20afc5d813d9858522502ebd76efa6074c03"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-226.json",
+      "sha256": "c16438ef6af2e44a5d7931a8a882f372539169705efcb221bd311174fbd2f705"
+    },
+    {
+      "bytes": 3377023,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-226.npz",
+      "sha256": "002b688a34f6b7aa19490cc0a23c70010558f9cd75abf370b6273cbf029a4ff4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-227.json",
+      "sha256": "723779de6c99d57d4bcd7a34f03cd024a3e1325c9679642d94ae57927ddb9318"
+    },
+    {
+      "bytes": 3487668,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-227.npz",
+      "sha256": "00d47f0d61cdd7e6ae28c239dd222d8c5bf6d74569b661320b17ab29254b24fa"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-228.json",
+      "sha256": "ae914eb3653d11944dfc30296eb5e784a7dbbea426f39841d49f8a92d72d7688"
+    },
+    {
+      "bytes": 3402249,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-228.npz",
+      "sha256": "dc2477e62bf904cc8e726a92259e4698e3e72172c014c5e6e7b0738784670d60"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-229.json",
+      "sha256": "059785dc959bcca22aef2025fe4fe84e1f06c340380a0c3eeb50feadce8c4fc2"
+    },
+    {
+      "bytes": 3351018,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-229.npz",
+      "sha256": "db3445eb617f8ec971d38f0d4b76b3e0584d222d33288de3fe623738edb5f5ce"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-230.json",
+      "sha256": "8a86b5ed201afc5612bbe52f6eb3108a9bb76bff273f2d768eac777f287069a4"
+    },
+    {
+      "bytes": 3674866,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-230.npz",
+      "sha256": "1f4c24403bca91b520b9ddabc2a7ac4410411af40dc2bb60d1f1b6660d922822"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-231.json",
+      "sha256": "9e99d71462602ed19478e1230f6489bb3e440282db19af12df9376c63d6f20ed"
+    },
+    {
+      "bytes": 3505889,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-231.npz",
+      "sha256": "6c3bac7d9553cdb43791f9e900e0476779831a4e6fd03e618594943e2a144d4e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-232.json",
+      "sha256": "fcb1d4c517b5f3b268f8e5cfb2fa5d2f1133df3f546160b45c7b4be3c37137db"
+    },
+    {
+      "bytes": 3520127,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-232.npz",
+      "sha256": "a3d3f2f8041bcdda2c000651467cf1e7f1c5b06fce5278a1e24e6e3bf19ec652"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-233.json",
+      "sha256": "44dc290e78afc4539c83dc9832c48a1c4d984eaa1bfac6a72ac0e00184e7d5cd"
+    },
+    {
+      "bytes": 3339127,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-233.npz",
+      "sha256": "d3857f16ce6ddc4d52fdf3988a8a7a7cc9ced4407a936fe35c77679649975a4c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-234.json",
+      "sha256": "8a3063f4dc957153f4ecff2a0e1b76d4fb0112c535fd88f040839c947b638e1c"
+    },
+    {
+      "bytes": 3479757,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-234.npz",
+      "sha256": "c9801b604dbc05aba52834e60355f98a1847b1cf7369fcf28b5b08af8fd7213b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-235.json",
+      "sha256": "cfe8c3b042ec64d374b19297e33e35c335877ad8b29913fcdfcf1fb888675b7f"
+    },
+    {
+      "bytes": 3324364,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-235.npz",
+      "sha256": "ce41a3b5e26a8a0a8d20c38773194a3d43d61459f0bc503a2b3c02425b4ed0d8"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-236.json",
+      "sha256": "1f30a3e4f71ceebea9d3390d31edc508e2baf55bb54a328a5eab5d99c6bad6cd"
+    },
+    {
+      "bytes": 3539081,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-236.npz",
+      "sha256": "55c69415113b1bcfbf6a347394b921d97928baa3a69d92a01cb0985bf1266f3b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-237.json",
+      "sha256": "202da588f58e5659fe09c921214f1355d12822d35d881769f6903ffcca6a85ce"
+    },
+    {
+      "bytes": 3465633,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-237.npz",
+      "sha256": "ce08813b9594d9451d6f5c5f9e51e2c71fee69735c98f984a435ec0e70e5a4ac"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-238.json",
+      "sha256": "c1633b68b702ff8451936d2551a1f17d160d726632211ddca676750d27a40147"
+    },
+    {
+      "bytes": 3423280,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-238.npz",
+      "sha256": "9bae237f304ba29380d40a90593e865b04e549acee8170996376df01e48e4720"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-239.json",
+      "sha256": "8ac690f8a06ee7719730f26507097b607122212128061d1bd4a9eaaa2060dab8"
+    },
+    {
+      "bytes": 3426927,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-239.npz",
+      "sha256": "d2dfabe28a84143c654a05bea3aca9153753e4b4d4a1cdae9d6505907f431afb"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-240.json",
+      "sha256": "39de75d2d96228acf06e4d3fe41838cc2589c4a083528ff34a6a22e69a733500"
+    },
+    {
+      "bytes": 3370354,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-240.npz",
+      "sha256": "1c1c115fffb6a8959fce1e4519f15538a687a0878d6d8492f6bf35d097fac428"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-241.json",
+      "sha256": "5ba8021cef2ab2c7070cfce14a98f0feafc5fb301505240e8893dadb480aff46"
+    },
+    {
+      "bytes": 3458636,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-241.npz",
+      "sha256": "33dcaec19f9c9c9b4cfe210ab0541a129362d3201c8a1a1d75ba683a15a8418d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-242.json",
+      "sha256": "0e57ee5d1d6ada26262752445b8a5bc58f0c81156f1ac15e5bac942181c4365f"
+    },
+    {
+      "bytes": 3570005,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-242.npz",
+      "sha256": "d2f09e4a96379c25aeebeda11e0b8dfa9e2155dcc6ae96dd53a1aa418681abad"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-243.json",
+      "sha256": "23172351ca3c24037c243232bf4c23efaf676249a9880b79d5b2a23b85ef6408"
+    },
+    {
+      "bytes": 3363749,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-243.npz",
+      "sha256": "ef3dc4bf2db0a5a5d8791bd8b62d06b92c216a868f50839eb6120bf5b4161fdd"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-244.json",
+      "sha256": "a1193b6dc7e126880af5448cfa38ee47728bde617f86b136e8d6f2adfff152d2"
+    },
+    {
+      "bytes": 3470549,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-244.npz",
+      "sha256": "2ede75f0fad01978808e407dd58080f11830af9b04cfd8d8f3e45609ef3053b5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-245.json",
+      "sha256": "69a259831f5f170604ffa583feb6bbcb599a0c50dbf2d42330f3f5537c198385"
+    },
+    {
+      "bytes": 3535389,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-245.npz",
+      "sha256": "8915522cb451ce74e8dd1c535e3af2cf100dc395ccd213174c65da3e70405b6d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-246.json",
+      "sha256": "5fa83a1cc715bc540a4cb3fbf7f0aa57934a04e41ccd32bd73a2a150de392944"
+    },
+    {
+      "bytes": 3228631,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-246.npz",
+      "sha256": "c86a25e822cf6e72c3d7521de5e43efa2f56a8a05dc6160f57e6afb3c1e08e26"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-247.json",
+      "sha256": "85fd8dba1704a23baaddee80e0ac953c917a12806853bc664c495c3687bd8e4f"
+    },
+    {
+      "bytes": 3460613,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-247.npz",
+      "sha256": "513d669b9443e6652c56a75cbfb8d9efffac9104d635cf58358fbd12178a5664"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-248.json",
+      "sha256": "0ca67c11f8c2e3f65cb073292160a151e10e35c8dbddd0d50e33ff9e853cfdf0"
+    },
+    {
+      "bytes": 3519885,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-248.npz",
+      "sha256": "e7bd581aaf37ae88282e97746742b7528cf395401c403e26651d61de586441f4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-249.json",
+      "sha256": "d30bb450193157ba7749a875562efdc57350769565827c228c3e3310f45e456d"
+    },
+    {
+      "bytes": 3483870,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-249.npz",
+      "sha256": "f59ec95850feeb6f41139ca661fa4ee213a39023e32d4ce54cb238a6a5c10b2f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-250.json",
+      "sha256": "deb0455f974db3a3a0caaceb61841fd83820f6a0c551a695c4a36b6bbbe30bd5"
+    },
+    {
+      "bytes": 3546695,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-250.npz",
+      "sha256": "23e698e156395655040a8dac98636165b2fe867826d08ad37fd5ac2dbe0b3e1f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-251.json",
+      "sha256": "fdb7f0a82288e146fc1e67b94acc231ea3c9caecda1128f2f8ffe8556926f3ec"
+    },
+    {
+      "bytes": 3474170,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-251.npz",
+      "sha256": "74e81951a3220ea3035a77cfa2da440cf5e72e76c7326d00ac7e25af0b17bd8b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-252.json",
+      "sha256": "60a9576968f1fc7b92f23ce0d50cbefcdabe59df5ff74daaa258a1fee79056b8"
+    },
+    {
+      "bytes": 3461620,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-252.npz",
+      "sha256": "268acfb325dba0b8857cd9ee7fed75bc3904ea9750eac1d0dda0542f01e2dbfb"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-253.json",
+      "sha256": "46860b0b57e041b0c1862f63dde15a392dc90fd12155690c33c1ccb0f73e8254"
+    },
+    {
+      "bytes": 3367374,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-253.npz",
+      "sha256": "91e667fca4d43f823b8ecc6c08a835a181bec69bc1199d3ceaf0da577e6a2de7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-254.json",
+      "sha256": "fd55474c639d5f4dacc6038e638a917ab2d54be7b1a68739a2f27cbc3563ed78"
+    },
+    {
+      "bytes": 3585157,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-254.npz",
+      "sha256": "9a0e266d4fc191d4372ab318ce2f357d4742f3de7e362e9393849b6664ab15ea"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-255.json",
+      "sha256": "007d22e0b712462de5e99ff2a6298d6fdd9bc8d611e8109673a4f621591335a3"
+    },
+    {
+      "bytes": 3445271,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-255.npz",
+      "sha256": "7880e5745a7fb1713d331ee22d7286631b8b6e76c24eb142f4345d71b5f54ae4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-256.json",
+      "sha256": "6c0847b4be874ec65dfbe72802dc326956c9ae0c49bb547f852b9b53997b8566"
+    },
+    {
+      "bytes": 3436866,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-256.npz",
+      "sha256": "e6cb416b78b3a2266d06a7acc6b3063758cf58d63aa7211ff65c8afafedd0227"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-257.json",
+      "sha256": "548e28a2b281be197aecf13862075bb337eba1eb2401f9072fc4f11ae1d18572"
+    },
+    {
+      "bytes": 3422166,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-257.npz",
+      "sha256": "9705bedc9a206da0d1c02f08c4d703787eadc66792258f01e47190d1e1c74318"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-258.json",
+      "sha256": "86ccad6e02f4e1a97776034927b54fd21bd996f20f466439dc30f07be5523d43"
+    },
+    {
+      "bytes": 3321147,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-258.npz",
+      "sha256": "36ea2ce675ab355dd47788689734e7c4051a1da40990dca24f5246df7d0f3b81"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-259.json",
+      "sha256": "0854d002ac888db0f75bd8c512e5a536515893692825f0e04afcccb92222987b"
+    },
+    {
+      "bytes": 3432163,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-259.npz",
+      "sha256": "c1fae5c215624a36f30f706a30b8f733f48d3eef5f9be626666b9f2b75089b3a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-260.json",
+      "sha256": "0d26d8981d9ce0189544a11efc1953d457e36fcb8c2b3ed43e9d9cba8fdb2924"
+    },
+    {
+      "bytes": 3442608,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-260.npz",
+      "sha256": "a5bf37ccc14521d923498fa6b285a6e94340d797cbf0ce56a8a0fbd98d5f6f53"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-261.json",
+      "sha256": "b278895552e974fd506843557cf7758a773d09a5977b39d2bcd483fa86d71211"
+    },
+    {
+      "bytes": 3316633,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-261.npz",
+      "sha256": "8a2b597f38b937a0bd947ae3039c7358f6908fa0d879b24b862aa8344e619253"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-262.json",
+      "sha256": "c853cdd4d7fa7bd63daf01116703cd98fcabb6be8500deb05f50eec354119cdd"
+    },
+    {
+      "bytes": 3515488,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-262.npz",
+      "sha256": "d8b8e298d84281455eab956be1a7c37a4c4804f8a9b36a78fdc0076493565674"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-263.json",
+      "sha256": "87cedd030addcdb73bfe73c24ad4576d844ad207ef3fe46ed0f9eb2d96691ea6"
+    },
+    {
+      "bytes": 3376930,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-263.npz",
+      "sha256": "4c55bc20143327e84f3a9becf8b5a3e70953a9cf4574f4fb424a4b635fd352fd"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-264.json",
+      "sha256": "13dea1dc07b32c9ee6ba18978ebce1c4ed09179f1940e579c3a8985496d128a6"
+    },
+    {
+      "bytes": 3385005,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-264.npz",
+      "sha256": "796b8b1e745b736df1529972cab5323544427b9b5b35ea3148e03b425baa838b"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-265.json",
+      "sha256": "21c8528c626b4b04dba97dda9f0592c7927828251d83d5b4abd5a72e903a1b96"
+    },
+    {
+      "bytes": 3501837,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-265.npz",
+      "sha256": "f547006df27bcaa40aa9021f8fd9233c8dd4dee1967df1c168967eb61dee2bb6"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-266.json",
+      "sha256": "164c4052397f1a2374a0b34b038e4d604c1b860fa7717ef45d6f975f190072c2"
+    },
+    {
+      "bytes": 3560591,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-266.npz",
+      "sha256": "4095cc640da3aeada9ac4a928670cc9f09ff060d31382b0e33d2b2866a76afb3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-267.json",
+      "sha256": "1a5d4f276e8fa5e3214982a615cda2e4ae924f46248448bd547db49f2c363b6a"
+    },
+    {
+      "bytes": 3439487,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-267.npz",
+      "sha256": "be01c92d52319cc2b405560f3a5f7f58bf6bc28e12ab3eacb27e0f99c0fb9ed0"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-268.json",
+      "sha256": "975e4038877a8acf9b1df9727b3969d84327ff9b5b2c0800b57ba509d59855c5"
+    },
+    {
+      "bytes": 3561256,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-268.npz",
+      "sha256": "326aeb85d9d7be452514331d104251beeaf9aaec2506e6032169fff1f5439920"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-269.json",
+      "sha256": "84ff65ffce14b2fe311ff55902fa6c7d7b65ac3eb025cd48da08976767774a7f"
+    },
+    {
+      "bytes": 3388857,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-269.npz",
+      "sha256": "265d6fea7b8e274e34ca2aaac39cf0a24fa005cb74500d5f792cb8070638102a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-270.json",
+      "sha256": "3435d2e41a0f1e97e32f8e6db2597013ef61346509c8a564b7cb6574cdea4b5f"
+    },
+    {
+      "bytes": 3404933,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-270.npz",
+      "sha256": "d763d6e3f9e8f30df8300186e918a20b302c0c632d92e563866adf8c5d36b582"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-271.json",
+      "sha256": "ac637cc95a77a233562777ea0a8f0ed879cedd0b0f3c270333f12b2d3d261fba"
+    },
+    {
+      "bytes": 3707118,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-271.npz",
+      "sha256": "1faf920ef18327d9137638004791f12f9c6b00b4f0814aee4293f81c605a579f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-272.json",
+      "sha256": "aca1e87999280e44dc3c315fd5011218719586fb6f06a972dc66d62b3ddcdff2"
+    },
+    {
+      "bytes": 3433097,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-272.npz",
+      "sha256": "c27eee5ba3cc29015a71831d06e01ef083ed6baf2b28bcf138a333896404a750"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-273.json",
+      "sha256": "5cf56ddd1014e957db8bbeec21d4ad95180e33e18fe9d97b9ee1db8e7a382012"
+    },
+    {
+      "bytes": 3466732,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-273.npz",
+      "sha256": "485070526ab40b5d2be109323aceb0758fa4b85e79aea4b0cc16e7ba057876ed"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-274.json",
+      "sha256": "20d4358a1f6b8d99cab20deb6c5fbbaaf9fc32fc53e8e6a0f6ee34e12f2f2b99"
+    },
+    {
+      "bytes": 3371918,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-274.npz",
+      "sha256": "6c2e2df94ac89578decf3b60766fd7ee2ee9ce9299618b5c17f12d817ff4bbec"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-275.json",
+      "sha256": "e5feca6384db07b49dcaa7df1e3fc09730c728fa4df7ef78a23aab44507f0ec0"
+    },
+    {
+      "bytes": 3361390,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-275.npz",
+      "sha256": "a771e570ee644aad303f5b8d9a2133c8522f0c81595e440fc0db36edf7c30d5c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-276.json",
+      "sha256": "3527c3aec2e5cc67b221c0de5047d1433d888a8a00e15d098eeb3fdd599982f5"
+    },
+    {
+      "bytes": 3479723,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-276.npz",
+      "sha256": "2b434f21ad43d9335fd35573900bd5139562e6a74404fb156b357fe5876a8409"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-277.json",
+      "sha256": "d7227816d7297e6b894d1c19c109a5edf752db42ece5bafe4d518ad9a3fa2ceb"
+    },
+    {
+      "bytes": 3388505,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-277.npz",
+      "sha256": "9035b9435e559712f605723e3ad079e1a89a4551482af878f9e2aefcef4fc799"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-278.json",
+      "sha256": "2965544a638cacd5fef6826588f31e76bebc974c4daaeef40ac57a225b020318"
+    },
+    {
+      "bytes": 3275160,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-278.npz",
+      "sha256": "441c8799a04898a3c18648cf00d6fe482aa193af7ef3cf7e4334b8187f0ca56c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-279.json",
+      "sha256": "6e7a9b134e801460e4107f2edfa468c3bf203c68c26cdbfbc9842e95c194d38a"
+    },
+    {
+      "bytes": 3463341,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-279.npz",
+      "sha256": "438e849b9531fce79080932fbb0a228dea0d6fd9924741c058ee9004cde66b6f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-280.json",
+      "sha256": "f9a1b59aafd652a2d80b38fca7c787efe9970b84cbdcae72292d785e43b0d362"
+    },
+    {
+      "bytes": 3527998,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-280.npz",
+      "sha256": "6185c67ccf91a4ad11b8d00f776b64f8e037aa7c5d9177f36c07c6bd18434002"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-281.json",
+      "sha256": "1215cad776930b7fcaa331805e1009f8db8cbdb5a13022c7c553f47db5306f6e"
+    },
+    {
+      "bytes": 3418542,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-281.npz",
+      "sha256": "4859118b813a92d3ef6fa5b27b14f5abe4ebd800832e654e39f35a4ca817270e"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-282.json",
+      "sha256": "ee785f4768232ae39fdcd852227045443795cdb2e1bbf7dbfe7f29c1a7e8bcc6"
+    },
+    {
+      "bytes": 3558933,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-282.npz",
+      "sha256": "2263b9889fe18419f3929082d3e646e67cc6c4bd6fb0ec7b830d0560993a73cf"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-283.json",
+      "sha256": "c2fc90cbc75b8122c3d1e1a6c9d7b48757f526c9090e8f8b32929263f6a9d2fe"
+    },
+    {
+      "bytes": 3449820,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-283.npz",
+      "sha256": "4d240132fa835f0d87f36761ba04bebed42381d5220962d092b07dc000bbc55a"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-284.json",
+      "sha256": "c37b552e23155d0d5f750767c0a75705778dae4133b1210aae3ea2d05f2c4df8"
+    },
+    {
+      "bytes": 3374875,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-284.npz",
+      "sha256": "5a2fbe176bbb1ca60262c21eb9f38c1150b031bf5c9e8a44c63e74b01c228fa7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-285.json",
+      "sha256": "368f6b0e6d8e87c2cc67b207e7972e9991e7922d3a4c37a7c8b57fe0663c2aa0"
+    },
+    {
+      "bytes": 3534881,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-285.npz",
+      "sha256": "8bd0490a3ee64d1589d448be9c7079728c36a46557c96413b07d9414d96dc4a5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-286.json",
+      "sha256": "59ffda2116eeb189776754de6e1e3933f5d99ea918aa5d3580401a2b7dbb75ca"
+    },
+    {
+      "bytes": 3626565,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-286.npz",
+      "sha256": "35e33f36e029f685bb65bb627f05b7eb10f296d8b32d6c6c2a674dbd9d925b38"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-287.json",
+      "sha256": "837e2cdbb51fda7a8b464a3ee1c21594678e0d1cf4cbc1cfd1b2ada51811006f"
+    },
+    {
+      "bytes": 3418717,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-287.npz",
+      "sha256": "c6671416a1ab47b09ae03ccffe83268684eff6e77a6a54b12ce6d6d82617e1f3"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-288.json",
+      "sha256": "0730f9e6cfe6ca68420cb32e779e58db8cb685cd827834cbc11c3b0901dcd087"
+    },
+    {
+      "bytes": 3462815,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-288.npz",
+      "sha256": "76758d7ad8d3b454c7a7472299124a6f8fb01883c67d806c1c114f055d0ea1ad"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-289.json",
+      "sha256": "a667dd364464ab1bf1217aa1cb5d11160591d8bde808bf44abaef2386b3664d2"
+    },
+    {
+      "bytes": 3501309,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-289.npz",
+      "sha256": "aad9ce7149cb0dc20acf1d7978e6f4cafba5df79d9c3c2f566f97f7f77497df7"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-290.json",
+      "sha256": "dc7e66b122b5b22541a5ba6fedbc01a806a9abe9f20ca4ca9a674e33bcc0d207"
+    },
+    {
+      "bytes": 3441946,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-290.npz",
+      "sha256": "1f5d2feba3cfa277fe22b6c5d36054edf2eb07f4d0e3bc6690a7ff0b707d9d0c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-291.json",
+      "sha256": "189e3cffee2da51de9b3278f4a6a02b0e422edd9f1f28cb93111be3148715c2b"
+    },
+    {
+      "bytes": 3559119,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-291.npz",
+      "sha256": "7daafa1a494e2bae07b7e5df775234a2c7264292188080e9d4d5ef613f7280d4"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-292.json",
+      "sha256": "9b2368dc261c7db6189d2af98d3bd18f3776c63d3c58656cffe21f43c79d819c"
+    },
+    {
+      "bytes": 3394217,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-292.npz",
+      "sha256": "8d942b1920ab9209b0fae9903df933c844e30534d535ddf938875f8b251abb03"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-293.json",
+      "sha256": "96274ea804f4f034799f4754d302f17821d1f9fb2a58dd113bdbc312af1bd07d"
+    },
+    {
+      "bytes": 3550313,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-293.npz",
+      "sha256": "2e6296c1dcf1b1621c2ed80d66e6c1ffae579b143643ba0c0ef47e18732e40d5"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-294.json",
+      "sha256": "dc2a1022d61ab42933f129b0b6d0ce21c11377e523ff6f152f3b45284d3d1975"
+    },
+    {
+      "bytes": 3508915,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-294.npz",
+      "sha256": "352b8e5632d4f658820e34382afd58d0726f1968e1e931389ac2ac2b15ea0c47"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-295.json",
+      "sha256": "2306d43bc71964b72cfc23e60c1a07137757cf07e80030df01a84b7fc3b36dc0"
+    },
+    {
+      "bytes": 3302327,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-295.npz",
+      "sha256": "397873084ea1d324035707cb1f5db602206db5c3f5e32b3743d1b0da4d20c76f"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-296.json",
+      "sha256": "a8ed269ef0e798fb391f3d5cc4dc3202a6b3b460ec0e9d409a14bd1cf0d8970b"
+    },
+    {
+      "bytes": 3499122,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-296.npz",
+      "sha256": "224048e35eb929c31b488148e0b9c5ab7686c6e66c95b0d61eac9e88756e362c"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-297.json",
+      "sha256": "e0a21f66777738ac1612487ad32d468bd9f8dcb1a4032931540d39c65f422785"
+    },
+    {
+      "bytes": 3572855,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-297.npz",
+      "sha256": "9b5a768937893dd8c4d060bef0ed8b34b094c3f0a39b98d67a745f795c1ef60d"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-298.json",
+      "sha256": "34d7058fd2eafb3295ebe86c1648bd598d4a4eb78417c000f04d030925e3efa0"
+    },
+    {
+      "bytes": 3389700,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-298.npz",
+      "sha256": "307437afcdcf777668ff07177b3055ce4f8df1b7f81213276e153e226d115183"
+    },
+    {
+      "bytes": 7134,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-299.json",
+      "sha256": "9a25ed0d04111ef057f23747d29a84992829d93363225bbe42fd967b3f179ae1"
+    },
+    {
+      "bytes": 3718958,
+      "path": "runs/lewm_adaptive_compute_v4/data/confirmation_raw/v4-confirmation-299.npz",
+      "sha256": "af9a9266b7efd2e29ccb71bb5e435a6c7ece59a5f2093590ed9c3989210448f5"
+    },
+    {
+      "bytes": 99867,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_data_manifest.json",
+      "sha256": "2b707c5029903c34bd2380c448a7b7cc4a3f465a27d5a97b20d3ecb8f3721dee"
+    },
+    {
+      "bytes": 1042237,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_encoded.npz",
+      "sha256": "e575a0c0d40c1d74002519d5a24fba7ce1b2b31a5eaabf04ebcdc061909c3be4"
+    },
+    {
+      "bytes": 5119,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_encoded_manifest.json",
+      "sha256": "01b6714046ae2be6943c97ea4940156d0052273787d4520c33322a8a3977105d"
+    },
+    {
+      "bytes": 7052,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_outcome_manifest.json",
+      "sha256": "df1a866a61f5cfb117dd81cd9bb80da20a074a7c46b3e061702029deb92be768"
+    },
+    {
+      "bytes": 359402,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_outcome_once.npz",
+      "sha256": "d8d5367983c8ec3dc04bf5efd38ef9466866ee2a38c26d1d43d443492f9b2408"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-000.json",
+      "sha256": "158266b294bb11e5e25d7f3b384b8a669427ea3b57ffedec001da6c09cd80e69"
+    },
+    {
+      "bytes": 3531378,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-000.npz",
+      "sha256": "18b291cd1cf686c4eb9c92e394f3c7f69d7c7688dd79b120f97f3c4440698088"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-001.json",
+      "sha256": "6ea34c99e276f6518c7824178c207fab2e05bd4020dc495d74c2ca86b487a3e3"
+    },
+    {
+      "bytes": 3251686,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-001.npz",
+      "sha256": "ba276677f20264ed1985ccf1e52793017b4a618fd57f915e3a21e6bb9deb8190"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-002.json",
+      "sha256": "7baddab591a4308e51a9aef029baca829a0dfd9bbb599693d93ca49b7c5f4ed7"
+    },
+    {
+      "bytes": 3327367,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-002.npz",
+      "sha256": "c7a977e9214733a45007b418e57966566cea75fe7f5fb4d137e613a442831ca4"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-003.json",
+      "sha256": "ef97a9fd71708f4add78b076f581a9df8c396b366c957aab0412c6bb2b0763af"
+    },
+    {
+      "bytes": 3508410,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-003.npz",
+      "sha256": "3bd0ed37ecdd371d8019670db0bb09d3313d4fa3a97bf5dce4d9762c72e8ea33"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-004.json",
+      "sha256": "e017349b4946d92ea77975856911b21b1c445267b1205d1e784022e2b96715a5"
+    },
+    {
+      "bytes": 3555225,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-004.npz",
+      "sha256": "f45c35236befae141d3579b539cce69fd7565198f03fc4e62655a22264a9eb78"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-005.json",
+      "sha256": "d61947c55e36e374ec8470bb48bbb7eb9b9b19e0cdb35b87832be995534f6a17"
+    },
+    {
+      "bytes": 3533327,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-005.npz",
+      "sha256": "e0e6fa323057b602e6652a34746372414736585d5d08e237932ec109d5649e93"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-006.json",
+      "sha256": "2c595ae6f35ee1349be0b03a1985b1d1ab100e234731cbdf2dd0006ad3e11e27"
+    },
+    {
+      "bytes": 3202758,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-006.npz",
+      "sha256": "0ad03c27b77adbac744bf2cae2dd49a3c4bd00e3bd7b47bce53d0c6935a292ac"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-007.json",
+      "sha256": "0a818c11b859f6396043da9775e4ce3763523a970686b6904f847160e3f31935"
+    },
+    {
+      "bytes": 3409784,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-007.npz",
+      "sha256": "065dd13326e2bd8a0b26ca91637d06d288016f26c1e3b402487388b00c6ec300"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-008.json",
+      "sha256": "90d2e9ef5b4086a92e9d3037f73ef842cbfcbb6617ea6ca64ff9dd305caa5407"
+    },
+    {
+      "bytes": 3354530,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-008.npz",
+      "sha256": "76fc1c1e1e80d22b5af448ed41bc171115853d14fbee83f07d05612e78020191"
+    },
+    {
+      "bytes": 7104,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-009.json",
+      "sha256": "d54df8683cba1fee267b120975c6efbfad68899a15ced51b558da9c39780558f"
+    },
+    {
+      "bytes": 3363217,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-009.npz",
+      "sha256": "e3f0fa2e21a548a5e465eb2427044b38fede85a40a37b79262fdca906a7c26a8"
+    },
+    {
+      "bytes": 7105,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-010.json",
+      "sha256": "dba24a4edfac658d6d860766d6f4237603e639296d191c8a5550c4c8f83c4198"
+    },
+    {
+      "bytes": 3600573,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-010.npz",
+      "sha256": "a36e9268723ec0377bdfaa164eff368446881226ab15f54993f3e1c0119ed2dc"
+    },
+    {
+      "bytes": 7105,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-011.json",
+      "sha256": "1fa96960d96eb8c31a865f05476a6243af42d74eee6bf5b531949e839558159f"
+    },
+    {
+      "bytes": 3664853,
+      "path": "runs/lewm_adaptive_compute_v4/data/smoke_raw/v4-smoke-011.npz",
+      "sha256": "c513d30bff6d9ba96d98b720f6bf0ecf219e368b03daa7308e7ab456b822ce1d"
+    },
+    {
+      "bytes": 848,
+      "path": "runs/lewm_adaptive_compute_v4/decision.json",
+      "sha256": "6396a6825aadf4dff5dd8a836df5ace74f6930990bf017df5c889718fdcf45e5"
+    },
+    {
+      "bytes": 2950,
+      "path": "runs/lewm_adaptive_compute_v4/decision_rule.json",
+      "sha256": "173d9829e8cb723f96e935fa949f0937e4544c56b59f4c33e572ac459d90aa9e"
+    },
+    {
+      "bytes": 20818,
+      "path": "runs/lewm_adaptive_compute_v4/evaluate.py",
+      "sha256": "be0a66e50fe4cdbcdcb02e45697c61d181817224921b343bda141d7de64eef3f"
+    },
+    {
+      "bytes": 14436,
+      "path": "runs/lewm_adaptive_compute_v4/figures/01_fixed_exits.pdf",
+      "sha256": "b9a99edbb96615ea06bf0d612f2c5840a84c5106ca9dfed76b103b0923de62e9"
+    },
+    {
+      "bytes": 57000,
+      "path": "runs/lewm_adaptive_compute_v4/figures/01_fixed_exits.png",
+      "sha256": "459cb3192b003656fa3fc7dfe78227821e083cb35c24f2d44440101fdbe85085"
+    },
+    {
+      "bytes": 18615,
+      "path": "runs/lewm_adaptive_compute_v4/figures/02_call_flop_frontiers.pdf",
+      "sha256": "caf3c5ae6abcd71a133ae2fe2040d338ccc7af49e9ef1386693c26403a0d5fc3"
+    },
+    {
+      "bytes": 62066,
+      "path": "runs/lewm_adaptive_compute_v4/figures/02_call_flop_frontiers.png",
+      "sha256": "bfb718e5467729c77b9aa40208e47def3dce60eafd7d9ef712dd0f8f5f2b20dc"
+    },
+    {
+      "bytes": 17067,
+      "path": "runs/lewm_adaptive_compute_v4/figures/03_confirmation_benefit_cis.pdf",
+      "sha256": "ea1f04ecc8c4a0d4dd797d38faf57179fabbf6e854f40c827601163fca88e41c"
+    },
+    {
+      "bytes": 65224,
+      "path": "runs/lewm_adaptive_compute_v4/figures/03_confirmation_benefit_cis.png",
+      "sha256": "35a8557e370fe16230ae421f1cd0c9f110df4925971c824a3dda3662c00c8801"
+    },
+    {
+      "bytes": 13326,
+      "path": "runs/lewm_adaptive_compute_v4/figures/04_call_histogram.pdf",
+      "sha256": "b27b3119c31d27831119154484b842bf5b44f9c7270b8a62efc68dc20bd4dfb2"
+    },
+    {
+      "bytes": 39426,
+      "path": "runs/lewm_adaptive_compute_v4/figures/04_call_histogram.png",
+      "sha256": "cb160cfed6e9e2f564b33d2f2ac2f9b9c4f4b1b2aba8df3339fda10ef37d4f85"
+    },
+    {
+      "bytes": 16008,
+      "path": "runs/lewm_adaptive_compute_v4/figures/05_gain_quantiles.pdf",
+      "sha256": "c579c72875539849d990942a9343bd08d1600d1770d4739e86c8046f44dc26fa"
+    },
+    {
+      "bytes": 71284,
+      "path": "runs/lewm_adaptive_compute_v4/figures/05_gain_quantiles.png",
+      "sha256": "412acbe487cb777f80269cd6e97a986e7bc540ff5e8e1294e9da8c5a3ad19eb6"
+    },
+    {
+      "bytes": 17884,
+      "path": "runs/lewm_adaptive_compute_v4/figures/06_latency.pdf",
+      "sha256": "b151d1312d919b396c597ccab07836281da3fe2a444d822ebeb9c134f19031ce"
+    },
+    {
+      "bytes": 140494,
+      "path": "runs/lewm_adaptive_compute_v4/figures/06_latency.png",
+      "sha256": "3671346782eefc332084f04a143508894dfd15eca6c8f06dfa6270782cee8534"
+    },
+    {
+      "bytes": 13732,
+      "path": "runs/lewm_adaptive_compute_v4/figures/07_physical_regimes.pdf",
+      "sha256": "9a1087bf3cfaba1711e32cfaeef50c8c0438514e3f31f390bb7940b358febd14"
+    },
+    {
+      "bytes": 83377,
+      "path": "runs/lewm_adaptive_compute_v4/figures/07_physical_regimes.png",
+      "sha256": "304833745a09e741e8e85e046838ee80225088729360c490d09733d1343ba99d"
+    },
+    {
+      "bytes": 4388,
+      "path": "runs/lewm_adaptive_compute_v4/finalize.py",
+      "sha256": "820c9f695b61407e07994e6fa40d227149abec06b2e0e6b4463fe0b565234b56"
+    },
+    {
+      "bytes": 3011,
+      "path": "runs/lewm_adaptive_compute_v4/flops.py",
+      "sha256": "95cfceced0a52bca197028ebf55312d7c216ed28e8fe3f2aba4ba461dc4c6722"
+    },
+    {
+      "bytes": 8184,
+      "path": "runs/lewm_adaptive_compute_v4/freshness.py",
+      "sha256": "18c57687c351e69a16a531cb76dc490658090fd0a1f748c9003d999dfe1fd87a"
+    },
+    {
+      "bytes": 18733,
+      "path": "runs/lewm_adaptive_compute_v4/generator.py",
+      "sha256": "d7077ca29c2099456ffeefe775fbb580779328f0ca602ecd6ab5ba2134020a05"
+    },
+    {
+      "bytes": 2245,
+      "path": "runs/lewm_adaptive_compute_v4/logs/final_tests.json",
+      "sha256": "c1cdf6170c7e851ae6e49a193c6afa92c77d602ef41c45ef33a621dc464954c4"
+    },
+    {
+      "bytes": 2246,
+      "path": "runs/lewm_adaptive_compute_v4/logs/phase0_tests.json",
+      "sha256": "b7ef2400191e0525fc610601d676fffd7326fb693ee93c152b1a3068bceed295"
+    },
+    {
+      "bytes": 2255,
+      "path": "runs/lewm_adaptive_compute_v4/logs/preconfirmation_tests.json",
+      "sha256": "6eecc704b54a8877910c664f722e632a0a093405a38161cebc20d7103cdc516c"
+    },
+    {
+      "bytes": 1498,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/contact_matching_table.csv",
+      "sha256": "0c7dc3cea61eab2a8ffa248696be99d4f52c4ff9a93131565e16bd30f9fe2b43"
+    },
+    {
+      "bytes": 565,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/contact_onset.csv",
+      "sha256": "c8a1ff448383bfadf956796e11ed2171e7033315359b07557728111836e867dd"
+    },
+    {
+      "bytes": 325,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/contact_seed_blocks.csv",
+      "sha256": "167fb1ab949eae0ed90b5d59ec5927d7cc349e58a3313542423c9b22bc618db1"
+    },
+    {
+      "bytes": 1027,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/flops.json",
+      "sha256": "fd3bb677d7d56fb4719b0da8e7e3978911e9ce7d7c1121e08eddf7d1bfc42b54"
+    },
+    {
+      "bytes": 16427,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/physical_regimes.json",
+      "sha256": "54636aeb30d78d38a6b5317410f10180010efcece3e4667cb4db1040a22cd38a"
+    },
+    {
+      "bytes": 1030227,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/primary_bootstrap_replicates.npz",
+      "sha256": "f77c6b5a416b4747849234793533a85464c792b1d3f650ea983ca171eae2affb"
+    },
+    {
+      "bytes": 17855,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/primary_confirmation.json",
+      "sha256": "94db508deaf0a778f724fb07cc4ed8cdf2e41eca3b480339f471aca2b08409cc"
+    },
+    {
+      "bytes": 697,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/regime_table.csv",
+      "sha256": "847ade76e69ef467ea20d5de7c5b5f766f8c8da87e014f6dbe6fed250a5784fe"
+    },
+    {
+      "bytes": 39550,
+      "path": "runs/lewm_adaptive_compute_v4/metrics/runtime.json",
+      "sha256": "8627b96aa6afde5ef726bd0d48979511f50233e0e36d10206f89c6e29f444a02"
+    },
+    {
+      "bytes": 25042,
+      "path": "runs/lewm_adaptive_compute_v4/prepare_preregistration.py",
+      "sha256": "cb9346eb884c4b7fc5c324ef254fc9f42cc97d308fe6d2fbed55c53dd2d781ac"
+    },
+    {
+      "bytes": 1129,
+      "path": "runs/lewm_adaptive_compute_v4/provenance_manifest.json",
+      "sha256": "3c0ce0a9128dddc0e801689f78b86f33394b8ad5744dcf4c2aeacbc09cedd697"
+    },
+    {
+      "bytes": 2222,
+      "path": "runs/lewm_adaptive_compute_v4/receipt.py",
+      "sha256": "7b2b8c4eb35c629de26ecb6c138ce354efbbd295efc679f39c84cfa6f3b93895"
+    },
+    {
+      "bytes": 12402,
+      "path": "runs/lewm_adaptive_compute_v4/report.py",
+      "sha256": "f8a3eaa50b568f6d1bed8e34e6b5390d96653adbea8b220dc237cfcf59620e7a"
+    },
+    {
+      "bytes": 1412,
+      "path": "runs/lewm_adaptive_compute_v4/run_tests.py",
+      "sha256": "b6e1f9305d80ca7399241b06d34e1ff24d089ad4805387af440eec54dbccf93a"
+    },
+    {
+      "bytes": 16838,
+      "path": "runs/lewm_adaptive_compute_v4/runtime.py",
+      "sha256": "801b160ad9c457f7eabb4b92395c90cb7eb2f9d1809a627bd0202df8a210bfdf"
+    },
+    {
+      "bytes": 6004,
+      "path": "runs/lewm_adaptive_compute_v4/seal.py",
+      "sha256": "5c7de3fad8ba9ebaa7d624bfe96ae70133a778e95c60731b073e939d9ede424b"
+    },
+    {
+      "bytes": 17307,
+      "path": "runs/lewm_adaptive_compute_v4/secondary.py",
+      "sha256": "bcef3aa71b2b14ff1e490c20624efccd79d7c8c56897dba3411c8c327fcba9fc"
+    },
+    {
+      "bytes": 127960,
+      "path": "runs/lewm_adaptive_compute_v4/seed_manifest.json",
+      "sha256": "36c1ed920d8537cce0f2c44827aa62a08581af8739d1e9608f1bb1db0eeceed0"
+    },
+    {
+      "bytes": 3063,
+      "path": "runs/lewm_adaptive_compute_v4/source_manifest.json",
+      "sha256": "3f0e5b54a5d65f2d4f7b43baea80ce5c8d2b8465a026a446867a487d8130acc7"
+    },
+    {
+      "bytes": 23289,
+      "path": "runs/lewm_adaptive_compute_v4/statistics.py",
+      "sha256": "a54c7c7399fcfd189b83d1ff5fe1c168861d8681616ab3099cf7740e8c4129a1"
+    },
+    {
+      "bytes": 181,
+      "path": "runs/lewm_adaptive_compute_v4/tests/conftest.py",
+      "sha256": "b27497bb2044366f021a57d94950439658ae00be58f7502d60ad69dee7f21ef2"
+    },
+    {
+      "bytes": 1245,
+      "path": "runs/lewm_adaptive_compute_v4/tests/test_flops_and_budget.py",
+      "sha256": "2cd52e9fb264b0210dc6c806a8ceed461d5102d143ddacc2ae092025d1c2d71a"
+    },
+    {
+      "bytes": 1223,
+      "path": "runs/lewm_adaptive_compute_v4/tests/test_frozen_contract.py",
+      "sha256": "a3c5223b8e1c5dc80db3ed498782ca392e12f1d335b78e80aa210153c7575f71"
+    },
+    {
+      "bytes": 1942,
+      "path": "runs/lewm_adaptive_compute_v4/tests/test_mixture_and_isolation.py",
+      "sha256": "ca9f3caae092ef4b179da51f0d0473b8e673a9433f0d55ae4bc000e08b3bb921"
+    },
+    {
+      "bytes": 1722,
+      "path": "runs/lewm_adaptive_compute_v4/tests/test_runtime_equivalence.py",
+      "sha256": "f044213b1bc03e4a1946fc712def1137e335e2ed3cb9a8f12a1d7275ad02b05b"
+    }
+  ],
+  "manifest_self_excluded_to_avoid_recursive_hash": true,
+  "root": "runs/lewm_adaptive_compute_v4",
+  "schema_version": 1,
+  "status": "complete_v4_artifact_manifest",
+  "v3_test_targets_opened": false
+}

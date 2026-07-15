@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "adaptive_total_flops_exact": true,
+    "all_row_counts_exact": true,
+    "bootstrap_replicates_exact": true,
+    "calls_exact_from_scores": true,
+    "d0_losses_exact": true,
+    "decision_mapping_exact": true,
+    "fractional_calls_exact": true,
+    "frozen_hashes_exact": true,
+    "gate_decisions_exact": true,
+    "gate_flops_exact": true,
+    "joint_max_z_exact": true,
+    "solver_total_calls_exact": true,
+    "v3_test_targets_opened": false,
+    "v5_confirmation_episodes": 0
+  },
+  "passed": true,
+  "recomputed": {
+    "adaptive_total_flops": 243761195052,
+    "d0_mean": 0.00454738826386469,
+    "decision": "generator_reconstruction_failed",
+    "fractional_exact_total_calls": 4411.681657608696,
+    "gate_decisions": 4257,
+    "gate_flops": 34890372,
+    "joint_max_abs_z": 3.858321251506405,
+    "total_calls": 4280
+  },
+  "row_count_checks": {
+    "markov_oracle": {
+      "episodes": 30,
+      "passed": true,
+      "rows": 1140
+    },
+    "offline_calibration": {
+      "episodes": 90,
+      "passed": true,
+      "rows": 3420
+    },
+    "offline_discovery": {
+      "episodes": 420,
+      "passed": true,
+      "rows": 15960
+    },
+    "plan_oracle": {
+      "episodes": 90,
+      "passed": true,
+      "rows": 3420
+    },
+    "v4_markov": {
+      "episodes": 300,
+      "passed": true,
+      "rows": 11400
+    }
+  },
+  "schema_version": 1
+}

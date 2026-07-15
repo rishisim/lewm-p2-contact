@@ -1,0 +1,20 @@
+{
+  "calibration_access_receipt_created": false,
+  "decision": "discovery_gate_failed",
+  "evidence_summary": {
+    "all_anchor_audits_passed": true,
+    "all_gradient_boundary_audits_passed": true,
+    "all_runtime_exact_call_audits_passed": true,
+    "compact_critic_matched_mixture_gate_passed": false,
+    "full_critic_allocation_signal_passed": true,
+    "full_critic_flop_pareto_passed": false,
+    "stagewise_fixed_later_exit_gate_passed": true,
+    "whitened_robustness_for_compact_critic_passed": false
+  },
+  "fresh_confirmation_data_consumed": false,
+  "reason": "Effective full-feature critics were FLOP-dominated; compact critics did not significantly beat matched transition-independent mixtures and reversed whitened robustness.",
+  "v3_calibration_consumed": false,
+  "v3_combined_target_cache_opened": false,
+  "v3_test_targets_consumed": false,
+  "v4_created": false
+}

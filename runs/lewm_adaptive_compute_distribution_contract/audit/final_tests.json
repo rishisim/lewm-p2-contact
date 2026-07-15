@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "-m",
+    "pytest",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_distribution_contract/tests",
+    "-q"
+  ],
+  "exit_code": 0,
+  "log_path": "runs/lewm_adaptive_compute_distribution_contract/test_logs.txt",
+  "log_sha256": "4bb7e0a1ab7fe6f4bedc45f5072f435857eadab6b12dba11d0c74e776ea6ec6d",
+  "passed": true
+}

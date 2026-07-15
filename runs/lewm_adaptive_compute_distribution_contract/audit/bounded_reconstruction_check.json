@@ -1,0 +1,281 @@
+{
+  "action_semantics": {
+    "action_space_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "action_space_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "all_actions_inside_environment_space": true,
+    "no_action_rescaling_during_replay": true,
+    "raw_max": [
+      0.6686677932739258,
+      1.0,
+      1.0,
+      0.5642932057380676,
+      0.6637808680534363
+    ],
+    "raw_min": [
+      -0.9092631936073303,
+      -0.8988437652587891,
+      -1.0,
+      -1.0,
+      -0.3431192636489868
+    ],
+    "recorded_action_shape": [
+      200,
+      5
+    ],
+    "terminal_action_is_nan_sentinel": true
+  },
+  "additional_target_cache_opened": false,
+  "authorized_by_decision": "generator_reconstruction_failed",
+  "classification": "smallest_bounded_post-decision_replay_and_action-semantics_check",
+  "gate_or_model_tuned": false,
+  "initial_state_exact": true,
+  "installed_controlling_source_hashes": {
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/envs/manipspace_env.py": {
+      "bytes": 20920,
+      "sha256": "03524eb1c95155bbc2ec3d29e9836fccffe8eb9fce1be15b6f0e7062cc1bb5fd"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/oracles/markov/cube_markov.py": {
+      "bytes": 5402,
+      "sha256": "67943a0eb3d4a22cf4191dbe2a2ae70c92847fb6b81fb5ce198c86ca94ed2f6f"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/oracles/markov/markov_oracle.py": {
+      "bytes": 1491,
+      "sha256": "409537d2c12136a5d3d1b15e30ac6754cc66bbe4d01fd459c98247b0c1a9913b"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/oracles/plan/cube_plan.py": {
+      "bytes": 4008,
+      "sha256": "4b31900946c682ba8fb57a38d3e08714d2aaeca186745bc7c8cf88d4ae102b28"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/manipspace/oracles/plan/plan_oracle.py": {
+      "bytes": 4368,
+      "sha256": "cd977fe1fd107911a1d50c1eb1bd0b2f25586d6e861638b36103322de3559329"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/ogbench/cube_env.py": {
+      "bytes": 69156,
+      "sha256": "143e5e81f424ff7a4d7fdde287dee88b722c09082a6fc9e68721839788e94c19"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/envs/ogbench/expert_policy.py": {
+      "bytes": 11139,
+      "sha256": "437b131da4065ba0adec6b08947a53d41bcc6dfc87324ad9c088778460cdb51f"
+    },
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/world/world.py": {
+      "bytes": 22880,
+      "sha256": "39318b81ed151d8556d8540f460a63eedaed0ce4b2211ce0af9f8200e7d83bde"
+    }
+  },
+  "installed_versions": {
+    "gymnasium": "1.3.0",
+    "mujoco": "3.10.0",
+    "numpy": "2.2.6",
+    "ogbench": "1.2.1",
+    "stable-worldmodel": "0.1.0"
+  },
+  "interpretation": "Exact replay supports deterministic local capture and direct action semantics; it does not resolve a remaining mismatch to the released offline generator.",
+  "new_environment_seeds": 0,
+  "new_policy_trajectories": 0,
+  "passed": true,
+  "raw_file_sha256_verified": true,
+  "recorded_initial_state_sha256": "2af093334118b9d45e623756f5e323c64602c1cd964bac7c83d862d390ca2de9",
+  "released_local_horizon": 200,
+  "replayed_existing_trajectory_count": 1,
+  "replayed_initial_state_sha256": "2af093334118b9d45e623756f5e323c64602c1cd964bac7c83d862d390ca2de9",
+  "replayed_role": "main_plan_oracle",
+  "replayed_slot": 0,
+  "reused_env_seed": 1640200000,
+  "schema_version": 1,
+  "transition_replay": {
+    "arrays": {
+      "control": {
+        "array_equal": true,
+        "expected_sha256": "e36c16d7e31da613dabc5cbd87e0d827cdad35eeb6de87938913f865c184b420",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "e36c16d7e31da613dabc5cbd87e0d827cdad35eeb6de87938913f865c184b420",
+        "shape_equal": true
+      },
+      "observation": {
+        "array_equal": true,
+        "expected_sha256": "3ee1e8c7cc3f7493054e02819bcdb3e0d719deaaeb84c5cc2291c841f53f6c2f",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "3ee1e8c7cc3f7493054e02819bcdb3e0d719deaaeb84c5cc2291c841f53f6c2f",
+        "shape_equal": true
+      },
+      "pixels": {
+        "array_equal": true,
+        "expected_sha256": "293535d85705bdf8b2de5a01a59bba46e1c082426f03d8a9668e9507cf08bbe3",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "293535d85705bdf8b2de5a01a59bba46e1c082426f03d8a9668e9507cf08bbe3",
+        "shape_equal": true
+      },
+      "prev_qpos": {
+        "array_equal": true,
+        "expected_sha256": "1e97b1f9011746878089deb6a025da6567b17ae2192ce9d0fe10dbe8a1d3bc98",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "1e97b1f9011746878089deb6a025da6567b17ae2192ce9d0fe10dbe8a1d3bc98",
+        "shape_equal": true
+      },
+      "prev_qvel": {
+        "array_equal": true,
+        "expected_sha256": "9a266b568facc2accd412d75aa5146d9444bcf566ab9a9f96d9659086c23b590",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "9a266b568facc2accd412d75aa5146d9444bcf566ab9a9f96d9659086c23b590",
+        "shape_equal": true
+      },
+      "privileged_block_0_pos": {
+        "array_equal": true,
+        "expected_sha256": "c4eb94bf5f33017166fac8ff2d4306168a4476ebb655fcd7221bd6e83b621034",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "c4eb94bf5f33017166fac8ff2d4306168a4476ebb655fcd7221bd6e83b621034",
+        "shape_equal": true
+      },
+      "privileged_block_0_quat": {
+        "array_equal": true,
+        "expected_sha256": "40bd9cafe89b8822283eafe79c95ca52dd17ccd9dfee3de6dcb74bdab80429f4",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "40bd9cafe89b8822283eafe79c95ca52dd17ccd9dfee3de6dcb74bdab80429f4",
+        "shape_equal": true
+      },
+      "privileged_block_0_yaw": {
+        "array_equal": true,
+        "expected_sha256": "89cf09cdb916986f8eba0b740b90d4b1c68fb0f01392215ab3fb6933a7cc65c3",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "89cf09cdb916986f8eba0b740b90d4b1c68fb0f01392215ab3fb6933a7cc65c3",
+        "shape_equal": true
+      },
+      "privileged_target_block": {
+        "array_equal": true,
+        "expected_sha256": "bc93f6810015faedd330d42341017eb5ff226d0e5abee14525fff29f9db44755",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "bc93f6810015faedd330d42341017eb5ff226d0e5abee14525fff29f9db44755",
+        "shape_equal": true
+      },
+      "privileged_target_block_pos": {
+        "array_equal": true,
+        "expected_sha256": "6a57189240d1dba0178a31b74fb5398d79d5cb0d618fa002101484f40a565c69",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "6a57189240d1dba0178a31b74fb5398d79d5cb0d618fa002101484f40a565c69",
+        "shape_equal": true
+      },
+      "privileged_target_block_yaw": {
+        "array_equal": true,
+        "expected_sha256": "522713699504c08aa435c71bf612b80e0d7c6ea9bdb65bfb605866552499a436",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "522713699504c08aa435c71bf612b80e0d7c6ea9bdb65bfb605866552499a436",
+        "shape_equal": true
+      },
+      "privileged_target_task": {
+        "array_equal": true,
+        "expected_sha256": "cbb4830636b1bc5d8f15ee684fd15c41944df7a722053f27f3c1c9773b8fff3d",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "cbb4830636b1bc5d8f15ee684fd15c41944df7a722053f27f3c1c9773b8fff3d",
+        "shape_equal": true
+      },
+      "proprio_effector_pos": {
+        "array_equal": true,
+        "expected_sha256": "7f5d66af9fb6b6bf97299f24be738ee4041abbca3b21613cc48c151f9eb95007",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "7f5d66af9fb6b6bf97299f24be738ee4041abbca3b21613cc48c151f9eb95007",
+        "shape_equal": true
+      },
+      "proprio_effector_yaw": {
+        "array_equal": true,
+        "expected_sha256": "a8ff3352481fba3ac31b88e0b09e8dc439b3a7039bb6be455e97e618b309500d",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "a8ff3352481fba3ac31b88e0b09e8dc439b3a7039bb6be455e97e618b309500d",
+        "shape_equal": true
+      },
+      "proprio_gripper_contact": {
+        "array_equal": true,
+        "expected_sha256": "67dfbec0c131b4817f2667d1489c378b9d29762b19ddd98aa6b67c20b6e78091",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "67dfbec0c131b4817f2667d1489c378b9d29762b19ddd98aa6b67c20b6e78091",
+        "shape_equal": true
+      },
+      "proprio_gripper_opening": {
+        "array_equal": true,
+        "expected_sha256": "5e33bea56029002ecbd8edf1057ec1ee06ed23d56f8062ca7f426e49b949f1ec",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "5e33bea56029002ecbd8edf1057ec1ee06ed23d56f8062ca7f426e49b949f1ec",
+        "shape_equal": true
+      },
+      "proprio_gripper_vel": {
+        "array_equal": true,
+        "expected_sha256": "8000e3dcd42dc6a44b0777f1dce693962a958df5dc5edcf557ccfe4aecfdadb3",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "8000e3dcd42dc6a44b0777f1dce693962a958df5dc5edcf557ccfe4aecfdadb3",
+        "shape_equal": true
+      },
+      "proprio_joint_pos": {
+        "array_equal": true,
+        "expected_sha256": "e976283db7c8f3188947fdd06d81720e03e04440d63ad8f71c26695d0b31f6a9",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "e976283db7c8f3188947fdd06d81720e03e04440d63ad8f71c26695d0b31f6a9",
+        "shape_equal": true
+      },
+      "proprio_joint_vel": {
+        "array_equal": true,
+        "expected_sha256": "70e87e8b4825fddf9dc9f94eba9ac1bbf46bfa90e576c70306e24e095f8e1d90",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "70e87e8b4825fddf9dc9f94eba9ac1bbf46bfa90e576c70306e24e095f8e1d90",
+        "shape_equal": true
+      },
+      "qpos": {
+        "array_equal": true,
+        "expected_sha256": "80a0aef6290fa6df8b3a4c126ca4a7e2926ebd49970b028345a07aac818a9eac",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "80a0aef6290fa6df8b3a4c126ca4a7e2926ebd49970b028345a07aac818a9eac",
+        "shape_equal": true
+      },
+      "qvel": {
+        "array_equal": true,
+        "expected_sha256": "c1be17878ebc2a6b29fb2640fbc03fd57fd0834bfe512ef446447f8621815fae",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "c1be17878ebc2a6b29fb2640fbc03fd57fd0834bfe512ef446447f8621815fae",
+        "shape_equal": true
+      },
+      "step_idx": {
+        "array_equal": true,
+        "expected_sha256": "14f2dc8da622018fd1804a6ea1cfa8f702525e54e9b478201fdd51d6a9c18350",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "14f2dc8da622018fd1804a6ea1cfa8f702525e54e9b478201fdd51d6a9c18350",
+        "shape_equal": true
+      },
+      "success": {
+        "array_equal": true,
+        "expected_sha256": "10c7bf1f92cdc6d49dcf444b2efe29bf0b7d8c578eaf6cbec65bdbece4cf150c",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "10c7bf1f92cdc6d49dcf444b2efe29bf0b7d8c578eaf6cbec65bdbece4cf150c",
+        "shape_equal": true
+      },
+      "time": {
+        "array_equal": true,
+        "expected_sha256": "e651baeadeecccaafcdbeed795a7978b8af332033c6f2b36bd5930b6148660b7",
+        "max_abs_difference": 0.0,
+        "replayed_sha256": "e651baeadeecccaafcdbeed795a7978b8af332033c6f2b36bd5930b6148660b7",
+        "shape_equal": true
+      }
+    },
+    "required_arrays_exact": true,
+    "required_exact_arrays": [
+      "pixels",
+      "observation",
+      "qpos",
+      "qvel"
+    ]
+  },
+  "upstream_local_horizon_mismatch_remains": true,
+  "upstream_public_horizon": 1001,
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

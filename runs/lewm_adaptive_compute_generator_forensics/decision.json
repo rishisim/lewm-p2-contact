@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "layer_localized_decision": "reset_only_mismatch",
+  "generator_provenance_decision": "generator_provenance_unresolved",
+  "earliest_failing_layer": "initial reset/IK reconstruction",
+  "layer_passes": {
+    "initial_reset_ik": false,
+    "state_injection_qpos_qvel": true,
+    "observation": false,
+    "render": false,
+    "action_to_control": false,
+    "action_path_dynamics": false,
+    "stored_control_dynamics": false
+  },
+  "historical_candidates_executed": [
+    "stable_worldmodel_a265229_ogbench_v1_2_1"
+  ],
+  "historical_candidate_count": 1,
+  "historical_candidate_rationale": "The single directly evidenced public collector candidate was frozen, executed from a run-local detached checkout on the same frozen probes, and produced the same failing summaries as the installed path. The weaker timestamp-only tag was not eligible for execution.",
+  "exact_generator_claim": "The installed swm/OGBCube-v0 path is not the exact generator of the sampled released HDF5 rows. Exact historical generator provenance was not recovered.",
+  "distribution_contract_passed": false,
+  "mechanics_match_is_distribution_contract_pass": false,
+  "v5_confirmation_launched": false,
+  "v5_authorized": false,
+  "gate_or_model_tuning_occurred": false,
+  "v3_test_targets_opened": false,
+  "v3_test_episode_intersection": [],
+  "flops_latency_contact_claims_in_scope": false
+}

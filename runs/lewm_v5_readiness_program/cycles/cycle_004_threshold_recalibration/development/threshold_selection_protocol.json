@@ -1,0 +1,60 @@
+{
+  "bootstrap_replicates_per_evaluation": 20000,
+  "candidate_count": 5,
+  "candidate_multipliers": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+  ],
+  "candidate_thresholds": [
+    0.18128031821449414,
+    0.2266003977681177,
+    0.2719204773217412,
+    0.31724055687536473,
+    0.3625606364289883
+  ],
+  "consumed_input_hashes": {
+    "cycle_001_execution": "13c5e78f4652118bc7b000da82c045a484c6d3bb7978a5dd25d4fae0a7adcc0d",
+    "cycle_001_final_manifest": "41a1235355e5c167759d5d19a055fb48d2cde6372ea20c66a4d46f00f6056e0e",
+    "cycle_003_execution": "b6286e363dd0a68828ea8656adb60addd193cffc51b7febfe237e62f2b87a1ed",
+    "cycle_003_final_manifest": "192ccfd0fa61381511f7f73062deec1804f31b9e123184c13fb4ddf7f87765cf"
+  },
+  "created_unix_ns": 1784146222069308000,
+  "development_uses_dense_all_exit_counterfactuals": true,
+  "highest_information_change": "threshold_only",
+  "new_prospective_episodes": 300,
+  "new_prospective_must_use_actual_sparse_execution": true,
+  "new_smoke_episodes": 12,
+  "no_sequential_expansion": true,
+  "only_upward_candidates_reason": "consumed traces contain deeper gate scores only for rows reached under the old threshold; upward candidates form path subsets and are therefore counterfactually complete",
+  "schema_version": 1,
+  "script_sha256": "872c2a4666f969ab04350f38c604b5994da6746aba8c60c6dba669e358f0f734",
+  "selection_cohort": "cycle_001, 300 permanently consumed episodes",
+  "selection_rule": "among candidates passing every six-contrast lower-bound, two-co-primary Bonferroni, exact-compute, histogram, and stage-sign criterion on cycle 001, choose the largest minimum estimate/bootstrap-SD standardized margin; deterministic tie break chooses the higher threshold",
+  "selection_seeds": {
+    "bootstrap": 2094001001,
+    "histogram": 2094001002,
+    "seeded_mixture": 2094001003
+  },
+  "unchanged": [
+    "base",
+    "refiner",
+    "dual-linear gate weights",
+    "whitening",
+    "feature order and operation graph",
+    "DGP",
+    "comparators",
+    "all statistical criteria"
+  ],
+  "v5_outcome_episodes": 0,
+  "validation_cohort": "cycle_003, 300 permanently consumed episodes; exactly one selected threshold is evaluated",
+  "validation_rule": "freeze only if that one selected candidate independently passes every same criterion on cycle 003",
+  "validation_seeds": {
+    "bootstrap": 2094003001,
+    "histogram": 2094003002,
+    "seeded_mixture": 2094003003
+  },
+  "written_before_counterfactual_target_access": true
+}

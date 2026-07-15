@@ -1,0 +1,12 @@
+{
+  "classification": "normative_post_seal_smoke_failure",
+  "command": "/Users/rishisim/.cache/lewm-v2-venv/bin/python runner.py execute smoke --device mps",
+  "error_type": "RuntimeError",
+  "error_message": "sparse/dense selected output mismatch",
+  "pre_data_seal_verified_at_stage_start": true,
+  "smoke_raw_episode_count": 12,
+  "prospective_episode_count": 0,
+  "requires_normative_code_change_to_continue": true,
+  "continued_under_same_run": false,
+  "mapped_outcome": "planoracle_audit_repair_invalid"
+}

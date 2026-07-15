@@ -1,0 +1,1840 @@
+{
+  "candidate_count": 25,
+  "candidates": [
+    {
+      "adaptive_total_flops": 406448352018,
+      "analytic_equivalent_mean_calls": 1.4089463474129162,
+      "call_histogram": [
+        4260,
+        1026,
+        165,
+        249
+      ],
+      "candidate_id": "d1_100_d2_100",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7554,
+      "mean_calls": 1.3689473684210527,
+      "minimum_stagewise_rho": -0.007329201002346052,
+      "multipliers": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00048582026340045063,
+        "native_whitened_vs_within_episode_histogram": 0.0004370233613378762,
+        "raw_vs_analytic": 5.644889176291098e-06,
+        "raw_vs_fixed_d1": 2.1441927432907565e-05,
+        "raw_vs_seeded": 2.887891851308627e-06,
+        "raw_vs_within_episode_histogram": 6.860223042453075e-06
+      },
+      "seeded_minus_adaptive_flops": 1542,
+      "seeded_total_flops": 406448353560,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1440,
+          "rho": 0.014498301036123566,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 414,
+          "rho": -0.007329201002346052,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.2719204773217412,
+        0.2719204773217412,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406410409936,
+      "analytic_equivalent_mean_calls": 1.3838236662005254,
+      "call_histogram": [
+        4260,
+        1132,
+        93,
+        215
+      ],
+      "candidate_id": "d1_100_d2_125",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7448,
+      "mean_calls": 1.3443859649122807,
+      "minimum_stagewise_rho": -0.007165630928320281,
+      "multipliers": [
+        1.0,
+        1.25,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0005522115953516437,
+        "native_whitened_vs_within_episode_histogram": 0.00042624871180766864,
+        "raw_vs_analytic": 5.940201244705847e-06,
+        "raw_vs_fixed_d1": 2.0766784675813872e-05,
+        "raw_vs_seeded": 3.0411870443111336e-06,
+        "raw_vs_within_episode_histogram": 6.605275709638956e-06
+      },
+      "seeded_minus_adaptive_flops": 54344,
+      "seeded_total_flops": 406410464280,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1440,
+          "rho": 0.014498301036123566,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 308,
+          "rho": -0.007165630928320281,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.2719204773217412,
+        0.3399005966521765,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406383113177,
+      "analytic_equivalent_mean_calls": 1.365749598085643,
+      "call_histogram": [
+        4260,
+        1199,
+        60,
+        181
+      ],
+      "candidate_id": "d1_100_d2_150",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7381,
+      "mean_calls": 1.3266666666666667,
+      "minimum_stagewise_rho": -0.005820273653166901,
+      "multipliers": [
+        1.0,
+        1.5,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0006009327661984004,
+        "native_whitened_vs_within_episode_histogram": 0.0004322362378022803,
+        "raw_vs_analytic": 6.420398095435338e-06,
+        "raw_vs_fixed_d1": 2.054880498756769e-05,
+        "raw_vs_seeded": 3.176616083364661e-06,
+        "raw_vs_within_episode_histogram": 6.817791673925436e-06
+      },
+      "seeded_minus_adaptive_flops": 60223,
+      "seeded_total_flops": 406383173400,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1440,
+          "rho": 0.014498301036123566,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 241,
+          "rho": -0.005820273653166901,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.2719204773217412,
+        0.4078807159826118,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406357173206,
+      "analytic_equivalent_mean_calls": 1.348573903243919,
+      "call_histogram": [
+        4260,
+        1262,
+        30,
+        148
+      ],
+      "candidate_id": "d1_100_d2_175",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7318,
+      "mean_calls": 1.3098245614035087,
+      "minimum_stagewise_rho": -0.04796426113036197,
+      "multipliers": [
+        1.0,
+        1.75,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0006482286347594109,
+        "native_whitened_vs_within_episode_histogram": 0.00042974512623597056,
+        "raw_vs_analytic": 6.507507726914326e-06,
+        "raw_vs_fixed_d1": 1.9972441011285807e-05,
+        "raw_vs_seeded": 3.52488371191841e-06,
+        "raw_vs_within_episode_histogram": 6.484742699259206e-06
+      },
+      "seeded_minus_adaptive_flops": 34114,
+      "seeded_total_flops": 406357207320,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1440,
+          "rho": 0.014498301036123566,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 178,
+          "rho": -0.04796426113036197,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.2719204773217412,
+        0.47586083531304707,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406329940423,
+      "analytic_equivalent_mean_calls": 1.3305421957104415,
+      "call_histogram": [
+        4260,
+        1321,
+        13,
+        106
+      ],
+      "candidate_id": "d1_100_d2_200",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": false,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7259,
+      "mean_calls": 1.2921052631578946,
+      "minimum_stagewise_rho": 0.014498301036123566,
+      "multipliers": [
+        1.0,
+        2.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0006750997345084564,
+        "native_whitened_vs_within_episode_histogram": 0.000405893021613553,
+        "raw_vs_analytic": 6.852508414485433e-06,
+        "raw_vs_fixed_d1": 1.962090149122217e-05,
+        "raw_vs_seeded": 3.619636876420359e-06,
+        "raw_vs_within_episode_histogram": 6.3917299736238494e-06
+      },
+      "seeded_minus_adaptive_flops": 240977,
+      "seeded_total_flops": 406330181400,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1440,
+          "rho": 0.014498301036123566,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 119,
+          "rho": 0.021976926363765848,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.2719204773217412,
+        0.5438409546434824,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406376122374,
+      "analytic_equivalent_mean_calls": 1.361120761028477,
+      "call_histogram": [
+        4484,
+        830,
+        150,
+        236
+      ],
+      "candidate_id": "d1_125_d2_100",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7302,
+      "mean_calls": 1.3224561403508772,
+      "minimum_stagewise_rho": 0.006717859398905309,
+      "multipliers": [
+        1.25,
+        1.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00040507097315738643,
+        "native_whitened_vs_within_episode_histogram": 0.00034490047137308887,
+        "raw_vs_analytic": 5.8327850417295475e-06,
+        "raw_vs_fixed_d1": 1.978238628725746e-05,
+        "raw_vs_seeded": 2.2730278790031388e-06,
+        "raw_vs_within_episode_histogram": 6.633852775645567e-06
+      },
+      "seeded_minus_adaptive_flops": 162066,
+      "seeded_total_flops": 406376284440,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1216,
+          "rho": 0.026394568436473666,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 386,
+          "rho": 0.006717859398905309,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.3399005966521765,
+        0.2719204773217412,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406340893868,
+      "analytic_equivalent_mean_calls": 1.3377948263624035,
+      "call_histogram": [
+        4484,
+        928,
+        84,
+        204
+      ],
+      "candidate_id": "d1_125_d2_125",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7204,
+      "mean_calls": 1.2996491228070175,
+      "minimum_stagewise_rho": 0.010159085154865391,
+      "multipliers": [
+        1.25,
+        1.25,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0004715535427495532,
+        "native_whitened_vs_within_episode_histogram": 0.00033719779949854437,
+        "raw_vs_analytic": 6.166490173553258e-06,
+        "raw_vs_fixed_d1": 1.9215042456002304e-05,
+        "raw_vs_seeded": 3.020984914453607e-06,
+        "raw_vs_within_episode_histogram": 6.517825692629948e-06
+      },
+      "seeded_minus_adaptive_flops": 150892,
+      "seeded_total_flops": 406341044760,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1216,
+          "rho": 0.026394568436473666,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 288,
+          "rho": 0.010159085154865391,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.3399005966521765,
+        0.3399005966521765,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406315491814,
+      "analytic_equivalent_mean_calls": 1.3209753037863379,
+      "call_histogram": [
+        4484,
+        990,
+        54,
+        172
+      ],
+      "candidate_id": "d1_125_d2_150",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7142,
+      "mean_calls": 1.283157894736842,
+      "minimum_stagewise_rho": 0.011798890231699867,
+      "multipliers": [
+        1.25,
+        1.5,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0005158253190286741,
+        "native_whitened_vs_within_episode_histogram": 0.00033562456630435467,
+        "raw_vs_analytic": 6.691796360401638e-06,
+        "raw_vs_fixed_d1": 1.909063348272515e-05,
+        "raw_vs_seeded": 4.114509901653e-06,
+        "raw_vs_within_episode_histogram": 6.837792805515945e-06
+      },
+      "seeded_minus_adaptive_flops": 116786,
+      "seeded_total_flops": 406315608600,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1216,
+          "rho": 0.026394568436473666,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 226,
+          "rho": 0.011798890231699867,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.3399005966521765,
+        0.4078807159826118,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406292257422,
+      "analytic_equivalent_mean_calls": 1.3055910604182557,
+      "call_histogram": [
+        4484,
+        1046,
+        28,
+        142
+      ],
+      "candidate_id": "d1_125_d2_175",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7086,
+      "mean_calls": 1.2680701754385966,
+      "minimum_stagewise_rho": -0.04307619030172019,
+      "multipliers": [
+        1.25,
+        1.75,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0005547647664668555,
+        "native_whitened_vs_within_episode_histogram": 0.0003374865980981873,
+        "raw_vs_analytic": 6.8216713006614556e-06,
+        "raw_vs_fixed_d1": 1.862623613623604e-05,
+        "raw_vs_seeded": 4.9184012357389995e-06,
+        "raw_vs_within_episode_histogram": 6.688983415925138e-06
+      },
+      "seeded_minus_adaptive_flops": 34698,
+      "seeded_total_flops": 406292292120,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1216,
+          "rho": 0.026394568436473666,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 170,
+          "rho": -0.04307619030172019,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.3399005966521765,
+        0.47586083531304707,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406266373430,
+      "analytic_equivalent_mean_calls": 1.2884524310852614,
+      "call_histogram": [
+        4484,
+        1102,
+        12,
+        102
+      ],
+      "candidate_id": "d1_125_d2_200",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": false,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7030,
+      "mean_calls": 1.2512280701754386,
+      "minimum_stagewise_rho": 0.026394568436473666,
+      "multipliers": [
+        1.25,
+        2.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0005781971358056648,
+        "native_whitened_vs_within_episode_histogram": 0.0003163736226825631,
+        "raw_vs_analytic": 7.138553165353391e-06,
+        "raw_vs_fixed_d1": 1.8281076183090415e-05,
+        "raw_vs_seeded": 6.0694057975426115e-06,
+        "raw_vs_within_episode_histogram": 6.674383638418657e-06
+      },
+      "seeded_minus_adaptive_flops": 217570,
+      "seeded_total_flops": 406266591000,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1216,
+          "rho": 0.026394568436473666,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 114,
+          "rho": 0.0333205078876491,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.3399005966521765,
+        0.5438409546434824,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406303378804,
+      "analytic_equivalent_mean_calls": 1.3129548875964066,
+      "call_histogram": [
+        4698,
+        652,
+        131,
+        219
+      ],
+      "candidate_id": "d1_150_d2_100",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 7052,
+      "mean_calls": 1.2756140350877192,
+      "minimum_stagewise_rho": 0.013364680528004309,
+      "multipliers": [
+        1.5,
+        1.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00034128022499221145,
+        "native_whitened_vs_within_episode_histogram": 0.00029176257658666106,
+        "raw_vs_analytic": 4.5667999902961695e-06,
+        "raw_vs_fixed_d1": 1.6655819401353022e-05,
+        "raw_vs_seeded": 2.228989036751941e-06,
+        "raw_vs_within_episode_histogram": 4.677897651683032e-06
+      },
+      "seeded_minus_adaptive_flops": 41636,
+      "seeded_total_flops": 406303420440,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1002,
+          "rho": 0.01999256861010694,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 350,
+          "rho": 0.013364680528004309,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.4078807159826118,
+        0.2719204773217412,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406273031536,
+      "analytic_equivalent_mean_calls": 1.2928609786846343,
+      "call_histogram": [
+        4698,
+        736,
+        75,
+        191
+      ],
+      "candidate_id": "d1_150_d2_125",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6968,
+      "mean_calls": 1.2559649122807017,
+      "minimum_stagewise_rho": 0.0017619839295078907,
+      "multipliers": [
+        1.5,
+        1.25,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00040105560679712604,
+        "native_whitened_vs_within_episode_histogram": 0.00028921124246496086,
+        "raw_vs_analytic": 4.709275183034386e-06,
+        "raw_vs_fixed_d1": 1.6022094366818576e-05,
+        "raw_vs_seeded": 3.6250520829504458e-06,
+        "raw_vs_within_episode_histogram": 4.395320733275859e-06
+      },
+      "seeded_minus_adaptive_flops": 183464,
+      "seeded_total_flops": 406273215000,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1002,
+          "rho": 0.01999256861010694,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 266,
+          "rho": 0.0017619839295078907,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.4078807159826118,
+        0.3399005966521765,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406250327064,
+      "analytic_equivalent_mean_calls": 1.2778276125095347,
+      "call_histogram": [
+        4698,
+        792,
+        47,
+        163
+      ],
+      "candidate_id": "d1_150_d2_150",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6912,
+      "mean_calls": 1.2412280701754386,
+      "minimum_stagewise_rho": 0.011171617108259662,
+      "multipliers": [
+        1.5,
+        1.5,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0004397558926228243,
+        "native_whitened_vs_within_episode_histogram": 0.0002840262102845958,
+        "raw_vs_analytic": 5.192252065892095e-06,
+        "raw_vs_fixed_d1": 1.5924352869145086e-05,
+        "raw_vs_seeded": 3.7007636809043023e-06,
+        "raw_vs_within_episode_histogram": 4.716132159972586e-06
+      },
+      "seeded_minus_adaptive_flops": 101376,
+      "seeded_total_flops": 406250428440,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1002,
+          "rho": 0.01999256861010694,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 210,
+          "rho": 0.011171617108259662,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.4078807159826118,
+        0.4078807159826118,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406229533291,
+      "analytic_equivalent_mean_calls": 1.2640593820186032,
+      "call_histogram": [
+        4698,
+        841,
+        26,
+        135
+      ],
+      "candidate_id": "d1_150_d2_175",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6863,
+      "mean_calls": 1.227719298245614,
+      "minimum_stagewise_rho": -0.04656084656084656,
+      "multipliers": [
+        1.5,
+        1.75,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00047328212884384315,
+        "native_whitened_vs_within_episode_histogram": 0.0002816277992873594,
+        "raw_vs_analytic": 5.372457399975152e-06,
+        "raw_vs_fixed_d1": 1.557271028438233e-05,
+        "raw_vs_seeded": 3.658766528564413e-06,
+        "raw_vs_within_episode_histogram": 4.714449279637751e-06
+      },
+      "seeded_minus_adaptive_flops": 228269,
+      "seeded_total_flops": 406229761560,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1002,
+          "rho": 0.01999256861010694,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 161,
+          "rho": -0.04656084656084656,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.4078807159826118,
+        0.47586083531304707,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406205536007,
+      "analytic_equivalent_mean_calls": 1.2481700031517502,
+      "call_histogram": [
+        4698,
+        893,
+        11,
+        98
+      ],
+      "candidate_id": "d1_150_d2_200",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": false,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6811,
+      "mean_calls": 1.2121052631578948,
+      "minimum_stagewise_rho": 0.01999256861010694,
+      "multipliers": [
+        1.5,
+        2.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0004972684815076463,
+        "native_whitened_vs_within_episode_histogram": 0.0002645754198546497,
+        "raw_vs_analytic": 5.749221246582201e-06,
+        "raw_vs_fixed_d1": 1.533568915058434e-05,
+        "raw_vs_seeded": 4.86466911149801e-06,
+        "raw_vs_within_episode_histogram": 4.786887744877715e-06
+      },
+      "seeded_minus_adaptive_flops": 114193,
+      "seeded_total_flops": 406205650200,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 1002,
+          "rho": 0.01999256861010694,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 109,
+          "rho": 0.02712445556482254,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.4078807159826118,
+        0.5438409546434824,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406232553930,
+      "analytic_equivalent_mean_calls": 1.2660594449211797,
+      "call_histogram": [
+        4899,
+        492,
+        108,
+        201
+      ],
+      "candidate_id": "d1_175_d2_100",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6810,
+      "mean_calls": 1.23,
+      "minimum_stagewise_rho": -0.0023297717002696643,
+      "multipliers": [
+        1.75,
+        1.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0002421273254934866,
+        "native_whitened_vs_within_episode_histogram": 0.00023978498676842475,
+        "raw_vs_analytic": 3.399078504791341e-06,
+        "raw_vs_fixed_d1": 1.3676591084480111e-05,
+        "raw_vs_seeded": 1.5442871463115393e-06,
+        "raw_vs_within_episode_histogram": 3.739961147865724e-06
+      },
+      "seeded_minus_adaptive_flops": 122190,
+      "seeded_total_flops": 406232676120,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 801,
+          "rho": 0.028062334799704856,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 309,
+          "rho": -0.0023297717002696643,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.47586083531304707,
+        0.2719204773217412,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406207633814,
+      "analytic_equivalent_mean_calls": 1.2495590291020424,
+      "call_histogram": [
+        4899,
+        560,
+        64,
+        177
+      ],
+      "candidate_id": "d1_175_d2_125",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6742,
+      "mean_calls": 1.213859649122807,
+      "minimum_stagewise_rho": 0.0008907444875004288,
+      "multipliers": [
+        1.75,
+        1.25,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00028394849910443596,
+        "native_whitened_vs_within_episode_histogram": 0.00023024516713736787,
+        "raw_vs_analytic": 3.3817351458798454e-06,
+        "raw_vs_fixed_d1": 1.30218592231551e-05,
+        "raw_vs_seeded": 2.3846637674564696e-06,
+        "raw_vs_within_episode_histogram": 3.428530311272401e-06
+      },
+      "seeded_minus_adaptive_flops": 136066,
+      "seeded_total_flops": 406207769880,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 801,
+          "rho": 0.028062334799704856,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 241,
+          "rho": 0.0008907444875004288,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.47586083531304707,
+        0.3399005966521765,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406186286130,
+      "analytic_equivalent_mean_calls": 1.2354240362001017,
+      "call_histogram": [
+        4899,
+        612,
+        39,
+        150
+      ],
+      "candidate_id": "d1_175_d2_150",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6690,
+      "mean_calls": 1.2,
+      "minimum_stagewise_rho": -0.0030092962903713184,
+      "multipliers": [
+        1.75,
+        1.5,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0003212371604737474,
+        "native_whitened_vs_within_episode_histogram": 0.0002255511699169364,
+        "raw_vs_analytic": 3.825419043024637e-06,
+        "raw_vs_fixed_d1": 1.291952767098351e-05,
+        "raw_vs_seeded": 3.743890462154034e-06,
+        "raw_vs_within_episode_histogram": 3.7524360185901074e-06
+      },
+      "seeded_minus_adaptive_flops": 21990,
+      "seeded_total_flops": 406186308120,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 801,
+          "rho": 0.028062334799704856,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 189,
+          "rho": -0.0030092962903713184,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.47586083531304707,
+        0.4078807159826118,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406168735853,
+      "analytic_equivalent_mean_calls": 1.22380342944847,
+      "call_histogram": [
+        4899,
+        653,
+        22,
+        126
+      ],
+      "candidate_id": "d1_175_d2_175",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6649,
+      "mean_calls": 1.1885964912280702,
+      "minimum_stagewise_rho": -0.05743011879157613,
+      "multipliers": [
+        1.75,
+        1.75,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00035213149408586233,
+        "native_whitened_vs_within_episode_histogram": 0.0002277949388060354,
+        "raw_vs_analytic": 4.047518775189695e-06,
+        "raw_vs_fixed_d1": 1.2692739252950062e-05,
+        "raw_vs_seeded": 4.1463252251121285e-06,
+        "raw_vs_within_episode_histogram": 3.7710938949185906e-06
+      },
+      "seeded_minus_adaptive_flops": 84907,
+      "seeded_total_flops": 406168820760,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 801,
+          "rho": 0.028062334799704856,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 148,
+          "rho": -0.05743011879157613,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.47586083531304707,
+        0.47586083531304707,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406147974068,
+      "analytic_equivalent_mean_calls": 1.2100563792482413,
+      "call_histogram": [
+        4899,
+        698,
+        9,
+        94
+      ],
+      "candidate_id": "d1_175_d2_200",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": false,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6604,
+      "mean_calls": 1.1750877192982456,
+      "minimum_stagewise_rho": 0.007072881430391425,
+      "multipliers": [
+        1.75,
+        2.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0003786851477689841,
+        "native_whitened_vs_within_episode_histogram": 0.00021717291732730964,
+        "raw_vs_analytic": 4.2963847288190255e-06,
+        "raw_vs_fixed_d1": 1.2410575453404042e-05,
+        "raw_vs_seeded": 4.654455216662455e-06,
+        "raw_vs_within_episode_histogram": 3.743219851613595e-06
+      },
+      "seeded_minus_adaptive_flops": 179812,
+      "seeded_total_flops": 406148153880,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 801,
+          "rho": 0.028062334799704856,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 103,
+          "rho": 0.007072881430391425,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.47586083531304707,
+        0.5438409546434824,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406174862980,
+      "analytic_equivalent_mean_calls": 1.2278603986566659,
+      "call_histogram": [
+        5048,
+        384,
+        89,
+        179
+      ],
+      "candidate_id": "d1_200_d2_100",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6620,
+      "mean_calls": 1.1928070175438596,
+      "minimum_stagewise_rho": 0.023027057361731558,
+      "multipliers": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0001597168025989509,
+        "native_whitened_vs_within_episode_histogram": 0.00015621131010882592,
+        "raw_vs_analytic": 2.0300088640118373e-06,
+        "raw_vs_fixed_d1": 1.0831944515274109e-05,
+        "raw_vs_seeded": 1.8671118791085272e-06,
+        "raw_vs_within_episode_histogram": 3.287040203022115e-06
+      },
+      "seeded_minus_adaptive_flops": 51860,
+      "seeded_total_flops": 406174914840,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 652,
+          "rho": 0.023027057361731558,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 268,
+          "rho": 0.03578012364974342,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.5438409546434824,
+        0.2719204773217412,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406153732274,
+      "analytic_equivalent_mean_calls": 1.2138690739151623,
+      "call_histogram": [
+        5048,
+        442,
+        51,
+        159
+      ],
+      "candidate_id": "d1_200_d2_125",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6562,
+      "mean_calls": 1.179122807017544,
+      "minimum_stagewise_rho": 0.023027057361731558,
+      "multipliers": [
+        2.0,
+        1.25,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0002007694977088403,
+        "native_whitened_vs_within_episode_histogram": 0.00015566314749981093,
+        "raw_vs_analytic": 1.9472403808773026e-06,
+        "raw_vs_fixed_d1": 1.0208710287426345e-05,
+        "raw_vs_seeded": 2.485116013578015e-06,
+        "raw_vs_within_episode_histogram": 2.9613965068365848e-06
+      },
+      "seeded_minus_adaptive_flops": 250726,
+      "seeded_total_flops": 406153983000,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 652,
+          "rho": 0.023027057361731558,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 210,
+          "rho": 0.02920895517553038,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.5438409546434824,
+        0.3399005966521765,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406136166003,
+      "analytic_equivalent_mean_calls": 1.2022378770181794,
+      "call_histogram": [
+        5048,
+        485,
+        30,
+        137
+      ],
+      "candidate_id": "d1_200_d2_150",
+      "eligibility": {
+        "all_four_depths_at_least_20": true,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": true,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6519,
+      "mean_calls": 1.167719298245614,
+      "minimum_stagewise_rho": 0.023027057361731558,
+      "multipliers": [
+        2.0,
+        1.5,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.00022892267876707236,
+        "native_whitened_vs_within_episode_histogram": 0.00015665202728385493,
+        "raw_vs_analytic": 2.491445882512197e-06,
+        "raw_vs_fixed_d1": 1.03036185560275e-05,
+        "raw_vs_seeded": 2.581637123169934e-06,
+        "raw_vs_within_episode_histogram": 3.3685406457049855e-06
+      },
+      "seeded_minus_adaptive_flops": 64677,
+      "seeded_total_flops": 406136230680,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 652,
+          "rho": 0.023027057361731558,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 167,
+          "rho": 0.02441330763601884,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.5438409546434824,
+        0.4078807159826118,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406120775391,
+      "analytic_equivalent_mean_calls": 1.192047254401856,
+      "call_histogram": [
+        5048,
+        521,
+        15,
+        116
+      ],
+      "candidate_id": "d1_200_d2_175",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": false,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": true,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6483,
+      "mean_calls": 1.157719298245614,
+      "minimum_stagewise_rho": -0.022596487481983663,
+      "multipliers": [
+        2.0,
+        1.75,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0002547035306319677,
+        "native_whitened_vs_within_episode_histogram": 0.00015740395059845151,
+        "raw_vs_analytic": 2.740755246999165e-06,
+        "raw_vs_fixed_d1": 1.0159278102274964e-05,
+        "raw_vs_seeded": 3.031471440306203e-06,
+        "raw_vs_within_episode_histogram": 3.4722889870514125e-06
+      },
+      "seeded_minus_adaptive_flops": 87609,
+      "seeded_total_flops": 406120863000,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 652,
+          "rho": 0.023027057361731558,
+          "stage": 2
+        },
+        {
+          "positive": false,
+          "reached_rows": 131,
+          "rho": -0.022596487481983663,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.5438409546434824,
+        0.47586083531304707,
+        0.2719204773217412
+      ]
+    },
+    {
+      "adaptive_total_flops": 406103795019,
+      "analytic_equivalent_mean_calls": 1.1808040002065854,
+      "call_histogram": [
+        5048,
+        557,
+        6,
+        89
+      ],
+      "candidate_id": "d1_200_d2_200",
+      "eligibility": {
+        "all_four_depths_at_least_20": false,
+        "all_six_point_contrasts_positive": true,
+        "all_three_stage_rhos_positive": true,
+        "counterfactual_complete": true,
+        "seeded_comparator_weakly_more_compute": true,
+        "stage_2_reached_at_least_400": true,
+        "stage_3_reached_at_least_120": false,
+        "within_episode_histograms_exact": true
+      },
+      "eligible": false,
+      "episode_point_contrasts_computed": {
+        "native_whitened_vs_analytic": 150,
+        "native_whitened_vs_within_episode_histogram": 150,
+        "raw_vs_analytic": 150,
+        "raw_vs_fixed_d1": 150,
+        "raw_vs_seeded": 150,
+        "raw_vs_within_episode_histogram": 150
+      },
+      "gate_evaluations": 6447,
+      "mean_calls": 1.1466666666666667,
+      "minimum_stagewise_rho": 0.020618701007838743,
+      "multipliers": [
+        2.0,
+        2.0,
+        1.0
+      ],
+      "point_contrasts": {
+        "native_whitened_vs_analytic": 0.0002831905026500676,
+        "native_whitened_vs_within_episode_histogram": 0.0001523283900996822,
+        "raw_vs_analytic": 3.0556534354320554e-06,
+        "raw_vs_fixed_d1": 1.0039864753815162e-05,
+        "raw_vs_seeded": 3.5419841327825227e-06,
+        "raw_vs_within_episode_histogram": 3.6299692938075115e-06
+      },
+      "seeded_minus_adaptive_flops": 110541,
+      "seeded_total_flops": 406103905560,
+      "stagewise_rank": [
+        {
+          "positive": true,
+          "reached_rows": 5700,
+          "rho": 0.21333815302191517,
+          "stage": 1
+        },
+        {
+          "positive": true,
+          "reached_rows": 652,
+          "rho": 0.023027057361731558,
+          "stage": 2
+        },
+        {
+          "positive": true,
+          "reached_rows": 95,
+          "rho": 0.020618701007838743,
+          "stage": 3
+        }
+      ],
+      "thresholds": [
+        0.5438409546434824,
+        0.5438409546434824,
+        0.2719204773217412
+      ]
+    }
+  ],
+  "eligible_count": 10,
+  "fixed_ranking_applied": true,
+  "protocol_sha256": "cf10b001a891d10c8efb850d89988d35a8e0b679cf54852cea79d9c67b8a07a2",
+  "schema_version": 1,
+  "selected_candidate_id": "d1_200_d2_100",
+  "selection_input_sha256": "281fafd6c1e0f560123a23b21023f8a6b7e476823fa3e788caad3fe78c06cbb3",
+  "split_manifest_sha256": "2a6cde9041b3c886a796fb0c8f00d82e3f7851765186e21db637687b859c6b24",
+  "status": "selection_complete_before_validation_candidate_metrics",
+  "v5_outcome_episodes": 0,
+  "validation_input_path_not_opened": true
+}

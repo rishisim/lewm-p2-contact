@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "device": "mps",
+  "selected_solver_seed": 261102,
+  "selected_solver_checkpoint_sha256": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+  "selected_solver_anchor_state_sha256": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+  "train_cache_sha256": "276e70728ce387161096aa37f6575220925e195bd1180bbf123c1b994bbaea70",
+  "feature_dim": 1046,
+  "gate_flop_budget_per_decision": 66240,
+  "stage_adapter_flops": 264960,
+  "base_predict_flops": 70529190,
+  "v1_call_flops": 669184,
+  "outer_folds": 3,
+  "outer_repeats": 2,
+  "inner_folds": 3,
+  "outer_seed": 271401,
+  "inner_seed": 271501,
+  "teacher_seeds": [271601, 271602, 271603],
+  "student_seeds": [271701, 271702, 271703],
+  "bootstrap_seed": 271801,
+  "bootstrap_samples_discovery": 2000,
+  "bootstrap_samples_calibration": 4000,
+  "teacher_hidden_dims": [128, 64],
+  "teacher_epochs": 10,
+  "student_epochs": 14,
+  "batch_size": 1024,
+  "learning_rate": 0.0007,
+  "target_mean_calls": [1.25, 1.5, 2.0, 2.5],
+  "families": {
+    "full_linear": [
+      {"hidden_dims": [], "weight_decay": 0.0001, "objective": "realized"},
+      {"hidden_dims": [], "weight_decay": 0.01, "objective": "realized"}
+    ],
+    "distilled_rank_linear": [
+      {"hidden_dims": [], "weight_decay": 0.0001, "objective": "distilled_rank", "teacher_weight": 0.5, "rank_weight": 0.2},
+      {"hidden_dims": [], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.8, "rank_weight": 0.4}
+    ],
+    "stable_sparse": [
+      {"hidden_dims": [], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2, "sparse_k": 32},
+      {"hidden_dims": [], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2, "sparse_k": 128}
+    ],
+    "low_rank": [
+      {"hidden_dims": [8], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2},
+      {"hidden_dims": [16], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2}
+    ],
+    "in_model_halting": [
+      {"hidden_dims": [], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2},
+      {"hidden_dims": [8], "weight_decay": 0.001, "objective": "distilled_rank", "teacher_weight": 0.7, "rank_weight": 0.2}
+    ],
+    "compact11_control": [
+      {"hidden_dims": [], "weight_decay": 0.001, "objective": "realized"},
+      {"hidden_dims": [8], "weight_decay": 0.001, "objective": "realized"}
+    ]
+  },
+  "calibration_pass_rule": {
+    "operating_point": "single discovery-selected family and budget; no calibration reselection",
+    "required_raw_ci_low_positive_vs": ["matched_randomized", "analytic_mixture", "fixed_d1", "histogram_null"],
+    "required_whitened_direction": "positive",
+    "require_call_and_flop_nondominated": true,
+    "test_targets": "forbidden"
+  }
+}

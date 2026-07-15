@@ -1,0 +1,42 @@
+{
+  "binding_evidence_count": 0,
+  "descriptive_evidence_count": 5,
+  "entries": [
+    {
+      "class": "descriptive_only",
+      "finding": "Six-commit linear history; upload commit adds only the LFS pointer and card edits add only generic LeWorldModel links.",
+      "id": "dataset_linear_history"
+    },
+    {
+      "class": "descriptive_only",
+      "finding": "Git blob 01e3f0\u2026, LFS SHA-256 3725d6\u2026, Xet hash ffe07e\u2026, and size are consistent and distinct.",
+      "id": "archive_hash_namespaces"
+    },
+    {
+      "class": "descriptive_only",
+      "finding": "Upload commit contains a Hugging Face system RSA signature key 6A528E38E0733467; verification is unavailable without its public key and the signed object names no generator.",
+      "id": "upload_signature"
+    },
+    {
+      "class": "descriptive_only",
+      "finding": "Valid tar header names cube_single_expert.h5, size 101942558720, mtime 2026-02-19T03:12:16Z, uname/gname lucas.maes; no embedded source/digest/comment/PAX field.",
+      "id": "tar_header"
+    },
+    {
+      "class": "descriptive_only",
+      "finding": "Local stat size and mtime match tar metadata (101942558720, 1771470736); packaging evidence only.",
+      "id": "local_packaging_match"
+    },
+    {
+      "class": "none",
+      "finding": "No exact source commit/coherent same-commit lock or container digest/build record is explicitly tied to the exact archive hash or upload revision.",
+      "id": "generator_binding"
+    },
+    {
+      "class": "none",
+      "finding": "No collector command/config, dependency versions, environment variables, seed, renderer/backend, or source tag is explicitly tied to the exact archive.",
+      "id": "generator_narrowing"
+    }
+  ],
+  "narrowing_evidence_count": 0
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "audit_scope": {
+    "mode": "read_only_public_and_local_metadata",
+    "hdf5_row_data_accessed": false,
+    "v3_cache_accessed": false,
+    "environment_executed": false,
+    "authors_contacted": false
+  },
+  "hugging_face": {
+    "repository": "quentinll/lewm-cube",
+    "repository_url": "https://huggingface.co/datasets/quentinll/lewm-cube",
+    "api_url": "https://huggingface.co/api/datasets/quentinll/lewm-cube",
+    "head_revision": "02a19a67a0dc8c9d6215f89c19e0a597691e152a",
+    "created_at": "2026-03-26T20:41:03Z",
+    "head_modified_at": "2026-03-27T18:45:02Z",
+    "description": "Official dataset for the OGBench-Cube manipulation task used in LeWorldModel.",
+    "card": {
+      "bytes": 143,
+      "license": "mit",
+      "generation_script_or_flags_present": false
+    },
+    "history": [
+      {"revision": "de75ff3cef0851c208b849c58570d765a2ae0637", "date": "2026-03-26T20:41:03Z", "title": "initial commit"},
+      {"revision": "f6fe469578297a910bd4c88b9857f572908d7a34", "date": "2026-03-26T20:49:37Z", "title": "Upload cube_single_expert.tar.zst with huggingface_hub"},
+      {"revision": "116b5467ac69094027b3e2cfda48c79f482356d3", "date": "2026-03-26T21:07:28Z", "title": "Update README.md"},
+      {"revision": "63c01ba443b5ebdfd363b46ead9912b612218d96", "date": "2026-03-26T21:08:04Z", "title": "Update README.md"},
+      {"revision": "54324364f20a0002c075958c49c7027ffa2ffd71", "date": "2026-03-26T21:29:57Z", "title": "Update README.md"},
+      {"revision": "02a19a67a0dc8c9d6215f89c19e0a597691e152a", "date": "2026-03-27T18:45:02Z", "title": "Update README.md"}
+    ],
+    "archive": {
+      "path": "cube_single_expert.tar.zst",
+      "bytes": 46184624478,
+      "git_oid": "01e3f03328086b91750f474872e03428f4d63e9a",
+      "lfs_sha256": "3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600",
+      "xet_hash": "ffe07ef65b18ea16455f304e1d22fc9e617381cd874576103419dea1064503bf",
+      "upload_revision": "f6fe469578297a910bd4c88b9857f572908d7a34"
+    }
+  },
+  "released_hdf5_local_metadata": {
+    "path": "/Users/rishisim/.stable_worldmodel/source_downloads/lewm-cube/extracted/cube_single_expert.h5",
+    "bytes": 101942558720,
+    "filesystem_mtime": "2026-02-18T20:12:16-0700",
+    "sha256_from_immutable_prior_manifest": "0664d507c4ff12009010644c9ae950836f954e700c172ccf22e7423af1a55625",
+    "caveat": "The archive may preserve an internal file timestamp; mtime is not proof of generation time. No HDF5 content was opened in this audit."
+  },
+  "lewm_repository": {
+    "url": "https://github.com/lucas-maes/le-wm",
+    "local_path": "/Users/rishisim/Documents/research/World Models/le-wm",
+    "local_head": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+    "initial_public_commit": "83f97d72ad067855bc89a1b74b4aff11d4dfdf0c",
+    "initial_public_commit_date": "2026-03-12T22:56:21-0400",
+    "evidence": "The initial repository and its March 26 README instruct installation of stable-worldmodel[train,env], downloading the Hugging Face artifacts, and treating the HDF5 as input data. No LeWM-side Cube generator script or pinned stable-worldmodel/OGBench commit was found.",
+    "local_checkout_dirty": true
+  },
+  "installed_environment": {
+    "python": "3.10.20",
+    "packages": {
+      "stable-worldmodel": "0.1.0",
+      "ogbench": "1.2.1",
+      "mujoco": "3.10.0",
+      "dm-control": "1.0.43",
+      "gymnasium": "1.3.0",
+      "numpy": "2.2.6",
+      "h5py": "3.16.0",
+      "hdf5plugin": "6.0.0",
+      "scipy": "1.15.3"
+    },
+    "source_files": {
+      "stable_worldmodel/envs/ogbench/cube_env.py": {"bytes": 69156, "sha256": "143e5e81f424ff7a4d7fdde287dee88b722c09082a6fc9e68721839788e94c19"},
+      "stable_worldmodel/envs/ogbench/expert_policy.py": {"bytes": 11139, "sha256": "437b131da4065ba0adec6b08947a53d41bcc6dfc87324ad9c088778460cdb51f"}
+    },
+    "provenance_limit": "Package version metadata does not uniquely identify source revision; installed files are therefore pinned by bytes and SHA-256."
+  },
+  "upstream_ogbench": {
+    "repository": "https://github.com/seohongpark/ogbench",
+    "release": "v1.2.1",
+    "release_url": "https://github.com/seohongpark/ogbench/releases/tag/v1.2.1",
+    "tag_commit": "1d4140997f60c52c6fb0702ec100dc988b18c548",
+    "published_at": "2026-01-14T23:35:58Z",
+    "generator_url": "https://github.com/seohongpark/ogbench/blob/1d4140997f60c52c6fb0702ec100dc988b18c548/data_gen_scripts/generate_manipspace.py",
+    "commands_url": "https://github.com/seohongpark/ogbench/blob/1d4140997f60c52c6fb0702ec100dc988b18c548/data_gen_scripts/commands.sh#L111-L120",
+    "direct_evidence": [
+      "The official cube-single-play command uses Cube single, 1000 episodes, 1001 maximum episode steps, and dataset_type=play.",
+      "generate_manipspace.py maps play Cube data to CubePlanOracle and noisy Cube data to CubeMarkovOracle."
+    ],
+    "mismatch_to_released_artifact": "The official command's 1000 episodes and 1001-step horizon do not directly describe the released 10000-episode, 200-action artifact."
+  },
+  "stable_worldmodel_public_history": {
+    "repository": "https://github.com/galilai-group/stable-worldmodel",
+    "releases": [
+      {"tag": "0.0.4", "commit": "089efbb87746e153e9ee051bf228b9c12aa3889a", "published_at": "2026-02-16T23:16:49Z"},
+      {"tag": "0.0.5", "commit": "3a85ac6888c39db90af648993fd0b23ac4c0a51d", "published_at": "2026-02-24T23:37:59Z"},
+      {"tag": "0.1.0", "commit": "56e64a6bef4036c52e5fcbf12cdce0ad638b0a66", "published_at": "2026-05-26T01:44:01Z"},
+      {"tag": "0.1.1", "commit": "15a5538d492ae524c64cb18cc56a2d70611e877e", "published_at": "2026-06-06T18:10:27Z"}
+    ],
+    "direct_generator_evidence": {
+      "commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "date": "2026-02-25T03:00:17Z",
+      "message": "fix cube script",
+      "script_url": "https://github.com/galilai-group/stable-worldmodel/blob/a265229cb29688715651cbd831a3b4c10b8f98b4/scripts/data/collect_cube.py",
+      "config_url": "https://github.com/galilai-group/stable-worldmodel/blob/a265229cb29688715651cbd831a3b4c10b8f98b4/scripts/data/config/ogb.yaml",
+      "script_facts": ["swm/OGBCube-v0", "env_type=single", "multiview=true", "224x224", "ExpertPolicy", "terminate_at_goal=false", "mode=data_collection"],
+      "config_facts": {"num_envs": 10, "max_episode_steps": 200, "image_shape": [224, 224], "seed": 3072, "num_traj": 10000, "num_workers": 4},
+      "source_hashes": {
+        "stable_worldmodel/envs/ogbench/cube_env.py": "77bb4baf7bd035a9cee5da0083e9d07b34256863fc759dfbfe80471e3cde3b3d",
+        "stable_worldmodel/envs/ogbench/expert_policy.py": "4f4410d45ea12a2cf3a75e08ee0c82d23f9570b0d7354e93191a713b6867b0fe",
+        "scripts/data/collect_cube.py": "ab064e1640f7510df7342a2e8aafaf87f27b5645d7027b7cf14a69ed68f1ae03",
+        "scripts/data/config/ogb.yaml": "d66b27b74fa4d9b0c2315e8e8a0065bcfb9453634468fdfc01319227a4b3b611",
+        "pyproject.toml": "dc7d98c83e84352d527833c853cd79f013f0599fd630fe407c782b63f13717b0"
+      },
+      "limits": "The script records cube_single_multiview_expert through stable-worldmodel and does not name the released HDF5 archive. No source/config commit is embedded in the Hugging Face card or HDF5 metadata."
+    }
+  },
+  "frozen_historical_candidates": [
+    {
+      "rank": 1,
+      "stable_worldmodel_commit": "a265229cb29688715651cbd831a3b4c10b8f98b4",
+      "ogbench_release": "v1.2.1",
+      "status": "plausible_not_proven",
+      "rationale": "This public commit is explicitly named 'fix cube script'; its Cube script/config exactly match the released artifact's environment family, single-cube setting, 10000 trajectories, and 200-step horizon, and it predates the Hugging Face upload by about one month.",
+      "caveats": "The recorded filename says multiview, the released artifact lacks embedded provenance, and dependency versions beyond unpinned ogbench are not locked by pyproject.toml."
+    },
+    {
+      "rank": 2,
+      "stable_worldmodel_commit": "089efbb87746e153e9ee051bf228b9c12aa3889a",
+      "stable_worldmodel_tag": "0.0.4",
+      "ogbench_release": "v1.2.1",
+      "status": "weaker_timestamp_candidate",
+      "rationale": "This was the latest tagged stable-worldmodel release before the extracted HDF5's preserved February 18 filesystem timestamp.",
+      "caveats": "The timestamp may merely be archive-preserved metadata, and the later a265 Cube script is a substantially stronger configuration match."
+    }
+  ],
+  "conclusion": {
+    "directly_justified": "The released file is an official LeWM OGBench-Cube artifact. A public stable-worldmodel Cube collector closely matching its counts and horizon exists at a265229, using ExpertPolicy over swm/OGBCube-v0; OGBench v1.2.1 is the installed/public upstream oracle implementation.",
+    "not_justified": "Neither the exact generator commit/config nor the exact dependency/render stack of the released artifact is proven.",
+    "historical_candidates_count": 2,
+    "candidate_limit_respected": true
+  }
+}

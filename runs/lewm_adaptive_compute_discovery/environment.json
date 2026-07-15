@@ -1,0 +1,10 @@
+{
+  "device": "mps",
+  "machine": "arm64",
+  "mps_available": true,
+  "numpy": "2.2.6",
+  "pid": 14394,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "torch": "2.12.0"
+}

@@ -1,0 +1,3381 @@
+{
+  "all_episode_ids_unique": true,
+  "all_numeric_identifiers_unique": true,
+  "failure_replacement_rule": "only exception or mechanically malformed rollout; never outcome/loss/contact/success",
+  "overlap_with_prior_recorded_identifiers": [],
+  "prior_identifier_audit_method": "recursive scan of prior JSON manifests; byte hashes only for opaque binary artifacts",
+  "prior_numeric_identifier_count": 6610,
+  "roles": {
+    "fit": [
+      {
+        "env_seed": 1750000012,
+        "episode_id": "pon-fit-000",
+        "oracle_np_seed": 1750200012,
+        "policy_seed": 1750100012,
+        "role": "fit",
+        "slot": 0
+      },
+      {
+        "env_seed": 1750000013,
+        "episode_id": "pon-fit-001",
+        "oracle_np_seed": 1750200013,
+        "policy_seed": 1750100013,
+        "role": "fit",
+        "slot": 1
+      },
+      {
+        "env_seed": 1750000014,
+        "episode_id": "pon-fit-002",
+        "oracle_np_seed": 1750200014,
+        "policy_seed": 1750100014,
+        "role": "fit",
+        "slot": 2
+      },
+      {
+        "env_seed": 1750000015,
+        "episode_id": "pon-fit-003",
+        "oracle_np_seed": 1750200015,
+        "policy_seed": 1750100015,
+        "role": "fit",
+        "slot": 3
+      },
+      {
+        "env_seed": 1750000016,
+        "episode_id": "pon-fit-004",
+        "oracle_np_seed": 1750200016,
+        "policy_seed": 1750100016,
+        "role": "fit",
+        "slot": 4
+      },
+      {
+        "env_seed": 1750000017,
+        "episode_id": "pon-fit-005",
+        "oracle_np_seed": 1750200017,
+        "policy_seed": 1750100017,
+        "role": "fit",
+        "slot": 5
+      },
+      {
+        "env_seed": 1750000018,
+        "episode_id": "pon-fit-006",
+        "oracle_np_seed": 1750200018,
+        "policy_seed": 1750100018,
+        "role": "fit",
+        "slot": 6
+      },
+      {
+        "env_seed": 1750000019,
+        "episode_id": "pon-fit-007",
+        "oracle_np_seed": 1750200019,
+        "policy_seed": 1750100019,
+        "role": "fit",
+        "slot": 7
+      },
+      {
+        "env_seed": 1750000020,
+        "episode_id": "pon-fit-008",
+        "oracle_np_seed": 1750200020,
+        "policy_seed": 1750100020,
+        "role": "fit",
+        "slot": 8
+      },
+      {
+        "env_seed": 1750000021,
+        "episode_id": "pon-fit-009",
+        "oracle_np_seed": 1750200021,
+        "policy_seed": 1750100021,
+        "role": "fit",
+        "slot": 9
+      },
+      {
+        "env_seed": 1750000022,
+        "episode_id": "pon-fit-010",
+        "oracle_np_seed": 1750200022,
+        "policy_seed": 1750100022,
+        "role": "fit",
+        "slot": 10
+      },
+      {
+        "env_seed": 1750000023,
+        "episode_id": "pon-fit-011",
+        "oracle_np_seed": 1750200023,
+        "policy_seed": 1750100023,
+        "role": "fit",
+        "slot": 11
+      },
+      {
+        "env_seed": 1750000024,
+        "episode_id": "pon-fit-012",
+        "oracle_np_seed": 1750200024,
+        "policy_seed": 1750100024,
+        "role": "fit",
+        "slot": 12
+      },
+      {
+        "env_seed": 1750000025,
+        "episode_id": "pon-fit-013",
+        "oracle_np_seed": 1750200025,
+        "policy_seed": 1750100025,
+        "role": "fit",
+        "slot": 13
+      },
+      {
+        "env_seed": 1750000026,
+        "episode_id": "pon-fit-014",
+        "oracle_np_seed": 1750200026,
+        "policy_seed": 1750100026,
+        "role": "fit",
+        "slot": 14
+      },
+      {
+        "env_seed": 1750000027,
+        "episode_id": "pon-fit-015",
+        "oracle_np_seed": 1750200027,
+        "policy_seed": 1750100027,
+        "role": "fit",
+        "slot": 15
+      },
+      {
+        "env_seed": 1750000028,
+        "episode_id": "pon-fit-016",
+        "oracle_np_seed": 1750200028,
+        "policy_seed": 1750100028,
+        "role": "fit",
+        "slot": 16
+      },
+      {
+        "env_seed": 1750000029,
+        "episode_id": "pon-fit-017",
+        "oracle_np_seed": 1750200029,
+        "policy_seed": 1750100029,
+        "role": "fit",
+        "slot": 17
+      },
+      {
+        "env_seed": 1750000030,
+        "episode_id": "pon-fit-018",
+        "oracle_np_seed": 1750200030,
+        "policy_seed": 1750100030,
+        "role": "fit",
+        "slot": 18
+      },
+      {
+        "env_seed": 1750000031,
+        "episode_id": "pon-fit-019",
+        "oracle_np_seed": 1750200031,
+        "policy_seed": 1750100031,
+        "role": "fit",
+        "slot": 19
+      },
+      {
+        "env_seed": 1750000032,
+        "episode_id": "pon-fit-020",
+        "oracle_np_seed": 1750200032,
+        "policy_seed": 1750100032,
+        "role": "fit",
+        "slot": 20
+      },
+      {
+        "env_seed": 1750000033,
+        "episode_id": "pon-fit-021",
+        "oracle_np_seed": 1750200033,
+        "policy_seed": 1750100033,
+        "role": "fit",
+        "slot": 21
+      },
+      {
+        "env_seed": 1750000034,
+        "episode_id": "pon-fit-022",
+        "oracle_np_seed": 1750200034,
+        "policy_seed": 1750100034,
+        "role": "fit",
+        "slot": 22
+      },
+      {
+        "env_seed": 1750000035,
+        "episode_id": "pon-fit-023",
+        "oracle_np_seed": 1750200035,
+        "policy_seed": 1750100035,
+        "role": "fit",
+        "slot": 23
+      },
+      {
+        "env_seed": 1750000036,
+        "episode_id": "pon-fit-024",
+        "oracle_np_seed": 1750200036,
+        "policy_seed": 1750100036,
+        "role": "fit",
+        "slot": 24
+      },
+      {
+        "env_seed": 1750000037,
+        "episode_id": "pon-fit-025",
+        "oracle_np_seed": 1750200037,
+        "policy_seed": 1750100037,
+        "role": "fit",
+        "slot": 25
+      },
+      {
+        "env_seed": 1750000038,
+        "episode_id": "pon-fit-026",
+        "oracle_np_seed": 1750200038,
+        "policy_seed": 1750100038,
+        "role": "fit",
+        "slot": 26
+      },
+      {
+        "env_seed": 1750000039,
+        "episode_id": "pon-fit-027",
+        "oracle_np_seed": 1750200039,
+        "policy_seed": 1750100039,
+        "role": "fit",
+        "slot": 27
+      },
+      {
+        "env_seed": 1750000040,
+        "episode_id": "pon-fit-028",
+        "oracle_np_seed": 1750200040,
+        "policy_seed": 1750100040,
+        "role": "fit",
+        "slot": 28
+      },
+      {
+        "env_seed": 1750000041,
+        "episode_id": "pon-fit-029",
+        "oracle_np_seed": 1750200041,
+        "policy_seed": 1750100041,
+        "role": "fit",
+        "slot": 29
+      },
+      {
+        "env_seed": 1750000042,
+        "episode_id": "pon-fit-030",
+        "oracle_np_seed": 1750200042,
+        "policy_seed": 1750100042,
+        "role": "fit",
+        "slot": 30
+      },
+      {
+        "env_seed": 1750000043,
+        "episode_id": "pon-fit-031",
+        "oracle_np_seed": 1750200043,
+        "policy_seed": 1750100043,
+        "role": "fit",
+        "slot": 31
+      },
+      {
+        "env_seed": 1750000044,
+        "episode_id": "pon-fit-032",
+        "oracle_np_seed": 1750200044,
+        "policy_seed": 1750100044,
+        "role": "fit",
+        "slot": 32
+      },
+      {
+        "env_seed": 1750000045,
+        "episode_id": "pon-fit-033",
+        "oracle_np_seed": 1750200045,
+        "policy_seed": 1750100045,
+        "role": "fit",
+        "slot": 33
+      },
+      {
+        "env_seed": 1750000046,
+        "episode_id": "pon-fit-034",
+        "oracle_np_seed": 1750200046,
+        "policy_seed": 1750100046,
+        "role": "fit",
+        "slot": 34
+      },
+      {
+        "env_seed": 1750000047,
+        "episode_id": "pon-fit-035",
+        "oracle_np_seed": 1750200047,
+        "policy_seed": 1750100047,
+        "role": "fit",
+        "slot": 35
+      },
+      {
+        "env_seed": 1750000048,
+        "episode_id": "pon-fit-036",
+        "oracle_np_seed": 1750200048,
+        "policy_seed": 1750100048,
+        "role": "fit",
+        "slot": 36
+      },
+      {
+        "env_seed": 1750000049,
+        "episode_id": "pon-fit-037",
+        "oracle_np_seed": 1750200049,
+        "policy_seed": 1750100049,
+        "role": "fit",
+        "slot": 37
+      },
+      {
+        "env_seed": 1750000050,
+        "episode_id": "pon-fit-038",
+        "oracle_np_seed": 1750200050,
+        "policy_seed": 1750100050,
+        "role": "fit",
+        "slot": 38
+      },
+      {
+        "env_seed": 1750000051,
+        "episode_id": "pon-fit-039",
+        "oracle_np_seed": 1750200051,
+        "policy_seed": 1750100051,
+        "role": "fit",
+        "slot": 39
+      },
+      {
+        "env_seed": 1750000052,
+        "episode_id": "pon-fit-040",
+        "oracle_np_seed": 1750200052,
+        "policy_seed": 1750100052,
+        "role": "fit",
+        "slot": 40
+      },
+      {
+        "env_seed": 1750000053,
+        "episode_id": "pon-fit-041",
+        "oracle_np_seed": 1750200053,
+        "policy_seed": 1750100053,
+        "role": "fit",
+        "slot": 41
+      },
+      {
+        "env_seed": 1750000054,
+        "episode_id": "pon-fit-042",
+        "oracle_np_seed": 1750200054,
+        "policy_seed": 1750100054,
+        "role": "fit",
+        "slot": 42
+      },
+      {
+        "env_seed": 1750000055,
+        "episode_id": "pon-fit-043",
+        "oracle_np_seed": 1750200055,
+        "policy_seed": 1750100055,
+        "role": "fit",
+        "slot": 43
+      },
+      {
+        "env_seed": 1750000056,
+        "episode_id": "pon-fit-044",
+        "oracle_np_seed": 1750200056,
+        "policy_seed": 1750100056,
+        "role": "fit",
+        "slot": 44
+      },
+      {
+        "env_seed": 1750000057,
+        "episode_id": "pon-fit-045",
+        "oracle_np_seed": 1750200057,
+        "policy_seed": 1750100057,
+        "role": "fit",
+        "slot": 45
+      },
+      {
+        "env_seed": 1750000058,
+        "episode_id": "pon-fit-046",
+        "oracle_np_seed": 1750200058,
+        "policy_seed": 1750100058,
+        "role": "fit",
+        "slot": 46
+      },
+      {
+        "env_seed": 1750000059,
+        "episode_id": "pon-fit-047",
+        "oracle_np_seed": 1750200059,
+        "policy_seed": 1750100059,
+        "role": "fit",
+        "slot": 47
+      },
+      {
+        "env_seed": 1750000060,
+        "episode_id": "pon-fit-048",
+        "oracle_np_seed": 1750200060,
+        "policy_seed": 1750100060,
+        "role": "fit",
+        "slot": 48
+      },
+      {
+        "env_seed": 1750000061,
+        "episode_id": "pon-fit-049",
+        "oracle_np_seed": 1750200061,
+        "policy_seed": 1750100061,
+        "role": "fit",
+        "slot": 49
+      },
+      {
+        "env_seed": 1750000062,
+        "episode_id": "pon-fit-050",
+        "oracle_np_seed": 1750200062,
+        "policy_seed": 1750100062,
+        "role": "fit",
+        "slot": 50
+      },
+      {
+        "env_seed": 1750000063,
+        "episode_id": "pon-fit-051",
+        "oracle_np_seed": 1750200063,
+        "policy_seed": 1750100063,
+        "role": "fit",
+        "slot": 51
+      },
+      {
+        "env_seed": 1750000064,
+        "episode_id": "pon-fit-052",
+        "oracle_np_seed": 1750200064,
+        "policy_seed": 1750100064,
+        "role": "fit",
+        "slot": 52
+      },
+      {
+        "env_seed": 1750000065,
+        "episode_id": "pon-fit-053",
+        "oracle_np_seed": 1750200065,
+        "policy_seed": 1750100065,
+        "role": "fit",
+        "slot": 53
+      },
+      {
+        "env_seed": 1750000066,
+        "episode_id": "pon-fit-054",
+        "oracle_np_seed": 1750200066,
+        "policy_seed": 1750100066,
+        "role": "fit",
+        "slot": 54
+      },
+      {
+        "env_seed": 1750000067,
+        "episode_id": "pon-fit-055",
+        "oracle_np_seed": 1750200067,
+        "policy_seed": 1750100067,
+        "role": "fit",
+        "slot": 55
+      },
+      {
+        "env_seed": 1750000068,
+        "episode_id": "pon-fit-056",
+        "oracle_np_seed": 1750200068,
+        "policy_seed": 1750100068,
+        "role": "fit",
+        "slot": 56
+      },
+      {
+        "env_seed": 1750000069,
+        "episode_id": "pon-fit-057",
+        "oracle_np_seed": 1750200069,
+        "policy_seed": 1750100069,
+        "role": "fit",
+        "slot": 57
+      },
+      {
+        "env_seed": 1750000070,
+        "episode_id": "pon-fit-058",
+        "oracle_np_seed": 1750200070,
+        "policy_seed": 1750100070,
+        "role": "fit",
+        "slot": 58
+      },
+      {
+        "env_seed": 1750000071,
+        "episode_id": "pon-fit-059",
+        "oracle_np_seed": 1750200071,
+        "policy_seed": 1750100071,
+        "role": "fit",
+        "slot": 59
+      },
+      {
+        "env_seed": 1750000072,
+        "episode_id": "pon-fit-060",
+        "oracle_np_seed": 1750200072,
+        "policy_seed": 1750100072,
+        "role": "fit",
+        "slot": 60
+      },
+      {
+        "env_seed": 1750000073,
+        "episode_id": "pon-fit-061",
+        "oracle_np_seed": 1750200073,
+        "policy_seed": 1750100073,
+        "role": "fit",
+        "slot": 61
+      },
+      {
+        "env_seed": 1750000074,
+        "episode_id": "pon-fit-062",
+        "oracle_np_seed": 1750200074,
+        "policy_seed": 1750100074,
+        "role": "fit",
+        "slot": 62
+      },
+      {
+        "env_seed": 1750000075,
+        "episode_id": "pon-fit-063",
+        "oracle_np_seed": 1750200075,
+        "policy_seed": 1750100075,
+        "role": "fit",
+        "slot": 63
+      },
+      {
+        "env_seed": 1750000076,
+        "episode_id": "pon-fit-064",
+        "oracle_np_seed": 1750200076,
+        "policy_seed": 1750100076,
+        "role": "fit",
+        "slot": 64
+      },
+      {
+        "env_seed": 1750000077,
+        "episode_id": "pon-fit-065",
+        "oracle_np_seed": 1750200077,
+        "policy_seed": 1750100077,
+        "role": "fit",
+        "slot": 65
+      },
+      {
+        "env_seed": 1750000078,
+        "episode_id": "pon-fit-066",
+        "oracle_np_seed": 1750200078,
+        "policy_seed": 1750100078,
+        "role": "fit",
+        "slot": 66
+      },
+      {
+        "env_seed": 1750000079,
+        "episode_id": "pon-fit-067",
+        "oracle_np_seed": 1750200079,
+        "policy_seed": 1750100079,
+        "role": "fit",
+        "slot": 67
+      },
+      {
+        "env_seed": 1750000080,
+        "episode_id": "pon-fit-068",
+        "oracle_np_seed": 1750200080,
+        "policy_seed": 1750100080,
+        "role": "fit",
+        "slot": 68
+      },
+      {
+        "env_seed": 1750000081,
+        "episode_id": "pon-fit-069",
+        "oracle_np_seed": 1750200081,
+        "policy_seed": 1750100081,
+        "role": "fit",
+        "slot": 69
+      },
+      {
+        "env_seed": 1750000082,
+        "episode_id": "pon-fit-070",
+        "oracle_np_seed": 1750200082,
+        "policy_seed": 1750100082,
+        "role": "fit",
+        "slot": 70
+      },
+      {
+        "env_seed": 1750000083,
+        "episode_id": "pon-fit-071",
+        "oracle_np_seed": 1750200083,
+        "policy_seed": 1750100083,
+        "role": "fit",
+        "slot": 71
+      },
+      {
+        "env_seed": 1750000084,
+        "episode_id": "pon-fit-072",
+        "oracle_np_seed": 1750200084,
+        "policy_seed": 1750100084,
+        "role": "fit",
+        "slot": 72
+      },
+      {
+        "env_seed": 1750000085,
+        "episode_id": "pon-fit-073",
+        "oracle_np_seed": 1750200085,
+        "policy_seed": 1750100085,
+        "role": "fit",
+        "slot": 73
+      },
+      {
+        "env_seed": 1750000086,
+        "episode_id": "pon-fit-074",
+        "oracle_np_seed": 1750200086,
+        "policy_seed": 1750100086,
+        "role": "fit",
+        "slot": 74
+      },
+      {
+        "env_seed": 1750000087,
+        "episode_id": "pon-fit-075",
+        "oracle_np_seed": 1750200087,
+        "policy_seed": 1750100087,
+        "role": "fit",
+        "slot": 75
+      },
+      {
+        "env_seed": 1750000088,
+        "episode_id": "pon-fit-076",
+        "oracle_np_seed": 1750200088,
+        "policy_seed": 1750100088,
+        "role": "fit",
+        "slot": 76
+      },
+      {
+        "env_seed": 1750000089,
+        "episode_id": "pon-fit-077",
+        "oracle_np_seed": 1750200089,
+        "policy_seed": 1750100089,
+        "role": "fit",
+        "slot": 77
+      },
+      {
+        "env_seed": 1750000090,
+        "episode_id": "pon-fit-078",
+        "oracle_np_seed": 1750200090,
+        "policy_seed": 1750100090,
+        "role": "fit",
+        "slot": 78
+      },
+      {
+        "env_seed": 1750000091,
+        "episode_id": "pon-fit-079",
+        "oracle_np_seed": 1750200091,
+        "policy_seed": 1750100091,
+        "role": "fit",
+        "slot": 79
+      },
+      {
+        "env_seed": 1750000092,
+        "episode_id": "pon-fit-080",
+        "oracle_np_seed": 1750200092,
+        "policy_seed": 1750100092,
+        "role": "fit",
+        "slot": 80
+      },
+      {
+        "env_seed": 1750000093,
+        "episode_id": "pon-fit-081",
+        "oracle_np_seed": 1750200093,
+        "policy_seed": 1750100093,
+        "role": "fit",
+        "slot": 81
+      },
+      {
+        "env_seed": 1750000094,
+        "episode_id": "pon-fit-082",
+        "oracle_np_seed": 1750200094,
+        "policy_seed": 1750100094,
+        "role": "fit",
+        "slot": 82
+      },
+      {
+        "env_seed": 1750000095,
+        "episode_id": "pon-fit-083",
+        "oracle_np_seed": 1750200095,
+        "policy_seed": 1750100095,
+        "role": "fit",
+        "slot": 83
+      },
+      {
+        "env_seed": 1750000096,
+        "episode_id": "pon-fit-084",
+        "oracle_np_seed": 1750200096,
+        "policy_seed": 1750100096,
+        "role": "fit",
+        "slot": 84
+      },
+      {
+        "env_seed": 1750000097,
+        "episode_id": "pon-fit-085",
+        "oracle_np_seed": 1750200097,
+        "policy_seed": 1750100097,
+        "role": "fit",
+        "slot": 85
+      },
+      {
+        "env_seed": 1750000098,
+        "episode_id": "pon-fit-086",
+        "oracle_np_seed": 1750200098,
+        "policy_seed": 1750100098,
+        "role": "fit",
+        "slot": 86
+      },
+      {
+        "env_seed": 1750000099,
+        "episode_id": "pon-fit-087",
+        "oracle_np_seed": 1750200099,
+        "policy_seed": 1750100099,
+        "role": "fit",
+        "slot": 87
+      },
+      {
+        "env_seed": 1750000100,
+        "episode_id": "pon-fit-088",
+        "oracle_np_seed": 1750200100,
+        "policy_seed": 1750100100,
+        "role": "fit",
+        "slot": 88
+      },
+      {
+        "env_seed": 1750000101,
+        "episode_id": "pon-fit-089",
+        "oracle_np_seed": 1750200101,
+        "policy_seed": 1750100101,
+        "role": "fit",
+        "slot": 89
+      },
+      {
+        "env_seed": 1750000102,
+        "episode_id": "pon-fit-090",
+        "oracle_np_seed": 1750200102,
+        "policy_seed": 1750100102,
+        "role": "fit",
+        "slot": 90
+      },
+      {
+        "env_seed": 1750000103,
+        "episode_id": "pon-fit-091",
+        "oracle_np_seed": 1750200103,
+        "policy_seed": 1750100103,
+        "role": "fit",
+        "slot": 91
+      },
+      {
+        "env_seed": 1750000104,
+        "episode_id": "pon-fit-092",
+        "oracle_np_seed": 1750200104,
+        "policy_seed": 1750100104,
+        "role": "fit",
+        "slot": 92
+      },
+      {
+        "env_seed": 1750000105,
+        "episode_id": "pon-fit-093",
+        "oracle_np_seed": 1750200105,
+        "policy_seed": 1750100105,
+        "role": "fit",
+        "slot": 93
+      },
+      {
+        "env_seed": 1750000106,
+        "episode_id": "pon-fit-094",
+        "oracle_np_seed": 1750200106,
+        "policy_seed": 1750100106,
+        "role": "fit",
+        "slot": 94
+      },
+      {
+        "env_seed": 1750000107,
+        "episode_id": "pon-fit-095",
+        "oracle_np_seed": 1750200107,
+        "policy_seed": 1750100107,
+        "role": "fit",
+        "slot": 95
+      },
+      {
+        "env_seed": 1750000108,
+        "episode_id": "pon-fit-096",
+        "oracle_np_seed": 1750200108,
+        "policy_seed": 1750100108,
+        "role": "fit",
+        "slot": 96
+      },
+      {
+        "env_seed": 1750000109,
+        "episode_id": "pon-fit-097",
+        "oracle_np_seed": 1750200109,
+        "policy_seed": 1750100109,
+        "role": "fit",
+        "slot": 97
+      },
+      {
+        "env_seed": 1750000110,
+        "episode_id": "pon-fit-098",
+        "oracle_np_seed": 1750200110,
+        "policy_seed": 1750100110,
+        "role": "fit",
+        "slot": 98
+      },
+      {
+        "env_seed": 1750000111,
+        "episode_id": "pon-fit-099",
+        "oracle_np_seed": 1750200111,
+        "policy_seed": 1750100111,
+        "role": "fit",
+        "slot": 99
+      },
+      {
+        "env_seed": 1750000112,
+        "episode_id": "pon-fit-100",
+        "oracle_np_seed": 1750200112,
+        "policy_seed": 1750100112,
+        "role": "fit",
+        "slot": 100
+      },
+      {
+        "env_seed": 1750000113,
+        "episode_id": "pon-fit-101",
+        "oracle_np_seed": 1750200113,
+        "policy_seed": 1750100113,
+        "role": "fit",
+        "slot": 101
+      },
+      {
+        "env_seed": 1750000114,
+        "episode_id": "pon-fit-102",
+        "oracle_np_seed": 1750200114,
+        "policy_seed": 1750100114,
+        "role": "fit",
+        "slot": 102
+      },
+      {
+        "env_seed": 1750000115,
+        "episode_id": "pon-fit-103",
+        "oracle_np_seed": 1750200115,
+        "policy_seed": 1750100115,
+        "role": "fit",
+        "slot": 103
+      },
+      {
+        "env_seed": 1750000116,
+        "episode_id": "pon-fit-104",
+        "oracle_np_seed": 1750200116,
+        "policy_seed": 1750100116,
+        "role": "fit",
+        "slot": 104
+      },
+      {
+        "env_seed": 1750000117,
+        "episode_id": "pon-fit-105",
+        "oracle_np_seed": 1750200117,
+        "policy_seed": 1750100117,
+        "role": "fit",
+        "slot": 105
+      },
+      {
+        "env_seed": 1750000118,
+        "episode_id": "pon-fit-106",
+        "oracle_np_seed": 1750200118,
+        "policy_seed": 1750100118,
+        "role": "fit",
+        "slot": 106
+      },
+      {
+        "env_seed": 1750000119,
+        "episode_id": "pon-fit-107",
+        "oracle_np_seed": 1750200119,
+        "policy_seed": 1750100119,
+        "role": "fit",
+        "slot": 107
+      },
+      {
+        "env_seed": 1750000120,
+        "episode_id": "pon-fit-108",
+        "oracle_np_seed": 1750200120,
+        "policy_seed": 1750100120,
+        "role": "fit",
+        "slot": 108
+      },
+      {
+        "env_seed": 1750000121,
+        "episode_id": "pon-fit-109",
+        "oracle_np_seed": 1750200121,
+        "policy_seed": 1750100121,
+        "role": "fit",
+        "slot": 109
+      },
+      {
+        "env_seed": 1750000122,
+        "episode_id": "pon-fit-110",
+        "oracle_np_seed": 1750200122,
+        "policy_seed": 1750100122,
+        "role": "fit",
+        "slot": 110
+      },
+      {
+        "env_seed": 1750000123,
+        "episode_id": "pon-fit-111",
+        "oracle_np_seed": 1750200123,
+        "policy_seed": 1750100123,
+        "role": "fit",
+        "slot": 111
+      },
+      {
+        "env_seed": 1750000124,
+        "episode_id": "pon-fit-112",
+        "oracle_np_seed": 1750200124,
+        "policy_seed": 1750100124,
+        "role": "fit",
+        "slot": 112
+      },
+      {
+        "env_seed": 1750000125,
+        "episode_id": "pon-fit-113",
+        "oracle_np_seed": 1750200125,
+        "policy_seed": 1750100125,
+        "role": "fit",
+        "slot": 113
+      },
+      {
+        "env_seed": 1750000126,
+        "episode_id": "pon-fit-114",
+        "oracle_np_seed": 1750200126,
+        "policy_seed": 1750100126,
+        "role": "fit",
+        "slot": 114
+      },
+      {
+        "env_seed": 1750000127,
+        "episode_id": "pon-fit-115",
+        "oracle_np_seed": 1750200127,
+        "policy_seed": 1750100127,
+        "role": "fit",
+        "slot": 115
+      },
+      {
+        "env_seed": 1750000128,
+        "episode_id": "pon-fit-116",
+        "oracle_np_seed": 1750200128,
+        "policy_seed": 1750100128,
+        "role": "fit",
+        "slot": 116
+      },
+      {
+        "env_seed": 1750000129,
+        "episode_id": "pon-fit-117",
+        "oracle_np_seed": 1750200129,
+        "policy_seed": 1750100129,
+        "role": "fit",
+        "slot": 117
+      },
+      {
+        "env_seed": 1750000130,
+        "episode_id": "pon-fit-118",
+        "oracle_np_seed": 1750200130,
+        "policy_seed": 1750100130,
+        "role": "fit",
+        "slot": 118
+      },
+      {
+        "env_seed": 1750000131,
+        "episode_id": "pon-fit-119",
+        "oracle_np_seed": 1750200131,
+        "policy_seed": 1750100131,
+        "role": "fit",
+        "slot": 119
+      }
+    ],
+    "prospective": [
+      {
+        "env_seed": 1750000192,
+        "episode_id": "pon-prospective-000",
+        "oracle_np_seed": 1750200192,
+        "policy_seed": 1750100192,
+        "role": "prospective",
+        "slot": 0
+      },
+      {
+        "env_seed": 1750000193,
+        "episode_id": "pon-prospective-001",
+        "oracle_np_seed": 1750200193,
+        "policy_seed": 1750100193,
+        "role": "prospective",
+        "slot": 1
+      },
+      {
+        "env_seed": 1750000194,
+        "episode_id": "pon-prospective-002",
+        "oracle_np_seed": 1750200194,
+        "policy_seed": 1750100194,
+        "role": "prospective",
+        "slot": 2
+      },
+      {
+        "env_seed": 1750000195,
+        "episode_id": "pon-prospective-003",
+        "oracle_np_seed": 1750200195,
+        "policy_seed": 1750100195,
+        "role": "prospective",
+        "slot": 3
+      },
+      {
+        "env_seed": 1750000196,
+        "episode_id": "pon-prospective-004",
+        "oracle_np_seed": 1750200196,
+        "policy_seed": 1750100196,
+        "role": "prospective",
+        "slot": 4
+      },
+      {
+        "env_seed": 1750000197,
+        "episode_id": "pon-prospective-005",
+        "oracle_np_seed": 1750200197,
+        "policy_seed": 1750100197,
+        "role": "prospective",
+        "slot": 5
+      },
+      {
+        "env_seed": 1750000198,
+        "episode_id": "pon-prospective-006",
+        "oracle_np_seed": 1750200198,
+        "policy_seed": 1750100198,
+        "role": "prospective",
+        "slot": 6
+      },
+      {
+        "env_seed": 1750000199,
+        "episode_id": "pon-prospective-007",
+        "oracle_np_seed": 1750200199,
+        "policy_seed": 1750100199,
+        "role": "prospective",
+        "slot": 7
+      },
+      {
+        "env_seed": 1750000200,
+        "episode_id": "pon-prospective-008",
+        "oracle_np_seed": 1750200200,
+        "policy_seed": 1750100200,
+        "role": "prospective",
+        "slot": 8
+      },
+      {
+        "env_seed": 1750000201,
+        "episode_id": "pon-prospective-009",
+        "oracle_np_seed": 1750200201,
+        "policy_seed": 1750100201,
+        "role": "prospective",
+        "slot": 9
+      },
+      {
+        "env_seed": 1750000202,
+        "episode_id": "pon-prospective-010",
+        "oracle_np_seed": 1750200202,
+        "policy_seed": 1750100202,
+        "role": "prospective",
+        "slot": 10
+      },
+      {
+        "env_seed": 1750000203,
+        "episode_id": "pon-prospective-011",
+        "oracle_np_seed": 1750200203,
+        "policy_seed": 1750100203,
+        "role": "prospective",
+        "slot": 11
+      },
+      {
+        "env_seed": 1750000204,
+        "episode_id": "pon-prospective-012",
+        "oracle_np_seed": 1750200204,
+        "policy_seed": 1750100204,
+        "role": "prospective",
+        "slot": 12
+      },
+      {
+        "env_seed": 1750000205,
+        "episode_id": "pon-prospective-013",
+        "oracle_np_seed": 1750200205,
+        "policy_seed": 1750100205,
+        "role": "prospective",
+        "slot": 13
+      },
+      {
+        "env_seed": 1750000206,
+        "episode_id": "pon-prospective-014",
+        "oracle_np_seed": 1750200206,
+        "policy_seed": 1750100206,
+        "role": "prospective",
+        "slot": 14
+      },
+      {
+        "env_seed": 1750000207,
+        "episode_id": "pon-prospective-015",
+        "oracle_np_seed": 1750200207,
+        "policy_seed": 1750100207,
+        "role": "prospective",
+        "slot": 15
+      },
+      {
+        "env_seed": 1750000208,
+        "episode_id": "pon-prospective-016",
+        "oracle_np_seed": 1750200208,
+        "policy_seed": 1750100208,
+        "role": "prospective",
+        "slot": 16
+      },
+      {
+        "env_seed": 1750000209,
+        "episode_id": "pon-prospective-017",
+        "oracle_np_seed": 1750200209,
+        "policy_seed": 1750100209,
+        "role": "prospective",
+        "slot": 17
+      },
+      {
+        "env_seed": 1750000210,
+        "episode_id": "pon-prospective-018",
+        "oracle_np_seed": 1750200210,
+        "policy_seed": 1750100210,
+        "role": "prospective",
+        "slot": 18
+      },
+      {
+        "env_seed": 1750000211,
+        "episode_id": "pon-prospective-019",
+        "oracle_np_seed": 1750200211,
+        "policy_seed": 1750100211,
+        "role": "prospective",
+        "slot": 19
+      },
+      {
+        "env_seed": 1750000212,
+        "episode_id": "pon-prospective-020",
+        "oracle_np_seed": 1750200212,
+        "policy_seed": 1750100212,
+        "role": "prospective",
+        "slot": 20
+      },
+      {
+        "env_seed": 1750000213,
+        "episode_id": "pon-prospective-021",
+        "oracle_np_seed": 1750200213,
+        "policy_seed": 1750100213,
+        "role": "prospective",
+        "slot": 21
+      },
+      {
+        "env_seed": 1750000214,
+        "episode_id": "pon-prospective-022",
+        "oracle_np_seed": 1750200214,
+        "policy_seed": 1750100214,
+        "role": "prospective",
+        "slot": 22
+      },
+      {
+        "env_seed": 1750000215,
+        "episode_id": "pon-prospective-023",
+        "oracle_np_seed": 1750200215,
+        "policy_seed": 1750100215,
+        "role": "prospective",
+        "slot": 23
+      },
+      {
+        "env_seed": 1750000216,
+        "episode_id": "pon-prospective-024",
+        "oracle_np_seed": 1750200216,
+        "policy_seed": 1750100216,
+        "role": "prospective",
+        "slot": 24
+      },
+      {
+        "env_seed": 1750000217,
+        "episode_id": "pon-prospective-025",
+        "oracle_np_seed": 1750200217,
+        "policy_seed": 1750100217,
+        "role": "prospective",
+        "slot": 25
+      },
+      {
+        "env_seed": 1750000218,
+        "episode_id": "pon-prospective-026",
+        "oracle_np_seed": 1750200218,
+        "policy_seed": 1750100218,
+        "role": "prospective",
+        "slot": 26
+      },
+      {
+        "env_seed": 1750000219,
+        "episode_id": "pon-prospective-027",
+        "oracle_np_seed": 1750200219,
+        "policy_seed": 1750100219,
+        "role": "prospective",
+        "slot": 27
+      },
+      {
+        "env_seed": 1750000220,
+        "episode_id": "pon-prospective-028",
+        "oracle_np_seed": 1750200220,
+        "policy_seed": 1750100220,
+        "role": "prospective",
+        "slot": 28
+      },
+      {
+        "env_seed": 1750000221,
+        "episode_id": "pon-prospective-029",
+        "oracle_np_seed": 1750200221,
+        "policy_seed": 1750100221,
+        "role": "prospective",
+        "slot": 29
+      },
+      {
+        "env_seed": 1750000222,
+        "episode_id": "pon-prospective-030",
+        "oracle_np_seed": 1750200222,
+        "policy_seed": 1750100222,
+        "role": "prospective",
+        "slot": 30
+      },
+      {
+        "env_seed": 1750000223,
+        "episode_id": "pon-prospective-031",
+        "oracle_np_seed": 1750200223,
+        "policy_seed": 1750100223,
+        "role": "prospective",
+        "slot": 31
+      },
+      {
+        "env_seed": 1750000224,
+        "episode_id": "pon-prospective-032",
+        "oracle_np_seed": 1750200224,
+        "policy_seed": 1750100224,
+        "role": "prospective",
+        "slot": 32
+      },
+      {
+        "env_seed": 1750000225,
+        "episode_id": "pon-prospective-033",
+        "oracle_np_seed": 1750200225,
+        "policy_seed": 1750100225,
+        "role": "prospective",
+        "slot": 33
+      },
+      {
+        "env_seed": 1750000226,
+        "episode_id": "pon-prospective-034",
+        "oracle_np_seed": 1750200226,
+        "policy_seed": 1750100226,
+        "role": "prospective",
+        "slot": 34
+      },
+      {
+        "env_seed": 1750000227,
+        "episode_id": "pon-prospective-035",
+        "oracle_np_seed": 1750200227,
+        "policy_seed": 1750100227,
+        "role": "prospective",
+        "slot": 35
+      },
+      {
+        "env_seed": 1750000228,
+        "episode_id": "pon-prospective-036",
+        "oracle_np_seed": 1750200228,
+        "policy_seed": 1750100228,
+        "role": "prospective",
+        "slot": 36
+      },
+      {
+        "env_seed": 1750000229,
+        "episode_id": "pon-prospective-037",
+        "oracle_np_seed": 1750200229,
+        "policy_seed": 1750100229,
+        "role": "prospective",
+        "slot": 37
+      },
+      {
+        "env_seed": 1750000230,
+        "episode_id": "pon-prospective-038",
+        "oracle_np_seed": 1750200230,
+        "policy_seed": 1750100230,
+        "role": "prospective",
+        "slot": 38
+      },
+      {
+        "env_seed": 1750000231,
+        "episode_id": "pon-prospective-039",
+        "oracle_np_seed": 1750200231,
+        "policy_seed": 1750100231,
+        "role": "prospective",
+        "slot": 39
+      },
+      {
+        "env_seed": 1750000232,
+        "episode_id": "pon-prospective-040",
+        "oracle_np_seed": 1750200232,
+        "policy_seed": 1750100232,
+        "role": "prospective",
+        "slot": 40
+      },
+      {
+        "env_seed": 1750000233,
+        "episode_id": "pon-prospective-041",
+        "oracle_np_seed": 1750200233,
+        "policy_seed": 1750100233,
+        "role": "prospective",
+        "slot": 41
+      },
+      {
+        "env_seed": 1750000234,
+        "episode_id": "pon-prospective-042",
+        "oracle_np_seed": 1750200234,
+        "policy_seed": 1750100234,
+        "role": "prospective",
+        "slot": 42
+      },
+      {
+        "env_seed": 1750000235,
+        "episode_id": "pon-prospective-043",
+        "oracle_np_seed": 1750200235,
+        "policy_seed": 1750100235,
+        "role": "prospective",
+        "slot": 43
+      },
+      {
+        "env_seed": 1750000236,
+        "episode_id": "pon-prospective-044",
+        "oracle_np_seed": 1750200236,
+        "policy_seed": 1750100236,
+        "role": "prospective",
+        "slot": 44
+      },
+      {
+        "env_seed": 1750000237,
+        "episode_id": "pon-prospective-045",
+        "oracle_np_seed": 1750200237,
+        "policy_seed": 1750100237,
+        "role": "prospective",
+        "slot": 45
+      },
+      {
+        "env_seed": 1750000238,
+        "episode_id": "pon-prospective-046",
+        "oracle_np_seed": 1750200238,
+        "policy_seed": 1750100238,
+        "role": "prospective",
+        "slot": 46
+      },
+      {
+        "env_seed": 1750000239,
+        "episode_id": "pon-prospective-047",
+        "oracle_np_seed": 1750200239,
+        "policy_seed": 1750100239,
+        "role": "prospective",
+        "slot": 47
+      },
+      {
+        "env_seed": 1750000240,
+        "episode_id": "pon-prospective-048",
+        "oracle_np_seed": 1750200240,
+        "policy_seed": 1750100240,
+        "role": "prospective",
+        "slot": 48
+      },
+      {
+        "env_seed": 1750000241,
+        "episode_id": "pon-prospective-049",
+        "oracle_np_seed": 1750200241,
+        "policy_seed": 1750100241,
+        "role": "prospective",
+        "slot": 49
+      },
+      {
+        "env_seed": 1750000242,
+        "episode_id": "pon-prospective-050",
+        "oracle_np_seed": 1750200242,
+        "policy_seed": 1750100242,
+        "role": "prospective",
+        "slot": 50
+      },
+      {
+        "env_seed": 1750000243,
+        "episode_id": "pon-prospective-051",
+        "oracle_np_seed": 1750200243,
+        "policy_seed": 1750100243,
+        "role": "prospective",
+        "slot": 51
+      },
+      {
+        "env_seed": 1750000244,
+        "episode_id": "pon-prospective-052",
+        "oracle_np_seed": 1750200244,
+        "policy_seed": 1750100244,
+        "role": "prospective",
+        "slot": 52
+      },
+      {
+        "env_seed": 1750000245,
+        "episode_id": "pon-prospective-053",
+        "oracle_np_seed": 1750200245,
+        "policy_seed": 1750100245,
+        "role": "prospective",
+        "slot": 53
+      },
+      {
+        "env_seed": 1750000246,
+        "episode_id": "pon-prospective-054",
+        "oracle_np_seed": 1750200246,
+        "policy_seed": 1750100246,
+        "role": "prospective",
+        "slot": 54
+      },
+      {
+        "env_seed": 1750000247,
+        "episode_id": "pon-prospective-055",
+        "oracle_np_seed": 1750200247,
+        "policy_seed": 1750100247,
+        "role": "prospective",
+        "slot": 55
+      },
+      {
+        "env_seed": 1750000248,
+        "episode_id": "pon-prospective-056",
+        "oracle_np_seed": 1750200248,
+        "policy_seed": 1750100248,
+        "role": "prospective",
+        "slot": 56
+      },
+      {
+        "env_seed": 1750000249,
+        "episode_id": "pon-prospective-057",
+        "oracle_np_seed": 1750200249,
+        "policy_seed": 1750100249,
+        "role": "prospective",
+        "slot": 57
+      },
+      {
+        "env_seed": 1750000250,
+        "episode_id": "pon-prospective-058",
+        "oracle_np_seed": 1750200250,
+        "policy_seed": 1750100250,
+        "role": "prospective",
+        "slot": 58
+      },
+      {
+        "env_seed": 1750000251,
+        "episode_id": "pon-prospective-059",
+        "oracle_np_seed": 1750200251,
+        "policy_seed": 1750100251,
+        "role": "prospective",
+        "slot": 59
+      },
+      {
+        "env_seed": 1750000252,
+        "episode_id": "pon-prospective-060",
+        "oracle_np_seed": 1750200252,
+        "policy_seed": 1750100252,
+        "role": "prospective",
+        "slot": 60
+      },
+      {
+        "env_seed": 1750000253,
+        "episode_id": "pon-prospective-061",
+        "oracle_np_seed": 1750200253,
+        "policy_seed": 1750100253,
+        "role": "prospective",
+        "slot": 61
+      },
+      {
+        "env_seed": 1750000254,
+        "episode_id": "pon-prospective-062",
+        "oracle_np_seed": 1750200254,
+        "policy_seed": 1750100254,
+        "role": "prospective",
+        "slot": 62
+      },
+      {
+        "env_seed": 1750000255,
+        "episode_id": "pon-prospective-063",
+        "oracle_np_seed": 1750200255,
+        "policy_seed": 1750100255,
+        "role": "prospective",
+        "slot": 63
+      },
+      {
+        "env_seed": 1750000256,
+        "episode_id": "pon-prospective-064",
+        "oracle_np_seed": 1750200256,
+        "policy_seed": 1750100256,
+        "role": "prospective",
+        "slot": 64
+      },
+      {
+        "env_seed": 1750000257,
+        "episode_id": "pon-prospective-065",
+        "oracle_np_seed": 1750200257,
+        "policy_seed": 1750100257,
+        "role": "prospective",
+        "slot": 65
+      },
+      {
+        "env_seed": 1750000258,
+        "episode_id": "pon-prospective-066",
+        "oracle_np_seed": 1750200258,
+        "policy_seed": 1750100258,
+        "role": "prospective",
+        "slot": 66
+      },
+      {
+        "env_seed": 1750000259,
+        "episode_id": "pon-prospective-067",
+        "oracle_np_seed": 1750200259,
+        "policy_seed": 1750100259,
+        "role": "prospective",
+        "slot": 67
+      },
+      {
+        "env_seed": 1750000260,
+        "episode_id": "pon-prospective-068",
+        "oracle_np_seed": 1750200260,
+        "policy_seed": 1750100260,
+        "role": "prospective",
+        "slot": 68
+      },
+      {
+        "env_seed": 1750000261,
+        "episode_id": "pon-prospective-069",
+        "oracle_np_seed": 1750200261,
+        "policy_seed": 1750100261,
+        "role": "prospective",
+        "slot": 69
+      },
+      {
+        "env_seed": 1750000262,
+        "episode_id": "pon-prospective-070",
+        "oracle_np_seed": 1750200262,
+        "policy_seed": 1750100262,
+        "role": "prospective",
+        "slot": 70
+      },
+      {
+        "env_seed": 1750000263,
+        "episode_id": "pon-prospective-071",
+        "oracle_np_seed": 1750200263,
+        "policy_seed": 1750100263,
+        "role": "prospective",
+        "slot": 71
+      },
+      {
+        "env_seed": 1750000264,
+        "episode_id": "pon-prospective-072",
+        "oracle_np_seed": 1750200264,
+        "policy_seed": 1750100264,
+        "role": "prospective",
+        "slot": 72
+      },
+      {
+        "env_seed": 1750000265,
+        "episode_id": "pon-prospective-073",
+        "oracle_np_seed": 1750200265,
+        "policy_seed": 1750100265,
+        "role": "prospective",
+        "slot": 73
+      },
+      {
+        "env_seed": 1750000266,
+        "episode_id": "pon-prospective-074",
+        "oracle_np_seed": 1750200266,
+        "policy_seed": 1750100266,
+        "role": "prospective",
+        "slot": 74
+      },
+      {
+        "env_seed": 1750000267,
+        "episode_id": "pon-prospective-075",
+        "oracle_np_seed": 1750200267,
+        "policy_seed": 1750100267,
+        "role": "prospective",
+        "slot": 75
+      },
+      {
+        "env_seed": 1750000268,
+        "episode_id": "pon-prospective-076",
+        "oracle_np_seed": 1750200268,
+        "policy_seed": 1750100268,
+        "role": "prospective",
+        "slot": 76
+      },
+      {
+        "env_seed": 1750000269,
+        "episode_id": "pon-prospective-077",
+        "oracle_np_seed": 1750200269,
+        "policy_seed": 1750100269,
+        "role": "prospective",
+        "slot": 77
+      },
+      {
+        "env_seed": 1750000270,
+        "episode_id": "pon-prospective-078",
+        "oracle_np_seed": 1750200270,
+        "policy_seed": 1750100270,
+        "role": "prospective",
+        "slot": 78
+      },
+      {
+        "env_seed": 1750000271,
+        "episode_id": "pon-prospective-079",
+        "oracle_np_seed": 1750200271,
+        "policy_seed": 1750100271,
+        "role": "prospective",
+        "slot": 79
+      },
+      {
+        "env_seed": 1750000272,
+        "episode_id": "pon-prospective-080",
+        "oracle_np_seed": 1750200272,
+        "policy_seed": 1750100272,
+        "role": "prospective",
+        "slot": 80
+      },
+      {
+        "env_seed": 1750000273,
+        "episode_id": "pon-prospective-081",
+        "oracle_np_seed": 1750200273,
+        "policy_seed": 1750100273,
+        "role": "prospective",
+        "slot": 81
+      },
+      {
+        "env_seed": 1750000274,
+        "episode_id": "pon-prospective-082",
+        "oracle_np_seed": 1750200274,
+        "policy_seed": 1750100274,
+        "role": "prospective",
+        "slot": 82
+      },
+      {
+        "env_seed": 1750000275,
+        "episode_id": "pon-prospective-083",
+        "oracle_np_seed": 1750200275,
+        "policy_seed": 1750100275,
+        "role": "prospective",
+        "slot": 83
+      },
+      {
+        "env_seed": 1750000276,
+        "episode_id": "pon-prospective-084",
+        "oracle_np_seed": 1750200276,
+        "policy_seed": 1750100276,
+        "role": "prospective",
+        "slot": 84
+      },
+      {
+        "env_seed": 1750000277,
+        "episode_id": "pon-prospective-085",
+        "oracle_np_seed": 1750200277,
+        "policy_seed": 1750100277,
+        "role": "prospective",
+        "slot": 85
+      },
+      {
+        "env_seed": 1750000278,
+        "episode_id": "pon-prospective-086",
+        "oracle_np_seed": 1750200278,
+        "policy_seed": 1750100278,
+        "role": "prospective",
+        "slot": 86
+      },
+      {
+        "env_seed": 1750000279,
+        "episode_id": "pon-prospective-087",
+        "oracle_np_seed": 1750200279,
+        "policy_seed": 1750100279,
+        "role": "prospective",
+        "slot": 87
+      },
+      {
+        "env_seed": 1750000280,
+        "episode_id": "pon-prospective-088",
+        "oracle_np_seed": 1750200280,
+        "policy_seed": 1750100280,
+        "role": "prospective",
+        "slot": 88
+      },
+      {
+        "env_seed": 1750000281,
+        "episode_id": "pon-prospective-089",
+        "oracle_np_seed": 1750200281,
+        "policy_seed": 1750100281,
+        "role": "prospective",
+        "slot": 89
+      },
+      {
+        "env_seed": 1750000282,
+        "episode_id": "pon-prospective-090",
+        "oracle_np_seed": 1750200282,
+        "policy_seed": 1750100282,
+        "role": "prospective",
+        "slot": 90
+      },
+      {
+        "env_seed": 1750000283,
+        "episode_id": "pon-prospective-091",
+        "oracle_np_seed": 1750200283,
+        "policy_seed": 1750100283,
+        "role": "prospective",
+        "slot": 91
+      },
+      {
+        "env_seed": 1750000284,
+        "episode_id": "pon-prospective-092",
+        "oracle_np_seed": 1750200284,
+        "policy_seed": 1750100284,
+        "role": "prospective",
+        "slot": 92
+      },
+      {
+        "env_seed": 1750000285,
+        "episode_id": "pon-prospective-093",
+        "oracle_np_seed": 1750200285,
+        "policy_seed": 1750100285,
+        "role": "prospective",
+        "slot": 93
+      },
+      {
+        "env_seed": 1750000286,
+        "episode_id": "pon-prospective-094",
+        "oracle_np_seed": 1750200286,
+        "policy_seed": 1750100286,
+        "role": "prospective",
+        "slot": 94
+      },
+      {
+        "env_seed": 1750000287,
+        "episode_id": "pon-prospective-095",
+        "oracle_np_seed": 1750200287,
+        "policy_seed": 1750100287,
+        "role": "prospective",
+        "slot": 95
+      },
+      {
+        "env_seed": 1750000288,
+        "episode_id": "pon-prospective-096",
+        "oracle_np_seed": 1750200288,
+        "policy_seed": 1750100288,
+        "role": "prospective",
+        "slot": 96
+      },
+      {
+        "env_seed": 1750000289,
+        "episode_id": "pon-prospective-097",
+        "oracle_np_seed": 1750200289,
+        "policy_seed": 1750100289,
+        "role": "prospective",
+        "slot": 97
+      },
+      {
+        "env_seed": 1750000290,
+        "episode_id": "pon-prospective-098",
+        "oracle_np_seed": 1750200290,
+        "policy_seed": 1750100290,
+        "role": "prospective",
+        "slot": 98
+      },
+      {
+        "env_seed": 1750000291,
+        "episode_id": "pon-prospective-099",
+        "oracle_np_seed": 1750200291,
+        "policy_seed": 1750100291,
+        "role": "prospective",
+        "slot": 99
+      },
+      {
+        "env_seed": 1750000292,
+        "episode_id": "pon-prospective-100",
+        "oracle_np_seed": 1750200292,
+        "policy_seed": 1750100292,
+        "role": "prospective",
+        "slot": 100
+      },
+      {
+        "env_seed": 1750000293,
+        "episode_id": "pon-prospective-101",
+        "oracle_np_seed": 1750200293,
+        "policy_seed": 1750100293,
+        "role": "prospective",
+        "slot": 101
+      },
+      {
+        "env_seed": 1750000294,
+        "episode_id": "pon-prospective-102",
+        "oracle_np_seed": 1750200294,
+        "policy_seed": 1750100294,
+        "role": "prospective",
+        "slot": 102
+      },
+      {
+        "env_seed": 1750000295,
+        "episode_id": "pon-prospective-103",
+        "oracle_np_seed": 1750200295,
+        "policy_seed": 1750100295,
+        "role": "prospective",
+        "slot": 103
+      },
+      {
+        "env_seed": 1750000296,
+        "episode_id": "pon-prospective-104",
+        "oracle_np_seed": 1750200296,
+        "policy_seed": 1750100296,
+        "role": "prospective",
+        "slot": 104
+      },
+      {
+        "env_seed": 1750000297,
+        "episode_id": "pon-prospective-105",
+        "oracle_np_seed": 1750200297,
+        "policy_seed": 1750100297,
+        "role": "prospective",
+        "slot": 105
+      },
+      {
+        "env_seed": 1750000298,
+        "episode_id": "pon-prospective-106",
+        "oracle_np_seed": 1750200298,
+        "policy_seed": 1750100298,
+        "role": "prospective",
+        "slot": 106
+      },
+      {
+        "env_seed": 1750000299,
+        "episode_id": "pon-prospective-107",
+        "oracle_np_seed": 1750200299,
+        "policy_seed": 1750100299,
+        "role": "prospective",
+        "slot": 107
+      },
+      {
+        "env_seed": 1750000300,
+        "episode_id": "pon-prospective-108",
+        "oracle_np_seed": 1750200300,
+        "policy_seed": 1750100300,
+        "role": "prospective",
+        "slot": 108
+      },
+      {
+        "env_seed": 1750000301,
+        "episode_id": "pon-prospective-109",
+        "oracle_np_seed": 1750200301,
+        "policy_seed": 1750100301,
+        "role": "prospective",
+        "slot": 109
+      },
+      {
+        "env_seed": 1750000302,
+        "episode_id": "pon-prospective-110",
+        "oracle_np_seed": 1750200302,
+        "policy_seed": 1750100302,
+        "role": "prospective",
+        "slot": 110
+      },
+      {
+        "env_seed": 1750000303,
+        "episode_id": "pon-prospective-111",
+        "oracle_np_seed": 1750200303,
+        "policy_seed": 1750100303,
+        "role": "prospective",
+        "slot": 111
+      },
+      {
+        "env_seed": 1750000304,
+        "episode_id": "pon-prospective-112",
+        "oracle_np_seed": 1750200304,
+        "policy_seed": 1750100304,
+        "role": "prospective",
+        "slot": 112
+      },
+      {
+        "env_seed": 1750000305,
+        "episode_id": "pon-prospective-113",
+        "oracle_np_seed": 1750200305,
+        "policy_seed": 1750100305,
+        "role": "prospective",
+        "slot": 113
+      },
+      {
+        "env_seed": 1750000306,
+        "episode_id": "pon-prospective-114",
+        "oracle_np_seed": 1750200306,
+        "policy_seed": 1750100306,
+        "role": "prospective",
+        "slot": 114
+      },
+      {
+        "env_seed": 1750000307,
+        "episode_id": "pon-prospective-115",
+        "oracle_np_seed": 1750200307,
+        "policy_seed": 1750100307,
+        "role": "prospective",
+        "slot": 115
+      },
+      {
+        "env_seed": 1750000308,
+        "episode_id": "pon-prospective-116",
+        "oracle_np_seed": 1750200308,
+        "policy_seed": 1750100308,
+        "role": "prospective",
+        "slot": 116
+      },
+      {
+        "env_seed": 1750000309,
+        "episode_id": "pon-prospective-117",
+        "oracle_np_seed": 1750200309,
+        "policy_seed": 1750100309,
+        "role": "prospective",
+        "slot": 117
+      },
+      {
+        "env_seed": 1750000310,
+        "episode_id": "pon-prospective-118",
+        "oracle_np_seed": 1750200310,
+        "policy_seed": 1750100310,
+        "role": "prospective",
+        "slot": 118
+      },
+      {
+        "env_seed": 1750000311,
+        "episode_id": "pon-prospective-119",
+        "oracle_np_seed": 1750200311,
+        "policy_seed": 1750100311,
+        "role": "prospective",
+        "slot": 119
+      },
+      {
+        "env_seed": 1750000312,
+        "episode_id": "pon-prospective-120",
+        "oracle_np_seed": 1750200312,
+        "policy_seed": 1750100312,
+        "role": "prospective",
+        "slot": 120
+      },
+      {
+        "env_seed": 1750000313,
+        "episode_id": "pon-prospective-121",
+        "oracle_np_seed": 1750200313,
+        "policy_seed": 1750100313,
+        "role": "prospective",
+        "slot": 121
+      },
+      {
+        "env_seed": 1750000314,
+        "episode_id": "pon-prospective-122",
+        "oracle_np_seed": 1750200314,
+        "policy_seed": 1750100314,
+        "role": "prospective",
+        "slot": 122
+      },
+      {
+        "env_seed": 1750000315,
+        "episode_id": "pon-prospective-123",
+        "oracle_np_seed": 1750200315,
+        "policy_seed": 1750100315,
+        "role": "prospective",
+        "slot": 123
+      },
+      {
+        "env_seed": 1750000316,
+        "episode_id": "pon-prospective-124",
+        "oracle_np_seed": 1750200316,
+        "policy_seed": 1750100316,
+        "role": "prospective",
+        "slot": 124
+      },
+      {
+        "env_seed": 1750000317,
+        "episode_id": "pon-prospective-125",
+        "oracle_np_seed": 1750200317,
+        "policy_seed": 1750100317,
+        "role": "prospective",
+        "slot": 125
+      },
+      {
+        "env_seed": 1750000318,
+        "episode_id": "pon-prospective-126",
+        "oracle_np_seed": 1750200318,
+        "policy_seed": 1750100318,
+        "role": "prospective",
+        "slot": 126
+      },
+      {
+        "env_seed": 1750000319,
+        "episode_id": "pon-prospective-127",
+        "oracle_np_seed": 1750200319,
+        "policy_seed": 1750100319,
+        "role": "prospective",
+        "slot": 127
+      },
+      {
+        "env_seed": 1750000320,
+        "episode_id": "pon-prospective-128",
+        "oracle_np_seed": 1750200320,
+        "policy_seed": 1750100320,
+        "role": "prospective",
+        "slot": 128
+      },
+      {
+        "env_seed": 1750000321,
+        "episode_id": "pon-prospective-129",
+        "oracle_np_seed": 1750200321,
+        "policy_seed": 1750100321,
+        "role": "prospective",
+        "slot": 129
+      },
+      {
+        "env_seed": 1750000322,
+        "episode_id": "pon-prospective-130",
+        "oracle_np_seed": 1750200322,
+        "policy_seed": 1750100322,
+        "role": "prospective",
+        "slot": 130
+      },
+      {
+        "env_seed": 1750000323,
+        "episode_id": "pon-prospective-131",
+        "oracle_np_seed": 1750200323,
+        "policy_seed": 1750100323,
+        "role": "prospective",
+        "slot": 131
+      },
+      {
+        "env_seed": 1750000324,
+        "episode_id": "pon-prospective-132",
+        "oracle_np_seed": 1750200324,
+        "policy_seed": 1750100324,
+        "role": "prospective",
+        "slot": 132
+      },
+      {
+        "env_seed": 1750000325,
+        "episode_id": "pon-prospective-133",
+        "oracle_np_seed": 1750200325,
+        "policy_seed": 1750100325,
+        "role": "prospective",
+        "slot": 133
+      },
+      {
+        "env_seed": 1750000326,
+        "episode_id": "pon-prospective-134",
+        "oracle_np_seed": 1750200326,
+        "policy_seed": 1750100326,
+        "role": "prospective",
+        "slot": 134
+      },
+      {
+        "env_seed": 1750000327,
+        "episode_id": "pon-prospective-135",
+        "oracle_np_seed": 1750200327,
+        "policy_seed": 1750100327,
+        "role": "prospective",
+        "slot": 135
+      },
+      {
+        "env_seed": 1750000328,
+        "episode_id": "pon-prospective-136",
+        "oracle_np_seed": 1750200328,
+        "policy_seed": 1750100328,
+        "role": "prospective",
+        "slot": 136
+      },
+      {
+        "env_seed": 1750000329,
+        "episode_id": "pon-prospective-137",
+        "oracle_np_seed": 1750200329,
+        "policy_seed": 1750100329,
+        "role": "prospective",
+        "slot": 137
+      },
+      {
+        "env_seed": 1750000330,
+        "episode_id": "pon-prospective-138",
+        "oracle_np_seed": 1750200330,
+        "policy_seed": 1750100330,
+        "role": "prospective",
+        "slot": 138
+      },
+      {
+        "env_seed": 1750000331,
+        "episode_id": "pon-prospective-139",
+        "oracle_np_seed": 1750200331,
+        "policy_seed": 1750100331,
+        "role": "prospective",
+        "slot": 139
+      },
+      {
+        "env_seed": 1750000332,
+        "episode_id": "pon-prospective-140",
+        "oracle_np_seed": 1750200332,
+        "policy_seed": 1750100332,
+        "role": "prospective",
+        "slot": 140
+      },
+      {
+        "env_seed": 1750000333,
+        "episode_id": "pon-prospective-141",
+        "oracle_np_seed": 1750200333,
+        "policy_seed": 1750100333,
+        "role": "prospective",
+        "slot": 141
+      },
+      {
+        "env_seed": 1750000334,
+        "episode_id": "pon-prospective-142",
+        "oracle_np_seed": 1750200334,
+        "policy_seed": 1750100334,
+        "role": "prospective",
+        "slot": 142
+      },
+      {
+        "env_seed": 1750000335,
+        "episode_id": "pon-prospective-143",
+        "oracle_np_seed": 1750200335,
+        "policy_seed": 1750100335,
+        "role": "prospective",
+        "slot": 143
+      },
+      {
+        "env_seed": 1750000336,
+        "episode_id": "pon-prospective-144",
+        "oracle_np_seed": 1750200336,
+        "policy_seed": 1750100336,
+        "role": "prospective",
+        "slot": 144
+      },
+      {
+        "env_seed": 1750000337,
+        "episode_id": "pon-prospective-145",
+        "oracle_np_seed": 1750200337,
+        "policy_seed": 1750100337,
+        "role": "prospective",
+        "slot": 145
+      },
+      {
+        "env_seed": 1750000338,
+        "episode_id": "pon-prospective-146",
+        "oracle_np_seed": 1750200338,
+        "policy_seed": 1750100338,
+        "role": "prospective",
+        "slot": 146
+      },
+      {
+        "env_seed": 1750000339,
+        "episode_id": "pon-prospective-147",
+        "oracle_np_seed": 1750200339,
+        "policy_seed": 1750100339,
+        "role": "prospective",
+        "slot": 147
+      },
+      {
+        "env_seed": 1750000340,
+        "episode_id": "pon-prospective-148",
+        "oracle_np_seed": 1750200340,
+        "policy_seed": 1750100340,
+        "role": "prospective",
+        "slot": 148
+      },
+      {
+        "env_seed": 1750000341,
+        "episode_id": "pon-prospective-149",
+        "oracle_np_seed": 1750200341,
+        "policy_seed": 1750100341,
+        "role": "prospective",
+        "slot": 149
+      },
+      {
+        "env_seed": 1750000342,
+        "episode_id": "pon-prospective-150",
+        "oracle_np_seed": 1750200342,
+        "policy_seed": 1750100342,
+        "role": "prospective",
+        "slot": 150
+      },
+      {
+        "env_seed": 1750000343,
+        "episode_id": "pon-prospective-151",
+        "oracle_np_seed": 1750200343,
+        "policy_seed": 1750100343,
+        "role": "prospective",
+        "slot": 151
+      },
+      {
+        "env_seed": 1750000344,
+        "episode_id": "pon-prospective-152",
+        "oracle_np_seed": 1750200344,
+        "policy_seed": 1750100344,
+        "role": "prospective",
+        "slot": 152
+      },
+      {
+        "env_seed": 1750000345,
+        "episode_id": "pon-prospective-153",
+        "oracle_np_seed": 1750200345,
+        "policy_seed": 1750100345,
+        "role": "prospective",
+        "slot": 153
+      },
+      {
+        "env_seed": 1750000346,
+        "episode_id": "pon-prospective-154",
+        "oracle_np_seed": 1750200346,
+        "policy_seed": 1750100346,
+        "role": "prospective",
+        "slot": 154
+      },
+      {
+        "env_seed": 1750000347,
+        "episode_id": "pon-prospective-155",
+        "oracle_np_seed": 1750200347,
+        "policy_seed": 1750100347,
+        "role": "prospective",
+        "slot": 155
+      },
+      {
+        "env_seed": 1750000348,
+        "episode_id": "pon-prospective-156",
+        "oracle_np_seed": 1750200348,
+        "policy_seed": 1750100348,
+        "role": "prospective",
+        "slot": 156
+      },
+      {
+        "env_seed": 1750000349,
+        "episode_id": "pon-prospective-157",
+        "oracle_np_seed": 1750200349,
+        "policy_seed": 1750100349,
+        "role": "prospective",
+        "slot": 157
+      },
+      {
+        "env_seed": 1750000350,
+        "episode_id": "pon-prospective-158",
+        "oracle_np_seed": 1750200350,
+        "policy_seed": 1750100350,
+        "role": "prospective",
+        "slot": 158
+      },
+      {
+        "env_seed": 1750000351,
+        "episode_id": "pon-prospective-159",
+        "oracle_np_seed": 1750200351,
+        "policy_seed": 1750100351,
+        "role": "prospective",
+        "slot": 159
+      },
+      {
+        "env_seed": 1750000352,
+        "episode_id": "pon-prospective-160",
+        "oracle_np_seed": 1750200352,
+        "policy_seed": 1750100352,
+        "role": "prospective",
+        "slot": 160
+      },
+      {
+        "env_seed": 1750000353,
+        "episode_id": "pon-prospective-161",
+        "oracle_np_seed": 1750200353,
+        "policy_seed": 1750100353,
+        "role": "prospective",
+        "slot": 161
+      },
+      {
+        "env_seed": 1750000354,
+        "episode_id": "pon-prospective-162",
+        "oracle_np_seed": 1750200354,
+        "policy_seed": 1750100354,
+        "role": "prospective",
+        "slot": 162
+      },
+      {
+        "env_seed": 1750000355,
+        "episode_id": "pon-prospective-163",
+        "oracle_np_seed": 1750200355,
+        "policy_seed": 1750100355,
+        "role": "prospective",
+        "slot": 163
+      },
+      {
+        "env_seed": 1750000356,
+        "episode_id": "pon-prospective-164",
+        "oracle_np_seed": 1750200356,
+        "policy_seed": 1750100356,
+        "role": "prospective",
+        "slot": 164
+      },
+      {
+        "env_seed": 1750000357,
+        "episode_id": "pon-prospective-165",
+        "oracle_np_seed": 1750200357,
+        "policy_seed": 1750100357,
+        "role": "prospective",
+        "slot": 165
+      },
+      {
+        "env_seed": 1750000358,
+        "episode_id": "pon-prospective-166",
+        "oracle_np_seed": 1750200358,
+        "policy_seed": 1750100358,
+        "role": "prospective",
+        "slot": 166
+      },
+      {
+        "env_seed": 1750000359,
+        "episode_id": "pon-prospective-167",
+        "oracle_np_seed": 1750200359,
+        "policy_seed": 1750100359,
+        "role": "prospective",
+        "slot": 167
+      },
+      {
+        "env_seed": 1750000360,
+        "episode_id": "pon-prospective-168",
+        "oracle_np_seed": 1750200360,
+        "policy_seed": 1750100360,
+        "role": "prospective",
+        "slot": 168
+      },
+      {
+        "env_seed": 1750000361,
+        "episode_id": "pon-prospective-169",
+        "oracle_np_seed": 1750200361,
+        "policy_seed": 1750100361,
+        "role": "prospective",
+        "slot": 169
+      },
+      {
+        "env_seed": 1750000362,
+        "episode_id": "pon-prospective-170",
+        "oracle_np_seed": 1750200362,
+        "policy_seed": 1750100362,
+        "role": "prospective",
+        "slot": 170
+      },
+      {
+        "env_seed": 1750000363,
+        "episode_id": "pon-prospective-171",
+        "oracle_np_seed": 1750200363,
+        "policy_seed": 1750100363,
+        "role": "prospective",
+        "slot": 171
+      },
+      {
+        "env_seed": 1750000364,
+        "episode_id": "pon-prospective-172",
+        "oracle_np_seed": 1750200364,
+        "policy_seed": 1750100364,
+        "role": "prospective",
+        "slot": 172
+      },
+      {
+        "env_seed": 1750000365,
+        "episode_id": "pon-prospective-173",
+        "oracle_np_seed": 1750200365,
+        "policy_seed": 1750100365,
+        "role": "prospective",
+        "slot": 173
+      },
+      {
+        "env_seed": 1750000366,
+        "episode_id": "pon-prospective-174",
+        "oracle_np_seed": 1750200366,
+        "policy_seed": 1750100366,
+        "role": "prospective",
+        "slot": 174
+      },
+      {
+        "env_seed": 1750000367,
+        "episode_id": "pon-prospective-175",
+        "oracle_np_seed": 1750200367,
+        "policy_seed": 1750100367,
+        "role": "prospective",
+        "slot": 175
+      },
+      {
+        "env_seed": 1750000368,
+        "episode_id": "pon-prospective-176",
+        "oracle_np_seed": 1750200368,
+        "policy_seed": 1750100368,
+        "role": "prospective",
+        "slot": 176
+      },
+      {
+        "env_seed": 1750000369,
+        "episode_id": "pon-prospective-177",
+        "oracle_np_seed": 1750200369,
+        "policy_seed": 1750100369,
+        "role": "prospective",
+        "slot": 177
+      },
+      {
+        "env_seed": 1750000370,
+        "episode_id": "pon-prospective-178",
+        "oracle_np_seed": 1750200370,
+        "policy_seed": 1750100370,
+        "role": "prospective",
+        "slot": 178
+      },
+      {
+        "env_seed": 1750000371,
+        "episode_id": "pon-prospective-179",
+        "oracle_np_seed": 1750200371,
+        "policy_seed": 1750100371,
+        "role": "prospective",
+        "slot": 179
+      }
+    ],
+    "replacement": [
+      {
+        "env_seed": 1750000372,
+        "episode_id": "pon-replacement-000",
+        "oracle_np_seed": 1750200372,
+        "policy_seed": 1750100372,
+        "role": "replacement",
+        "slot": 0
+      },
+      {
+        "env_seed": 1750000373,
+        "episode_id": "pon-replacement-001",
+        "oracle_np_seed": 1750200373,
+        "policy_seed": 1750100373,
+        "role": "replacement",
+        "slot": 1
+      },
+      {
+        "env_seed": 1750000374,
+        "episode_id": "pon-replacement-002",
+        "oracle_np_seed": 1750200374,
+        "policy_seed": 1750100374,
+        "role": "replacement",
+        "slot": 2
+      },
+      {
+        "env_seed": 1750000375,
+        "episode_id": "pon-replacement-003",
+        "oracle_np_seed": 1750200375,
+        "policy_seed": 1750100375,
+        "role": "replacement",
+        "slot": 3
+      },
+      {
+        "env_seed": 1750000376,
+        "episode_id": "pon-replacement-004",
+        "oracle_np_seed": 1750200376,
+        "policy_seed": 1750100376,
+        "role": "replacement",
+        "slot": 4
+      },
+      {
+        "env_seed": 1750000377,
+        "episode_id": "pon-replacement-005",
+        "oracle_np_seed": 1750200377,
+        "policy_seed": 1750100377,
+        "role": "replacement",
+        "slot": 5
+      },
+      {
+        "env_seed": 1750000378,
+        "episode_id": "pon-replacement-006",
+        "oracle_np_seed": 1750200378,
+        "policy_seed": 1750100378,
+        "role": "replacement",
+        "slot": 6
+      },
+      {
+        "env_seed": 1750000379,
+        "episode_id": "pon-replacement-007",
+        "oracle_np_seed": 1750200379,
+        "policy_seed": 1750100379,
+        "role": "replacement",
+        "slot": 7
+      },
+      {
+        "env_seed": 1750000380,
+        "episode_id": "pon-replacement-008",
+        "oracle_np_seed": 1750200380,
+        "policy_seed": 1750100380,
+        "role": "replacement",
+        "slot": 8
+      },
+      {
+        "env_seed": 1750000381,
+        "episode_id": "pon-replacement-009",
+        "oracle_np_seed": 1750200381,
+        "policy_seed": 1750100381,
+        "role": "replacement",
+        "slot": 9
+      },
+      {
+        "env_seed": 1750000382,
+        "episode_id": "pon-replacement-010",
+        "oracle_np_seed": 1750200382,
+        "policy_seed": 1750100382,
+        "role": "replacement",
+        "slot": 10
+      },
+      {
+        "env_seed": 1750000383,
+        "episode_id": "pon-replacement-011",
+        "oracle_np_seed": 1750200383,
+        "policy_seed": 1750100383,
+        "role": "replacement",
+        "slot": 11
+      },
+      {
+        "env_seed": 1750000384,
+        "episode_id": "pon-replacement-012",
+        "oracle_np_seed": 1750200384,
+        "policy_seed": 1750100384,
+        "role": "replacement",
+        "slot": 12
+      },
+      {
+        "env_seed": 1750000385,
+        "episode_id": "pon-replacement-013",
+        "oracle_np_seed": 1750200385,
+        "policy_seed": 1750100385,
+        "role": "replacement",
+        "slot": 13
+      },
+      {
+        "env_seed": 1750000386,
+        "episode_id": "pon-replacement-014",
+        "oracle_np_seed": 1750200386,
+        "policy_seed": 1750100386,
+        "role": "replacement",
+        "slot": 14
+      },
+      {
+        "env_seed": 1750000387,
+        "episode_id": "pon-replacement-015",
+        "oracle_np_seed": 1750200387,
+        "policy_seed": 1750100387,
+        "role": "replacement",
+        "slot": 15
+      },
+      {
+        "env_seed": 1750000388,
+        "episode_id": "pon-replacement-016",
+        "oracle_np_seed": 1750200388,
+        "policy_seed": 1750100388,
+        "role": "replacement",
+        "slot": 16
+      },
+      {
+        "env_seed": 1750000389,
+        "episode_id": "pon-replacement-017",
+        "oracle_np_seed": 1750200389,
+        "policy_seed": 1750100389,
+        "role": "replacement",
+        "slot": 17
+      },
+      {
+        "env_seed": 1750000390,
+        "episode_id": "pon-replacement-018",
+        "oracle_np_seed": 1750200390,
+        "policy_seed": 1750100390,
+        "role": "replacement",
+        "slot": 18
+      },
+      {
+        "env_seed": 1750000391,
+        "episode_id": "pon-replacement-019",
+        "oracle_np_seed": 1750200391,
+        "policy_seed": 1750100391,
+        "role": "replacement",
+        "slot": 19
+      },
+      {
+        "env_seed": 1750000392,
+        "episode_id": "pon-replacement-020",
+        "oracle_np_seed": 1750200392,
+        "policy_seed": 1750100392,
+        "role": "replacement",
+        "slot": 20
+      },
+      {
+        "env_seed": 1750000393,
+        "episode_id": "pon-replacement-021",
+        "oracle_np_seed": 1750200393,
+        "policy_seed": 1750100393,
+        "role": "replacement",
+        "slot": 21
+      },
+      {
+        "env_seed": 1750000394,
+        "episode_id": "pon-replacement-022",
+        "oracle_np_seed": 1750200394,
+        "policy_seed": 1750100394,
+        "role": "replacement",
+        "slot": 22
+      },
+      {
+        "env_seed": 1750000395,
+        "episode_id": "pon-replacement-023",
+        "oracle_np_seed": 1750200395,
+        "policy_seed": 1750100395,
+        "role": "replacement",
+        "slot": 23
+      },
+      {
+        "env_seed": 1750000396,
+        "episode_id": "pon-replacement-024",
+        "oracle_np_seed": 1750200396,
+        "policy_seed": 1750100396,
+        "role": "replacement",
+        "slot": 24
+      },
+      {
+        "env_seed": 1750000397,
+        "episode_id": "pon-replacement-025",
+        "oracle_np_seed": 1750200397,
+        "policy_seed": 1750100397,
+        "role": "replacement",
+        "slot": 25
+      },
+      {
+        "env_seed": 1750000398,
+        "episode_id": "pon-replacement-026",
+        "oracle_np_seed": 1750200398,
+        "policy_seed": 1750100398,
+        "role": "replacement",
+        "slot": 26
+      },
+      {
+        "env_seed": 1750000399,
+        "episode_id": "pon-replacement-027",
+        "oracle_np_seed": 1750200399,
+        "policy_seed": 1750100399,
+        "role": "replacement",
+        "slot": 27
+      },
+      {
+        "env_seed": 1750000400,
+        "episode_id": "pon-replacement-028",
+        "oracle_np_seed": 1750200400,
+        "policy_seed": 1750100400,
+        "role": "replacement",
+        "slot": 28
+      },
+      {
+        "env_seed": 1750000401,
+        "episode_id": "pon-replacement-029",
+        "oracle_np_seed": 1750200401,
+        "policy_seed": 1750100401,
+        "role": "replacement",
+        "slot": 29
+      },
+      {
+        "env_seed": 1750000402,
+        "episode_id": "pon-replacement-030",
+        "oracle_np_seed": 1750200402,
+        "policy_seed": 1750100402,
+        "role": "replacement",
+        "slot": 30
+      },
+      {
+        "env_seed": 1750000403,
+        "episode_id": "pon-replacement-031",
+        "oracle_np_seed": 1750200403,
+        "policy_seed": 1750100403,
+        "role": "replacement",
+        "slot": 31
+      },
+      {
+        "env_seed": 1750000404,
+        "episode_id": "pon-replacement-032",
+        "oracle_np_seed": 1750200404,
+        "policy_seed": 1750100404,
+        "role": "replacement",
+        "slot": 32
+      },
+      {
+        "env_seed": 1750000405,
+        "episode_id": "pon-replacement-033",
+        "oracle_np_seed": 1750200405,
+        "policy_seed": 1750100405,
+        "role": "replacement",
+        "slot": 33
+      },
+      {
+        "env_seed": 1750000406,
+        "episode_id": "pon-replacement-034",
+        "oracle_np_seed": 1750200406,
+        "policy_seed": 1750100406,
+        "role": "replacement",
+        "slot": 34
+      },
+      {
+        "env_seed": 1750000407,
+        "episode_id": "pon-replacement-035",
+        "oracle_np_seed": 1750200407,
+        "policy_seed": 1750100407,
+        "role": "replacement",
+        "slot": 35
+      },
+      {
+        "env_seed": 1750000408,
+        "episode_id": "pon-replacement-036",
+        "oracle_np_seed": 1750200408,
+        "policy_seed": 1750100408,
+        "role": "replacement",
+        "slot": 36
+      },
+      {
+        "env_seed": 1750000409,
+        "episode_id": "pon-replacement-037",
+        "oracle_np_seed": 1750200409,
+        "policy_seed": 1750100409,
+        "role": "replacement",
+        "slot": 37
+      },
+      {
+        "env_seed": 1750000410,
+        "episode_id": "pon-replacement-038",
+        "oracle_np_seed": 1750200410,
+        "policy_seed": 1750100410,
+        "role": "replacement",
+        "slot": 38
+      },
+      {
+        "env_seed": 1750000411,
+        "episode_id": "pon-replacement-039",
+        "oracle_np_seed": 1750200411,
+        "policy_seed": 1750100411,
+        "role": "replacement",
+        "slot": 39
+      },
+      {
+        "env_seed": 1750000412,
+        "episode_id": "pon-replacement-040",
+        "oracle_np_seed": 1750200412,
+        "policy_seed": 1750100412,
+        "role": "replacement",
+        "slot": 40
+      },
+      {
+        "env_seed": 1750000413,
+        "episode_id": "pon-replacement-041",
+        "oracle_np_seed": 1750200413,
+        "policy_seed": 1750100413,
+        "role": "replacement",
+        "slot": 41
+      },
+      {
+        "env_seed": 1750000414,
+        "episode_id": "pon-replacement-042",
+        "oracle_np_seed": 1750200414,
+        "policy_seed": 1750100414,
+        "role": "replacement",
+        "slot": 42
+      },
+      {
+        "env_seed": 1750000415,
+        "episode_id": "pon-replacement-043",
+        "oracle_np_seed": 1750200415,
+        "policy_seed": 1750100415,
+        "role": "replacement",
+        "slot": 43
+      },
+      {
+        "env_seed": 1750000416,
+        "episode_id": "pon-replacement-044",
+        "oracle_np_seed": 1750200416,
+        "policy_seed": 1750100416,
+        "role": "replacement",
+        "slot": 44
+      },
+      {
+        "env_seed": 1750000417,
+        "episode_id": "pon-replacement-045",
+        "oracle_np_seed": 1750200417,
+        "policy_seed": 1750100417,
+        "role": "replacement",
+        "slot": 45
+      },
+      {
+        "env_seed": 1750000418,
+        "episode_id": "pon-replacement-046",
+        "oracle_np_seed": 1750200418,
+        "policy_seed": 1750100418,
+        "role": "replacement",
+        "slot": 46
+      },
+      {
+        "env_seed": 1750000419,
+        "episode_id": "pon-replacement-047",
+        "oracle_np_seed": 1750200419,
+        "policy_seed": 1750100419,
+        "role": "replacement",
+        "slot": 47
+      }
+    ],
+    "selection": [
+      {
+        "env_seed": 1750000132,
+        "episode_id": "pon-selection-000",
+        "oracle_np_seed": 1750200132,
+        "policy_seed": 1750100132,
+        "role": "selection",
+        "slot": 0
+      },
+      {
+        "env_seed": 1750000133,
+        "episode_id": "pon-selection-001",
+        "oracle_np_seed": 1750200133,
+        "policy_seed": 1750100133,
+        "role": "selection",
+        "slot": 1
+      },
+      {
+        "env_seed": 1750000134,
+        "episode_id": "pon-selection-002",
+        "oracle_np_seed": 1750200134,
+        "policy_seed": 1750100134,
+        "role": "selection",
+        "slot": 2
+      },
+      {
+        "env_seed": 1750000135,
+        "episode_id": "pon-selection-003",
+        "oracle_np_seed": 1750200135,
+        "policy_seed": 1750100135,
+        "role": "selection",
+        "slot": 3
+      },
+      {
+        "env_seed": 1750000136,
+        "episode_id": "pon-selection-004",
+        "oracle_np_seed": 1750200136,
+        "policy_seed": 1750100136,
+        "role": "selection",
+        "slot": 4
+      },
+      {
+        "env_seed": 1750000137,
+        "episode_id": "pon-selection-005",
+        "oracle_np_seed": 1750200137,
+        "policy_seed": 1750100137,
+        "role": "selection",
+        "slot": 5
+      },
+      {
+        "env_seed": 1750000138,
+        "episode_id": "pon-selection-006",
+        "oracle_np_seed": 1750200138,
+        "policy_seed": 1750100138,
+        "role": "selection",
+        "slot": 6
+      },
+      {
+        "env_seed": 1750000139,
+        "episode_id": "pon-selection-007",
+        "oracle_np_seed": 1750200139,
+        "policy_seed": 1750100139,
+        "role": "selection",
+        "slot": 7
+      },
+      {
+        "env_seed": 1750000140,
+        "episode_id": "pon-selection-008",
+        "oracle_np_seed": 1750200140,
+        "policy_seed": 1750100140,
+        "role": "selection",
+        "slot": 8
+      },
+      {
+        "env_seed": 1750000141,
+        "episode_id": "pon-selection-009",
+        "oracle_np_seed": 1750200141,
+        "policy_seed": 1750100141,
+        "role": "selection",
+        "slot": 9
+      },
+      {
+        "env_seed": 1750000142,
+        "episode_id": "pon-selection-010",
+        "oracle_np_seed": 1750200142,
+        "policy_seed": 1750100142,
+        "role": "selection",
+        "slot": 10
+      },
+      {
+        "env_seed": 1750000143,
+        "episode_id": "pon-selection-011",
+        "oracle_np_seed": 1750200143,
+        "policy_seed": 1750100143,
+        "role": "selection",
+        "slot": 11
+      },
+      {
+        "env_seed": 1750000144,
+        "episode_id": "pon-selection-012",
+        "oracle_np_seed": 1750200144,
+        "policy_seed": 1750100144,
+        "role": "selection",
+        "slot": 12
+      },
+      {
+        "env_seed": 1750000145,
+        "episode_id": "pon-selection-013",
+        "oracle_np_seed": 1750200145,
+        "policy_seed": 1750100145,
+        "role": "selection",
+        "slot": 13
+      },
+      {
+        "env_seed": 1750000146,
+        "episode_id": "pon-selection-014",
+        "oracle_np_seed": 1750200146,
+        "policy_seed": 1750100146,
+        "role": "selection",
+        "slot": 14
+      },
+      {
+        "env_seed": 1750000147,
+        "episode_id": "pon-selection-015",
+        "oracle_np_seed": 1750200147,
+        "policy_seed": 1750100147,
+        "role": "selection",
+        "slot": 15
+      },
+      {
+        "env_seed": 1750000148,
+        "episode_id": "pon-selection-016",
+        "oracle_np_seed": 1750200148,
+        "policy_seed": 1750100148,
+        "role": "selection",
+        "slot": 16
+      },
+      {
+        "env_seed": 1750000149,
+        "episode_id": "pon-selection-017",
+        "oracle_np_seed": 1750200149,
+        "policy_seed": 1750100149,
+        "role": "selection",
+        "slot": 17
+      },
+      {
+        "env_seed": 1750000150,
+        "episode_id": "pon-selection-018",
+        "oracle_np_seed": 1750200150,
+        "policy_seed": 1750100150,
+        "role": "selection",
+        "slot": 18
+      },
+      {
+        "env_seed": 1750000151,
+        "episode_id": "pon-selection-019",
+        "oracle_np_seed": 1750200151,
+        "policy_seed": 1750100151,
+        "role": "selection",
+        "slot": 19
+      },
+      {
+        "env_seed": 1750000152,
+        "episode_id": "pon-selection-020",
+        "oracle_np_seed": 1750200152,
+        "policy_seed": 1750100152,
+        "role": "selection",
+        "slot": 20
+      },
+      {
+        "env_seed": 1750000153,
+        "episode_id": "pon-selection-021",
+        "oracle_np_seed": 1750200153,
+        "policy_seed": 1750100153,
+        "role": "selection",
+        "slot": 21
+      },
+      {
+        "env_seed": 1750000154,
+        "episode_id": "pon-selection-022",
+        "oracle_np_seed": 1750200154,
+        "policy_seed": 1750100154,
+        "role": "selection",
+        "slot": 22
+      },
+      {
+        "env_seed": 1750000155,
+        "episode_id": "pon-selection-023",
+        "oracle_np_seed": 1750200155,
+        "policy_seed": 1750100155,
+        "role": "selection",
+        "slot": 23
+      },
+      {
+        "env_seed": 1750000156,
+        "episode_id": "pon-selection-024",
+        "oracle_np_seed": 1750200156,
+        "policy_seed": 1750100156,
+        "role": "selection",
+        "slot": 24
+      },
+      {
+        "env_seed": 1750000157,
+        "episode_id": "pon-selection-025",
+        "oracle_np_seed": 1750200157,
+        "policy_seed": 1750100157,
+        "role": "selection",
+        "slot": 25
+      },
+      {
+        "env_seed": 1750000158,
+        "episode_id": "pon-selection-026",
+        "oracle_np_seed": 1750200158,
+        "policy_seed": 1750100158,
+        "role": "selection",
+        "slot": 26
+      },
+      {
+        "env_seed": 1750000159,
+        "episode_id": "pon-selection-027",
+        "oracle_np_seed": 1750200159,
+        "policy_seed": 1750100159,
+        "role": "selection",
+        "slot": 27
+      },
+      {
+        "env_seed": 1750000160,
+        "episode_id": "pon-selection-028",
+        "oracle_np_seed": 1750200160,
+        "policy_seed": 1750100160,
+        "role": "selection",
+        "slot": 28
+      },
+      {
+        "env_seed": 1750000161,
+        "episode_id": "pon-selection-029",
+        "oracle_np_seed": 1750200161,
+        "policy_seed": 1750100161,
+        "role": "selection",
+        "slot": 29
+      },
+      {
+        "env_seed": 1750000162,
+        "episode_id": "pon-selection-030",
+        "oracle_np_seed": 1750200162,
+        "policy_seed": 1750100162,
+        "role": "selection",
+        "slot": 30
+      },
+      {
+        "env_seed": 1750000163,
+        "episode_id": "pon-selection-031",
+        "oracle_np_seed": 1750200163,
+        "policy_seed": 1750100163,
+        "role": "selection",
+        "slot": 31
+      },
+      {
+        "env_seed": 1750000164,
+        "episode_id": "pon-selection-032",
+        "oracle_np_seed": 1750200164,
+        "policy_seed": 1750100164,
+        "role": "selection",
+        "slot": 32
+      },
+      {
+        "env_seed": 1750000165,
+        "episode_id": "pon-selection-033",
+        "oracle_np_seed": 1750200165,
+        "policy_seed": 1750100165,
+        "role": "selection",
+        "slot": 33
+      },
+      {
+        "env_seed": 1750000166,
+        "episode_id": "pon-selection-034",
+        "oracle_np_seed": 1750200166,
+        "policy_seed": 1750100166,
+        "role": "selection",
+        "slot": 34
+      },
+      {
+        "env_seed": 1750000167,
+        "episode_id": "pon-selection-035",
+        "oracle_np_seed": 1750200167,
+        "policy_seed": 1750100167,
+        "role": "selection",
+        "slot": 35
+      },
+      {
+        "env_seed": 1750000168,
+        "episode_id": "pon-selection-036",
+        "oracle_np_seed": 1750200168,
+        "policy_seed": 1750100168,
+        "role": "selection",
+        "slot": 36
+      },
+      {
+        "env_seed": 1750000169,
+        "episode_id": "pon-selection-037",
+        "oracle_np_seed": 1750200169,
+        "policy_seed": 1750100169,
+        "role": "selection",
+        "slot": 37
+      },
+      {
+        "env_seed": 1750000170,
+        "episode_id": "pon-selection-038",
+        "oracle_np_seed": 1750200170,
+        "policy_seed": 1750100170,
+        "role": "selection",
+        "slot": 38
+      },
+      {
+        "env_seed": 1750000171,
+        "episode_id": "pon-selection-039",
+        "oracle_np_seed": 1750200171,
+        "policy_seed": 1750100171,
+        "role": "selection",
+        "slot": 39
+      },
+      {
+        "env_seed": 1750000172,
+        "episode_id": "pon-selection-040",
+        "oracle_np_seed": 1750200172,
+        "policy_seed": 1750100172,
+        "role": "selection",
+        "slot": 40
+      },
+      {
+        "env_seed": 1750000173,
+        "episode_id": "pon-selection-041",
+        "oracle_np_seed": 1750200173,
+        "policy_seed": 1750100173,
+        "role": "selection",
+        "slot": 41
+      },
+      {
+        "env_seed": 1750000174,
+        "episode_id": "pon-selection-042",
+        "oracle_np_seed": 1750200174,
+        "policy_seed": 1750100174,
+        "role": "selection",
+        "slot": 42
+      },
+      {
+        "env_seed": 1750000175,
+        "episode_id": "pon-selection-043",
+        "oracle_np_seed": 1750200175,
+        "policy_seed": 1750100175,
+        "role": "selection",
+        "slot": 43
+      },
+      {
+        "env_seed": 1750000176,
+        "episode_id": "pon-selection-044",
+        "oracle_np_seed": 1750200176,
+        "policy_seed": 1750100176,
+        "role": "selection",
+        "slot": 44
+      },
+      {
+        "env_seed": 1750000177,
+        "episode_id": "pon-selection-045",
+        "oracle_np_seed": 1750200177,
+        "policy_seed": 1750100177,
+        "role": "selection",
+        "slot": 45
+      },
+      {
+        "env_seed": 1750000178,
+        "episode_id": "pon-selection-046",
+        "oracle_np_seed": 1750200178,
+        "policy_seed": 1750100178,
+        "role": "selection",
+        "slot": 46
+      },
+      {
+        "env_seed": 1750000179,
+        "episode_id": "pon-selection-047",
+        "oracle_np_seed": 1750200179,
+        "policy_seed": 1750100179,
+        "role": "selection",
+        "slot": 47
+      },
+      {
+        "env_seed": 1750000180,
+        "episode_id": "pon-selection-048",
+        "oracle_np_seed": 1750200180,
+        "policy_seed": 1750100180,
+        "role": "selection",
+        "slot": 48
+      },
+      {
+        "env_seed": 1750000181,
+        "episode_id": "pon-selection-049",
+        "oracle_np_seed": 1750200181,
+        "policy_seed": 1750100181,
+        "role": "selection",
+        "slot": 49
+      },
+      {
+        "env_seed": 1750000182,
+        "episode_id": "pon-selection-050",
+        "oracle_np_seed": 1750200182,
+        "policy_seed": 1750100182,
+        "role": "selection",
+        "slot": 50
+      },
+      {
+        "env_seed": 1750000183,
+        "episode_id": "pon-selection-051",
+        "oracle_np_seed": 1750200183,
+        "policy_seed": 1750100183,
+        "role": "selection",
+        "slot": 51
+      },
+      {
+        "env_seed": 1750000184,
+        "episode_id": "pon-selection-052",
+        "oracle_np_seed": 1750200184,
+        "policy_seed": 1750100184,
+        "role": "selection",
+        "slot": 52
+      },
+      {
+        "env_seed": 1750000185,
+        "episode_id": "pon-selection-053",
+        "oracle_np_seed": 1750200185,
+        "policy_seed": 1750100185,
+        "role": "selection",
+        "slot": 53
+      },
+      {
+        "env_seed": 1750000186,
+        "episode_id": "pon-selection-054",
+        "oracle_np_seed": 1750200186,
+        "policy_seed": 1750100186,
+        "role": "selection",
+        "slot": 54
+      },
+      {
+        "env_seed": 1750000187,
+        "episode_id": "pon-selection-055",
+        "oracle_np_seed": 1750200187,
+        "policy_seed": 1750100187,
+        "role": "selection",
+        "slot": 55
+      },
+      {
+        "env_seed": 1750000188,
+        "episode_id": "pon-selection-056",
+        "oracle_np_seed": 1750200188,
+        "policy_seed": 1750100188,
+        "role": "selection",
+        "slot": 56
+      },
+      {
+        "env_seed": 1750000189,
+        "episode_id": "pon-selection-057",
+        "oracle_np_seed": 1750200189,
+        "policy_seed": 1750100189,
+        "role": "selection",
+        "slot": 57
+      },
+      {
+        "env_seed": 1750000190,
+        "episode_id": "pon-selection-058",
+        "oracle_np_seed": 1750200190,
+        "policy_seed": 1750100190,
+        "role": "selection",
+        "slot": 58
+      },
+      {
+        "env_seed": 1750000191,
+        "episode_id": "pon-selection-059",
+        "oracle_np_seed": 1750200191,
+        "policy_seed": 1750100191,
+        "role": "selection",
+        "slot": 59
+      }
+    ],
+    "smoke": [
+      {
+        "env_seed": 1750000000,
+        "episode_id": "pon-smoke-000",
+        "oracle_np_seed": 1750200000,
+        "policy_seed": 1750100000,
+        "role": "smoke",
+        "slot": 0
+      },
+      {
+        "env_seed": 1750000001,
+        "episode_id": "pon-smoke-001",
+        "oracle_np_seed": 1750200001,
+        "policy_seed": 1750100001,
+        "role": "smoke",
+        "slot": 1
+      },
+      {
+        "env_seed": 1750000002,
+        "episode_id": "pon-smoke-002",
+        "oracle_np_seed": 1750200002,
+        "policy_seed": 1750100002,
+        "role": "smoke",
+        "slot": 2
+      },
+      {
+        "env_seed": 1750000003,
+        "episode_id": "pon-smoke-003",
+        "oracle_np_seed": 1750200003,
+        "policy_seed": 1750100003,
+        "role": "smoke",
+        "slot": 3
+      },
+      {
+        "env_seed": 1750000004,
+        "episode_id": "pon-smoke-004",
+        "oracle_np_seed": 1750200004,
+        "policy_seed": 1750100004,
+        "role": "smoke",
+        "slot": 4
+      },
+      {
+        "env_seed": 1750000005,
+        "episode_id": "pon-smoke-005",
+        "oracle_np_seed": 1750200005,
+        "policy_seed": 1750100005,
+        "role": "smoke",
+        "slot": 5
+      },
+      {
+        "env_seed": 1750000006,
+        "episode_id": "pon-smoke-006",
+        "oracle_np_seed": 1750200006,
+        "policy_seed": 1750100006,
+        "role": "smoke",
+        "slot": 6
+      },
+      {
+        "env_seed": 1750000007,
+        "episode_id": "pon-smoke-007",
+        "oracle_np_seed": 1750200007,
+        "policy_seed": 1750100007,
+        "role": "smoke",
+        "slot": 7
+      },
+      {
+        "env_seed": 1750000008,
+        "episode_id": "pon-smoke-008",
+        "oracle_np_seed": 1750200008,
+        "policy_seed": 1750100008,
+        "role": "smoke",
+        "slot": 8
+      },
+      {
+        "env_seed": 1750000009,
+        "episode_id": "pon-smoke-009",
+        "oracle_np_seed": 1750200009,
+        "policy_seed": 1750100009,
+        "role": "smoke",
+        "slot": 9
+      },
+      {
+        "env_seed": 1750000010,
+        "episode_id": "pon-smoke-010",
+        "oracle_np_seed": 1750200010,
+        "policy_seed": 1750100010,
+        "role": "smoke",
+        "slot": 10
+      },
+      {
+        "env_seed": 1750000011,
+        "episode_id": "pon-smoke-011",
+        "oracle_np_seed": 1750200011,
+        "policy_seed": 1750100011,
+        "role": "smoke",
+        "slot": 11
+      }
+    ]
+  },
+  "schema_version": 1
+}

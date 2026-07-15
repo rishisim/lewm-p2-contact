@@ -1,0 +1,29 @@
+{
+  "durable_path_set_excludes": [
+    "__pycache__",
+    "*.pyc",
+    "dot-temporary files"
+  ],
+  "required_before_smoke": [
+    "PREREGISTRATION.md",
+    "protocol.json",
+    "outcome_mapping.json",
+    "cohort_seed_ledger.json",
+    "operation_graph.json",
+    "operation_ledger.json",
+    "semantic_feature_names.json",
+    "numerical_equivalence_contract.json",
+    "development/selected_threshold.json",
+    "audit/threshold_recalibration_qualification.json",
+    "freeze/compiled_gate.npz",
+    "runner.py",
+    "analyze.py",
+    "latency.py",
+    "independent_verify.py",
+    "finalize.py",
+    "verify_pre_data.py",
+    "verify_final.py"
+  ],
+  "schema_version": 1,
+  "zero_v5_outcomes": true
+}

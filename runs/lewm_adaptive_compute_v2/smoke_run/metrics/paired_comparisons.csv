@@ -1,0 +1,13 @@
+comparison,metric,mean_benefit,ci_low,ci_high,n,n_episodes,bootstrap_samples,positive_favors,diagnostic_only,bootstrap_procedure
+adaptive_vs_uniform_d2,raw,-4.546048627682921e-05,-4.546048627682921e-05,-4.546048627682921e-05,38,1,100,adaptive,False,
+adaptive_vs_uniform_d2,whitened,-0.7294294238930213,-0.7294294238930213,-0.7294294238930213,38,1,100,adaptive,False,
+adaptive_vs_fixed_d1,raw,-1.5076652869747228e-05,-1.5076652869747228e-05,-1.5076652869747228e-05,38,1,100,adaptive,False,
+adaptive_vs_fixed_d1,whitened,-0.18260105520527242,-0.18260105520527242,-0.18260105520527242,38,1,100,adaptive,False,
+adaptive_vs_random,raw,-1.7943080196748945e-05,-1.7943080196748945e-05,-1.7943080196748945e-05,38,1,100,adaptive,False,
+adaptive_vs_random,whitened,-0.18711986529952443,-0.18711986529952443,-0.18711986529952443,38,1,100,adaptive,False,
+adaptive_vs_permutation,raw,-3.5606767514783e-05,-3.5606767514783e-05,-3.5606767514783e-05,38,1,100,adaptive,False,
+adaptive_vs_permutation,whitened,-0.7152302105579702,-0.7152302105579702,-0.7152302105579702,38,1,100,adaptive,False,
+oracle_regret,raw,8.429148233610387e-05,8.429148233610387e-05,8.429148233610387e-05,38,1,100,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_regret,whitened,1.405747675363465,1.405747675363465,1.405747675363465,38,1,100,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_advantage_vs_uniform_d2,raw,3.883099605927465e-05,3.883099605927465e-05,3.883099605927465e-05,38,1,100,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle
+oracle_advantage_vs_uniform_d2,whitened,0.6763182514704436,0.6763182514704436,0.6763182514704436,38,1,100,oracle,True,episode_cluster_resample_then_reoptimize_raw_oracle

@@ -1,0 +1,149 @@
+{
+  "checks": {
+    "corrected_initial_only_probe_passed": true,
+    "distinct_trajectory_ids": true,
+    "identical_environment_seed_identifiers": true,
+    "main_pairing_requirement_unchanged": true,
+    "paired_count_exact": true,
+    "permanently_excluded_from_encoding_and_decision": true,
+    "physically_separate_paths": true,
+    "seed_forwarding_incompatibility_diagnosed": true,
+    "separate_oracle_np_rng": true,
+    "separate_wrapper_rng": true,
+    "v3_test_targets_opened": false
+  },
+  "classification": "excluded_api_compatibility_smoke_after_pre-main_amendment",
+  "original_initial_states_equal": false,
+  "original_pairing_passed": false,
+  "pairs": [
+    {
+      "env_seed": 1640100000,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 0,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100001,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 1,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100002,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 2,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100003,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 3,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100004,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 4,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100005,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 5,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100006,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 6,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100007,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 7,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100008,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 8,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100009,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 9,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100010,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 10,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100011,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 11,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    }
+  ],
+  "passed": true,
+  "passed_meaning": "exact bounded counts, physical separation, exclusion, seed pairing, and successful pre-main reset correction; original initial-state mismatch retained",
+  "phase": "smoke",
+  "pre_amendment_failed_audit_path": "runs/lewm_adaptive_compute_distribution_contract/audit/smoke_pairing_pre_amendment_failed.json",
+  "pre_amendment_failed_audit_sha256": "b618f6c0b6ae30fa51aab4c82cb94b4b1a4fcc6a665273ed70aa812ff1445fe1",
+  "protocol_amendment_path": "runs/lewm_adaptive_compute_distribution_contract/protocol_amendment_01.json",
+  "protocol_amendment_sha256": "8c55f6a855eb20a987aac7473a085548f75b7006ff8c85d11c2d268bc273f57b",
+  "schema_version": 2,
+  "v5_confirmation_episodes": 0
+}

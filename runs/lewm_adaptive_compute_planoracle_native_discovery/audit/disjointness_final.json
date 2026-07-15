@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "fit": 120,
+    "prospective": 180,
+    "selection": 60,
+    "smoke": 12
+  },
+  "pairwise_episode_id_intersections": {
+    "fit_prospective": [],
+    "fit_selection": [],
+    "fit_smoke": [],
+    "prospective_selection": [],
+    "prospective_smoke": [],
+    "selection_smoke": []
+  },
+  "passed": true,
+  "prior_numeric_overlap": []
+}

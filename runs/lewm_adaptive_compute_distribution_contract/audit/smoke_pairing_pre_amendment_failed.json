@@ -1,0 +1,140 @@
+{
+  "checks": {
+    "distinct_trajectory_ids": true,
+    "identical_environment_seeds": true,
+    "identical_initial_states": false,
+    "paired_count_exact": true,
+    "physically_separate_paths": true,
+    "separate_oracle_np_rng": true,
+    "separate_wrapper_rng": true,
+    "v3_test_targets_opened": false
+  },
+  "markov_manifest_sha256": "462ad4209b9b54101e05ecdb89806b0f06a1ce90f74673aebe709b4c0249e69b",
+  "pairs": [
+    {
+      "env_seed": 1640100000,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 0,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100001,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 1,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100002,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 2,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100003,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 3,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100004,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 4,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100005,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 5,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100006,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 6,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100007,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 7,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100008,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 8,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100009,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 9,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100010,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 10,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    },
+    {
+      "env_seed": 1640100011,
+      "environment_seed_equal": true,
+      "initial_state_sha256_equal": false,
+      "oracle_np_seeds_distinct": true,
+      "raw_paths_distinct": true,
+      "slot": 11,
+      "trajectory_ids_distinct": true,
+      "wrapper_policy_seeds_distinct": true
+    }
+  ],
+  "passed": false,
+  "phase": "smoke",
+  "plan_manifest_sha256": "9f14967f3f25b5ed99f9a74e91da3a1700f7393082834dc99b25812d164e87ca",
+  "schema_version": 1,
+  "v5_confirmation_episodes": 0
+}

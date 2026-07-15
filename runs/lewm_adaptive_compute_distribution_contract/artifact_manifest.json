@@ -1,0 +1,1850 @@
+{
+  "file_count": 368,
+  "records": [
+    {
+      "bytes": 3256,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/PREREGISTRATION.md",
+      "sha256": "76c3a35b545fce723ff2cb6a4bf1b661b8069d97eb281401104fe19e9c71affc"
+    },
+    {
+      "bytes": 1455,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/PROTOCOL_AMENDMENT_01.md",
+      "sha256": "ea7218bf95a7dc17bf06259632b5a5fd5158556754bdb51c96c6a0640a3ee34d"
+    },
+    {
+      "bytes": 956,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/README.md",
+      "sha256": "d7ff490812401c74a20105f300b7213e3e0bb56bf7f77f6027b9b30f3d1084fe"
+    },
+    {
+      "bytes": 6927,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/REPORT.md",
+      "sha256": "284630811e8e04efbbc735a523305ba38cfb2a05bf6dc06bb37f0ce08b782c68"
+    },
+    {
+      "bytes": 32785,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/analyze.py",
+      "sha256": "fc4d347e740c1c0d15bf735c26fa7ab3a1093d3e40d0e58979e884339e55c667"
+    },
+    {
+      "bytes": 9917,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/amendment_independent_verification.json",
+      "sha256": "210fa394636aaa7656563d484aa822a0e5d48b7be0c90827920a27b57e57dc7d"
+    },
+    {
+      "bytes": 11840,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/bounded_reconstruction_check.json",
+      "sha256": "d7da3065815a18422fa95ca1f4f1adf8b6f42c622056265a59f1dca159c2cc96"
+    },
+    {
+      "bytes": 423,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/final_tests.json",
+      "sha256": "f3e179fc42ac72811a745af14b086e201b8bea34f117a0ed820a96b5c0225052"
+    },
+    {
+      "bytes": 3088,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/freshness.json",
+      "sha256": "60ac1d33ddf848d5fcc39c368e1b516541572b8197f8c2df92c295868f67c32f"
+    },
+    {
+      "bytes": 1382,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/independent_recomputation.json",
+      "sha256": "a1e92987d947b50ead824868c1446706d60cabe4aca9e1ad39d74b3a971961c6"
+    },
+    {
+      "bytes": 388,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/main_markov_oracle_amendment_link.json",
+      "sha256": "9703e4538954c18b07e5b5ebe046e0d12a290691b7c74c07bd556ba933dd7aa8"
+    },
+    {
+      "bytes": 9545,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/main_pairing.json",
+      "sha256": "5f9b8311d761f46b99e831c8cff420ad6ce501a7be048c399a3002f900b862b6"
+    },
+    {
+      "bytes": 386,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/main_plan_oracle_amendment_link.json",
+      "sha256": "01d048ac66117b2a4dd1fb9767bfebc894c938507d81d1f304d5725190730c44"
+    },
+    {
+      "bytes": 610,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/offline_isolation.json",
+      "sha256": "2cfb81916a592b9b477f0f894ba2fe7109ee1832f366657cca50c6a5734d4883"
+    },
+    {
+      "bytes": 2963,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/pre_generation_seal.json",
+      "sha256": "e59480b81715f28d32ea8fddb9735f3bfcc293b6aad5669c46234ec33a5c9a02"
+    },
+    {
+      "bytes": 1420,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/protocol_amendment_01_seal.json",
+      "sha256": "cf3ae7fe8e6ca14a857baa29f0b373bc8032c3ca8143c346699971b1aa0d6144"
+    },
+    {
+      "bytes": 2020,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/raw_reference_access.json",
+      "sha256": "742e38905a0cf088411347de4ac80cab70b6f335fb65288ea8d3e69b2b622eaa"
+    },
+    {
+      "bytes": 540,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/report_manifest.json",
+      "sha256": "79a3327d1a79aea0117cb5f537bdcba75cb8d349cda18300ef73d4a0d66ca562"
+    },
+    {
+      "bytes": 4972,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/smoke_pairing.json",
+      "sha256": "228d2f3df7d5bb456cd7567db37b7f9f9967a43faf96e65cc288ce1399903f8c"
+    },
+    {
+      "bytes": 4196,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/smoke_pairing_pre_amendment_failed.json",
+      "sha256": "b618f6c0b6ae30fa51aab4c82cb94b4b1a4fcc6a665273ed70aa812ff1445fe1"
+    },
+    {
+      "bytes": 682,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_manifest_schema_compatibility.json",
+      "sha256": "3d8414b6f5aed6babf6c41150beac566f72dea4b18556149753c2e9c95b08404"
+    },
+    {
+      "bytes": 690,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_manifest_schema_compatibility_seal.json",
+      "sha256": "04c1e67c38b445f748a64e4241fd6f3a0f60a88861b125c198ef33cc9705762a"
+    },
+    {
+      "bytes": 1156,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_raw_loss_arithmetic_compatibility.json",
+      "sha256": "51afd3ccf998486c86d3c3e1bf425d84126fdd4bed4e04f8e1c062afa683021f"
+    },
+    {
+      "bytes": 863,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit/v4_raw_loss_arithmetic_compatibility_seal.json",
+      "sha256": "66ad1fa73f0ca352de9f89a2aa2ed977b049734cd13f55ed49f42a93c39fc944"
+    },
+    {
+      "bytes": 8828,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/audit.py",
+      "sha256": "ca19986fb2042ef1301f3635a3d4da0fb0fded219f705c68f99486f776823e45"
+    },
+    {
+      "bytes": 6902,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/bounded_check.py",
+      "sha256": "03ab5444d6c6a051488cf97577f5d6c141546e658ca15db502de315f4a7cc108"
+    },
+    {
+      "bytes": 1032,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/bounded_check_with_amendment.py",
+      "sha256": "47432a2c892ee95a2eacae9249ce9fa85da982c8a3d8f8e25f09d8b45cc5ddcd"
+    },
+    {
+      "bytes": 7514,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/common.py",
+      "sha256": "52db77ee31ac44f5438270d818cd36832ec74c1a19764bf2df63b0570a4ea4c2"
+    },
+    {
+      "bytes": 7213,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/config.json",
+      "sha256": "d1871906f77b7c0ff949cd6fec61bf6b7d71cce7656baeb292f62af89e3ffba0"
+    },
+    {
+      "bytes": 304075,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_manifest.json",
+      "sha256": "deb67c298e59317a0d5ce947fca44be309b46cda65cd7456aefe1ab26b823824"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-000.json",
+      "sha256": "d607445e2cff6a55c17a3035423d301db6dfe34247ea93f006c33e0c1c6abe6d"
+    },
+    {
+      "bytes": 3462321,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-000.npz",
+      "sha256": "43d0c41ae976fd8c995a67223630d9cbb5e51ab5448067eb2dc4df5e968ed19c"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-001.json",
+      "sha256": "aa3f5ca0f3798bf61d31ba5e5198f487c9c79d3451ab12c6e732ed5aa5f69674"
+    },
+    {
+      "bytes": 3558746,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-001.npz",
+      "sha256": "63d4ef522187b92d88a3dd15a951e67eac9b8fdf9b662ed5bd8228abc37b3910"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-002.json",
+      "sha256": "f3800962b985157a859f940b4b5446bade177389d5b7e2a771cac5a15492cd4e"
+    },
+    {
+      "bytes": 3316862,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-002.npz",
+      "sha256": "afaeba6a69d58cba1b377715692e30509feea9842eb39b3d55055535c1c17e20"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-003.json",
+      "sha256": "f12ede636999410bf760ac140d7af513a96b32dc906ffb8df8434a456a2a794f"
+    },
+    {
+      "bytes": 3740239,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-003.npz",
+      "sha256": "3549995db2348f1ccee62e730d40caf8684b39545d643381f558a53a7b932c33"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-004.json",
+      "sha256": "7089a0646ebf27c80117e7096c223b00afce0dee5a1465098f66ad18d5b8df0e"
+    },
+    {
+      "bytes": 3534140,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-004.npz",
+      "sha256": "759400c709673df970634ea9ed9a1fb7c6a51169401f0bb309d791bc77642e47"
+    },
+    {
+      "bytes": 8795,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-005.json",
+      "sha256": "758b6e06df7225cb3914c0879ea3d16283bf2f1256c269d851f783a2b40fb28c"
+    },
+    {
+      "bytes": 3592751,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-005.npz",
+      "sha256": "b2c1fa2618e3af253115b41cd7af61cfb8a45b05e32a3e228a4f8f3757f3cb15"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-006.json",
+      "sha256": "47d0f358df1d6041e207f4a69d7465eff47e4728d9923c757f3de403f4d4cfca"
+    },
+    {
+      "bytes": 3494894,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-006.npz",
+      "sha256": "0a6ea328c82596f8fa3d38a1e6bbd670b24d292318b056305fc46c9b5372d632"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-007.json",
+      "sha256": "6f28cee79d2ff72bcbeb58c048c5c2e08728bc7c842a000282712ec381c8c2be"
+    },
+    {
+      "bytes": 3494230,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-007.npz",
+      "sha256": "636e4f07c4ee427328f99d15901493e8a5e446594845f3dbae64ef047b547865"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-008.json",
+      "sha256": "69e3f516e63402ed79094f51315eb8e143e7ba56e61601e5fabca380a214ed79"
+    },
+    {
+      "bytes": 3613077,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-008.npz",
+      "sha256": "03d8767772e86a35dcb2603402ed297c9608165b59528fd49e89ff7f971aaa89"
+    },
+    {
+      "bytes": 8795,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-009.json",
+      "sha256": "699d79271060bcc093bf8b0f9bab8b5ca18dfd83deeedec4198f603e45e10691"
+    },
+    {
+      "bytes": 3608935,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-009.npz",
+      "sha256": "a6111a83ce91584cbb6bd6839081a01df6020b4be4484d97162e417688eb5756"
+    },
+    {
+      "bytes": 8795,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-010.json",
+      "sha256": "63aa3ac5a57aa695dbf57a3a4bbc2ffeb1f07d8564d99f63f575b587329bab7d"
+    },
+    {
+      "bytes": 3450674,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-010.npz",
+      "sha256": "f4f09354a1909d54188d45bab53f1c73dbde015c8930369d7107e0a39c45d16f"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-011.json",
+      "sha256": "a87080a24c5a4c1ede5474b94e247e82de50b96e90b7790980d25e5b27be007f"
+    },
+    {
+      "bytes": 3412011,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-011.npz",
+      "sha256": "80a4dbaa2f54912f7e01a811036813818fc70cd202be9164b3eadf0e98314184"
+    },
+    {
+      "bytes": 8795,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-012.json",
+      "sha256": "3c5ca7ee2aa451da63488d7fcd438566b75715ebcf14a255fec9edbdb3b94557"
+    },
+    {
+      "bytes": 3528231,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-012.npz",
+      "sha256": "7466408f3f1f63a2f3ff96193f2e2aff44faf98a251763db6edd334dd25e3080"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-013.json",
+      "sha256": "d3a43b71e62baed3fb3c1fdc04c503bbd9089e29a3322a7225d6fa4bb4c92eab"
+    },
+    {
+      "bytes": 3555278,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-013.npz",
+      "sha256": "5f9a28ae16ba98274962777133c12b00881fed45b22866726b9491106383ea7c"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-014.json",
+      "sha256": "bc1dea8b5bdf9a70a64e16c2026f8da4a4045f508a4f7ad61c25e3eb803c72cc"
+    },
+    {
+      "bytes": 3466822,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-014.npz",
+      "sha256": "8d29727ff29c0786a6f1a0e43e270bfe12c6f8551510605941c380f5287e3c06"
+    },
+    {
+      "bytes": 8797,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-015.json",
+      "sha256": "1d097aece869284161caed649752deb6b60e67cbc5b1ba242362809520d84bfb"
+    },
+    {
+      "bytes": 3344955,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-015.npz",
+      "sha256": "c91491248903e007bdc037b408c9ce5a7892c63cb9517555de28c1f1f530f13e"
+    },
+    {
+      "bytes": 8798,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-016.json",
+      "sha256": "276fe844d73ad539e84be50d1a16066d95324a52bf798867844d897b2ad1c39f"
+    },
+    {
+      "bytes": 3633452,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-016.npz",
+      "sha256": "3a05bba4a03b043fca12f6324b9e1dd0439e78bb26da35060d598ca148a9fc03"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-017.json",
+      "sha256": "fdf998058d256affb52e63852515ec2093c20f28e56c3ad60c68d50b2a03592f"
+    },
+    {
+      "bytes": 3383733,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-017.npz",
+      "sha256": "cdc5feca212fe76f3db6ea5f65806185d48a1b05cd2915154f34cded176547dc"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-018.json",
+      "sha256": "d70372a76aa1c8081714d0f926a8f35e22dd0bb7c7c10bc5003320ca5f8cab0c"
+    },
+    {
+      "bytes": 3502024,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-018.npz",
+      "sha256": "a4fe6c26a402b821784f8317bfa4010804a9f96101da14185b644fe0960f3766"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-019.json",
+      "sha256": "c80c9ca4e4062ec832c38101a2b43ebbc876d3ea4aac15673d3183f6414742a8"
+    },
+    {
+      "bytes": 3573812,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-019.npz",
+      "sha256": "9bb3cde13de19dab49b21e81160995cbc5239ac795c35c39d32cac5202006ac0"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-020.json",
+      "sha256": "ac119586750105e94f59f6ea9e6e37f79da448fcdac0bb78f6daa8beb8bb8a1a"
+    },
+    {
+      "bytes": 3417531,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-020.npz",
+      "sha256": "f8ae058e800ad7e8e3bb6a56281816669956fc4eb904a58ad0abb6620886e301"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-021.json",
+      "sha256": "cbc8705626631b6eb0f294ebf9a427d6f5ab770f426c71d332ca2447d7856e62"
+    },
+    {
+      "bytes": 3527716,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-021.npz",
+      "sha256": "2b23280458fe9ae4f2ef4f7eabd78ba0407ad0bd5240bcb7f71dd381878ae89e"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-022.json",
+      "sha256": "815ae76e8b84fdd8a13f93b035941ac7be462b22ff42c55ba0eae928daffc709"
+    },
+    {
+      "bytes": 3617412,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-022.npz",
+      "sha256": "e4d76c1a502ffe82321c88e7763ea301259e38a2d9087478d76bd2df45916d3b"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-023.json",
+      "sha256": "25bf831051f4546e640ed8fc4217a16d942ff8f508ca333068416e8f04df2dc5"
+    },
+    {
+      "bytes": 3391345,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-023.npz",
+      "sha256": "e5bc2dad20202b0cc0cac897294d40f35de55cb9fc2995ba1a1fc83254f183c2"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-024.json",
+      "sha256": "99ab501438bb558307068e0b53e1e18df8c6b9707b3c55c98d8b34421fbe5c1a"
+    },
+    {
+      "bytes": 3526775,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-024.npz",
+      "sha256": "5b75d944f168ccc4c2bfc83b6b7b11a615b998aaa32fddc880368075249b5a2e"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-025.json",
+      "sha256": "5686162ec2f901db1a76e52e7699a6bc47e116fe75c3181f50a897ba7bf22d37"
+    },
+    {
+      "bytes": 3545741,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-025.npz",
+      "sha256": "92139f9871a98cfaf868f032ea89174f82dd9406f300d61f0368af159321d0cf"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-026.json",
+      "sha256": "160d9e656a685ac3fcd4015074224094b0d9c9b7b36e76b673139fc6a0898208"
+    },
+    {
+      "bytes": 3508126,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-026.npz",
+      "sha256": "96deea5ce9a93a706bc4a98d9df9dd63e6790da2a214552f2b05a40bacc00f44"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-027.json",
+      "sha256": "8b9609bd266c7e944c397212a6edad9bb669be2d971ba4d28e70b8078da46859"
+    },
+    {
+      "bytes": 3738517,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-027.npz",
+      "sha256": "9320f02cc0107a100a4747213c2e5dd40e892991c7f3e634d33786c24626d3b2"
+    },
+    {
+      "bytes": 8796,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-028.json",
+      "sha256": "9d5da1311d39d359bd6acddd92a82f4256e1820bbcce06fdadd75b4162e57320"
+    },
+    {
+      "bytes": 3400522,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-028.npz",
+      "sha256": "52d85b067fa71b84e9b685ed6a0f3d555cb47a8d74a61c6be938a284987d39f2"
+    },
+    {
+      "bytes": 8795,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-029.json",
+      "sha256": "deaf38c6dd09d9c37492798c65c2fe0f4a95d2cb7dd86a51967058447e40dbb7"
+    },
+    {
+      "bytes": 3330535,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_markov_oracle_raw/dc-markov-control-029.npz",
+      "sha256": "291fc0a1135abf9cf5776c6a20c21f57c5b125e82379d3aa3c56ea7a1670fc9b"
+    },
+    {
+      "bytes": 909723,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_manifest.json",
+      "sha256": "67c30c7c9f84a1a566df506020e1db6227b2f992dfebb56ab799f8208fe2d04a"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-000.json",
+      "sha256": "4182bb8822d6c3176e3aaf6accf411c26e4783869ffdeca4f4e4b93628598edf"
+    },
+    {
+      "bytes": 3955532,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-000.npz",
+      "sha256": "bd3d2ab26b616768738b61b68569bb1627a83727530def7af15f4ec347a965e5"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-001.json",
+      "sha256": "d4a6acb6f30d4fda758d56f605f12909863bad6ae17c1368a988966a843829be"
+    },
+    {
+      "bytes": 3972488,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-001.npz",
+      "sha256": "2a3075e5d8925628075a0e18cac4ecddd17670959f8efc5935c3232e3214bb75"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-002.json",
+      "sha256": "3e2253419c652d52b9576bd04376cbb859e37694deac267c716c3bf902218243"
+    },
+    {
+      "bytes": 3805271,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-002.npz",
+      "sha256": "027d1f0f1f22289e3ab7786053932ec3526709f4fbafac7d746b150b97bfb4e1"
+    },
+    {
+      "bytes": 8787,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-003.json",
+      "sha256": "d3284bf0d3176839d05a6a0861e28cbcadd7782f9d8185408175b03dec1efe81"
+    },
+    {
+      "bytes": 4059785,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-003.npz",
+      "sha256": "e55f14b2fbe873f9a64c6974c6cb53befe4df20abc95973471f7dd2a2e4efece"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-004.json",
+      "sha256": "f9d76a03bfdc7e6cca30955c2d7c099715a04d99fbc8095c32dd78f628b83173"
+    },
+    {
+      "bytes": 3579261,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-004.npz",
+      "sha256": "a8235df5ef11d2457ef6c22844ca45db0091cb32aaf852c8839b0f3289a5f27f"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-005.json",
+      "sha256": "4d44162dffbc3ddecbef49e7a09dad3ef1b6600372958106aae82f6b2fdf8ade"
+    },
+    {
+      "bytes": 4235743,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-005.npz",
+      "sha256": "f075b9c3ddee1493f77bae82b4baa320be9d91ecdaa453fa19f2a41edfcbf402"
+    },
+    {
+      "bytes": 8788,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-006.json",
+      "sha256": "c0729d45236b1ba9a0cf82824fa36f2fa85773c53f8896d800ceab030d17967b"
+    },
+    {
+      "bytes": 4092943,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-006.npz",
+      "sha256": "18d715f8e8e2253fd07dcdc82bc41ce3de59ceb9e05f836567493b1e09fc0eda"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-007.json",
+      "sha256": "dd28c8586fb6229ac7cb123bdb8e4e7b6c925699568cbd6c942b45965875aa0a"
+    },
+    {
+      "bytes": 3678649,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-007.npz",
+      "sha256": "3f8ae2ac088543943653e00bbfb301e709f6bda282b4e0f40e0e1c76424c7a3e"
+    },
+    {
+      "bytes": 8786,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-008.json",
+      "sha256": "62a7440605eb0aede898027629a0347a5316b43faffba09c8cd16712e9056f04"
+    },
+    {
+      "bytes": 3969533,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-008.npz",
+      "sha256": "0d493702699f6203d50d7b0ca994e646aac89c3145e33a1b0f1b6d1f5b0fea5f"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-009.json",
+      "sha256": "461b3ad640e37d114e8d32aaa9644604930487b6f8e049c335c666f86ab7607f"
+    },
+    {
+      "bytes": 4124592,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-009.npz",
+      "sha256": "6eeeea1dd430db79e48d1ef0e2a84b231aafe0093aca8f145e41b2c3e52c3b2e"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-010.json",
+      "sha256": "cc26d97a46b14a71f0221f6559cfabbcd17fec37fdfb8de797160665eb520552"
+    },
+    {
+      "bytes": 3816965,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-010.npz",
+      "sha256": "8e0dc69ac48ea89e9a30a3ca68a60b163092d8e2815332b52caea46aede48911"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-011.json",
+      "sha256": "2e4c64d4722a9b5aa56b0e1a89bb648ed4840373e6089252eb63d733a8708ee1"
+    },
+    {
+      "bytes": 3779218,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-011.npz",
+      "sha256": "bba75f7390a0a3647d1412f6e88a5d330921bc95815c2c51b0a87ded7475ac7d"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-012.json",
+      "sha256": "0d5dad3d84b32690f72756b800806c1e35a024269273ef3601fac51a94f6760d"
+    },
+    {
+      "bytes": 3925291,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-012.npz",
+      "sha256": "9e75f00986d4d489efb1d9b415b08362a6f988d8506e001e13d192617e7815be"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-013.json",
+      "sha256": "207008b27e0ca6441cbe6c68db06a2579503e7d9001e3c22283fe53d8cc4b464"
+    },
+    {
+      "bytes": 4379051,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-013.npz",
+      "sha256": "d86edb65da7731c15b2bedb87f2d9bab188f081cdee8512827d5fce7183119c9"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-014.json",
+      "sha256": "e1fb86091e27d4b893a0a6c1ad9dd5e12203628a310306a5fd7b7308fb5f1bb7"
+    },
+    {
+      "bytes": 4085358,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-014.npz",
+      "sha256": "536f9ffb063a3e8ca32e9b4d962aacd89ad50f863e63867ad25886b2e269d0d3"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-015.json",
+      "sha256": "233cbfad28fedb6a35dc16f678c326f4c9ed1b3ee2d7332fecaaab5573d839a6"
+    },
+    {
+      "bytes": 3585933,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-015.npz",
+      "sha256": "4005be12f8adb14c77d1cac21f90c8d3cb4856ee41090552a2e0473c5c362aa1"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-016.json",
+      "sha256": "f0bb707c288bd057dc56e485c6f616ee6546f037504921a344f560cb58d633fc"
+    },
+    {
+      "bytes": 3772205,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-016.npz",
+      "sha256": "36fefb7ff9a11bccdbe312db926a4b49d2ced3afc8f6a901bc2a75e90ff69ba8"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-017.json",
+      "sha256": "9c92e7f98dd8dc56f021ef06bed0eaa7fc77fef3d295007106285c5cdbc2dc6b"
+    },
+    {
+      "bytes": 3434996,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-017.npz",
+      "sha256": "d683c72ca564de4d16cc4fa18893427948ad936d1a4f5de70d4ae56a2288f93d"
+    },
+    {
+      "bytes": 8788,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-018.json",
+      "sha256": "2a30a2473df6cfa177bc24c9783d538c14ddd01f9ae3aa65238a4ff5250abec6"
+    },
+    {
+      "bytes": 4151279,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-018.npz",
+      "sha256": "84157c3850349b3bd3eb72ba1da0965084e5b182d4ac6b17e3c829fba691147c"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-019.json",
+      "sha256": "0e6be7958dfcc52cb96c2050577cce31bfc7f0b1da20ab5b2225990df07ec731"
+    },
+    {
+      "bytes": 3873818,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-019.npz",
+      "sha256": "817eda2e5bd23cb514513248fe559708e55ba3cbd80586f7a6998539737bc969"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-020.json",
+      "sha256": "30be51d20490a4abf5ff05089a7ec36c105b0435a5c845f4fae4dda6fe85f26f"
+    },
+    {
+      "bytes": 4301771,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-020.npz",
+      "sha256": "accee96e4ab4db61d47ccdb9314efc4a311d75186cbb21b92faa12c74309b673"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-021.json",
+      "sha256": "a733bdc937996fea26afdc8f6b39d96b8ec57ced6ae67b5a63b5356f41833cdc"
+    },
+    {
+      "bytes": 3825151,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-021.npz",
+      "sha256": "5286a6348e839ef383cba010b74e4d89056aba2b07a8a9355e4992c0e0730555"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-022.json",
+      "sha256": "f1b95c7ad4ea84263ad33a2b5c1dbd6f5eb02a4f51befa62c96ae788e069845c"
+    },
+    {
+      "bytes": 4070503,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-022.npz",
+      "sha256": "db4330898b9fd251aaa251829d7cd3577874dd630f3151c503e763f8ab369843"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-023.json",
+      "sha256": "deb171a6e0c4808348cc7fa94a683cc66e43d86ecacf975ea2ebc58c5785f925"
+    },
+    {
+      "bytes": 3915269,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-023.npz",
+      "sha256": "7e40e78098c14a9ae9e1b69ddcfc2cd5ca7fbedc239107f9eb4fbfdef27404e1"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-024.json",
+      "sha256": "25848ff09fffa235391bfa413fad2a622aed9923b6d83e64c6627d49d16155ff"
+    },
+    {
+      "bytes": 3879242,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-024.npz",
+      "sha256": "15b806b4593443db7d6a460ff96b9f18148a556f3ffe3f9dc3881cb7cb8a4637"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-025.json",
+      "sha256": "9cae8691838b0370997127f496d74f70b60708d65de8b53d794b27a38530154b"
+    },
+    {
+      "bytes": 4114561,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-025.npz",
+      "sha256": "47c898c5803dd8a3d4349c5af273e5ce76d60d2486a95598d4f129f26ea05260"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-026.json",
+      "sha256": "829b51d781dcf026c2533dd2771476bc61cbc651986a5f228a975164bb32ebdd"
+    },
+    {
+      "bytes": 4104405,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-026.npz",
+      "sha256": "65c75096720e0b8e020ff1f31f242e7fa6ae9fc984fe390ce471681cf5ae9b42"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-027.json",
+      "sha256": "183ca93fb9733a66540b213d4babe3192219936ae748505133bc5f246a597a45"
+    },
+    {
+      "bytes": 3825106,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-027.npz",
+      "sha256": "365facfcd89778c596b1a0cde41722001ecbfcfd65268fe09f8d97e46f904ef8"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-028.json",
+      "sha256": "5e9add8eb3a3548a46292cf2710c6ceedb04cec45ff7eab215ea0dbbce6b1970"
+    },
+    {
+      "bytes": 4122853,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-028.npz",
+      "sha256": "08d6975a065ae5d8c630d7a419bbe04c08e537235902e251d6451ccf12ab59d8"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-029.json",
+      "sha256": "e48cff4afd1b874660e677e8ab19d52820ae0410c8a8dc8cfa44509502b8400e"
+    },
+    {
+      "bytes": 3406154,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-029.npz",
+      "sha256": "0125e6a94dc03df19edaceff2e2ef71c2a345b2efcf9731288469c6d2608a0e6"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-030.json",
+      "sha256": "3991c8a2eb9ec1737ba501387e315ac4ddc9e56073ef587253cc848ed33deb3d"
+    },
+    {
+      "bytes": 3556207,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-030.npz",
+      "sha256": "621877abf78cd90f3c31082df7ab1920d3b436d1bc9d5400153e1208348c7141"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-031.json",
+      "sha256": "ad4c57e9324cf6ef5dbe892e53a432646588bad87493839cb764b041a873120e"
+    },
+    {
+      "bytes": 3544551,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-031.npz",
+      "sha256": "1ed8aaff54fefd861e0867c06fdbf1d86dfbf98f9aa8a1cf2bd19f5b1a3be50b"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-032.json",
+      "sha256": "5566cfaa82dcb60d2aed0df6e5e2d0262fef47915c15ca964ae5233f37a7593c"
+    },
+    {
+      "bytes": 3454306,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-032.npz",
+      "sha256": "ecc930e8970cd33b594d81c06ec1437f9e022d3c6125c233240661f7dfbe5135"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-033.json",
+      "sha256": "bccfa7ca315092a5ee36981fc01deb2e4fb1b0a85780fb8ff1abe87edb6a32b3"
+    },
+    {
+      "bytes": 4329992,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-033.npz",
+      "sha256": "9930a384431e8800d94df9c5f2e342ad5d846b5063370f2f385c5fc86968a119"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-034.json",
+      "sha256": "0a616ec5cdfdcca3d90b07b5cd4771002925727bcd72cc636cbf82a82cc5051c"
+    },
+    {
+      "bytes": 3758596,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-034.npz",
+      "sha256": "8faef4247f1d5bebbec02335c8b209ff28ab64da1ac98a8c70cd0439d08c1b76"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-035.json",
+      "sha256": "16c7d6243574515e6724445ff52d773092a248b6903da7f28fb285c0e6aaf9b6"
+    },
+    {
+      "bytes": 3650977,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-035.npz",
+      "sha256": "0643fac14afbcc26e206eb41e2c6ed19f058ac8305bba90ab8920377b96e3445"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-036.json",
+      "sha256": "d8263d3a22ab9f61cff08bef8b2f2e6400335ec7d8701f438c27980f190b29a4"
+    },
+    {
+      "bytes": 3390469,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-036.npz",
+      "sha256": "703a542cd0cae6b586908d8657cc31de80a09cee4bbf859d16664ee8fdcc63d7"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-037.json",
+      "sha256": "1ccbee370528268228f0ccb920d57782078fd6e9f141bbe88f9050d8f9d78504"
+    },
+    {
+      "bytes": 3590667,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-037.npz",
+      "sha256": "d53d26e1dd71b7452ce3eff1f4af21e8ec68d581fdfa604962d3cc449b9c9ab0"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-038.json",
+      "sha256": "b8f46200331ce4dfd32140ddbc27cf0f3832388eea44daae084b9728d4896032"
+    },
+    {
+      "bytes": 3698590,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-038.npz",
+      "sha256": "6fb7e513ab5aee86442ed3a9bfa5934b44e3b167336eaeb79ebe93804f79935f"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-039.json",
+      "sha256": "5fa70f90c27ecf804a3b2d8903a839ac754ddf9192eb759e9a0256a80ccf5ee7"
+    },
+    {
+      "bytes": 4452142,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-039.npz",
+      "sha256": "ab636c6a2a2bb97e997ccdf0a0876bac9b7f3ef53a572a6cf90a60beb441c4d9"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-040.json",
+      "sha256": "109bc6a7280bb28af42b51bb77d07d8a1f07697c7517da5ccf12b7bf53f4c599"
+    },
+    {
+      "bytes": 3951253,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-040.npz",
+      "sha256": "d91c0b3b9c620c01359da55660d3fb1fd47c69b4be99198e97803b3077c6279c"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-041.json",
+      "sha256": "8ceabf683d4646913a742b73f78d63da33e2f4b5af4abe65c471b8adccb7dd44"
+    },
+    {
+      "bytes": 3879323,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-041.npz",
+      "sha256": "bb505963131f638b83dabe6d15a0c5efff381b9caf1d41214e5fd4594e3dcbd6"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-042.json",
+      "sha256": "e67917ac1677be6f492d8f606aa3ef9555555fa0128558c918f54edf154d9eb0"
+    },
+    {
+      "bytes": 3587502,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-042.npz",
+      "sha256": "97ddcee47198c992d25e1e9362d70310f1cfa1e3527e34f0c98a3f4730642fa5"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-043.json",
+      "sha256": "ec90680ca305eed45d232d55014eb2d862876f12a3016cf3dcc8a561e2294c38"
+    },
+    {
+      "bytes": 4025160,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-043.npz",
+      "sha256": "6356fb926c08ec0b226066689293ef4498d21944dea99ed94853183c1648b1e8"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-044.json",
+      "sha256": "7b2143cfd278737a760de1b5bd5db75d35d7e5391bbad21f22ded54806205415"
+    },
+    {
+      "bytes": 4004148,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-044.npz",
+      "sha256": "075578999cd3c8fd14c37e66cfea7deb77f71c67ebf53963869ef7b2c4600706"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-045.json",
+      "sha256": "a6707b89117db72c3562ad8dec0f3e81d4c6dea688a0981cdce0a13659c321e2"
+    },
+    {
+      "bytes": 3435248,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-045.npz",
+      "sha256": "44d27b4126fc586db103ca7b2a900533072bce93152f84ac23cbff85b903178b"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-046.json",
+      "sha256": "6c83e425d4177280743cf0ef3c69e7512bea992e3ef9a930cf2dd283064b5fff"
+    },
+    {
+      "bytes": 3617698,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-046.npz",
+      "sha256": "0f6016ce6091340b0dd15d7a8581e068abf24e12defad912fbdb8585c19be5e2"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-047.json",
+      "sha256": "361e4e8414e3be036c9af84d438606b6e8680c4198133344fcca9dd0bb6e8386"
+    },
+    {
+      "bytes": 3697622,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-047.npz",
+      "sha256": "62741c4ed99117dfc7e5275eefb1799d0f3ee4b76c1067347ead2f138e3436b9"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-048.json",
+      "sha256": "a2f0e4fc5a75b300b15c661d63e5f86b53f7e3f44a2330f515140a0b16e0dd20"
+    },
+    {
+      "bytes": 4260805,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-048.npz",
+      "sha256": "10a13c83aab41781e0df2161271e303f987b068350f33ac9f62f56f6b6e4b6c9"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-049.json",
+      "sha256": "d7dde4099a4082d5ec456c9bb059752947b712565e594a71c054ec33fb2a6f06"
+    },
+    {
+      "bytes": 3306259,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-049.npz",
+      "sha256": "3b956ce7dc14a35ba02cb069d5c25dad8d1fbfa75ed9b34a5fd245c3fe2ddbda"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-050.json",
+      "sha256": "388103107ff74007771758815ef48dbc530cb4d620d0898166e47b144077c9d2"
+    },
+    {
+      "bytes": 4115420,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-050.npz",
+      "sha256": "55523520a1a1df6e6d1d71107c5904730d03ab9951f138fcbe03550a2d67beb5"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-051.json",
+      "sha256": "25d1ada0a70e8d12dcfb2ce69ca71193888c1739e668e66951025626f1bca903"
+    },
+    {
+      "bytes": 3970873,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-051.npz",
+      "sha256": "4e46abe93154b9bf2ac53500b5c09c5fd53faedf46377805170bfd9c9e9ef7ed"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-052.json",
+      "sha256": "12294ac3db5a70974fb02919984fc86eb9b87f2aa045f2804e2eb253445d8105"
+    },
+    {
+      "bytes": 3499322,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-052.npz",
+      "sha256": "daaf45ce0995cdc72c0bf853734dc82a909efa3e43bcf3a12bd171b7f267b71b"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-053.json",
+      "sha256": "acb37d310fa695a99a8d0a12359c0f204f86acb55047b4b6446ba52dc11d3015"
+    },
+    {
+      "bytes": 3858960,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-053.npz",
+      "sha256": "672e3aec6bb21e758adf5d311aecf45dbd3804b91fa7aa24e3653c9a0c77fadb"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-054.json",
+      "sha256": "644a39891827231c94b2ab54e60fec11cccfe6ab45808a0d125e9104db71c048"
+    },
+    {
+      "bytes": 3807270,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-054.npz",
+      "sha256": "87c61c9897437b65ed08ef70378806f452cf0b9ba85f4294c971af86167d6ded"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-055.json",
+      "sha256": "58bb78567e60fc0713b9bdac6cb81296f251c888ab02b895aabf74ef800bdced"
+    },
+    {
+      "bytes": 4021782,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-055.npz",
+      "sha256": "b58109c9e09f22c6107d2a41310591339c754ac10604bee5ee80840d3af92c56"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-056.json",
+      "sha256": "45bf548199896f9a99404ad7c0cb15098295ce29f5af170101daa9ad73fa4ac7"
+    },
+    {
+      "bytes": 4170895,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-056.npz",
+      "sha256": "6d16bfb5326492a402d5797c1009015ebe0473c883b3e2c24ba3002ab0069a5b"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-057.json",
+      "sha256": "78cac6c89ecfcf50cb26480b1d66f7a10c2d11191a98b8608ed26ad1ef573910"
+    },
+    {
+      "bytes": 3396503,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-057.npz",
+      "sha256": "2a1ba828ebb94b73b8fd010fd4a441bf5a60dbdda9cd0a0fc390bf2c81d06e6a"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-058.json",
+      "sha256": "7e1dd4c20d67fc816c79618d4896089b991dfc3f975bc021476083cb8672b706"
+    },
+    {
+      "bytes": 4081051,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-058.npz",
+      "sha256": "124e0d3a7bd858aad9f19c5ab074d587b060f1f0d6ad487bfa295c4a6072e039"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-059.json",
+      "sha256": "6eed659068b97b4ee7721675141f292e6f32da293a6e9388576faf92e0819eed"
+    },
+    {
+      "bytes": 3616748,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-059.npz",
+      "sha256": "6f7c72fdfbe91593722ad700df7682d35def983e710290a993999cde8600dc0c"
+    },
+    {
+      "bytes": 8788,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-060.json",
+      "sha256": "4b93456b86511740772e72317e23d282a8cd6c5579a768c693b387e31fe9ce76"
+    },
+    {
+      "bytes": 3755381,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-060.npz",
+      "sha256": "05337ea4f3753daceca5dbf37f88c42c5d6c831be4a2b0d5bf2fe1334b442e3d"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-061.json",
+      "sha256": "41c4d167b874e5a2db35e76f244cd9d82ae2da3b19e70f89ea761072ee4e0d4b"
+    },
+    {
+      "bytes": 3959750,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-061.npz",
+      "sha256": "38f5f4fea5c947f8660e30d42bca134d1c681ffaf5914481df3eae9002ed729f"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-062.json",
+      "sha256": "54ba50ba80055d7cfd28c1e92f823d8c4f3beddf7233a29949c4c769d7e0d20a"
+    },
+    {
+      "bytes": 4126313,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-062.npz",
+      "sha256": "61bc3b6ee5096f6efecc0d323368d0acf6d38ef15caf2bb624dd40a0011554b5"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-063.json",
+      "sha256": "143088889b76757ed240110c01e2ec7fe5ae995e1cce3c17ddc16bbd28c67656"
+    },
+    {
+      "bytes": 3461913,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-063.npz",
+      "sha256": "e1882245bc921414cb4e52562742c26e64c1e79dad64d37a14749c20c3004667"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-064.json",
+      "sha256": "e1a102d2beb2e9e51d626fe19e22f51241c488b7d8cb66406ac33596fb941963"
+    },
+    {
+      "bytes": 4039838,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-064.npz",
+      "sha256": "d2d4c4b483a308673e8265bcdd737cd8bc49ac25a71462a7e63da1cb679c003b"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-065.json",
+      "sha256": "4260ebb2e55c41c822d2c41277a475517ca593d1257074c7793a23eadb9a1484"
+    },
+    {
+      "bytes": 3532052,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-065.npz",
+      "sha256": "a033f5d639529116191532cf1540b9727de6cf34cd2b96fafec1dc17fe043004"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-066.json",
+      "sha256": "61c7cc41ce4bd1c6e4946caba165e754a9a213ac6fd2ea3a05f787489f773a4c"
+    },
+    {
+      "bytes": 3882419,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-066.npz",
+      "sha256": "f7c556c57aeb9584c9fe8d6960bba89c3e035ea2b31b1aa16120b26eeeb9b5dc"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-067.json",
+      "sha256": "f0a4835889098c4587c51a069ab3648ea7e90a0f3d59833f29e3a6dbfb09f442"
+    },
+    {
+      "bytes": 4344972,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-067.npz",
+      "sha256": "1f2f2064971e486bd1f555f64aeec27dc574ab22c008ae5f06d623054c810933"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-068.json",
+      "sha256": "5c21e63705c1df094fef51202d1d9688f351131acb5e09861461e1c5a72b9414"
+    },
+    {
+      "bytes": 3460849,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-068.npz",
+      "sha256": "ea9564b2d82e3a9b5c622f51689f36dea49ab97872baa7970364dd2539fe9b49"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-069.json",
+      "sha256": "0868ed2d9bddee431c7987f8f5a01cfca233bebdf7725aa6236677dde2907104"
+    },
+    {
+      "bytes": 4259636,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-069.npz",
+      "sha256": "58b800459719da09e0bf4b272aa785f50eb02834527562caa9583f27b17cd70a"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-070.json",
+      "sha256": "6b84696c5d5bec8f59f586b14533d6d38497dacb32661ad7f935263f18707f1a"
+    },
+    {
+      "bytes": 3792497,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-070.npz",
+      "sha256": "92a6ec46390385220ae5fb88759ae63a56d13046614d54a18b14eadb7358cc27"
+    },
+    {
+      "bytes": 8789,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-071.json",
+      "sha256": "c986834feba34d4f77b0f7b701f66a699fdbd2db223bf9cea613603d5e255932"
+    },
+    {
+      "bytes": 3467402,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-071.npz",
+      "sha256": "9acccc9fc1d63f76683639446cbd841f5a93732a4a421a506276971c2693f477"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-072.json",
+      "sha256": "ac48db1497b0484cc0e0ebc04c87908acc078a1bf1d725dcbfb133945fd65453"
+    },
+    {
+      "bytes": 3811020,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-072.npz",
+      "sha256": "9458fda706343ae2e6e2886d38ecd755e2598d45b860d2636319eb9576aa6c7f"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-073.json",
+      "sha256": "3d47cedc35f7df0dad60edbf3603c5750988c1663dbfdf342fe362c8803fe8e5"
+    },
+    {
+      "bytes": 3615901,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-073.npz",
+      "sha256": "ec0876f3c89d6296639836e4a7963354b02ecf2be1250468938bb8848aaad93c"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-074.json",
+      "sha256": "e6d187b5988d6bfad5de29db83fb7e472378b44f8d62fc57175b058898c913b7"
+    },
+    {
+      "bytes": 3722388,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-074.npz",
+      "sha256": "e55bfd2fb69a924845ec956bb34f9ff738f6fb0956c3ae390259e79db58ea177"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-075.json",
+      "sha256": "157865ac8aa9deb81e64b0536113ddd1fdeca60e0739c0be21ad7e96401acf1d"
+    },
+    {
+      "bytes": 3871637,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-075.npz",
+      "sha256": "180b53440c3ccd741c44351d22601671f5cc0bacccfdf47adc2436dcf23ec53c"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-076.json",
+      "sha256": "63b0f04b9845d43fd3a8bfb5c65cefe56b09abff1490dfce577c847b716608bc"
+    },
+    {
+      "bytes": 3565793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-076.npz",
+      "sha256": "cd4091fd49c4afd22b40197401da6aa27fa0f88cb6042091b6fc5b72e6df262f"
+    },
+    {
+      "bytes": 8788,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-077.json",
+      "sha256": "476799e3bd3a4451ddaf8674f1b76340b0402a38f282c5acb75dfbd07a1dfd9e"
+    },
+    {
+      "bytes": 3828852,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-077.npz",
+      "sha256": "855fc724867cc0cb0916d2ed24a7b2cd08be519e158043973465333090c215cb"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-078.json",
+      "sha256": "9b40c7523957529e3b124e216bedef18e90963793231d3480cf2dd88ce532bb9"
+    },
+    {
+      "bytes": 3638558,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-078.npz",
+      "sha256": "a65618c77e23dee0288aa5bd989ec0c8fce2ae13ee72297be07c8e8c392de4f7"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-079.json",
+      "sha256": "ad53f7503d2545f6df9bfdf39572ab9f6100296ad8e96332907c5f0ed40e76e2"
+    },
+    {
+      "bytes": 3509774,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-079.npz",
+      "sha256": "4df8bd35c55eb170d8ef1083ac6bd9bb61a09806a4b7b80f0a41fcd2a9164bc8"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-080.json",
+      "sha256": "c6fc17c5d96b3ea4c085da3ec2b947d2c6d62c7c2f0033abe07563233e99d3fb"
+    },
+    {
+      "bytes": 3992278,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-080.npz",
+      "sha256": "cd8dcae2a31ebf78485f5b652996d03220890b6be82f63d6ea69a4556b1c7d92"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-081.json",
+      "sha256": "8d438f9e4cc34dc43c146acc938e8dc6ca8e086a4499831834816e3d27d569e4"
+    },
+    {
+      "bytes": 3924441,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-081.npz",
+      "sha256": "4d6358802a4dc3e2e2ddb34e17cef30d7430df13c646bde6196cc27d52e8a0e3"
+    },
+    {
+      "bytes": 8793,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-082.json",
+      "sha256": "6089153b49a35ae55987fc884f95cc505258719100e57d4fb06089b81083c95a"
+    },
+    {
+      "bytes": 4474932,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-082.npz",
+      "sha256": "22f9ea3956ce3fb7754d8560393a7aa6b3da9d5988393f606063ee8633fcb90e"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-083.json",
+      "sha256": "19b990f1ad9654a2274ee925ce6d7b599880e76a68a2b02affbf39e47e97bda9"
+    },
+    {
+      "bytes": 3785832,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-083.npz",
+      "sha256": "39abfe5a61dc215150c319fa8c723b64752262c8084cf16d939f3b65bf10b11a"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-084.json",
+      "sha256": "02503c4ac333f5f6b7d50908df919e036ebd93b04cd09f5cb9d8f035f6e755b3"
+    },
+    {
+      "bytes": 3747146,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-084.npz",
+      "sha256": "a1ff67f78a9899415e86ebc4c11e77fbc98fba01e92609ad7380500a37e5f3b2"
+    },
+    {
+      "bytes": 8792,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-085.json",
+      "sha256": "ea6c23a0e27f26115429825d2f103913c04609397d4178cf00cabdf794dbea18"
+    },
+    {
+      "bytes": 3632360,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-085.npz",
+      "sha256": "3a4e9602e87a8a4cb6ebdb846b788b24bb950edf5572ccf4179a297b2e9dfbc9"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-086.json",
+      "sha256": "de314d4c2ac597f2051ede612a3a9dfcce3b2c4d436a6c3052e641f7f2df3955"
+    },
+    {
+      "bytes": 4409348,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-086.npz",
+      "sha256": "571805afa56671dd95e65f1ced14535423ef3e64c33be142e7793ab819a86908"
+    },
+    {
+      "bytes": 8794,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-087.json",
+      "sha256": "9377eefac32267999fdde32523f270bc917cb6c5eb06d923ae51f5dc2c53e6e2"
+    },
+    {
+      "bytes": 3884832,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-087.npz",
+      "sha256": "f38f9fa4c1f503f7cf670a56886b6360e396ee45f164e877522c8ac18cedbe90"
+    },
+    {
+      "bytes": 8790,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-088.json",
+      "sha256": "2a799ed4cbbac89ad21b7e6256e4ba33d3345e371316184e00c0115a83081967"
+    },
+    {
+      "bytes": 3450411,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-088.npz",
+      "sha256": "e1232ab43cf53cf07ec8a2e279f5e5e8cbd5da6cd89b61bc99a422540ecaea90"
+    },
+    {
+      "bytes": 8791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-089.json",
+      "sha256": "773751240ba31a532f928fa94524ef0b188cffe37adddc3cbf71f2b210e06962"
+    },
+    {
+      "bytes": 4303964,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/main_plan_oracle_raw/dc-plan-discovery-089.npz",
+      "sha256": "8043d5e0d9386ed79829754042eae5790d2fb2f49504e2bf72017c4dd58a0402"
+    },
+    {
+      "bytes": 2601387,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_encoded.npz",
+      "sha256": "bb332e1563e33f23ebcc8db713f33986c24bbbfff4a4fb6d7107f00483ebf956"
+    },
+    {
+      "bytes": 2686,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_encoded_manifest.json",
+      "sha256": "a97734d5654627f9c4ff5d51268f110f07c9fb628bdfecef69de47a45b708c3d"
+    },
+    {
+      "bytes": 556226,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_evaluation.npz",
+      "sha256": "a836660b8435b7a4da8941ba77ddfba0778ec2f1e3cbdda1ff16c75cee301097"
+    },
+    {
+      "bytes": 6293,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_evaluation_manifest.json",
+      "sha256": "75a43cfc058882aad17988850d8fde3478a6e150ddacc399671c0196306e037f"
+    },
+    {
+      "bytes": 4694,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_raw_episode_metrics.npz",
+      "sha256": "e8ae95201f58f4bed452573bed4b61db59a96976670a802751155e748c484606"
+    },
+    {
+      "bytes": 819,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/markov_oracle_raw_episode_metrics_manifest.json",
+      "sha256": "42f799cd521ca5872ef9fc3996e56167bf3d67a7085fc2c40b782a78ccb877d6"
+    },
+    {
+      "bytes": 1640173,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/offline_calibration_evaluation.npz",
+      "sha256": "61d711525ea214d2ec4d205a72039f69c261818ae9873dc75f4ea7ba52c20185"
+    },
+    {
+      "bytes": 3881,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/offline_calibration_evaluation_manifest.json",
+      "sha256": "b36fa20916ec723bd25229919c83f75dae1ece7ba1e7281a98065a342697974c"
+    },
+    {
+      "bytes": 7644797,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/offline_discovery_evaluation.npz",
+      "sha256": "1085ea140fa29a87ff8e40af45a5128fab814ebdcccb8d5c4cedae4dfb44bee1"
+    },
+    {
+      "bytes": 3854,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/offline_discovery_evaluation_manifest.json",
+      "sha256": "c0e4c8122f4e8ff6a145a1124d9f57891ec3d2b7fe3796c8c4ac1fcdb8f0e9f3"
+    },
+    {
+      "bytes": 7841818,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_encoded.npz",
+      "sha256": "fa68a3d11e66f1a7b9e09871657439cac977a2ffa3feb89325e80b662512c20d"
+    },
+    {
+      "bytes": 2681,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_encoded_manifest.json",
+      "sha256": "28d8dc256e68ed22bcdecf720b88b6b0524b713060d05a7c3cfc071b983eea1d"
+    },
+    {
+      "bytes": 1676146,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_evaluation.npz",
+      "sha256": "22f4b945436014a9935b47cd04dec4c6fc7cf197b2fde898d30b06f981172be9"
+    },
+    {
+      "bytes": 6284,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_evaluation_manifest.json",
+      "sha256": "cb48b27ababdbe7365eb697622b12e63fd6292c94914be229a67af5064383487"
+    },
+    {
+      "bytes": 10944,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_raw_episode_metrics.npz",
+      "sha256": "2f36d46753b3efa30c62f8a7ada18b0a3af2adb9262fca103c1fc7be4df7f487"
+    },
+    {
+      "bytes": 812,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/plan_oracle_raw_episode_metrics_manifest.json",
+      "sha256": "e3f16f2c4114311042f22d94ad02a38a2632466798bcdc653871f5acf0688701"
+    },
+    {
+      "bytes": 109456,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_manifest.json",
+      "sha256": "462ad4209b9b54101e05ecdb89806b0f06a1ce90f74673aebe709b4c0249e69b"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-000.json",
+      "sha256": "db03697ec1effc0f8fff055ba581d3d6e35842ad62629d978bcbfb1476c73c0e"
+    },
+    {
+      "bytes": 3439833,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-000.npz",
+      "sha256": "b5bc7953b627e55ca49284c536c8aea1f7a3c672311a91fcceec8bbda0481154"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-001.json",
+      "sha256": "f2954884e53e9ede0125db959e8ee8e91bf4f3eaf2436fcd0b8beddbaf2711ec"
+    },
+    {
+      "bytes": 3439251,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-001.npz",
+      "sha256": "d5fec221a8ba9e75087c79036ccd129a5e0935fa9709dfd96c587358c27f3ff2"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-002.json",
+      "sha256": "71b0cbb8eebb3ef2f58a741d23797cc7bdd673d3a714f5cf77beee0ed23df5de"
+    },
+    {
+      "bytes": 3652781,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-002.npz",
+      "sha256": "f1e06f6511013c15d05c2a1a0b43099ccaf8a319378875cc83aa03351e2cfd75"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-003.json",
+      "sha256": "3202aeb33bea98d448fc0ddc6352952ef2698f2d0f1456e3019c612b770a7d92"
+    },
+    {
+      "bytes": 3586511,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-003.npz",
+      "sha256": "2badc1ee262cd524e9eebadde363b9c66f191d95d33f1215f6803b7b294842c3"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-004.json",
+      "sha256": "cbf555db8df228addc64416446a93f841893e1073d89afd2cc38a291fce6bf00"
+    },
+    {
+      "bytes": 3657671,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-004.npz",
+      "sha256": "69102bbf4280faef40e7728acd71129281beee94d1af3ea8ee844be768410e86"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-005.json",
+      "sha256": "bcff065f7db7d9eb516cf5f6fea208922dc61e95b1e1f3ec25a778970f8024f5"
+    },
+    {
+      "bytes": 3346220,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-005.npz",
+      "sha256": "6f733524536f02df59abd822f4a4376975440bf9c006d074e39b33d2bd8a702a"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-006.json",
+      "sha256": "f059e79f1705a853c9021a3229b919f5249d634b3b69760e57ec0f5dd6c8a290"
+    },
+    {
+      "bytes": 3860469,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-006.npz",
+      "sha256": "be59e0bbcccac12a9a0d957088ae00fd2e4c9403651ccd1be887987456db5dcc"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-007.json",
+      "sha256": "cd3b73379bcc2c5241bf197d7bc456fa7c16b8ab14268cdf64523a6e272c43e2"
+    },
+    {
+      "bytes": 3418539,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-007.npz",
+      "sha256": "3a48e6d8fbf51a987b0cf44b1e4ca2710eb83fd92944122528b4ea74a7edcde1"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-008.json",
+      "sha256": "a241ff78acc087555a7e3c435c4b03b8174f5159ce2a4624d9588724811bf6cb"
+    },
+    {
+      "bytes": 3342189,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-008.npz",
+      "sha256": "fa31ad788cc0c98dd6de0a27a0a6d579a3184ab7ad70d4aeaf11995ae6d779a7"
+    },
+    {
+      "bytes": 7837,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-009.json",
+      "sha256": "dac9aacfdca54cbb442ded1aa5163893d6666b41c1950f057ba5413a5bbc7603"
+    },
+    {
+      "bytes": 3551773,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-009.npz",
+      "sha256": "22bb5f97b2e0e60f42969b72d9e1ade1f6ff822faf1401d5fec6286ffb89948a"
+    },
+    {
+      "bytes": 7838,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-010.json",
+      "sha256": "4809d77ffbb02f843a12e4398c2f1e02242294b13bd5ddd1b773f2c99d4ac2a5"
+    },
+    {
+      "bytes": 3349301,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-010.npz",
+      "sha256": "3148ee401c5aa2b976b10808bfbf7f764ffddd15cbed09aa73c3964efee679fd"
+    },
+    {
+      "bytes": 7838,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-011.json",
+      "sha256": "767f15ea363ecfc1e84a6bb5176dd64c7012f0dd02dd22d5268993a79675af2f"
+    },
+    {
+      "bytes": 3432778,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_markov_oracle_raw/dc-smoke-markov-011.npz",
+      "sha256": "c557a4b59f7cef91e310e62243b812a650117d4af4a5202c1b8599f132386398"
+    },
+    {
+      "bytes": 109356,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_manifest.json",
+      "sha256": "9f14967f3f25b5ed99f9a74e91da3a1700f7393082834dc99b25812d164e87ca"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-000.json",
+      "sha256": "9976e10f56f271ad9a49de76c44057e1ca5db796f964b695531dbfb72c29b93b"
+    },
+    {
+      "bytes": 4237226,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-000.npz",
+      "sha256": "0721766371882ee874ce7f126b131a5ded127af94ceaa570fb1c16ee3759b4b9"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-001.json",
+      "sha256": "4c0c26da527a919f145264feb32e583b72576f08f0a3d986a02a44d6f08ba66b"
+    },
+    {
+      "bytes": 3540871,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-001.npz",
+      "sha256": "41dda36bfb3687a1baea618f130d6501b9610270e4787161064bf9d0af9b94cb"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-002.json",
+      "sha256": "2ecc7904b0958f9aecaa509b751788b009647227ae670fac4e0873b3ced654ff"
+    },
+    {
+      "bytes": 3671453,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-002.npz",
+      "sha256": "2bfef9dd7b6454a5ad7ed8260d9308bff73c953d67ac6b13bd857f62de78d8a7"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-003.json",
+      "sha256": "9eb1e81d9d3e3d383816968b1f027d4d5d1c2a66093aeb07ef784015561ff322"
+    },
+    {
+      "bytes": 4278474,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-003.npz",
+      "sha256": "3cbb3712038fc6cc7e5bd2b4258fb5a24e5182d6cc38215c9bd8c96e4a3ee339"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-004.json",
+      "sha256": "ae7d43637b1d7fb5f7ab7e01163b10c47be053cf6a93ff9b223b2dcf08c3aed2"
+    },
+    {
+      "bytes": 3861853,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-004.npz",
+      "sha256": "2f009dba63356f1daff1cfe6daec3b6db6039a9ea13f2c85301040710c8ef53f"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-005.json",
+      "sha256": "8b92061d038f9dcfa0997f70f3af0e65b3ebe65d09696b42e1c5325e0cbc1afc"
+    },
+    {
+      "bytes": 3978394,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-005.npz",
+      "sha256": "3d63355247e80674f3bc89b707f0ae34803fb658cacb3b42911626bdae779d9a"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-006.json",
+      "sha256": "f7629b3870abeacb3d4acc1c2069a61f60d4d004eb15df0ade49f0f3014ebbf1"
+    },
+    {
+      "bytes": 4023813,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-006.npz",
+      "sha256": "e24e5e514f5c3284473b891505976fd98ad4a3ebfbb743c1b4e1f23824fdd125"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-007.json",
+      "sha256": "f4b9f0aea506f41853acfc36dbca6efcaa8dfb9e0fb27ef4a6c46872c661b90c"
+    },
+    {
+      "bytes": 3759158,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-007.npz",
+      "sha256": "f6b2513c6d613ce29f766c4ad7836c0c11b1306fb3c8cb75b3c9b2e1c6bc9c82"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-008.json",
+      "sha256": "37cbcd2fd322019b9ca249ead365d8d917735c582d41ee869176790270ccca58"
+    },
+    {
+      "bytes": 3851438,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-008.npz",
+      "sha256": "43b66eb69c0b0a75cfa632f81cff286ade27a273a8c8cebb1ef02304b30c2138"
+    },
+    {
+      "bytes": 7829,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-009.json",
+      "sha256": "fae81c18d58570b98572beb0dd8934c9b31b8cb031663479b09ffc03e97e39ea"
+    },
+    {
+      "bytes": 3956103,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-009.npz",
+      "sha256": "70efc4a8c49bc44503f040d4d78dcbd0a5145a927461665af43ca6da6be281b6"
+    },
+    {
+      "bytes": 7830,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-010.json",
+      "sha256": "6e573da890258f69712fcb3126519fbf01085a33882c2d412626bedbce8b921e"
+    },
+    {
+      "bytes": 4086198,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-010.npz",
+      "sha256": "97119586b0968877165bc8bed815595a8d89454b1da75f8e431847e7e0b329d8"
+    },
+    {
+      "bytes": 7830,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-011.json",
+      "sha256": "2f09f0158e7a092230342e531dc854f9342437bdfb9a1ab456deb6cd8e4f37b5"
+    },
+    {
+      "bytes": 3852970,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/smoke_plan_oracle_raw/dc-smoke-plan-011.npz",
+      "sha256": "312cab1e34b96e8be336e75e35054d05149cf7d11d2fec47bd8df99a7741cc02"
+    },
+    {
+      "bytes": 5754074,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/v4_markov_evaluation.npz",
+      "sha256": "2855f5d39f66efaf30795cdddc9732d8b38344fd4ee0d160105288927a008e38"
+    },
+    {
+      "bytes": 9945,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/v4_markov_evaluation_manifest.json",
+      "sha256": "be6435157e8ed7fd1331fe58b5268d331353831b6d2c74f595ab9a38c5815280"
+    },
+    {
+      "bytes": 34583,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/v4_markov_raw_episode_metrics.npz",
+      "sha256": "e11d449b033f8c34626345d531b9e50963e8ecc53df598100529b54cf43533a7"
+    },
+    {
+      "bytes": 791,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/data/v4_markov_raw_episode_metrics_manifest.json",
+      "sha256": "e1e6b2587f4a9c95f4d142cd22e0f5bad6cdbd01bd9360e4f1a187c7e7b1ba7c"
+    },
+    {
+      "bytes": 2201,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/decision.json",
+      "sha256": "b73940d770ed89e6a769c7ac57ffd19292b2e67b3fad69146fa8bb168cb6acd7"
+    },
+    {
+      "bytes": 33284,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/evaluate.py",
+      "sha256": "7cce117f66b95cd18eca94cd25ff08fe0015a88fc5e1d9bc6eab3b46100cadff"
+    },
+    {
+      "bytes": 4204,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/evaluate_v4_compat.py",
+      "sha256": "954ee283dd2625a5dc999f08edf09c686e90796fad44cfab6c841a24589baa53"
+    },
+    {
+      "bytes": 13634,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/evaluate_v4_numeric_compat.py",
+      "sha256": "ee29c181a6503b19e0dd0294f94ac1e2e51338f5c6b851b3794bbb79725b6e56"
+    },
+    {
+      "bytes": 4975,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/finalize_postdecision.py",
+      "sha256": "01ce15ad272586db46122297e4fa74ff05a308d5b01c4da47a0a5b3f9832bd5f"
+    },
+    {
+      "bytes": 18613,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/generator.py",
+      "sha256": "1784280d566ac4df62ed891186e837a611aac1ded22e7dc69a73fde0a86527e6"
+    },
+    {
+      "bytes": 15052,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/generator_seedfix.py",
+      "sha256": "f8a6a79d3ea6d093bbab18d4e903bc8f1611717d85e2d31ae88128a98199357d"
+    },
+    {
+      "bytes": 8607,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/latency.py",
+      "sha256": "5d5510ddb37b7a48ceed73f9fd365813fa328ea93fd491278bb23983513e6531"
+    },
+    {
+      "bytes": 381302,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/bootstrap_replicates.npz",
+      "sha256": "9a8a5894c89cc3092eab7569bb3c9eace2d03c82f139acec245814a1ca0de753"
+    },
+    {
+      "bytes": 756378,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/dataset_episode_metrics.npz",
+      "sha256": "31f67e224c99370a28d3a5469409d8d8feb3e07f69b4a01a853a886180ffb692"
+    },
+    {
+      "bytes": 30707,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/distribution_comparison.json",
+      "sha256": "577daf776b9e9b64e91c1ea47ee8b01f8f21cc7e071b909f58da5558bc18a3b9"
+    },
+    {
+      "bytes": 6331,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/gate_prospective.json",
+      "sha256": "d929d0bf50bcc6a67ac66409bbcdb2f0f4638111bd14baf485ea3070d6f59fc7"
+    },
+    {
+      "bytes": 17322,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/metrics/latency.json",
+      "sha256": "04248a26612932b545d488d0b7598d8bacf1198ae29c8980d29b4aadad80fba0"
+    },
+    {
+      "bytes": 1515,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/postdecision_completion.json",
+      "sha256": "6cf418e5b6b566efb250fad0e6489eb47694daf46125ba7985b2aebd5aa6d720"
+    },
+    {
+      "bytes": 25003,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/prepare.py",
+      "sha256": "59edd0ca86ad17a0cf4f141275a6ceb0e4088c22bef9f0f7cb079f36cc0885f4"
+    },
+    {
+      "bytes": 4085,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/protocol_amendment_01.json",
+      "sha256": "8c55f6a855eb20a987aac7473a085548f75b7006ff8c85d11c2d268bc273f57b"
+    },
+    {
+      "bytes": 10993567,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/reference/offline_episode_metrics.npz",
+      "sha256": "50fa665941931c1b5764819d9c06e49c255a9e150c2eb0220337637185d1fef7"
+    },
+    {
+      "bytes": 55773,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/reference/raw_offline_episode_metrics.npz",
+      "sha256": "7c5a57a6ed6170b87b6042f44fa2c641b16800c318c4588dbc42c61ce4ce0a1b"
+    },
+    {
+      "bytes": 71345,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/reference/reference_bands.json",
+      "sha256": "65eb4fd44e2782520176c990bea05dde295d084d9692794509981dc4843bd720"
+    },
+    {
+      "bytes": 11489,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/report.py",
+      "sha256": "3b2e2a70c66da5d4a78862e3dcd87a64817da34e6d008db42c22931b225927f7"
+    },
+    {
+      "bytes": 3248,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/report_with_amendment.py",
+      "sha256": "78827d1289ae360fc8664977c23d6ad93cf3b79a9187330ba18f4b0529c4e3a6"
+    },
+    {
+      "bytes": 41992,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/seed_manifest.json",
+      "sha256": "259e4c1e4f6481a50043627e497c18eecd88796f22fef6b11fd7acb27b523adb"
+    },
+    {
+      "bytes": 7430,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/source_manifest.json",
+      "sha256": "c8fba7645ac30060812723830b5bd5aca05771c53bbef547a6c063c6a3b46569"
+    },
+    {
+      "bytes": 267,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/test_logs.txt",
+      "sha256": "4bb7e0a1ab7fe6f4bedc45f5072f435857eadab6b12dba11d0c74e776ea6ec6d"
+    },
+    {
+      "bytes": 5950,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/tests/test_contract.py",
+      "sha256": "e7396952a12752ba0cea86431efec34f9b601e7e6912e6b1078a3560ce609b5b"
+    },
+    {
+      "bytes": 9927,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/verify.py",
+      "sha256": "b17599956a3418fe0de860bc3950dacbf1a221c0b069b327ed32f5d25e4f17f7"
+    },
+    {
+      "bytes": 7770,
+      "path": "runs/lewm_adaptive_compute_distribution_contract/verify_amendments.py",
+      "sha256": "433f64350dc4f09969421161e300e7ca68814c03103f0bf29ed4dd1079123dc8"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "all_study_files_except_this_manifest_and_its_followup_verification",
+  "total_bytes": 584416857,
+  "v3_test_targets_opened": false,
+  "v5_confirmation_episodes": 0
+}

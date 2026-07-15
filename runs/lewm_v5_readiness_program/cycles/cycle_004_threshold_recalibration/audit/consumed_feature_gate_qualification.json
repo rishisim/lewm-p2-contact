@@ -1,0 +1,251 @@
+{
+  "all_exact_gate_decisions_and_calls": true,
+  "consumed_only": true,
+  "datasets": [
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 1,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "cpu",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 3.814697265625e-06,
+      "maximum_abs_score_delta": 3.5824372615067546e-06,
+      "minimum_reference_threshold_margin": 0.0004084277131390923,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/smoke_evaluated.npz",
+      "reached_feature_rows": 1368,
+      "role": "smoke",
+      "rows": 456,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 3,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "cpu",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 3.814697265625e-06,
+      "maximum_abs_score_delta": 4.060593928656431e-06,
+      "minimum_reference_threshold_margin": 5.9559751989235465e-05,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/fit_evaluated.npz",
+      "reached_feature_rows": 13680,
+      "role": "fit",
+      "rows": 4560,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 3,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "cpu",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 3.814697265625e-06,
+      "maximum_abs_score_delta": 4.074001790144166e-06,
+      "minimum_reference_threshold_margin": 0.000320962735283592,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/selection_evaluated.npz",
+      "reached_feature_rows": 6840,
+      "role": "selection",
+      "rows": 2280,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 12,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "cpu",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 3.814697265625e-06,
+      "maximum_abs_score_delta": 5.571899388989721e-06,
+      "minimum_reference_threshold_margin": 1.3176976480400171e-05,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/prospective_evaluated.npz",
+      "reached_feature_rows": 20520,
+      "role": "prospective",
+      "rows": 6840,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 262,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "mps",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 8.940696716308594e-08,
+      "maximum_abs_score_delta": 4.063171601842441e-06,
+      "minimum_reference_threshold_margin": 0.0004084277131390923,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/smoke_evaluated.npz",
+      "reached_feature_rows": 1368,
+      "role": "smoke",
+      "rows": 456,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 2545,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "mps",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 8.940696716308594e-08,
+      "maximum_abs_score_delta": 5.06180131809586e-06,
+      "minimum_reference_threshold_margin": 5.9559751989235465e-05,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/fit_evaluated.npz",
+      "reached_feature_rows": 13680,
+      "role": "fit",
+      "rows": 4560,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 1342,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "mps",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 1.1920928955078125e-07,
+      "maximum_abs_score_delta": 5.235783611112765e-06,
+      "minimum_reference_threshold_margin": 0.000320962735283592,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/selection_evaluated.npz",
+      "reached_feature_rows": 6840,
+      "role": "selection",
+      "rows": 2280,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    },
+    {
+      "archive_keys_observed": [
+        "episode_id",
+        "exits",
+        "features",
+        "model_step",
+        "target"
+      ],
+      "array_keys_loaded": [
+        "features"
+      ],
+      "bitwise_exact_feature_rows": 4053,
+      "call_histogram_exact": true,
+      "calls_exact": true,
+      "device": "mps",
+      "feature_allclose_to_repository_execution": true,
+      "feature_order_preserved": true,
+      "maximum_abs_feature_delta": 1.1920928955078125e-07,
+      "maximum_abs_score_delta": 5.2471494731420876e-06,
+      "minimum_reference_threshold_margin": 1.3176976480400171e-05,
+      "passed": true,
+      "path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_planoracle_native_discovery/data/prospective_evaluated.npz",
+      "reached_feature_rows": 20520,
+      "role": "prospective",
+      "rows": 6840,
+      "same_path_compiled_gate_scores_bitwise_exact_on_repeat": true,
+      "stage_decisions_exact": true,
+      "target_array_loaded": false
+    }
+  ],
+  "devices": [
+    "cpu",
+    "mps"
+  ],
+  "identical_feature_order": true,
+  "passed": true,
+  "released_hdf5_opened": false,
+  "schema_version": 1,
+  "semantic_feature_names_sha256": "25df939089e9f18dcad734d75f6e40289e3e199ff7942125887be36c8309f172",
+  "total_reached_feature_rows_per_device": 42408,
+  "total_source_rows": 14136,
+  "v3_test_targets_opened": false,
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "not_executed_locked_stack_unavailable",
+  "episode_count_frozen": 8,
+  "transition_count_frozen": 64,
+  "frame_count_frozen": 24,
+  "transition_count_executed": 0,
+  "frame_count_executed": 0,
+  "hdf5_rows_read": 0,
+  "comparison_to_current_runtime": null,
+  "restore_mode_comparison": null,
+  "omitted_state_inventory": null,
+  "reason": "Exact frozen environment failed package identity audit before scientific execution."
+}

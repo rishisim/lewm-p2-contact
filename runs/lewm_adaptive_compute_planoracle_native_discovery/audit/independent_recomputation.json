@@ -1,0 +1,13 @@
+{
+  "call_histogram_recomputed": [
+    4798,
+    1482,
+    181,
+    379
+  ],
+  "passed": true,
+  "raw_analytic_benefit_recomputed": 6.272914235951081e-06,
+  "report_not_trusted": true,
+  "terminal_outcome_recomputed": "planoracle_prospective_discovery_passed",
+  "white_analytic_benefit_recomputed": 0.0007330466678777006
+}

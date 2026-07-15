@@ -1,0 +1,15 @@
+{
+  "candidate_count": 9,
+  "created_unix_ns": 1784149527354993000,
+  "fit_episode_count": 240,
+  "fit_input_sha256": "ad326f419bc7ae584b5cb4605da589e6e3a426d5c057f23d37089e8b95c17906",
+  "fit_manifest_sha256": "0ce73bbd327fa2f7f7b7710e67593972dfabb46e8e0804d7f67f886e263c20d7",
+  "fitted_candidates_sha256": "f4bffc40059f5890cf57b95891c62887d4b3b0ac7e58689e2a2d4aba3e75aab8",
+  "grid_sha256": "d492134eaf217b17832bf9d3fc570d5bbdea2b57356da7e05e072b0545b43cfa",
+  "native_whitening_unchanged_sha256": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+  "schema_version": 1,
+  "selection_input_existed_but_was_not_opened": false,
+  "selection_target_or_feature_accessed": false,
+  "status": "all_nine_candidates_fit_and_locked_before_selection_open",
+  "v5_outcome_episodes": 0
+}

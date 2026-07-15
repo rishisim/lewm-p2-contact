@@ -1,0 +1,31 @@
+{
+  "analysis_source_sha256": "72a657d42ccb0f5d535de503a05951cbebc265eeda35f1406bcde75b836d3246",
+  "checks": {
+    "analysis_uses_fixed_method": true,
+    "bonferroni_union_bound_familywise_alpha": true,
+    "diagnostic_bounds_reproduced": true,
+    "endpoint_scale_ratio_exceeds_50": true,
+    "independent_verifier_has_separate_quantile_implementation": true,
+    "individual_criteria_unchanged": true,
+    "new_design_has_no_sequential_expansion": true,
+    "numpy_and_manual_quantiles_agree": true,
+    "scale_valid_method_was_fixed_before_cycle_006": true,
+    "source_cycle_is_consumed_failure": true,
+    "two_fixed_endpoints": true
+  },
+  "consumed_diagnostic_bounds_only": {
+    "native_whitened_vs_analytic": 0.0005516380707502069,
+    "raw_vs_analytic": 2.806210365944296e-06
+  },
+  "coverage_argument": "For events E_raw and E_white that their respective lower bound exceeds the true effect, P(E_raw union E_white) <= P(E_raw)+P(E_white) <= .025+.025=.05; no common unit, independence, or correlation assumption is used.",
+  "family_size": 2,
+  "familywise_alpha": 0.05,
+  "independent_source_sha256": "f74a9427db45c765432adf9800384e40b091ae61f4ce719449a3c5c760bede07",
+  "method": "Bonferroni two-fixed-endpoint one-sided percentile lower bounds",
+  "new_prospective_episodes_used": 0,
+  "new_smoke_episodes_used": 0,
+  "passed": true,
+  "per_endpoint_alpha": 0.025,
+  "schema_version": 1,
+  "v5_outcome_episodes": 0
+}

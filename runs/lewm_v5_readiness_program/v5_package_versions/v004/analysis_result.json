@@ -1,0 +1,148 @@
+{
+  "adaptive_planoracle_native_whitened_mse": 0.09876419993642473,
+  "adaptive_raw_mse": 0.003433540759280532,
+  "compute": {
+    "adaptive_total_flops": 4332936120435,
+    "additional_refiner_flops": 3490583040,
+    "analytic_equivalent_mean_calls": 1.2529540975276308,
+    "base_flops": 4288174752000,
+    "base_model_calls": 60800,
+    "call_histogram": [
+      50973,
+      7267,
+      1773,
+      787
+    ],
+    "gate_dual_affine_score_flops": 306214408,
+    "gate_evaluations": 73187,
+    "gate_feature_flops": 278183787,
+    "gate_total_flops": 584398195,
+    "mandatory_depth1_flops": 40686387200,
+    "mean_refiner_calls": 1.2166776315789474,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09937282203357548,
+      "weight_upper": 0.25295409752763076
+    },
+    "nonflop_comparison_min_operations": 365935,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.0034403097626425007,
+      "weight_upper": 0.25295409752763076
+    },
+    "refiner_model_calls": 73974,
+    "rows": 60800,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 103565,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 15380,
+      "seed": 2831777771,
+      "total_calls": 76180,
+      "total_flops": 4332936224000
+    }
+  },
+  "created_unix_ns": 1784159105870284000,
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006086220971507569,
+      "lower": 0.0005135570380185851,
+      "upper": 0.0007084272041684183
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.0005953569975589559,
+      "lower": 0.0005383450906633228,
+      "upper": 0.0006536816849531948
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.769003361969305e-06,
+      "lower": 5.423955197986978e-06,
+      "upper": 8.16296100444804e-06
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 1.7871883745047833e-05,
+      "lower": 1.613911544250027e-05,
+      "upper": 1.9659389685757142e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.565504389800031e-06,
+      "lower": 5.86453821533343e-06,
+      "upper": 9.298726916596178e-06
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 5.554526238291087e-06,
+      "lower": 4.222587549196612e-06,
+      "upper": 6.935109194665069e-06
+    }
+  },
+  "independent_verification_required_before_final_terminal_outcome": true,
+  "integrity": {
+    "chronology": true,
+    "confirmation_outcome_count_exact": true,
+    "contact_input_exclusion": true,
+    "exact_compute_two_derivations": true,
+    "exact_episode_count": true,
+    "exact_row_count": true,
+    "finite_arrays": true,
+    "frozen_modules": true,
+    "gate_fit_selection_isolation": true,
+    "gradient_absence": true,
+    "hashes": true,
+    "histograms_preserved": true,
+    "input_key_allowlist": true,
+    "manual_sparse_forward_selected_exact": true,
+    "pre_v5_seal": true,
+    "same_path_repeat_exact": true,
+    "seed_isolation": true,
+    "seeded_comparator_weakly_more_total_compute": true,
+    "sparse_dense_calls_and_histograms_exact": true,
+    "sparse_dense_numerical_contract": true,
+    "sparse_scores_reproduce_calls_exactly": true
+  },
+  "latency_excluded_from_terminal_mapping": true,
+  "process_valid": true,
+  "proposed_terminal_outcome": "v5_confirmation_passed",
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006086220971507569,
+      "familywise_alpha": 0.05,
+      "lower": 0.0005135570380185851,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.769003361969305e-06,
+      "familywise_alpha": 0.05,
+      "lower": 5.423955197986978e-06,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "stagewise_pass": true,
+  "stagewise_rank": [
+    {
+      "positive_sign": true,
+      "reached_rows": 60800,
+      "spearman_score_gain_rho": 0.26262054783011723,
+      "stage": 1
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 9827,
+      "spearman_score_gain_rho": 0.1711932821485169,
+      "stage": 2
+    },
+    {
+      "positive_sign": true,
+      "reached_rows": 2560,
+      "spearman_score_gain_rho": 0.14122916874567698,
+      "stage": 3
+    }
+  ],
+  "statistical_pass": true,
+  "v5_launched": true,
+  "v5_outcome_episodes": 1600
+}

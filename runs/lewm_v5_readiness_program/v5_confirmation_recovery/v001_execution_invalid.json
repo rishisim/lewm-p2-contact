@@ -1,0 +1,35 @@
+{
+  "all_v001_identifiers_treated_as_consumed": true,
+  "checks": {
+    "all_attempted_identifiers_unique": true,
+    "all_attempted_seed_tuples_unique": true,
+    "all_exception_types_module_not_found": true,
+    "all_failures_slot_zero": true,
+    "all_inspection_flags_false": true,
+    "all_messages_exact": true,
+    "confirmation_raw_directory_empty": true,
+    "failure_count_exact_101": true,
+    "failure_record_hash_exact": true,
+    "no_confirmation_output_artifacts": true,
+    "pre_v5_seal_hash_exact": true
+  },
+  "confirmation_outcome_count": 0,
+  "created_unix_ns": 1784154964383590000,
+  "failed_attempt_count": 101,
+  "failed_slot_set": [
+    0
+  ],
+  "failure_record_path": "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/v5_confirmation_generation_failures.json",
+  "failure_record_sha256": "2a94c67335084fad28e431c7f630aca9005d77a6822995818dc72cf0d2a305f0",
+  "modeled_row_count": 0,
+  "no_analysis_or_decision_artifact_fabricated": true,
+  "operational_terminal_label": "v5_execution_invalid",
+  "package_path": "runs/lewm_v5_readiness_program/v5_package_versions/v001",
+  "package_version": "v001",
+  "pre_v5_seal_path": "runs/lewm_v5_readiness_program/v5_package_versions/v001/audit/pre_v5_seal.json",
+  "pre_v5_seal_sha256": "ca3e01672a8cbf0042426c63f35c2297e55e4f2592cbc2eae31e4aeff509a4dd",
+  "raw_episode_count": 0,
+  "schema_version": 1,
+  "scientific_interpretation": "pre-outcome procedural execution invalidity caused by generation being invoked with the sealed evaluation-only interpreter; not a statistical retry",
+  "source_task_id": "019f67dd-913e-7922-a8fd-01747ae44a0d"
+}

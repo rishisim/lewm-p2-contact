@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "package_version": "v003",
+  "status": "v003_preseal_invalid",
+  "failure_state": "PRESEAL_QUALIFY",
+  "failed_command": [
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "qualify_inference.py"
+  ],
+  "exception_type": "RuntimeError",
+  "failed_check": "mixture_two_implementations_exact",
+  "cause": "The fresh v003 synthetic qualification seed produced an algebraically equivalent mixture pair whose maximum floating-point difference was 1.7763568394002505e-15, just above the inherited fixed 1e-15 diagnostic tolerance.",
+  "diagnostic_maximum_absolute_difference": 1.7763568394002505e-15,
+  "diagnostic_mean_absolute_difference": 5.972308683051669e-17,
+  "independent_machine_precision_scaled_ceiling": 4.6739968414328817e-14,
+  "mixture_depths_and_weights_exact": true,
+  "minimal_version_forward_repair": "Keep exact depth and weight checks and replace the brittle fixed diagnostic tolerance with a declared float64 machine-precision-scaled ceiling; do not change either analysis implementation.",
+  "failed_inference_qualification_sha256": "543e15cc88ac26daea2f775cbd3a2f32356855c7010efd43f96d0387a5e04711",
+  "qualify_inference_source_sha256": "1ae7afbc64d423912e689cebc255311cc1b8bd000238fbdca190087824f29feb",
+  "pre_v5_seal_created": false,
+  "package_smoke_raw_episode_count": 0,
+  "confirmation_raw_episode_count": 0,
+  "modeled_row_count": 0,
+  "confirmation_outcome_count": 0,
+  "seed_or_replacement_tuple_touched": false,
+  "outcome_loss_contact_reward_or_success_inspected": false,
+  "all_v003_identifiers_consumed_for_future_freshness": true,
+  "scientific_or_statistical_failure": false,
+  "statistical_retry": false
+}

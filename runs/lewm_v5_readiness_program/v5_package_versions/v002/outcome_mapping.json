@@ -1,0 +1,54 @@
+{
+  "bootstrap": {
+    "episode_level_paired_replicates": 20000,
+    "fixed_seed_source": "cohort_seed_ledger.json",
+    "individual_interval_quantiles": [0.025, 0.975],
+    "simultaneous_co_primary": {
+      "familywise_alpha": 0.05,
+      "method": "Bonferroni two-endpoint one-sided percentile lower bounds",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "individual_positive_lower_bound_criteria": [
+    "raw_vs_analytic",
+    "raw_vs_seeded",
+    "raw_vs_fixed_d1",
+    "raw_vs_within_episode_histogram",
+    "native_whitened_vs_analytic",
+    "native_whitened_vs_within_episode_histogram"
+  ],
+  "integrity_failure_outcome": "v5_execution_invalid",
+  "no_retry": true,
+  "process_valid_statistical_failure_outcome": "v5_confirmation_failed",
+  "process_valid_statistical_pass_outcome": "v5_confirmation_passed",
+  "required_integrity": [
+    "pre_v5_seal",
+    "chronology",
+    "exact_episode_and_row_counts",
+    "finite_arrays",
+    "complete_hash_and_path_sets",
+    "fresh_seed_isolation",
+    "pixels_action_input_allowlist",
+    "contact_and_privileged_input_exclusion",
+    "calls_reproduced_exactly_from_scores",
+    "sparse_dense_calls_and_histograms_exact",
+    "manual_sparse_forward_selected_bitwise_exact",
+    "same_sparse_path_repeat_bitwise_exact",
+    "cross_batch_selected_latents_within_frozen_numerical_contract",
+    "frozen_modules_and_no_gradients",
+    "within_episode_histograms_preserved",
+    "two_exact_compute_derivations_agree",
+    "seeded_comparator_uses_weakly_more_total_compute"
+  ],
+  "schema_version": 1,
+  "simultaneous_co_primary_positive_lower_bound_criteria": [
+    "raw_vs_analytic",
+    "native_whitened_vs_analytic"
+  ],
+  "stagewise_requirement": "Spearman gate-score versus combined raw/native-whitened next-stage gain is finite and strictly positive at each of stages 1, 2, and 3",
+  "terminal_precedence": [
+    "any integrity failure => v5_execution_invalid",
+    "otherwise any statistical or stagewise criterion failure => v5_confirmation_failed",
+    "otherwise => v5_confirmation_passed"
+  ]
+}

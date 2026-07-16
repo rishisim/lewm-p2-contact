@@ -1,0 +1,29 @@
+{
+  "accepted_discovery_cycle": 7,
+  "accepted_discovery_source_hashes": {
+    "artifact_manifest": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+    "compiled_gate": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "decision": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+    "gate_fit": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "gate_freeze": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "gate_freeze_seal": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+    "independent_verification": "ee719a50d4bffe4df7fff9a74f21712564e2f2d7c09be21a627c36bd88323a72"
+  },
+  "artifact_manifest_path": "artifact_manifest.json",
+  "confirmation_has_not_been_launched": true,
+  "created_unix_ns": 1784156326342374000,
+  "excluded_package_smoke_episode_count": 12,
+  "excluded_package_smoke_passed": true,
+  "frozen_candidate_manifest_sha256": "30ea1fa6c0a423b0aa935d16634a4bb4f6d011ac8807b3c335476a5b1e5317b4",
+  "frozen_claim": "lower episode-averaged raw and PlanOracle-native-whitened latent MSE than the strongest transition-independent analytic exact-total-compute mixture under the frozen PlanOracle DGP",
+  "package_smoke_verification_sha256": "e363d6edd1367b945d7be0605391792a10fa33ca75e39b2ab7e1290b5bc40e3d",
+  "package_version": "v004",
+  "pre_v5_seal_sha256": "c2853b726cf2e596ab3fda47ae1cae5aba1308f8f0c6409732acf4dc430677d6",
+  "primary_joint_power_lower": 0.9659810650707059,
+  "schema_version": 1,
+  "selected_candidate_id": "stage_dual_r0.01_q0.85",
+  "selected_v5_sample_size": 1600,
+  "status": "v5_package_ready",
+  "stress_joint_power_lower": 0.9046395064401636,
+  "v5_outcome_episodes": 0
+}

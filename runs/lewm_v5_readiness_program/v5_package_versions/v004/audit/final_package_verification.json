@@ -1,0 +1,10 @@
+{
+  "bad_hashes": [],
+  "expected_path_set_equals_actual": true,
+  "file_count": 92,
+  "manifest_sha256": "cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526",
+  "passed": true,
+  "schema_version": 1,
+  "status": "v5_package_ready",
+  "v5_outcome_episodes": 0
+}

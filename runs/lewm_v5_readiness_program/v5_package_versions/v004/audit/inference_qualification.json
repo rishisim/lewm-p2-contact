@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "analysis_seeds_match_frozen_ledger": true,
+    "bootstrap_replicates_fixed_20000": true,
+    "episode_aggregation_two_implementations_exact": true,
+    "linear_quantile_independent_implementation_exact": true,
+    "mixture_two_implementations_machine_precision_equivalent": true,
+    "no_retry_frozen": true,
+    "sample_size_fixed_1600": true,
+    "six_individual_criteria_frozen": true,
+    "terminal_labels_frozen": true,
+    "two_co_primary_criteria_frozen": true
+  },
+  "mixture_qualification": {
+    "analysis_and_independent_implementations_unchanged": true,
+    "depth_and_weight_must_be_exact": true,
+    "float64_machine_precision_scale_multiplier": 16.0,
+    "maximum_absolute_difference": 4.440892098500626e-16,
+    "maximum_absolute_difference_ceiling": 2.3336293066252278e-14,
+    "mean_absolute_difference": 3.084702834713622e-17
+  },
+  "package_smoke_episodes": 0,
+  "passed": true,
+  "schema_version": 1,
+  "synthetic_inputs_only": true,
+  "v5_outcome_episodes": 0
+}

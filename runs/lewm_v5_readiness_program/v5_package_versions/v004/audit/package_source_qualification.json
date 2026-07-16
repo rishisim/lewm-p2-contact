@@ -1,0 +1,64 @@
+{
+  "byte_checks": {
+    "DGP.json": true,
+    "counted_features.py": true,
+    "exclusions.json": true,
+    "freeze/compiled_gate.npz": true,
+    "freeze/gate_fit.npz": true,
+    "freeze/gate_freeze.json": true,
+    "freeze/gate_freeze_seal.json": true,
+    "freeze/whitening.npz": true,
+    "input_loader.py": true,
+    "operation_graph.json": true,
+    "outcome_mapping.json": true
+  },
+  "carry_forward_manifest_sha256": "30b9aab74af597132f904c981eeb1df43c00445629ad1e9fe295aecfd3531967",
+  "checks": {
+    "analysis_and_evaluation_science": true,
+    "builder_manifest_passed": true,
+    "byte_carry_forward": true,
+    "fresh_analysis_seeds_agree_in_two_implementations": true,
+    "frozen_object_hashes": true,
+    "runner_scientific_functions": true,
+    "runtime_contract": true,
+    "version_only_carry_forward": true
+  },
+  "created_unix_ns": 1784156151652092000,
+  "frozen_checks": {
+    "freeze/compiled_gate.npz": true,
+    "freeze/gate_fit.npz": true,
+    "freeze/whitening.npz": true
+  },
+  "function_checks": {
+    "dense_shadow": true,
+    "execute": true,
+    "load_gate_tensors": true,
+    "manual_sparse": true,
+    "prepare_episode_tensors": true,
+    "score_gate": true,
+    "tensors_exact_with_nan": true
+  },
+  "module_checks": {
+    "analysis.py": true,
+    "independent_verify.py": true,
+    "latency.py": true,
+    "power_analysis.py": true
+  },
+  "passed": true,
+  "read_only": true,
+  "runtime_contract_sha256": "7d7c9d9a9a014f1b4d0ef6ee505438bde0f53295f26646c3893fb5b9c9feb4e4",
+  "schema_version": 1,
+  "seed_checks": {
+    "analysis_bootstrap": true,
+    "analysis_histogram": true,
+    "analysis_mixture": true,
+    "independent_bootstrap": true,
+    "independent_histogram": true,
+    "independent_mixture": true
+  },
+  "v5_outcome_episodes": 0,
+  "version_checks": {
+    "REPORT_TEMPLATE.md": true,
+    "numerical_equivalence_contract.json": true
+  }
+}

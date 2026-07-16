@@ -1,0 +1,55 @@
+{
+  "active_package_path": "runs/lewm_v5_readiness_program/v5_package_versions/v004",
+  "active_package_version": "v004",
+  "completed_states": [
+    "DIAGNOSE",
+    "IMPLEMENT_PACKAGE",
+    "PRESEAL_QUALIFY",
+    "PRE_V5_SEAL",
+    "EXCLUDED_PACKAGE_SMOKE",
+    "PACKAGE_READY",
+    "CONFIRMATION_GENERATION",
+    "CONFIRMATION_EXECUTION",
+    "SEALED_ANALYSIS",
+    "LATENCY",
+    "INDEPENDENT_AUDIT",
+    "TERMINAL"
+  ],
+  "confirmation_cohort_complete": true,
+  "confirmation_outcome_count": 1600,
+  "created_unix_ns": 1784154964384109000,
+  "current_state": "TERMINAL",
+  "expected_git_head": "d20ad79c4db7f564f5007513634bec4b9a785605",
+  "immutable_historical_record_hashes": {
+    "CURRENT_POINTER.json": "0334bedb4b8f60151094f2ca503b6fa33f03d5d1f1966c7bb4212cec209af972",
+    "PROGRAM_STATE.json": "31794a3677f211982f4fb5230de79469775bba306b6fe81c1c84349c21fa0840",
+    "RESEARCH_LEDGER.md": "8ca1f58f471288040615a739579e6de9f7aac641c4989c7f26e932d6d7c476f2",
+    "V5_READY.json": "075b13b1364d62f12547c5182f0e02bc98a3c8e0eadc2ee34a65987128c72a45"
+  },
+  "last_verified_checkpoint": {
+    "created_unix_ns": 1784159259393252000,
+    "evidence_path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json",
+    "evidence_sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5",
+    "name": "v004_terminal_v5_confirmation_passed_independently_verified"
+  },
+  "next_action": "none; terminal one-shot V5 result reached and no further confirmation is permitted",
+  "observed_git_head": "d20ad79c4db7f564f5007513634bec4b9a785605",
+  "program": "LeWM V5 confirmation recovery and one-shot completion",
+  "schema_version": 1,
+  "state_machine": [
+    "DIAGNOSE",
+    "IMPLEMENT_PACKAGE",
+    "PRESEAL_QUALIFY",
+    "PRE_V5_SEAL",
+    "EXCLUDED_PACKAGE_SMOKE",
+    "PACKAGE_READY",
+    "CONFIRMATION_GENERATION",
+    "CONFIRMATION_EXECUTION",
+    "SEALED_ANALYSIS",
+    "LATENCY",
+    "INDEPENDENT_AUDIT",
+    "TERMINAL"
+  ],
+  "terminal_label": "v5_confirmation_passed",
+  "updated_unix_ns": 1784159259393251000
+}

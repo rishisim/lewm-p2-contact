@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "all_episode_ids_unique": true,
+    "all_seed_tuples_unique": true,
+    "builder_reported_zero_overlap": true,
+    "confirmation_never_smoke": true,
+    "every_numeric_seed_unique": true,
+    "exact_role_counts": true,
+    "exact_total_tuple_count_1712": true,
+    "numeric_roles_disjoint": true,
+    "string_roles_disjoint": true,
+    "v001_exactly_1712_consumed_tuples_seen": true,
+    "zero_overlap_all_prior_numeric_records": true,
+    "zero_overlap_all_prior_string_records": true,
+    "zero_overlap_v001_episode_ids": true,
+    "zero_overlap_v001_seed_tuples": true
+  },
+  "created_unix_ns": 1784155678898916000,
+  "implementation_independent_of_build_seed_ledger": true,
+  "numeric_overlap": [],
+  "passed": true,
+  "prior_json_file_count": 2578,
+  "prior_numeric_set_sha256": "22c9346b1190dfed9533235c74b96bf02898940fa6bedfbdf11c34765a9df8b1",
+  "prior_string_set_sha256": "47a494e28e5a81d8e73d93efe109dbb65566e361c8cd4312899b7a25aa090dc3",
+  "schema_version": 1,
+  "string_overlap": [],
+  "v002_numeric_set_sha256": "d12bcaa7982d3ce5ba28a708eb4a7ba2dce612a24dc4f4f4f8820eb4ddbc401b",
+  "v002_string_set_sha256": "14c54d2c14f55b1f5706378e7adaced4274b55fcbaa551f4a7c1a7703735c232",
+  "v5_outcome_episodes": 0
+}

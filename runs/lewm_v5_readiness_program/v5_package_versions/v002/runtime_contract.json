@@ -1,0 +1,103 @@
+{
+  "contract": "fail_closed_dual_interpreter_dispatch",
+  "created_unix_ns": 1784155674788349000,
+  "dispatcher": "launcher.py",
+  "external_file_hashes": {
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python": "d41269aa625b27fe9792c39a1867414002585447149997fe9f6c5621f0d44c06",
+    "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/numpy/__init__.py": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+    "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/scipy/__init__.py": "185913aa107512fafd5cf89dfd452a8719b45a6eba833e2dcee2cbfd18b4bbe5",
+    "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/torch/__init__.py": "d9dfff4b75d46e4c75572200a3466b70231d05b0318e38ac1bd121789165fb49",
+    "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/transformers/__init__.py": "722b4c14a9650f4f4b254e1c546a0d2071378c92efe1a66eced2121bb9f75d8e",
+    "/Users/rishisim/.cache/lewm-v2-venv/pyvenv.cfg": "2042f9ff4741a19603ef299f7428d28bbd2954b555b70bbabc4d820a6536b53d",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python": "d41269aa625b27fe9792c39a1867414002585447149997fe9f6c5621f0d44c06",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/__init__.py": "98f7ecc957123d8194869b6543a567758019a6b686a2630a37ad468bd5fda651",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/mujoco/__init__.py": "c734d493d95933f4414633325491e8e6658670455a3c94981a6c1d26600d43e1",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/numpy/__init__.py": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/__init__.py": "b692dba53ffff6152a9e117447dde62f164ec640f967a174807ff2faff0925f1",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/scipy/__init__.py": "185913aa107512fafd5cf89dfd452a8719b45a6eba833e2dcee2cbfd18b4bbe5",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/__init__.py": "098841b3d30e15ebc9ef7d6f4448b971c33369b93d9cd3a4a7b7b94e548f223a",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/torch/__init__.py": "d9dfff4b75d46e4c75572200a3466b70231d05b0318e38ac1bd121789165fb49",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/transformers/__init__.py": "335691959bdd8fd8120c996dbc0989efbc20d8b77b1a93594af94e03f6a8f41e",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/pyvenv.cfg": "2042f9ff4741a19603ef299f7428d28bbd2954b555b70bbabc4d820a6536b53d",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_distribution_contract/common.py": "52db77ee31ac44f5438270d818cd36832ec74c1a19764bf2df63b0570a4ea4c2",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_distribution_contract/generator.py": "1784280d566ac4df62ed891186e837a611aac1ded22e7dc69a73fde0a86527e6",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_distribution_contract/generator_seedfix.py": "f8a6a79d3ea6d093bbab18d4e903bc8f1611717d85e2d31ae88128a98199357d",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/config.json": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_transfer/cube/cache/model/weights.pt": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+  },
+  "global_generation_preflight_before_seed_or_output": true,
+  "manual_interpreter_selection_forbidden": true,
+  "package_version": "v002",
+  "role_assignment": {
+    "analysis": "evaluation",
+    "dense_shadow": "evaluation",
+    "generation": "generation",
+    "independent_verification": "evaluation",
+    "latency": "evaluation",
+    "sparse_execution": "evaluation"
+  },
+  "runtimes": {
+    "evaluation": {
+      "module_origins": {
+        "gymnasium": null,
+        "mujoco": null,
+        "numpy": "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/numpy/__init__.py",
+        "ogbench": null,
+        "scipy": "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/scipy/__init__.py",
+        "stable-worldmodel": null,
+        "torch": "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/torch/__init__.py",
+        "transformers": "/Users/rishisim/.cache/lewm-v2-venv/lib/python3.10/site-packages/transformers/__init__.py"
+      },
+      "packages": {
+        "gymnasium": null,
+        "mujoco": null,
+        "numpy": "2.2.6",
+        "ogbench": null,
+        "scipy": "1.15.3",
+        "stable-worldmodel": null,
+        "torch": "2.12.0",
+        "transformers": "5.10.2"
+      },
+      "python_version": "3.10.20",
+      "python_version_info": [
+        3,
+        10,
+        20
+      ],
+      "sys_executable": "/Users/rishisim/.cache/lewm-v2-venv/bin/python"
+    },
+    "generation": {
+      "module_origins": {
+        "gymnasium": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/__init__.py",
+        "mujoco": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/mujoco/__init__.py",
+        "numpy": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/numpy/__init__.py",
+        "ogbench": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/__init__.py",
+        "scipy": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/scipy/__init__.py",
+        "stable-worldmodel": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/__init__.py",
+        "torch": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/torch/__init__.py",
+        "transformers": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/transformers/__init__.py"
+      },
+      "packages": {
+        "gymnasium": "1.3.0",
+        "mujoco": "3.10.0",
+        "numpy": "2.2.6",
+        "ogbench": "1.2.1",
+        "scipy": "1.15.3",
+        "stable-worldmodel": "0.1.0",
+        "torch": "2.12.0",
+        "transformers": "4.50.0"
+      },
+      "python_version": "3.10.20",
+      "python_version_info": [
+        3,
+        10,
+        20
+      ],
+      "sys_executable": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python"
+    }
+  },
+  "schema_version": 1,
+  "v5_outcome_episodes": 0,
+  "wrong_interpreter_consumes_zero_tuples": true
+}

@@ -1,0 +1,131 @@
+{
+  "analysis_proposed_terminal_outcome": "v5_confirmation_passed",
+  "compute": {
+    "adaptive_total_flops": 4332936120435,
+    "additional_refiner_flops": 3490583040,
+    "analytic_equivalent_mean_calls": 1.2529540975276308,
+    "base_flops": 4288174752000,
+    "base_model_calls": 60800,
+    "call_histogram": [
+      50973,
+      7267,
+      1773,
+      787
+    ],
+    "gate_dual_affine_score_flops": 306214408,
+    "gate_evaluations": 73187,
+    "gate_feature_flops": 278183787,
+    "gate_total_flops": 584398195,
+    "mandatory_depth1_flops": 40686387200,
+    "mean_refiner_calls": 1.2166776315789474,
+    "native_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.09937282203357548,
+      "weight_upper": 0.25295409752763076
+    },
+    "nonflop_comparison_min_operations": 365935,
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.0034403097626425007,
+      "weight_upper": 0.25295409752763076
+    },
+    "refiner_model_calls": 73974,
+    "rows": 60800,
+    "seeded_mixture": {
+      "baseline_minus_adaptive_flops": 103565,
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "number_upper": 15380,
+      "seed": 2831777771,
+      "total_calls": 76180,
+      "total_flops": 4332936224000
+    }
+  },
+  "confirmation_terminal": true,
+  "created_unix_ns": 1784159117022636000,
+  "criteria": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006086220971507569,
+      "lower": 0.0005135570380185851,
+      "upper": 0.0007084272041684183
+    },
+    "native_whitened_vs_within_episode_histogram": {
+      "estimate": 0.0005953569975589559,
+      "lower": 0.0005383450906633228,
+      "upper": 0.0006536816849531949
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.769003361969303e-06,
+      "lower": 5.423955197986975e-06,
+      "upper": 8.162961004448036e-06
+    },
+    "raw_vs_fixed_d1": {
+      "estimate": 1.7871883745047833e-05,
+      "lower": 1.613911544250027e-05,
+      "upper": 1.9659389685757142e-05
+    },
+    "raw_vs_seeded": {
+      "estimate": 7.565504389800031e-06,
+      "lower": 5.86453821533343e-06,
+      "upper": 9.298726916596178e-06
+    },
+    "raw_vs_within_episode_histogram": {
+      "estimate": 5.554526238291087e-06,
+      "lower": 4.222587549196612e-06,
+      "upper": 6.935109194665069e-06
+    }
+  },
+  "independent_audit_passed": true,
+  "integrity": {
+    "adaptive_native_whitened_mse_reproduced": true,
+    "adaptive_raw_mse_reproduced": true,
+    "analytic_mixture_mapping_reproduced": true,
+    "chronology": true,
+    "confirmation_outcome_count_exact": true,
+    "effects_and_individual_intervals_reproduced": true,
+    "exact_call_histogram_reproduced": true,
+    "exact_calls_reproduced_from_scores": true,
+    "exact_compute_reproduced": true,
+    "frozen_candidate_hashes": true,
+    "frozen_modules_and_gradients": true,
+    "input_isolation": true,
+    "latency_separate_and_smoke_validated": true,
+    "numerical_equivalence_reproduced": true,
+    "operation_graph_rederived": true,
+    "pre_v5_seal": true,
+    "raw_path_set_complete": true,
+    "required_path_set_present": true,
+    "seed_isolation": true,
+    "seeded_baseline_weakly_more_compute": true,
+    "simultaneous_bounds_reproduced": true,
+    "stagewise_ranks_reproduced": true,
+    "terminal_mapping_reproduced": true,
+    "within_episode_histograms_reproduced": true
+  },
+  "latency_path": "metrics/v5_confirmation_latency.json",
+  "process_valid": true,
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "native_whitened_vs_analytic": {
+      "estimate": 0.0006086220971507569,
+      "familywise_alpha": 0.05,
+      "lower": 0.0005135570380185851,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    },
+    "raw_vs_analytic": {
+      "estimate": 6.769003361969303e-06,
+      "familywise_alpha": 0.05,
+      "lower": 5.423955197986975e-06,
+      "method": "bonferroni_two_endpoint_one_sided_percentile",
+      "per_endpoint_alpha": 0.025
+    }
+  },
+  "stagewise_pass": true,
+  "statistical_pass": true,
+  "terminal_outcome": "v5_confirmation_passed",
+  "v5_launched": true,
+  "v5_outcome_episodes": 1600
+}

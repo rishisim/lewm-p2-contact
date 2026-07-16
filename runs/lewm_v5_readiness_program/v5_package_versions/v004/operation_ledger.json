@@ -1,0 +1,309 @@
+{
+  "accounting_rule": "feature and dual-affine gate FLOPs are counted at every reached decision; five comparison/min operations are reported separately",
+  "executable_feature_function": "counted_features.build_counted_causal_features",
+  "gate": {
+    "dual_affine_score_flops_per_reached_evaluation": 4184,
+    "feature_flops_per_reached_evaluation": 3801,
+    "nonflop_comparison_min_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7985
+  },
+  "model": {
+    "base_flops_per_row": 70529190,
+    "each_additional_adapter_flops_per_row": 264960,
+    "mandatory_depth1_refiner_flops_per_row": 669184
+  },
+  "operation_graph_path": "operation_graph.json",
+  "operation_graph_sha256": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+  "primitive_nodes": [
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "current_minus_last_history",
+      "primitive": "subtraction",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "current_norm_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "current_norm_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "current_norm_root",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "update_norm_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "update_norm_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "update_norm_root",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "last_history_norm_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "last_history_norm_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "last_history_norm_root",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "gap_norm_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "gap_norm_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "gap_norm_root",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "non_flop",
+      "count_per_reached_row": 1,
+      "name": "relative_norm_clamp",
+      "primitive": "comparison_min",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "relative_norm_ratio",
+      "primitive": "division",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "update_current_cosine_dot_products",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "update_current_cosine_dot_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "update_current_cosine_norm_product",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "non_flop",
+      "count_per_reached_row": 1,
+      "name": "update_current_cosine_denominator_clamp",
+      "primitive": "comparison_min",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "update_current_cosine_ratio",
+      "primitive": "division",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 192,
+      "name": "update_gap_cosine_dot_products",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 191,
+      "name": "update_gap_cosine_dot_reduction",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "update_gap_cosine_norm_product",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "non_flop",
+      "count_per_reached_row": 1,
+      "name": "update_gap_cosine_denominator_clamp",
+      "primitive": "comparison_min",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "update_gap_cosine_ratio",
+      "primitive": "division",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 384,
+      "name": "history_change_subtractions",
+      "primitive": "subtraction",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 384,
+      "name": "history_change_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 382,
+      "name": "history_change_reductions",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 2,
+      "name": "history_change_roots",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 50,
+      "name": "action_change_subtractions",
+      "primitive": "subtraction",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 50,
+      "name": "action_change_squares",
+      "primitive": "multiplication",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 48,
+      "name": "action_change_reductions",
+      "primitive": "reduction_add",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 2,
+      "name": "action_change_roots",
+      "primitive": "sqrt",
+      "section": "feature"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1046,
+      "name": "raw_head_products",
+      "primitive": "affine_multiplication",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1045,
+      "name": "raw_head_reduction",
+      "primitive": "affine_reduction_add",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "raw_head_bias",
+      "primitive": "affine_bias_add",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1046,
+      "name": "native_whitened_head_products",
+      "primitive": "affine_multiplication",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1045,
+      "name": "native_whitened_head_reduction",
+      "primitive": "affine_reduction_add",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "flop",
+      "count_per_reached_row": 1,
+      "name": "native_whitened_head_bias",
+      "primitive": "affine_bias_add",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "non_flop",
+      "count_per_reached_row": 1,
+      "name": "dual_head_minimum",
+      "primitive": "comparison_min",
+      "section": "gate_score"
+    },
+    {
+      "accounting": "non_flop",
+      "count_per_reached_row": 1,
+      "name": "continue_threshold",
+      "primitive": "comparison",
+      "section": "gate_score"
+    }
+  ],
+  "schema_version": 1,
+  "semantic_feature_names_path": "semantic_feature_names.json",
+  "two_independent_derivations_agree_exactly": true
+}

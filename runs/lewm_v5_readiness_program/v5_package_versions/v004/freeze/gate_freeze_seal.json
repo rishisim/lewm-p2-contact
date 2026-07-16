@@ -1,0 +1,27 @@
+{
+  "created_unix_ns": 1784149976693733000,
+  "files": {
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/FIT_SELECTION_PREREGISTRATION.md": "9ea1565b6c0bfc711a112591e4f006139b1440f6a924883d063e4ddf501913dc",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/candidate_grid.json": "d492134eaf217b17832bf9d3fc570d5bbdea2b57356da7e05e072b0545b43cfa",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/compile_gate.py": "cbc279b180002a44af4464cfd75e84983fcab9b5df447dbcf5873bd93fc58d5f",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_evaluated.npz": "ad326f419bc7ae584b5cb4605da589e6e3a426d5c057f23d37089e8b95c17906",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_evaluated_manifest.json": "0ce73bbd327fa2f7f7b7710e67593972dfabb46e8e0804d7f67f886e263c20d7",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/fit_raw_manifest.json": "a02840cd927bc0cc71984ae3f6de9a5386293d683bb5ac6b0d8f6cc714b98ed2",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_evaluated.npz": "e025d591192d6541c960b48f3d5cf40ecfc46bdb9edce52367d53c4c7b217e34",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_evaluated_manifest.json": "3fce2abf238f6ee8f055bcdf91e2f551a9a3289e573b19f013a71254897af5b9",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/data/selection_raw_manifest.json": "f52110c782e122b0eea9e824aca486f28564b4081207b8ba6850f332590dea79",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/fit_lock.json": "e98aae792d97a3cd57c16df6f1cdc2bd74d533afe08ceb887a71e4bc4dfd42aa",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/fitted_candidates.npz": "f4bffc40059f5890cf57b95891c62887d4b3b0ac7e58689e2a2d4aba3e75aab8",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/development/gate_selection_ledger.json": "3bfb1ee62fce7dacce490132a2c6d32ea31ecf47be9eaec6fe7df1f46f67a520",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/fit_select_gate.py": "1abaa79694dcb922c4fcc607babcc4cc1bf992607e4a7dfb1212d5879f3513d9",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/compiled_gate.npz": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/gate_fit.npz": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "runs/lewm_v5_readiness_program/cycles/cycle_006_stage_specific_gate_refit/freeze/gate_freeze.json": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d"
+  },
+  "fit_selection_isolation_passed": true,
+  "prospective_episodes_at_seal": 0,
+  "schema_version": 1,
+  "smoke_episodes_at_seal": 0,
+  "status": "immutable_gate_freeze_before_smoke_and_prospective",
+  "v5_outcome_episodes": 0
+}

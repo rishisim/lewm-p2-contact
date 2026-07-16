@@ -1,0 +1,54 @@
+{
+  "after_excluded_package_smoke": [
+    "data/package_smoke_raw_manifest.json",
+    "data/package_smoke_execution.npz",
+    "data/package_smoke_execution_manifest.json",
+    "metrics/package_smoke_latency.json",
+    "audit/package_smoke_verification.json"
+  ],
+  "forbidden_at_v5_ready": [
+    "data/v5_confirmation_raw_manifest.json",
+    "data/v5_confirmation_execution.npz",
+    "data/v5_confirmation_execution_manifest.json",
+    "audit/v5_confirmation_input_seal.json",
+    "analysis_result.json",
+    "decision.json",
+    "metrics/v5_confirmation_latency.json"
+  ],
+  "future_confirmation_outputs": [
+    "data/v5_confirmation_raw_manifest.json",
+    "data/v5_confirmation_execution.npz",
+    "data/v5_confirmation_execution_manifest.json",
+    "audit/v5_confirmation_input_seal.json",
+    "analysis_result.json",
+    "audit/independent_verification.json",
+    "decision.json"
+  ],
+  "pre_v5_required": [
+    "DGP.json",
+    "exclusions.json",
+    "outcome_mapping.json",
+    "cohort_seed_ledger.json",
+    "power_analysis.json",
+    "PREREGISTRATION.md",
+    "REPORT_TEMPLATE.md",
+    "runner.py",
+    "analysis.py",
+    "independent_verify.py",
+    "latency.py",
+    "verify_pre_v5.py",
+    "verify_package_smoke.py",
+    "finalize_package.py",
+    "verify_final_package.py",
+    "build_v5_ready.py",
+    "launcher.py",
+    "runtime_contract.json",
+    "carry_forward_manifest.json",
+    "verify_runtime_contract.py",
+    "verify_package_sources.py",
+    "qualify_generation_runtime.py",
+    "test_generation_preflight.py",
+    "verify_identifier_freshness.py"
+  ],
+  "schema_version": 1
+}

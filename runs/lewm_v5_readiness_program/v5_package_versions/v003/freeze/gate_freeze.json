@@ -1,0 +1,84 @@
+{
+  "candidate_grid_sha256": "d492134eaf217b17832bf9d3fc570d5bbdea2b57356da7e05e072b0545b43cfa",
+  "causal_feature_width": 1046,
+  "compiled_gate_sha256": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+  "contact_or_privileged_inputs": false,
+  "created_unix_ns": 1784149976693157000,
+  "fit_episode_count": 240,
+  "fit_lock_sha256": "e98aae792d97a3cd57c16df6f1cdc2bd74d533afe08ceb887a71e4bc4dfd42aa",
+  "fit_selection_isolation_passed": true,
+  "gate_fit_sha256": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+  "native_whitening_sha256": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+  "schema_version": 1,
+  "selected": {
+    "adaptive_total_flops": 324959365620,
+    "analytic_equivalent_mean_calls": 1.243979379211162,
+    "call_histogram": [
+      3841,
+      538,
+      133,
+      48
+    ],
+    "candidate_id": "stage_dual_r0.01_q0.85",
+    "eligibility": {
+      "all_four_depths_at_least_15": true,
+      "all_six_point_contrasts_positive": true,
+      "all_three_out_of_fit_rhos_positive": true,
+      "seeded_comparator_weakly_more_compute": true,
+      "stage_2_reached_at_least_400": true,
+      "stage_3_reached_at_least_100": true,
+      "within_episode_histograms_exact": true
+    },
+    "eligible": true,
+    "fit_score_quantile": 0.85,
+    "gate_evaluations": 5460,
+    "mean_calls": 1.2078947368421054,
+    "minimum_stagewise_rho": 0.16947969157913909,
+    "minimum_standardized_co_primary": 0.15411781329332877,
+    "point_contrasts": {
+      "native_whitened_vs_analytic": 0.0006246013436071976,
+      "native_whitened_vs_within_episode_histogram": 0.0005079560004546456,
+      "raw_vs_analytic": 4.630942589362345e-06,
+      "raw_vs_fixed_d1": 1.611236153354645e-05,
+      "raw_vs_seeded": 5.455776193023236e-06,
+      "raw_vs_within_episode_histogram": 6.080212634209768e-06
+    },
+    "regularization": 0.01,
+    "seeded_minus_adaptive_flops": 120300,
+    "seeded_total_flops": 324959485920,
+    "stagewise_rank": [
+      {
+        "positive": true,
+        "reached_rows": 4560,
+        "rho": 0.24225833404941488,
+        "stage": 1
+      },
+      {
+        "positive": true,
+        "reached_rows": 719,
+        "rho": 0.2059647736268391,
+        "stage": 2
+      },
+      {
+        "positive": true,
+        "reached_rows": 181,
+        "rho": 0.16947969157913909,
+        "stage": 3
+      }
+    ],
+    "standardized_co_primary": {
+      "native_whitened_vs_analytic": 0.2713938209512677,
+      "raw_vs_analytic": 0.15411781329332877
+    },
+    "thresholds": [
+      0.19465729885363534,
+      0.1568665868361991,
+      0.15153321811129283
+    ]
+  },
+  "selected_head_refit_after_selection": false,
+  "selection_episode_count": 120,
+  "selection_ledger_sha256": "3bfb1ee62fce7dacce490132a2c6d32ea31ecf47be9eaec6fe7df1f46f67a520",
+  "status": "frozen_after_fit_selection_before_any_smoke_or_prospective_episode",
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "package_version": "v002",
+  "status": "v002_preseal_invalid",
+  "failure_state": "PRESEAL_QUALIFY",
+  "failed_command": [
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "derive_flops_graph.py"
+  ],
+  "exception_type": "RuntimeError",
+  "exception_message": "refusing to overwrite immutable artifact: /Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/v5_package_versions/v002/operation_graph.json",
+  "cause": "The v001 scientific operation_graph.json was correctly carried forward byte-for-byte, but the inherited derivation script still attempted to create that already-present graph exclusively before writing its audit.",
+  "minimal_version_forward_repair": "Verify the carried operation graph equals the independently emitted executable graph, then write only audit/flop_derivation_graph.json.",
+  "derive_flops_graph_sha256_at_failure": "27f2594dd56a0347f3fb6d6a9c258873d806db28cfcf0d0eafa45456dc90489d",
+  "carried_operation_graph_sha256": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+  "pre_v5_seal_created": false,
+  "package_smoke_raw_episode_count": 0,
+  "confirmation_raw_episode_count": 0,
+  "modeled_row_count": 0,
+  "confirmation_outcome_count": 0,
+  "seed_or_replacement_tuple_touched": false,
+  "outcome_loss_contact_reward_or_success_inspected": false,
+  "all_v002_identifiers_consumed_for_future_freshness": true,
+  "scientific_or_statistical_failure": false,
+  "statistical_retry": false
+}

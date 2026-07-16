@@ -1,0 +1,64 @@
+{
+  "accepted_discovery_source_hashes": {
+    "artifact_manifest": "6cee6f18cb98835450a013a3b61c83e4df332a801032341d036f3de061a22b5c",
+    "compiled_gate": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "decision": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+    "gate_fit": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "gate_freeze": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "gate_freeze_seal": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+    "independent_verification": "ee719a50d4bffe4df7fff9a74f21712564e2f2d7c09be21a627c36bd88323a72"
+  },
+  "all_hashes_verified": true,
+  "candidate_id": "stage_dual_r0.01_q0.85",
+  "claim": "lower episode-averaged raw and PlanOracle-native-whitened latent MSE than the strongest transition-independent analytic exact-total-compute mixture under the frozen PlanOracle DGP",
+  "compiled_shapes": {
+    "a_raw": [
+      3,
+      1046
+    ],
+    "a_white": [
+      3,
+      1046
+    ],
+    "b_raw": [
+      3
+    ],
+    "b_white": [
+      3
+    ],
+    "thresholds": [
+      3
+    ]
+  },
+  "contact_free_gate": true,
+  "external_model_sources": {
+    "base_config": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "base_weights": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+    "stagewise_refiner": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+    "whitening": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796"
+  },
+  "fit_selection_isolation_passed": true,
+  "input_allowlist": [
+    "action",
+    "pixels"
+  ],
+  "package_files": {
+    "freeze/compiled_gate.npz": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "freeze/gate_fit.npz": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "freeze/gate_freeze.json": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "freeze/gate_freeze_seal.json": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+    "freeze/whitening.npz": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796"
+  },
+  "schema_version": 1,
+  "thresholds_float32_runtime": [
+    0.19465729594230652,
+    0.15686658024787903,
+    0.15153321623802185
+  ],
+  "thresholds_float64_storage": [
+    0.19465729885363534,
+    0.1568665868361991,
+    0.15153321811129283
+  ],
+  "v5_outcome_episodes": 0
+}

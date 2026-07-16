@@ -1,0 +1,269 @@
+{
+  "alpha_per_endpoint": 0.025,
+  "block_heterogeneity": {
+    "native_whitened_vs_analytic": {
+      "block_means": [
+        0.0007033921650081516,
+        0.0003824013423353248,
+        0.0006908513953058681,
+        0.00042614249913730474,
+        0.0010714472420903223,
+        0.00037817398550236416
+      ],
+      "contiguous_block_size": 50,
+      "minimum_block_mean": 0.00037817398550236416,
+      "observed_block_design_effect": 1.1913942579022085
+    },
+    "raw_vs_analytic": {
+      "block_means": [
+        8.998180743230481e-06,
+        5.019558512380346e-06,
+        4.6398960058681224e-06,
+        4.642083593755292e-06,
+        1.4319727379286085e-05,
+        5.092749119857206e-06
+      ],
+      "contiguous_block_size": 50,
+      "minimum_block_mean": 4.6398960058681224e-06,
+      "observed_block_design_effect": 0.9713495248035611
+    }
+  },
+  "conservative_effects": {
+    "native_whitened_vs_analytic": 0.00030253918840189136,
+    "raw_vs_analytic": 3.2466016046877627e-06
+  },
+  "created_unix_ns": 1784155679347636000,
+  "effect_definition": "80 percent of the smaller of the independently reproduced simultaneous discovery lower bound and the minimum contiguous 50-episode block mean",
+  "effect_shrink": 0.8,
+  "exact_compute_accounting": {
+    "discovery_effect_already_compares_against_exact_total_compute_including_7985_gate_flops_per_reached_decision": true,
+    "discovery_gate_total_flops": 109801735,
+    "discovery_nonflop_operations": 68755,
+    "discovery_total_flops": 812433135415,
+    "latency_is_reported_separately_and_not_substituted_for_flops": true,
+    "planning_scale_factor_v5_over_discovery": 5.333333333333333
+  },
+  "grid_step": 50,
+  "maximum_observed_block_design_effect": 1.1913942579022085,
+  "method": "one-sided normal paired-mean power with Bonferroni alpha .025 per fixed co-primary endpoint; joint power lower bounded by the union bound",
+  "minimum_eligible_sample_size": 1600,
+  "passed": true,
+  "primary_design_effect": 1.5,
+  "primary_joint_power_target": 0.95,
+  "primary_power": {
+    "design_effect": 1.5,
+    "joint_power_lower_by_union_bound": 0.9659810650707059,
+    "marginal_power": {
+      "native_whitened_vs_analytic": 0.999876686988551,
+      "raw_vs_analytic": 0.9661043780821548
+    },
+    "sample_size": 1600
+  },
+  "remaining_uncertainty": "Power depends on future DGP stability, paired-episode variance, the conservative effect floor, and design-effect adequacy; no calculation guarantees a V5 pass.",
+  "schema_version": 1,
+  "search_boundary": [
+    {
+      "eligible": false,
+      "primary_joint_power_lower": 0.9557666502026398,
+      "sample_size": 1500,
+      "stress_joint_power_lower": 0.8849016576702047
+    },
+    {
+      "eligible": false,
+      "primary_joint_power_lower": 0.9611921448377001,
+      "sample_size": 1550,
+      "stress_joint_power_lower": 0.8952180228458819
+    },
+    {
+      "eligible": true,
+      "primary_joint_power_lower": 0.9659810650707059,
+      "sample_size": 1600,
+      "stress_joint_power_lower": 0.9046395064401636
+    },
+    {
+      "eligible": true,
+      "primary_joint_power_lower": 0.9702043612283497,
+      "sample_size": 1650,
+      "stress_joint_power_lower": 0.9132439881329892
+    },
+    {
+      "eligible": true,
+      "primary_joint_power_lower": 0.9739254320108044,
+      "sample_size": 1700,
+      "stress_joint_power_lower": 0.9211018266762274
+    }
+  ],
+  "selected_v5_sample_size": 1600,
+  "sensitivity": [
+    {
+      "design_effect": 1.0,
+      "effect_fraction": 1.0,
+      "joint_power_lower_by_union_bound": 0.9999376471157346,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999999999856019,
+        "raw_vs_analytic": 0.9999376471301328
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.1913942579022085,
+      "effect_fraction": 1.0,
+      "joint_power_lower_by_union_bound": 0.9995969695821052,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999999984902822,
+        "raw_vs_analytic": 0.999596971091823
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.5,
+      "effect_fraction": 1.0,
+      "joint_power_lower_by_union_bound": 0.9972225345701875,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999998033412849,
+        "raw_vs_analytic": 0.9972227312289025
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.0,
+      "effect_fraction": 1.0,
+      "joint_power_lower_by_union_bound": 0.9837594358840924,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999818647882163,
+        "raw_vs_analytic": 0.9837775710958762
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.5,
+      "effect_fraction": 1.0,
+      "joint_power_lower_by_union_bound": 0.9557666502026398,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9997558545703485,
+        "raw_vs_analytic": 0.9560107956322912
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.0,
+      "effect_fraction": 0.8,
+      "joint_power_lower_by_union_bound": 0.9962893021802044,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999995890329785,
+        "raw_vs_analytic": 0.9962897131472258
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.1913942579022085,
+      "effect_fraction": 0.8,
+      "joint_power_lower_by_union_bound": 0.9889411562712647,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9999932683919962,
+        "raw_vs_analytic": 0.9889478878792685
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.5,
+      "effect_fraction": 0.8,
+      "joint_power_lower_by_union_bound": 0.9659810650707059,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.999876686988551,
+        "raw_vs_analytic": 0.9661043780821548
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.0,
+      "effect_fraction": 0.8,
+      "joint_power_lower_by_union_bound": 0.9046395064401636,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9982046001839681,
+        "raw_vs_analytic": 0.9064349062561954
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.5,
+      "effect_fraction": 0.8,
+      "joint_power_lower_by_union_bound": 0.8264576288375043,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.991750505230055,
+        "raw_vs_analytic": 0.8347071236074494
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.0,
+      "effect_fraction": 0.6,
+      "joint_power_lower_by_union_bound": 0.9348267815566953,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9993307008440716,
+        "raw_vs_analytic": 0.9354960807126237
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.1913942579022085,
+      "effect_fraction": 0.6,
+      "joint_power_lower_by_union_bound": 0.887217358434913,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9972342848507625,
+        "raw_vs_analytic": 0.8899830735841505
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 1.5,
+      "effect_fraction": 0.6,
+      "joint_power_lower_by_union_bound": 0.7985850018500606,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.988068030923549,
+        "raw_vs_analytic": 0.8105169709265115
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.0,
+      "effect_fraction": 0.6,
+      "joint_power_lower_by_union_bound": 0.6461031495707807,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9548708588041108,
+        "raw_vs_analytic": 0.6912322907666698
+      },
+      "sample_size": 1600
+    },
+    {
+      "design_effect": 2.5,
+      "effect_fraction": 0.6,
+      "joint_power_lower_by_union_bound": 0.4993322286516486,
+      "marginal_power": {
+        "native_whitened_vs_analytic": 0.9046097557149568,
+        "raw_vs_analytic": 0.5947224729366918
+      },
+      "sample_size": 1600
+    }
+  ],
+  "source_cycle": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/cycles/cycle_007_mps_threshold_dtype_repair",
+  "source_decision_sha256": "ed73eab576eb448f6eb4c1edbe4d1646f022424c43b232f98f1d0e545966d21c",
+  "source_episode_count": 300,
+  "source_episode_metrics_sha256": "27a08b4f8bf29cf2a6f9d814926a743c5b2d87b50e1ff50088861e69df2ed4f9",
+  "standard_deviations": {
+    "native_whitened_vs_analytic": 0.0017563831140470323,
+    "raw_vs_analytic": 2.8004119601231633e-05
+  },
+  "stress_design_effect": 2.0,
+  "stress_joint_power_target": 0.9,
+  "stress_power": {
+    "design_effect": 2.0,
+    "joint_power_lower_by_union_bound": 0.9046395064401636,
+    "marginal_power": {
+      "native_whitened_vs_analytic": 0.9982046001839681,
+      "raw_vs_analytic": 0.9064349062561954
+    },
+    "sample_size": 1600
+  },
+  "v5_outcome_episodes": 0
+}

@@ -1,0 +1,43 @@
+{
+  "adaptive_total_flops": 4332936120435,
+  "additional_refiner_flops": 3490583040,
+  "analytic_equivalent_mean_calls": 1.2529540975276308,
+  "base_flops": 4288174752000,
+  "base_model_calls": 60800,
+  "call_histogram": [
+    50973,
+    7267,
+    1773,
+    787
+  ],
+  "gate_dual_affine_score_flops": 306214408,
+  "gate_evaluations": 73187,
+  "gate_feature_flops": 278183787,
+  "gate_total_flops": 584398195,
+  "mandatory_depth1_flops": 40686387200,
+  "mean_refiner_calls": 1.2166776315789474,
+  "native_whitened_analytic_mixture": {
+    "depth_lower": 1,
+    "depth_upper": 2,
+    "mean_loss": 0.09937282203357548,
+    "weight_upper": 0.25295409752763076
+  },
+  "nonflop_comparison_min_operations": 365935,
+  "raw_analytic_mixture": {
+    "depth_lower": 1,
+    "depth_upper": 2,
+    "mean_loss": 0.0034403097626425007,
+    "weight_upper": 0.25295409752763076
+  },
+  "refiner_model_calls": 73974,
+  "rows": 60800,
+  "seeded_mixture": {
+    "baseline_minus_adaptive_flops": 103565,
+    "depth_lower": 1,
+    "depth_upper": 2,
+    "number_upper": 15380,
+    "seed": 2831777771,
+    "total_calls": 76180,
+    "total_flops": 4332936224000
+  }
+}

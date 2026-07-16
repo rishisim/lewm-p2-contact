@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "exact_generation_interpreter": true,
+    "no_episode_identifier_used": true,
+    "no_outcome_loss_contact_reward_or_success_inspected": true,
+    "no_rollout_generated": true,
+    "no_seed_tuple_used": true,
+    "planoracle_dgp_cleanup": true,
+    "planoracle_dgp_constructed": true,
+    "required_imports": true,
+    "runtime_contract": true
+  },
+  "created_unix_ns": 1784156150329201000,
+  "import_origins": {
+    "gymnasium": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/gymnasium/__init__.py",
+    "mujoco": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/mujoco/__init__.py",
+    "ogbench": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/ogbench/__init__.py",
+    "stable_worldmodel": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/__init__.py"
+  },
+  "package_smoke_episodes": 0,
+  "passed": true,
+  "qualification_input": "global imports and DGP constructor/cleanup only",
+  "runtime": {
+    "expected_executable": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python",
+    "packages": {
+      "gymnasium": "1.3.0",
+      "mujoco": "3.10.0",
+      "numpy": "2.2.6",
+      "ogbench": "1.2.1",
+      "scipy": "1.15.3",
+      "stable-worldmodel": "0.1.0",
+      "torch": "2.12.0",
+      "transformers": "4.50.0"
+    },
+    "python_version": "3.10.20",
+    "python_version_info": [
+      3,
+      10,
+      20
+    ],
+    "role": "generation",
+    "sys_executable": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python"
+  },
+  "schema_version": 1,
+  "v5_outcome_episodes": 0
+}

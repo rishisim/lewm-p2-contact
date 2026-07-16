@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "all_episode_ids_unique": true,
+    "all_seed_tuples_unique": true,
+    "builder_reported_zero_overlap": true,
+    "confirmation_never_smoke": true,
+    "every_numeric_seed_unique": true,
+    "exact_role_counts": true,
+    "exact_total_tuple_count_1712": true,
+    "numeric_roles_disjoint": true,
+    "string_roles_disjoint": true,
+    "v001_exactly_1712_consumed_tuples_seen": true,
+    "v002_exactly_1712_consumed_tuples_seen": true,
+    "zero_overlap_all_prior_numeric_records": true,
+    "zero_overlap_all_prior_string_records": true,
+    "zero_overlap_v001_episode_ids": true,
+    "zero_overlap_v001_seed_tuples": true,
+    "zero_overlap_v002_episode_ids": true,
+    "zero_overlap_v002_seed_tuples": true
+  },
+  "created_unix_ns": 1784155909419624000,
+  "implementation_independent_of_build_seed_ledger": true,
+  "numeric_overlap": [],
+  "passed": true,
+  "prior_json_file_count": 2593,
+  "prior_numeric_set_sha256": "15cc8ddea84799bb800ffc62437888452c0aa93a7a45f48a9bd417d477cd4c9d",
+  "prior_string_set_sha256": "c11613bc6dc36b2ce852608ed0fdd6591c94457561227cda50ba03e447ffaa11",
+  "schema_version": 1,
+  "string_overlap": [],
+  "v003_numeric_set_sha256": "b0979450b10b4cb492447527e0d88bfc545d0cafc7d147541f200c51cdbb3dad",
+  "v003_string_set_sha256": "34cea0f9cfe63df2087f5eb49f16bb0a8ab2105dbaf53fdb621153b433accb07",
+  "v5_outcome_episodes": 0
+}

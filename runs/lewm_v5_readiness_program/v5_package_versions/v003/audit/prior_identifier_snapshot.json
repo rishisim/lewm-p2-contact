@@ -1,0 +1,10 @@
+{
+  "json_file_count": 2593,
+  "numeric_identifier_count": 31978,
+  "numeric_identifier_set_sha256": "15cc8ddea84799bb800ffc62437888452c0aa93a7a45f48a9bd417d477cd4c9d",
+  "scanned_path_set_sha256": "7d1dd6a6538dd41d5ee4211a99b0f8ee67308aea033ed296e560a676423d85c4",
+  "schema_version": 1,
+  "scope": "all parseable prior run JSON and filenames outside V5 package v003",
+  "string_identifier_count": 57119,
+  "string_identifier_set_sha256": "c11613bc6dc36b2ce852608ed0fdd6591c94457561227cda50ba03e447ffaa11"
+}

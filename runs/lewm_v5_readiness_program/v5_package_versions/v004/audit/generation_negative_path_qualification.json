@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "contract_violation_reported": true,
+    "exactly_one_package_level_error": true,
+    "failure_scope_package_level": true,
+    "no_cohort_ledger_copied_or_read": true,
+    "no_outcome_inspection": true,
+    "no_per_seed_failure_ledger": true,
+    "no_role_raw_directory": true,
+    "wrong_interpreter_rejected": true,
+    "zero_attempted_seed_tuples": true,
+    "zero_consumed_identifiers": true
+  },
+  "created_unix_ns": 1784156151313775000,
+  "invoked_candidate_runner_sha256_recorded_at_seal": true,
+  "invoked_interpreter": "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+  "isolated_temporary_harness": true,
+  "package_smoke_episodes": 0,
+  "passed": true,
+  "returncode": 1,
+  "schema_version": 1,
+  "v5_outcome_episodes": 0
+}

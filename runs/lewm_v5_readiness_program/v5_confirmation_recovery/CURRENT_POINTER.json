@@ -1,0 +1,23 @@
+{
+  "active_package": {
+    "checkpoint": "v004_terminal_v5_confirmation_passed_independently_verified",
+    "evidence_path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json",
+    "evidence_sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5",
+    "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "version": "v004"
+  },
+  "confirmation_outcome_count": 1600,
+  "created_unix_ns": 1784154964384109000,
+  "recovery_state_path": "runs/lewm_v5_readiness_program/v5_confirmation_recovery/STATE.json",
+  "recovery_state_sha256": "ee17b99c0be924439f7ab30738bb730e7e6b45bc866f86bb9f6ee51ed2cd41ec",
+  "schema_version": 1,
+  "status": "v004_terminal_v5_confirmation_passed_independently_verified",
+  "terminal_evidence": {
+    "label": "v5_confirmation_passed",
+    "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json",
+    "sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5"
+  },
+  "updated_unix_ns": 1784159259393716000,
+  "v001_execution_invalid_path": "runs/lewm_v5_readiness_program/v5_confirmation_recovery/v001_execution_invalid.json",
+  "v001_execution_invalid_sha256": "6b172a325070a550c633927d7d4a4ff18c53de4aef5f319033516322b203803c"
+}

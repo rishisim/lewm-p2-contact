@@ -33,3 +33,4 @@ runs/lewm_adaptive_compute_critic_compression/cache/stagewise_train_outputs.npz
 
 # Temporary render/scratch output.
 tmp/
+runs/lewm_planner_aware_budget/work/

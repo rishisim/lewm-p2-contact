@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "decision": "fixed_cem_qualified",
+  "checkpoint": {
+    "policy": "pusht/lewm",
+    "object_checkpoint_sha256": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737",
+    "released_weights_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "state_dict_tensors_equal": "303/303"
+  },
+  "dataset": {
+    "name": "pusht_expert_train.lance",
+    "lance_version": 2191,
+    "rows": 2336736,
+    "heldout_unique_source_episodes": 20
+  },
+  "smoke": {
+    "starts": 2,
+    "successes": 0,
+    "mechanically_valid": true
+  },
+  "tuning": [
+    {"population": 64, "cem_iterations": 10, "elites": 8, "successes": 3, "starts": 6, "mean_task_cost": 6515.696575, "median_latency_ms": 469.258},
+    {"population": 128, "cem_iterations": 10, "elites": 16, "successes": 5, "starts": 6, "mean_task_cost": 4752.765837, "median_latency_ms": 681.720},
+    {"population": 128, "cem_iterations": 20, "elites": 16, "successes": 5, "starts": 6, "mean_task_cost": 4303.574673, "median_latency_ms": 1322.746},
+    {"population": 300, "cem_iterations": 15, "elites": 30, "successes": 3, "starts": 6, "mean_task_cost": 6510.699334, "median_latency_ms": 3574.713},
+    {"population": 300, "cem_iterations": 30, "elites": 30, "successes": 4, "starts": 6, "mean_task_cost": 5926.569762, "median_latency_ms": 3086.310}
+  ],
+  "selected_fixed_configuration": {
+    "population": 128,
+    "cem_iterations": 20,
+    "elites": 16,
+    "horizon": 5,
+    "receding_horizon": 5,
+    "action_block": 5,
+    "eval_budget": 50
+  },
+  "heldout": {
+    "starts": 20,
+    "unique_source_episodes": 20,
+    "successes": 15,
+    "success_rate": 0.75,
+    "wilson_95_percent_interval": [0.531, 0.888],
+    "task_cost_mean": 4712.343888,
+    "task_cost_median": 3399.220057,
+    "task_cost_std": 2994.064397,
+    "normalized_return_mean": 0.559228,
+    "normalized_return_median": 0.628036,
+    "latency_ms_median": 698.151,
+    "latency_ms_p95": 1400.140,
+    "distinct_task_costs_1e6": 20,
+    "failed_starts": 5,
+    "failed_mean_task_cost": 9391.577737,
+    "failed_mean_normalized_return": 0.274583
+  },
+  "screens": {
+    "minimum_success_rate_0_5": true,
+    "minimum_successes_3": true,
+    "mechanically_valid_finite_metrics": true,
+    "continuous_outcome_variation": true,
+    "binary_outcome_variation": true
+  }
+}

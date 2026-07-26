@@ -1,0 +1,7 @@
+{
+  "population": 128,
+  "cem_iterations": 20,
+  "elites": 16,
+  "horizon": 5,
+  "receding_horizon": 5
+}

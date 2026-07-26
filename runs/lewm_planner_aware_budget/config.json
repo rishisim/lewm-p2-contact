@@ -34,5 +34,70 @@
       "candidate_rank_correlation"
     ],
     "expensive_cohorts_enabled": false
+  },
+  "planner_qualification": {
+    "status": "frozen_before_new_outcomes",
+    "checkpoint": {
+      "policy": "pusht/lewm",
+      "object_checkpoint_sha256": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737"
+    },
+    "dataset": {
+      "name": "pusht_expert_train.lance",
+      "start_sampling_unit": "dataset_row",
+      "goal_offset_steps": 25
+    },
+    "cohorts": {
+      "smoke": {"seed": 26072601, "starts": 2},
+      "tuning": {"seed": 26072602, "starts": 6},
+      "heldout": {"seed": 26072603, "starts": 20},
+      "replacement_rule": "none; every mechanically valid preregistered start is retained regardless of outcome"
+    },
+    "execution": {
+      "device": "mps",
+      "closed_loop": true,
+      "eval_budget_env_steps": 50,
+      "action_block_raw_steps": 5,
+      "warm_start": "previous CEM mean shifted by receding_horizon through WorldModelPolicy",
+      "candidate_seed": 26072610,
+      "candidate_seed_rule": "same fixed CEM RNG seed for every start and configuration; each start gets a fresh solver and each configuration/cohort is evaluated in a fresh process",
+      "latency": "per-start synchronized end-to-end wall clock, including reset, preprocessing, planning, and environment execution; checkpoint/dataset load excluded"
+    },
+    "smoke_configuration": {
+      "population": 64,
+      "cem_iterations": 3,
+      "elites": 8,
+      "horizon": 5,
+      "receding_horizon": 5
+    },
+    "bounded_tuning_grid": [
+      {"population": 64, "cem_iterations": 10, "elites": 8, "horizon": 5, "receding_horizon": 5},
+      {"population": 128, "cem_iterations": 10, "elites": 16, "horizon": 5, "receding_horizon": 5},
+      {"population": 128, "cem_iterations": 20, "elites": 16, "horizon": 5, "receding_horizon": 5},
+      {"population": 300, "cem_iterations": 15, "elites": 30, "horizon": 5, "receding_horizon": 5},
+      {"population": 300, "cem_iterations": 30, "elites": 30, "horizon": 5, "receding_horizon": 5}
+    ],
+    "selection_rule": "highest tuning success rate, then lowest mean cumulative task cost, then lowest median latency, then lexicographic (population, iterations, elites, horizon, receding_horizon)",
+    "primary_success": "PushT termination: norm(goal_state[:4]-state[:4]) < 20 and wrapped block-angle error < pi/9 within 50 environment steps",
+    "secondary_metrics": {
+      "task_cost": "sum over executed environment steps of Euclidean norm(goal_state-state); lower is better",
+      "normalized_return": "1 - task_cost / (initial_state_distance * 50); higher is better",
+      "final_task_cost": "Euclidean norm(goal_state-final_state); lower is better"
+    },
+    "adequacy_screen": {
+      "minimum_heldout_success_rate": 0.5,
+      "minimum_heldout_successes": 3,
+      "mechanical_validity_required": true,
+      "finite_task_metrics_required": true
+    },
+    "later_label_informativeness": {
+      "binary_outcome_variation": "report, but do not fail qualification when success is saturated",
+      "continuous_outcome_variation": "held-out task-cost standard deviation must be > 0 and at least 3 distinct values at 1e-6 precision"
+    },
+    "failure_criteria": [
+      "smoke has a mechanical error, nonfinite metric, invalid action shape, or nondeterministic start ledger",
+      "no bounded-grid candidate passes the tuning adequacy screen",
+      "selected fixed configuration fails the held-out adequacy screen",
+      "checkpoint or dataset identity changes after freezing"
+    ]
   }
 }

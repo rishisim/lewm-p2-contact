@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "environment_order": ["pusht", "reacher", "tworooms"],
+  "primary_environment": "pusht",
+  "planner": {
+    "family": "cem",
+    "refinement_depths": [1, 2, 4],
+    "populations": [64, 128, 300],
+    "common_random_numbers": true,
+    "closed_loop": true
+  },
+  "controller": {
+    "objective": "conservative_negative_closed_loop_planning_regret",
+    "success_is_coprimary": true,
+    "uncertainty_penalty": 1.0,
+    "fallback": {"refinement_depth": 1, "planner_population": 64},
+    "forbid_environment_id": true,
+    "dimension_invariant_features_only": true,
+    "leave_one_environment_out": true
+  },
+  "budgets": {
+    "ledgers": ["counted_flops", "wall_clock_ns"],
+    "constraint": "hard_upper_bound",
+    "charge_controller_overhead": true,
+    "charge_planner_overhead": true
+  },
+  "evaluation": {
+    "enumerate_every_fixed_pair": true,
+    "primary_outcomes": ["planning_regret", "task_success"],
+    "diagnostics": [
+      "rollout_error",
+      "reachability_error",
+      "latent_mse",
+      "candidate_rank_correlation"
+    ],
+    "expensive_cohorts_enabled": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "blocked_before_training",
+  "b1_frozen": true,
+  "frozen_seed": 26072621,
+  "canonical_action": {
+    "raw_shape": 2,
+    "block_size": 5,
+    "block_shape": 10,
+    "environment_low": -1.0,
+    "environment_high": 1.0,
+    "transform": "identity",
+    "source_fit_statistics": false
+  },
+  "history": {
+    "maximum": 3,
+    "padding": "left_zero_padding",
+    "valid_masks": [[0, 0, 1], [0, 1, 1], [1, 1, 1]]
+  },
+  "existing_sources": {
+    "expert_lance": {
+      "path_role": "stable_worldmodel_cache_read_only",
+      "rows": 2336736,
+      "lance_version": 2191,
+      "can_supply": ["expert_competent", "length_1", "length_2", "length_3"]
+    },
+    "weak_policy_pilot": {
+      "checkpoint_sha256": "29be92d39a2efba992c8e2dcfd289956d04f057d63d8ed1042de25c305641a6f",
+      "fit": {"episodes": 120, "rows": 2160, "sha256": "fcfc071db4a0f1d6e17564595edd18cd52f2103c00ec58a013366c40932cbfc9"},
+      "selection": {"episodes": 40, "rows": 720, "sha256": "ba613f2b8e857cd34905754e55021e0705fba322b50137e6b21c86dc6ce92904"},
+      "evaluation": {"episodes": 80, "rows": 1440, "sha256": "02bcda6e52118d69c0b2fd31d878d22d823f4d2f9a63113063f36105ba79c2fe"},
+      "history_lengths": [3],
+      "mask_exported": false,
+      "action_normalization": "WeakPolicy fit statistics"
+    },
+    "executed_cem_or_off_policy": {
+      "found": false,
+      "task_a_candidate_targets_retained": false
+    }
+  },
+  "missing_required_cells": [
+    "heldout WeakPolicy-like length 1 and 2",
+    "fit/selection/evaluation competent-CEM-policy length 1, 2, and 3",
+    "fit/selection/evaluation mixed/off-policy length 1, 2, and 3"
+  ],
+  "decision": "requires_explicit_bounded_real_transition_collection",
+  "b3_started": false,
+  "b4_started": false
+}

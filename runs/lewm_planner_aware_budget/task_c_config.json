@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_task_c_grid_outcomes",
+  "depths": [0, 1, 2, 4],
+  "populations": {
+    "p064": {"population": 64, "elites": 8},
+    "p128": {"population": 128, "elites": 16},
+    "p300": {"population": 300, "elites": 38}
+  },
+  "elite_rule": {
+    "fraction_numerator": 1,
+    "fraction_denominator": 8,
+    "rounding": "round_half_up"
+  },
+  "planner": {
+    "cem_iterations": 20,
+    "horizon": 5,
+    "receding_horizon": 5,
+    "action_block": 5,
+    "batch_size": 1,
+    "maximum_population_stream": 300,
+    "candidate_seed": 26072610
+  },
+  "measurement": {
+    "start_dataset_row": 0,
+    "goal_dataset_row": 25,
+    "order_seed": 26072631,
+    "warmups_per_cell": 2,
+    "timed_repetitions_per_cell": 7,
+    "synchronize_mps": true,
+    "median": "numpy.median",
+    "p95": "numpy.quantile(method=linear)"
+  },
+  "checkpoint_sha256": {
+    "base": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737",
+    "refiner": "b55521a9870e9e29be6e77d055756fa5c82fecb13d6596b13c242481f76f6a4d"
+  }
+}

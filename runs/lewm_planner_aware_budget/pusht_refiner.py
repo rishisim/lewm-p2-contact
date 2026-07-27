@@ -72,6 +72,12 @@ class OperationLedger:
     base_rows: int = 0
     stage_calls: list[int] = field(default_factory=lambda: [0] * MAX_DEPTH)
     stage_rows: list[int] = field(default_factory=lambda: [0] * MAX_DEPTH)
+    image_encoder_calls: int = 0
+    image_encoder_rows: int = 0
+    goal_encoder_calls: int = 0
+    goal_encoder_rows: int = 0
+    terminal_cost_calls: int = 0
+    terminal_cost_rows: int = 0
 
     def record_base(self, rows: int) -> None:
         self.base_calls += 1
@@ -80,6 +86,18 @@ class OperationLedger:
     def record_stage(self, stage: int, rows: int) -> None:
         self.stage_calls[stage] += 1
         self.stage_rows[stage] += int(rows)
+
+    def record_image_encoder(self, rows: int) -> None:
+        self.image_encoder_calls += 1
+        self.image_encoder_rows += int(rows)
+
+    def record_goal_encoder(self, rows: int) -> None:
+        self.goal_encoder_calls += 1
+        self.goal_encoder_rows += int(rows)
+
+    def record_terminal_cost(self, rows: int) -> None:
+        self.terminal_cost_calls += 1
+        self.terminal_cost_rows += int(rows)
 
 
 class MaskedStagewiseRefiner(nn.Module):

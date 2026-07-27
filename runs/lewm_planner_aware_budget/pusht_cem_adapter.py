@@ -138,8 +138,12 @@ class PushTRefinedCostModel(nn.Module):
 
     @torch.inference_mode()
     def get_cost(self, info_dict: dict, action_candidates: Tensor) -> Tensor:
+        batch, samples = map(int, action_candidates.shape[:2])
+        self.ledger.record_goal_encoder(batch)
+        self.ledger.record_image_encoder(batch)
+        self.ledger.record_terminal_cost(batch * samples)
         if self.refinement_depth == 0:
-            rows = int(action_candidates.shape[0] * action_candidates.shape[1])
+            rows = batch * samples
             for _ in range(int(action_candidates.shape[2])):
                 self.ledger.record_base(rows)
             return self.base.get_cost(info_dict, action_candidates)

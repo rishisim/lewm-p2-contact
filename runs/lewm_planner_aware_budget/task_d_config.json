@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_task_d_outcomes",
+  "depths": [0, 1, 2, 4],
+  "populations": {
+    "64": {"elites": 8},
+    "128": {"elites": 16},
+    "300": {"elites": 38}
+  },
+  "planner": {
+    "cem_iterations": 20,
+    "horizon": 5,
+    "receding_horizon": 5,
+    "action_block": 5,
+    "maximum_population_stream": 300,
+    "unclipped_mean": true
+  },
+  "execution": {
+    "max_environment_steps": 50,
+    "pilot_starts": 2,
+    "sealed_starts": 24,
+    "tranche_starts": 12,
+    "pilot_candidate_seeds": [2026072600],
+    "sealed_candidate_seeds": [2026072601, 2026072602],
+    "cohort_seed": 2026072607,
+    "order_seed": 2026072611,
+    "no_outcome_replacement": true
+  },
+  "analysis": {
+    "bootstrap_draws": 9999,
+    "bootstrap_seed": 2026072691,
+    "permutation_draws": 9999,
+    "permutation_seed": 2026072692,
+    "allocation_randomization_seed": 2026072693,
+    "normalized_return_tolerance": 0.03,
+    "joint_baseline_margin": 0.05,
+    "joint_one_axis_margin": 0.02,
+    "refinement_margin": 0.02,
+    "success_noninferiority_margin": -0.05,
+    "tail_noninferiority_margin": -0.05,
+    "reproducible_fraction_lower_bound": 0.25
+  },
+  "budgets": {
+    "counted_flops_per_allowed_call": [513064382440, 890264402920, 1865117139960],
+    "synchronized_latency_seconds_per_allowed_call": [0.69, 0.9, 1.53],
+    "allowed_calls_per_start": 10
+  },
+  "hashes": {
+    "base_checkpoint": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737",
+    "refiner_checkpoint": "b55521a9870e9e29be6e77d055756fa5c82fecb13d6596b13c242481f76f6a4d",
+    "task_c_protocol": "1bf427d166603f8dc9bfe46dadfe44b78bad0b9638b0299c0031a5124ffe619c",
+    "task_c_report": "ce2b6d98df47f228fbc23558553ca630fae36dce4a85a6aba9843cc4e6c7fe97",
+    "task_c_config": "be5b7542b469fa8b6e215944028d095cdf08c489bff34f20ccea28bbcfba82f4",
+    "task_c_results": "0b582c25e0923d20697a63fd37273ce172230c410bcab487edb02c63861dd164",
+    "task_c_population_code": "785ec66bacdad117be40c65ae2fda4f2ad0ef94595f78ef6407b4c2d87ce599d",
+    "task_c_runner": "96c96a86285edaf4ff4621fdff14a3b4ed31cb9246bf8ad8f78c2ffb49626bf2"
+  }
+}

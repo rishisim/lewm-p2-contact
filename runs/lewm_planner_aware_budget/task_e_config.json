@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_task_e_outcomes",
+  "depths": [0, 1, 2, 4],
+  "candidate_bank": {
+    "population": 300,
+    "elites": 38,
+    "cem_iterations": 20,
+    "distribution": "depth0_final_iteration",
+    "replan_index": 0,
+    "horizon": 5,
+    "action_block": 5,
+    "unclipped": true
+  },
+  "secondary_bank": {
+    "population": 64,
+    "distribution": "iteration0_proposal_prefix",
+    "sealed_confirmation_starts": 4
+  },
+  "execution": {
+    "pilot_starts": 2,
+    "sealed_starts": 8,
+    "pilot_candidate_seeds": [2026072701],
+    "sealed_candidate_seeds": [2026072701, 2026072702],
+    "cohort_seed": 2026072707,
+    "replay_subset_per_pilot_bank": 12,
+    "replay_subset_seed": 2026072708,
+    "max_projected_hours": 6.0,
+    "max_projected_raw_bytes": 2147483648,
+    "minimum_valid_fraction": 0.99
+  },
+  "analysis": {
+    "bootstrap_draws": 9999,
+    "bootstrap_seed": 2026072791,
+    "permutation_draws": 9999,
+    "permutation_seed": 2026072792,
+    "oracle_randomization_seed": 2026072793,
+    "probe_permutation_seed": 2026072794,
+    "prediction_tie_tolerance": 1e-8,
+    "simulator_tie_tolerance": 1e-7,
+    "top_k": [10, 30],
+    "normalized_helpful_margin": 0.01,
+    "probe_balanced_accuracy_gate": 0.65
+  },
+  "hashes": {
+    "base_checkpoint": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737",
+    "refiner_checkpoint": "b55521a9870e9e29be6e77d055756fa5c82fecb13d6596b13c242481f76f6a4d"
+  }
+}

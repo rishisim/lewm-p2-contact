@@ -90,3 +90,10 @@ masked lengths 1–3 with the frozen base checkpoint; and first collect only the
 readiness minimum above. This is new environment collection and requires an
 explicit go-ahead under the task's expansion gate.
 
+## Authorized continuation outcome
+
+Authorization was received after the readiness decision. The bounded
+collection, single frozen architecture, offline evaluation, export, and
+fixed-depth CEM integration were then completed without changing this contract.
+See `TASK_B_REPORT.md`, `task_b_results.json`,
+`pusht_refiner_manifest.json`, and `task_b_cem_smoke.json`.

@@ -1,0 +1,82 @@
+{
+  "bootstrap": {
+    "expert_length_1": {
+      "raw_relative_upper_95": -0.007301848990877913,
+      "white_relative_upper_95": -0.01883511014939343
+    },
+    "expert_length_2": {
+      "raw_relative_upper_95": -0.010254387092191647,
+      "white_relative_upper_95": -0.01996148130129957
+    },
+    "expert_length_3": {
+      "raw_relative_upper_95": -0.010971271133798926,
+      "white_relative_upper_95": -0.018274497837449267
+    },
+    "offpolicy_length_1": {
+      "raw_relative_upper_95": -0.07385450374977011,
+      "white_relative_upper_95": -0.21388266071346548
+    },
+    "offpolicy_length_2": {
+      "raw_relative_upper_95": -0.09020829933709003,
+      "white_relative_upper_95": -0.21671374566500323
+    },
+    "offpolicy_length_3": {
+      "raw_relative_upper_95": -0.08274654848789989,
+      "white_relative_upper_95": -0.21654654263545578
+    },
+    "weak_length_1": {
+      "raw_relative_upper_95": -0.010559354686236855,
+      "white_relative_upper_95": -0.050734400187384995
+    },
+    "weak_length_2": {
+      "raw_relative_upper_95": -0.013037841217087159,
+      "white_relative_upper_95": -0.0506731516131551
+    },
+    "weak_length_3": {
+      "raw_relative_upper_95": -0.014066326766899085,
+      "white_relative_upper_95": -0.05098592868188693
+    }
+  },
+  "bootstrap_gate_passed": true,
+  "checkpoint_bytes": 1301521,
+  "checkpoint_sha256": "b55521a9870e9e29be6e77d055756fa5c82fecb13d6596b13c242481f76f6a4d",
+  "cross_device_reference_atol": 3e-07,
+  "cross_device_reference_rtol": 2e-05,
+  "latency": {
+    "0": {
+      "median_ns": 1567354,
+      "p95_ns": 3250087,
+      "rows": 512
+    },
+    "1": {
+      "median_ns": 2037542,
+      "p95_ns": 2332568,
+      "rows": 512
+    },
+    "2": {
+      "median_ns": 2280500,
+      "p95_ns": 2379935,
+      "rows": 512
+    },
+    "4": {
+      "median_ns": 2574895,
+      "p95_ns": 2782181,
+      "rows": 512
+    }
+  },
+  "operation_ledger": {
+    "one_transition_batch_at_depth_d": {
+      "base_calls": 1,
+      "base_rows": "batch_rows",
+      "stage_calls": "one for each stage 1..d",
+      "stage_rows": "batch_rows for each stage 1..d"
+    }
+  },
+  "reference_sha256": "8d93ae16a4301cc506117b5383a2eea56360fbcebe529525aff5b1e33a491d10",
+  "supported_depths": [
+    0,
+    1,
+    2,
+    4
+  ]
+}

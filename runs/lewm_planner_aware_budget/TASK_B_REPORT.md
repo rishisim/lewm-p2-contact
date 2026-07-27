@@ -1,45 +1,65 @@
-# Task B gated report
+# Task B final report
 
-## Outcome
+## Decision
 
-B1 is frozen and covered by executable contract tests. B2 stopped at the
-preregistered readiness gate. No refiner was trained, no checkpoint was
-exported, and CEM integration was not attempted.
+Task B is complete for integration validity. The planner-independent PushT
+refiner passed the frozen B3 offline gate and fixed depths 0, 1, 2, and 4 run
+inside the installed CEM solver. This is not a new control-effect claim.
 
-This is the required negative bounded-pilot outcome rather than a completed
-positive-depth planner result. Existing local evidence cannot support the
-requested planner-independent claim: the prior real-transition WeakPolicy
-export contains only length-3 histories, the expert Lance source does not cover
-mixed/off-policy or executed CEM action distributions by itself, and Task A did
-not retain real next-transition targets for CEM candidates.
+## Data and training
 
-## Retained changes
+The bounded corpus contains disjoint WeakPolicy, expert, and executed
+off-policy episodes. Fit/selection/evaluation contain 8,736/3,289/5,455
+examples. Every source has explicit lengths 1, 2, and 3 and every
+source×split×length cell exceeds 100 examples. Task A qualification episodes
+were excluded. Unexecuted CEM candidates were never used as targets.
 
-- `pusht_refiner.py` defines the one canonical action/mask/depth API, exact
-  depth-zero semantics, fail-closed positive-depth availability, a zero-started
-  residual design, and call/row accounting.
-- `TASK_B_PROTOCOL.md` freezes data roles, episode/source splits, seeds,
-  selection, metrics, thresholds, causal boundary, export requirements, and
-  the smallest collection expansion.
-- `task_b_readiness.json` is the compact machine-readable source audit.
-- `tests/test_pusht_refiner.py` proves action round trips and range rejection,
-  legal prefixes, masked-padding invariance, exact depth zero, invalid-mask
-  rejection, unavailable-export rejection, and stage ledger counts.
+The canonical action is the PushT environment coordinate itself: five
+chronological 2-D actions form one 10-D block. Real-transition training rows
+are finite and within the declared `[-1,1]` environment range; out-of-range
+expert rows were excluded. CEM candidates remain identity-coordinate
+extrapolations and are not clipped inside the refiner.
 
-The original checkout, installed package, Task A planner/checkpoint/config, and
-untracked prior research artifacts were read only. No run/output directory was
-created.
+The first aggregate-row pilot failed on off-policy raw MSE. Equal
+source×length weighting fixed that imbalance without changing data or
+architecture. A second pilot caught depth-4 regressions versus depth 2; frozen
+whitened supervision and the preregistered monotonic penalty corrected it.
 
-## Gate and next decision
+## Offline validity
 
-Proceeding requires explicit authorization for a small real-transition
-collection. The frozen minimum is 20 fit episodes per source and 10
-selection/evaluation episodes per source, with at least 100 examples in each
-role-by-length cell. It would execute a fixed mixture of expert-policy, Task A
-CEM-selected, WeakPolicy, and perturbed/off-policy physical actions in PushT,
-writing raw records only to the already ignored
-`runs/lewm_planner_aware_budget/work/` root.
+Depth 4 is finite and better than base in raw and frozen-whitened latent MSE in
+all nine held-out source×length cells. Eight cells exceed 1% improvement in
+both metrics (the frozen requirement was five). Every supported depth
+transition remains within the 1% regression limit.
 
-Only if schema, target alignment, masks, provenance, source/episode isolation,
-coverage, and canonical action checks pass would training begin. B3/B4 and the
-requested measurable CEM effect remain deliberately incomplete.
+All 18 episode-bootstrap upper 95% bounds for depth-4 relative raw/whitened
+regression are below 1%; the least favorable is expert length 1 raw at
+`-0.73%`. The strongest effects occur off-policy: raw improvements are
+11.4–13.9% and whitened improvements are 28.5–30.5%.
+
+The compact checkpoint is 1,301,521 bytes with SHA-256
+`b55521a9870e9e29be6e77d055756fa5c82fecb13d6596b13c242481f76f6a4d`.
+Dense references cover every source, prefix length, and supported positive
+depth. Batch-512 synchronized MPS median latency was 1.60/2.06/2.29/2.63 ms at
+depths 0/1/2/4.
+
+## CEM integration
+
+The project-owned adapter leaves the installed package unchanged. Depth zero
+delegates exactly to the native Task A `get_cost`. Positive depths use explicit
+left padding and masks at rollout prefix lengths `[1,2,3,3,3]`, preserve
+candidate/batch shapes, run frozen under inference mode, and record base/stage
+calls and rows.
+
+The installed CEM solver smoke used one common start, 32 candidates, three
+iterations, horizon five, and common seed `26072610`. Including one fixed
+candidate probe, each depth performed 20 base calls and 640 base rows. Positive
+stage call/row counts were exactly `[20]*depth` and `[640]*depth`. Refinement at
+all positive depths changed finite candidate costs and rankings. Selected
+actions did not change in this deliberately small smoke, so no planning
+improvement is claimed.
+
+The FLOP ledger remains intentionally incomplete: refiner dense-linear FLOPs
+can be derived from the frozen architecture, while image/goal encoding, base
+prediction, CEM sampling/top-k/statistics, tensor movement, and policy overhead
+are not presented as a complete planner FLOP total.

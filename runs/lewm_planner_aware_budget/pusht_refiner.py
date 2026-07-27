@@ -134,7 +134,7 @@ class MaskedStagewiseRefiner(nn.Module):
             raise ValueError("mask must be a nonempty valid suffix (left padding only)")
         if not all(bool(torch.isfinite(value).all()) for value in (history, actions, base)):
             raise ValueError("nonfinite refiner input")
-        canonicalize_action(actions[mask])
+        canonicalize_action(actions[mask], check_range=False)
         return lengths
 
     def forward(

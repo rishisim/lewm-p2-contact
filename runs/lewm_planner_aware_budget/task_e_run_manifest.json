@@ -1,0 +1,1460 @@
+{
+  "banks": [
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "49e8e2156c19ba5f821d80ee25a4b42ad597d8eecf22d1f20747ed69b5a5409f",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "39d3378395f16a2f686f6bf10a52528bf0b56927d114467c3b9c6b8f1e8e85a2",
+      "episode_id": 957,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "9c4a1a6d03a89ee333910af1cc020d7f1e46e663c34d8039676448a588911541",
+      "phase": "sealed",
+      "proposal_sha256": "626ebc86fad936c520963102725e7aa07bebb58bab569b47ff3dea053dc26615",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 6,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 13,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 30,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 42,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 64,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 139,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 155,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 202,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 218,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 246,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 251,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 257,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 119163,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "29f408122021b4e7a2e405b572bb57f78735018320ad13f4e9f6864905f616fc",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "a9cd450792fedbd63ca89952c0c78bbb63f719ba5a5220a8537542996a2efb15",
+      "episode_id": 957,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "af4b6d1519d79e6453723fa9b66e77c0a18c54d10046e80c505e7af4de38d629",
+      "phase": "sealed",
+      "proposal_sha256": "2df4e9653ea4134d9ccf0d92ca4cef4ecfb8d8893f0a158c0cde06ca8b16d956",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 1,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 4,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 71,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 72,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 113,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 127,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 179,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 213,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 231,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 235,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 274,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 281,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 119163,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "8ad6bdf43cbb24cf652a0ec096ff2010f6335d61222989dc9fcb7fc820d36933",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "6af644f577c5af0372fbcc455c438fc97d397f2f7de48b019db5ca7256e3e7b3",
+      "episode_id": 11613,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "aacdf9f74bad41ffcf2033bcf53fa673b7efbca0295f2f5222254bd788a370f4",
+      "phase": "sealed",
+      "proposal_sha256": "1dd8dd6cbf6e1440c342a74d87cf994e43e0bbfa9d34f06beeff5231245dab48",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 10,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 24,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 27,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 29,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 33,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 123,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 175,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 223,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 233,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 265,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 287,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 293,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1458174,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "cf5303b8722d274f0c85b956ee08e14598adad6cffac141a2fb12929593d4f47",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "0ca042e4817090264e5dc6363fa0041b61a46d46bff570bc6f7d5dc8db3f3251",
+      "episode_id": 11613,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "aac2471ec1bc71ab8cd5618ce775578f98b582112e9466ae352664d22502aadb",
+      "phase": "sealed",
+      "proposal_sha256": "e53d832fc668d20cee7de316f59cf0c9d0e4167de173d5a4c4330cb8d99fcc7c",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 27,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 28,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 139,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 148,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 158,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 165,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 186,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 229,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 256,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 281,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 283,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 287,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1458174,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "332c3652cf8f143f4735650771e3901018fd1e365f3f9611d078270a70f4f600",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "0d4bc8e9b7d41b16e92c35f521c3ce8894c76f86213f4fb2a3448c4281ec1527",
+      "episode_id": 14904,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "b2685d0dde89c897da620d3dfdc0b471624214df50ee56bf284b434c817a3ad4",
+      "phase": "sealed",
+      "proposal_sha256": "1c3d0fb1ee3f0c40240481ea7c84f8155dc03ee1fc7e50b42ae136f5d05c2e89",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 12,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 32,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 34,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 75,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 78,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 91,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 105,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 133,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 161,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 256,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 261,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 267,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1876083,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "6f2dee47bb2bfd5b957802021c8df2c9abaeba66fed4214b331e4b794ee2dca3",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "2214d403c0fcfef25a5d51dc67625ce9d5b1ea85d5be8a78be34006d50ce1abb",
+      "episode_id": 14904,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "a1194fcbadbc6b1c36979c7f05455466c03d510c65c1bab6294b536c04e8affb",
+      "phase": "sealed",
+      "proposal_sha256": "e81c396187e57eecd8ead1b386a1b4359d16fee2960b13f20a2475c52f622617",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 13,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 40,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 65,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 67,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 91,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 98,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 101,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 151,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 161,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 168,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 199,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 273,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1876083,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "d3770bc6deb9fcaf94ad3fa088a7be0f7b860a189309e19bf463b70915aa3fc7",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "ba0f413ef7a4fafe476ca810e3c28a492c57dcb944868c1ef5cc3d26a357143a",
+      "episode_id": 14945,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "aac7533cdcf9af6b10c9f74459068ff041591990349b12ebe311552706de0d14",
+      "phase": "sealed",
+      "proposal_sha256": "4f02cf71de466b2277b3ae981e3a197c1fb5d4cd42b1ad34d946089a30797a9e",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 16,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 35,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 117,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 153,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 170,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 177,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 194,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 208,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 209,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 238,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 291,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 292,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1878937,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "ccd2e74992f4374a3ca2597da91e622c9223620b83fa25ef53e2e19947413a9c",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "ae080b876b01e0db122e872637f6cd8adc410daf1f6aae3acfe342b98cc36cb5",
+      "episode_id": 14945,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "2193b4e662641c2919da35eecc48ecc1f3286d13f841d17f34e846f5c11292f9",
+      "phase": "sealed",
+      "proposal_sha256": "3fd10368f2ddd97c800f1d3cfb9638e12b408ea6f032e87a644a787c3765078b",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 8,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 57,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 73,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 74,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 80,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 132,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 146,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 177,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 204,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 251,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 283,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 294,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1878937,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "2f39ee3b8ab6238e015d423b0cc2928c0f06377ad5ca3375f74e643c106b8c13",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "840b4249518254567a61495e85fc141f2baca4f7c041ccddf01b7e7c249dfb19",
+      "episode_id": 15228,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "082fabd0f053017eb28004a164e664d088c9a1cf5b4241302394792f4cedecb2",
+      "phase": "sealed",
+      "proposal_sha256": "a887d9f7f6893475d0b03fd883424490d655f7d698e77753b4d200c11b115936",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 27,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 35,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 75,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 78,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 90,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 101,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 108,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 210,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 236,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 252,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 259,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 296,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1914090,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "c0bace27d93c2753f42fe2b7cf108b2e6c1697091c8da8d3dfe44a7434013ed3",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "6bd543a237935862b5fc50806107dcaaf792cacc7cb792a8e7b5bf5d868ab188",
+      "episode_id": 15228,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "6d424076fc55c4853745933c14857d7d13df09ace32c37c2423f624845af7325",
+      "phase": "sealed",
+      "proposal_sha256": "1e51c65ed884cf071f3a2253d738c907d13d6e216ff5a21b673ffbc54ee3c496",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 3,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 49,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 58,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 69,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 74,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 87,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 141,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 168,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 177,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 186,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 259,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 298,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 1914090,
+      "secondary_bank_labelled": true,
+      "secondary_valid_count": 64,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "a035b528e70384a58df6c0ead0e0635e3fb6e8c7d36569aab58a9fd54c2d2c14",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "20c110e1d9cb766a74e1915292b08430f80877a3b29f4615941ffa20c6ad8a92",
+      "episode_id": 2687,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "5261f8557bf77e5b417e242b3a4b78bb2de4b938191dc6064c14fc4c75e1c26a",
+      "phase": "sealed",
+      "proposal_sha256": "2f91e8e54724eb56c177f257decbd7861efaf88a66c54ee9b02b42810aecc9c9",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 33,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 72,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 75,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 80,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 143,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 158,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 181,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 191,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 221,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 255,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 260,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 288,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 312676,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "feee75a24192672a370fa9ebcba5bf8b302229399e632f6a02206f0643c2ceb5",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "0373b1b67f1fb68e876a603cbb45130de3d2e6228beb621d811d9c5017335e4e",
+      "episode_id": 2687,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "fdb18fc281d55618e417cb668e9dabf515be70c652222c62fd5b2fe0c0da27f2",
+      "phase": "sealed",
+      "proposal_sha256": "f855906e056a7c627b06221e8acb4200eb07c5c824c2963bf2f679fb3ccdbff3",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 4,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 33,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 50,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 86,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 94,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 98,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 110,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 160,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 209,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 269,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 282,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 286,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 312676,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "d78528d26c45528e0509abb0442513c7eb756e0c8d1beb67c3dc5f2fc88766a6",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "ce0686152232565db42d32771e1da6eee23bec8bd416488ef754234bc6c98c4e",
+      "episode_id": 4718,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "1a8bee7bddf926edd2d506f0701ee7c6b8a6918e0e5266b769da0b6a13f4f5fe",
+      "phase": "sealed",
+      "proposal_sha256": "ab11ab58662c16a3e598dcc0fb96fb54b800334fe69794c652404d35b5e342e4",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 23,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 36,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 37,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 47,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 72,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 86,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 142,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 163,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 244,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 245,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 246,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 264,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 580700,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "194618164b01d2e6fcdcb91c4720f4a968136f8f839e922025522f94f5f0ce78",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "3a4a05bc937be3b3749da6b8021739b11d0b676bf760f7ea1b92467c306483fc",
+      "episode_id": 4718,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "81209bf8d449045435200ac96356b57f87e398d8f620810c5f5ebba854241af8",
+      "phase": "sealed",
+      "proposal_sha256": "b20ffa48325441289aff25da927caa5de07844a54f33102ff2ede41453dd79e4",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 36,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 121,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 144,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 171,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 198,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 217,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 220,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 246,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 253,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 274,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 294,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 298,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 580700,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "2162881e82dec710108c63a5436e7958f17085b0627f18a7503dc48fd5a41632",
+      "candidate_seed": 2026072701,
+      "candidate_tensor_sha256": "73d2977e20568bd0d4b4744b329c677be97d674b7ad526bb8b2de6428fe4c81a",
+      "episode_id": 5190,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "4b814d8c147870ef0890121a1725b96cb265dafaeaf300f33645eb93775b9f08",
+      "phase": "sealed",
+      "proposal_sha256": "96b3f6cfd3d305fd6b87fc214366db373bdb68d469b81538cb4f73e58cdc1b4b",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 74,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 82,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 125,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 132,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 133,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 142,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 173,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 192,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 238,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 263,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 268,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 284,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 656637,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_hashes_sha256": "405f76f05e137d4c0b6d92e3ba7271e00a95172c76a5c203901d6408ae0718e6",
+      "candidate_seed": 2026072702,
+      "candidate_tensor_sha256": "4634aa7387b3774aa6b7c8470ec06364194c1053b4e37ebebfe2c3eacc784dba",
+      "episode_id": 5190,
+      "model_visible_equals_executed_count": 300,
+      "npz_sha256": "0a0bdfed606c64bb87d32a96360cf8c55ea50c782cea01c228533ee18c740820",
+      "phase": "sealed",
+      "proposal_sha256": "cb51a3f1713aa2da0ad6014654c03881ff90acc09b4679972134ced74fac8e71",
+      "replay_checks": [
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 3,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 9,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 79,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 101,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 112,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 120,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 134,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 234,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 261,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 272,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 277,
+          "states_exact": true
+        },
+        {
+          "actions_exact": true,
+          "costs_exact": true,
+          "index": 283,
+          "states_exact": true
+        }
+      ],
+      "reset_reconstruction_exact": true,
+      "row_id": 656637,
+      "secondary_bank_labelled": false,
+      "secondary_valid_count": 0,
+      "valid_count": 300
+    }
+  ],
+  "integrity": {
+    "all_replays_exact": true,
+    "bank_count": 16,
+    "candidate_labels": 4800,
+    "model_visible_equals_executed": 4800,
+    "replay_checks": 192
+  },
+  "protocol": {
+    "final_sha256": "f99feddab5b236c442ac68bf22850ace2ea6a7dab2b5ee03658f0fd25bf6ef20",
+    "initial_frozen_sha256": "f3fa4950ab983ed70f13bfeadfdc451614e331a694b21fbab730e6e8e67a333b",
+    "mechanical_amendment": "Clarified inherited _set_state one-tick reconstruction after the outcome-blind pilot; no bank, endpoint, seed, or analysis changed."
+  },
+  "raw_root": "work/task_e/sealed (ignored)",
+  "schema_version": 1,
+  "start_manifest": "task_e_manifest.json",
+  "status": "sealed_complete"
+}

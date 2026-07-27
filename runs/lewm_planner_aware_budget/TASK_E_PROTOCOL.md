@@ -57,8 +57,10 @@ steps. The environment is reset with the sealed environment seed and Task D's
 model-visible raw action and the exact action passed into the unwrapped PushT
 environment are recorded. No Task E clipping or range redefinition is applied;
 the environment's native action transform is retained. Candidate validity
-requires 25 executed steps, finite state/cost/reward, and an exact initial-state
-match.
+requires 25 executed steps and finite state/cost/reward. The inherited
+`_set_state` callable advances one physics tick, so the reconstructed post-call
+state is required to match a second reset/reconstruction exactly; it is not
+incorrectly compared with the pre-call dataset vector.
 
 Primary simulator quality is negative cumulative full-state Euclidean task cost
 (higher is better); terminal negative distance is co-reported. Success and

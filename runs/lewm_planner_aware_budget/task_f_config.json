@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_task_f_outcomes",
+  "scope": "final_depth0_population300_fixed_bank_reranking_only",
+  "bank": {"population": 300, "elites": 38, "cem_iterations": 20, "horizon": 5, "action_block": 5, "replan_index": 0, "stages": ["final"]},
+  "roles": {"pilot_starts": 2, "fit_starts": 4, "selection_starts": 3, "evaluation_starts": 4, "candidate_seeds": [2026072801, 2026072802], "cohort_seed": 2026072811},
+  "critic": {"features": ["native_latent_goal_cost", "candidate_actions_flat"], "normalization": "fit_only_zscore", "heads": ["native", "linear"], "linear_parameter_count": 52, "nonlinear_head": "not_prospectively_justified", "loss": "top_tail_pairwise_logistic", "top_tail": 30, "epochs": 80, "learning_rate": 0.02, "weight_decay": 0.0001, "training_seed": 2026072812},
+  "analysis": {"prediction_tie_tolerance": 1e-8, "simulator_tie_tolerance": 1e-7, "top_k": [10, 30], "bootstrap_draws": 9999, "bootstrap_seed": 2026072813, "helpful_margin": 1e-7, "catastrophic_regret_fraction": 0.8, "worst_tail_quantile": 0.9, "max_median_overhead_ms": 5.0, "max_p95_overhead_ms": 10.0, "cross_seed_rule": "both_seed_mean_regret_differences_strictly_less_than_zero"},
+  "screen": {"pilot_banks": 4, "minimum_valid_fraction": 0.99, "replay_per_bank": 12, "max_projected_hours": 8.0, "max_projected_raw_bytes": 3221225472},
+  "provenance": {"task_e_commit": "4e8c7a429fd11388bd8cedab0f0e84fe0264ab6e", "base_checkpoint_sha256": "0be0611227823a00b2f9acac299375a013bb23cd2a33b8ffa94a3bdb5e19b737"}
+}

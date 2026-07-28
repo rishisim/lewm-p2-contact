@@ -38,7 +38,7 @@ def native_scores(info,candidates,dev):
 def generate(role):
  cfg=config(); man=manifest()
  if role=="evaluation" and not (WORK/"selected_model.json").exists(): raise RuntimeError("evaluation role remains unopened until selection artifact is frozen")
- ds=lewm_eval.get_dataset(OmegaConf.load(REPO/"le-wm/config/eval/pusht.yaml"),json.loads((ROOT/"config.json").read_text())["planner_qualification"]["dataset"]["name"]); transform=lewm_eval.processors["pusht"]
+ eval_cfg=OmegaConf.load(REPO/"le-wm/config/eval/pusht.yaml"); ds=lewm_eval.get_dataset(eval_cfg,json.loads((ROOT/"config.json").read_text())["planner_qualification"]["dataset"]["name"]); transform=lewm_eval.img_transform(eval_cfg)
  dev=device()
  for entry in man[role]:
   for seed in man["candidate_seeds"]:
@@ -84,8 +84,8 @@ def score_role(role,critic):
  return records
 def latency(role, critic):
  """Measure the declared boundary: native rollout + feature build + scalar head."""
- ds=lewm_eval.get_dataset(OmegaConf.load(REPO/"le-wm/config/eval/pusht.yaml"),json.loads((ROOT/"config.json").read_text())["planner_qualification"]["dataset"]["name"])
- transform=lewm_eval.processors["pusht"]; entries={x["row_id"]:x for x in manifest()[role]}; dev=device(); critic_times=[]; end_times=[]
+ eval_cfg=OmegaConf.load(REPO/"le-wm/config/eval/pusht.yaml"); ds=lewm_eval.get_dataset(eval_cfg,json.loads((ROOT/"config.json").read_text())["planner_qualification"]["dataset"]["name"])
+ transform=lewm_eval.img_transform(eval_cfg); entries={x["row_id"]:x for x in manifest()[role]}; dev=device(); critic_times=[]; end_times=[]
  for meta,d in load_banks(role):
   entry=entries[meta["row_id"]]; candidates=d["candidates"]
   # Warm-up is intentionally excluded from the fixed repetition summaries.

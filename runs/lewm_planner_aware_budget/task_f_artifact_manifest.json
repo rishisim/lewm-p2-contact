@@ -1,0 +1,7 @@
+{
+  "artifact_kind": "linear_candidate_local_critic",
+  "fit_bank_count": 8,
+  "parameter_count": 52,
+  "path": "runs/lewm_planner_aware_budget/work/task_f/artifacts/linear_29bfc42166080b75bc8417f4ff98f6951551ec76ccd235dc8bb6d1c999094247.json",
+  "sha256": "29bfc42166080b75bc8417f4ff98f6951551ec76ccd235dc8bb6d1c999094247"
+}

@@ -1,0 +1,291 @@
+{
+  "banks": [
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "a5756a0d6139ead02f7267317dce0fdd108382502f69f979e69bcb2dcb36ac8d",
+      "episode_id": 17936,
+      "native_cost_sha256": "76c83d5128fe5fbf35447440ee8356385442f40b15b6d7f175062f80a34d3dfd",
+      "npz_sha256": "5356b4d38aa3b3554dd192a07ee2e47c41bab3dae2f1cbe22a33c0cec76b62f5",
+      "role": "pilot",
+      "row_id": 2262957,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "f894dd303919ce7137387ee0a01c5f5602ff2ccc893f1a176949a2b2a0469637",
+      "episode_id": 17936,
+      "native_cost_sha256": "43ab8934ea7a78eec49ed4bf1d8dc9cf4f85bdb3b63984c60b6bdb931201fc53",
+      "npz_sha256": "72c2565a56c6c4847b9d91cbb464c6f0287f6316d209bf9af7468a24d7612dbb",
+      "role": "pilot",
+      "row_id": 2262957,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "f5ea7e9bbcbb4edeccf5439a2f17d64a9324f429e80a198d99d45576104f164a",
+      "episode_id": 5491,
+      "native_cost_sha256": "2641854b749361225fe9a82a82507a9615fc741a0fca4feb246e5d54e05c8cce",
+      "npz_sha256": "e9e770cd9858b42ebc19ee7c5b0e61c72919e9f6b64a6eaf3881b3d397d837d1",
+      "role": "pilot",
+      "row_id": 694735,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "4aad246ebcf0ca955ac15ed1047517c61ab4a9a98fcd900d7cf38e312799f3da",
+      "episode_id": 5491,
+      "native_cost_sha256": "0715264dbba0ada6b58c2d6993c050db35f3acb774dd6cb7a01fa7f8f019c4fb",
+      "npz_sha256": "389190b26827574a24714943722f46e9f7ea3bf13a0c1406e26efbffe83c4160",
+      "role": "pilot",
+      "row_id": 694735,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "cf050bad5204076c1296c9e958b68728e1336ef3c36ed189f2efc032fbc1d99b",
+      "episode_id": 10104,
+      "native_cost_sha256": "5a064e271d455ee236d72dbe7b6ed94bd29592cbd776c86ddbb7a01c9432db27",
+      "npz_sha256": "24b78e1fb37a774b7caeabb0aab06a1174bc5e678ab2f1d066411bde8cc63b0e",
+      "role": "fit",
+      "row_id": 1234804,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "2fe40b998a2d3718b15346d593a4466ce27421f449f194ad1aa2f3b1ccb467ae",
+      "episode_id": 10104,
+      "native_cost_sha256": "c9ded013bcf8da8d4b7430443ba346e96cd6a99569033d6c0bf359a7f013da9b",
+      "npz_sha256": "541849cb3546a8f53f81c74e07b96d69ca01aa5f0edec77e3832b8b63f3f8002",
+      "role": "fit",
+      "row_id": 1234804,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "f4619b6bd4bc208cf5ffad72aede57f252ab36207dd6c4b50374d72656f2d4cc",
+      "episode_id": 13479,
+      "native_cost_sha256": "d10f15f4ce5ef945a1109678a9aee8f3c1c038e1184b59694dc05929f803ba76",
+      "npz_sha256": "f621698d92d9ea07043480f4ca516d5edc2d6c8c34a734b7fba7808d18d9bb78",
+      "role": "fit",
+      "row_id": 1702573,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "a017b66ad36736f3e98f6d4e55f6910efd03ffbe5ad89d052dd5ecaed079cb80",
+      "episode_id": 13479,
+      "native_cost_sha256": "9f9317d26a737c61230ba53bbb9b67eea5426d401ac41f787a38d5719929d3dc",
+      "npz_sha256": "84ccdc55f0213f310b9ad657d862450fc883fcbec8b5d6ea7f2e03835e08edcf",
+      "role": "fit",
+      "row_id": 1702573,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "044146093ac5acec683d9b2c020fab50b6ada0f3bae8bc17a8c5f4a69b9b9492",
+      "episode_id": 15043,
+      "native_cost_sha256": "7c9396c5df8fc6e899428a31b0a59840bbc42af46053f7eea364ae139198fcc5",
+      "npz_sha256": "4c62b565747085c2847069f6c7d375daed59562f387d8cb23e3339f8e0df67a0",
+      "role": "fit",
+      "row_id": 1887219,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "f9eeddd44dff1a00a98590485dc1252eefdeda91be76f2b637124f40d7362fe5",
+      "episode_id": 15043,
+      "native_cost_sha256": "7ae30c93e71b0952f3b4861cdc8226bc1c1aa6012d6a9aef1a98e419bad8773f",
+      "npz_sha256": "1e6f2dcf88a8544d6c0f80922a86bd9b030c688c2c9c27dfd403b35f967122c6",
+      "role": "fit",
+      "row_id": 1887219,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "57dffe22015aedd6a5899cd89fe72ce79a0fc91887ed8136e492b1a2e6ab92de",
+      "episode_id": 2381,
+      "native_cost_sha256": "b2d2355f684ad4bba74d57017cf43b46499c077564eef4e8bb1d9a761e53ff1f",
+      "npz_sha256": "01f8873f325b63fb87264962043d6f3a63f74bd1c64f163b6eab1fb85ebb0df2",
+      "role": "fit",
+      "row_id": 283112,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "09a4bc310eb58c0431de70378c66ebffaf49afbaa1bde37ccca06dedd12910c8",
+      "episode_id": 2381,
+      "native_cost_sha256": "f0dc4b557ee83b9b051ed32767e7ee787dc2985729635600c3e03458b4f50dd3",
+      "npz_sha256": "3c71a912f30b5344277fe3153f7b99d9484c6e06ce2e518971e8692ad9fbbd04",
+      "role": "fit",
+      "row_id": 283112,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "c98c7c12e8b4db676e2fbbfc66303a5f4afcca8343d9d4277dba023c9edaa00a",
+      "episode_id": 12679,
+      "native_cost_sha256": "92a37570df139bc87b16a2cc3de68622d7b6b5a11912f7366edea05fb78a8933",
+      "npz_sha256": "f7b26cb23f86b506ab3f5fdb7db8d2ab02c790dd3bf13563422c145260114536",
+      "role": "selection",
+      "row_id": 1592059,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "3e8fe63477651dd4c26fef154708b80c18298f044ee252e88b9f63787d13559a",
+      "episode_id": 12679,
+      "native_cost_sha256": "fd302d8e866fe8312d4e1f9a17ed8ebc1313ff6409571a11f079bcd122b21ca7",
+      "npz_sha256": "98b6e9f91cb87c0322e60e2a988d95042d50332e4b87687424107b1d19c8ac9a",
+      "role": "selection",
+      "row_id": 1592059,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "a3a19738d5328ee40e5f61436a0e219eaa2966c4cfba50f649dac2acda9c262a",
+      "episode_id": 15317,
+      "native_cost_sha256": "72d6937b4baf469e809acc2e18bce977c4428ac0b43382babe8778dfd6be440b",
+      "npz_sha256": "16bb32b8006a4698d9cdd2925121e7890030202a90207ecc9dfbae703d65819d",
+      "role": "selection",
+      "row_id": 1924015,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "94cc014bcdd5c91515cf58e55f84d16f61ffabbc4a3350bf4fa5d791d06dd4fa",
+      "episode_id": 15317,
+      "native_cost_sha256": "374dcbc3780460e71f785fbbc7785dfba85f1742d36a9e7adda780a584989095",
+      "npz_sha256": "28b44ef6b4ab649adbd1fc328c853bd32385e7a81da56d16895a2430c00c4f3e",
+      "role": "selection",
+      "row_id": 1924015,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "f957cf2bc9169f54505e1b5b08e6aa46ec57acfd227b8d2d7d9ad2fddcd39879",
+      "episode_id": 6492,
+      "native_cost_sha256": "dfd7dbee636b586347f9235a955c7025e6ff37b84e71ebc94058924d93f71bf1",
+      "npz_sha256": "8cbc32cf2c47effab6b43211150bd2f88963ab5cf307fbaa6acfb86d65aa9bf9",
+      "role": "selection",
+      "row_id": 808316,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "d0f77286c4aa6cacc784725ccad5a6cceb8069f62e75c4006d08268c35f959a5",
+      "episode_id": 6492,
+      "native_cost_sha256": "822d8c3cdbdcb9e82d1b570512b31a69ab925c4e04c6a335c7615fa899a77c5b",
+      "npz_sha256": "0fbcd4c8536582a50ba48989684395c1e6a23429afb637c8a0acdf3fa35e1ef0",
+      "role": "selection",
+      "row_id": 808316,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "3eaec342aa8da256710a97e841d9f7e4c2c7e0cc6658d4d1c21bdf45244da887",
+      "episode_id": 15736,
+      "native_cost_sha256": "b3daa7ec56f43f4be009386d57d154ca057bba40c0514054a15d9d386ff7b1d3",
+      "npz_sha256": "c7cd5c4ceaef79d10060a9f972f8a0f0433d4f9742c81723645b034c071034f5",
+      "role": "evaluation",
+      "row_id": 1969818,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "17fa3575ed0b70bdff50032bd9e255d95d46ea884bf57a2fde5e9d3dd1d9ac6f",
+      "episode_id": 15736,
+      "native_cost_sha256": "9138c360add14ae5f8ba5511a4cd475f0b479b4e4e2ec0849b4219c90dde6ce0",
+      "npz_sha256": "5c0d3c1982e06fbea9090f1c841d943ffee114e9590d9449d6226bb29474101b",
+      "role": "evaluation",
+      "row_id": 1969818,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "a0e39116f9f420da61722d05c96770500f4c65ff4f10befe29ad59b9e3277824",
+      "episode_id": 16265,
+      "native_cost_sha256": "59094a22a02a30dc3d7e012426fa4a1742fd2cf62f2273fd696d6db813523321",
+      "npz_sha256": "a2ee38158e5f5234b10f8e096d58fbd9599a99db14980c2460831a2289b5a04b",
+      "role": "evaluation",
+      "row_id": 2056209,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "3217add697211440b79c515c9ef99f84d85b22d652b48e3e8ec5a3c3cf3d0995",
+      "episode_id": 16265,
+      "native_cost_sha256": "f8cea08237fd67a04d004ac4f8b9985134c541ab96b1f9db4180786e9f2cf22f",
+      "npz_sha256": "d0785e2e460b6eb5f4f3d611b8e68a70cf01ddcc2ce73cd833e5d8fa43d21dcb",
+      "role": "evaluation",
+      "row_id": 2056209,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "0561fa3424ab225cc6786d185a8908b4f435e78546d8a7a9985415af827f5364",
+      "episode_id": 2899,
+      "native_cost_sha256": "5534e20600e04336d145bfcf99dd94f00796b2c76e4af18c49e653c9d6aab4ea",
+      "npz_sha256": "a8b33961674ed1078d4b230caaccd410434e0f2619a6127bf03d6cbcdc4c0423",
+      "role": "evaluation",
+      "row_id": 338389,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "565adfe74759dd2c4eb7ca879aed19e240ad2ded2aba0df4f6d2c88d5b030be5",
+      "episode_id": 2899,
+      "native_cost_sha256": "dc4632220235d7678afea661f1533a7339d41f1624612b75cb7c04abbb6eba5b",
+      "npz_sha256": "349778a29be1cfd25c98f958784a6a061dcef891647269ff4257adc5ecfdb5eb",
+      "role": "evaluation",
+      "row_id": 338389,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072801,
+      "candidate_tensor_sha256": "20778316fbad8865b26b6cc31179612285989238e980476ca5ada4c2ce373f24",
+      "episode_id": 5853,
+      "native_cost_sha256": "f258e1b81a17111033a9773fb241f54cb404b26a031a59f9986a7f71af048fbc",
+      "npz_sha256": "505f7d2ab8b5cb46408804a3dc68eee42a1feb2cd365ad781791c94a7a99662c",
+      "role": "evaluation",
+      "row_id": 729016,
+      "valid_count": 300
+    },
+    {
+      "candidate_count": 300,
+      "candidate_seed": 2026072802,
+      "candidate_tensor_sha256": "27a58df109d6d6a8688da003a696205d777250d00d9727c4671a8dc9bf2312f2",
+      "episode_id": 5853,
+      "native_cost_sha256": "303c4416ae82aa5837d20aae52a9080a9b6501fbdb54750a05c156d7da5d7ff9",
+      "npz_sha256": "7e9e8ba9379a021af4265dc8c5e830d07e4cdfe8cf69061665209c09bf9beb99",
+      "role": "evaluation",
+      "row_id": 729016,
+      "valid_count": 300
+    }
+  ],
+  "schema_version": 1
+}

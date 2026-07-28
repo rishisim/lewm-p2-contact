@@ -47,7 +47,8 @@ def fit_linear(banks: list[tuple[np.ndarray, np.ndarray]], *, top_tail: int, epo
     x = np.concatenate([b[0] for b in banks]); y = np.concatenate([b[1] for b in banks])
     mean, scale = x.mean(0), x.std(0)
     if not np.isfinite(scale).all() or np.any(scale == 0): raise ValueError("fit-only normalization is degenerate")
-    model = torch.nn.Linear(x.shape[1], 1); torch.manual_seed(seed)
+    torch.manual_seed(seed)
+    model = torch.nn.Linear(x.shape[1], 1)
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     # Each bank contributes equally; pairs are a loss construction, not an inferential unit.
     for _ in range(epochs):

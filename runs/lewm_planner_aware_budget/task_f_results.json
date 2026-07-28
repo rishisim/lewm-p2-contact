@@ -1,0 +1,80 @@
+{
+  "calibration": "not meaningful for the ranking-only scalar objective; no calibration fit was performed",
+  "choice_changes": {
+    "harmful": 5,
+    "helpful": 3,
+    "regret_weighted_benefit": -7176.467312300146,
+    "tied": 0
+  },
+  "decision": "FAIL",
+  "evaluation": {
+    "banks": 8,
+    "candidates_per_bank": 300,
+    "stage": "final",
+    "starts": 4
+  },
+  "latency": {
+    "critic_only": {
+      "boundary": "300-candidate fixed final bank",
+      "median_ms": 0.0188125,
+      "p95_ms": 0.01994825,
+      "samples": 56
+    },
+    "end_to_end": {
+      "boundary": "300-candidate fixed final bank",
+      "median_ms": 172.7149795,
+      "p95_ms": 226.9548335,
+      "samples": 56
+    },
+    "operation_overhead": {
+      "exact_complete_flops_claim": false,
+      "linear_parameters": 52,
+      "per_candidate_multiply_adds": 51
+    }
+  },
+  "next_step": "retain native depth-0/population-300; stop planner/refinement branch",
+  "per_seed_mean_difference": {
+    "2026072801": 1718.050987071494,
+    "2026072802": 76.06584100354235
+  },
+  "primary_linear_minus_native_regret": {
+    "ci95": [
+      461.0928164120244,
+      1372.2084086669897
+    ],
+    "draws": 9999,
+    "estimate": 897.0584140375182
+  },
+  "safety": {
+    "linear_catastrophic_fraction": 0.125,
+    "linear_worst_tail": 0.8599204549445659,
+    "native_catastrophic_fraction": 0.0,
+    "native_worst_tail": 0.5948737636295215
+  },
+  "schema_version": 1,
+  "scope": "final_bank_reranking_only",
+  "secondary_mean_metrics": {
+    "linear": {
+      "concordance": 0.532948717948718,
+      "kendall_tau_b": 0.0658974358974359,
+      "spearman": 0.09802370026333626,
+      "top_10_jaccard": 0.02631578947368421,
+      "top_10_recall": 0.05,
+      "top_30_jaccard": 0.07984679226601638,
+      "top_30_recall": 0.14583333333333331,
+      "top_choice_regret": 3644.2338766690355
+    },
+    "native": {
+      "concordance": 0.5247519509476031,
+      "kendall_tau_b": 0.049503901895206245,
+      "spearman": 0.0704996722185802,
+      "top_10_jaccard": 0.0,
+      "top_10_recall": 0.0,
+      "top_30_jaccard": 0.030873618214816035,
+      "top_30_recall": 0.058333333333333334,
+      "top_choice_regret": 2747.1754626315173
+    }
+  },
+  "selected_head": "native",
+  "status": "complete"
+}

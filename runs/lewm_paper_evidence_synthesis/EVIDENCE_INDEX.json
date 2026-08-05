@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "purpose": "Paper-ready evidence index for the bounded LeWM predictive-quality-at-matched-counted-compute claim",
+  "repository": {
+    "root": "/Users/rishisim/Documents/research/lewm-p2-contact",
+    "git_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+    "branch": "main",
+    "upstream": "origin/main",
+    "upstream_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+    "tracked_worktree_diff_empty": true,
+    "index_diff_empty": true,
+    "current_untracked_roots": [
+      "runs/lewm_domain_robust_gate/",
+      "runs/lewm_frozen_gate_planning_bridge/",
+      "runs/lewm_paper_evidence_synthesis/",
+      "runs/lewm_planning_bridge_decomposition/",
+      "runs/lewm_pusht_binary_confirmation/",
+      "runs/lewm_pusht_replication_pilot/",
+      "runs/lewm_v5_generalization/"
+    ],
+    "note": "The synthesis changed only the new untracked synthesis root. Several accepted evidence roots were already untracked at baseline and are therefore pinned below by SHA-256."
+  },
+  "checker": {
+    "path": "runs/lewm_paper_evidence_synthesis/evidence_check.py",
+    "sha256": "1193ff03ca7ecf16ad073642995bf85967246858ab163be59427aef59e10ba4b",
+    "runtime": "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "command": "/Users/rishisim/.cache/lewm-v2-venv/bin/python runs/lewm_paper_evidence_synthesis/evidence_check.py",
+    "last_result": "all_checks_passed"
+  },
+  "chronology_utc": [
+    {
+      "event": "Cube v004 package sealed ready before confirmation",
+      "timestamp": "2026-07-15T22:58:46.342374Z",
+      "source": "runs/lewm_v5_readiness_program/v5_package_versions/v004/PACKAGE_READY.json"
+    },
+    {
+      "event": "Cube V5 confirmation decision locked",
+      "timestamp": "2026-07-15T23:45:17.022636Z",
+      "source": "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json"
+    },
+    {
+      "event": "Frozen Cube shift decision locked",
+      "timestamp": "2026-07-17T02:21:31.332901Z",
+      "source": "runs/lewm_v5_generalization/attempts/v005/decision.json"
+    },
+    {
+      "event": "Consumed Cube planning bridge completed",
+      "timestamp": "2026-07-18T17:29:25.505469Z",
+      "source": "runs/lewm_frozen_gate_planning_bridge/RESULTS.json"
+    },
+    {
+      "event": "PushT four-depth pilot decision locked",
+      "timestamp": "2026-07-18T19:06:22.440495Z",
+      "source": "runs/lewm_pusht_replication_pilot/PILOT_DECISION.json"
+    },
+    {
+      "event": "PushT four-depth pilot independently verified",
+      "timestamp": "2026-07-18T19:06:51.756012Z",
+      "source": "runs/lewm_pusht_replication_pilot/INDEPENDENT_VERIFICATION.json"
+    },
+    {
+      "event": "PushT binary protocol locked after the consumed pilot",
+      "timestamp": "2026-07-18T23:30:23.485504Z",
+      "source": "runs/lewm_pusht_binary_confirmation/CONFIG.json"
+    },
+    {
+      "event": "PushT binary fresh-cohort generation started",
+      "timestamp": "2026-07-18T23:30:45.428487Z",
+      "source": "runs/lewm_pusht_binary_confirmation/CONFIG.json"
+    },
+    {
+      "event": "PushT binary scientific decision locked",
+      "timestamp": "2026-07-18T23:31:48.777558Z",
+      "source": "runs/lewm_pusht_binary_confirmation/DECISION.json"
+    },
+    {
+      "event": "PushT binary result independently verified",
+      "timestamp": "2026-07-18T23:34:35.979223Z",
+      "source": "runs/lewm_pusht_binary_confirmation/INDEPENDENT_CHECK.json"
+    }
+  ],
+  "studies": [
+    {
+      "id": "cube_v5_confirmation",
+      "role": "fresh_confirmation",
+      "terminal_label": "v5_confirmation_passed",
+      "population_dgp": "1600 fresh swm/OGBCube-v0 PlanOracle episodes; action_noise=0.1; p_random_action=0; 38 transitions per episode",
+      "sample": {
+        "episodes": 1600,
+        "transitions": 60800
+      },
+      "headline": {
+        "selected_candidate_id": "stage_dual_r0.01_q0.85",
+        "raw_benefit": 0.000006769003361969305,
+        "raw_simultaneous_one_sided_lower": 0.000005423955197986978,
+        "native_whitened_benefit": 0.0006086220971507569,
+        "native_whitened_simultaneous_one_sided_lower": 0.0005135570380185851,
+        "adaptive_total_counted_flops": 4332936120435,
+        "call_histogram_depth_1_to_4": [
+          50973,
+          7267,
+          1773,
+          787
+        ],
+        "stagewise_score_gain_spearman": [
+          0.26262054783011723,
+          0.1711932821485169,
+          0.14122916874567698
+        ]
+      },
+      "sources": [
+        "cube_package_ready",
+        "cube_dgp",
+        "cube_analysis",
+        "cube_decision",
+        "cube_episode_metrics",
+        "cube_bootstrap_replicates",
+        "cube_compute_ledger",
+        "cube_stagewise_ranking",
+        "cube_latency",
+        "cube_independent_verification"
+      ]
+    },
+    {
+      "id": "cube_zero_shot_shifts",
+      "role": "fresh_frozen_policy_robustness",
+      "terminal_label": "zero_shot_generalization_partial",
+      "population_dgp": "Three one-factor shifts within swm/OGBCube-v0; complete V5 policy and PlanOracle-native whitening frozen; 3000 fresh episodes and 114000 transitions per regime",
+      "sample": {
+        "episodes_total": 9000,
+        "transitions_total": 342000
+      },
+      "headline": {
+        "supported_simultaneous_claims": 4,
+        "total_simultaneous_claims": 6,
+        "regimes": {
+          "markov_oracle": {
+            "label": "mixed",
+            "raw_benefit": -0.0000025137786633785235,
+            "raw_lower": -0.000005677096742243234,
+            "fixed_whitened_benefit": 0.00017736180662955415,
+            "fixed_whitened_lower": 0.0000860621224579253
+          },
+          "plan_action_noise_0p2": {
+            "label": "supported",
+            "raw_benefit": 0.000006690627724886404,
+            "raw_lower": 0.000005233178061723176,
+            "fixed_whitened_benefit": 0.0006314822713329762,
+            "fixed_whitened_lower": 0.0005518158911522298
+          },
+          "plan_random_action_0p1": {
+            "label": "mixed",
+            "raw_benefit": 0.0000000959956568795073,
+            "raw_lower": -0.0000031289839682643906,
+            "fixed_whitened_benefit": 0.0004263060036881491,
+            "fixed_whitened_lower": 0.00036053633935118713
+          }
+        }
+      },
+      "sources": [
+        "shift_dgp_matrix",
+        "shift_analysis",
+        "shift_decision",
+        "shift_markov_metrics",
+        "shift_noise_metrics",
+        "shift_random_metrics",
+        "shift_bootstrap_replicates",
+        "shift_independent_verification"
+      ]
+    },
+    {
+      "id": "cube_multistep_and_planning",
+      "role": "exploratory_consumed_data_and_negative_boundary",
+      "terminal_label": "downstream_planning_unsupported",
+      "population_dgp": "Consumed Cube confirmation episodes for five-step composition; consumed 20-start x 64-candidate PlanOracle-centered planning pilot",
+      "sample": {
+        "multistep_episode_clusters": 100,
+        "multistep_overlapping_starts": 3400,
+        "planning_independent_starts": 20
+      },
+      "headline": {
+        "k5_adaptive_minus_matched_raw_mse": -0.00006597279931162478,
+        "k5_adaptive_minus_matched_whitened_mse": -0.0011870892398969934,
+        "candidate_raw_effect": -0.0000027352993921345853,
+        "candidate_raw_95_interval": [
+          -0.00006392055823470584,
+          0.00005519269646716735
+        ],
+        "candidate_whitened_effect": -0.00014018127730549418,
+        "candidate_whitened_95_interval": [
+          -0.0004938837163500499,
+          0.00015512487596797974
+        ],
+        "informative_starts": 0,
+        "rank_defined_starts": 9,
+        "actual_latent_cost_vs_physical_raw_mean_spearman": 0.023720525194694596,
+        "downstream_planning_supported": false
+      },
+      "sources": [
+        "planning_bridge_results",
+        "planning_phase_b_metrics",
+        "planning_phase_c_metrics",
+        "planning_decomposition_results",
+        "planning_decomposition_metrics"
+      ]
+    },
+    {
+      "id": "pusht_four_depth_pilot",
+      "role": "environment_specific_pilot",
+      "terminal_label": "pusht_replication_pilot_not_supported",
+      "population_dgp": "PushT-specific refiner fit on 120 episodes and gate selected on 40; fresh 80-episode evaluation role under WeakPolicy(dist_constraint=100)",
+      "sample": {
+        "fit_episodes": 120,
+        "selection_episodes": 40,
+        "evaluation_episodes": 80,
+        "evaluation_transitions": 1440
+      },
+      "headline": {
+        "selected_candidate_id": "stage_dual_r10_q0.75",
+        "thresholds_depth_1_to_3": [
+          0.036598234837386154,
+          0.059525666089429635,
+          0.11451476688987573
+        ],
+        "raw_benefit": 0.003909796985389183,
+        "raw_exploratory_95_interval": [
+          0.0027287252766780828,
+          0.0050886442555326565
+        ],
+        "fit_whitened_benefit": -0.00030990012922212844,
+        "fit_whitened_exploratory_95_interval": [
+          -0.001258993862851237,
+          0.0006292011461374453
+        ],
+        "total_counted_flops_each": 102905055196,
+        "call_histogram_depth_1_to_4": [
+          1089,
+          42,
+          46,
+          263
+        ],
+        "evaluation_success_fraction": 0.0
+      },
+      "sources": [
+        "pusht_pilot_config",
+        "pusht_pilot_decision",
+        "pusht_pilot_arrays",
+        "pusht_pilot_context",
+        "pusht_fit_artifacts",
+        "pusht_frozen_gate",
+        "pusht_pilot_independent_verification",
+        "pusht_pilot_latency"
+      ]
+    },
+    {
+      "id": "pusht_binary_confirmation",
+      "role": "fresh_confirmation_of_pilot_derived_hypothesis",
+      "terminal_label": "pusht_binary_confirmation_supported",
+      "population_dgp": "240 fresh PushT WeakPolicy(dist_constraint=100) episodes; PushT-specific objects frozen; mandatory depth 1 and optional depth 2 only",
+      "sample": {
+        "episodes": 240,
+        "transitions": 4320,
+        "exclusions": 0,
+        "replacements": 0
+      },
+      "headline": {
+        "stage_1_threshold": 0.036598234837386154,
+        "raw_benefit": 0.002733782040519924,
+        "raw_simultaneous_one_sided_lower": 0.002432267824803084,
+        "fit_whitened_benefit": 0.0015692368266779146,
+        "fit_whitened_simultaneous_one_sided_lower": 0.001268753083313291,
+        "total_counted_flops_each": 307585049440,
+        "call_histogram_depth_1_to_2": [
+          3265,
+          1055
+        ],
+        "stage1_score_combined_gain_spearman": 0.45773974181990207,
+        "success_fraction": 0.0,
+        "verifier_only_correction": {
+          "first_failed_check": "all_saved_episode_headline_arrays",
+          "reason": "Use tight float64 numerical tolerance instead of bitwise equality across einsum and matmul recomputation paths",
+          "scientific_analysis_or_arrays_rerun": false,
+          "original_verifier_sha256": "909144f2952d968148e3f0a61003eac6200faf516bc1d2e5b36a5f64565b87c7",
+          "corrected_verifier_sha256": "18b61953f08e294952aea4c661932ce156496af72810c51f9246ca1b340c46c6"
+        }
+      },
+      "sources": [
+        "pusht_binary_config",
+        "pusht_binary_decision",
+        "pusht_binary_arrays",
+        "pusht_binary_independent_check"
+      ]
+    }
+  ],
+  "posthoc_metric_sensitivity": {
+    "label": "non_confirmatory_outcome_cohort_covariance_redefinition",
+    "formal_metric": "Pilot-fit whitening frozen at covariance floor ratio 1e-3; formal benefit 0.0015692368266779146",
+    "method": "Re-estimate covariance on saved binary-confirmation targets, preserve calls/predictions and strongest exact-compute pairwise comparator construction",
+    "benefit_by_floor_ratio": {
+      "0.001": 0.0013365069884080866,
+      "0.0003": 0.0008799668239503079,
+      "0.0001": -0.0001742822988118231
+    },
+    "source": "pusht_binary_arrays",
+    "checker": "runs/lewm_paper_evidence_synthesis/evidence_check.py"
+  },
+  "source_catalog": {
+    "cube_package_ready": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/PACKAGE_READY.json",
+      "sha256": "0701a0133b0e62a1068559308c470ca1923b0c3a27c51e1ce0231cd007f691fc"
+    },
+    "cube_dgp": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/DGP.json",
+      "sha256": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518"
+    },
+    "cube_decision": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json",
+      "sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5"
+    },
+    "cube_analysis": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/analysis_result.json",
+      "sha256": "3d6ce72bdb1c9e2330654d2822d592b8a387399cc44370931989accbf874eecc"
+    },
+    "cube_episode_metrics": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/v5_confirmation_episode_metrics.npz",
+      "sha256": "4eb5cc464f2526a9ccd9ab0aaf84f3d789439120390dd95df0fef224d54e9391"
+    },
+    "cube_bootstrap_replicates": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/bootstrap_replicates.npz",
+      "sha256": "b1a4a8c29d18430e6deb4a60cb19d7147c4d2125dfececc6f05479440657f469"
+    },
+    "cube_compute_ledger": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/compute_ledger_realized.json",
+      "sha256": "5e29a09b6345a2c1d776402b7a725313e1d73c8bd7d9d78c60863bed613c9c04"
+    },
+    "cube_stagewise_ranking": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/stagewise_ranking.json",
+      "sha256": "3b57757602508a2060c0b9a4d47d4c3bb47ba6b37cb7b14446ad5e4a8fd71a8b"
+    },
+    "cube_latency": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/v5_confirmation_latency.json",
+      "sha256": "db4031e1472aa399dc5deeb7dfd288469d55b2c22ec0b4913e480244b68e98a9"
+    },
+    "cube_independent_verification": {
+      "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/audit/independent_verification.json",
+      "sha256": "d30e58466184ac98c5643ea6242e1fb1d95cc2f820c001be16aee3556903c3f0"
+    },
+    "shift_dgp_matrix": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/DGP_MATRIX.json",
+      "sha256": "7bab28d8746d6553456398da46939ca18cfa7b3ecc43c5040d93d61d92a2ef05"
+    },
+    "shift_decision": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/decision.json",
+      "sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38"
+    },
+    "shift_analysis": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/analysis_result.json",
+      "sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8"
+    },
+    "shift_markov_metrics": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/metrics/markov_oracle_episode_metrics.npz",
+      "sha256": "fe48921caac32760cd02c0b2cf41bd056af7e654c5b92a61637a0677a1da898b"
+    },
+    "shift_noise_metrics": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/metrics/plan_action_noise_0p2_episode_metrics.npz",
+      "sha256": "5fa32dfdf216ef0fe0ef31fcc1a0ff3f10ae5207fca1aa1632bc75838b94d894"
+    },
+    "shift_random_metrics": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/metrics/plan_random_action_0p1_episode_metrics.npz",
+      "sha256": "f7b34e7b3159e654af7ea46bd545582e5e7edcc878b348c471f894b777b994c4"
+    },
+    "shift_bootstrap_replicates": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/metrics/bootstrap_replicates.npz",
+      "sha256": "d1ace0696cee85d10b4472110d4515dc42825487922a4366e0247d65290d3b81"
+    },
+    "shift_independent_verification": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/audit/independent_verification.json",
+      "sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6"
+    },
+    "planning_bridge_results": {
+      "path": "runs/lewm_frozen_gate_planning_bridge/RESULTS.json",
+      "sha256": "bb7d509d3c48aa4d5133e2987ea97680f14593606706f89e8c683f0ba37cccb8"
+    },
+    "planning_phase_b_metrics": {
+      "path": "runs/lewm_frozen_gate_planning_bridge/phase_b_metrics.npz",
+      "sha256": "56325873fcbecc01f4ee931473d225faaf1b7ee7e56225510084e7afec3e51f5"
+    },
+    "planning_phase_c_metrics": {
+      "path": "runs/lewm_frozen_gate_planning_bridge/phase_c_metrics.npz",
+      "sha256": "d307287c14964e076d708c5ce65fbf73746b10e128277c309ce31002e46402d2"
+    },
+    "planning_decomposition_results": {
+      "path": "runs/lewm_planning_bridge_decomposition/RESULTS.json",
+      "sha256": "7bbc23bb43683a1dec912a0cabc9d5819fe48e064ee3aa33097b8a81a0f3b8f3"
+    },
+    "planning_decomposition_metrics": {
+      "path": "runs/lewm_planning_bridge_decomposition/decomposition_metrics.npz",
+      "sha256": "ba734b92c2cba7546201693349e331dd06a8e2233429134a71cdc8009b274788"
+    },
+    "pusht_pilot_config": {
+      "path": "runs/lewm_pusht_replication_pilot/CONFIG.json",
+      "sha256": "fed9e78626c499efc953bd66193415b40577dba29f4dcfd6269b137b4e8d7157"
+    },
+    "pusht_pilot_decision": {
+      "path": "runs/lewm_pusht_replication_pilot/PILOT_DECISION.json",
+      "sha256": "05b8bd91cf4a863c2adc31822d4ba8936c8ef63be55cdef9048d9a74197874ad"
+    },
+    "pusht_pilot_arrays": {
+      "path": "runs/lewm_pusht_replication_pilot/EVALUATION_ARRAYS.npz",
+      "sha256": "30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8"
+    },
+    "pusht_pilot_context": {
+      "path": "runs/lewm_pusht_replication_pilot/DESCRIPTIVE_CONTEXT.json",
+      "sha256": "a2fd1c0659778faed0c814a7ae5fe967d8943893ba70758871a51608adbf10c7"
+    },
+    "pusht_fit_artifacts": {
+      "path": "runs/lewm_pusht_replication_pilot/FIT_ARTIFACTS.npz",
+      "sha256": "b9901680c953474a09881141b2b9e7ef01c17a67602c8938addbf040be7409ec"
+    },
+    "pusht_frozen_gate": {
+      "path": "runs/lewm_pusht_replication_pilot/FROZEN_GATE.npz",
+      "sha256": "6192936bf95a3b511adf83c623e5a9bb40930131fabb1c06e74d0d0831cd0dd6"
+    },
+    "pusht_pilot_independent_verification": {
+      "path": "runs/lewm_pusht_replication_pilot/INDEPENDENT_VERIFICATION.json",
+      "sha256": "0b779f78f70d904cc2e0aa7dc5c13300651483b5a8eed96c75cb7aeecf737480"
+    },
+    "pusht_pilot_latency": {
+      "path": "runs/lewm_pusht_replication_pilot/LATENCY.json",
+      "sha256": "2c3bc49cb24554345f0679fb50790fd669813dfece1c80db3f717b4def4220e2"
+    },
+    "pusht_binary_config": {
+      "path": "runs/lewm_pusht_binary_confirmation/CONFIG.json",
+      "sha256": "41ed678ceeb37b000878479084539ed3591d2b37543721a65de8a792d2c7b3be"
+    },
+    "pusht_binary_decision": {
+      "path": "runs/lewm_pusht_binary_confirmation/DECISION.json",
+      "sha256": "ea36462bd4bc2c03cbf0f87b372eaec6c5720df2925675a8a5ad4b425a224fdc"
+    },
+    "pusht_binary_arrays": {
+      "path": "runs/lewm_pusht_binary_confirmation/EVALUATION_ARRAYS.npz",
+      "sha256": "080c052a582c5d20650b1569fd8425c986533e1afbe616a83e2e7e5f9ce89cc9"
+    },
+    "pusht_binary_independent_check": {
+      "path": "runs/lewm_pusht_binary_confirmation/INDEPENDENT_CHECK.json",
+      "sha256": "2bc381250564eb842630ae6c3f8cff372b6adc26cac747f382d872b0aad8bc1b"
+    }
+  }
+}

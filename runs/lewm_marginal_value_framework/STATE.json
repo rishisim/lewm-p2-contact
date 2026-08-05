@@ -1,0 +1,33 @@
+{
+  "study": "lewm_marginal_value_framework",
+  "objective": "Determine whether a marginal-value-of-refinement formulation materially strengthens the LeWM adaptive-computation paper by providing a principled, unified budget-allocation framework and a quality-versus-compute frontier; use existing evidence first, and run at most one bounded fresh confirmation cohort only if a predeclared paper-value decision rule says it is warranted.",
+  "updated_at": "2026-07-18T20:53:17-07:00",
+  "status": "complete",
+  "current_phase": "complete",
+  "terminal_decision": "stop_keep_current_bounded_paper",
+  "terminal_reason": "The frozen conjunctive paper-value rule failed its substantive-formulation criterion: the general compute-price/top-k formulation is prior art and is not genuinely equivalent to the deployed multistage gate.",
+  "phases": {
+    "initialization": "complete",
+    "artifact_inventory": "complete",
+    "literature_positioning": "complete",
+    "formal_framework": "complete",
+    "existing_artifact_audit": "complete_verified",
+    "exploratory_analysis": "complete_consumed_cohorts_only",
+    "paper_value_decision": "complete_stop",
+    "optional_fresh_confirmation": "not_run_not_authorized",
+    "manuscript_handoff": "complete",
+    "validation": "complete_23_of_23_checks"
+  },
+  "fresh_outcomes_generated": false,
+  "fresh_confirmation_count": 0,
+  "existing_artifacts_modified": false,
+  "manuscript_files_modified": false,
+  "write_scope": "runs/lewm_marginal_value_framework/",
+  "constraints": {
+    "max_fresh_confirmation_cohorts": 1,
+    "existing_artifacts_read_only": true,
+    "manuscript_files_read_only": true,
+    "new_environment_allowed": false,
+    "planning_or_control_study_allowed": false
+  }
+}

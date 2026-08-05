@@ -1,0 +1,17 @@
+{
+  "allocation_and_calibration": {
+    "claim": "Accepted depth histograms and exploratory predicted-versus-observed marginal-gain deciles.",
+    "pdf": "figures/allocation_and_calibration.pdf",
+    "png": "figures/allocation_and_calibration.png"
+  },
+  "gate_overhead_sensitivity": {
+    "claim": "Frozen allocation repriced under gate-overhead multipliers; allocation and outcomes fixed.",
+    "pdf": "figures/gate_overhead_sensitivity.pdf",
+    "png": "figures/gate_overhead_sensitivity.png"
+  },
+  "quality_compute_frontiers": {
+    "claim": "Exploratory consumed-cohort quality-versus-counted-compute comparison against the transition-independent lower envelope; Cube is conservative thinning, PushT is exact top-k.",
+    "pdf": "figures/quality_compute_frontiers.pdf",
+    "png": "figures/quality_compute_frontiers.png"
+  }
+}

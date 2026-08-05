@@ -1,0 +1,194 @@
+{
+  "checks": {
+    "copied_code_and_regular_file_canary_archives": true,
+    "gate_and_feature_functions_have_no_privileged_arguments": true,
+    "gate_ast_has_no_privileged_loaded_names": true,
+    "loaded_outputs_invariant_to_all_canary_values": true,
+    "loader_audit_reports_only_allowlist": true,
+    "no_eval_exec_dynamic_import_calls_in_audited_modules": true,
+    "only_pixels_action_subscripted": true,
+    "privileged_canaries_not_materialized": true,
+    "unused_output_field_semantic_invariance": true
+  },
+  "copied_test_directory": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/causal_canaries",
+  "created_unix_ns": 1784236234918471000,
+  "decision_time_table": [
+    {
+      "available_at_gate_decision": true,
+      "enters": "latent history and base prediction",
+      "origin": "raw current/past rendered observations",
+      "transformation": "pixel_transform then frozen base encoder",
+      "value": "pixels[0:201:5]"
+    },
+    {
+      "available_at_gate_decision": true,
+      "enters": "action history and base/solver prediction",
+      "origin": "executed PlanOracle action stream",
+      "transformation": "frozen mean/std normalization and 5-step blocking",
+      "value": "action[0:200]"
+    },
+    {
+      "available_at_gate_decision": true,
+      "enters": "all three gate stages",
+      "origin": "three encoded frames ending before predicted target frame",
+      "transformation": "flattened plus row-local norm/cosine summaries",
+      "value": "history latent"
+    },
+    {
+      "available_at_gate_decision": true,
+      "enters": "current reached stage only",
+      "origin": "base + already executed frozen solver exits",
+      "transformation": "direct coordinates and row-local summaries",
+      "value": "current prediction"
+    },
+    {
+      "available_at_gate_decision": true,
+      "enters": "current reached stage only",
+      "origin": "most recently executed frozen solver update",
+      "transformation": "direct coordinates and row-local summaries",
+      "value": "last update"
+    },
+    {
+      "available_at_gate_decision": true,
+      "enters": "stage-specific score/call",
+      "origin": "pre-V5 frozen fit/selection artifacts",
+      "transformation": "two affine heads, minimum, strict greater-than threshold",
+      "value": "compiled affine coefficients/biases/threshold"
+    },
+    {
+      "available_at_gate_decision": false,
+      "enters": "post-routing execution audit and later analysis only",
+      "origin": "future encoded frame",
+      "transformation": "loss/equivalence checks after calls are complete",
+      "value": "target latent"
+    }
+  ],
+  "package": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/v5_package_versions/v004",
+  "passed": true,
+  "runtime_trace": {
+    "archive_a_subscript_accesses": [
+      "action",
+      "pixels"
+    ],
+    "archive_b_subscript_accesses": [
+      "action",
+      "pixels"
+    ],
+    "canary_names": [
+      "contact",
+      "done_canary",
+      "future_episode_summary",
+      "future_latent",
+      "future_observation",
+      "marginal_gain",
+      "oracle_decision",
+      "per_transition_loss",
+      "prediction_target",
+      "reward_canary",
+      "success_canary",
+      "v5_normalization_canary"
+    ],
+    "output_hashes_a": {
+      "action": "7407630337aca15f676806ac9580be725e513eb6b1c49f858aae911f55fdac33",
+      "pixels": "b6d66a163117e88e6b2e3c5848bc4f0e9d39370ed53dfccbc8fbf4bdd6c8199c"
+    },
+    "output_hashes_b": {
+      "action": "7407630337aca15f676806ac9580be725e513eb6b1c49f858aae911f55fdac33",
+      "pixels": "b6d66a163117e88e6b2e3c5848bc4f0e9d39370ed53dfccbc8fbf4bdd6c8199c"
+    }
+  },
+  "schema_version": 1,
+  "static_dataflow": {
+    "dynamic_code_calls": [],
+    "function_inputs": {
+      "build_counted_causal_features": {
+        "arguments": [
+          "history",
+          "action_history",
+          "current_prediction",
+          "last_update"
+        ],
+        "privileged_argument_tokens": []
+      },
+      "load_model_gate_inputs": {
+        "arguments": [
+          "path"
+        ],
+        "privileged_argument_tokens": []
+      },
+      "manual_sparse": {
+        "arguments": [
+          "torch",
+          "solver",
+          "gate",
+          "history",
+          "actions",
+          "base_prediction"
+        ],
+        "privileged_argument_tokens": []
+      },
+      "prepare_episode_tensors": {
+        "arguments": [
+          "torch",
+          "runtime",
+          "model_io",
+          "device",
+          "base",
+          "contract",
+          "common",
+          "loaded"
+        ],
+        "privileged_argument_tokens": []
+      },
+      "score_gate": {
+        "arguments": [
+          "torch",
+          "gate",
+          "history",
+          "actions",
+          "current",
+          "update",
+          "stage"
+        ],
+        "privileged_argument_tokens": []
+      }
+    },
+    "gate_privileged_loaded_name_hits": []
+  },
+  "unexpected_privileged_field_behavior": {
+    "extra_fields_ignored_without_materialization": true,
+    "hardening_note": "The loader is allowlist-projecting rather than strict-archive-schema rejecting; raw archives intentionally already contain post-hoc privileged fields.",
+    "security_property_no_observation_or_reaction_passed": true,
+    "strict_schema_rejected_extra_fields": false
+  },
+  "unused_output_field_invariance": {
+    "passed": true,
+    "semantic_array_hashes_before": {
+      "calls": "33b41015d5eccc2f2f92cadc30cf2171b53ad94deac5a2aa97f325aaeec3547e",
+      "dense_exits": "1226e3c1acd624773e1a8936b5041a7202d4f787d740bf42604fcc9a9168a0c0",
+      "episode_id": "2957c10535b8bf6c4291573130e218448f2ad0111981ae1db2e53c9b110a0e76",
+      "model_step": "9a9bebb8079048a186dca3f5177982c64f0b93a622d8844eb30e09f7c64a0aa2",
+      "scores": "ccdf02c82defa89c732f1423cfcac352c3cdb40952cef8f0c99761b3a88d9d84",
+      "sparse_selected": "1fd34369a7ee26b53d83a325f00b271685177a62fa9d1eb9eddd0865fe248127",
+      "target": "7aec700fb15d42bebf839b320573d53ba259cbb0b3bbf91fbc2480e78bffdce9"
+    },
+    "semantic_array_hashes_with_unused_value_a": {
+      "calls": "33b41015d5eccc2f2f92cadc30cf2171b53ad94deac5a2aa97f325aaeec3547e",
+      "dense_exits": "1226e3c1acd624773e1a8936b5041a7202d4f787d740bf42604fcc9a9168a0c0",
+      "episode_id": "2957c10535b8bf6c4291573130e218448f2ad0111981ae1db2e53c9b110a0e76",
+      "model_step": "9a9bebb8079048a186dca3f5177982c64f0b93a622d8844eb30e09f7c64a0aa2",
+      "scores": "ccdf02c82defa89c732f1423cfcac352c3cdb40952cef8f0c99761b3a88d9d84",
+      "sparse_selected": "1fd34369a7ee26b53d83a325f00b271685177a62fa9d1eb9eddd0865fe248127",
+      "target": "7aec700fb15d42bebf839b320573d53ba259cbb0b3bbf91fbc2480e78bffdce9"
+    },
+    "semantic_array_hashes_with_unused_value_b": {
+      "calls": "33b41015d5eccc2f2f92cadc30cf2171b53ad94deac5a2aa97f325aaeec3547e",
+      "dense_exits": "1226e3c1acd624773e1a8936b5041a7202d4f787d740bf42604fcc9a9168a0c0",
+      "episode_id": "2957c10535b8bf6c4291573130e218448f2ad0111981ae1db2e53c9b110a0e76",
+      "model_step": "9a9bebb8079048a186dca3f5177982c64f0b93a622d8844eb30e09f7c64a0aa2",
+      "scores": "ccdf02c82defa89c732f1423cfcac352c3cdb40952cef8f0c99761b3a88d9d84",
+      "sparse_selected": "1fd34369a7ee26b53d83a325f00b271685177a62fa9d1eb9eddd0865fe248127",
+      "target": "7aec700fb15d42bebf839b320573d53ba259cbb0b3bbf91fbc2480e78bffdce9"
+    }
+  }
+}

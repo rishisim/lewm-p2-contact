@@ -1,0 +1,105 @@
+{
+  "cube": {
+    "analytic_raw_mean": 0.003440309762642501,
+    "analytic_whitened_mean": 0.09937282203357548,
+    "call_histogram": [
+      50973,
+      7267,
+      1773,
+      787
+    ],
+    "dense_selected_raw_mean": 0.003433540759209508,
+    "dense_selected_vs_sparse_raw_mean_abs": 2.046890926847035e-11,
+    "dense_selected_vs_sparse_white_mean_abs": 4.541338729552772e-09,
+    "dense_selected_whitened_mean": 0.09876419997888937,
+    "episodes": 1600,
+    "frozen_total_flops": 4332936120435,
+    "recomputed_head_calls_exact": true,
+    "retention_one_calls_exact": true,
+    "rows": 60800,
+    "rows_per_episode_unique": [
+      38
+    ],
+    "score_finite_counts": [
+      60800,
+      9827,
+      2560
+    ],
+    "score_recomputation_max_abs": 1.2040138244628906e-05,
+    "source_sha256": "93aa013b550696e5a2ea962a680df29d411b94f6ff45caf9eb98a438727e636e",
+    "sparse_raw_mean": 0.003433540759280532,
+    "sparse_whitened_mean": 0.09876419993642473,
+    "stored_score_calls_exact": true
+  },
+  "fresh_outcomes_generated": false,
+  "headline_deltas_recomputed_minus_accepted": {
+    "binary_adaptive_raw": 0.0,
+    "binary_adaptive_whitened": 5.551115123125783e-17,
+    "binary_total_flops": 0,
+    "cube_adaptive_raw": 0.0,
+    "cube_adaptive_whitened": 0.0,
+    "cube_analytic_raw": 4.336808689942018e-19,
+    "cube_total_flops": 0,
+    "pilot_adaptive_raw": 0.0,
+    "pilot_adaptive_whitened": 5.551115123125783e-17,
+    "pilot_total_flops": 0
+  },
+  "intentional_missingness": {
+    "cube_scores": "NaN exactly for stages not reached by the frozen sparse policy; this prohibits more-permissive retrospective sweeps",
+    "pusht_scores": "all required pilot scores and all binary stage-1 scores are finite"
+  },
+  "method": "independent float64 recomputation from accepted lossless arrays; no model or environment execution",
+  "pusht_binary": {
+    "adaptive_raw_mean": 0.11865693567454487,
+    "adaptive_whitened_mean": 0.29196645548960315,
+    "analytic_raw_mean": 0.1213907177150648,
+    "analytic_whitened_mean": 0.29353569231628107,
+    "call_histogram": [
+      3265,
+      1055
+    ],
+    "episodes": 240,
+    "frozen_topk_reproduces_calls": true,
+    "frozen_total_flops": 307585049440,
+    "maximum_topk_count_under_fixed_depth2_cost": 4268,
+    "recomputed_calls_exact": true,
+    "rows": 4320,
+    "rows_per_episode_unique": [
+      18
+    ],
+    "score_recomputation_max_abs": 1.0265834711198352e-06,
+    "source_sha256": "080c052a582c5d20650b1569fd8425c986533e1afbe616a83e2e7e5f9ce89cc9"
+  },
+  "pusht_four_depth_pilot": {
+    "adaptive_raw_mean": 0.10740739382814737,
+    "adaptive_whitened_mean": 0.252459692826501,
+    "analytic_raw_mean": 0.11131719081353657,
+    "analytic_whitened_mean": 0.2521497926972788,
+    "call_histogram": [
+      1089,
+      42,
+      46,
+      263
+    ],
+    "episodes": 80,
+    "frozen_total_flops": 102905055196,
+    "recomputed_calls_exact": true,
+    "rows": 1440,
+    "rows_per_episode_unique": [
+      18
+    ],
+    "score_recomputation_max_abs": 8.796503179198112e-07,
+    "source_sha256": "30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8"
+  },
+  "source_artifacts_read_only": true,
+  "validation": {
+    "all_compute_deltas_zero": true,
+    "all_headline_absolute_deltas_at_most_1e-12": true,
+    "cube_call_reconstruction": true,
+    "cube_frontier_endpoint_reconstruction": true,
+    "cube_independent_head_call_reconstruction": true,
+    "pusht_binary_call_reconstruction": true,
+    "pusht_binary_topk_frozen_reconstruction": true,
+    "pusht_pilot_call_reconstruction": true
+  }
+}

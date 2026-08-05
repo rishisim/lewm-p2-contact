@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "all_bootstrap_outputs": true,
+    "all_frozen_hashes": true,
+    "all_locked_source_hashes": true,
+    "all_saved_episode_headline_arrays": true,
+    "binary_calls_exact": true,
+    "cached_base_hashes": true,
+    "calls_and_histogram": true,
+    "causal_feature_boundary": true,
+    "chronology": true,
+    "decision_label": true,
+    "evaluation_arrays_hash": true,
+    "exact_240_episode_count": true,
+    "exact_integer_compute": true,
+    "exact_two_excluded_smoke_episodes": true,
+    "finite_lossless_arrays": true,
+    "focused_tests": true,
+    "fresh_simulator_no_hdf5": true,
+    "frozen_array_digests": true,
+    "frozen_models_unchanged": true,
+    "git_head_unchanged": true,
+    "git_porcelain_scope_unchanged": true,
+    "git_tracked_state_unchanged": true,
+    "no_exclusions_or_replacements": true,
+    "permutation_calls_exact": true,
+    "permutation_histograms_preserved": true,
+    "pilot_contract_reproduced_before_cohort": true,
+    "seed_disjointness": true,
+    "seeds_and_identifiers_exact": true,
+    "selected_predictions_exact": true,
+    "sign_counts_and_relative_effects": true,
+    "stage1_score_gain_ranks": true,
+    "stage1_scores_exact": true,
+    "strongest_pairwise_comparators": true,
+    "threshold_exact": true,
+    "verifier_only_numerical_tolerance_correction": true
+  },
+  "created_unix_ns": 1784417675979223000,
+  "focused_tests": {
+    "command": [
+      "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_confirmation.py"
+    ],
+    "exit_code": 0,
+    "output": "....                                                                     [100%]\n4 passed in 0.64s\n",
+    "passed": true
+  },
+  "git": {
+    "head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+    "status": [
+      "?? runs/lewm_domain_robust_gate/",
+      "?? runs/lewm_frozen_gate_planning_bridge/",
+      "?? runs/lewm_planning_bridge_decomposition/",
+      "?? runs/lewm_pusht_binary_confirmation/",
+      "?? runs/lewm_pusht_replication_pilot/",
+      "?? runs/lewm_v5_generalization/"
+    ],
+    "tracked_diff": []
+  },
+  "headline_recomputation": {
+    "call_histogram_depth_1_to_2": [
+      3265,
+      1055
+    ],
+    "compute_total_each": 307585049440,
+    "fit_whitened": {
+      "exploratory_95_ci_high": 0.001873825556185711,
+      "exploratory_95_ci_low": 0.0012687530833132901,
+      "mean": 0.0015692368266779144
+    },
+    "raw": {
+      "exploratory_95_ci_high": 0.0030398559094886655,
+      "exploratory_95_ci_low": 0.0024322678248030844,
+      "mean": 0.0027337820405199244
+    },
+    "scientific_label": "pusht_binary_confirmation_supported",
+    "sign_counts_and_relative_effects": {
+      "fit_whitened": {
+        "negative_episode_count": 74,
+        "positive_episode_count": 166,
+        "relative_benefit_fraction_of_comparator_mse": 0.005345983019288438,
+        "zero_episode_count": 0
+      },
+      "raw": {
+        "negative_episode_count": 24,
+        "positive_episode_count": 216,
+        "relative_benefit_fraction_of_comparator_mse": 0.02252051962438193,
+        "zero_episode_count": 0
+      }
+    },
+    "simultaneous_fit_whitened_lower": 0.0012687530833132901,
+    "simultaneous_raw_lower": 0.0024322678248030844,
+    "stage1_score_gain_rank": {
+      "combined_score_gain_spearman": 0.45773974181990207,
+      "fit_whitened_score_gain_spearman": 0.3957813087159908,
+      "raw_score_gain_spearman": 0.45925887425060163
+    }
+  },
+  "method": "independent float64 recomputation from the saved lossless evaluation arrays",
+  "passed": true,
+  "schema_version": 1
+}

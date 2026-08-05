@@ -1,0 +1,102 @@
+{
+  "compatibility": {
+    "all_latents_deterministic_within_tolerance": true,
+    "all_predictions_deterministic_within_tolerance": true,
+    "all_raw_deterministic": true,
+    "base_eval_mode": true,
+    "base_parameter_digest_after": "1b4656ac1171e23e269dea74faa67ef8de20fe9c0030a5bfa400fe5e726b1e3b",
+    "base_parameter_digest_before": "1b4656ac1171e23e269dea74faa67ef8de20fe9c0030a5bfa400fe5e726b1e3b",
+    "base_parameter_state_unchanged": true,
+    "base_requires_grad_false": true,
+    "blocked_action_dim_10": true,
+    "determinism_replays_not_retained_as_episodes": 2,
+    "exact_unique_smoke_episode_count": 2,
+    "latent_dim_192": true,
+    "one_step_prediction_finite": true,
+    "pixel_preprocessing": {
+      "finite": true,
+      "input_dtype": "uint8",
+      "input_shape": [
+        2,
+        224,
+        224,
+        3
+      ],
+      "output_dtype": "torch.float32",
+      "output_shape": [
+        2,
+        3,
+        224,
+        224
+      ]
+    }
+  },
+  "device": "mps",
+  "episodes": [
+    {
+      "base_prediction_shape": [
+        18,
+        192
+      ],
+      "blocked_action_shape": [
+        20,
+        10
+      ],
+      "determinism_replay_sha256": "8e516c55a45b47714011dc633eb30b4da60ce5be71bbfe914f8acb04efba5f30",
+      "deterministic_base_prediction_within_tolerance": true,
+      "deterministic_latents_within_tolerance": true,
+      "deterministic_raw_episode": true,
+      "finite": true,
+      "identifier": "pusht_smoke_excluded_000",
+      "latent_shape": [
+        21,
+        192
+      ],
+      "primary_generation_encoding_prediction_seconds": 1.5205787499999133,
+      "raw_steps": 100,
+      "seed": 9170001,
+      "strided_frames": 21,
+      "trajectory_sha256": "8e516c55a45b47714011dc633eb30b4da60ce5be71bbfe914f8acb04efba5f30",
+      "transition_count": 18
+    },
+    {
+      "base_prediction_shape": [
+        18,
+        192
+      ],
+      "blocked_action_shape": [
+        20,
+        10
+      ],
+      "determinism_replay_sha256": "41e67ff31f0cdebb2b0713ca56f19f321507153e2e21f7caa6123bf00c703408",
+      "deterministic_base_prediction_within_tolerance": true,
+      "deterministic_latents_within_tolerance": true,
+      "deterministic_raw_episode": true,
+      "finite": true,
+      "identifier": "pusht_smoke_excluded_001",
+      "latent_shape": [
+        21,
+        192
+      ],
+      "primary_generation_encoding_prediction_seconds": 0.1627319159997569,
+      "raw_steps": 100,
+      "seed": 9170002,
+      "strided_frames": 21,
+      "trajectory_sha256": "41e67ff31f0cdebb2b0713ca56f19f321507153e2e21f7caa6123bf00c703408",
+      "transition_count": 18
+    }
+  ],
+  "model_load_seconds": 4.916213291000531,
+  "schema_version": 1,
+  "throughput": {
+    "fixed_size_choice": "full",
+    "full_exceeds_six_hours": false,
+    "mean_primary_seconds_per_episode": 0.8416553329998351,
+    "primary_seconds_each": [
+      1.5205787499999133,
+      0.1627319159997569
+    ],
+    "projected_full_wall_seconds": 3872.6963278919466,
+    "projection_formula": "mean_smoke_episode_seconds * 240_full_episodes * 1.35 + 3600_second_fixed_training_analysis_reserve"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "active_attempt": "v005",
+  "active_attempt_path": "runs/lewm_v5_generalization/attempts/v005",
+  "attempt_history": [
+    {
+      "created_unix_ns": 1784233621945221000,
+      "invalidity_evidence_path": "runs/lewm_v5_generalization/attempts/v001/audit/bootstrap_audit.json",
+      "invalidity_evidence_sha256": "e428a75d0f4ceadca96fc412b086edac4d4c8f8b614cd9a032e01b9de2c99283",
+      "path": "runs/lewm_v5_generalization/attempts/v001",
+      "status": "invalid_zero_outcome_external_git_change",
+      "version": "v001"
+    },
+    {
+      "created_unix_ns": 1784233846376790000,
+      "invalidity_evidence_path": "runs/lewm_v5_generalization/attempts/v002/audit/design_and_power_failure.json",
+      "invalidity_evidence_sha256": "1f2ef8997a21885c1cca999b539b7fed515bd045c7e02c51c9d4064400ae40aa",
+      "path": "runs/lewm_v5_generalization/attempts/v002",
+      "status": "invalid_zero_outcome_provenance_hash_typo",
+      "version": "v002",
+      "version_forward_evidence_path": "runs/lewm_v5_generalization/attempts/v002/audit/version_forward_equivalence.json",
+      "version_forward_evidence_sha256": "de515947af4d0c95e47fd7d3b5236334b3913c554f51539487fe40b8f7493778"
+    },
+    {
+      "created_unix_ns": 1784234271148179000,
+      "invalidity_evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/preseal_qualification_failure.json",
+      "invalidity_evidence_sha256": "ff1d7060fc4aaf3df6f689cbcf9a17a6b767a9bccddf3f03d1f5283de7596e7e",
+      "path": "runs/lewm_v5_generalization/attempts/v003",
+      "status": "invalid_zero_outcome_module_shadowing",
+      "version": "v003",
+      "version_forward_evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/version_forward_equivalence.json",
+      "version_forward_evidence_sha256": "14d0d27d3cd7e97c35d4790824fd8e4c73befc4d3a9591ee3d4635c475a8b11a"
+    },
+    {
+      "created_unix_ns": 1784235465585812000,
+      "invalidity_evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/smoke_checkpoint_procedural_failure.json",
+      "invalidity_evidence_sha256": "add4795a0406fef127c48f8f7b25fbda93285659c723f840731950b3e3f42236",
+      "path": "runs/lewm_v5_generalization/attempts/v004",
+      "status": "invalid_zero_target_outcome_smoke_checkpoint_predicate",
+      "version": "v004",
+      "version_forward_evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/version_forward_equivalence.json",
+      "version_forward_evidence_sha256": "71be1e1103d64146c42338ef8d01a9ea39b9f10add2ee2e649b718708e2029e1"
+    },
+    {
+      "created_unix_ns": 1784235887256356000,
+      "path": "runs/lewm_v5_generalization/attempts/v005",
+      "status": "active_zero_outcome_version_forward",
+      "version": "v005",
+      "version_forward_evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/version_forward_equivalence.json",
+      "version_forward_evidence_sha256": "1330b233354b5c56863230eeeab7036e0c9ec8fecb989794861faffc39e558a2"
+    }
+  ],
+  "completed_states": [
+    "BOOTSTRAP_AUDIT",
+    "DESIGN_AND_POWER",
+    "IMPLEMENT_PACKAGE",
+    "PRESEAL_QUALIFY",
+    "PRE_OUTCOME_SEAL",
+    "EXCLUDED_REGIME_SMOKE",
+    "FRESH_COHORT_GENERATION",
+    "SPARSE_DENSE_EXECUTION",
+    "SEALED_ANALYSIS",
+    "LATENCY_AND_RESOURCE_REPORTING",
+    "INDEPENDENT_VERIFICATION",
+    "TERMINAL",
+    "FOLLOW_ON_TASK_CREATION"
+  ],
+  "created_unix_ns": 1784233621945221000,
+  "current_state": "TERMINAL",
+  "expected_git_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+  "last_verified_checkpoint": {
+    "created_unix_ns": 1784254912420991000,
+    "evidence_path": "runs/lewm_v5_generalization/attempts/v005/FOLLOW_ON_TASK.md",
+    "evidence_sha256": "170ab9d3343b1f090ead67791b89b14c94b294bd75d5fd9a4362e4ba84c045e7",
+    "name": "v005_follow_on_task_created"
+  },
+  "next_action": "none; process-valid generalization result and follow-on task are complete",
+  "objective": "Determine the zero-shot external-validity envelope of the V5-confirmed frozen LeWM adaptive-compute policy.",
+  "process_valid": true,
+  "program": "LeWM V5 zero-shot adaptive-compute generalization",
+  "schema_version": 1,
+  "smoke_episode_count_per_regime": 6,
+  "state_machine": [
+    "BOOTSTRAP_AUDIT",
+    "DESIGN_AND_POWER",
+    "IMPLEMENT_PACKAGE",
+    "PRESEAL_QUALIFY",
+    "PRE_OUTCOME_SEAL",
+    "EXCLUDED_REGIME_SMOKE",
+    "FRESH_COHORT_GENERATION",
+    "SPARSE_DENSE_EXECUTION",
+    "SEALED_ANALYSIS",
+    "LATENCY_AND_RESOURCE_REPORTING",
+    "INDEPENDENT_VERIFICATION",
+    "TERMINAL",
+    "FOLLOW_ON_TASK_CREATION"
+  ],
+  "target_episode_count_per_regime": 3000,
+  "target_outcome_episodes_executed": 9000,
+  "target_outcome_episodes_generated": 9000,
+  "target_outcomes_opened_for_analysis": true,
+  "terminal_label": "zero_shot_generalization_partial",
+  "updated_unix_ns": 1784254912420992000
+}

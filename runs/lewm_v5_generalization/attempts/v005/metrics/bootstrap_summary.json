@@ -1,0 +1,254 @@
+{
+  "bootstrap": {
+    "chunk_size_defining_rng_consumption": 250,
+    "family_size": 6,
+    "familywise_alpha": 0.05,
+    "per_claim_alpha": 0.008333333333333333,
+    "replicates": 20000,
+    "seed": 3500000001,
+    "unit": "episode"
+  },
+  "heterogeneity": {
+    "pairwise": {
+      "markov_oracle_minus_plan_action_noise_0p2": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -0.00045412046470342203,
+          "lower": -0.0005551168982932416,
+          "upper": -0.0003510998379402292
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -9.204406388264927e-06,
+          "lower": -1.1997062627020708e-05,
+          "upper": -6.385309407351141e-06
+        }
+      },
+      "markov_oracle_minus_plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -0.000248944197058595,
+          "lower": -0.0003424546647744813,
+          "upper": -0.00015373684398159663
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -2.609774320258031e-06,
+          "lower": -6.325272937360482e-06,
+          "upper": 1.0950987483759878e-06
+        }
+      },
+      "plan_action_noise_0p2_minus_plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": 0.0002051762676448271,
+          "lower": 0.00011863619347536932,
+          "upper": 0.0002909955948998052
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": 6.594632068006897e-06,
+          "lower": 3.6610263437209666e-06,
+          "upper": 9.463250868837916e-06
+        }
+      }
+    },
+    "range": {
+      "fixed_whitened_vs_analytic": {
+        "max_minus_min": 0.00045412046470342203,
+        "maximum_regime": "plan_action_noise_0p2",
+        "minimum_regime": "markov_oracle"
+      },
+      "raw_vs_analytic": {
+        "max_minus_min": 9.204406388264927e-06,
+        "maximum_regime": "plan_action_noise_0p2",
+        "minimum_regime": "markov_oracle"
+      }
+    }
+  },
+  "individual": {
+    "markov_oracle": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.00017736180662955415,
+        "lower": 0.00010188463926809266,
+        "upper": 0.00025557674687953075
+      },
+      "fixed_whitened_vs_fixed_d1": {
+        "estimate": 0.0005041586154304227,
+        "lower": 0.00042157611786937675,
+        "upper": 0.0005914856119069338
+      },
+      "fixed_whitened_vs_seeded": {
+        "estimate": 0.00017938198242822137,
+        "lower": 8.551447496368025e-05,
+        "upper": 0.0002763921748117109
+      },
+      "fixed_whitened_vs_within_episode_histogram": {
+        "estimate": 0.00021647882580974926,
+        "lower": 0.0001510778780757212,
+        "upper": 0.0002813297490410967
+      },
+      "raw_vs_analytic": {
+        "estimate": -2.5137786633785235e-06,
+        "lower": -5.0878306090086975e-06,
+        "upper": 6.62468512571133e-08
+      },
+      "raw_vs_fixed_d1": {
+        "estimate": -6.182920712082574e-06,
+        "lower": -8.895618340835818e-06,
+        "upper": -3.4601312687532173e-06
+      },
+      "raw_vs_seeded": {
+        "estimate": -1.6533494552119063e-06,
+        "lower": -4.777992539987483e-06,
+        "upper": 1.505764370212259e-06
+      },
+      "raw_vs_within_episode_histogram": {
+        "estimate": 1.208077684464194e-06,
+        "lower": -1.9437897438575456e-06,
+        "upper": 4.393692064993957e-06
+      }
+    },
+    "plan_action_noise_0p2": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.0006314822713329762,
+        "lower": 0.0005660341523793189,
+        "upper": 0.0006992612331282926
+      },
+      "fixed_whitened_vs_fixed_d1": {
+        "estimate": 0.001590174802396789,
+        "lower": 0.001502640704895103,
+        "upper": 0.0016803323098584155
+      },
+      "fixed_whitened_vs_seeded": {
+        "estimate": 0.0006043506560650017,
+        "lower": 0.000532660296083529,
+        "upper": 0.0006776265238060673
+      },
+      "fixed_whitened_vs_within_episode_histogram": {
+        "estimate": 0.0005949601822989901,
+        "lower": 0.0005520492785616528,
+        "upper": 0.0006381578363529953
+      },
+      "raw_vs_analytic": {
+        "estimate": 6.690627724886404e-06,
+        "lower": 5.496450698207829e-06,
+        "upper": 7.892301434789888e-06
+      },
+      "raw_vs_fixed_d1": {
+        "estimate": 1.6755157102442266e-05,
+        "lower": 1.5288715831986643e-05,
+        "upper": 1.8221404070898622e-05
+      },
+      "raw_vs_seeded": {
+        "estimate": 6.749552893867629e-06,
+        "lower": 5.177746736703007e-06,
+        "upper": 8.31165339630133e-06
+      },
+      "raw_vs_within_episode_histogram": {
+        "estimate": 6.155038638827283e-06,
+        "lower": 4.863079720197402e-06,
+        "upper": 7.4399206513015016e-06
+      }
+    },
+    "plan_random_action_0p1": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.0004263060036881491,
+        "lower": 0.0003720113574982919,
+        "upper": 0.00048213582753385255
+      },
+      "fixed_whitened_vs_fixed_d1": {
+        "estimate": 0.0012234872047460624,
+        "lower": 0.0011583478775999555,
+        "upper": 0.0012913571272698465
+      },
+      "fixed_whitened_vs_seeded": {
+        "estimate": 0.0004000233601000377,
+        "lower": 0.00033477568097978894,
+        "upper": 0.00046728220386012796
+      },
+      "fixed_whitened_vs_within_episode_histogram": {
+        "estimate": 0.0005062102570582489,
+        "lower": 0.0004527287149005442,
+        "upper": 0.0005600210698287373
+      },
+      "raw_vs_analytic": {
+        "estimate": 9.59956568795073e-08,
+        "lower": -2.5194838406422403e-06,
+        "upper": 2.741036550109719e-06
+      },
+      "raw_vs_fixed_d1": {
+        "estimate": 5.237612345425197e-06,
+        "lower": 2.35789028451128e-06,
+        "upper": 8.126157264286706e-06
+      },
+      "raw_vs_seeded": {
+        "estimate": -1.4880137508099236e-07,
+        "lower": -3.961422418750979e-06,
+        "upper": 3.672285671851704e-06
+      },
+      "raw_vs_within_episode_histogram": {
+        "estimate": -1.8103091901586537e-06,
+        "lower": -5.254541969369277e-06,
+        "upper": 1.66660072287156e-06
+      }
+    }
+  },
+  "schema_version": 1,
+  "simultaneous_co_primary": {
+    "markov_oracle": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.00017736180662955415,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": 8.60621224579253e-05,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      },
+      "raw_vs_analytic": {
+        "estimate": -2.5137786633785235e-06,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": -5.677096742243234e-06,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      }
+    },
+    "plan_action_noise_0p2": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.0006314822713329762,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": 0.0005518158911522298,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      },
+      "raw_vs_analytic": {
+        "estimate": 6.690627724886404e-06,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": 5.233178061723176e-06,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      }
+    },
+    "plan_random_action_0p1": {
+      "fixed_whitened_vs_analytic": {
+        "estimate": 0.0004263060036881491,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": 0.00036053633935118713,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      },
+      "raw_vs_analytic": {
+        "estimate": 9.59956568795073e-08,
+        "family_size": 6,
+        "familywise_alpha": 0.05,
+        "lower": -3.1289839682643906e-06,
+        "method": "bonferroni_six_claim_one_sided_percentile",
+        "per_claim_alpha": 0.008333333333333333
+      }
+    }
+  }
+}

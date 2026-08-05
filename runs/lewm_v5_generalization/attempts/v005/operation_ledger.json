@@ -1,0 +1,19 @@
+{
+  "adaptive_total": "rows*(base+mandatory_depth1) + (sum(calls)-rows)*adapter + sum(min(calls,3))*gate_total",
+  "additional_adapter_flops_per_call": 264960,
+  "analytic_equivalent_calls": "sum(calls) + gate_evaluations*gate_total/adapter",
+  "base_model_flops_per_row": 70529190,
+  "energy_is_not_inferred_from_flops": true,
+  "gate": {
+    "dual_affine_head_flops_per_reached_evaluation": 4184,
+    "feature_flops_per_reached_evaluation": 3801,
+    "feature_width": 1046,
+    "nonflop_operations_per_reached_evaluation": 5,
+    "total_flops_per_reached_evaluation": 7985
+  },
+  "generalization_target_outcome_episodes": 0,
+  "latency_is_not_substituted_for_flops": true,
+  "mandatory_depth1_flops_per_row": 669184,
+  "schema_version": 1,
+  "seeded_control": "ceil analytic-equivalent total calls; therefore counted FLOPs are weakly greater than adaptive"
+}

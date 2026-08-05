@@ -1,0 +1,322 @@
+{
+  "created_unix_ns": 1784254912323075000,
+  "decision_path": "runs/lewm_v5_generalization/attempts/v005/decision.json",
+  "decision_sha256_before_posthoc": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38",
+  "decision_sha256_unchanged_after_posthoc": true,
+  "fields": [
+    "contact",
+    "motion",
+    "phase",
+    "reward",
+    "success"
+  ],
+  "regimes": {
+    "markov_oracle": {
+      "all_fields_interpretive_only": true,
+      "episode_count": 3000,
+      "summary": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.0038333645564541216,
+          "median": 0.003058476882238551,
+          "q05": 0.0018086798842801392,
+          "q95": 0.009394555076634776,
+          "std": 0.00258793719633509
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 0.7666729112908244,
+          "median": 0.6116953764477102,
+          "q05": 0.3617359768560279,
+          "q95": 1.878911015326955,
+          "std": 0.517587439267018
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.1461754601548875,
+          "median": 0.12886316898377093,
+          "q05": 0.07281566623546146,
+          "q95": 0.29625389467268826,
+          "std": 0.0717827732951357
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.38840796019900314,
+            0.05317910447761194,
+            0.015412935323383078
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.15233333333333332,
+          "median": 0.13432835820895522,
+          "q05": 0.07462686567164178,
+          "q95": 0.31343283582089554,
+          "std": 0.07696271507548597
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.6314615674547756,
+            0.10555250128784441,
+            0.029658842548203675
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            21.330333333333332,
+            61.623333333333335,
+            65.26166666666667
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 148.21533333333332,
+          "median": 158.0,
+          "q05": 85.0,
+          "q95": 170.0,
+          "std": 31.7980817695601
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 0.987,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.11329288780034714
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.9836666666666667,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.1267750482541504
+        }
+      }
+    },
+    "plan_action_noise_0p2": {
+      "all_fields_interpretive_only": true,
+      "episode_count": 3000,
+      "summary": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.006756926881585765,
+          "median": 0.0067484261977013675,
+          "q05": 0.005942269430276056,
+          "q95": 0.007644781442109702,
+          "std": 0.0005045346396098199
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 1.351385376317153,
+          "median": 1.3496852395402734,
+          "q05": 1.1884538860552114,
+          "q95": 1.5289562884219403,
+          "std": 0.100906927921964
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.40426702831451194,
+          "median": 0.4045592316129274,
+          "q05": 0.38444323136391806,
+          "q95": 0.4245523293307739,
+          "std": 0.013684221440357634
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.5934925373134297,
+            0.3228407960198985,
+            0.343004975124373
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.4197794361525704,
+          "median": 0.417910447761194,
+          "q05": 0.39800995024875624,
+          "q95": 0.43781094527363185,
+          "std": 0.013390655461489516
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.7182985169008065,
+            0.3152566494646228,
+            0.317830209951726
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            4.277,
+            53.339,
+            49.96633333333333
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 107.58233333333334,
+          "median": 107.0,
+          "q05": 104.0,
+          "q95": 111.0,
+          "std": 6.165270316451166
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 1.0,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.0
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.999,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.03161223040275729
+        }
+      }
+    },
+    "plan_random_action_0p1": {
+      "all_fields_interpretive_only": true,
+      "episode_count": 3000,
+      "summary": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.005817100265427648,
+          "median": 0.0061888844903750535,
+          "q05": 0.003006412524560477,
+          "q95": 0.007605202941509106,
+          "std": 0.0014497045109981993
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 1.1634200530855294,
+          "median": 1.2377768980750106,
+          "q05": 0.6012825049120955,
+          "q95": 1.5210405883018212,
+          "std": 0.2899409021996398
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.28659766406092435,
+          "median": 0.28890309699387695,
+          "q05": 0.13645146087016366,
+          "q95": 0.40290765134597994,
+          "std": 0.082197296683478
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.46017412935323493,
+            0.26918407960198887,
+            0.23714925373134244
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.3221691542288557,
+          "median": 0.32338308457711445,
+          "q05": 0.20398009950248755,
+          "q95": 0.417910447761194,
+          "std": 0.06679065847189211
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.5991801262741013,
+            0.3092432770457901,
+            0.2549966497656373
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            3.755,
+            27.163,
+            29.117
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 60.035,
+          "median": 56.0,
+          "q05": 0.0,
+          "q95": 118.0,
+          "std": 41.42921555658371
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 0.8246666666666667,
+          "median": 1.0,
+          "q05": 0.0,
+          "q95": 1.0,
+          "std": 0.38031535442554265
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.5293333333333333,
+          "median": 1.0,
+          "q05": 0.0,
+          "q95": 1.0,
+          "std": 0.49922202451962927
+        }
+      }
+    }
+  },
+  "schema_version": 1,
+  "target_outcome_episodes": 9000,
+  "terminal_outcome_fixed_before_posthoc": "zero_shot_generalization_partial",
+  "used_for_gate_fit_selection_whitening_exclusion_replacement_stopping_or_terminal_mapping": false
+}

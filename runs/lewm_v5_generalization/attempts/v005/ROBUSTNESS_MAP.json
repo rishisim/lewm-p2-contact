@@ -1,0 +1,744 @@
+{
+  "analysis_sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8",
+  "claim_boundary": "This map concerns zero-shot latent-prediction adaptive-compute generalization only. It does not establish downstream control improvement, contact-aware routing, wall-clock acceleration, universal validity, or a priority claim.",
+  "created_unix_ns": 1784254912419181000,
+  "decision_sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38",
+  "generalization_not_retried": true,
+  "heterogeneity": {
+    "pairwise": {
+      "markov_oracle_minus_plan_action_noise_0p2": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -0.00045412046470342203,
+          "lower": -0.0005551168982932416,
+          "upper": -0.0003510998379402292
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -9.204406388264927e-06,
+          "lower": -1.1997062627020708e-05,
+          "upper": -6.385309407351141e-06
+        }
+      },
+      "markov_oracle_minus_plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -0.000248944197058595,
+          "lower": -0.0003424546647744813,
+          "upper": -0.00015373684398159663
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": -2.609774320258031e-06,
+          "lower": -6.325272937360482e-06,
+          "upper": 1.0950987483759878e-06
+        }
+      },
+      "plan_action_noise_0p2_minus_plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": 0.0002051762676448271,
+          "lower": 0.00011863619347536932,
+          "upper": 0.0002909955948998052
+        },
+        "raw_vs_analytic": {
+          "descriptive_not_terminal": true,
+          "estimate": 6.594632068006897e-06,
+          "lower": 3.6610263437209666e-06,
+          "upper": 9.463250868837916e-06
+        }
+      }
+    },
+    "range": {
+      "fixed_whitened_vs_analytic": {
+        "max_minus_min": 0.00045412046470342203,
+        "maximum_regime": "plan_action_noise_0p2",
+        "minimum_regime": "markov_oracle"
+      },
+      "raw_vs_analytic": {
+        "max_minus_min": 9.204406388264927e-06,
+        "maximum_regime": "plan_action_noise_0p2",
+        "minimum_regime": "markov_oracle"
+      }
+    }
+  },
+  "independent_audit_sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6",
+  "independent_verification_passed": true,
+  "posthoc_sha256": "8d01f7eddf9ac2bee51708051db1de0d6a07aeda65fa313febade57d2f8b89fd",
+  "process_valid": true,
+  "regimes": {
+    "markov_oracle": {
+      "call_depth_shift_vs_v5": {
+        "histogram": [
+          103059,
+          6748,
+          3507,
+          686
+        ],
+        "jensen_shannon_nats": 0.0064696369461810736,
+        "mean_call_shift": -0.07790570175438605,
+        "mean_calls": 1.1387719298245613,
+        "probability": [
+          0.9040263157894737,
+          0.05919298245614035,
+          0.030763157894736843,
+          0.006017543859649123
+        ],
+        "total_variation": 0.06725657894736843,
+        "v5_histogram": [
+          50973,
+          7267,
+          1773,
+          787
+        ],
+        "v5_mean_calls": 1.2166776315789474,
+        "v5_probability": [
+          0.8383717105263158,
+          0.11952302631578947,
+          0.029161184210526315,
+          0.012944078947368421
+        ]
+      },
+      "co_primary": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00017736180662955358,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 8.606212245792454e-05,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": -2.5137786633814877e-06,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": -5.677096742246274e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      },
+      "compute": {
+        "adaptive_total_flops": 8121837438190,
+        "additional_refiner_flops": 4191667200,
+        "analytic_equivalent_mean_calls": 1.1729093232874608,
+        "analytic_equivalent_total_calls": 133711.66285477052,
+        "base_flops": 8040327660000,
+        "base_model_calls": 114000,
+        "call_histogram": [
+          103059,
+          6748,
+          3507,
+          686
+        ],
+        "fixed_whitened_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 3,
+          "mean_loss": 0.5881057009944418,
+          "weight_upper": 0.08645466164373039
+        },
+        "gate_dual_affine_head_flops": 540296656,
+        "gate_evaluations": 129134,
+        "gate_feature_flops": 490838334,
+        "gate_total_flops": 1031134990,
+        "mandatory_depth1_flops": 76286976000,
+        "mean_refiner_calls": 1.1387719298245613,
+        "nonflop_operations": 645670,
+        "raw_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 4,
+          "mean_loss": 0.08202838452570682,
+          "weight_upper": 0.05763644109582026
+        },
+        "refiner_model_calls": 129820,
+        "rows": 114000,
+        "seeded_fixed_whitened": {
+          "baseline_minus_adaptive_flops": 89330,
+          "depth_lower": 1,
+          "depth_upper": 3,
+          "number_upper": 9856,
+          "seed": 3500000201,
+          "total_calls": 133712,
+          "total_flops": 8121837527520
+        },
+        "seeded_raw": {
+          "baseline_minus_adaptive_flops": 354290,
+          "depth_lower": 1,
+          "depth_upper": 4,
+          "number_upper": 6571,
+          "seed": 3500000200,
+          "total_calls": 133713,
+          "total_flops": 8121837792480
+        }
+      },
+      "label": "mixed",
+      "posthoc_interpretation": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.0038333645564541216,
+          "median": 0.003058476882238551,
+          "q05": 0.0018086798842801392,
+          "q95": 0.009394555076634776,
+          "std": 0.00258793719633509
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 0.7666729112908244,
+          "median": 0.6116953764477102,
+          "q05": 0.3617359768560279,
+          "q95": 1.878911015326955,
+          "std": 0.517587439267018
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.1461754601548875,
+          "median": 0.12886316898377093,
+          "q05": 0.07281566623546146,
+          "q95": 0.29625389467268826,
+          "std": 0.0717827732951357
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.38840796019900314,
+            0.05317910447761194,
+            0.015412935323383078
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.15233333333333332,
+          "median": 0.13432835820895522,
+          "q05": 0.07462686567164178,
+          "q95": 0.31343283582089554,
+          "std": 0.07696271507548597
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.6314615674547756,
+            0.10555250128784441,
+            0.029658842548203675
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            21.330333333333332,
+            61.623333333333335,
+            65.26166666666667
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 148.21533333333332,
+          "median": 158.0,
+          "q05": 85.0,
+          "q95": 170.0,
+          "std": 31.7980817695601
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 0.987,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.11329288780034714
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.9836666666666667,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.1267750482541504
+        }
+      },
+      "stagewise_rank": [
+        {
+          "positive_sign": true,
+          "reached_rows": 114000,
+          "spearman_score_gain_rho": 0.07368376380726156,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 10941,
+          "spearman_score_gain_rho": 0.04984197228372112,
+          "stage": 2
+        },
+        {
+          "positive_sign": false,
+          "reached_rows": 4193,
+          "spearman_score_gain_rho": -0.039781747784366786,
+          "stage": 3
+        }
+      ],
+      "supported_claim_count": 1
+    },
+    "plan_action_noise_0p2": {
+      "call_depth_shift_vs_v5": {
+        "histogram": [
+          96236,
+          12960,
+          3261,
+          1543
+        ],
+        "jensen_shannon_nats": 4.619085623272363e-05,
+        "mean_call_shift": -0.00517763157894735,
+        "mean_calls": 1.2115,
+        "probability": [
+          0.8441754385964912,
+          0.11368421052631579,
+          0.028605263157894738,
+          0.013535087719298245
+        ],
+        "total_variation": 0.006394736842105282,
+        "v5_histogram": [
+          50973,
+          7267,
+          1773,
+          787
+        ],
+        "v5_mean_calls": 1.2166776315789474,
+        "v5_probability": [
+          0.8383717105263158,
+          0.11952302631578947,
+          0.029161184210526315,
+          0.012944078947368421
+        ]
+      },
+      "co_primary": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.0006314822713329762,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 0.0005518158911522297,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": 6.690627724886398e-06,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 5.233178061723166e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      },
+      "compute": {
+        "adaptive_total_flops": 8124093582040,
+        "additional_refiner_flops": 6388450560,
+        "analytic_equivalent_mean_calls": 1.2476026186011528,
+        "analytic_equivalent_total_calls": 142226.6985205314,
+        "base_flops": 8040327660000,
+        "base_model_calls": 114000,
+        "call_histogram": [
+          96236,
+          12960,
+          3261,
+          1543
+        ],
+        "fixed_whitened_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "mean_loss": 0.11087755002677308,
+          "weight_upper": 0.24760261860115285
+        },
+        "gate_dual_affine_head_flops": 571400512,
+        "gate_evaluations": 136568,
+        "gate_feature_flops": 519094968,
+        "gate_total_flops": 1090495480,
+        "mandatory_depth1_flops": 76286976000,
+        "mean_refiner_calls": 1.2115,
+        "nonflop_operations": 682840,
+        "raw_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "mean_loss": 0.006138655638909796,
+          "weight_upper": 0.24760261860115285
+        },
+        "refiner_model_calls": 138111,
+        "rows": 114000,
+        "seeded_fixed_whitened": {
+          "baseline_minus_adaptive_flops": 79880,
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "number_upper": 28227,
+          "seed": 3500000211,
+          "total_calls": 142227,
+          "total_flops": 8124093661920
+        },
+        "seeded_raw": {
+          "baseline_minus_adaptive_flops": 79880,
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "number_upper": 28227,
+          "seed": 3500000210,
+          "total_calls": 142227,
+          "total_flops": 8124093661920
+        }
+      },
+      "label": "supported",
+      "posthoc_interpretation": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.006756926881585765,
+          "median": 0.0067484261977013675,
+          "q05": 0.005942269430276056,
+          "q95": 0.007644781442109702,
+          "std": 0.0005045346396098199
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 1.351385376317153,
+          "median": 1.3496852395402734,
+          "q05": 1.1884538860552114,
+          "q95": 1.5289562884219403,
+          "std": 0.100906927921964
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.40426702831451194,
+          "median": 0.4045592316129274,
+          "q05": 0.38444323136391806,
+          "q95": 0.4245523293307739,
+          "std": 0.013684221440357634
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.5934925373134297,
+            0.3228407960198985,
+            0.343004975124373
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.4197794361525704,
+          "median": 0.417910447761194,
+          "q05": 0.39800995024875624,
+          "q95": 0.43781094527363185,
+          "std": 0.013390655461489516
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.7182985169008065,
+            0.3152566494646228,
+            0.317830209951726
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            4.277,
+            53.339,
+            49.96633333333333
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 107.58233333333334,
+          "median": 107.0,
+          "q05": 104.0,
+          "q95": 111.0,
+          "std": 6.165270316451166
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 1.0,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.0
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.999,
+          "median": 1.0,
+          "q05": 1.0,
+          "q95": 1.0,
+          "std": 0.03161223040275729
+        }
+      },
+      "stagewise_rank": [
+        {
+          "positive_sign": true,
+          "reached_rows": 114000,
+          "spearman_score_gain_rho": 0.2436885921540553,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 17764,
+          "spearman_score_gain_rho": 0.14155540880425854,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 4804,
+          "spearman_score_gain_rho": 0.12266602203967679,
+          "stage": 3
+        }
+      ],
+      "supported_claim_count": 2
+    },
+    "plan_random_action_0p1": {
+      "call_depth_shift_vs_v5": {
+        "histogram": [
+          96637,
+          12788,
+          3166,
+          1409
+        ],
+        "jensen_shannon_nats": 8.299491693484381e-05,
+        "mean_call_shift": -0.011879385964912226,
+        "mean_calls": 1.2047982456140351,
+        "probability": [
+          0.8476929824561403,
+          0.11217543859649123,
+          0.027771929824561403,
+          0.012359649122807018
+        ],
+        "total_variation": 0.00932127192982456,
+        "v5_histogram": [
+          50973,
+          7267,
+          1773,
+          787
+        ],
+        "v5_mean_calls": 1.2166776315789474,
+        "v5_probability": [
+          0.8383717105263158,
+          0.11952302631578947,
+          0.029161184210526315,
+          0.012944078947368421
+        ]
+      },
+      "co_primary": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00042630600368814966,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 0.00036053633935118735,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": 9.599565687949847e-08,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": -3.128983968264394e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      },
+      "compute": {
+        "adaptive_total_flops": 8123886122050,
+        "additional_refiner_flops": 6186021120,
+        "analytic_equivalent_mean_calls": 1.240734319711946,
+        "analytic_equivalent_total_calls": 141443.71244716184,
+        "base_flops": 8040327660000,
+        "base_model_calls": 114000,
+        "call_histogram": [
+          96637,
+          12788,
+          3166,
+          1409
+        ],
+        "fixed_whitened_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "mean_loss": 0.3488914219466615,
+          "weight_upper": 0.24073431971194603
+        },
+        "gate_dual_affine_head_flops": 568764592,
+        "gate_evaluations": 135938,
+        "gate_feature_flops": 516700338,
+        "gate_total_flops": 1085464930,
+        "mandatory_depth1_flops": 76286976000,
+        "mean_refiner_calls": 1.2047982456140351,
+        "nonflop_operations": 679690,
+        "raw_analytic_mixture": {
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "mean_loss": 0.10139839225480975,
+          "weight_upper": 0.24073431971194603
+        },
+        "refiner_model_calls": 137347,
+        "rows": 114000,
+        "seeded_fixed_whitened": {
+          "baseline_minus_adaptive_flops": 76190,
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "number_upper": 27444,
+          "seed": 3500000221,
+          "total_calls": 141444,
+          "total_flops": 8123886198240
+        },
+        "seeded_raw": {
+          "baseline_minus_adaptive_flops": 76190,
+          "depth_lower": 1,
+          "depth_upper": 2,
+          "number_upper": 27444,
+          "seed": 3500000220,
+          "total_calls": 141444,
+          "total_flops": 8123886198240
+        }
+      },
+      "label": "mixed",
+      "posthoc_interpretation": {
+        "block_motion_mean_step": {
+          "available_episode_count": 3000,
+          "mean": 0.005817100265427648,
+          "median": 0.0061888844903750535,
+          "q05": 0.003006412524560477,
+          "q95": 0.007605202941509106,
+          "std": 0.0014497045109981993
+        },
+        "block_motion_total": {
+          "available_episode_count": 3000,
+          "mean": 1.1634200530855294,
+          "median": 1.2377768980750106,
+          "q05": 0.6012825049120955,
+          "q95": 1.5210405883018212,
+          "std": 0.2899409021996398
+        },
+        "contact_mean": {
+          "available_episode_count": 3000,
+          "mean": 0.28659766406092435,
+          "median": 0.28890309699387695,
+          "q05": 0.13645146087016366,
+          "q95": 0.40290765134597994,
+          "std": 0.082197296683478
+        },
+        "contact_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.46017412935323493,
+            0.26918407960198887,
+            0.23714925373134244
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "contact_rate": {
+          "available_episode_count": 3000,
+          "mean": 0.3221691542288557,
+          "median": 0.32338308457711445,
+          "q05": 0.20398009950248755,
+          "q95": 0.417910447761194,
+          "std": 0.06679065847189211
+        },
+        "motion_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            0.5991801262741013,
+            0.3092432770457901,
+            0.2549966497656373
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_phase": {
+          "available_episode_count": 3000,
+          "means": [
+            3.755,
+            27.163,
+            29.117
+          ],
+          "phase_labels": [
+            "early",
+            "middle",
+            "late"
+          ]
+        },
+        "reward_total": {
+          "available_episode_count": 3000,
+          "mean": 60.035,
+          "median": 56.0,
+          "q05": 0.0,
+          "q95": 118.0,
+          "std": 41.42921555658371
+        },
+        "success_ever": {
+          "available_episode_count": 3000,
+          "mean": 0.8246666666666667,
+          "median": 1.0,
+          "q05": 0.0,
+          "q95": 1.0,
+          "std": 0.38031535442554265
+        },
+        "success_final": {
+          "available_episode_count": 3000,
+          "mean": 0.5293333333333333,
+          "median": 1.0,
+          "q05": 0.0,
+          "q95": 1.0,
+          "std": 0.49922202451962927
+        }
+      },
+      "stagewise_rank": [
+        {
+          "positive_sign": true,
+          "reached_rows": 114000,
+          "spearman_score_gain_rho": 0.17384395838825717,
+          "stage": 1
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 17363,
+          "spearman_score_gain_rho": 0.09392521647146333,
+          "stage": 2
+        },
+        {
+          "positive_sign": true,
+          "reached_rows": 4575,
+          "spearman_score_gain_rho": 0.07911736601832796,
+          "stage": 3
+        }
+      ],
+      "supported_claim_count": 1
+    }
+  },
+  "schema_version": 1,
+  "supported_co_primary_claim_count": 4,
+  "terminal_outcome": "zero_shot_generalization_partial",
+  "v5_not_rerun": true
+}

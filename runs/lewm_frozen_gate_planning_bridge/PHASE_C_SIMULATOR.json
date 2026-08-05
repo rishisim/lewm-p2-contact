@@ -1,0 +1,223 @@
+{
+  "candidate_count_per_start": 64,
+  "candidate_outcomes": 1280,
+  "config_path": "runs/lewm_frozen_gate_planning_bridge/PHASE_C_PILOT_CONFIG.json",
+  "config_sha256": "85fc015befc3790a6539267be525e6055a0bb71fa64e98c4ccac11e998adb6be",
+  "consumed_seed_tuples": [
+    {
+      "candidate_seed": 3813000000,
+      "env_seed": 3810000000,
+      "oracle_np_seed": 3812000000,
+      "policy_seed": 3811000000,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-000"
+    },
+    {
+      "candidate_seed": 3813000001,
+      "env_seed": 3810000001,
+      "oracle_np_seed": 3812000001,
+      "policy_seed": 3811000001,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-001"
+    },
+    {
+      "candidate_seed": 3813000002,
+      "env_seed": 3810000002,
+      "oracle_np_seed": 3812000002,
+      "policy_seed": 3811000002,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-002"
+    },
+    {
+      "candidate_seed": 3813000003,
+      "env_seed": 3810000003,
+      "oracle_np_seed": 3812000003,
+      "policy_seed": 3811000003,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-003"
+    },
+    {
+      "candidate_seed": 3813000004,
+      "env_seed": 3810000004,
+      "oracle_np_seed": 3812000004,
+      "policy_seed": 3811000004,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-004"
+    },
+    {
+      "candidate_seed": 3813000005,
+      "env_seed": 3810000005,
+      "oracle_np_seed": 3812000005,
+      "policy_seed": 3811000005,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-005"
+    },
+    {
+      "candidate_seed": 3813000006,
+      "env_seed": 3810000006,
+      "oracle_np_seed": 3812000006,
+      "policy_seed": 3811000006,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-006"
+    },
+    {
+      "candidate_seed": 3813000007,
+      "env_seed": 3810000007,
+      "oracle_np_seed": 3812000007,
+      "policy_seed": 3811000007,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-007"
+    },
+    {
+      "candidate_seed": 3813000008,
+      "env_seed": 3810000008,
+      "oracle_np_seed": 3812000008,
+      "policy_seed": 3811000008,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-008"
+    },
+    {
+      "candidate_seed": 3813000009,
+      "env_seed": 3810000009,
+      "oracle_np_seed": 3812000009,
+      "policy_seed": 3811000009,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-009"
+    },
+    {
+      "candidate_seed": 3813000010,
+      "env_seed": 3810000010,
+      "oracle_np_seed": 3812000010,
+      "policy_seed": 3811000010,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-010"
+    },
+    {
+      "candidate_seed": 3813000011,
+      "env_seed": 3810000011,
+      "oracle_np_seed": 3812000011,
+      "policy_seed": 3811000011,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-011"
+    },
+    {
+      "candidate_seed": 3813000012,
+      "env_seed": 3810000012,
+      "oracle_np_seed": 3812000012,
+      "policy_seed": 3811000012,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-012"
+    },
+    {
+      "candidate_seed": 3813000013,
+      "env_seed": 3810000013,
+      "oracle_np_seed": 3812000013,
+      "policy_seed": 3811000013,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-013"
+    },
+    {
+      "candidate_seed": 3813000014,
+      "env_seed": 3810000014,
+      "oracle_np_seed": 3812000014,
+      "policy_seed": 3811000014,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-014"
+    },
+    {
+      "candidate_seed": 3813000015,
+      "env_seed": 3810000015,
+      "oracle_np_seed": 3812000015,
+      "policy_seed": 3811000015,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-015"
+    },
+    {
+      "candidate_seed": 3813000016,
+      "env_seed": 3810000016,
+      "oracle_np_seed": 3812000016,
+      "policy_seed": 3811000016,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-016"
+    },
+    {
+      "candidate_seed": 3813000017,
+      "env_seed": 3810000017,
+      "oracle_np_seed": 3812000017,
+      "policy_seed": 3811000017,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-017"
+    },
+    {
+      "candidate_seed": 3813000018,
+      "env_seed": 3810000018,
+      "oracle_np_seed": 3812000018,
+      "policy_seed": 3811000018,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-018"
+    },
+    {
+      "candidate_seed": 3813000019,
+      "env_seed": 3810000019,
+      "oracle_np_seed": 3812000019,
+      "policy_seed": 3811000019,
+      "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions",
+      "start_id": "pilot-cube-019"
+    }
+  ],
+  "consumed_start_ids": [
+    "pilot-cube-000",
+    "pilot-cube-001",
+    "pilot-cube-002",
+    "pilot-cube-003",
+    "pilot-cube-004",
+    "pilot-cube-005",
+    "pilot-cube-006",
+    "pilot-cube-007",
+    "pilot-cube-008",
+    "pilot-cube-009",
+    "pilot-cube-010",
+    "pilot-cube-011",
+    "pilot-cube-012",
+    "pilot-cube-013",
+    "pilot-cube-014",
+    "pilot-cube-015",
+    "pilot-cube-016",
+    "pilot-cube-017",
+    "pilot-cube-018",
+    "pilot-cube-019"
+  ],
+  "created_unix_ns": 1784396375131770000,
+  "exact_restore_repeatability": true,
+  "identical_full_state_per_candidate": true,
+  "model_or_gate_loaded_during_simulator_generation": false,
+  "path": "runs/lewm_frozen_gate_planning_bridge/phase_c_simulator.npz",
+  "performance_or_success_based_exclusions": 0,
+  "released_hdf5_opened": false,
+  "runtime": {
+    "expected_executable": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python",
+    "packages": {
+      "gymnasium": "1.3.0",
+      "mujoco": "3.10.0",
+      "numpy": "2.2.6",
+      "ogbench": "1.2.1",
+      "scipy": "1.15.3",
+      "stable-worldmodel": "0.1.0",
+      "torch": "2.12.0",
+      "transformers": "4.50.0"
+    },
+    "python_version": "3.10.20",
+    "python_version_info": [
+      3,
+      10,
+      20
+    ],
+    "role": "generation",
+    "sys_executable": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python"
+  },
+  "schema_version": 1,
+  "scientific_role": "pilot_only",
+  "sha256": "26ec5a2b8659312bd2e79209ef7d9f0abd757bc50c8661dcabf792320e25a1ab",
+  "start_count": 20,
+  "v3_test_targets_opened": false
+}

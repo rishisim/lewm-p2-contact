@@ -1,0 +1,185 @@
+{
+  "checks": {
+    "all_raw_hashes_verified": true,
+    "all_requested_episodes_replayed": true,
+    "all_rows_replayed": true,
+    "dense_exits_bitwise_exact": true,
+    "independent_calls_exact": true,
+    "independent_features_within_predeclared_float32_tolerance": true,
+    "independent_scores_within_predeclared_float32_tolerance": true,
+    "independent_sparse_bitwise_exact": true,
+    "modules_and_gradients_unchanged": true,
+    "no_failures": true,
+    "order_matched_calls_exact": true,
+    "order_matched_features_exact": true,
+    "order_matched_scores_exact": true,
+    "order_matched_sparse_bitwise_exact": true,
+    "packaged_calls_exact": true,
+    "packaged_features_exact": true,
+    "packaged_scores_exact": true,
+    "packaged_sparse_bitwise_exact": true,
+    "synthetic_independent_feature_harness_passed": true,
+    "targets_bitwise_exact": true,
+    "two_strategy_calls_exact": true,
+    "two_strategy_features_within_predeclared_float32_tolerance": true,
+    "two_strategy_outputs_exact": true,
+    "two_strategy_scores_within_predeclared_float32_tolerance": true
+  },
+  "complete_confirmation_replay": false,
+  "created_unix_ns": 1784237260872599000,
+  "device": "mps",
+  "failures": [],
+  "initial_failure_diagnosis": {
+    "cause": "The first harness compared a different but algebraically equivalent explicit sqrt/sum reduction against an absolute 2e-6 cap and omitted the declared relative term. The resulting float32 reduction-order deltas did not alter a single call or output. A second order-matched transcription is required to be exact; the explicit algebra is evaluated under the predeclared atol/rtol without changing the sealed V5 contract.",
+    "initial_artifact": "REPLAY_RESULTS_INITIAL_FAILURE.json",
+    "initial_failure_was_audit_harness_acceptance_logic": true,
+    "manual_explicit_algebra_sealed_allclose_episode_counts": {
+      "features": 1,
+      "scores": 0,
+      "total": 1
+    },
+    "sealed_cross_batch_tolerance_not_relaxed": true
+  },
+  "metrics": {
+    "dense_exact_rows": 38,
+    "episodes": 1,
+    "independent_calls_exact_rows": 38,
+    "independent_feature_max_abs": 1.9073486328125e-06,
+    "independent_features_allclose_episodes": 1,
+    "independent_features_exact_episodes": 0,
+    "independent_score_max_abs": 1.9073486328125e-06,
+    "independent_scores_allclose_episodes": 1,
+    "independent_scores_exact_episodes": 0,
+    "independent_sparse_exact_rows": 38,
+    "independent_sparse_max_abs": 0.0,
+    "manual_features_sealed_allclose_episodes": 1,
+    "manual_scores_sealed_allclose_episodes": 0,
+    "order_matched_calls_exact_rows": 38,
+    "order_matched_features_exact_episodes": 1,
+    "order_matched_scores_exact_episodes": 1,
+    "order_matched_sparse_exact_rows": 38,
+    "packaged_calls_exact_rows": 38,
+    "packaged_features_exact_episodes": 1,
+    "packaged_scores_exact_episodes": 1,
+    "packaged_sparse_exact_rows": 38,
+    "packaged_sparse_max_abs": 0.0,
+    "raw_hashes_verified": 1,
+    "rows": 38,
+    "strategy_calls_exact_episodes": 1,
+    "strategy_features_allclose_episodes": 1,
+    "strategy_features_exact_episodes": 0,
+    "strategy_outputs_exact_episodes": 1,
+    "strategy_scores_allclose_episodes": 1,
+    "strategy_scores_exact_episodes": 0,
+    "target_exact_rows": 38,
+    "worst_independent_feature": {
+      "absolute_delta": 1.9073486328125e-06,
+      "audit_predeclared_allowance": 0.0003796770401000977,
+      "episode_index": 0,
+      "expected": 18.883852005004883,
+      "feature_index": 1039,
+      "feature_name": "current_history_distance",
+      "global_row": 6,
+      "local_row": 6,
+      "model_step": 9,
+      "observed": 18.88385009765625,
+      "sealed_allclose_allowance": 3.7967704010009764e-05,
+      "stage": 1
+    },
+    "worst_independent_score": {
+      "absolute_delta": 1.9073486328125e-06,
+      "audit_predeclared_allowance": 7.2199792861938485e-06,
+      "episode_index": 0,
+      "expected": -0.2609989643096924,
+      "expected_threshold_margin": 0.4556562602519989,
+      "global_row": 18,
+      "local_row": 18,
+      "model_step": 21,
+      "observed": -0.26099705696105957,
+      "sealed_allclose_allowance": 7.219979286193847e-07,
+      "stage": 1,
+      "threshold": 0.19465729594230652
+    }
+  },
+  "module_after": {
+    "modules": [
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "JEPA",
+        "parameters": 18034628,
+        "state_sha256": "145a9f69cf17de314fe0373767b3affac4e7887e9ba52d2812b4c21ef684552a",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "StagewiseResidualCascade",
+        "parameters": 733760,
+        "state_sha256": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "SharedResidualRefiner",
+        "parameters": 335360,
+        "state_sha256": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+        "training": false
+      }
+    ],
+    "passed": true
+  },
+  "module_before": {
+    "modules": [
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "JEPA",
+        "parameters": 18034628,
+        "state_sha256": "145a9f69cf17de314fe0373767b3affac4e7887e9ba52d2812b4c21ef684552a",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "StagewiseResidualCascade",
+        "parameters": 733760,
+        "state_sha256": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "SharedResidualRefiner",
+        "parameters": 335360,
+        "state_sha256": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+        "training": false
+      }
+    ],
+    "passed": true
+  },
+  "passed": true,
+  "requested_episode_count": 1,
+  "requested_row_count": 38,
+  "runtime_seconds": 0.7735018730163574,
+  "schema_version": 1,
+  "strategies": [
+    "packaged manual_sparse/dense_shadow path",
+    "independently transcribed direct-module sparse loop with explicit sqrt/sum feature algebra",
+    "second independent direct-module sparse loop preserving the vector_norm primitive order"
+  ],
+  "synthetic_feature_harness": {
+    "checks": {
+      "finite": true,
+      "manual_algebra_within_predeclared_tolerance": true,
+      "order_matched_second_method_exact": true,
+      "shape_exact": true
+    },
+    "device": "mps",
+    "manual_max_abs": 3.814697265625e-06,
+    "order_matched_max_abs": 0.0,
+    "passed": true,
+    "seed": 730001
+  }
+}

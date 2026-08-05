@@ -1,0 +1,30 @@
+{
+  "not_used_in_refiner_gate_selection_or_primary_decision": true,
+  "opened_after_pilot_decision_created_unix_ns": 1784401582440495000,
+  "roles": {
+    "evaluation": {
+      "episode_count": 80,
+      "mean_contact_positive_steps": 50.2,
+      "mean_raw_steps": 100.0,
+      "mean_reward": -406.16081581115725,
+      "mean_total_block_motion_pixels": 340.65511946275194,
+      "success_fraction": 0.0
+    },
+    "fit": {
+      "episode_count": 120,
+      "mean_contact_positive_steps": 46.71666666666667,
+      "mean_raw_steps": 100.0,
+      "mean_reward": -400.33804041544596,
+      "mean_total_block_motion_pixels": 318.31441735371277,
+      "success_fraction": 0.0
+    },
+    "selection": {
+      "episode_count": 40,
+      "mean_contact_positive_steps": 47.975,
+      "mean_raw_steps": 100.0,
+      "mean_reward": -380.47925796508787,
+      "mean_total_block_motion_pixels": 331.0478054721196,
+      "success_fraction": 0.0
+    }
+  }
+}

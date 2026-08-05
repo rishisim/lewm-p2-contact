@@ -1,0 +1,152 @@
+{
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "method": "paired percentile cluster bootstrap over the 20 starts",
+    "replicates": 20000,
+    "seed": 27182818
+  },
+  "conditions": [
+    "adaptive",
+    "matched",
+    "fixed_d1",
+    "fixed_d4"
+  ],
+  "consumed_pilot": {
+    "candidate_actions_source": "runs/lewm_frozen_gate_planning_bridge/phase_c_simulator.npz:candidate_actions",
+    "candidate_count_per_start": 64,
+    "candidate_horizon_action_blocks": 5,
+    "candidate_horizon_raw_steps": 25,
+    "matched_allocation_seed": 3814000000,
+    "seed_tuples": [
+      {"candidate_seed": 3813000000, "env_seed": 3810000000, "oracle_np_seed": 3812000000, "policy_seed": 3811000000, "start_id": "pilot-cube-000"},
+      {"candidate_seed": 3813000001, "env_seed": 3810000001, "oracle_np_seed": 3812000001, "policy_seed": 3811000001, "start_id": "pilot-cube-001"},
+      {"candidate_seed": 3813000002, "env_seed": 3810000002, "oracle_np_seed": 3812000002, "policy_seed": 3811000002, "start_id": "pilot-cube-002"},
+      {"candidate_seed": 3813000003, "env_seed": 3810000003, "oracle_np_seed": 3812000003, "policy_seed": 3811000003, "start_id": "pilot-cube-003"},
+      {"candidate_seed": 3813000004, "env_seed": 3810000004, "oracle_np_seed": 3812000004, "policy_seed": 3811000004, "start_id": "pilot-cube-004"},
+      {"candidate_seed": 3813000005, "env_seed": 3810000005, "oracle_np_seed": 3812000005, "policy_seed": 3811000005, "start_id": "pilot-cube-005"},
+      {"candidate_seed": 3813000006, "env_seed": 3810000006, "oracle_np_seed": 3812000006, "policy_seed": 3811000006, "start_id": "pilot-cube-006"},
+      {"candidate_seed": 3813000007, "env_seed": 3810000007, "oracle_np_seed": 3812000007, "policy_seed": 3811000007, "start_id": "pilot-cube-007"},
+      {"candidate_seed": 3813000008, "env_seed": 3810000008, "oracle_np_seed": 3812000008, "policy_seed": 3811000008, "start_id": "pilot-cube-008"},
+      {"candidate_seed": 3813000009, "env_seed": 3810000009, "oracle_np_seed": 3812000009, "policy_seed": 3811000009, "start_id": "pilot-cube-009"},
+      {"candidate_seed": 3813000010, "env_seed": 3810000010, "oracle_np_seed": 3812000010, "policy_seed": 3811000010, "start_id": "pilot-cube-010"},
+      {"candidate_seed": 3813000011, "env_seed": 3810000011, "oracle_np_seed": 3812000011, "policy_seed": 3811000011, "start_id": "pilot-cube-011"},
+      {"candidate_seed": 3813000012, "env_seed": 3810000012, "oracle_np_seed": 3812000012, "policy_seed": 3811000012, "start_id": "pilot-cube-012"},
+      {"candidate_seed": 3813000013, "env_seed": 3810000013, "oracle_np_seed": 3812000013, "policy_seed": 3811000013, "start_id": "pilot-cube-013"},
+      {"candidate_seed": 3813000014, "env_seed": 3810000014, "oracle_np_seed": 3812000014, "policy_seed": 3811000014, "start_id": "pilot-cube-014"},
+      {"candidate_seed": 3813000015, "env_seed": 3810000015, "oracle_np_seed": 3812000015, "policy_seed": 3811000015, "start_id": "pilot-cube-015"},
+      {"candidate_seed": 3813000016, "env_seed": 3810000016, "oracle_np_seed": 3812000016, "policy_seed": 3811000016, "start_id": "pilot-cube-016"},
+      {"candidate_seed": 3813000017, "env_seed": 3810000017, "oracle_np_seed": 3812000017, "policy_seed": 3811000017, "start_id": "pilot-cube-017"},
+      {"candidate_seed": 3813000018, "env_seed": 3810000018, "oracle_np_seed": 3812000018, "policy_seed": 3811000018, "start_id": "pilot-cube-018"},
+      {"candidate_seed": 3813000019, "env_seed": 3810000019, "oracle_np_seed": 3812000019, "policy_seed": 3811000019, "start_id": "pilot-cube-019"}
+    ],
+    "start_count": 20,
+    "start_definition": "simulator state after 75 fixed PlanOracle warm-up actions"
+  },
+  "decision_table": {
+    "candidate_informativeness": {
+      "informative_start_rule": "physical range > 1e-4 m and at least 5 tolerance-distinct physical-error groups",
+      "supported_rule": "at least 15 of 20 starts are informative; otherwise report unsupported and do not treat uninformative starts as planning evidence"
+    },
+    "candidate_rollout_transfer": {
+      "report": "adaptive-minus-matched raw and whitened terminal-prediction MSE cluster effects, including mean, median, separate 95% bootstrap intervals, and starts favoring adaptive",
+      "supported_rule": "directionally supported only when the paired start-level mean is below zero in both raw and whitened MSE; intervals remain descriptive"
+    },
+    "downstream_planning_evidence": {
+      "supported_rule": "candidate informativeness supported, goal-cost alignment supported, rollout transfer supported, and adaptive/matched select different candidates on at least one informative start with lower adaptive mean physical regret on informative starts"
+    },
+    "goal_cost_alignment": {
+      "supported_rule": "on informative starts, actual-terminal-latent raw goal cost has positive mean Spearman with a 95% cluster-bootstrap lower endpoint above zero and mean stable top-5 overlap above the 5/64 chance reference; whitened results are corroborative and all quantities are reported"
+    },
+    "next_experiment_rule": "report one precise next experiment only if downstream planning evidence is supported; otherwise report none"
+  },
+  "frozen_source_hashes_sha256": {
+    "runs/lewm_adaptive_compute_discovery/checkpoints/stagewise_seed_261102.pt": "e63277943a356f3e28b4c4d1a1eb56acc8771fc07eccccdca67f878fed5ba782",
+    "runs/lewm_adaptive_compute_v4/common.py": "eceeb9c1b83e6b2b5eef607823035df0495e719b15c8cf1fca63a661a3a5159b",
+    "runs/lewm_transfer/cube/cache/model/config.json": "4d446944fe28922cc2c5763f43d4ef9132a457bd89e9a0ce5dbceac183994999",
+    "runs/lewm_transfer/cube/cache/model/weights.pt": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/DGP.json": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/compiled_gate.npz": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/frozen_candidate_manifest.json": "30ea1fa6c0a423b0aa935d16634a4bb4f6d011ac8807b3c335476a5b1e5317b4",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/gate_fit.npz": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/gate_freeze.json": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/gate_freeze_seal.json": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/whitening.npz": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/numerical_equivalence_contract.json": "698b8adfba230562b405f1e57d618fe68434147a604820641177399f9934ddbd",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/operation_ledger.json": "f1857aa43fb5d460dc493ea9aaf03b0cb192129ed3bbace7808e5d95d8806617",
+    "runs/lewm_v5_readiness_program/v5_package_versions/v004/runtime_contract.json": "7d7c9d9a9a014f1b4d0ef6ee505438bde0f53295f26646c3893fb5b9c9feb4e4"
+  },
+  "metrics": {
+    "candidate_informativeness": [
+      "physical outcome range",
+      "number of tolerance-distinct physical outcomes",
+      "fraction of candidates tied with at least one other candidate",
+      "stable physical top-5 boundary tie size",
+      "chance top-5 overlap fraction 5/64"
+    ],
+    "goal_cost_alignment": [
+      "actual-terminal-latent raw and V5-whitened goal costs",
+      "per-start Spearman where physically informative",
+      "stable top-5 overlap",
+      "selected physical regret",
+      "model-cost versus physical-error and model-cost versus actual-latent-cost comparisons for all four conditions in raw and whitened spaces"
+    ],
+    "rollout_fidelity": [
+      "per-candidate raw terminal latent MSE",
+      "per-candidate V5-fixed-whitened terminal latent MSE",
+      "paired start-cluster adaptive-minus-matched effects",
+      "per-start/per-step depth histograms, refiner calls, reached-gate evaluations, and counted FLOPs"
+    ]
+  },
+  "prior_bridge_hashes_sha256": {
+    "runs/lewm_frozen_gate_planning_bridge/CONFIG.json": "ff8a47cdad10d8bcb8819567569edae8b866528e155c54db13785b6f1f7ebc85",
+    "runs/lewm_frozen_gate_planning_bridge/PHASE_C_PILOT_CONFIG.json": "85fc015befc3790a6539267be525e6055a0bb71fa64e98c4ccac11e998adb6be",
+    "runs/lewm_frozen_gate_planning_bridge/PHASE_C_SIMULATOR.json": "9b8701be6db14cc9a46540eb2f295c1ec0c01cf7c40b047134861da177cea884",
+    "runs/lewm_frozen_gate_planning_bridge/RESULTS.json": "bb7d509d3c48aa4d5133e2987ea97680f14593606706f89e8c683f0ba37cccb8",
+    "runs/lewm_frozen_gate_planning_bridge/STUDY_RECORD.json": "5b493e00849f660c214a708e7f5c6a537d15ae2ebb21be14f7fca21a7df3317c",
+    "runs/lewm_frozen_gate_planning_bridge/bridge.py": "da13addc4f99f790a15daa0abe1fd6c114a1b8decbfc8f949ab402a438c4679b",
+    "runs/lewm_frozen_gate_planning_bridge/phase_c_evaluate.py": "bc495cc62f502a37c8b12b437a7182a612df656a5728dfd9adaf4ffbf77f0aef",
+    "runs/lewm_frozen_gate_planning_bridge/phase_c_generate.py": "05cd8e76c92b1ee4434ec533de13cfd7a1e5c71707cbfb1c76e3b06f4331dc6b",
+    "runs/lewm_frozen_gate_planning_bridge/phase_c_metrics.npz": "d307287c14964e076d708c5ce65fbf73746b10e128277c309ce31002e46402d2",
+    "runs/lewm_frozen_gate_planning_bridge/phase_c_simulator.npz": "26ec5a2b8659312bd2e79209ef7d9f0abd757bc50c8661dcabf792320e25a1ab"
+  },
+  "prohibited_inputs_opened": {
+    "combined_v3_cache": false,
+    "released_hdf5_corpus": false,
+    "v3_test_targets": false
+  },
+  "reproduction_tolerances": {
+    "candidate_actions": "bitwise equality after deterministic reconstruction",
+    "identifiers_and_integer_arrays": "exact equality",
+    "model_cost_atol": 2e-7,
+    "model_cost_independent_max_abs_ceiling": 4.76837158203125e-7,
+    "model_cost_rtol": 2e-6,
+    "pixels_and_state_hashes": "exact equality",
+    "restore_repeat_max_abs": 0.0,
+    "simulator_position_and_error_atol_m": 1e-12,
+    "simulator_position_and_error_rtol": 0.0
+  },
+  "runtime": {
+    "evaluation_python": "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "generation_python": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python"
+  },
+  "schema_version": 1,
+  "scientific_role": "descriptive_decomposition_of_consumed_pilot",
+  "scope": {
+    "fit_anything": false,
+    "model_gate_or_threshold_change": false,
+    "new_candidates_or_starts": false,
+    "new_scientific_cohort": false,
+    "prior_runs_read_only": true
+  },
+  "study": "lewm_planning_bridge_decomposition",
+  "study_start_unix_ns": 1784397842000000000,
+  "tie_rules": {
+    "cost_order": "ascending exact float64 cost with original candidate index as stable tie-break",
+    "fraction_tied": "fraction of candidates belonging to a tolerance group of size at least two",
+    "physical_error_absolute_tolerance_m": 0.0001,
+    "physical_grouping": "stable ascending order; start a new group only when value exceeds the current group minimum by more than 1e-4 m (non-chaining complete-link grouping)",
+    "spearman": "correlate exact cost ranks with tolerance-grouped physical ranks; undefined when either side has fewer than two ranks",
+    "top_k": 5,
+    "top_k_overlap": "stable first five candidates after the declared ordering; overlap fraction is intersection size divided by five"
+  }
+}

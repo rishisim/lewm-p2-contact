@@ -1,0 +1,145 @@
+{
+  "classification": "zero_target_outcome_procedural_version_forward",
+  "created_unix_ns": 1784235887255219000,
+  "excluded_smoke_report_sha256": "e5b0a106edc8cf885b52aa90318699229e73505a6000088662f099dfb8e8b2d3",
+  "fresh_v005_smoke_and_target_identifiers_required": true,
+  "invalidity_evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/smoke_checkpoint_procedural_failure.json",
+  "invalidity_evidence_sha256": "add4795a0406fef127c48f8f7b25fbda93285659c723f840731950b3e3f42236",
+  "operational_identifier_ranges_changed": true,
+  "passed": true,
+  "repair_scope": "one smoke-checkpoint boolean predicate and fresh operational identifiers; scientific design and implementation unchanged",
+  "repair_source": {
+    "normalized_checkpoints_ast_equal": true,
+    "v004_check_map_contains_integer_zero": true,
+    "v004_check_map_lacks_boolean_assertion": true,
+    "v004_checkpoints_sha256": "e2ddc34015193c9ae4e3e31192874c57a8a917f7cb30fcac939d1ff7effdae04",
+    "v004_result_retains_numeric_zero": true,
+    "v005_check_map_contains_boolean_true": true,
+    "v005_check_map_removes_integer_count": true,
+    "v005_checkpoints_sha256": "f53734da42547af0c8fd6d682ad05ee299c67ac7daf20e95ba53c677f1ff24c3",
+    "v005_result_retains_numeric_zero": true
+  },
+  "schema_version": 1,
+  "scientific_constant_object_equality": {
+    "ADAPTER_FLOPS": true,
+    "BASE_FLOPS": true,
+    "BOOTSTRAP_REPLICATES": true,
+    "CO_PRIMARY_ENDPOINTS": true,
+    "FAMILYWISE_ALPHA": true,
+    "GATE_FEATURE_FLOPS": true,
+    "GATE_HEAD_FLOPS": true,
+    "GATE_NONFLOP_OPS": true,
+    "GATE_TOTAL_FLOPS": true,
+    "NUMERICAL_ATOL": true,
+    "NUMERICAL_MAX_ABS": true,
+    "NUMERICAL_RTOL": true,
+    "PER_CLAIM_ALPHA": true,
+    "REGIMES": true,
+    "REPLACEMENTS_PER_REGIME": true,
+    "ROWS_PER_EPISODE": true,
+    "SIMULTANEOUS_FAMILY_SIZE": true,
+    "SMOKE_EPISODES_PER_REGIME": true,
+    "TARGET_EPISODES_PER_REGIME": true,
+    "V1_FLOPS": true
+  },
+  "scientific_design_changed": false,
+  "scientific_files": {
+    "analysis.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "6f79a550ca235946c243c7eaa91e4f550ee7fa596b71db8ec6223411524b4f5a",
+      "normalized_ast_sha256_v005": "6f79a550ca235946c243c7eaa91e4f550ee7fa596b71db8ec6223411524b4f5a",
+      "v004_sha256": "68a90fe551f3dc151f43d30473e0d0fe895cda2faa0e016a378818e0b20918ad",
+      "v005_sha256": "cd965bda94429bdfe01153f98eb6b930e8e307ad13570e06b7f145613f5f6202"
+    },
+    "bootstrap_audit.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "fb0e2276946a54e942a897aeb949859a903b2cffb3db3df8b00a9f0a099ea3d0",
+      "normalized_ast_sha256_v005": "fb0e2276946a54e942a897aeb949859a903b2cffb3db3df8b00a9f0a099ea3d0",
+      "v004_sha256": "36a5ea0754bf26a1189dd9ce9bbfbb6dc31a10ab040d808ea699a42f950139e3",
+      "v005_sha256": "cd4e4902b9568fcf573f6d1dcdf08f0c06127e38f5ea1d60ee83b5e5526cc101"
+    },
+    "checkpoints.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "b032c3aa2947ff53fc60b8d93769b53260c62ae1e2427be4faff503347beef3d",
+      "normalized_ast_sha256_v005": "b032c3aa2947ff53fc60b8d93769b53260c62ae1e2427be4faff503347beef3d",
+      "v004_sha256": "e2ddc34015193c9ae4e3e31192874c57a8a917f7cb30fcac939d1ff7effdae04",
+      "v005_sha256": "f53734da42547af0c8fd6d682ad05ee299c67ac7daf20e95ba53c677f1ff24c3"
+    },
+    "design_and_power.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "f2912f564d237607538cef70f399b7ada7f93e9677539f6e4a269da379f45a11",
+      "normalized_ast_sha256_v005": "f2912f564d237607538cef70f399b7ada7f93e9677539f6e4a269da379f45a11",
+      "v004_sha256": "4b486e1679cf22118f466bfa5890274dcfcc745fbb6701b6edf176b05dfa8686",
+      "v005_sha256": "a8ceff7cc37e06cc5ef123f1af7db51471400e4b8b003d89af124998dfdd1175"
+    },
+    "finalize.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "a63fb5c088ca5f8ce3370559e5856c422df963ccf3c5472d2ad791329bf3ec4e",
+      "normalized_ast_sha256_v005": "a63fb5c088ca5f8ce3370559e5856c422df963ccf3c5472d2ad791329bf3ec4e",
+      "v004_sha256": "c7b9f905234cc54b9acc64e04bc1042c5e1df65ed96ed318f6b687b35c5181e7",
+      "v005_sha256": "302bc27e04e72c6e250b9f5a3f21485d64b03089d4cdcf39df74da89dd73e4b2"
+    },
+    "generator.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "302b8a2b40bc60259ed82d2a697f23d96f918a61fed4eb041b93aa10dbbc0218",
+      "normalized_ast_sha256_v005": "302b8a2b40bc60259ed82d2a697f23d96f918a61fed4eb041b93aa10dbbc0218",
+      "v004_sha256": "3a3a4b6e3077a9fbdd20d1a0e1ab4032932b6700f07809c5a9ea3bc162b43bbd",
+      "v005_sha256": "3a3a4b6e3077a9fbdd20d1a0e1ab4032932b6700f07809c5a9ea3bc162b43bbd"
+    },
+    "independent_verify.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "bf7a04260ea8c27d7f7a80e811348e68ac20b438bc057e35895557278ada0b9c",
+      "normalized_ast_sha256_v005": "bf7a04260ea8c27d7f7a80e811348e68ac20b438bc057e35895557278ada0b9c",
+      "v004_sha256": "e4819d61c9b29ca331985949980f33abda93ca243860726b0121c5cc9dab39f6",
+      "v005_sha256": "7a0607a22d8b326a19cd6d54fed182ca59948ef5c76c4a1223bd133a6dd8ea6b"
+    },
+    "latency.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "0638ad58db0e3dec1274384970c58c9bb4c11113cd319e2b492c61fbac11c569",
+      "normalized_ast_sha256_v005": "0638ad58db0e3dec1274384970c58c9bb4c11113cd319e2b492c61fbac11c569",
+      "v004_sha256": "48949072ca92610a04fde749e73f8ab415f9ba669303d4750e18280f0f1df39e",
+      "v005_sha256": "d553dfb868f849aeaf7efcbbe576e685ff54e54cfcd68d53f0e5825ecbccc2c8"
+    },
+    "launcher.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "f12a00d6fc189a3f42a91aea3dad4c09870aeb904e3318887d1262e738b01b87",
+      "normalized_ast_sha256_v005": "f12a00d6fc189a3f42a91aea3dad4c09870aeb904e3318887d1262e738b01b87",
+      "v004_sha256": "13d4c3f0b582b6210d6d32bfb7dd4408b5e536e2d2fc98ee3f18e9f6c399ad39",
+      "v005_sha256": "035695cfb35c6026e5f447eb79cf159c66c81adac8cd8dac37c86dbb0fd85819"
+    },
+    "posthoc.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "b1ce5feac3dfd3762ffde8f36254bef83f0194c6893af2e301173f80cbed4ad9",
+      "normalized_ast_sha256_v005": "b1ce5feac3dfd3762ffde8f36254bef83f0194c6893af2e301173f80cbed4ad9",
+      "v004_sha256": "85c065e2b72029759130e16fd80e4be52b477edf949dc7e0c37b094ae13335cf",
+      "v005_sha256": "85c065e2b72029759130e16fd80e4be52b477edf949dc7e0c37b094ae13335cf"
+    },
+    "runner.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "1b1fa8ee6bb60e30ea49c7f6c7ac6c143a8ec908ae12ac3f632a54b64ddd184e",
+      "normalized_ast_sha256_v005": "1b1fa8ee6bb60e30ea49c7f6c7ac6c143a8ec908ae12ac3f632a54b64ddd184e",
+      "v004_sha256": "f2c8c415d38c7a7eb6d73a0da22877f7f3df4f733b6b0dbf77dc76147bde1d16",
+      "v005_sha256": "f2c8c415d38c7a7eb6d73a0da22877f7f3df4f733b6b0dbf77dc76147bde1d16"
+    },
+    "state_init.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "8d619c1468b3f47feb54a94f6d11f586b27794987bb446c3a40812d8ac36a61c",
+      "normalized_ast_sha256_v005": "8d619c1468b3f47feb54a94f6d11f586b27794987bb446c3a40812d8ac36a61c",
+      "v004_sha256": "5abf8d38bb04884a635d1874383644b36d22ac3795e40322a33d4f6727e288fe",
+      "v005_sha256": "5abf8d38bb04884a635d1874383644b36d22ac3795e40322a33d4f6727e288fe"
+    },
+    "study_common.py": {
+      "normalized_ast_equal": true,
+      "normalized_ast_sha256_v004": "87123fcb337677b9dd8e7012141e97aba1f85ed47f0e3a91fee39f8034f811ef",
+      "normalized_ast_sha256_v005": "87123fcb337677b9dd8e7012141e97aba1f85ed47f0e3a91fee39f8034f811ef",
+      "v004_sha256": "a260df9497060c6ae2db3723f4f7c4fdfe4481faa252aed866d2c6fb46e72255",
+      "v005_sha256": "92af88126919ceebc2c572186c1535ef1b00f2188bd9d20e020c4782ceea27d9"
+    }
+  },
+  "scientific_result_before_version_forward": null,
+  "source_attempt": "v004",
+  "target_attempt": "v005",
+  "target_outcomes_before_version_forward": 0,
+  "target_outcomes_opened_before_version_forward": false,
+  "v004_smoke_data_reused_for_v005_inference": false
+}

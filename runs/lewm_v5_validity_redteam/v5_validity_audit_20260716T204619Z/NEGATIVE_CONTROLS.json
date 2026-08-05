@@ -1,0 +1,394 @@
+{
+  "actual": {
+    "native_whitened_vs_analytic": 0.000608622097150757,
+    "raw_vs_analytic": 6.769003361969305e-06
+  },
+  "completion": {
+    "all_predeclared_families_present": true,
+    "minimum_1000_satisfied": true,
+    "neg04_2000_reversal_perturbations_complete": true,
+    "neg05_unused_field_invariance_complete": true,
+    "negative_control_random_repetitions": 2000,
+    "predeclared_fail_count": 1,
+    "predeclared_pass_count": 4,
+    "target_random_repetitions": 1000
+  },
+  "created_unix_ns": 1784236461762140000,
+  "families": {
+    "NEG-01_within_episode_stage_stratum_permutation": {
+      "constraints": "nested reachability and every episode's exact call histogram",
+      "master_seed": 510001,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": 9.299554777185478e-05,
+        "mean": 3.35113779018647e-05,
+        "minimum": -2.0357747270117362e-05,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -3.414254015672311e-06,
+          "0.05": 8.17818176196436e-06,
+          "0.50": 3.3504920783927325e-05,
+          "0.95": 5.916722633900805e-05,
+          "0.99": 6.866517944770203e-05
+        },
+        "repetitions": 2000,
+        "std": 1.5887988497098888e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": 2.599157551260773e-06,
+        "mean": 1.2166487788122655e-06,
+        "minimum": -3.46067765615788e-07,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": 1.591239933373165e-07,
+          "0.05": 4.842317152994431e-07,
+          "0.50": 1.2167752039984611e-06,
+          "0.95": 1.939689952325621e-06,
+          "0.99": 2.2386473087291418e-06
+        },
+        "repetitions": 2000,
+        "std": 4.4913574532529044e-07
+      }
+    },
+    "NEG-02_constant_mixed_weakly_more_compute_policy": {
+      "constraints": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "integer_total_calls": 76180,
+        "number_upper": 15380
+      },
+      "master_seed": 510003,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": 6.688331843375864e-05,
+        "mean": 5.936387636419182e-07,
+        "minimum": -6.511418208153574e-05,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -4.430399162055772e-05,
+          "0.05": -3.210666283614583e-05,
+          "0.50": 7.161643893901784e-07,
+          "0.95": 3.1650213757940856e-05,
+          "0.99": 4.701746167767712e-05
+        },
+        "repetitions": 2000,
+        "std": 1.966226817828535e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": 1.8879003926521248e-06,
+        "mean": 1.6185381394182182e-08,
+        "minimum": -1.737702089084307e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -1.244603776105867e-06,
+          "0.05": -8.703227676663698e-07,
+          "0.50": 1.0888801754425775e-08,
+          "0.95": 9.47620656465941e-07,
+          "0.99": 1.2843024435679513e-06
+        },
+        "repetitions": 2000,
+        "std": 5.529004354005469e-07
+      }
+    },
+    "NEG-02_random_global_matched_call_policy": {
+      "constraints": "nested reachability and exact global call histogram",
+      "master_seed": 510002,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -0.0002735578063566185,
+        "mean": -0.00032635960794589645,
+        "minimum": -0.0003877814311808534,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -0.00036769633211964183,
+          "0.05": -0.00035568626518799176,
+          "0.50": -0.000326529327119639,
+          "0.95": -0.00029744207309663213,
+          "0.99": -0.00028566295394257083
+        },
+        "repetitions": 2000,
+        "std": 1.7676451011342678e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -1.5601495450750293e-06,
+        "mean": -3.3087734114358567e-06,
+        "minimum": -4.964245162919413e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -4.413653885621504e-06,
+          "0.05": -4.095476406999247e-06,
+          "0.50": -3.3093450463847185e-06,
+          "0.95": -2.533137389952834e-06,
+          "0.99": -2.1184015776248185e-06
+        },
+        "repetitions": 2000,
+        "std": 4.803206967406066e-07
+      }
+    },
+    "NEG-03_predeclared_whole_episode_target_alignment_permutation": {
+      "constraints": "whole 38-transition episode target blocks; prediction/call/compute fixed",
+      "master_seed": 510004,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": 0.0003539533974547338,
+        "mean": 0.00016741376903248528,
+        "minimum": -3.362539623863453e-05,
+        "plus_one_one_sided_p": 0.000999000999000999,
+        "quantiles": {
+          "0.01": 2.4200120965433673e-05,
+          "0.05": 6.734776783086397e-05,
+          "0.50": 0.0001681586733833216,
+          "0.95": 0.00026731443822672004,
+          "0.99": 0.000306928393973769
+        },
+        "repetitions": 1000,
+        "std": 6.133420002188956e-05
+      },
+      "predeclared_result": "fail",
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 164,
+        "diagnostic_pass_p_lt_0_05": false,
+        "maximum": 2.546591714279359e-05,
+        "mean": 2.8206984635235624e-07,
+        "minimum": -1.9592094523539886e-05,
+        "plus_one_one_sided_p": 0.16483516483516483,
+        "quantiles": {
+          "0.01": -1.621960346990943e-05,
+          "0.05": -1.0800350293148444e-05,
+          "0.50": 2.4735433588358073e-07,
+          "0.95": 1.2403983237097492e-05,
+          "0.99": 1.751057644436486e-05
+        },
+        "repetitions": 1000,
+        "std": 7.063453459051137e-06
+      },
+      "second_implementation": {
+        "agreement_passed": true,
+        "agreement_tolerance": 1e-12,
+        "diagonal_matches_actual": true,
+        "maximum_absolute_difference_from_streaming_formula": 1.5754812818929986e-19,
+        "method": "1600x1600 episode-pair contrast matrix",
+        "pair_matrix_diagonal_real_alignment": 6.769003361969733e-06
+      },
+      "synthetic_formula_fixture": {
+        "absolute_delta": 0.0,
+        "direct": 0.1796875,
+        "formula": 0.1796875,
+        "passed": true
+      }
+    },
+    "NEG-04_broken_score_gain_association_by_model_step": {
+      "constraints": "nested reachability and exact call histogram within each model step",
+      "master_seed": 510005,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -0.000202379266865677,
+        "mean": -0.00027387884208163144,
+        "minimum": -0.000342001568306373,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -0.0003139189870890713,
+          "0.05": -0.0003038701592815,
+          "0.50": -0.0002738223067296721,
+          "0.95": -0.0002448696944861795,
+          "0.99": -0.0002319269413093253
+        },
+        "repetitions": 2000,
+        "std": 1.8133154613130588e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -1.442126315709749e-06,
+        "mean": -3.0221442560000613e-06,
+        "minimum": -4.6900878235378835e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -4.171871829258446e-06,
+          "0.05": -3.807048601469532e-06,
+          "0.50": -3.0030850251934334e-06,
+          "0.95": -2.2682024260539114e-06,
+          "0.99": -1.9578549114024096e-06
+        },
+        "repetitions": 2000,
+        "std": 4.681535743478522e-07
+      }
+    },
+    "NEG-04_deterministic_reverse_score_order": {
+      "constraints": "exact global reached-stage counts and nested reachability",
+      "native_whitened_benefit": -0.0011716507270399072,
+      "native_whitened_less_favorable_than_real": true,
+      "raw_benefit": -8.863985853699216e-06,
+      "raw_less_favorable_than_real": true,
+      "repetitions": 1
+    },
+    "NEG-04_reversed_score_order_with_perturbations": {
+      "constraints": "2,000 sign-reversed score orderings with Gaussian perturbation; exact global reached-stage counts",
+      "master_seed": 510006,
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -0.0011231641683455635,
+        "mean": -0.0011602396476104553,
+        "minimum": -0.00118763636691904,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -0.0011825258455620017,
+          "0.05": -0.0011757482311686171,
+          "0.50": -0.0011602907119100088,
+          "0.95": -0.001144341840771334,
+          "0.99": -0.0011381058150274758
+        },
+        "repetitions": 2000,
+        "std": 9.664485816697048e-06
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -8.067015726532748e-06,
+        "mean": -8.982363950795196e-06,
+        "minimum": -9.897184086884357e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -9.544987436802564e-06,
+          "0.05": -9.380258995963388e-06,
+          "0.50": -8.981135303440143e-06,
+          "0.95": -8.582642974286342e-06,
+          "0.99": -8.46424102340051e-06
+        },
+        "repetitions": 2000,
+        "std": 2.425696718040305e-07
+      }
+    },
+    "NEG-05_unused_output_field_invariance": {
+      "causal_audit_path": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/CAUSAL_INPUT_AUDIT.json",
+      "method": "two extreme unused-field values with exact semantic-array digest projection",
+      "passed": true,
+      "repetitions": 2
+    }
+  },
+  "overall_predeclared_status": "fail",
+  "post_hoc_tests": [
+    {
+      "label": "post_hoc",
+      "method": "permute complete target-derived four-depth loss profiles by 38-row episode blocks relative to fixed calls",
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -0.00015949642091245888,
+        "mean": -0.00027471594121605505,
+        "minimum": -0.000365278369495109,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -0.0003446582001879994,
+          "0.05": -0.00032708466623566527,
+          "0.50": -0.0002743085842073749,
+          "0.95": -0.00022071447682985582,
+          "0.99": -0.0001953221237867167
+        },
+        "repetitions": 2000,
+        "std": 3.240064379848459e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -1.1504036836721712e-06,
+        "mean": -3.008559949520311e-06,
+        "minimum": -4.675288853864775e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -4.329428204510926e-06,
+          "0.05": -3.9336811300260845e-06,
+          "0.50": -3.027791790301736e-06,
+          "0.95": -2.0511943667842416e-06,
+          "0.99": -1.6118511107706669e-06
+        },
+        "repetitions": 2000,
+        "std": 5.642256735851671e-07
+      },
+      "reason": "diagnose the failed predeclared whole-target permutation",
+      "seed": 6132334
+    }
+  ],
+  "role": "diagnostic_falsification_not_new_confirmation",
+  "runtime_seconds": 109.45587086677551,
+  "schema_version": 2,
+  "target_permutation_failure_diagnosis": {
+    "failed_control": "NEG-03 whole-episode target alignment permutation",
+    "median_matched_allocation_null_sd": 4.681535743478522e-07,
+    "minimal_diagnosis": "Whole-episode target reassignment changes the physical prediction task for every exit and the adaptive output, producing a null dominated by cross-episode target/prediction geometry rather than only by destroyed gate allocation. Both independent implementations agree, so this is not a harness defect. The post-hoc loss-profile permutation isolates allocation more narrowly but does not erase the preregistered failure.",
+    "native_whitened_z_from_permutation_mean": 7.193512395381514,
+    "post_hoc_control": {
+      "label": "post_hoc",
+      "method": "permute complete target-derived four-depth loss profiles by 38-row episode blocks relative to fixed calls",
+      "native_whitened": {
+        "actual": 0.000608622097150757,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -0.00015949642091245888,
+        "mean": -0.00027471594121605505,
+        "minimum": -0.000365278369495109,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -0.0003446582001879994,
+          "0.05": -0.00032708466623566527,
+          "0.50": -0.0002743085842073749,
+          "0.95": -0.00022071447682985582,
+          "0.99": -0.0001953221237867167
+        },
+        "repetitions": 2000,
+        "std": 3.240064379848459e-05
+      },
+      "raw": {
+        "actual": 6.769003361969305e-06,
+        "at_least_as_favorable_count": 0,
+        "diagnostic_pass_p_lt_0_05": true,
+        "maximum": -1.1504036836721712e-06,
+        "mean": -3.008559949520311e-06,
+        "minimum": -4.675288853864775e-06,
+        "plus_one_one_sided_p": 0.0004997501249375312,
+        "quantiles": {
+          "0.01": -4.329428204510926e-06,
+          "0.05": -3.9336811300260845e-06,
+          "0.50": -3.027791790301736e-06,
+          "0.95": -2.0511943667842416e-06,
+          "0.99": -1.6118511107706669e-06
+        },
+        "repetitions": 2000,
+        "std": 5.642256735851671e-07
+      },
+      "reason": "diagnose the failed predeclared whole-target permutation",
+      "seed": 6132334
+    },
+    "predeclared_failure_retained": true,
+    "raw_z_from_permutation_mean": 0.9183798765325717,
+    "scientific_appropriateness_assessment": "Not a sharp matched-compute test of gate allocation by itself; retain as a failed high-variance diagnostic and weigh alongside the passed reachability/histogram/score-gain controls.",
+    "target_null_sd": 7.063453459051137e-06,
+    "target_to_matched_sd_ratio": 15.087898172924723
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "blocker_count": 0,
+  "created_unix_ns": 1784241431964982000,
+  "findings": [
+    {
+      "blocker_rationale": "The actual canonical state was exhaustively checked and does not use any of the accepted corruptions.",
+      "decision_reversal_capable_if_exploited": true,
+      "description": "The copied existing-manifest preflight accepted duplicate identifier metadata and a ../ path outside REPO_ROOT when the declared hash matched; a semantic verifier accepted a consistently rebound episode-block order; the final durable-file verifier accepted a byte-identical external symlink.",
+      "evidence": [
+        "FAULT_INJECTION.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "evidence_of_exploitation": false,
+      "id": "V5-AUD-MAJ-001",
+      "impact": "These are meaningful supply-chain/hardening weaknesses and could permit substitution or duplication before the confirmation input seal. They did not compromise the preserved result: canonical paths are confined and regular, IDs/paths/hashes are unique, row order is exact, and initial/final snapshots are unchanged.",
+      "severity": "Major",
+      "test_ids": [
+        "FLT-02",
+        "FLT-03"
+      ],
+      "title": "Artifact validators have pre-seal path and manifest fail-open surfaces"
+    },
+    {
+      "blocker_rationale": "No tested reasonable correction reverses the effect.",
+      "decision_reversal_capable_if_exploited": false,
+      "description": "The stated total is an exact integer under the frozen historical latent-prediction ledger, not a literal count of all executed operations. It excludes pixel encoding and visible bias/GELU/alpha/residual arithmetic; the base predictor also lacks a complete primitive graph.",
+      "evidence": [
+        "COMPUTE_AUDIT.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "evidence_of_exploitation": false,
+      "id": "V5-AUD-MAJ-002",
+      "impact": "The claim must be scoped to the declared convention. Comparator fairness survives: common omissions cancel, adding 704 or 832 visible operations per later adapter slightly increases the raw advantage, and every sensitivity keeps the seeded comparator weakly more compute.",
+      "severity": "Major",
+      "test_ids": [
+        "CMP-01"
+      ],
+      "title": "The unqualified exact-FLOP claim is not literal end-to-end arithmetic"
+    },
+    {
+      "blocker_rationale": "Exact full replay bounds the unresolved surface; no mismatch exists.",
+      "decision_reversal_capable_if_exploited": true,
+      "description": "The seal records interpreter hashes, exact package versions, and top-level module origins, but not all imported Python files, native libraries, the Metal/MPS framework or OS build, nor a loaded-module snapshot.",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "evidence_of_exploitation": false,
+      "id": "V5-AUD-MAJ-003",
+      "impact": "An exact historical environment cannot be reconstructed solely from the seal. Current dual-runtime probes and a bitwise-exact 60,800-row MPS replay make a decision-changing historical substitution unsupported, but cannot retroactively attest it.",
+      "severity": "Major",
+      "test_ids": [
+        "FRZ-03"
+      ],
+      "title": "Historical transitive runtime environment is incompletely attested"
+    },
+    {
+      "blocker_rationale": "Post-training chronology and fresh seed derivation make exact V5 membership in the unavailable training corpus non-credible.",
+      "decision_reversal_capable_if_exploited": true,
+      "description": "The repository does not preserve an episode-level raw corpus for original base-model training, so observation-level absence/near-absence across that entire historical corpus cannot be tested.",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CHRONOLOGY_AUDIT.json"
+      ],
+      "evidence_of_exploitation": false,
+      "id": "V5-AUD-MAJ-004",
+      "impact": "All accessible evidence is clean\u20142,472 prior raw archives, 31,629 IDs, 28,427 seeds, transformed seeds, initial states, actions, observations and pixels\u2014and V5 was generated later from fresh unique seeds. This leaves a bounded provenance uncertainty, not evidence of direct cohort leakage.",
+      "severity": "Major",
+      "test_ids": [
+        "ISO-03",
+        "ISO-04"
+      ],
+      "title": "Complete original base-model training raw corpus is unavailable"
+    },
+    {
+      "blocker_rationale": "This is a defect in this audit's mapping, not in V5 data or computation.",
+      "decision_reversal_capable_if_exploited": false,
+      "description": "The seal marked all 49 tests mandatory for both supported outcomes, while reserving invalidation for a validated Blocker and inconclusive for essential missing/corrupt evidence or persistent critical disagreement. Resolved, non-invalidating failures therefore create a gap in which none of the four sealed labels is available.",
+      "evidence": [
+        "AUDIT_PLAN.md",
+        "TEST_MATRIX.json",
+        "TEST_RESULTS.json"
+      ],
+      "evidence_of_exploitation": false,
+      "id": "V5-AUD-MAJ-005",
+      "impact": "No failed test was relabeled. Because the user requires exactly one outcome, the governing top-level definitions are applied: no Blocker, exact primary reproduction, and bounded Major caveats map most truthfully to v5_validity_supported_with_caveats.",
+      "post_hoc_audit_plan_defect": true,
+      "severity": "Major",
+      "test_ids": [
+        "FRZ-03",
+        "CMP-01",
+        "FLT-02",
+        "FLT-03",
+        "NEG-03"
+      ],
+      "title": "The sealed audit plan has an internally over-strict terminal mapping"
+    },
+    {
+      "description": "The retained raw plus-one p-value is 0.164835. A second pair-matrix method agrees to 1.58e-19, so this is not a harness error.",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json"
+      ],
+      "id": "V5-AUD-MIN-001",
+      "impact": "Whole-target reassignment changes the physical prediction task and has 15.1\u00d7 the null SD of matched allocation controls. All sharper reachability/histogram/score-gain controls pass; a separately labeled post-hoc loss-profile permutation also passes. The preregistered failure remains visible.",
+      "severity": "Minor",
+      "test_ids": [
+        "NEG-03"
+      ],
+      "title": "Predeclared whole-episode target permutation fails in raw space"
+    },
+    {
+      "description": "The manifest omits device and command fields. MPS is strongly inferred from the launcher default, MPS qualification and exact full MPS replay.",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "id": "V5-AUD-MIN-002",
+      "impact": "Reproducibility/attestation gap; no observed numerical discrepancy.",
+      "severity": "Minor",
+      "test_ids": [
+        "FRZ-02"
+      ],
+      "title": "Historical execution device/command is not explicit in the execution manifest"
+    },
+    {
+      "description": "artifact_manifest.json freezes PACKAGE_READY before confirmation. The input seal and independent verifier bind decision inputs, but raw sidecars and all post-confirmation outputs are not collected in a second complete manifest.",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "id": "V5-AUD-MIN-003",
+      "impact": "The audit's initial/final full snapshots close the preserved-evidence gap.",
+      "severity": "Minor",
+      "test_ids": [
+        "COC-03",
+        "FRZ-01"
+      ],
+      "title": "No post-decision complete package path-set manifest exists"
+    },
+    {
+      "description": "Unknown privileged canaries can be present before manifesting, but only action and pixels are subscripted/materialized and outputs remain exact.",
+      "evidence": [
+        "CAUSAL_INPUT_AUDIT.json",
+        "FAULT_INJECTION.json"
+      ],
+      "id": "V5-AUD-MIN-004",
+      "impact": "No target leak; strict unknown-field rejection would improve defense in depth.",
+      "severity": "Minor",
+      "test_ids": [
+        "FLT-05",
+        "LEAK-03"
+      ],
+      "title": "Raw loader safely ignores rather than schema-rejects unknown fields"
+    },
+    {
+      "description": "Timestamps are not externally notarized and raw files are hashed before open; a change-and-restore inside that window is not cryptographically excluded.",
+      "evidence": [
+        "CHRONOLOGY_AUDIT.json"
+      ],
+      "id": "V5-AUD-MIN-005",
+      "impact": "Strict ordering, pre/post hashes, exact replay and unchanged final snapshots provide strong but not notarized custody.",
+      "severity": "Minor",
+      "test_ids": [
+        "COC-02",
+        "COC-03"
+      ],
+      "title": "Chronology relies on mutable local timestamps and has a narrow TOCTOU window"
+    },
+    {
+      "description": "The first harness applied an absolute-only 2e-6 cap to an algebraically different sqrt/sum reduction and omitted the preregistered relative term.",
+      "evidence": [
+        "REPLAY_RESULTS_INITIAL_FAILURE.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "id": "V5-AUD-MIN-006",
+      "impact": "Synthetic validation identified the audit-harness defect. No tolerance was relaxed: order-matched features/scores are exact; explicit algebra passes audit tolerance; every call/output is exact. Only 88/1,600 episodes satisfy the package's stricter score allclose under that deliberately different order.",
+      "severity": "Minor",
+      "test_ids": [
+        "RPL-02"
+      ],
+      "title": "Initial replay audit acceptance logic produced a false failure"
+    }
+  ],
+  "major_count": 5,
+  "minor_count": 6,
+  "precise_supported_claim": "For the frozen v004 PlanOracle confirmation cohort, the sealed causal adaptive policy produced lower episode-averaged raw and native-whitened latent MSE than the strongest transition-independent comparator at the same declared latent-prediction operation budget, with the preregistered intervals and outcome mapping independently reproduced.",
+  "schema_version": 1,
+  "terminal_outcome": "v5_validity_supported_with_caveats",
+  "terminal_reasoning": {
+    "canonical_source_unchanged": true,
+    "causal_input_audit_passed": true,
+    "complete_replay_passed": true,
+    "critical_independent_disagreement_persists": false,
+    "essential_evidence_corrupt_or_missing": false,
+    "failed_test_ids": [
+      "FRZ-03",
+      "CMP-01",
+      "FLT-02",
+      "FLT-03",
+      "NEG-03"
+    ],
+    "governing_user_definition_applied": "no Blocker plus exact confirmation reproduction plus bounded Major uncertainty => v5_validity_supported_with_caveats",
+    "predeclared_test_fail_count": 5,
+    "predeclared_test_pass_count": 44,
+    "primary_claim_exactly_reproduced": true,
+    "sealed_mapping_gap_present": true,
+    "sealed_support_predicate_satisfied": false,
+    "validated_blocker_present": false
+  },
+  "unsupported_claims": [
+    "broad generalization beyond the frozen PlanOracle DGP",
+    "practically large effect",
+    "latency or energy improvement",
+    "literal end-to-end exact arithmetic FLOPs including pixel encoding",
+    "complete historical base-training observation-level non-overlap",
+    "complete transitive runtime attestation",
+    "fail-closed resistance to every pre-seal manifest/path substitution"
+  ],
+  "v5_result_appears_genuine": true
+}

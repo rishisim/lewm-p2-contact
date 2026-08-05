@@ -1,0 +1,295 @@
+{
+  "checks": {
+    "all_strict_chronology_boundaries": true,
+    "chronology_monotonic": true,
+    "decision_known_sha256": true,
+    "independent_audit_known_sha256": true,
+    "no_partial_or_hidden_raw_artifacts": true,
+    "no_v004_confirmation_failure_ledger": true,
+    "only_v004_has_completed_confirmation": true,
+    "raw_ids_exact_unique": true,
+    "raw_npz_and_sidecar_path_sets_exact": true,
+    "raw_paths_exact_unique": true,
+    "raw_slots_exact_order": true,
+    "recovery_terminal_matches_decision": true,
+    "runner_scientific_functions_unchanged_v001_v004": true,
+    "scientific_byte_files_unchanged_v001_v004": true,
+    "v001_zero_outcome_operational_failure": true,
+    "v002_zero_outcome_preseal_failure": true,
+    "v003_zero_outcome_preseal_failure": true,
+    "v004_preseal_hashes_still_match": true,
+    "zero_replacements": true
+  },
+  "cohort_recovery": {
+    "failure_ledgers": [],
+    "raw_npz_count": 1600,
+    "raw_sidecar_count": 1600,
+    "replacement_count": 0
+  },
+  "created_unix_ns": 1784237364191078000,
+  "git_provenance": {
+    "current_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+    "current_head_subject": "Add V5 readiness packages and literature review",
+    "execution_head": "d20ad79c4db7f564f5007513634bec4b9a785605",
+    "execution_head_subject": "Add persistence MSE coverage to experiment utils tests",
+    "merge_base": "2d92e9d97511f66a4d491e0be4e4a4050b70043b",
+    "package_sources_hash_bound_despite_later_commit": true,
+    "same_head": false
+  },
+  "passed": true,
+  "residual_chronology_limitations": [
+    "Filesystem and JSON timestamps are local mutable records, not externally notarized.",
+    "The recovery controller is outside the v004 pre-V5 package seal, but it only records checkpoints; the performance path is the sealed launcher/package.",
+    "A narrow hash-then-open TOCTOU window exists for each raw file; the complete post-execution input seal rehashes all raw files but cannot exclude an adversarial change-and-restore within that window."
+  ],
+  "runner_function_ast_comparisons": {
+    "dense_shadow": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "8e0189f940b73e6ed92642caabc6a64c7df6cd8b5188151181e075eeee05eef2",
+        "v002": "8e0189f940b73e6ed92642caabc6a64c7df6cd8b5188151181e075eeee05eef2",
+        "v003": "8e0189f940b73e6ed92642caabc6a64c7df6cd8b5188151181e075eeee05eef2",
+        "v004": "8e0189f940b73e6ed92642caabc6a64c7df6cd8b5188151181e075eeee05eef2"
+      }
+    },
+    "execute": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "61ef02cbb1e2942725dba3916f8848f3b35c527bc3777ea8a51e0a5735082601",
+        "v002": "61ef02cbb1e2942725dba3916f8848f3b35c527bc3777ea8a51e0a5735082601",
+        "v003": "61ef02cbb1e2942725dba3916f8848f3b35c527bc3777ea8a51e0a5735082601",
+        "v004": "61ef02cbb1e2942725dba3916f8848f3b35c527bc3777ea8a51e0a5735082601"
+      }
+    },
+    "load_gate_tensors": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "e3c08e66f2e09f039b928f31f4f03db3e0841fbb2db29bcbe3d4f7eadb84cce7",
+        "v002": "e3c08e66f2e09f039b928f31f4f03db3e0841fbb2db29bcbe3d4f7eadb84cce7",
+        "v003": "e3c08e66f2e09f039b928f31f4f03db3e0841fbb2db29bcbe3d4f7eadb84cce7",
+        "v004": "e3c08e66f2e09f039b928f31f4f03db3e0841fbb2db29bcbe3d4f7eadb84cce7"
+      }
+    },
+    "manual_sparse": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "4cbd3cfd16b6d68bc797f9006683a868c1c407d49c410a7e00492d33fe58b0f4",
+        "v002": "4cbd3cfd16b6d68bc797f9006683a868c1c407d49c410a7e00492d33fe58b0f4",
+        "v003": "4cbd3cfd16b6d68bc797f9006683a868c1c407d49c410a7e00492d33fe58b0f4",
+        "v004": "4cbd3cfd16b6d68bc797f9006683a868c1c407d49c410a7e00492d33fe58b0f4"
+      }
+    },
+    "prepare_episode_tensors": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "1d4fa6349c2f88967ea1d3d007256c6953914b5eb82206fdbf5c740e72bc546e",
+        "v002": "1d4fa6349c2f88967ea1d3d007256c6953914b5eb82206fdbf5c740e72bc546e",
+        "v003": "1d4fa6349c2f88967ea1d3d007256c6953914b5eb82206fdbf5c740e72bc546e",
+        "v004": "1d4fa6349c2f88967ea1d3d007256c6953914b5eb82206fdbf5c740e72bc546e"
+      }
+    },
+    "score_gate": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "b99a1e738efe88c3456e217d45564ce70b18824dbf46ca55525cc54a89a3b758",
+        "v002": "b99a1e738efe88c3456e217d45564ce70b18824dbf46ca55525cc54a89a3b758",
+        "v003": "b99a1e738efe88c3456e217d45564ce70b18824dbf46ca55525cc54a89a3b758",
+        "v004": "b99a1e738efe88c3456e217d45564ce70b18824dbf46ca55525cc54a89a3b758"
+      }
+    },
+    "tensors_exact_with_nan": {
+      "all_versions_identical": true,
+      "digests": {
+        "v001": "4a068739469569952ba2355f5db0ddf703e3fbf783adf3b622835dd7db5d068e",
+        "v002": "4a068739469569952ba2355f5db0ddf703e3fbf783adf3b622835dd7db5d068e",
+        "v003": "4a068739469569952ba2355f5db0ddf703e3fbf783adf3b622835dd7db5d068e",
+        "v004": "4a068739469569952ba2355f5db0ddf703e3fbf783adf3b622835dd7db5d068e"
+      }
+    }
+  },
+  "schema_version": 1,
+  "scientific_byte_hash_comparisons": {
+    "DGP.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518",
+        "v002": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518",
+        "v003": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518",
+        "v004": "7a446d7c8fd5518977c33111effaf022f661b67934cdc353d3b9d623b621f518"
+      }
+    },
+    "counted_features.py": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d",
+        "v002": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d",
+        "v003": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d",
+        "v004": "5f6f3cdbd48af13a40c77a4fe7e33d5c6827232aace65f4f20fa906bcb047a9d"
+      }
+    },
+    "exclusions.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "a8bb337aa7cee48ce4e26c2383265f5b6412ffe4af518be5fe7d07fa4f38d049",
+        "v002": "a8bb337aa7cee48ce4e26c2383265f5b6412ffe4af518be5fe7d07fa4f38d049",
+        "v003": "a8bb337aa7cee48ce4e26c2383265f5b6412ffe4af518be5fe7d07fa4f38d049",
+        "v004": "a8bb337aa7cee48ce4e26c2383265f5b6412ffe4af518be5fe7d07fa4f38d049"
+      }
+    },
+    "freeze/compiled_gate.npz": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+        "v002": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+        "v003": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57",
+        "v004": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57"
+      }
+    },
+    "freeze/gate_fit.npz": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+        "v002": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+        "v003": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97",
+        "v004": "d13cf89bc3d5f22d89612c30dd555bb50aa392bd465eba335e0917cbe860ff97"
+      }
+    },
+    "freeze/gate_freeze.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+        "v002": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+        "v003": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d",
+        "v004": "11fedb55363539aea683d2960224b1e6b3d946f52027e6d18952a2ad4e480c3d"
+      }
+    },
+    "freeze/gate_freeze_seal.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+        "v002": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+        "v003": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+        "v004": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36"
+      }
+    },
+    "freeze/whitening.npz": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+        "v002": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+        "v003": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+        "v004": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796"
+      }
+    },
+    "input_loader.py": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f",
+        "v002": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f",
+        "v003": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f",
+        "v004": "ce2f5747158f2811a2e69b4369115107544265b9a7e60d1520c19baf7a7f192f"
+      }
+    },
+    "operation_graph.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+        "v002": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+        "v003": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+        "v004": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84"
+      }
+    },
+    "outcome_mapping.json": {
+      "all_versions_identical": true,
+      "hashes": {
+        "v001": "a956a682aa737dd0ba2c9bc808600bd321eb30494ff3bd0971d1430c54359944",
+        "v002": "a956a682aa737dd0ba2c9bc808600bd321eb30494ff3bd0971d1430c54359944",
+        "v003": "a956a682aa737dd0ba2c9bc808600bd321eb30494ff3bd0971d1430c54359944",
+        "v004": "a956a682aa737dd0ba2c9bc808600bd321eb30494ff3bd0971d1430c54359944"
+      }
+    }
+  },
+  "strict_boundaries": {
+    "all_raw_before_raw_manifest": true,
+    "analysis_before_independent_audit": true,
+    "execution_before_input_seal": true,
+    "final_manifest_before_any_raw": true,
+    "independent_audit_before_decision": true,
+    "input_seal_before_target_analysis": true,
+    "raw_manifest_before_execution": true,
+    "ready_before_any_raw": true,
+    "seal_before_any_raw": true
+  },
+  "timeline_order": [
+    "pre_v5_seal",
+    "package_ready",
+    "final_package_manifest",
+    "first_raw_episode",
+    "last_raw_episode",
+    "raw_manifest",
+    "execution_manifest",
+    "input_seal",
+    "analysis",
+    "latency",
+    "independent_verification",
+    "decision"
+  ],
+  "timeline_unix_ns": {
+    "analysis": 1784159105870284000,
+    "decision": 1784159117022636000,
+    "execution_manifest": 1784159099744812000,
+    "final_package_manifest": 1784156326370167000,
+    "first_raw_episode": 1784156390372146000,
+    "independent_verification": 1784159117022052000,
+    "input_seal": 1784159103844627000,
+    "last_raw_episode": 1784158873904487000,
+    "latency": 1784159111060078000,
+    "package_ready": 1784156326342374000,
+    "pre_v5_seal": 1784156213141710000,
+    "raw_manifest": 1784158873907094000
+  },
+  "v004_preseal": {
+    "bad_hashes": [],
+    "seal_sha256": "c2853b726cf2e596ab3fda47ae1cae5aba1308f8f0c6409732acf4dc430677d6",
+    "sealed_file_count": 103
+  },
+  "version_records": {
+    "v001": {
+      "analysis_exists": false,
+      "decision_exists": false,
+      "failed_attempts": 101,
+      "failure_sha256": "2a94c67335084fad28e431c7f630aca9005d77a6822995818dc72cf0d2a305f0",
+      "modeled_rows": 0,
+      "outcomes": 0,
+      "raw_confirmation_npz": 0,
+      "status": "pre-outcome execution invalid"
+    },
+    "v002": {
+      "analysis_exists": false,
+      "decision_exists": false,
+      "modeled_rows": 0,
+      "outcomes": 0,
+      "preseal_created": false,
+      "raw_confirmation_npz": 0,
+      "status": "v002_preseal_invalid"
+    },
+    "v003": {
+      "analysis_exists": false,
+      "decision_exists": false,
+      "modeled_rows": 0,
+      "outcomes": 0,
+      "preseal_created": false,
+      "raw_confirmation_npz": 0,
+      "status": "v003_preseal_invalid"
+    },
+    "v004": {
+      "analysis_exists": true,
+      "decision_exists": true,
+      "modeled_rows": 60800,
+      "outcomes": 1600,
+      "raw_confirmation_npz": 1600,
+      "raw_confirmation_sidecars": 1600,
+      "status": "v5_confirmation_passed"
+    }
+  }
+}

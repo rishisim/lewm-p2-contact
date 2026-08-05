@@ -1,0 +1,272 @@
+{
+  "adaptive_fit_whitened_mse": 0.25245969282650094,
+  "adaptive_raw_mse": 0.10740739382814737,
+  "all_endpoints": {
+    "fit_whitened_vs_fixed_depth_1": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.005288416834625915,
+      "ci_low": 0.0029419792095884234,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.004146557822601549
+    },
+    "fit_whitened_vs_fixed_depth_4": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0034111680463432877,
+      "ci_low": -0.00022184109757286336,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.0015633395415794802
+    },
+    "fit_whitened_vs_primary_analytic": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0006292011461374621,
+      "ci_low": -0.001258993862851233,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": -0.0003099001292221187
+    },
+    "fit_whitened_vs_within_episode_permutation": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0033683229430402323,
+      "ci_low": 0.0018223764321413992,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.002561737129358797
+    },
+    "raw_vs_fixed_depth_1": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.008182978094957561,
+      "ci_low": 0.005058717799981577,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.006631293506868009
+    },
+    "raw_vs_fixed_depth_4": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.00737390289187742,
+      "ci_low": 0.0032214694952643276,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.005263287249847757
+    },
+    "raw_vs_primary_analytic": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0050886442555326565,
+      "ci_low": 0.0027287252766780828,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.003909796985389183
+    },
+    "raw_vs_within_episode_permutation": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.006673999028182984,
+      "ci_low": 0.004250986524361529,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.005411522967747906
+    }
+  },
+  "compute": {
+    "action_normalization_flops": 86400,
+    "adaptive_total_counted_flops": 102905055196,
+    "analytic_equivalent_mean_depth": 1.6582700207110215,
+    "base_model_calls": 1440,
+    "base_predictor_flops": 101351796480,
+    "call_histogram_depth_1_to_4": [
+      1089,
+      42,
+      46,
+      263
+    ],
+    "exact_integer_total_counted_flop_equality": true,
+    "fit_whitened_primary_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.25214979269727883,
+      "weight_upper": 0.6582700207110215
+    },
+    "gate_dual_affine_score_flops": 8408400,
+    "gate_feature_flops": 7793100,
+    "gate_total_flops": 16201500,
+    "nonflop_comparison_min_operations": 10500,
+    "primary_analytic_comparator_total_counted_flops": 102905055196,
+    "raw_primary_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.11131719081353657,
+      "weight_upper": 0.6582700207110215
+    },
+    "reached_gate_evaluations": 2100,
+    "reached_gate_evaluations_by_stage": [
+      1440,
+      351,
+      309
+    ],
+    "refiner_calls": 2363,
+    "refiner_flops": 1536970816,
+    "rows": 1440
+  },
+  "created_unix_ns": 1784401582440495000,
+  "criteria": {
+    "all_combined_stagewise_rank_signs_nonnegative": true,
+    "causal_input_checks": {
+      "evaluation_manifest_declares_no_privileged_model_inputs": true,
+      "feature_builder_signature_exact": true,
+      "feature_names_have_no_forbidden_boundary_terms": true,
+      "frozen_gate_declares_no_privileged_inputs": true,
+      "scores_reconstructed_only_from_causal_features": true
+    },
+    "exact_counted_compute_equality": true,
+    "finite_outputs": true,
+    "fit_whitened_mean_favors_adaptive": false,
+    "raw_mean_favors_adaptive": true
+  },
+  "diagnostics": {
+    "adaptive_total_counted_flops": 102905055196,
+    "all_combined_stagewise_spearman_nonnegative": true,
+    "analytic_comparator_total_counted_flops": 102905055196,
+    "analytic_equivalent_mean_depth": 1.6582700207110215,
+    "both_co_primary_point_benefits_positive": false,
+    "call_histogram": [
+      1089,
+      42,
+      46,
+      263
+    ],
+    "candidate_id": "stage_dual_r10_q0.75",
+    "exact_total_counted_compute_equality": true,
+    "fit_score_quantile": 0.75,
+    "fit_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.25214979269727883,
+      "weight_upper": 0.6582700207110215
+    },
+    "mean_depth": 1.6409722222222223,
+    "minimum_combined_stagewise_spearman": 0.37671439671439666,
+    "minimum_standardized_co_primary": -0.07195980285298036,
+    "point_benefits": {
+      "fit_whitened_vs_analytic": -0.0003099001292221187,
+      "fit_whitened_vs_fixed_d1": 0.004146557822601549,
+      "fit_whitened_vs_fixed_d4": 0.0015633395415794802,
+      "fit_whitened_vs_within_episode_permutation": 0.002561737129358797,
+      "raw_vs_analytic": 0.003909796985389183,
+      "raw_vs_fixed_d1": 0.006631293506868009,
+      "raw_vs_fixed_d4": 0.005263287249847757,
+      "raw_vs_within_episode_permutation": 0.005411522967747906
+    },
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.11131719081353657,
+      "weight_upper": 0.6582700207110215
+    },
+    "reached_gate_evaluations": 2100,
+    "refiner_calls": 2363,
+    "regularization": 10.0,
+    "stagewise_rank": [
+      {
+        "reached_rows": 1440,
+        "score_vs_combined_gain_spearman": 0.429762516764331,
+        "score_vs_fit_whitened_gain_spearman": 0.3805736065652037,
+        "score_vs_raw_gain_spearman": 0.4236823714067506,
+        "stage": 1
+      },
+      {
+        "reached_rows": 351,
+        "score_vs_combined_gain_spearman": 0.37671439671439666,
+        "score_vs_fit_whitened_gain_spearman": 0.32348179598179594,
+        "score_vs_raw_gain_spearman": 0.3625111000111,
+        "stage": 2
+      },
+      {
+        "reached_rows": 309,
+        "score_vs_combined_gain_spearman": 0.3908497077617027,
+        "score_vs_fit_whitened_gain_spearman": 0.37973570432073395,
+        "score_vs_raw_gain_spearman": 0.344454793562216,
+        "stage": 3
+      }
+    ],
+    "standardized_co_primary": {
+      "fit_whitened_vs_analytic": -0.07195980285298036,
+      "raw_vs_analytic": 0.727283559840226
+    },
+    "thresholds": [
+      0.036598234837386154,
+      0.059525666089429635,
+      0.11451476688987573
+    ],
+    "within_episode_histograms_preserved": true
+  },
+  "evaluation_arrays_sha256": "30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8",
+  "gate_freeze_sha256": "fd51d34247f8d03b096b03bbe8e42498b0879945081ac9a115e82ac44086f9c5",
+  "independent_verification_required_for_final_label": true,
+  "intervals_exploratory": true,
+  "pilot_positive": false,
+  "primary": {
+    "fit_whitened": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0006292011461374621,
+      "ci_low": -0.001258993862851233,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": -0.0003099001292221187
+    },
+    "raw": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 7181991,
+      "ci_high": 0.0050886442555326565,
+      "ci_low": 0.0027287252766780828,
+      "confidence": 0.95,
+      "episode_count": 80,
+      "exploratory": true,
+      "mean_benefit": 0.003909796985389183
+    }
+  },
+  "process_valid": true,
+  "proposed_scientific_label": "pusht_replication_pilot_not_supported",
+  "schema_version": 1,
+  "stagewise_rank": [
+    {
+      "reached_rows": 1440,
+      "score_vs_combined_gain_spearman": 0.429762516764331,
+      "score_vs_fit_whitened_gain_spearman": 0.3805736065652037,
+      "score_vs_raw_gain_spearman": 0.4236823714067506,
+      "stage": 1
+    },
+    {
+      "reached_rows": 351,
+      "score_vs_combined_gain_spearman": 0.37671439671439666,
+      "score_vs_fit_whitened_gain_spearman": 0.32348179598179594,
+      "score_vs_raw_gain_spearman": 0.3625111000111,
+      "stage": 2
+    },
+    {
+      "reached_rows": 309,
+      "score_vs_combined_gain_spearman": 0.3908497077617027,
+      "score_vs_fit_whitened_gain_spearman": 0.37973570432073395,
+      "score_vs_raw_gain_spearman": 0.344454793562216,
+      "stage": 3
+    }
+  ],
+  "status": "evaluation_outcome_opened_once_and_decision_locked"
+}

@@ -1,0 +1,93 @@
+{
+  "canonical_evidence_changed_during_audit": false,
+  "canonical_security": {
+    "full_program_record_types": [
+      "directory",
+      "regular_file"
+    ],
+    "full_program_symlink_count": 0,
+    "snapshot_paths_relative_and_parent_free": true,
+    "v001_v004_record_types": [
+      "directory",
+      "regular_file"
+    ],
+    "v001_v004_symlink_count": 0,
+    "v5_raw_files_regular_not_symlink": true,
+    "v5_raw_hashes_unique": true,
+    "v5_raw_identifiers_unique": true,
+    "v5_raw_paths_relative_and_parent_free": true,
+    "v5_raw_paths_resolve_within_repo": true,
+    "v5_raw_paths_unique": true
+  },
+  "checks": {
+    "canonical_paths_relative_confined_regular_unique": true,
+    "canonical_snapshot_contains_only_directories_and_regular_files": true,
+    "decision_known_sha256": true,
+    "full_program_aggregate_exact": true,
+    "full_program_content_exact": true,
+    "full_program_path_set_exact": true,
+    "full_program_stat_exact": true,
+    "independent_audit_known_sha256": true,
+    "v001_v004_aggregate_exact": true,
+    "v001_v004_content_exact": true,
+    "v001_v004_path_set_exact": true,
+    "v001_v004_stat_exact": true
+  },
+  "created_unix_ns": 1784240999983722000,
+  "full_readiness_program_supplement": {
+    "added_paths": [],
+    "aggregate_exact": true,
+    "all_record_fields_exact": true,
+    "changed_records": [],
+    "content_changed_records": [],
+    "content_exact": true,
+    "final_aggregate_sha256": "ec48c0670f8167f761debff613929578b83b5489b88ba129468fe3462827ebaa",
+    "final_record_count": 7360,
+    "initial_aggregate_sha256": "ec48c0670f8167f761debff613929578b83b5489b88ba129468fe3462827ebaa",
+    "initial_record_count": 7360,
+    "path_set_exact": true,
+    "removed_paths": [],
+    "stat_changed_records": [],
+    "stat_exact": true
+  },
+  "known_terminal_hashes": {
+    "decision_sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5",
+    "independent_verification_sha256": "d30e58466184ac98c5643ea6242e1fb1d95cc2f820c001be16aee3556903c3f0"
+  },
+  "passed": true,
+  "schema_version": 1,
+  "snapshot_files": {
+    "final": {
+      "path": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/SOURCE_FINAL_SNAPSHOT.json",
+      "sha256": "afeb5345aa4cce4077add43eb200f29e8757bb2061d021ac843873615d53d4ec"
+    },
+    "final_supplement": {
+      "path": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/SOURCE_FINAL_SNAPSHOT_SUPPLEMENT.json",
+      "sha256": "0503d0c48e5e8f65e805fec9f50758f48297a7ea04101d282410fce06653c122"
+    },
+    "initial": {
+      "path": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/SOURCE_SNAPSHOT.json",
+      "sha256": "874bf84956cf1fff054c52294b7f6857f8e25b2c383af58068bf5a61bebdcf4b"
+    },
+    "initial_supplement": {
+      "path": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/SOURCE_SNAPSHOT_SUPPLEMENT.json",
+      "sha256": "a01ef815f81668f7ba777cb615d952a714739b6734e4e2070b2da9d550e35a50"
+    }
+  },
+  "v001_v004": {
+    "added_paths": [],
+    "aggregate_exact": true,
+    "all_record_fields_exact": true,
+    "changed_records": [],
+    "content_changed_records": [],
+    "content_exact": true,
+    "final_aggregate_sha256": "ef8fdadfd5ea2221a833e1582b85ca1ea441cbbd90dd29911acc3d433c8a4619",
+    "final_record_count": 3649,
+    "initial_aggregate_sha256": "ef8fdadfd5ea2221a833e1582b85ca1ea441cbbd90dd29911acc3d433c8a4619",
+    "initial_record_count": 3649,
+    "path_set_exact": true,
+    "removed_paths": [],
+    "stat_changed_records": [],
+    "stat_exact": true
+  }
+}

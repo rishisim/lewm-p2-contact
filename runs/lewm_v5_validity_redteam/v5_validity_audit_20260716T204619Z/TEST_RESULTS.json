@@ -1,0 +1,897 @@
+{
+  "created_unix_ns": 1784241431964413000,
+  "domain_summary": {
+    "causal_input_target_leakage": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 4,
+      "test_count": 4
+    },
+    "chain_of_custody": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 5,
+      "test_count": 5
+    },
+    "clean_room_recomputation": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 7,
+      "test_count": 7
+    },
+    "compute_comparator_fairness": {
+      "fail_count": 1,
+      "failed_ids": [
+        "CMP-01"
+      ],
+      "pass_count": 3,
+      "test_count": 4
+    },
+    "confirmation_isolation": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 5,
+      "test_count": 5
+    },
+    "exclusions_recovery": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 3,
+      "test_count": 3
+    },
+    "fail_closed_fault_injection": {
+      "fail_count": 2,
+      "failed_ids": [
+        "FLT-02",
+        "FLT-03"
+      ],
+      "pass_count": 3,
+      "test_count": 5
+    },
+    "frozen_implementation": {
+      "fail_count": 1,
+      "failed_ids": [
+        "FRZ-03"
+      ],
+      "pass_count": 3,
+      "test_count": 4
+    },
+    "inference_sparse_execution": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 4,
+      "test_count": 4
+    },
+    "negative_controls": {
+      "fail_count": 1,
+      "failed_ids": [
+        "NEG-03"
+      ],
+      "pass_count": 4,
+      "test_count": 5
+    },
+    "statistical_numerical_sensitivity": {
+      "fail_count": 0,
+      "failed_ids": [],
+      "pass_count": 3,
+      "test_count": 3
+    }
+  },
+  "plan_seal_sha256": "f858a3b36499420299356315cf86008dd6119add993574728a36a0d236f29c81",
+  "post_hoc_diagnostics_not_counted_as_predeclared_passes": [
+    {
+      "artifact": "NEGATIVE_CONTROLS.json",
+      "name": "loss-profile episode-block permutation",
+      "result": "raw/white plus-one p=0.00049975"
+    },
+    {
+      "artifact": "REPLAY_RESULTS.json",
+      "name": "second order-matched direct-module replay",
+      "result": "features/scores/calls/outputs exact"
+    },
+    {
+      "artifact": "REPLAY_RESULTS_INITIAL_FAILURE.json",
+      "name": "replay initial-failure diagnosis",
+      "result": "audit harness omitted rtol in acceptance; no V5 output/call defect"
+    }
+  ],
+  "schema_version": 1,
+  "sealed_matrix_sha256": "8cc2181ca7b68dc6d14c75432fb1cfa13e27301d0f4eb13e1e6cc8ea1e6e963c",
+  "summary": {
+    "decision_critical_count": 43,
+    "decision_critical_fail_count": 4,
+    "decision_critical_failed_test_ids": [
+      "FRZ-03",
+      "CMP-01",
+      "FLT-02",
+      "FLT-03"
+    ],
+    "decision_critical_pass_count": 39,
+    "fail_count": 5,
+    "failed_test_ids": [
+      "FRZ-03",
+      "CMP-01",
+      "FLT-02",
+      "FLT-03",
+      "NEG-03"
+    ],
+    "mandatory_for_support_count": 49,
+    "not_run_count": 0,
+    "partial_count": 0,
+    "pass_count": 44,
+    "test_count": 49
+  },
+  "tests": [
+    {
+      "decision_critical": true,
+      "domain": "chain_of_custody",
+      "evidence": [
+        "SOURCE_SNAPSHOT.json",
+        "CHRONOLOGY_AUDIT.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "falsification": "missing version root, unreadable file, unstable read, or incomplete path set",
+      "id": "COC-01",
+      "mandatory_for_support": true,
+      "method": "lstat every path without following symlinks; SHA-256 every regular file; canonical aggregate over sorted records",
+      "observed": "Initial lstat/SHA-256 snapshot covered 3,612 regular files and 37 directories across v001-v004.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Complete v001-v004 initial path/hash/stat snapshot"
+    },
+    {
+      "decision_critical": true,
+      "domain": "chain_of_custody",
+      "evidence": [
+        "SOURCE_SNAPSHOT.json",
+        "CHRONOLOGY_AUDIT.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "falsification": "performance-relevant change after first V5 outcome, irreconcilable ordering, or unexplained earlier outcome",
+      "id": "COC-02",
+      "mandatory_for_support": true,
+      "method": "correlate states, ledgers, preregistrations, manifests, logs, decisions, hashes, filesystem times, and source diffs",
+      "observed": "v001 had 101 pre-outcome wrong-runtime failures and zero outcomes; v002/v003 failed preseal with zero outcomes; only v004 completed.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Version and recovery chronology reconstruction"
+    },
+    {
+      "decision_critical": true,
+      "domain": "chain_of_custody",
+      "evidence": [
+        "SOURCE_SNAPSHOT.json",
+        "CHRONOLOGY_AUDIT.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "falsification": "unfrozen performance-relevant component or post-outcome selection",
+      "id": "COC-03",
+      "mandatory_for_support": true,
+      "method": "map model, gate, normalization, compute price, stopping rule, analysis, and outcome mapping to seals/timestamps before execution",
+      "observed": "Scientific sources, model/gate/whitening artifacts, thresholds, analysis seeds, outcome mapping, and compute constants were hash-bound before raw V5.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Pre-outcome freeze coverage"
+    },
+    {
+      "decision_critical": true,
+      "domain": "chain_of_custody",
+      "evidence": [
+        "SOURCE_SNAPSHOT.json",
+        "CHRONOLOGY_AUDIT.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "falsification": "unexplained launch, outcome, retry, or abandoned partial cohort",
+      "id": "COC-04",
+      "mandatory_for_support": true,
+      "method": "enumerate version/recovery directories, logs, temporary artifacts, manifests, ledgers, and state transitions",
+      "observed": "No hidden/partial v004 raw artifacts or failure ledger; v004 contains exactly 1,600 NPZs and sidecars and no replacements.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Partial launch and abandoned outcome search"
+    },
+    {
+      "decision_critical": true,
+      "domain": "chain_of_custody",
+      "evidence": [
+        "SOURCE_SNAPSHOT.json",
+        "CHRONOLOGY_AUDIT.json",
+        "SOURCE_FINAL_HASHES.json"
+      ],
+      "falsification": "unreconciled source content/path/stat change during audit",
+      "id": "COC-05",
+      "mandatory_for_support": true,
+      "method": "repeat COC-01 and exact-compare path set, content hashes, sizes, modes, and timestamps",
+      "observed": "Initial/final v001-v004 and full-program path, content, and stat records are exact; aggregate hashes are unchanged.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Final canonical path/hash/stat stability"
+    },
+    {
+      "decision_critical": true,
+      "domain": "confirmation_isolation",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "any unexplained exact V5 membership in an earlier fitting/selection cohort",
+      "id": "ISO-01",
+      "mandatory_for_support": true,
+      "method": "extract V5 identifiers/seeds and compare with accessible training, discovery, calibration, qualification, and normalization cohorts excluding V3 test targets",
+      "observed": "No V5 ID or exact structured seed overlaps 31,629 accessible prior IDs or 28,427 accessible prior seeds.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Exact identifier and seed overlap"
+    },
+    {
+      "decision_critical": true,
+      "domain": "confirmation_isolation",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "collision or reuse capable of reproducing a V5 episode",
+      "id": "ISO-02",
+      "mandatory_for_support": true,
+      "method": "reconstruct seed transforms and compare raw/base/derived seed tuples across accessible cohorts",
+      "observed": "No low-32-bit or SeedSequence-state transformed seed overlap.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Transformed-seed and derivation overlap"
+    },
+    {
+      "decision_critical": true,
+      "domain": "confirmation_isolation",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "V5-equivalent raw episode or trajectory in an earlier fitting/selection cohort",
+      "id": "ISO-03",
+      "mandatory_for_support": true,
+      "method": "compare whole-file, array, initial-state, action, observation, and trajectory hashes where common fields exist",
+      "observed": "All 1,600 V5 raw archives and 2,472 accessible prior raw archives were fingerprinted; no state/action/observation/initial-pixel exact collision.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Exact raw and trajectory fingerprint overlap"
+    },
+    {
+      "decision_critical": true,
+      "domain": "confirmation_isolation",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "unexplained cross-cohort near duplicate at a threshold consistent with causal equivalence",
+      "id": "ISO-04",
+      "mandatory_for_support": true,
+      "method": "quantized fingerprints and nearest-neighbor distances calibrated against within-cohort and synthetic perturbation distances",
+      "observed": "No cross-cohort state/action/observation/pixel sketch fell below the predeclared near-duplicate threshold.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Near-duplicate state/action/observation search"
+    },
+    {
+      "decision_critical": true,
+      "domain": "confirmation_isolation",
+      "evidence": [
+        "COHORT_ISOLATION.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "normalization, whitening, threshold, or qualification statistic derived from V5 outcomes/targets",
+      "id": "ISO-05",
+      "mandatory_for_support": true,
+      "method": "trace all fit statistics and qualification inputs to pre-V5 source cohorts and hashes",
+      "observed": "Fit/selection isolation is frozen pre-V5; runtime/canary audit found no confirmation-derived normalization or whitening input.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "No V5-derived normalization or qualification"
+    },
+    {
+      "decision_critical": true,
+      "domain": "causal_input_target_leakage",
+      "evidence": [
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "privileged/future field reaches gate or an input origin/timing is unresolved",
+      "id": "LEAK-01",
+      "mandatory_for_support": true,
+      "method": "AST/text/manual trace from raw loader through feature transforms, score, threshold, and call",
+      "observed": "Static gate inputs are history, action history, current prediction, last update, and frozen stage parameters only.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Static gate dataflow inventory"
+    },
+    {
+      "decision_critical": true,
+      "domain": "causal_input_target_leakage",
+      "evidence": [
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "runtime accesses an undeclared or privileged value",
+      "id": "LEAK-02",
+      "mandatory_for_support": true,
+      "method": "instrument copied loader/mapping access and gate boundary to log keys, shapes, values' origins, and access order",
+      "observed": "Runtime tracing materialized only action and pixels.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Runtime gate input access trace"
+    },
+    {
+      "decision_critical": true,
+      "domain": "causal_input_target_leakage",
+      "evidence": [
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "loader/gate observes, forwards, or reacts to any canary",
+      "id": "LEAK-03",
+      "mandatory_for_support": true,
+      "method": "inject sentinel future_obs, target, loss, gain, contact, reward, done, success, oracle, and future_summary fields into copied inputs and independently perturb them",
+      "observed": "Twelve privileged canary families were never materialized and changing them left loader outputs invariant.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Privileged canary rejection and invariance"
+    },
+    {
+      "decision_critical": true,
+      "domain": "causal_input_target_leakage",
+      "evidence": [
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "any feature is unavailable at the decision point or depends on future transitions",
+      "id": "LEAK-04",
+      "mandatory_for_support": true,
+      "method": "document timestamp and causal availability for every scalar/tensor entering each decision",
+      "observed": "Every gate input is available at the decision; target latent appears only after routing for audit/analysis.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Decision-time availability table"
+    },
+    {
+      "decision_critical": true,
+      "domain": "frozen_implementation",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "falsification": "missing or mismatched performance-relevant artifact",
+      "id": "FRZ-01",
+      "mandatory_for_support": true,
+      "method": "independently hash models, solver exits, gate, fit, whitening, normalization, thresholds, runtime contract, and source against manifests/seals",
+      "observed": "All preseal, frozen-candidate, external-model, input-seal, and package-ready hash checks pass now under both declared runtimes.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Frozen artifact hash verification"
+    },
+    {
+      "decision_critical": true,
+      "domain": "frozen_implementation",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "falsification": "executed implementation cannot be tied to sealed bytes or a substitution path exists",
+      "id": "FRZ-02",
+      "mandatory_for_support": true,
+      "method": "correlate execution manifests/logs/runtime attestation with sealed source and loaded module paths",
+      "observed": "Sealed sources and stable frozen module-state digests are tied to exact full MPS replay; historical device is strongly inferred though not manifest-explicit.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Executed-code provenance"
+    },
+    {
+      "decision_critical": true,
+      "domain": "frozen_implementation",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "falsification": "environment-dependent performance path or unrecorded dependency can change outputs",
+      "id": "FRZ-03",
+      "mandatory_for_support": true,
+      "method": "static scan plus controlled environment perturbations on copied code",
+      "observed": "FAIL: runtime sealing does not hash the complete transitive Python/native/MPS dependency graph or loaded sys.modules/OS build. Exact replay bounds but does not retroactively attest the historical environment.",
+      "post_hoc": false,
+      "status": "fail",
+      "title": "Dynamic import, fallback, bytecode, and environment scan"
+    },
+    {
+      "decision_critical": true,
+      "domain": "frozen_implementation",
+      "evidence": [
+        "IMPLEMENTATION_INTEGRITY.json",
+        "REPLAY_RESULTS.json"
+      ],
+      "falsification": "nondeterminism or implicit training/device branch changes decisions",
+      "id": "FRZ-04",
+      "mandatory_for_support": true,
+      "method": "inspect and replay repeated copied inference under recorded conditions and safe alternative batching",
+      "observed": "Module state/gradients are unchanged and repeated packaged inference is exact for all 60,800 rows.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Determinism, gradients, dtype, and device contract"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "clean-room implementation disagrees with hand calculations",
+      "id": "NUM-01",
+      "mandatory_for_support": true,
+      "method": "hand-constructed fixtures covering exits, reachability, comparators, whitening, bootstrap, ranks, and outcome mapping",
+      "observed": "All hand/synthetic calls, mixture, quantile, rank, and Spearman fixtures pass.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Synthetic clean-room harness validation"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "verified discrepancy beyond preregistered tolerance",
+      "id": "NUM-02",
+      "mandatory_for_support": true,
+      "method": "independent float64 tensor arithmetic and aggregation without package analysis imports",
+      "observed": "Per-transition and per-episode errors independently agree within tolerance.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Per-transition and per-episode error recomputation"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "any Boolean call, reached-stage count, or histogram mismatch",
+      "id": "NUM-03",
+      "mandatory_for_support": true,
+      "method": "reapply frozen score thresholds and reachability rules independently",
+      "observed": "Calls, reached counts, histogram [50,973, 7,267, 1,773, 787], and threshold decisions reproduce exactly.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Adaptive calls, stage reach, and histograms"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "comparator value, call mapping, or information-set mismatch",
+      "id": "NUM-04",
+      "mandatory_for_support": true,
+      "method": "construct allowed comparator policies from frozen exit errors and exact costs",
+      "observed": "Fixed exits and every transition-independent comparator mapping reproduce.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Fixed-exit and transition-independent comparator recomputation"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "effect mismatch beyond tolerance or sign disagreement",
+      "id": "NUM-05",
+      "mandatory_for_support": true,
+      "method": "float64 independent aggregation from per-transition errors and frozen whitening constants",
+      "observed": "Raw and native-whitened effects and bounds reproduce to machine precision.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Raw and native-whitened effect recomputation"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "decision-critical interval/bound/rank mismatch beyond tolerance",
+      "id": "NUM-06",
+      "mandatory_for_support": true,
+      "method": "independent resample-index generation/aggregation, Bonferroni bounds, and deterministic average-rank statistics",
+      "observed": "All 20,000 bootstrap streams/quantiles, Bonferroni bounds, and stage ranks reproduce.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Bootstrap, simultaneous bounds, and ranks"
+    },
+    {
+      "decision_critical": true,
+      "domain": "clean_room_recomputation",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "claimed terminal label does not follow from frozen rule and recomputed values",
+      "id": "NUM-07",
+      "mandatory_for_support": true,
+      "method": "evaluate preregistered predicates independently from recomputed statistics",
+      "observed": "Recomputed predicates map exactly to v5_confirmation_passed.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Terminal outcome mapping"
+    },
+    {
+      "decision_critical": true,
+      "domain": "inference_sparse_execution",
+      "evidence": [
+        "REPLAY_RESULTS.json",
+        "REPLAY_RESULTS_INITIAL_FAILURE.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "output/call mismatch beyond tolerance or material unreplayed surface",
+      "id": "RPL-01",
+      "mandatory_for_support": true,
+      "method": "replay frozen loader, solver exits, gate, and sparse execution from raw inputs for all 60,800 transitions",
+      "observed": "Complete packaged-path replay covers all 1,600 episodes/60,800 rows with exact targets, exits, sparse outputs, calls, scores, and features.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Complete packaged-path replay"
+    },
+    {
+      "decision_critical": true,
+      "domain": "inference_sparse_execution",
+      "evidence": [
+        "REPLAY_RESULTS.json",
+        "REPLAY_RESULTS_INITIAL_FAILURE.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "persistent disagreement with preserved execution or packaged replay",
+      "id": "RPL-02",
+      "mandatory_for_support": true,
+      "method": "load frozen modules/artifacts through a separately batched path without package runner orchestration",
+      "observed": "Independent explicit sqrt/sum algebra is within audit tolerance with exact calls/outputs; a second vector_norm-order transcription is bit exact.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Independent direct-module replay strategy"
+    },
+    {
+      "decision_critical": true,
+      "domain": "inference_sparse_execution",
+      "evidence": [
+        "REPLAY_RESULTS.json",
+        "REPLAY_RESULTS_INITIAL_FAILURE.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "row identity/order, output, or decision mismatch",
+      "id": "RPL-03",
+      "mandatory_for_support": true,
+      "method": "synthetic indexed rows plus real reached rows across batch sizes and permutations",
+      "observed": "Dense/sparse, forward_selected/manual sparse, row identity, and restoration are exact/within the sealed output contract.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Dense versus sparse and row restoration equivalence"
+    },
+    {
+      "decision_critical": true,
+      "domain": "inference_sparse_execution",
+      "evidence": [
+        "REPLAY_RESULTS.json",
+        "REPLAY_RESULTS_INITIAL_FAILURE.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "unreached values affect calls, NaNs pass silently, or documented comparator/operator differs",
+      "id": "RPL-04",
+      "mandatory_for_support": true,
+      "method": "synthetic and real near-threshold probes around each exact threshold",
+      "observed": "Reached values are finite, unreached values NaN, calls are stable, and minimum active score margins are 2.50e-5, 8.82e-5, and 2.85e-5.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "NaN, unreached-stage, and threshold boundary behavior"
+    },
+    {
+      "decision_critical": true,
+      "domain": "compute_comparator_fairness",
+      "evidence": [
+        "COMPUTE_AUDIT.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "claimed total differs or overhead is omitted",
+      "id": "CMP-01",
+      "mandatory_for_support": true,
+      "method": "derive integer FLOPs from layer/tensor shapes and executed call counts including feature and gate overhead",
+      "observed": "FAIL: 4,332,936,120,435 is exactly reproduced under the inherited ledger, including 584,398,195 gate FLOPs, but it omits executed pixel encoding and visible bias/GELU/alpha/residual operations.",
+      "post_hoc": false,
+      "status": "fail",
+      "title": "Operation graph and exact FLOP derivation"
+    },
+    {
+      "decision_critical": true,
+      "domain": "compute_comparator_fairness",
+      "evidence": [
+        "COMPUTE_AUDIT.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "privileged transition information, wrong mixture, or rounding capable of reversing benefit",
+      "id": "CMP-02",
+      "mandatory_for_support": true,
+      "method": "derive transition-independent mixture from allowed aggregate call/compute information using exact rational bounds",
+      "observed": "Analytic comparator uses a global transition-independent d1/d2 mixture; weight 0.25295409752763076 reproduces exactly.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Analytic comparator information and mixture fairness"
+    },
+    {
+      "decision_critical": true,
+      "domain": "compute_comparator_fairness",
+      "evidence": [
+        "COMPUTE_AUDIT.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "any claimed matched comparator uses less total compute",
+      "id": "CMP-03",
+      "mandatory_for_support": true,
+      "method": "exact integer recomputation for every seeded realization and total",
+      "observed": "Seeded comparator uses 4,332,936,224,000 declared FLOPs, exactly 103,565 more than adaptive.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Seeded comparator weakly-more-compute proof"
+    },
+    {
+      "decision_critical": true,
+      "domain": "compute_comparator_fairness",
+      "evidence": [
+        "COMPUTE_AUDIT.json",
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "wrong exit mapping, reachability, or episode allocation",
+      "id": "CMP-04",
+      "mandatory_for_support": true,
+      "method": "independently map every comparator call/histogram to exit outputs and costs",
+      "observed": "Call-count and within-episode histogram-to-exit mappings reproduce exactly.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Call-count and within-episode histogram mapping"
+    },
+    {
+      "decision_critical": true,
+      "domain": "exclusions_recovery",
+      "evidence": [
+        "CHRONOLOGY_AUDIT.json"
+      ],
+      "falsification": "count, membership, or row-accounting mismatch",
+      "id": "EXC-01",
+      "mandatory_for_support": true,
+      "method": "cross-check raw/execution manifests, arrays, IDs, row counts, and per-episode transition counts",
+      "observed": "Exactly 1,600 episodes \u00d7 38 rows = 60,800 transitions across manifests/arrays.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Exact 1,600 episode and 60,800 transition cohort"
+    },
+    {
+      "decision_critical": true,
+      "domain": "exclusions_recovery",
+      "evidence": [
+        "CHRONOLOGY_AUDIT.json"
+      ],
+      "falsification": "replacement, duplicate, omitted attempt, or unexplained missing episode",
+      "id": "EXC-02",
+      "mandatory_for_support": true,
+      "method": "reconstruct attempted generation and compare unique IDs/seeds/path sets across raw and execution evidence",
+      "observed": "All IDs, raw paths, raw hashes, and slots are unique; zero replacements.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Zero replacements and unique identifiers"
+    },
+    {
+      "decision_critical": true,
+      "domain": "exclusions_recovery",
+      "evidence": [
+        "CHRONOLOGY_AUDIT.json"
+      ],
+      "falsification": "recovery/exclusion/restart depends on observed model performance or decision",
+      "id": "EXC-03",
+      "mandatory_for_support": true,
+      "method": "trace recovery trigger, timing, inputs, and resumed cohort boundaries against preregistered rules",
+      "observed": "Recovery failures preceded outcomes and were runtime/preseal-rule based, not performance conditioned.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Recovery rule independence from performance"
+    },
+    {
+      "decision_critical": true,
+      "domain": "fail_closed_fault_injection",
+      "evidence": [
+        "FAULT_INJECTION.json"
+      ],
+      "falsification": "applicable preflight/final verifier reports success",
+      "id": "FLT-01",
+      "mandatory_for_support": true,
+      "method": "one-byte outcome corruption plus model and gate hash mismatches on independent copies",
+      "observed": "One-byte execution and gate corruptions are hash-rejected.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Content and artifact hash corruptions fail closed"
+    },
+    {
+      "decision_critical": true,
+      "domain": "fail_closed_fault_injection",
+      "evidence": [
+        "FAULT_INJECTION.json"
+      ],
+      "falsification": "applicable loader/verifier accepts corrupted cohort as confirmation",
+      "id": "FLT-02",
+      "mandatory_for_support": true,
+      "method": "missing raw, extra raw, duplicate ID, manifest mismatch, and reordered rows on independent copies",
+      "observed": "FAIL: missing/extra/hash mismatch reject, but existing-manifest preflight accepts duplicate ID metadata and semantic verifier accepts a consistently rebound row order.",
+      "post_hoc": false,
+      "status": "fail",
+      "title": "Path-set and identifier corruptions fail closed"
+    },
+    {
+      "decision_critical": true,
+      "domain": "fail_closed_fault_injection",
+      "evidence": [
+        "FAULT_INJECTION.json"
+      ],
+      "falsification": "loader escapes root or verifier follows unapproved symlink",
+      "id": "FLT-03",
+      "mandatory_for_support": true,
+      "method": "independent-copy path traversal manifest and symlinked artifact substitution",
+      "observed": "FAIL: raw preflight accepts ../ root escape with a matching declared hash and final verifier follows a byte-identical external symlink.",
+      "post_hoc": false,
+      "status": "fail",
+      "title": "Traversal and symlink substitution fail closed"
+    },
+    {
+      "decision_critical": true,
+      "domain": "fail_closed_fault_injection",
+      "evidence": [
+        "FAULT_INJECTION.json"
+      ],
+      "falsification": "applicable verifier still authenticates the original confirmation",
+      "id": "FLT-04",
+      "mandatory_for_support": true,
+      "method": "change one frozen threshold, compute price, and interpreter/runtime condition on copies",
+      "observed": "Threshold, compute-price, and wrong-interpreter mutations reject.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Threshold, compute-price, and runtime changes fail closed"
+    },
+    {
+      "decision_critical": true,
+      "domain": "fail_closed_fault_injection",
+      "evidence": [
+        "FAULT_INJECTION.json"
+      ],
+      "falsification": "unexpected privileged field is silently consumed or changes decision",
+      "id": "FLT-05",
+      "mandatory_for_support": true,
+      "method": "add sentinel privileged fields to copied raw input and exercise preflight/loader/gate",
+      "observed": "Post-manifest privileged fields reject; pre-manifest unknown fields are safely allowlist-ignored, not materialized, and leave outputs exact.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Unexpected privileged input field fails closed"
+    },
+    {
+      "decision_critical": false,
+      "domain": "negative_controls",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "real benefit is not in the favorable 5% tail or constraints fail",
+      "id": "NEG-01",
+      "mandatory_for_support": true,
+      "method": "2,000 deterministic reachability-preserving permutations with master seed 510001",
+      "observed": "2,000 within-episode/reachability permutations: raw/white p=0.00049975.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Within-stratum score/decision permutation"
+    },
+    {
+      "decision_critical": false,
+      "domain": "negative_controls",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "real benefit is not distinguishable at one-sided plus-one p<0.05 or matching fails",
+      "id": "NEG-02",
+      "mandatory_for_support": true,
+      "method": "2,000 random policies (510002) and 2,000 mixed policies (510003) preserving total calls/compute and valid reachability",
+      "observed": "2,000 random and 2,000 constant/mixed compute-matched policies: raw/white p=0.00049975.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Random and constant/mixed matched-compute policies"
+    },
+    {
+      "decision_critical": false,
+      "domain": "negative_controls",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "destroyed alignment retains a result at least as favorable with plus-one p>=0.05",
+      "id": "NEG-03",
+      "mandatory_for_support": true,
+      "method": "2,000 deterministic episode or valid-transition-block permutations with master seed 510004",
+      "observed": "FAIL retained: 1,000 whole-episode target reassignments give raw p=0.164835 (white p=0.000999); second 1600\u00d71600 implementation agrees.",
+      "post_hoc": false,
+      "status": "fail",
+      "title": "Target/block alignment permutation"
+    },
+    {
+      "decision_critical": false,
+      "domain": "negative_controls",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "real allocation is not favorably distinguishable or reverse ordering improves equivalently",
+      "id": "NEG-04",
+      "mandatory_for_support": true,
+      "method": "2,000 matched-compute association breaks (510005) and 2,000 reversals/perturbations (510006)",
+      "observed": "2,000 score-gain breaks and 2,000 perturbed reversed orderings give raw/white p=0.00049975; deterministic reversal is worse.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Broken score-gain association and ordering reversal"
+    },
+    {
+      "decision_critical": true,
+      "domain": "negative_controls",
+      "evidence": [
+        "NEGATIVE_CONTROLS.json",
+        "CAUSAL_INPUT_AUDIT.json"
+      ],
+      "falsification": "any decision-critical output changes",
+      "id": "NEG-05",
+      "mandatory_for_support": true,
+      "method": "add and vary audit-only unused fields and require byte/semantic identity of all decision outputs",
+      "observed": "Two extreme unused-field values leave every semantic output digest exact.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Unused output field invariance"
+    },
+    {
+      "decision_critical": true,
+      "domain": "statistical_numerical_sensitivity",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "sign/decision changes or discrepancy exceeds declared floating tolerance without explanation",
+      "id": "SNS-01",
+      "mandatory_for_support": true,
+      "method": "original/reversed/shuffled order with float64, pairwise, Kahan, and math.fsum accumulation",
+      "observed": "Forward/reverse NumPy and math.fsum raw effects are identical.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Aggregation and accumulation sensitivity"
+    },
+    {
+      "decision_critical": false,
+      "domain": "statistical_numerical_sensitivity",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "scientific sign or preregistered decision is convention-fragile",
+      "id": "SNS-02",
+      "mandatory_for_support": true,
+      "method": "independent seeded indices and standard linear/lower/higher/midpoint quantile conventions",
+      "observed": "All standard bootstrap quantile conventions retain positive lower bounds.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Bootstrap and quantile implementation sensitivity"
+    },
+    {
+      "decision_critical": false,
+      "domain": "statistical_numerical_sensitivity",
+      "evidence": [
+        "CLEAN_ROOM_RECOMPUTATION.json"
+      ],
+      "falsification": "a very small subset can reverse the sign or dominates the scientific interpretation",
+      "id": "SNS-03",
+      "mandatory_for_support": true,
+      "method": "compute all leave-one-episode effects, influence bounds, and deterministic seed-block summaries",
+      "observed": "Every leave-one-episode-out effect is positive; all 100-episode block means are positive.",
+      "post_hoc": false,
+      "status": "pass",
+      "title": "Leave-one-episode and seed-block influence"
+    }
+  ]
+}

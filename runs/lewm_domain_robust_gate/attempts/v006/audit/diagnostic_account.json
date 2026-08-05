@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "checkpoint_state": "DIAGNOSTIC_ACCOUNT",
+  "created_unix_ns": 1784257171729266000,
+  "classification": "read_only_consumed_evidence_rehash_claim_boundary_and_mechanistic_diagnosis",
+  "diagnostic_account": {
+    "path": "runs/lewm_domain_robust_gate/attempts/v001/DIAGNOSTIC_ACCOUNT.md",
+    "sha256": "327aa0fd164ba5c79ce1140402f6542a1ae53d3e67240347ab0c2705c506b727"
+  },
+  "v5_v004": {
+    "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "terminal_label": "v5_confirmation_passed",
+    "process_valid": true,
+    "confirmation_episodes": 1600,
+    "confirmation_rows": 60800,
+    "package_ready_sha256": "0701a0133b0e62a1068559308c470ca1923b0c3a27c51e1ce0231cd007f691fc",
+    "artifact_manifest_sha256": "cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526",
+    "pre_v5_seal_sha256": "c2853b726cf2e596ab3fda47ae1cae5aba1308f8f0c6409732acf4dc430677d6",
+    "confirmation_input_seal_sha256": "b1696240bf80b293fee5274e7c1279b27a214f5e0ed537f01a476a9deb3cd119",
+    "analysis_sha256": "3d6ce72bdb1c9e2330654d2822d592b8a387399cc44370931989accbf874eecc",
+    "independent_verification_sha256": "d30e58466184ac98c5643ea6242e1fb1d95cc2f820c001be16aee3556903c3f0",
+    "decision_sha256": "69bb8af8d80d7e18aeabc5430963c57b1bc91be603745d5a0d5f1a855d61fbe5",
+    "gate_freeze_seal_sha256": "90b44528119b576d742d91572eab0f442dca748e5966b47a3a156cb02dd6bb36",
+    "manifest_rehash_counts": {
+      "artifact_manifest_files": 92,
+      "transitive_inputs": 102,
+      "pre_v5_seal_entries": 103,
+      "confirmation_raw_episodes": 1600,
+      "confirmation_aggregate_inputs": 3
+    },
+    "all_rehashed_entries_match": true,
+    "simultaneous_raw_lower": 0.000005423955,
+    "simultaneous_native_whitened_lower": 0.0005135570
+  },
+  "v005": {
+    "path": "runs/lewm_v5_generalization/attempts/v005",
+    "terminal_label": "zero_shot_generalization_partial",
+    "process_valid": true,
+    "target_episodes": 9000,
+    "target_rows": 342000,
+    "replacement_count": 0,
+    "bootstrap_replicates": 20000,
+    "supported_co_primary_claims": 4,
+    "co_primary_family_size": 6,
+    "decision_sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38",
+    "independent_verification_sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6",
+    "analysis_sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8",
+    "robustness_map_sha256": "f3b19508936f235a811a483bcbd4364d691a01ad1e9c87a393c8f8ca533f8bb9",
+    "pre_outcome_seal_sha256": "178ba3efa4f66bc20e838a1197d3fdd5214fa3aa040a60534df11379a4720a4e",
+    "target_input_seal_sha256": "029bcebd49526805816353983bdc6eb1761792bcd61f213e583e633c5c66d7de",
+    "follow_on_sha256": "170ab9d3343b1f090ead67791b89b14c94b294bd75d5fd9a4362e4ba84c045e7",
+    "rehash": {
+      "pre_outcome_files_matched": 144,
+      "raw_target_files_matched": 9000,
+      "execution_files_matched": 9000,
+      "target_manifests_matched": 6,
+      "raw_bytes": 33526221401,
+      "execution_bytes": 2384569147,
+      "total_bytes": 35910790548
+    },
+    "regimes": {
+      "markov_oracle": {
+        "label": "mixed",
+        "raw_estimate": -0.0000025137786633814877,
+        "raw_simultaneous_lower": -0.000005677096742246274,
+        "fixed_whitened_estimate": 0.00017736180662955358,
+        "fixed_whitened_simultaneous_lower": 0.00008606212245792454
+      },
+      "plan_action_noise_0p2": {
+        "label": "supported",
+        "raw_estimate": 0.000006690627724886398,
+        "raw_simultaneous_lower": 0.000005233178061723166,
+        "fixed_whitened_estimate": 0.0006314822713329762,
+        "fixed_whitened_simultaneous_lower": 0.0005518158911522297
+      },
+      "plan_random_action_0p1": {
+        "label": "mixed",
+        "raw_estimate": 0.00000009599565687949847,
+        "raw_simultaneous_lower": -0.000003128983968264394,
+        "fixed_whitened_estimate": 0.00042630600368814966,
+        "fixed_whitened_simultaneous_lower": 0.00036053633935118735
+      }
+    }
+  },
+  "claim_boundary": {
+    "native_v5_and_shifted_v005_are_separate_simultaneous_families": true,
+    "simultaneous_four_dgp_robust_claim_established": false,
+    "downstream_control_claim_established": false,
+    "contact_aware_routing_claim_established": false,
+    "wall_clock_acceleration_claim_established": false,
+    "universal_robustness_claim_established": false,
+    "priority_claim_established": false
+  },
+  "access_and_use": {
+    "v005_used_only_for_permitted_diagnosis": true,
+    "v5_or_v005_used_for_new_fit_calibration_whitening_selection_smoke_or_confirmation": false,
+    "v005_raw_or_execution_npz_opened_for_diagnosis": false,
+    "v3_test_targets_opened": false,
+    "combined_v3_cache_numpy_loaded": false,
+    "released_hdf5_opened": false,
+    "contact_motion_phase_reward_or_success_opened": false,
+    "fresh_outcome_episodes": 0
+  },
+  "checks": {
+    "authoritative_hashes_exact": true,
+    "deep_v5_rehash_passed": true,
+    "deep_v005_rehash_passed": true,
+    "terminal_chronology_consistent": true,
+    "claim_boundary_recovered": true,
+    "mechanistic_diagnosis_observation_inference_separated": true,
+    "diagnosis_non_scientific_for_future_fit_and_selection": true
+  },
+  "passed": true
+}

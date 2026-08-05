@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "family": "stage_specific_multi_dgp_robust_dual_endpoint_ridge",
+  "architectures": [
+    {
+      "id": "balanced_pooled_dual",
+      "head_count_per_stage": 2,
+      "fit": "equal-DGP pooled ridge on per-DGP standardized raw and fixed-whitened gain targets",
+      "runtime_score": "minimum of pooled raw and fixed-whitened heads",
+      "gate_flops_per_reached_decision": 7985,
+      "nonflop_operations_per_reached_decision": 5
+    },
+    {
+      "id": "domain_envelope_eight",
+      "head_count_per_stage": 8,
+      "fit": "separate ridge head for every four-DGP by two-endpoint gain target",
+      "runtime_score": "minimum of eight compiled heads without DGP identity",
+      "gate_flops_per_reached_decision": 20537,
+      "nonflop_operations_per_reached_decision": 11
+    }
+  ],
+  "ridge_penalties": [0.01, 1.0, 100.0],
+  "sequential_fit_score_quantiles": [0.55, 0.65, 0.75, 0.85],
+  "candidate_count": 24,
+  "stage_count": 3,
+  "feature_width": 1046,
+  "feature_graph": "unchanged V5 counted causal feature graph",
+  "feature_normalization": {
+    "pooled": "fit-only equal-DGP mean and standard deviation",
+    "envelope": "fit-only per-DGP mean and standard deviation compiled into raw-feature affine coefficients",
+    "minimum_standard_deviation": 0.000001,
+    "runtime_dgp_identity_input": false
+  },
+  "gain_target_standardization": "fit-only separately by DGP, stage, and endpoint",
+  "threshold_rule": "within each candidate, stage thresholds are fit-score quantiles computed sequentially among rows reached by earlier fit thresholds",
+  "co_primary_fit_targets": ["raw_next_stage_gain", "fixed_whitened_next_stage_gain"],
+  "fixed_whitening": "unchanged V5 PlanOracle-native matrix",
+  "fit_derived_robust_whitening": "auxiliary only; never enters selection or terminal mapping",
+  "fit_lock_before_selection_open": true,
+  "selected_head_refit": false,
+  "selection_mechanical_eligibility": {
+    "finite_complete_arrays": true,
+    "exact_calls_and_compute": true,
+    "mean_physical_calls_each_dgp_inclusive": [1.05, 2.5],
+    "minimum_fraction_reaching_stage_2_each_dgp": 0.05,
+    "minimum_fraction_reaching_stage_3_each_dgp": 0.01,
+    "within_episode_histograms_exact": true,
+    "seeded_comparator_weakly_more_compute": true,
+    "effect_sign_filter": false
+  },
+  "selection_standardized_cell": "selection exact-compute contrast mean divided by max(matching candidate fit episode SD,1e-12)",
+  "fixed_ranking": [
+    "maximize minimum of eight DGP-by-endpoint standardized selection cells",
+    "maximize minimum of twelve DGP-by-stage selection score/combined-gain Spearman coefficients",
+    "minimize worst-DGP counted FLOPs per row",
+    "prefer fewer heads",
+    "prefer smaller ridge penalty",
+    "prefer lower sequential fit-score quantile",
+    "lexicographic candidate id"
+  ],
+  "no_mechanically_eligible_candidate": "process-valid domain_robust_gate_failed with zero smoke and confirmation episodes"
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "study": "LeWM domain-robust causal contact-free adaptive-compute gate",
+  "created_before_fresh_outcomes": true,
+  "fresh_outcome_episodes_at_freeze": 0,
+  "regime_order": [
+    "native_plan",
+    "markov_oracle",
+    "plan_action_noise_0p2",
+    "plan_random_action_0p1"
+  ],
+  "environment_common": {
+    "environment": "swm/OGBCube-v0",
+    "env_type": "single",
+    "num_envs": 1,
+    "mode": "data_collection",
+    "height": 224,
+    "width": 224,
+    "image_shape": [224, 224],
+    "max_episode_steps": 200,
+    "terminate_at_goal": false,
+    "visualize_info": false,
+    "frameskip": 5,
+    "history": 3,
+    "model_steps_inclusive": [3, 40],
+    "rows_per_episode": 38,
+    "noise_smoothing": 0.5,
+    "min_norm": 0.4,
+    "deterministic_reset": "exact V5 seed-forwarding correction",
+    "packages": {
+      "stable-worldmodel": "0.1.0",
+      "ogbench": "1.2.1",
+      "mujoco": "3.10.0",
+      "gymnasium": "1.3.0"
+    }
+  },
+  "regimes": {
+    "native_plan": {
+      "label": "native_plan_oracle",
+      "policy_type": "plan_oracle",
+      "action_noise": 0.1,
+      "p_random_action": 0.0,
+      "single_changed_factor": "none; native anchor"
+    },
+    "markov_oracle": {
+      "label": "policy_structure_markov_oracle",
+      "policy_type": "markov_oracle",
+      "action_noise": 0.1,
+      "p_random_action": 0.0,
+      "single_changed_factor": "policy_type: plan_oracle -> markov_oracle"
+    },
+    "plan_action_noise_0p2": {
+      "label": "action_noise_0p1_to_0p2",
+      "policy_type": "plan_oracle",
+      "action_noise": 0.2,
+      "p_random_action": 0.0,
+      "single_changed_factor": "action_noise: 0.1 -> 0.2"
+    },
+    "plan_random_action_0p1": {
+      "label": "random_action_contamination_0p1",
+      "policy_type": "plan_oracle",
+      "action_noise": 0.1,
+      "p_random_action": 0.1,
+      "single_changed_factor": "p_random_action: 0 -> 0.1"
+    }
+  },
+  "roles_per_regime": {
+    "fit": {
+      "episodes": 300,
+      "rows": 11400,
+      "permitted_use": "candidate fitting, fit-only feature/gain transforms, auxiliary robust whitening"
+    },
+    "selection": {
+      "episodes": 500,
+      "rows": 19000,
+      "permitted_use": "one-shot candidate choice only; no refit or recalibration"
+    },
+    "smoke": {
+      "episodes": 6,
+      "rows": 228,
+      "permitted_use": "permanently excluded mechanical qualification; no loss analysis"
+    },
+    "confirmation_maximum_assigned": {
+      "episodes": 4500,
+      "rows": 171000,
+      "permitted_use": "first prospectively ordered N-star slots only after fixed power freeze"
+    }
+  },
+  "replacement_tuples_per_regime_per_role": 200,
+  "replacement_roles": ["fit", "selection", "smoke", "confirmation"],
+  "replacement_rule": "rollout exception determined only from pixels/action and non-outcome step bookkeeping; never target, loss, contact, privileged state, motion, phase, reward, or success; global single-use registry",
+  "raw_archive_contract": {
+    "materialized_arrays": ["action", "pixels"],
+    "pixels_dtype_shape": "uint8 [201,224,224,3]",
+    "action_dtype_shape": "float32 [201,5]",
+    "preterminal_optional_posthoc_arrays_recorded": false,
+    "retention_validation_uses_only_materialized_arrays_and_step_count": true
+  },
+  "model_gate_input_allowlist": ["action", "pixels"],
+  "forbidden_preterminal_fields": [
+    "contact",
+    "privileged_state",
+    "qpos",
+    "qvel",
+    "motion",
+    "phase",
+    "reward",
+    "success"
+  ],
+  "one_factor_at_a_time": true,
+  "additional_dgps_permitted": false,
+  "sequential_confirmation_expansion": false
+}

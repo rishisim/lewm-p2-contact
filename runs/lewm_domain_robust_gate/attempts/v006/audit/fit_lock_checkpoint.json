@@ -1,0 +1,45 @@
+{
+  "attempt": "v006",
+  "checkpoint_state": "FIT_LOCK",
+  "checks": {
+    "candidate_count": true,
+    "fit_lock_present": true,
+    "fitted_candidates_present": true,
+    "fitted_hash": true,
+    "input_hashes": true,
+    "refit_forbidden": true,
+    "selection_unopened": true,
+    "status": true
+  },
+  "confirmation_outcomes_opened_by_workflow": 0,
+  "controller_status_sha256": "aeaa3315f5a27e9577737762c4b7465a61a3957a21ee182658db3a6d79f29011",
+  "created_unix_ns": 1784373750899261000,
+  "evidence": {
+    "fit_cohorts_audit": {
+      "bytes": 770798,
+      "path": "runs/lewm_domain_robust_gate/attempts/v006/audit/fit_cohorts.json",
+      "sha256": "6a1b8f22a9ba20764fe80303251b0bbf429c0a81a66497ec8381553a3522c07e"
+    },
+    "fit_lock": {
+      "bytes": 2521,
+      "path": "runs/lewm_domain_robust_gate/attempts/v006/fit/fit_lock.json",
+      "sha256": "ec9284347750f8d9c6395a2e33785b304aafd343f6e68aa7635ec043cde34236"
+    },
+    "fitted_candidates": {
+      "bytes": 2123082,
+      "path": "runs/lewm_domain_robust_gate/attempts/v006/fit/fitted_candidates.npz",
+      "sha256": "a58cb1dd0e3f30ccef6a1cabf3e5cb3f505ffd05444384339ac52100eb727202"
+    }
+  },
+  "outcome_counts": {
+    "confirmation_outcome_episodes_executed": 0,
+    "confirmation_outcome_episodes_generated": 0,
+    "confirmation_outcomes_opened_for_analysis": false,
+    "fit_outcome_episodes": 1200,
+    "selection_outcome_episodes": 0,
+    "smoke_outcome_episodes": 0
+  },
+  "passed": true,
+  "schema_version": 1,
+  "scientific_objects_changed": false
+}

@@ -33,3 +33,11 @@ runs/lewm_adaptive_compute_critic_compression/cache/stagewise_train_outputs.npz
 
 # Temporary render/scratch output.
 tmp/
+
+# Domain-robust runs retain compact protocol and audit records in Git only.
+*.npy
+*.npz
+runs/lewm_domain_robust_gate/attempts/*/data/
+runs/lewm_domain_robust_gate/attempts/*/selection/
+runs/lewm_domain_robust_gate/attempts/*/confirmation/
+runs/lewm_domain_robust_gate/attempts/*/work/

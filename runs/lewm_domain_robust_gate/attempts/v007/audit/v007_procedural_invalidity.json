@@ -1,0 +1,84 @@
+{
+  "attempt": "v007",
+  "authoritative": true,
+  "confirmation_artifact_file_count": 0,
+  "confirmation_outcome_episodes_executed": 0,
+  "confirmation_outcome_episodes_generated": 0,
+  "confirmation_outcomes_opened_for_analysis": false,
+  "controller_outcome_counts": {
+    "confirmation_outcome_episodes_executed": 0,
+    "confirmation_outcome_episodes_generated": 0,
+    "confirmation_outcomes_opened_for_analysis": false,
+    "fit_outcome_episodes": 1200,
+    "selection_outcome_episodes": 0,
+    "smoke_outcome_episodes": 0
+  },
+  "created_unix_ns": 1784390864258028000,
+  "current_state": "SELECTION_COHORTS",
+  "defect": {
+    "classification": "independent_verifier_contract_schema_rejects_authenticated_inherited_selection_boundary_paths",
+    "contract_schema_only": true,
+    "exception_type": "VerificationError",
+    "failure_location": "independent_verify.load_contract",
+    "failure_message": "active output is not rooted in v007: pre_selection_seal",
+    "independent_verifier_sha256": "4897d53f8b55df1b1f52df26899afdbefb53c8adb5833fd89f4401ed9c7c076a",
+    "reproduced_without_outcome_arrays": true,
+    "reproduction_input": {
+      "contract_path": "runs/lewm_domain_robust_gate/attempts/v007/verifier_contract.json",
+      "contract_sha256": "ef896290828c8a2506c9a429ad330538e4393268ee2208bfd850c03987befde8",
+      "inherited_fit_lock_path": "runs/lewm_domain_robust_gate/attempts/v006/fit/fit_lock.json",
+      "inherited_fitted_candidates_path": "runs/lewm_domain_robust_gate/attempts/v006/fit/fitted_candidates.npz",
+      "inherited_pre_selection_seal_path": "runs/lewm_domain_robust_gate/attempts/v006/audit/pre_selection_seal.json"
+    },
+    "root_cause": "The sealed v007 contract correctly identifies v006 pre-selection and fit artifacts and the immutable v003 fit dataset role, but the independent loader applies a v007-local output-root rule before classifying those authenticated inherited paths. Provenance validation therefore stops deterministically before selection materialization.",
+    "sealed_source_identity_verified": true,
+    "standalone_version_forward_verifier_sha256": "e1218bad5272e54295088af75252706a15a96f9fdbb2e2be56f6d09d7e337e29",
+    "workflow_sha256": "8acadfa67c341274156cfefac9de3a7de645f88e74639c7fd27e396add453d7e",
+    "test_source_sha256": "f0d5f6977d3b00df91aeb98eed7ea6ddcd159af72edec655b739cbd1504204e8"
+  },
+  "fit_evidence": {
+    "fit_lock_sha256": "ec9284347750f8d9c6395a2e33785b304aafd343f6e68aa7635ec043cde34236",
+    "fit_outcome_episode_count": 1200,
+    "fitted_candidates_sha256": "a58cb1dd0e3f30ccef6a1cabf3e5cb3f505ffd05444384339ac52100eb727202",
+    "immutable_and_reusable_under_authenticated_lineage": true,
+    "inherited_fit_inventory_sha256": "b70f6ca1d63b92e4e512a063359fd990d0263b5f1b83d6e51ce9ddd6487582c3",
+    "independent_scientific_replay_completed": true,
+    "selection_outcomes_used_for_fit": false
+  },
+  "frozen_evidence": {
+    "controller_state_sha256_at_failure": "0493b0f1bcb4c2d1b91fdc51548d64af20d568709ee3aa33611c1d234dd030c5",
+    "cohort_seed_ledger_sha256": "1b7f524ed11cf787e67e4887590d985cfa4eb928e333e7adb7667e48a0b8785d",
+    "generator_sha256": "a36d532fcc2ac37d076e7826cf1506cd5e7eda9366c4e136e7defff301f89d83",
+    "launcher_sha256": "4f0a6d185d1cbe15378e58d8c51a98271f6a583fc11d49e1204f4c826264d5a0",
+    "ledger_chain_genesis_sha256": "f0507f74d8ea3ff80dffe9deee0ecc6ac6a948be4184bb690851c3f05cfb5662",
+    "pre_data_inheritance_seal_sha256": "8868038420c049f649b2e37c4b17dd87dbbbc4d8042b43fb003b4efa8e288190",
+    "pre_selection_seal_sha256": "3ebff0d56f515b399a4000df2d20f39314cd2e2aadb31bd271ab75f42e58327c",
+    "research_ledger_sha256_at_failure": "a6a9374dddddfc20254d8fd532252c045cec8a7c4ab31a06ea7a703de542d0db",
+    "root_program_sha256": "81f2a37c5b880104999494eb9c3e06e46ab3e1416a7d7ff24f1a436c6ffff75e",
+    "version_forward_receipt_sha256": "f038c25974c3ddd1bf7ea4ae9e9be68d1230a359653d6ba3c90558e9034b0818"
+  },
+  "immutable_fit_evidence_preserved": true,
+  "later_role_artifact_file_counts": {
+    "confirmation": 0,
+    "selection": 0,
+    "smoke": 0
+  },
+  "procedural_invalidity": true,
+  "recovery_requirement": "A descendant immutable attempt must independently authenticate the v007 controller snapshot, activation receipt, inheritance seal, invalidity record, inherited v006 pre-selection boundary, and immutable v003 fit role; classify inherited and active dataset-role paths before applying root constraints; add live-contract schema-consistency checks; preserve every scientific rule; and resume at SELECTION_COHORTS without consuming any previously unused selection seed.",
+  "scientific_criterion_changed": false,
+  "scientific_outcomes_conditioned_on": false,
+  "selection_evidence": {
+    "controller_selection_outcome_episode_count": 0,
+    "generation_output_file_count": 0,
+    "seed_tuples_consumed": 0,
+    "selection_outcome_arrays_opened": false,
+    "worlds_constructed": 0
+  },
+  "selection_or_later_outcomes_opened": false,
+  "status": "invalid_zero_confirmation_outcome_procedural",
+  "superseded_draft": {
+    "authoritative": false,
+    "path": "runs/lewm_domain_robust_gate/attempts/v007/audit/v007_procedural_invalidity_draft.json",
+    "sha256": "83014917878d8fc226add312284f6c34795ee88d6f49dab80079f04bacea75b5"
+  }
+}

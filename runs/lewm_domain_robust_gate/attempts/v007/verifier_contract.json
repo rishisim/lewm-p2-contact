@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "attempt": "v007",
+  "study_root": "runs/lewm_domain_robust_gate",
+  "attempt_root": "runs/lewm_domain_robust_gate/attempts/v007",
+  "mode": "confirmation",
+  "expected_git_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+  "lineage": {
+    "science_attempt": "v001",
+    "active_attempt": "v007",
+    "attempts": [
+      "v001",
+      "v002",
+      "v003",
+      "v004",
+      "v005",
+      "v006",
+      "v007"
+    ],
+    "source_roots": {
+      "v001": "runs/lewm_domain_robust_gate/attempts/v001",
+      "v002": "runs/lewm_domain_robust_gate/attempts/v002",
+      "v003": "runs/lewm_domain_robust_gate/attempts/v003",
+      "v004": "runs/lewm_domain_robust_gate/attempts/v004",
+      "v005": "runs/lewm_domain_robust_gate/attempts/v005",
+      "v006": "runs/lewm_domain_robust_gate/attempts/v006",
+      "v007": "runs/lewm_domain_robust_gate/attempts/v007"
+    },
+    "invalidity_evidence": "runs/lewm_domain_robust_gate/attempts/v001/audit/v001_procedural_invalidity.json",
+    "source_pre_data_seal": "runs/lewm_domain_robust_gate/attempts/v001/audit/pre_data_seal.json",
+    "pre_data_inheritance_seal": "runs/lewm_domain_robust_gate/attempts/v007/audit/pre_data_inheritance_seal.json",
+    "prior_pre_data_inheritance_seal": "runs/lewm_domain_robust_gate/attempts/v006/audit/pre_data_inheritance_seal.json",
+    "source_invalidity_evidence": "runs/lewm_domain_robust_gate/attempts/v006/audit/v006_procedural_invalidity.json",
+    "superseded_source_invalidity_draft": "runs/lewm_domain_robust_gate/attempts/v006/audit/v006_procedural_invalidity_draft.json",
+    "prior_version_forward_receipt": "runs/lewm_domain_robust_gate/attempts/v006/audit/version_forward_transaction_receipt.json",
+    "version_forward_receipt": "runs/lewm_domain_robust_gate/attempts/v007/audit/version_forward_transaction_receipt.json"
+  },
+  "paths": {
+    "state": "runs/lewm_domain_robust_gate/STATE.json",
+    "ledger": "runs/lewm_domain_robust_gate/RESEARCH_LEDGER.jsonl",
+    "ledger_genesis": "runs/lewm_domain_robust_gate/LEDGER_CHAIN_GENESIS.json",
+    "dgp_matrix": "runs/lewm_domain_robust_gate/attempts/v001/DGP_MATRIX.json",
+    "candidate_grid": "runs/lewm_domain_robust_gate/attempts/v001/candidate_grid.json",
+    "power_rule": "runs/lewm_domain_robust_gate/attempts/v001/power_rule.json",
+    "outcome_mapping": "runs/lewm_domain_robust_gate/attempts/v001/outcome_mapping.json",
+    "cohort_seed_ledger": "runs/lewm_domain_robust_gate/attempts/v001/cohort_seed_ledger.json",
+    "pre_data_seal": "runs/lewm_domain_robust_gate/attempts/v001/audit/pre_data_seal.json",
+    "pre_selection_seal": "runs/lewm_domain_robust_gate/attempts/v006/audit/pre_selection_seal.json",
+    "pre_confirmation_seal": "runs/lewm_domain_robust_gate/attempts/v007/audit/pre_confirmation_package_seal.json",
+    "terminal_manifest": "runs/lewm_domain_robust_gate/attempts/v007/audit/terminal_input_manifest.json",
+    "fitted_candidates": "runs/lewm_domain_robust_gate/attempts/v006/fit/fitted_candidates.npz",
+    "fit_lock": "runs/lewm_domain_robust_gate/attempts/v006/fit/fit_lock.json",
+    "selection_ledger": "runs/lewm_domain_robust_gate/attempts/v007/selection/selection_ledger.json",
+    "gate_fit": "runs/lewm_domain_robust_gate/attempts/v007/freeze/gate_fit.npz",
+    "compiled_gate": "runs/lewm_domain_robust_gate/attempts/v007/freeze/compiled_gate.npz",
+    "compiled_gate_manifest": "runs/lewm_domain_robust_gate/attempts/v007/freeze/compiled_gate_manifest.json",
+    "gate_freeze": "runs/lewm_domain_robust_gate/attempts/v007/freeze/gate_freeze.json",
+    "power_freeze": "runs/lewm_domain_robust_gate/attempts/v007/power_analysis.json",
+    "confirmation_input_seal": "runs/lewm_domain_robust_gate/attempts/v007/audit/confirmation_input_seal.json",
+    "analysis_result": "runs/lewm_domain_robust_gate/attempts/v007/analysis_result.json",
+    "bootstrap_replicates": "runs/lewm_domain_robust_gate/attempts/v007/metrics/bootstrap_replicates.npz",
+    "bootstrap_summary": "runs/lewm_domain_robust_gate/attempts/v007/metrics/bootstrap_summary.json",
+    "fixed_whitening": "runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/whitening.npz"
+  },
+  "fit_inputs": {
+    "native_plan": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/role.npz",
+    "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/role.npz",
+    "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/role.npz",
+    "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/role.npz"
+  },
+  "selection_inputs": {
+    "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/native_plan/role.npz",
+    "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/markov_oracle/role.npz",
+    "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_action_noise_0p2/role.npz",
+    "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_random_action_0p1/role.npz"
+  },
+  "development_manifests": {
+    "fit": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/execution_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/execution_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/execution_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/execution_manifest.json"
+    },
+    "selection": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/native_plan/execution_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/markov_oracle/execution_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_action_noise_0p2/execution_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_random_action_0p1/execution_manifest.json"
+    }
+  },
+  "role_manifests": {
+    "fit": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/raw_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/raw_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/raw_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/raw_manifest.json"
+    },
+    "selection": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/native_plan/raw_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/markov_oracle/raw_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_action_noise_0p2/raw_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/selection/plan_random_action_0p1/raw_manifest.json"
+    },
+    "smoke": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/smoke/native_plan/raw_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/smoke/markov_oracle/raw_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/smoke/plan_action_noise_0p2/raw_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/smoke/plan_random_action_0p1/raw_manifest.json"
+    },
+    "confirmation": {
+      "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/native_plan/raw_manifest.json",
+      "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/markov_oracle/raw_manifest.json",
+      "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/plan_action_noise_0p2/raw_manifest.json",
+      "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/plan_random_action_0p1/raw_manifest.json"
+    }
+  },
+  "confirmation_manifests": {
+    "native_plan": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/native_plan/execution_manifest.json",
+    "markov_oracle": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/markov_oracle/execution_manifest.json",
+    "plan_action_noise_0p2": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/plan_action_noise_0p2/execution_manifest.json",
+    "plan_random_action_0p1": "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation/plan_random_action_0p1/execution_manifest.json"
+  },
+  "confirmation_artifact_roots": [
+    "runs/lewm_domain_robust_gate/attempts/v007/data/confirmation",
+    "runs/lewm_domain_robust_gate/attempts/v007/data/persistence_intents/confirmation"
+  ],
+  "confirmation_required_bindings": [
+    "runs/lewm_domain_robust_gate/attempts/v007/verifier_contract.json",
+    "runs/lewm_domain_robust_gate/attempts/v007/verifier_contract_no_candidate.json",
+    "runs/lewm_domain_robust_gate/attempts/v007/verifier_contract_power_infeasible.json",
+    "runs/lewm_domain_robust_gate/attempts/v001/PREREGISTRATION.md",
+    "runs/lewm_domain_robust_gate/attempts/v001/cohort_seed_ledger.json"
+  ],
+  "producer_sources": [
+    "runs/lewm_domain_robust_gate/attempts/v007/analysis.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/runner.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/fit_select.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/compile_gate.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/counted_features.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/flops.py",
+    "runs/lewm_domain_robust_gate/attempts/v007/power_analysis.py"
+  ],
+  "terminal_manifest_exclusions": [
+    "runs/lewm_domain_robust_gate/attempts/v007/audit/terminal_input_manifest.json",
+    "runs/lewm_domain_robust_gate/attempts/v007/audit/independent_verification.json"
+  ],
+  "prior_scan": {
+    "runs_root": "runs",
+    "excluded_roots": [
+      "runs/lewm_domain_robust_gate"
+    ],
+    "forbidden_tree_names": [
+      "lewm_adaptive_compute_v3"
+    ]
+  }
+}

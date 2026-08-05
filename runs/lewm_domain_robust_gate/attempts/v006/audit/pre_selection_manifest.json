@@ -1,0 +1,58 @@
+{
+  "all_hashes_verified": true,
+  "attempt": "v006",
+  "created_unix_ns": 1784373917316849000,
+  "external_file_count": 0,
+  "external_files": {},
+  "external_total_bytes": 0,
+  "hdf5_contents_opened": false,
+  "inherited_runtime_aliases": [],
+  "inherited_runtime_symlink_exceptions": [
+    "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+    "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python"
+  ],
+  "label": "v006_fit_role_and_all_candidate_objects_before_selection_open",
+  "local_file_count": 3,
+  "local_files": {
+    "runs/lewm_domain_robust_gate/attempts/v006/data/replacement_registry.json": {
+      "bytes": 2371,
+      "contents_decoded": false,
+      "device": 16777233,
+      "inode": 57266508,
+      "regular_file": true,
+      "resolved_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_domain_robust_gate/attempts/v006/data/replacement_registry.json",
+      "sha256": "f50e060aa616d6ad8616fb6d28e768e2e5cc10999097d95928af7926d50fab46",
+      "symlink": false,
+      "symlink_target": null
+    },
+    "runs/lewm_domain_robust_gate/attempts/v006/fit/fit_lock.json": {
+      "bytes": 2521,
+      "contents_decoded": false,
+      "device": 16777233,
+      "inode": 57266428,
+      "regular_file": true,
+      "resolved_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_domain_robust_gate/attempts/v006/fit/fit_lock.json",
+      "sha256": "ec9284347750f8d9c6395a2e33785b304aafd343f6e68aa7635ec043cde34236",
+      "symlink": false,
+      "symlink_target": null
+    },
+    "runs/lewm_domain_robust_gate/attempts/v006/fit/fitted_candidates.npz": {
+      "bytes": 2123082,
+      "contents_decoded": false,
+      "device": 16777233,
+      "inode": 57266425,
+      "regular_file": true,
+      "resolved_path": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_domain_robust_gate/attempts/v006/fit/fitted_candidates.npz",
+      "sha256": "a58cb1dd0e3f30ccef6a1cabf3e5cb3f505ffd05444384339ac52100eb727202",
+      "symlink": false,
+      "symlink_target": null
+    }
+  },
+  "local_inode_alias_count": 0,
+  "local_symlink_count": 0,
+  "local_total_bytes": 2127974,
+  "outcome_array_contents_opened": false,
+  "schema_version": 1,
+  "science_attempt": "v001",
+  "v3_targets_opened": false
+}

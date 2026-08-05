@@ -1,0 +1,16 @@
+{
+  "attempt": "v006",
+  "authoritative": false,
+  "confirmation_outcome_episodes_executed": 0,
+  "confirmation_outcome_episodes_generated": 0,
+  "confirmation_outcomes_opened_for_analysis": false,
+  "created_unix_ns": 1784374229932786000,
+  "current_state": "SELECTION_COHORTS",
+  "defect_class": "inherited_seal_scalar_census_missing_fit_inventory_episode_count",
+  "fit_outcome_episodes_recorded": 1200,
+  "procedural_invalidity": true,
+  "selection_outcome_episodes_recorded": 0,
+  "smoke_outcome_episodes_recorded": 0,
+  "status": "superseded_draft",
+  "summary": "Live provenance validation found that the sealed v006 inherited-authorization scalar census rejects the authenticated fit-inventory episode_count field before any selection seed or output use."
+}

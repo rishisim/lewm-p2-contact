@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "co_primary_endpoints": ["raw_vs_analytic", "fixed_whitened_vs_analytic"],
+  "regime_order": ["native_plan", "markov_oracle", "plan_action_noise_0p2", "plan_random_action_0p1"],
+  "family_size": 8,
+  "familywise_alpha": 0.05,
+  "per_claim_alpha": 0.00625,
+  "bootstrap": {
+    "unit": "episode",
+    "paired_replicates": 20000,
+    "individual_intervals": "two-sided 95 percent percentile",
+    "simultaneous_method": "Bonferroni family-eight one-sided percentile lower bounds",
+    "quantile_method": "NumPy linear",
+    "replicate_arrays_persisted": true,
+    "independent_elementwise_reproduction_required": true
+  },
+  "claim_support": "a DGP-by-endpoint claim is supported iff its fixed simultaneous lower bound is strictly greater than zero",
+  "per_regime_mapping": {
+    "supported": "both co-primary claims supported",
+    "mixed": "exactly one co-primary claim supported",
+    "failed": "neither co-primary claim supported"
+  },
+  "overall_mapping": {
+    "domain_robust_gate_execution_invalid": "any required integrity failure; precedence over scientific calls",
+    "domain_robust_gate_failed": "clean confirmation with zero of eight claims supported, or independently verified preregistered preconfirmation no-candidate/power-infeasibility scientific outcome",
+    "domain_robust_gate_partial": "clean confirmation with one through seven of eight claims supported",
+    "domain_robust_gate_confirmed": "clean confirmation with all eight claims supported"
+  },
+  "terminal_labels": [
+    "domain_robust_gate_confirmed",
+    "domain_robust_gate_partial",
+    "domain_robust_gate_failed",
+    "domain_robust_gate_execution_invalid"
+  ],
+  "required_integrity": [
+    "sealed consumed evidence and exact Git head",
+    "full hash-chained research ledger and legal chronology",
+    "immutable attempt and legal zero-confirmation version-forward history",
+    "complete source/path/hash/byte manifests without aliases or symlinks",
+    "global role/DGP/prior identifier isolation",
+    "pixels/action-only preterminal materialization",
+    "contact and privileged fields excluded from fit selection routing retention and analysis",
+    "fit-only transforms and all candidate objects locked before selection open",
+    "fixed deterministic selection ranking and no post-selection refit",
+    "fixed power-selected common confirmation size before smoke",
+    "exact sparse calls reconstructed from independently rebuilt causal features and gate objects",
+    "frozen model/refiner and no gradients",
+    "sparse/dense selected-output numerical equivalence",
+    "two independent gate and total-compute derivations agree",
+    "seeded comparator uses equal or weakly more total compute",
+    "within-episode histograms preserved exactly",
+    "all confirmation inputs sealed before first target-array analysis",
+    "all producer bootstrap arrays reproduced elementwise",
+    "standalone read-only independent verifier passes"
+  ],
+  "nonterminal_fields": [
+    "stagewise rank signs and magnitudes",
+    "routing calibration",
+    "heterogeneity",
+    "seeded fixed-depth and histogram controls",
+    "fit-derived robust-whitening auxiliary endpoint",
+    "latency",
+    "energy availability",
+    "post-terminal interpretation"
+  ],
+  "no_retry_after_confirmation_open": true
+}

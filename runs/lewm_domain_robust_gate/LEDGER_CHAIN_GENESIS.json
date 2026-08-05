@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "classification": "immutable_hash_chain_anchor_for_preserved_initial_append_only_prefix",
+  "created_unix_ns": 1784256750000000000,
+  "legacy_prefix_bytes": 771,
+  "legacy_prefix_event_count": 2,
+  "legacy_prefix_sha256": "49538fe82f075bd2db3407978f7b1d09dc3ffba46860de5862e8838e9b1918c1",
+  "first_chained_sequence": 3,
+  "first_chained_prev_sha256": "legacy:49538fe82f075bd2db3407978f7b1d09dc3ffba46860de5862e8838e9b1918c1",
+  "legacy_prefix_preserved_without_rewrite": true
+}

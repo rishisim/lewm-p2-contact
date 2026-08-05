@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "checkpoint_state": "PREREGISTRATION_AND_POWER",
+  "created_unix_ns": 1784258005070589000,
+  "classification": "complete_bounded_design_and_prospective_power_rule_before_fresh_outcomes",
+  "normative_files": {
+    "PREREGISTRATION.md": "061f01ccbc78f295a39348127bade25e38a0355415394ffff06b4ee5c21a2caa",
+    "DGP_MATRIX.json": "0588a88d50688bfcdc336fe320dfe6f50896a146279b08cde9af0fcc8f1e53f5",
+    "candidate_grid.json": "1be2b8d501054626c8290ffa7a9aca0eca3d0adce86834abae409336d290858f",
+    "power_rule.json": "de64698680b3060181120ce40a07f447f2746af4c3f9c6aab882965a639e467a",
+    "power_baseline.json": "c42cd3d634e59c2bfac92c1676eea392a0378eb2d1a3ef58e36b4e78d3caa7dd",
+    "outcome_mapping.json": "856a2699ec1bc6772984267af46e703150aa56884b73bd93f7dc3d6d79893548"
+  },
+  "registered_counts": {
+    "expected_fit_episode_count": 1200,
+    "expected_selection_episode_count": 2000,
+    "expected_smoke_episode_count": 24,
+    "maximum_confirmation_episode_count": 18000
+  },
+  "dgp_envelope": {
+    "count": 4,
+    "regimes": ["native_plan", "markov_oracle", "plan_action_noise_0p2", "plan_random_action_0p1"],
+    "one_factor_shifts": true,
+    "additional_dgps_permitted": false
+  },
+  "candidate_family": {
+    "count": 24,
+    "architectures": ["balanced_pooled_dual", "domain_envelope_eight"],
+    "ridge_penalties": [0.01, 1.0, 100.0],
+    "sequential_fit_quantiles": [0.55, 0.65, 0.75, 0.85],
+    "unchanged_causal_feature_width": 1046,
+    "selected_head_refit_permitted": false
+  },
+  "selection": {
+    "fit_selection_isolated": true,
+    "mechanical_eligibility_only": true,
+    "primary_objective": "maximize worst of eight DGP-by-endpoint standardized selection exact-compute contrasts",
+    "deterministic_tie_break_frozen": true
+  },
+  "power": {
+    "binding_rule": "post-selection common-N grid 500 through 4500 by 500 using 35 percent of the smaller positive fit/selection mean, conservative SD maximum, family-eight union-bound target 0.95",
+    "family_size": 8,
+    "per_claim_alpha": 0.00625,
+    "inherited_nonbinding_first_qualifying_n": 3500,
+    "inherited_nonbinding_family_power_lower_at_3500": 0.9693977885422753,
+    "no_qualifying_binding_grid_maps_to_failed": true,
+    "sequential_expansion": false
+  },
+  "compute": {
+    "base_flops_per_row": 70529190,
+    "mandatory_depth1_flops_per_row": 669184,
+    "additional_refiner_flops_per_call": 264960,
+    "feature_flops_per_reached_decision": 3801,
+    "affine_head_flops": 2092,
+    "pooled_gate_flops_per_reached_decision": 7985,
+    "envelope_gate_flops_per_reached_decision": 20537,
+    "exact_total_compute_comparator": true
+  },
+  "inference": {
+    "co_primary_family": "four DGPs by raw and unchanged V5 fixed-whitened endpoints",
+    "bootstrap_unit": "episode",
+    "bootstrap_replicates": 20000,
+    "simultaneous_method": "Bonferroni family-eight one-sided percentile lower bounds",
+    "support_rule": "strictly positive simultaneous lower bound",
+    "immutable_terminal_mapping": true
+  },
+  "resource_feasibility": {
+    "free_disk_gib_at_audit": 116,
+    "maximum_confirmation_per_regime": 4500,
+    "estimated_max_primary_data_gib_with_development": 82,
+    "disk_margin_preserved": true,
+    "success_guaranteed": false
+  },
+  "outcome_counts": {
+    "fit": 0,
+    "selection": 0,
+    "smoke": 0,
+    "confirmation_generated": 0,
+    "confirmation_executed": 0,
+    "confirmation_opened_for_analysis": false,
+    "fresh_data_files": 0
+  },
+  "checks": {
+    "normative_json_valid": true,
+    "complete_four_dgp_role_partition": true,
+    "candidate_family_bounded": true,
+    "causal_contact_free_inputs_frozen": true,
+    "fit_selection_no_refit_rule_frozen": true,
+    "power_algorithm_frozen_before_fit": true,
+    "confirmation_maximum_hardware_bounded": true,
+    "comparators_inference_terminal_mapping_frozen": true,
+    "fresh_outcomes_zero": true,
+    "forbidden_evidence_unopened": true
+  },
+  "passed": true
+}

@@ -1,0 +1,160 @@
+{
+  "all_development_aggregates_exact": true,
+  "all_runtime_mps_exact": true,
+  "artifact_trees_unchanged": true,
+  "artifact_type": "v006_independent_scientific_replay_role",
+  "attempt": "v006",
+  "authorization_state_sha256": "a76b1cc80106f8eb69af9531e109287d54383faa9dbd98126c6b059ead97c551",
+  "contact_or_privileged_materialized": false,
+  "episode_count": 1200,
+  "episodes_per_regime": 300,
+  "every_persisted_tensor_exact": true,
+  "input_loader_agreement_exact": true,
+  "loss_or_effect_used_for_acceptance": false,
+  "manifest_verification_sha256": "a10359d734c3de934811818a65fcc40a7c29e4bffb0fb9ce8134b2790e01b26a",
+  "no_gradients": true,
+  "passed": true,
+  "read_only": true,
+  "regime_order": [
+    "native_plan",
+    "markov_oracle",
+    "plan_action_noise_0p2",
+    "plan_random_action_0p1"
+  ],
+  "regimes": {
+    "markov_oracle": {
+      "aggregate": {
+        "applicable": true,
+        "arrays": {
+          "episode_slot": "c307a416c615fb781ef26d6781edeff0ec6f815e100bb405a929f0b73e98cfce",
+          "exits": "ece1ccc31a062add4fb96136aba6a2e564b19fd9deb13161f7431e4e84e3457c",
+          "model_step": "6fb1bf38a9b5408fab7ec3b28b00cc141f78f591edeaeedaa7f1d1107eb09818",
+          "production_features": "af308c071099b239a173ba692ae237b2dae4aa178455c7b184a96f3da68b2d79",
+          "target": "f6324b2f9e2203bd99fce2da5d902b74c0c7bd23e1291db1f587940a24a1b868"
+        },
+        "exact": true,
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/role.npz",
+        "sha256": "7f221d1c165825a61ae57bdd8d9d786970ff8e7e7d9f32cea7aa792a70504de2"
+      },
+      "episode_count": 300,
+      "execution_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/execution_manifest.json",
+        "sha256": "0612b098aba213000e7a59206a5f7a8c609eae41dea33ec0355f1f7ff95e6e3c"
+      },
+      "raw_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/raw_manifest.json",
+        "sha256": "a191305ce4269254462a455d47721b27ca00c4a038d0e56ca86f71eb05dd1999"
+      },
+      "result": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v006/audit/scientific_replay/fit_markov_oracle.json",
+        "sha256": "5b08e21031ee98572d1812519f359b7109d5cbb6e43f118257ddb7206dec5a94"
+      },
+      "row_count": 11400
+    },
+    "native_plan": {
+      "aggregate": {
+        "applicable": true,
+        "arrays": {
+          "episode_slot": "c307a416c615fb781ef26d6781edeff0ec6f815e100bb405a929f0b73e98cfce",
+          "exits": "2b557052542d511cc463db9fff9792eacf6dd088f10eb7edf01d8305989f179b",
+          "model_step": "6fb1bf38a9b5408fab7ec3b28b00cc141f78f591edeaeedaa7f1d1107eb09818",
+          "production_features": "7fc3482ca240afe444e1cf8a4b7af687b9ab452b3d2c6deb7c9bce4c45d1c8d6",
+          "target": "e6ed4cf90abf6222223c6fc334af65f8007e1b4204085eb26746342a1e4eec19"
+        },
+        "exact": true,
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/role.npz",
+        "sha256": "dfde0128e620ed04b7bc23f177338dd9e331c3ce2a55fcc31934d0f148172e25"
+      },
+      "episode_count": 300,
+      "execution_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/execution_manifest.json",
+        "sha256": "28fb146a43a29e64948c107fe036f4c04da98bf3f755fdbd4c8aec7886e000ad"
+      },
+      "raw_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/raw_manifest.json",
+        "sha256": "5154162a4294ba459844768531e5869fced52a9dd623d1eb1fc72d4cc7c52ff9"
+      },
+      "result": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v006/audit/scientific_replay/fit_native_plan.json",
+        "sha256": "23cafad03fae26e00eb533406715e1a335600e7aefffcb8de2db7920845ffad2"
+      },
+      "row_count": 11400
+    },
+    "plan_action_noise_0p2": {
+      "aggregate": {
+        "applicable": true,
+        "arrays": {
+          "episode_slot": "c307a416c615fb781ef26d6781edeff0ec6f815e100bb405a929f0b73e98cfce",
+          "exits": "c797e773eae7f48b370317b5e670475db9e04c566510017e6e037461f517abdc",
+          "model_step": "6fb1bf38a9b5408fab7ec3b28b00cc141f78f591edeaeedaa7f1d1107eb09818",
+          "production_features": "ccfd6b061088bbcda4cf201ac23f82ba55370822e1b2918d067dd2483ea433c0",
+          "target": "925c9713a75889554da627de4006d46e62e4d5cccb9a161efd9c9b12314f0932"
+        },
+        "exact": true,
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/role.npz",
+        "sha256": "cf0903029a7e80a215932d574d57dad8dd8669ecdee9ba9240a3cfe5ab0a2a25"
+      },
+      "episode_count": 300,
+      "execution_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/execution_manifest.json",
+        "sha256": "00f5048eaf0030ef462c13bf144c8632d18e63173753e3e3750697c7e993446b"
+      },
+      "raw_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/raw_manifest.json",
+        "sha256": "b0c830dfc39e8df0d9117d390bea5e41d969035e1e7ce908f0f617386693d0ba"
+      },
+      "result": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v006/audit/scientific_replay/fit_plan_action_noise_0p2.json",
+        "sha256": "4a37faceae3af2c4ae8f42eff1906b690706b7b2e9493f84575683e4f5609508"
+      },
+      "row_count": 11400
+    },
+    "plan_random_action_0p1": {
+      "aggregate": {
+        "applicable": true,
+        "arrays": {
+          "episode_slot": "c307a416c615fb781ef26d6781edeff0ec6f815e100bb405a929f0b73e98cfce",
+          "exits": "a7e53add8e2f687d1854a0aa211c9d576729554a9f58286f4d99c0af09392459",
+          "model_step": "6fb1bf38a9b5408fab7ec3b28b00cc141f78f591edeaeedaa7f1d1107eb09818",
+          "production_features": "6084e487ca4eaa1d3ed702952c1ded0517101f02b76b22f333ff79dc66a3375b",
+          "target": "70cc5417a33c40f5fb88d234858891307226744cacf695a0d2416edcb42bc285"
+        },
+        "exact": true,
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/role.npz",
+        "sha256": "12202a56db5d85d43396c227faad053cdc659ebb58d5a3db15df2dee009af308"
+      },
+      "episode_count": 300,
+      "execution_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/execution_manifest.json",
+        "sha256": "6f0c54cb354a4ce485dbabbdf1aafa09e76ab4d120587c218b4ba1d0d40096c6"
+      },
+      "raw_manifest": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/raw_manifest.json",
+        "sha256": "d5ed765faccc0ded71758186af36a572fecc06444abb1e7a73d3ad443975ecec"
+      },
+      "result": {
+        "path": "runs/lewm_domain_robust_gate/attempts/v006/audit/scientific_replay/fit_plan_random_action_0p1.json",
+        "sha256": "89dbdad929cad7dd157c672374db16227ce80174441865e0c2a8923b9ca9090a"
+      },
+      "row_count": 11400
+    }
+  },
+  "role": "fit",
+  "row_count": 45600,
+  "schema_version": 1,
+  "source_hashes": {
+    "runs/lewm_adaptive_compute_distribution_contract/common.py": "52db77ee31ac44f5438270d818cd36832ec74c1a19764bf2df63b0570a4ea4c2",
+    "runs/lewm_adaptive_compute_v2/model_io.py": "5505e529ba17aeb0c641e7d4e8dc511d0ed61decdc13a596915ba8964b954874",
+    "runs/lewm_adaptive_compute_v4/runtime.py": "801b160ad9c457f7eabb4b92395c90cb7eb2f9d1809a627bd0202df8a210bfdf",
+    "runs/lewm_domain_robust_gate/attempts/v006/compile_gate.py": "01a76055bf3fc70ee8a45853dd3260606e74f4693d77a444d22b83f923e2f126",
+    "runs/lewm_domain_robust_gate/attempts/v006/counted_features.py": "f745ff29039f7a00fc28b4de0923efeda23331fbbb8a2c654fb2c4c6afa642d4",
+    "runs/lewm_domain_robust_gate/attempts/v006/flops.py": "789375f939b125da9960625e0b502b8b6c28ebe0a75ba2c573d3c8473ce749a0",
+    "runs/lewm_domain_robust_gate/attempts/v006/input_loader.py": "40989c2c22cb96bc26bff48c9f9bead9c3e1efd9ee355194800703b943737039",
+    "runs/lewm_domain_robust_gate/attempts/v006/runner.py": "dd9b6028583bbe529b99181664e94b27cf470ba70a1f145df70f965016417c7a",
+    "runs/lewm_domain_robust_gate/attempts/v006/runtime_contract.py": "3b3787d3a53fc790cc356c7f7e5c1cfb2cb62fa0c1d84ebe3defb59eaa63f4f7",
+    "runs/lewm_domain_robust_gate/attempts/v006/scientific_replay.py": "68e4dec48613cc62d41269de3c3cae3010c1342b92d9575628bd1af4597ab03a",
+    "runs/lewm_domain_robust_gate/attempts/v006/scientific_replay_launcher.py": "c745c856ec8421f0fc83d022a3100d93e556fa6513a5abc130c3f39f1924032e"
+  },
+  "state": "FIT_COHORTS",
+  "target_loss_computed": false
+}

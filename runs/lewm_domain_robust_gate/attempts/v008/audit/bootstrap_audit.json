@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "classification": "read_only_bootstrap_and_consumed_seal_audit",
+  "created_unix_ns": 1784256611954188000,
+  "checks": {
+    "applicable_repository_agents_md_absent": true,
+    "delegated_agents_md_instruction_obeyed": true,
+    "current_checkout_used_without_worktree": true,
+    "git_head_exact": true,
+    "git_not_mutated": true,
+    "new_study_root_was_absent_before_initialization": true,
+    "v005_preserved_as_existing_untracked_terminal_evidence": true,
+    "v005_decision_sha256_exact": true,
+    "v005_independent_audit_sha256_exact": true,
+    "v005_analysis_sha256_exact": true,
+    "v005_robustness_map_sha256_exact": true,
+    "forbidden_v3_targets_opened": false,
+    "combined_v3_cache_numpy_loaded": false,
+    "released_hdf5_opened": false
+  },
+  "expected_git_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+  "observed_git_head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+  "observed_git_status_porcelain": [
+    "?? runs/lewm_v5_generalization/"
+  ],
+  "consumed_evidence": {
+    "v5_package": "runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "v5_recorded_terminal_label": "v5_confirmation_passed",
+    "v005_attempt": "runs/lewm_v5_generalization/attempts/v005",
+    "v005_recorded_terminal_label": "zero_shot_generalization_partial",
+    "v005_decision": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/decision.json",
+      "sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38"
+    },
+    "v005_independent_audit": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/audit/independent_verification.json",
+      "sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6"
+    },
+    "v005_analysis": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/analysis_result.json",
+      "sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8"
+    },
+    "v005_robustness_map": {
+      "path": "runs/lewm_v5_generalization/attempts/v005/ROBUSTNESS_MAP.json",
+      "sha256": "f3b19508936f235a811a483bcbd4364d691a01ad1e9c87a393c8f8ca533f8bb9"
+    },
+    "v005_follow_on": "runs/lewm_v5_generalization/attempts/v005/FOLLOW_ON_TASK.md"
+  },
+  "outcome_access": {
+    "v5_or_v005_used_for_new_fit_calibration_whitening_selection_smoke_or_confirmation": false,
+    "new_fit_outcome_episodes": 0,
+    "new_selection_outcome_episodes": 0,
+    "new_smoke_outcome_episodes": 0,
+    "new_confirmation_outcome_episodes": 0
+  },
+  "passed": true
+}

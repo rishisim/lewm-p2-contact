@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "status": "prospective_rule_frozen_before_fit_outcomes",
+  "family_size": 8,
+  "familywise_alpha": 0.05,
+  "per_claim_alpha": 0.00625,
+  "alternative": "strictly positive exact-compute contrast",
+  "common_episode_grid_per_regime": [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500],
+  "family_power_target": 0.95,
+  "planning_effect_rule": "for each DGP-by-endpoint cell, 0.35 times the smaller fit and selection mean when both are strictly positive; otherwise infeasible",
+  "planning_standard_deviation_rule": "maximum of fit and selection one-sided 95 percent upper confidence limits for episode SD and the consumed V5 endpoint episode SD",
+  "sd_upper_method": "sqrt((n-1)*sample_variance/chi2_ppf(0.05,n-1))",
+  "consumed_v5_endpoint_moments": {
+    "raw_vs_analytic": {
+      "episode_count": 1600,
+      "mean": 0.000006769003361969305,
+      "sd_ddof1": 0.000028455555262480006
+    },
+    "fixed_whitened_vs_analytic": {
+      "episode_count": 1600,
+      "mean": 0.0006086220971507569,
+      "sd_ddof1": 0.001983038139078128
+    }
+  },
+  "marginal_power_formula": "Phi(sqrt(N)*planning_effect/planning_sd - normal_ppf(1-0.05/8))",
+  "family_power_lower_formula": "max(0,1-sum_over_8(1-marginal_power))",
+  "selection_rule": "smallest common grid N with family-power lower bound at least 0.95",
+  "no_qualifying_grid_or_nonpositive_planning_cell": "process-valid domain_robust_gate_failed before smoke or confirmation; do not weaken assumptions or expand grid",
+  "confirmation_slots": "first N prospectively ordered slots from each DGP's preassigned 4500-slot maximum",
+  "same_n_every_dgp": true,
+  "sequential_expansion": false,
+  "nonbinding_inherited_feasibility_yardstick": {
+    "method": "v005 35-percent retained V5 effects extended from family 6 to family 8",
+    "first_500_episode_grid_point_above_0p95": 3500,
+    "family_power_lower_at_3500": 0.9694,
+    "used_to_select_final_n": false
+  },
+  "runtime_storage_bound": {
+    "maximum_confirmation_episodes_per_regime": 4500,
+    "reason": "read-only local audit leaves a safety margin on the 116 GiB free volume while preserving all prior runs",
+    "hardware_success_guaranteed": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "all_24_fit_call_traces_reconstruct_exactly": true,
+  "all_candidate_runtime_objects_contiguous_float32": true,
+  "all_candidates_have_raw_feature_affine_heads": true,
+  "architectures": [
+    "balanced_pooled_dual",
+    "domain_envelope_eight"
+  ],
+  "candidate_count": 24,
+  "created_unix_ns": 1784373750895300000,
+  "dgp_ids": [
+    "native_plan",
+    "markov_oracle",
+    "plan_action_noise_0p2",
+    "plan_random_action_0p1"
+  ],
+  "feature_dim": 1046,
+  "fit_input_hashes": {
+    "runs/lewm_domain_robust_gate/attempts/v003/data/fit/markov_oracle/role.npz": "7f221d1c165825a61ae57bdd8d9d786970ff8e7e7d9f32cea7aa792a70504de2",
+    "runs/lewm_domain_robust_gate/attempts/v003/data/fit/native_plan/role.npz": "dfde0128e620ed04b7bc23f177338dd9e331c3ce2a55fcc31934d0f148172e25",
+    "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_action_noise_0p2/role.npz": "cf0903029a7e80a215932d574d57dad8dd8669ecdee9ba9240a3cfe5ab0a2a25",
+    "runs/lewm_domain_robust_gate/attempts/v003/data/fit/plan_random_action_0p1/role.npz": "12202a56db5d85d43396c227faad053cdc659ebb58d5a3db15df2dee009af308"
+  },
+  "fit_row_count": 45600,
+  "fitted_candidates_sha256": "a58cb1dd0e3f30ccef6a1cabf3e5cb3f505ffd05444384339ac52100eb727202",
+  "fixed_whitened_endpoint_uses_unchanged_v5_matrix": true,
+  "fixed_whitening_sha256": "515d31ea8df1afa6c11368236c507eecf1853abfaa9239189c17855445ccf796",
+  "prior_confirmation_outcome_episodes_used": 0,
+  "ridges": [
+    0.01,
+    1.0,
+    100.0
+  ],
+  "robust_fit_whitening_is_auxiliary_only": true,
+  "runtime_continue_operator": "strict_greater_than",
+  "runtime_threshold_ties_stop": true,
+  "schema_version": 1,
+  "scientific_source_hashes": {
+    "PREREGISTRATION.md": "061f01ccbc78f295a39348127bade25e38a0355415394ffff06b4ee5c21a2caa",
+    "candidate_grid.json": "1be2b8d501054626c8290ffa7a9aca0eca3d0adce86834abae409336d290858f",
+    "compile_gate.py": "01a76055bf3fc70ee8a45853dd3260606e74f4693d77a444d22b83f923e2f126",
+    "counted_features.py": "f745ff29039f7a00fc28b4de0923efeda23331fbbb8a2c654fb2c4c6afa642d4",
+    "fit_select.py": "d99f78c9a4db33d918eb54fc0fd1e9ae036835f0ec0f2d69e9e2ae20f4ab1db1",
+    "flops.py": "789375f939b125da9960625e0b502b8b6c28ebe0a75ba2c573d3c8473ce749a0"
+  },
+  "selected_head_refit_permitted": false,
+  "selection_input_opened_before_lock": false,
+  "selection_outcomes_used_for_fit": false,
+  "sequential_fit_quantiles": [
+    0.55,
+    0.65,
+    0.75,
+    0.85
+  ],
+  "status": "all_24_candidates_fit_compiled_and_locked_before_selection_open"
+}

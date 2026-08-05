@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "attempt": "v001",
+  "classification": "nonbinding_consumed_V5_feasibility_yardstick",
+  "source": "runs/lewm_v5_generalization/attempts/v005/power_analysis.json source_endpoint_moments",
+  "source_sha256": "bc191a033be5a90d5b608cbb06aa3f9ed8c513c330c9a562aa8fefff507ce466",
+  "family_size": 8,
+  "familywise_alpha": 0.05,
+  "per_claim_alpha": 0.00625,
+  "retained_effect_fraction": 0.35,
+  "family_power_target": 0.95,
+  "grid": [
+    {"episodes_per_regime": 500, "raw_marginal_power": 0.2623878421342254, "fixed_whitened_marginal_power": 0.46186998237301674, "union_bound_family_power_lower": 0.0},
+    {"episodes_per_regime": 1000, "raw_marginal_power": 0.5537502203157411, "fixed_whitened_marginal_power": 0.8157294950407451, "union_bound_family_power_lower": 0.0},
+    {"episodes_per_regime": 1500, "raw_marginal_power": 0.7663444556867919, "fixed_whitened_marginal_power": 0.95180862998876, "union_bound_family_power_lower": 0.0},
+    {"episodes_per_regime": 2000, "raw_marginal_power": 0.8898448092071345, "fixed_whitened_marginal_power": 0.989451888143257, "union_bound_family_power_lower": 0.517186789401566},
+    {"episodes_per_regime": 2500, "raw_marginal_power": 0.9520627706855244, "fixed_whitened_marginal_power": 0.9979688877544661, "union_bound_family_power_lower": 0.800126633759962},
+    {"episodes_per_regime": 3000, "raw_marginal_power": 0.9804208825817128, "fixed_whitened_marginal_power": 0.999645304970429, "union_bound_family_power_lower": 0.9202647502085672},
+    {"episodes_per_regime": 3500, "raw_marginal_power": 0.992406760785352, "fixed_whitened_marginal_power": 0.9999426863502169, "union_bound_family_power_lower": 0.9693977885422753},
+    {"episodes_per_regime": 4000, "raw_marginal_power": 0.9971798371045695, "fixed_whitened_marginal_power": 0.9999913095099092, "union_bound_family_power_lower": 0.9886845864579148},
+    {"episodes_per_regime": 4500, "raw_marginal_power": 0.9989904471813431, "fixed_whitened_marginal_power": 0.9999987506738116, "union_bound_family_power_lower": 0.9959567914206189}
+  ],
+  "first_grid_point_meeting_target": 3500,
+  "binding_post_selection_size_rule": "power_rule.json",
+  "used_to_select_final_confirmation_size": false,
+  "passed": true
+}

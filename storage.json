@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "storage_id": "lewm-governed-storage-v1",
+  "volume_name": "ChildLens_Governed",
+  "volume_uuid": "C4E3E4D2-BC24-45D8-9BD0-F7F477F1EC90",
+  "default_root": "/Volumes/ChildLens_Governed/lewm-storage",
+  "marker": ".lewm-storage.json",
+  "stablewm_relative": "stable-worldmodel",
+  "manifest_relative": "manifest.json"
+}

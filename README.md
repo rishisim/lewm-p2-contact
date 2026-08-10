@@ -32,6 +32,18 @@ All new training or evaluation loaders should go through
 the backend from the dataset path. Use `le-wm/verify_dataset.py` before relying
 on a converted Lance artifact.
 
+## External Storage
+
+Authoritative source datasets and locally unique checkpoints live on the
+governed USB volume at `/Volumes/ChildLens_Governed/lewm-storage`. The canonical
+layout, checksums, and recovery procedure are recorded in
+`docs/external_storage.md`, `storage.json`, and `storage_manifest.json`.
+
+Run `python lewm_storage.py` as a preflight. The training, evaluation, and
+dataset-verification entrypoints run the same preflight automatically and stop
+with a clear message when the USB is not connected. Remote machines must point
+`LEWM_STORAGE_ROOT` at a prepared root containing the matching marker.
+
 ## Excluded
 
 This repository intentionally excludes local virtual environments, Python caches,

@@ -11,9 +11,11 @@ consolidated results figure, and one consolidated confirmation table.
 
 The manuscript's bounded claim is:
 
-> At matched counted FLOPs, history-conditioned allocation improved fresh-cohort
-> next-latent prediction in the frozen Cube PlanOracle confirmation and in a
-> fresh confirmation of a pilot-derived, PushT-specific binary depth rule.
+> At matched expected counted FLOPs, history-conditioned allocation improved
+> fresh-cohort next-latent prediction for two frozen artifact/population pairs:
+> Cube PlanOracle and a fresh confirmation of a pilot-generated, PushT-specific
+> binary depth rule. The result does not establish contact recognition,
+> retraining stability, transfer, systems efficiency, planning, or control.
 
 The submission is double-blind. No model experiment was run during manuscript
 production; the edit reorganizes and consolidates the already-verified
@@ -117,11 +119,16 @@ IRIS, DIAMOND, and LeWorldModel. Because priority remains a moving target, the
 manuscript uses restrained complementary positioning and makes no priority
 claim.
 
+The August 2026 revision also checked the primary arXiv records for
+Visuo-Tactile World Models (arXiv:2602.06001) and FeelWorld
+(arXiv:2607.24267). They are cited to distinguish explicitly contact-grounded
+world models from this paper's latent/action-history allocation mechanism.
+
 ## Scientific boundaries retained
 
 - Counted arithmetic is separated from device latency and energy.
 - Analytic fixed-depth mixtures are expectation-level comparators; runnable
-  schedules are identified separately.
+  schedules are identified separately and their existing results are reported.
 - PushT refiner, whitening, and gate fitting are environment-specific.
 - The negative four-depth PushT pilot precedes the derived binary hypothesis
   and its disjoint confirmation.

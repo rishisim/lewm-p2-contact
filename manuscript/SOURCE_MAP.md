@@ -60,6 +60,12 @@ adequacy counts before rendering.
 |---|---|---|
 | Table 1 (`tab:confirmations`) | Consolidated Cube and PushT adaptive/comparator MSE, absolute and relative benefits, and confidence intervals | Cube sources in H1 and PushT sources in H4 |
 
+The supplementary runnable-control paragraph reports the already-computed
+Cube seeded-mixture and within-episode histogram comparisons from
+`CUBE/analysis_result.json`, plus the PushT within-episode call-randomization
+comparisons from `BINARY/DECISION.json`. These are descriptive secondary
+controls and do not define additional confirmatory families.
+
 ## Equations and supplementary tables
 
 | Item | Contents | Exact local source |

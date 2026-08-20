@@ -29,22 +29,25 @@
 \newcommand{\raw}{\mathrm{raw}}
 \newcommand{\white}{\mathrm{white}}
 \newcommand{\benefit}{\Delta}
-\newcommand{\hash}[1]{\texttt{\seqsplit{#1}}}
+\newcommand{\hash}[1]{\texttt{#1}}
 
 \title{History-Conditioned Refinement for Visual Manipulation World Models at Matched Counted Compute}
 \workshoptitle{The 1st Workshop on Physical World AI: Geometry, Characteristics, and Multimodal Sensing}
+\makeatletter
+\renewcommand{\@noticestring}{Submitted to the 1st Workshop on Physical World AI (PhysWorldAI), NeurIPS 2026. Do not distribute.}
+\makeatother
 \author{Anonymous Authors}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Many latent world models use the same inference depth for every transition even when the expected value of another refinement differs. We test whether a history-conditioned allocator can improve one-step latent prediction by redistributing refinement at matched expected counted \flops{}. The allocator observes only information available before the target latent---past and present latents, current action blocks, predictions, and updates---and its feature and scoring overhead is charged to the ledger. We evaluate one frozen artifact/population pair in each of two simulated visual-manipulation settings. On 1,600 fresh Cube episodes, allocation improves raw latent mean-squared error (MSE) by 0.1968\% and native-whitened MSE by 0.6125\% relative to the strongest fixed-depth envelope, with positive multiplicity-adjusted lower bounds. A PushT four-depth pilot is negative under its two-endpoint rule; a pilot-generated binary rule is then locked and confirmed on 240 disjoint episodes, improving raw MSE by 2.2521\% and fit-whitened MSE by 0.5346\%. The frozen Cube allocator retains four of six shift endpoint claims. These results show that transition-conditioned refinement can improve next-latent fidelity for the evaluated frozen artifacts at fixed declared arithmetic. They do not establish contact recognition, cross-environment transfer, latency, energy, planning, or control benefits.
+Comparisons of adaptive refinement in physical world models are confounded when routing overhead and fixed-depth baselines are charged under different arithmetic. We introduce a matched-counted-\flops{} evaluation protocol with a frozen compute ledger and use it to test whether a history-conditioned allocator can improve one-step latent prediction by redistributing refinement. The allocator observes only information available before the target latent---past and present latents, current action blocks, predictions, and updates---and its feature and scoring overhead is charged to the ledger. We evaluate one frozen artifact/population pair in each of two simulated visual-manipulation settings. On 1,600 fresh Cube episodes, allocation improves raw latent mean-squared error (MSE) by 0.1968\% and native-whitened MSE by 0.6125\% relative to the strongest fixed-depth envelope, with positive multiplicity-adjusted lower bounds. A PushT four-depth pilot is negative under its two-endpoint rule; a pilot-generated binary rule is then locked and confirmed on 240 disjoint episodes, improving raw MSE by 2.2521\% and fit-whitened MSE by 0.5346\%. The frozen Cube allocator retains four of six shift endpoint claims. These results show that transition-conditioned refinement can improve next-latent fidelity for the evaluated frozen artifacts at fixed declared arithmetic. They do not establish contact recognition, cross-environment transfer, latency, energy, planning, or control benefits.
 \end{abstract}
 
 \section{Introduction}
 
-Physical-interaction trajectories contain heterogeneous transitions: free motion, contact, policy-induced discontinuities, and nearly settled states can occur in one trajectory. Many latent predictors nevertheless use a fixed inference depth. This paper studies a focused question: \emph{can a world model use information available before the target latent to reassign a fixed refinement budget across transitions and thereby improve next-latent prediction?}
+Evaluation protocols for adaptive computation in embodied world models must separate \emph{where} computation is assigned from \emph{how much} computation is spent. Physical-interaction trajectories make that distinction salient: free motion, contact, policy-induced discontinuities, and nearly settled states can occur in one trajectory, yet many latent predictors use a fixed inference depth. This paper studies a focused question: \emph{can a world model use information available before the target latent to reassign a fixed refinement budget across transitions and thereby improve next-latent prediction?}
 
 This is a question about allocation, not budget reduction. If adaptive and fixed systems use different arithmetic, any quality difference can be explained by total compute. We count the base predictor, refiners, feature construction, and gate scoring, then compare against the strongest feasible mixture of fixed depths at the same expected counted \flops{}. The comparison asks whether conditioning refinement on transition history improves loss relative to an outcome-independent fixed-depth envelope.
 
@@ -58,9 +61,9 @@ Two endpoints are used because latent scale can hide different failure modes. Ra
 
 Our contributions are:
 \begin{itemize}
+  \item a reusable matched-counted-\flops{} evaluation protocol with a frozen operation ledger, endpoint-specific fixed-depth envelopes, charged routing overhead, and runnable transition-independent controls;
   \item a history-conditioned allocator for frozen stagewise latent predictors that estimates adjacent-depth raw and whitened gains without the target latent, with gate overhead included in the declared \flops{} ledger;
   \item role-separated evidence from two simulated manipulation artifact/population pairs: a frozen four-depth Cube confirmation and a fresh confirmation of a pilot-generated binary PushT rule;
-  \item an expected-counted-\flops{} comparison with endpoint-specific fixed-depth envelopes and runnable transition-independent controls; and
   \item a bounded evidence record retaining the negative PushT pilot, partial Cube shift robustness, whitening sensitivity, one-artifact limitation, and absent latency, planning, and control evidence.
 \end{itemize}
 
@@ -374,7 +377,7 @@ The experiments use stable-worldmodel 0.1.0 \citep{maes2026stableworldmodel} and
 \caption{SHA-256 hashes for principal numerical arrays.}
 \label{tab:hashes}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}Y Y@{}}
+\begin{tabular}{@{}p{0.30\textwidth} p{0.66\textwidth}@{}}
 \toprule
 Artifact & SHA-256 \\
 \midrule
@@ -386,7 +389,7 @@ Planning metrics & \hash{ba734b92c2cba7546201693349e331dd06a8e2233429134a71cdc80
 PushT four-depth arrays & \hash{30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8} \\
 PushT binary arrays & \hash{080c052a582c5d20650b1569fd8425c986533e1afbe616a83e2e7e5f9ce89cc9} \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
 
 \input{checklist.tex}

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import matplotlib as mpl
@@ -18,23 +19,31 @@ import numpy as np
 
 MANUSCRIPT = Path(__file__).resolve().parent
 ROOT = MANUSCRIPT.parent
+EXTERNAL_ROOT = Path(os.environ.get("LEWM_ARTIFACT_ROOT", ROOT)).resolve()
 FIGURES = MANUSCRIPT / "figures"
 
-INDEX_PATH = ROOT / "runs/lewm_paper_evidence_synthesis/EVIDENCE_INDEX.json"
-CUBE_DECISION = ROOT / "runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json"
-CUBE_BOOT = ROOT / "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/bootstrap_replicates.npz"
-CUBE_EPISODES = ROOT / "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/v5_confirmation_episode_metrics.npz"
-CUBE_RANK = ROOT / "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/stagewise_ranking.json"
-SHIFT_DECISION = ROOT / "runs/lewm_v5_generalization/attempts/v005/decision.json"
-SHIFT_BOOT = ROOT / "runs/lewm_v5_generalization/attempts/v005/metrics/bootstrap_replicates.npz"
-PILOT_DECISION = ROOT / "runs/lewm_pusht_replication_pilot/PILOT_DECISION.json"
-PILOT_ARRAYS = ROOT / "runs/lewm_pusht_replication_pilot/EVALUATION_ARRAYS.npz"
-BINARY_DECISION = ROOT / "runs/lewm_pusht_binary_confirmation/DECISION.json"
-BINARY_ARRAYS = ROOT / "runs/lewm_pusht_binary_confirmation/EVALUATION_ARRAYS.npz"
-BRIDGE_RESULTS = ROOT / "runs/lewm_frozen_gate_planning_bridge/RESULTS.json"
-BRIDGE_B = ROOT / "runs/lewm_frozen_gate_planning_bridge/phase_b_metrics.npz"
-DECOMP_RESULTS = ROOT / "runs/lewm_planning_bridge_decomposition/RESULTS.json"
-DECOMP_ARRAYS = ROOT / "runs/lewm_planning_bridge_decomposition/decomposition_metrics.npz"
+
+def source_path(relative: str) -> Path:
+    """Resolve a source from the checkout or the optional local artifact root."""
+    checkout_path = ROOT / relative
+    return checkout_path if checkout_path.exists() else EXTERNAL_ROOT / relative
+
+
+INDEX_PATH = source_path("runs/lewm_paper_evidence_synthesis/EVIDENCE_INDEX.json")
+CUBE_DECISION = source_path("runs/lewm_v5_readiness_program/v5_package_versions/v004/decision.json")
+CUBE_BOOT = source_path("runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/bootstrap_replicates.npz")
+CUBE_EPISODES = source_path("runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/v5_confirmation_episode_metrics.npz")
+CUBE_RANK = source_path("runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/stagewise_ranking.json")
+SHIFT_DECISION = source_path("runs/lewm_v5_generalization/attempts/v005/decision.json")
+SHIFT_BOOT = source_path("runs/lewm_v5_generalization/attempts/v005/metrics/bootstrap_replicates.npz")
+PILOT_DECISION = source_path("runs/lewm_pusht_replication_pilot/PILOT_DECISION.json")
+PILOT_ARRAYS = source_path("runs/lewm_pusht_replication_pilot/EVALUATION_ARRAYS.npz")
+BINARY_DECISION = source_path("runs/lewm_pusht_binary_confirmation/DECISION.json")
+BINARY_ARRAYS = source_path("runs/lewm_pusht_binary_confirmation/EVALUATION_ARRAYS.npz")
+BRIDGE_RESULTS = source_path("runs/lewm_frozen_gate_planning_bridge/RESULTS.json")
+BRIDGE_B = source_path("runs/lewm_frozen_gate_planning_bridge/phase_b_metrics.npz")
+DECOMP_RESULTS = source_path("runs/lewm_planning_bridge_decomposition/RESULTS.json")
+DECOMP_ARRAYS = source_path("runs/lewm_planning_bridge_decomposition/decomposition_metrics.npz")
 
 BLUE = "#2864A6"
 LIGHT_BLUE = "#79A9D1"
@@ -79,7 +88,7 @@ def verify_sources() -> None:
     ]
     for source_id in used_ids:
         record = catalog[source_id]
-        path = ROOT / record["path"]
+        path = source_path(record["path"])
         actual = sha256(path)
         if actual != record["sha256"]:
             raise AssertionError(f"hash mismatch for {source_id}: {actual}")
@@ -183,6 +192,11 @@ def panel_label(ax, label: str) -> None:
             va="bottom", ha="left")
 
 
+def panel_title(ax, label: str, title: str) -> None:
+    """Set a left-aligned panel title with an unambiguous panel label."""
+    ax.set_title(rf"$\bf{{{label}}}$  {title}", loc="left")
+
+
 def interval_row(ax, y, estimate, low, high, *, color=BLUE, marker="o", filled=True,
                  simultaneous=None, size=38, zorder=3):
     ax.plot([low, high], [y, y], color=GRAY, linewidth=1.5, solid_capstyle="round", zorder=1)
@@ -220,11 +234,8 @@ def figure_one() -> None:
     ax_a.axvline(0, color=BLACK, linewidth=0.8)
     ax_a.set_yticks([0, 1], [x[0] for x in cube_specs[::-1]])
     ax_a.set_xlabel("Benefit (% of comparator MSE)\nright favors adaptive")
-    ax_a.set_title("Frozen Cube confirmation")
-    ax_a.text(0.02, 0.02, "1,600 episodes · 60,800 transitions\n4,332,936,120,435 counted FLOPs · passed",
-              transform=ax_a.transAxes, fontsize=6.5, va="bottom", color=GRAY)
+    panel_title(ax_a, "A", "Frozen Cube confirmation")
     ax_a.grid(axis="x", color=LIGHT_GRAY, linewidth=0.55)
-    panel_label(ax_a, "A")
 
     # B: preserve the PushT discovery-to-confirmation chronology.
     rows = [
@@ -247,11 +258,8 @@ def figure_one() -> None:
               transform=ax_b.transAxes, fontsize=6.5, color=GRAY, va="bottom")
     ax_b.set_yticks(y_positions, [row[0] for row in rows])
     ax_b.set_xlabel("Benefit (% of comparator MSE)\nright favors adaptive")
-    ax_b.set_title("PushT: negative pilot before fresh confirmation")
-    ax_b.text(0.99, 0.02, "Pilot: 80 episodes, exploratory 95% intervals\nBinary: 240 episodes, 307,585,049,440 FLOPs",
-              transform=ax_b.transAxes, fontsize=6.5, va="bottom", ha="right", color=GRAY)
+    panel_title(ax_b, "B", "PushT: negative pilot before fresh confirmation")
     ax_b.grid(axis="x", color=LIGHT_GRAY, linewidth=0.55)
-    panel_label(ax_b, "B")
 
     # C: realized allocation, with routing-rank summaries.
     allocations = np.array([
@@ -266,15 +274,18 @@ def figure_one() -> None:
                   label=f"depth {depth + 1}")
         left += allocations[:, depth]
     cube_rhos = ", ".join(f"{s['spearman_score_gain_rho']:.2f}" for s in rank["stages"])
-    ax_c.text(100.7, 1, rf"stage $\rho$: {cube_rhos}", va="center", fontsize=7)
-    ax_c.text(100.7, 0, rf"stage-1 $\rho$: {binary['stage1_score_gain_rank']['combined_score_gain_spearman']:.2f}",
-              va="center", fontsize=7)
-    ax_c.set_xlim(0, 132)
-    ax_c.set_yticks([1, 0], ["Cube confirmation", "PushT binary confirmation"])
+    binary_rho = binary["stage1_score_gain_rank"]["combined_score_gain_spearman"]
+    ax_c.set_xlim(0, 100)
+    ax_c.set_yticks(
+        [1, 0],
+        [
+            f"Cube confirmation\nstage $\\rho$: {cube_rhos}",
+            f"PushT binary confirmation\nstage-1 $\\rho$: {binary_rho:.2f}",
+        ],
+    )
     ax_c.set_xlabel("Realized transition allocation (%)")
-    ax_c.set_title("Allocation and routing summaries", loc="left")
+    panel_title(ax_c, "C", "Allocation and routing summaries")
     ax_c.legend(ncol=4, frameon=False, loc="lower left", bbox_to_anchor=(0, -0.48))
-    panel_label(ax_c, "C")
 
     fig.savefig(FIGURES / "figure1_confirmed_effects.pdf", bbox_inches="tight")
     plt.close(fig)
@@ -307,14 +318,15 @@ def figure_two() -> None:
         ax.axvline(0, color=BLACK, linewidth=0.8)
         ax.set_yticks(range(3), labels[::-1])
         ax.set_xlabel("Benefit (% of comparator MSE)\nright favors adaptive")
-        ax.set_title(title)
+        ax.margins(x=0.08)
+        panel_title(ax, "A" if ax is ax_raw else "B", title)
         ax.grid(axis="x", color=LIGHT_GRAY, linewidth=0.55)
-    panel_label(ax_raw, "A")
-    panel_label(ax_white, "B")
-    ax_raw.text(0.01, 0.02, "line: individual 95% interval\nblack cap: simultaneous lower bound",
-                transform=ax_raw.transAxes, fontsize=6.5, color=GRAY, va="bottom")
-    ax_white.text(0.99, 0.02, "filled: simultaneous lower bound > 0\n3,000 episodes per regime",
-                  transform=ax_white.transAxes, fontsize=6.5, color=GRAY, va="bottom", ha="right")
+    ax_raw.text(0.99, 0.98, "line: individual 95% interval\nblack cap: simultaneous lower bound",
+                transform=ax_raw.transAxes, fontsize=6.5, color=GRAY, va="top", ha="right",
+                bbox=dict(facecolor="white", edgecolor="none", alpha=0.9, pad=2.0))
+    ax_white.text(0.99, 0.98, "filled: simultaneous lower bound > 0\n3,000 episodes per regime",
+                  transform=ax_white.transAxes, fontsize=6.5, color=GRAY, va="top", ha="right",
+                  bbox=dict(facecolor="white", edgecolor="none", alpha=0.9, pad=2.0))
 
     all_labels = ["Cube native", *labels]
     histograms = [
@@ -335,9 +347,8 @@ def figure_two() -> None:
     ax_alloc.set_yticks(positions, all_labels)
     ax_alloc.set_xlim(0, 100)
     ax_alloc.set_xlabel("Realized transition allocation (%)")
-    ax_alloc.set_title("Frozen-gate allocation under distribution shifts", loc="left")
+    panel_title(ax_alloc, "C", "Frozen-gate allocation under distribution shifts")
     ax_alloc.legend(ncol=4, frameon=False, loc="lower left", bbox_to_anchor=(0, -0.48))
-    panel_label(ax_alloc, "C")
 
     fig.savefig(FIGURES / "figure2_cube_shift_map.pdf", bbox_inches="tight")
     plt.close(fig)

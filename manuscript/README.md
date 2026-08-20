@@ -34,11 +34,13 @@ Primary files:
 
 ## Build
 
-The figure script expects the repository layout used by this checkout. From
-the repository root:
+The figure script prefers sources in the repository and can fall back to a
+local, untracked artifact root for arrays that are intentionally stored outside
+Git. From the repository root:
 
 ```bash
-/Users/rishisim/.cache/lewm-v2-venv/bin/python manuscript/generate_figures.py
+LEWM_ARTIFACT_ROOT=/Users/rishisim/Documents/research/lewm-p2-contact-local-artifacts \
+  /Users/rishisim/.cache/lewm-v2-venv/bin/python manuscript/generate_figures.py
 ```
 
 The script hash-checks every indexed numerical source that it reads and then

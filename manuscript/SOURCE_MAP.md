@@ -54,32 +54,21 @@ adequacy counts before rendering.
 | Figure 3B | Raw and whitened 20-start candidate effects with start-cluster intervals on separate axes | `DECOMP/RESULTS.json` key `candidate_rollout_fidelity`; `DECOMP/decomposition_metrics.npz` |
 | Figure 3C | Physical outcome ranges, exactly constant starts, tolerance-distinct groups, and the zero-informative-start conclusion | `DECOMP/decomposition_metrics.npz` arrays `physical_outcome_range`, `meaningfully_distinct_outcomes`, and `informative_start`; `DECOMP/RESULTS.json` key `candidate_set_informativeness` |
 
-## Main tables
+## Main table
 
 | Table | Contents | Exact local source |
 |---|---|---|
-| Table 1 (`tab:cube`) | Cube adaptive/comparator MSE, absolute and relative effects, individual intervals, simultaneous lower bounds, sample size, FLOPs | `CUBE/decision.json`; `CUBE/analysis_result.json`; `CUBE/metrics/v5_confirmation_episode_metrics.npz`; `CUBE/metrics/bootstrap_replicates.npz` |
-| Table 2 (`tab:shifts`) | Three shift populations, adaptive endpoint MSEs, effects, simultaneous lower bounds, exact compute, regime labels | `SHIFT/decision.json`; `SHIFT/analysis_result.json`; `SHIFT/DGP_MATRIX.json`; the three explicitly listed `SHIFT/metrics/*_episode_metrics.npz` artifacts in H2 |
-| Table 3 (`tab:pusht`) | Chronological four-depth pilot and binary confirmation, sample sizes, effects/intervals, exact totals, formal labels | `PILOT/PILOT_DECISION.json`; `BINARY/CONFIG.json`; `BINARY/DECISION.json`; `BINARY/INDEPENDENT_CHECK.json` |
-| Table 4 (`tab:routing`) | Stage reached counts, score/gain Spearman correlations, exact call histograms | `CUBE/metrics/stagewise_ranking.json`; `PILOT/PILOT_DECISION.json` key `stagewise_rank`; `BINARY/DECISION.json` key `stage1_score_gain_rank` |
-| Table 5 (`tab:planning`) | K=5 composed losses, candidate rollout effects/intervals, rank and selection adequacy | `BRIDGE/RESULTS.json`; `BRIDGE/phase_b_metrics.npz`; `DECOMP/RESULTS.json`; `DECOMP/decomposition_metrics.npz` |
-| Table 6 (`tab:compute`) | Exact adaptive/comparator totals, call histograms, analytic equivalent means, seeded Cube total | `CUBE/decision.json`; `CUBE/metrics/compute_ledger_realized.json`; `SHIFT/decision.json`; `PILOT/PILOT_DECISION.json`; `BINARY/DECISION.json` |
-| Table 7 (`tab:latency`) | Every latency median displayed in the paper | `CUBE/metrics/v5_confirmation_latency.json`; `PILOT/LATENCY.json`; `BINARY/DECISION.json` key `synchronized_latency` |
+| Table 1 (`tab:confirmations`) | Consolidated Cube and PushT adaptive/comparator MSE, absolute and relative benefits, and confidence intervals | Cube sources in H1 and PushT sources in H4 |
 
-## Appendix equations and tables
+## Equations and supplementary tables
 
 | Item | Contents | Exact local source |
 |---|---|---|
-| Equations 1–2 | Stagewise refiner and causal dual-head gate | `CUBE/runner.py`; `CUBE/operation_ledger.json`; `PILOT/run_pilot.py`; `PILOT/pusht_core.py`; `PILOT/FROZEN_GATE.npz`; `PILOT/CONFIG.json`; `BINARY/run_confirmation.py`; `BINARY/CONFIG.json` |
-| Equations 3–4 | Episode-averaged raw/whitened MSE and benefit sign | `CUBE/analysis.py`; `PILOT/run_pilot.py`; `PILOT/PILOT_DECISION.json`; `BINARY/run_confirmation.py`; `BINARY/DECISION.json`; `SYNTH/CLAIM_LEDGER.md` |
-| Equations 5–6 | Counted-FLOP ledger and strongest bracketing analytic comparator | `CUBE/operation_ledger.json`; `CUBE/metrics/compute_ledger_realized.json`; `CUBE/analysis_result.json`; `PILOT/PILOT_DECISION.json`; `BINARY/DECISION.json`; corresponding runners listed above |
-| Table 8 (`tab:operations`) | Primitive Cube and PushT operation charges | `CUBE/operation_ledger.json`; `PILOT/PILOT_DECISION.json` key `compute`; `BINARY/DECISION.json` key `compute`; corresponding runners listed above |
-| Table 9 (`tab:shiftfull`) | Individual 95% intervals separated from simultaneous shift bounds | `SHIFT/decision.json` keys `individual_intervals` and `simultaneous_co_primary`; `SHIFT/metrics/bootstrap_replicates.npz` |
-| Table 10 (`tab:whitening`) | Post-outcome whitening-floor sensitivity | `BINARY/EVALUATION_ARRAYS.npz`; `SYNTH/evidence_check.py`; `SYNTH/EVIDENCE_INDEX.json` |
-| Table 11 (`tab:chronology`) | PushT pilot decision, binary hypothesis, protocol lock, decision lock, independent check | `PILOT/PILOT_DECISION.json`; `BINARY/CONFIG.json`; `BINARY/DECISION.json`; `BINARY/INDEPENDENT_CHECK.json`; `SYNTH/PAPER_STATUS.md` |
-| Table 12 (`tab:hashes`) | Full SHA-256 values for principal numerical arrays | `SYNTH/EVIDENCE_INDEX.json` key `source_catalog` |
-| Table 13 (`tab:horizons`) | Raw/whitened adaptive and matched losses at K=1–5 | `BRIDGE/phase_b_metrics.npz`; `BRIDGE/RESULTS.json` key `phase_b/paired_adaptive_minus_matched` |
-| Table 14 (`tab:adequacy`) | Candidate-pool constancy, informativeness, ranking, overlap, and selection disagreement | `DECOMP/RESULTS.json`; `DECOMP/decomposition_metrics.npz` |
+| Equations 1–2 | Stagewise refiner and non-anticipatory dual-head gate | `CUBE/runner.py`; `CUBE/operation_ledger.json`; `PILOT/run_pilot.py`; `PILOT/pusht_core.py`; `PILOT/FROZEN_GATE.npz`; `BINARY/run_confirmation.py` |
+| Equations 3–5 | Episode raw loss, benefit sign, and counted-compute ledger | `CUBE/analysis.py`; `CUBE/operation_ledger.json`; `PILOT/run_pilot.py`; `BINARY/run_confirmation.py`; `SYNTH/CLAIM_LEDGER.md` |
+| Supplementary table `tab:operations` | Primitive Cube and PushT operation charges | `CUBE/operation_ledger.json`; `PILOT/PILOT_DECISION.json` key `compute`; `BINARY/DECISION.json` key `compute` |
+| Supplementary table `tab:shiftfull` | Individual intervals and simultaneous shift bounds | `SHIFT/decision.json`; `SHIFT/metrics/bootstrap_replicates.npz` |
+| Supplementary table `tab:hashes` | SHA-256 values for principal numerical arrays | `SYNTH/EVIDENCE_INDEX.json` key `source_catalog` |
 
 ## Principal source hashes
 

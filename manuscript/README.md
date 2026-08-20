@@ -2,29 +2,31 @@
 
 ## Document status
 
-This directory contains a complete, venue-neutral manuscript draft and its
-compiled PDF. The document is 17 pages with 3 main figures and 14 tables
-(7 core tables and 7 appendix tables). All 17 rendered pages and all three
-standalone figures were visually inspected for clipping, legibility, float
-ordering, bad page breaks, and unresolved references.
+This directory contains the anonymous archival submission for the NeurIPS 2026
+Physical World AI workshop. It uses the official NeurIPS 2026 double-blind
+workshop style, has exactly eight main-paper pages, and places references,
+supplementary material, and the required NeurIPS checklist after the
+page-limited body. The main paper contains an allocator diagram, one
+consolidated results figure, and one consolidated confirmation table.
 
 The manuscript's bounded claim is:
 
-> At matched counted FLOPs, causal learned allocation improved fresh-cohort
+> At matched counted FLOPs, history-conditioned allocation improved fresh-cohort
 > next-latent prediction in the frozen Cube PlanOracle confirmation and in a
 > fresh confirmation of a pilot-derived, PushT-specific binary depth rule.
 
-There is no circulation-blocking writing or literature issue known at this
-stage. Authorship and venue styling remain intentionally unspecified. The
-paper does not add an experimental outcome and no model experiment was run
-during manuscript production.
+The submission is double-blind. No model experiment was run during manuscript
+production; the edit reorganizes and consolidates the already-verified
+evidence.
 
 Primary files:
 
-- `main.tex` — complete manuscript, tables, and appendices
+- `main.tex` — eight-page paper plus references and supplementary material
+- `neurips_2026.sty` — official NeurIPS 2026 workshop style
+- `checklist.tex` — completed official NeurIPS 2026 paper checklist
 - `references.bib` — verified focused bibliography
-- `figures/` — exactly the three planned main figures
-- `main.pdf` — compiled manuscript
+- `figures/` — consolidated main evidence plus two supplementary figures
+- `main.pdf` — ignored local build; the retained submission PDF lives outside Git
 - `SOURCE_MAP.md` — claim/figure/table-to-artifact traceability
 - `generate_figures.py` — the sole read-only extraction/figure script
 
@@ -50,7 +52,7 @@ The bundled LaTeX workflow selected the installed TeX Live toolchain. Build
 from the LaTeX skill root:
 
 ```bash
-cd /Users/rishisim/.codex/plugins/cache/openai-bundled/latex/0.2.4
+cd /Users/rishisim/.codex/plugins/cache/openai-bundled/latex/0.2.6
 python3 scripts/compile_latex.py \
   /Users/rishisim/Documents/research/lewm-p2-contact/manuscript/main.tex
 ```
@@ -69,12 +71,10 @@ The command runs `latexmk`, BibTeX, and the required reruns and writes
 - Synthesis checker after the final visual pass: passed with
   `"all_checks_passed": true` at
   `2026-07-19T03:48:26.645307+00:00`.
-- LaTeX compilation: passed with no overfull boxes, undefined citations, or
-  undefined references, and with no warnings in the final log.
-- PDF inspection: 17/17 pages checked at rendered resolution. All tables fit;
-  all figures are readable; every core float is anchored in its intended
-  results subsection; references precede the appendices; no draft markers
-  remain.
+- LaTeX compilation: run with TeX Live 2026 using the official NeurIPS style.
+- PDF inspection: the submission build is rendered and checked page by page;
+  the eight-page body precedes references, supplementary material, and the
+  completed checklist.
 
 To rerun the synthesis validation from the repository root:
 

@@ -1,707 +1,389 @@
-\documentclass[10pt]{article}
+\documentclass{article}
 
+\PassOptionsToPackage{numbers,compress}{natbib}
+\usepackage[dblblindworkshop]{neurips_2026}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[margin=0.82in]{geometry}
 \usepackage{microtype}
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{array}
-\usepackage{longtable}
 \usepackage{multirow}
 \usepackage{siunitx}
 \usepackage{xcolor}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{float}
-\usepackage{enumitem}
-\usepackage{natbib}
 \usepackage{url}
 \usepackage{seqsplit}
-\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit}
 \usepackage[nameinlink,noabbrev]{cleveref}
 
 \graphicspath{{figures/}}
-\setlength{\parskip}{0.35em}
-\setlength{\parindent}{1.15em}
-\setlength{\tabcolsep}{4.5pt}
-\renewcommand{\arraystretch}{1.12}
-\captionsetup{font=small,labelfont=bf}
-\setlist{nosep,leftmargin=1.45em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
 \sisetup{group-separator={,},group-minimum-digits=4}
 
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
-\newcommand{\method}{LeWM adaptive allocation}
 \newcommand{\flops}{\textsc{flop}s}
 \newcommand{\raw}{\mathrm{raw}}
 \newcommand{\white}{\mathrm{white}}
 \newcommand{\benefit}{\Delta}
 \newcommand{\hash}[1]{\texttt{\seqsplit{#1}}}
 
-\title{Matched-Compute Causal Depth Allocation Improves Next-Latent Prediction in Two Frozen Confirmations}
-\author{}
-\date{July 2026}
+\title{History-Conditioned Depth Allocation Improves Physical World-Model Prediction at Matched Compute}
+\workshoptitle{The 1st Workshop on Physical World AI: Geometry, Characteristics, and Multimodal Sensing}
+\author{Anonymous Authors}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Fixed inference depth spends the same computation on every transition even when the value of refinement varies.  We test whether a learned, non-anticipatory allocator can assign refinement depth per transition and improve next-latent prediction while holding an explicit arithmetic ledger fixed.  In a frozen Cube PlanOracle confirmation with 1,600 fresh episodes (60,800 transitions), adaptive allocation reduced raw latent mean-squared error (MSE) by \(6.7690\times10^{-6}\), or 0.1968\% of the strongest matched-compute analytic comparator, and native-whitened MSE by \(6.0862\times10^{-4}\), or 0.6125\%; both multiplicity-adjusted lower bounds were positive.  A frozen one-factor Cube shift study retained four of six simultaneous raw/whitened claims, which is partial rather than universal robustness.  In PushT, a fresh 80-episode four-depth pilot was formally negative because its fit-whitened endpoint did not favor adaptation.  That consumed pilot suggested a PushT-specific binary depth rule, which was locked and then evaluated on 240 disjoint fresh episodes.  The binary policy reduced raw MSE by 0.0027338 (2.2521\%) and fixed fit-whitened MSE by 0.0015692 (0.5346\%) at exactly 307,585,049,440 counted \flops{} per arm; both simultaneous lower bounds were positive.  Five-step composition was directionally favorable but exploratory, while a tie-heavy 20-start planning bridge supplied no evidence about decision utility.  These results support a bounded claim about predictive fidelity at matched counted computation, not downstream control, wall-clock advantage, energy use, or environment-independent robustness.
+Physical world models often spend the same inference depth on every transition, although an additional refinement step is not equally useful everywhere. We ask whether a history-conditioned, non-anticipatory allocator can decide where to refine and improve next-latent prediction without increasing a declared arithmetic budget. The allocator observes only present and past latents, actions, predictions, and refinement updates; its own overhead is charged to the budget. In a frozen Cube confirmation with 1,600 fresh episodes, allocation improves raw latent mean-squared error (MSE) by 0.1968\% and native-whitened MSE by 0.6125\% relative to the strongest matched-compute fixed-depth envelope, with positive multiplicity-adjusted lower bounds. A PushT four-depth pilot is formally negative, but the binary depth rule it motivates is locked and then confirmed on 240 disjoint episodes, improving raw MSE by 2.2521\% and fit-whitened MSE by 0.5346\% at exactly matched counted compute. Frozen Cube shifts retain four of six raw/whitened claims. These results show that \emph{where} a physical world model spends refinement can matter even when total counted arithmetic is held fixed. They do not establish lower latency, lower energy, improved planning, or improved control.
 \end{abstract}
 
 \section{Introduction}
-\label{sec:intro}
 
-Latent world models compress observations and predict how the compressed state changes under action.  Their learned dynamics can support representation learning, imagination, and planning, but those uses do not make every transition equally valuable to refine.  A fixed-depth predictor allocates the same number of refinement blocks to a nearly settled transition and to one whose prediction changes materially with another update.  This motivates a narrow empirical question: \emph{can computation be reassigned across transitions, using only information available at prediction time, so that next-latent prediction improves at the same counted arithmetic cost?}
+A physical world model must predict heterogeneous transitions: free motion, contact, policy-induced discontinuities, and nearly settled states can all appear in the same trajectory. Yet inference depth is commonly fixed, so an easy transition and a transition that benefits from refinement receive the same computation. This paper studies a focused question: \emph{can a world model use information available at prediction time to reassign a fixed refinement budget across transitions and thereby improve next-latent prediction?}
 
-That question is easy to blur with several different ones.  Lower operation counts are not the same as lower device latency.  Better prediction is not evidence of better planning or control.  A gate fitted in a new environment is not direct cross-environment transfer.  An expectation-level mixture of fixed depths is not itself an executable schedule.  Finally, a favorable pilot-generated rule is not confirmation until it is locked and tested on a disjoint cohort.  The study was organized to keep those distinctions explicit.
+This is a question about allocation, not budget reduction. If adaptive and fixed systems use different arithmetic, any quality difference can be explained by total compute. We instead count the base predictor, refiners, feature construction, and gate scoring, then compare against the strongest feasible mixture of fixed depths at exactly the same total. The comparison isolates whether transition identity matters: the adaptive model can win only by assigning extra computation to better-chosen transitions.
 
-We study a stagewise LeWM predictor whose transition-level gate observes only current and historical latents, actions, the latest refinement update, and scalar summaries derived from those quantities.  The gate estimates the value of one more refinement step for raw and whitened prediction, takes the smaller standardized estimate, and compares it with a frozen stage threshold.  Its feature construction, affine heads, routing operations, base predictor, and refiners all enter the counted-\flops{} ledger.  We compare the resulting allocation against the strongest feasible fixed-depth analytic mixture at exactly the same ledger total, with runnable seeded or transition-randomized controls where available.
+The distinction is scientifically useful even without a systems claim. A matched-compute prediction result tests a mechanism---history-conditioned refinement---without confounding it with a larger model or a larger inference budget. It can justify later work on sparse kernels, batching, or controllers, but it does not itself imply lower latency, lower energy, or better actions. We therefore separate predictive fidelity from implementation speed and decision utility throughout.
 
-The evidence has a deliberate hierarchy.  The primary anchor is a frozen four-depth Cube policy evaluated on 1,600 fresh PlanOracle episodes.  The same Cube system is then carried without refitting into three one-factor shifts.  Consumed Cube data support exploratory five-step and planning diagnostics only.  PushT uses environment-specific fitting and selection: a four-depth pilot fails its formal two-endpoint criterion, the failure suggests a binary one-extra-step hypothesis, and a locked fresh confirmation tests that hypothesis.  This order prevents the binary result from retroactively converting its discovery data into confirmatory evidence.
+We evaluate a stagewise latent predictor in two physical-interaction environments. In Cube, the full four-depth model, allocator, whitening transform, and thresholds are frozen before a 1,600-episode confirmation and three 3,000-episode one-factor shifts. In PushT, environment-specific fitting produces a four-depth pilot that fails its prespecified two-endpoint criterion. A read-only analysis of that consumed pilot motivates a simpler binary rule; the rule is locked and then tested on 240 new episodes. This chronology matters, but it is not the paper's organizing claim: the central result is that two distinct, fresh-cohort confirmations support history-conditioned allocation at matched counted compute.
 
-The paper makes three empirical contributions within this boundary:
+Physical interaction makes allocation a plausible inductive bias. The value of another dynamics update can depend on recent motion, action changes, and whether the current refinement is still large relative to the predicted state. These signals are present before the target arrives, even though the realized prediction error is not. A router can therefore learn an ordering over expected refinement value without observing privileged physical labels. The study tests this ordering indirectly: a useful router should both correlate with realized gain and improve aggregate error when given the same arithmetic budget as a nonselective alternative.
 
+Two endpoints are used because latent scale can hide different failure modes. Raw MSE weights the coordinates as represented by the frozen model. Whitened MSE normalizes correlated directions using a transform fixed without confirmation outcomes, making low-variance directions more visible. Requiring both endpoints to pass is stricter than selecting whichever metric favors the method. It is also why the negative PushT pilot remains scientifically informative: its raw gain cannot cancel its whitened failure.
+
+Our contributions are:
 \begin{itemize}
-    \item It provides two fresh-cohort confirmations that learned transition-specific allocation can improve raw and whitened next-latent prediction at matched counted computation: a frozen Cube PlanOracle policy and a PushT-specific binary rule.
-    \item It reports the relevant negative and mixed evidence alongside the confirmations: the failed PushT four-depth pilot and two raw Cube shift claims whose simultaneous lower bounds do not exceed zero.
-    \item It traces the prediction result through exploratory composition to an explicitly unsupported planning bridge, showing why predictive fidelity and decision utility remain separate claims.
+  \item a non-anticipatory allocator that predicts the benefit of another refinement from history and current computation, with gate overhead included in the compute ledger;
+  \item two role-separated confirmations, in Cube and PushT, showing lower raw and whitened next-latent error than matched-compute fixed-depth envelopes;
+  \item a bounded evidence map that retains a negative PushT pilot, mixed frozen-shift results, and explicit limits on latency, planning, control, and generality.
 \end{itemize}
 
-The result is intentionally not framed as a claim about downstream control, direct Cube-to-PushT transfer, practical runtime, energy efficiency, or a generally robust adaptive world-model system.
-
 \section{Related Work}
-\label{sec:related}
 
-\paragraph{Adaptive computation and dynamic depth.}
-Adaptive Computation Time introduced a learned halting mechanism for recurrent networks \citep{graves2016adaptive}; Universal Transformers tied parameters across recurrent depth and coupled the recurrence with a dynamic halting mechanism \citep{dehghani2019universal}; and PonderNet learned a probabilistic distribution over computation steps \citep{banino2021pondernet}.  More recent token-level systems allocate a fixed layerwise budget across tokens or learn recursive token depths \citep{raposo2024mixture,bae2025mixture}.  These methods establish that depth need not be uniform.  Our empirical target is narrower: stagewise depth for latent-dynamics transitions, evaluated against a ledger-matched fixed-depth envelope rather than against an unconstrained fixed baseline.
+\paragraph{Adaptive depth.}
+Adaptive Computation Time, Universal Transformers, and PonderNet learn when recurrent computation should stop \citep{graves2016adaptive,dehghani2019universal,banino2021pondernet}. Early-exit and conditional-routing systems similarly stop or skip work for individual inputs \citep{teerapittayanon2016branchynet,bolukbasi2017adaptive,wang2018skipnet,wu2018blockdrop}, while recent systems allocate depth at token level \citep{raposo2024mixture,bae2025mixture}. Our target differs in both domain and comparison: we route latent physical transitions and test against a fixed-depth loss envelope after charging the allocator itself.
 
-\paragraph{Early exit and conditional routing.}
-Early-exit and dynamic-routing systems learn to stop or skip computation for particular inputs \citep{teerapittayanon2016branchynet,bolukbasi2017adaptive,wang2018skipnet,wu2018blockdrop}.  Their objectives often trade predictive quality against a budget, latency surrogate, or policy cost.  The present study instead counts the base predictor, each refinement, gate features, and affine scoring, then assigns the comparator the identical total.  This accounting isolates the value of \emph{where} refinement is spent from the value of spending more arithmetic overall.  The analytic comparator describes an expectation over fixed-depth losses; executable transition-randomized controls are reported separately.
+\paragraph{Physical world models.}
+Latent dynamics support prediction, imagination, and behavior learning in PlaNet and Dreamer \citep{hafner2019planet,hafner2020dreamer}; transformer and diffusion systems extend this line \citep{micheli2023iris,alonso2024diamond}. LeWorldModel supplies the efficient frozen predictor family used here \citep{maes2026leworldmodel}. Closely related concurrent studies examine learned early exit in text-interactive worlds \citep{lu2026loopwm} and fixed exit-depth regimes across control tasks \citep{sivasankar2026adaptive}. We complement them with per-transition routing, exact matched-ledger tests, and physical-interaction environments. Adaptive rollout horizon and sparse imagination allocate planning resources rather than single-transition refinement \citep{bhatia2022adaptive,chun2026sparse}; our exploratory planning bridge does not support a planning claim.
 
-\paragraph{Latent-dynamics prediction and world models.}
-Latent dynamics have been learned for pixel-based planning and behavior learning in PlaNet and Dreamer \citep{hafner2019planet,hafner2020dreamer}; later systems include transformer-based and diffusion-based world models \citep{micheli2023iris,alonso2024diamond}.  LeWorldModel focuses on efficient next-latent prediction and supplies the frozen base family used here \citep{maes2026leworldmodel}.  These works motivate predictive fidelity, but behavior results in a world-model paper do not imply that a small MSE change has decision value in a particular candidate set.
-
-Two concurrent studies are especially close.  \citet{lu2026loopwm} use a parameter-shared recurrent transformer with a learned sigmoid early-exit gate and deferred decoding, evaluated in the text-interactive ScienceWorld and ALFWorld environments.  That scope differs from the visual latent-transition allocation and exact matched-ledger tests here.  \citet{sivasankar2026adaptive} examine fixed exits and depth regimes across nine DeepMind Control tasks and analyze when additional latent-world-model depth helps or hurts; they do not evaluate a learned per-transition router.  We therefore position our evidence as a complementary matched-compute test, not as a priority claim.
-
-\paragraph{Adaptive imagination and planning computation.}
-Adaptation can occur at other axes: rollout horizon can be selected by a meta-controller \citep{bhatia2022adaptive}, and Sparse Imagination changes token sparsity during world-model planning \citep{chun2026sparse}.  Those methods allocate planning or rollout resources.  Our gate allocates single-transition refinement before any planner consumes the prediction.  The small planning bridge in this study is a boundary test, not evidence that transition-level predictive gains improve planning.
-
-This review is focused on literature needed to define the claim and is not intended to be exhaustive.
-
-\section{Problem and Method}
+\section{History-Conditioned Allocation}
 \label{sec:method}
 
-\subsection{Transition prediction with stagewise refinement}
-
-Let \(h_t=(z_{t-H+1:t},a_{t-H+1:t})\) denote a causal history of latent states and blocked actions, and let \(z_{t+1}\in\mathbb{R}^{p}\) be the next target latent.  A frozen base predictor produces \(b_t=f_0(h_t)\).  A stagewise solver yields predictions
+\paragraph{Stagewise prediction.}
+Let \(h_t=(z_{t-H+1:t},a_{t-H+1:t})\) contain only observed latent and action history. A frozen base predictor produces \(b_t=f_0(h_t)\), and a stagewise solver produces
 \begin{equation}
-    \hat z^{(1)}_{t+1}=b_t+u^{(1)}_t,
-    \qquad
-    \hat z^{(d)}_{t+1}=\hat z^{(d-1)}_{t+1}+u^{(d)}_t,quad d=2,\ldots,D,
-    \label{eq:refinement}
+  \hat z^{(1)}_{t+1}=b_t+u^{(1)}_t,\qquad
+  \hat z^{(d)}_{t+1}=\hat z^{(d-1)}_{t+1}+u^{(d)}_t,\quad d=2,\ldots,D .
+  \label{eq:refinement}
 \end{equation}
-where each \(u^{(d)}_t\) is a learned refinement update.  The Cube implementation has a frozen depth-one anchor and three depth-specific residual adapters.  The PushT implementation uses a shared recurrent refinement block with iteration embeddings.  Both expose candidate exits at depths one through four.
+Cube uses a depth-one anchor and three depth-specific residual adapters. PushT uses a shared recurrent block with iteration embeddings. Both expose depths one through four; the PushT confirmation later restricts this frozen mechanism to depths one and two.
 
-At a reached stage \(s\), the gate constructs a feature vector \(x_{t,s}\) from the three-latent history, three actions, current base prediction, most recent update, and 11 scalar summaries of norms, distances, cosines, and temporal changes.  Cube uses 1,046 features because its blocked action has 25 dimensions; PushT uses 1,001 because its blocked action has 10 dimensions.  No contact label, reward, success, future latent, simulator geometry, or future action enters the allocator.  We use \emph{causal} only in this non-anticipatory computational sense, not as a claim about causal effects.
+\paragraph{Non-anticipatory gate.}
+At reached stage \(s\), the gate builds \(x_{t,s}\) from three latent states, three actions, the current prediction, the latest update, and 11 norms, distances, cosines, and temporal-change summaries. Cube and PushT use 1,046 and 1,001 features, respectively, because their blocked actions differ in dimension. The gate never receives \(z_{t+1}\), a future action, contact label, reward, success, or simulator geometry. We therefore call it \emph{non-anticipatory} or \emph{history-conditioned}; we do not claim causal identification.
 
-Two stage-specific ridge heads estimate standardized raw and whitened one-step gains, \(g^{\raw}_{t,s}\) and \(g^{\white}_{t,s}\).  The deployed score is conservative across metrics,
+The vector features preserve the latent and action coordinates that a linear head can use directly. The scalar summaries expose magnitudes and alignments that would otherwise require multiplicative interactions: norms of the prediction and update, cosine relationships, distances between recent latent states, and temporal changes in those quantities. Heads are stage-specific because a score at depth one and a score after two refinements operate on different reached populations. They are fitted only on rows that reached the corresponding stage under the frozen preceding decisions.
+
+Two stage-specific ridge heads estimate standardized raw and whitened gain from one more step. The conservative score and routing rule are
 \begin{equation}
-    q_{t,s}=\min\!\left\{g^{\raw}_{t,s},g^{\white}_{t,s}\right\},
-    \qquad
-    d_t=1+\sum_{s=1}^{D-1}\mathbf{1}\{q_{t,s}>\tau_s\}
-    \prod_{j<s}\mathbf{1}\{q_{t,j}>\tau_j\},
-    \label{eq:gate}
+ q_{t,s}=\min\{g^{\raw}_{t,s},g^{\white}_{t,s}\},\qquad
+ \text{continue at stage }s\ \Longleftrightarrow\ q_{t,s}>\tau_s .
+ \label{eq:gate}
 \end{equation}
-with frozen thresholds \(\tau_s\).  Later scores are constructed only for rows that reached the corresponding stage.  The PushT binary confirmation computes only \(q_{t,1}\), chooses depth one or two using the frozen threshold 0.03659823484, and never computes or consults later gate stages.
+Later stages are evaluated only for transitions that continue. Figure~\ref{fig:allocator} makes the information boundary and accounting explicit.
 
-\subsection{Prediction endpoints}
+Training targets for the heads are realized reductions in next-step loss between adjacent exits, standardized using fit-role statistics. At deployment, the minimum of the two predicted gains implements a conservative conjunction: a transition continues only when the learned rule expects improvement in both coordinate systems above the selected threshold. The heads do not update online, and an observed target never changes a later decision within the evaluation cohort.
 
-For episode \(e\), with transition set \(T_e\), raw error is averaged over latent coordinates and then transitions,
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{\begin{tikzpicture}[
+  node distance=4.5mm and 6mm,
+  box/.style={draw,rounded corners,align=center,minimum height=7mm,inner sep=3pt,font=\small},
+  flow/.style={-Latex,thick},
+  note/.style={font=\scriptsize,align=center}
+]
+\node[box,fill=blue!7] (hist) {observed history\\\(z_{\le t},a_{\le t}\)};
+\node[box,fill=blue!7,right=of hist] (pred) {base + current\\refinement};
+\node[box,fill=orange!10,right=of pred] (feat) {history-conditioned\\features \(x_{t,s}\)};
+\node[box,fill=orange!10,right=of feat] (score) {dual gain heads\\\(q=\min(g^\raw,g^\white)\)};
+\node[box,fill=green!10,right=of score] (route) {stop\\or continue};
+\draw[flow] (hist) -- (pred);
+\draw[flow] (pred) -- (feat);
+\draw[flow] (feat) -- (score);
+\draw[flow] (score) -- node[above,font=\scriptsize]{\(q>\tau_s\)} (route);
+\draw[flow] (route.south) |- ++(0,-5mm) -| node[pos=.25,below,note]{if continue: pay for one more refiner} (pred.south);
+\node[note,below=12mm of feat] (future) {\textbf{not available:} \(z_{t+1}\), future actions, reward, success, contact, geometry};
+\node[draw,dashed,rounded corners,fit=(pred)(feat)(score),inner sep=4pt,label={[font=\scriptsize]below:all arithmetic inside the dashed box is charged}] {};
+\end{tikzpicture}}
+\caption{Allocator and information boundary. Only observed history and computation already performed can affect the next depth decision. Base prediction, refiners, feature construction, and both gain heads are included in the counted-compute ledger.}
+\label{fig:allocator}
+\end{figure}
+
+\paragraph{Endpoints and matched compute.}
+For episode \(e\), raw error averages squared latent residuals over coordinates and transitions. Whitened error applies a transform \(W\) frozen before evaluation. Benefit is comparator minus adaptive MSE, so positive values favor allocation. Episodes, not transitions, are the inferential units.
+
+More explicitly, for transition set \(T_e\) and latent dimension \(p\),
 \begin{equation}
-    L^{\raw}_e(d)=\frac{1}{|T_e|}\sum_{t\in T_e}\frac{1}{p}
-    \left\|z_{t+1}-\hat z^{(d)}_{t+1}\right\|_2^2.
-    \label{eq:rawloss}
+ L_e^{\raw}(d)=\frac{1}{|T_e|}\sum_{t\in T_e}\frac{1}{p}
+ \left\|z_{t+1}-\hat z^{(d)}_{t+1}\right\|_2^2 .
+ \label{eq:rawloss}
 \end{equation}
-Whitened error replaces the residual by \(W(z_{t+1}-\hat z_{t+1})\), where \(W\) is frozen before evaluation.  Cube uses the PlanOracle-native transform frozen with the model package.  PushT uses a transform estimated on its fit role with a covariance eigenvalue floor ratio of \(10^{-3}\).  Under Cube shifts, that unchanged matrix is called \emph{fixed-whitened} to avoid implying that it is native to the shifted distribution.
-
-The reported benefit is
+The whitened endpoint replaces the residual by \(W(z_{t+1}-\hat z_{t+1})\). Cube uses the PlanOracle-native transform shipped with the frozen package. PushT uses a covariance transform estimated only on its fit role, with a prespecified eigenvalue floor ratio of \(10^{-3}\). Under Cube shifts, the unchanged Cube matrix is called \emph{fixed-whitened}: it is not re-estimated to make a shifted population easier to evaluate. For metric \(m\), we report
 \begin{equation}
-    \benefit_m = L^{\mathrm{comp}}_m-L^{\mathrm{adaptive}}_m,
-    \label{eq:benefit}
+ \benefit_m=L_m^{\rm comparator}-L_m^{\rm adaptive},
+ \label{eq:benefit}
 \end{equation}
-so positive values favor adaptive allocation.  Episode loss is formed before inference.  Relative effects divide \(\benefit_m\) by comparator MSE.  Raw and whitened effects share an axis only after this normalization.
+and form episode loss before any bootstrap or population average. Relative effects divide \(\benefit_m\) by comparator MSE, so raw and whitened effects share an axis only after normalization.
 
-\subsection{Counted-compute ledger}
-\label{sec:ledger}
-
-Counted \flops{} are deterministic arithmetic counts derived from the executed graph; comparisons, indexing, device synchronization, memory traffic, and simulator or pixel-encoder work are not silently converted into \flops{}.  Those exclusions are stated rather than treated as zero practical cost.  For \(N\) evaluated transitions, total adaptive compute is
+For \(N\) transitions, the adaptive ledger is
 \begin{equation}
-    C_{\mathrm{adaptive}}
-    =NC_{\mathrm{base}}+NC_{\mathrm{mandatory}}
-     +R_{\mathrm{ref}}C_{\mathrm{ref}}+R_{\mathrm{gate}}C_{\mathrm{gate}},
-    \label{eq:ledger}
+ C_{\rm adapt}=NC_{\rm base}+NC_{\rm mandatory}
+   +R_{\rm ref}C_{\rm ref}+R_{\rm gate}C_{\rm gate}.
+ \label{eq:ledger}
 \end{equation}
-where the exact meanings of the mandatory and refiner terms differ slightly by implementation.  \Cref{app:compute} gives both operation ledgers and reproduces every total in \cref{tab:compute}.
-
-Let \(L_d\) and \(C_d\) be the episode-mean loss and counted total of a fixed-depth arm.  For each feasible pair \(\ell<u\) bracketing \(C_{\mathrm{adaptive}}\), define
+Comparisons, indexing, memory traffic, simulator work, and pixel encoding are excluded rather than assigned fictional \flops{}. For fixed depths \(\ell<u\) bracketing \(C_{\rm adapt}\), we choose
 \begin{equation}
-    w_{\ell u}=\frac{C_{\mathrm{adaptive}}-C_{\ell}}{C_u-C_{\ell}},
-    \qquad
-    L_{\ell u}^{\mathrm{mix}}=(1-w_{\ell u})L_{\ell}+w_{\ell u}L_u.
-    \label{eq:analytic}
+ w_{\ell u}=\frac{C_{\rm adapt}-C_\ell}{C_u-C_\ell},\qquad
+ L^{\rm mix}_{\ell u}=(1-w_{\ell u})L_\ell+w_{\ell u}L_u ,
 \end{equation}
-The primary analytic comparator is the feasible pair with the smallest \(L_{\ell u}^{\mathrm{mix}}\) for that endpoint.  Its weighted total is exactly \(C_{\mathrm{adaptive}}\), including adaptive gate overhead through the implied mean depth.  Equation~\eqref{eq:analytic} is an expectation-level comparator, not a fractional executable schedule.  Seeded mixtures and within-episode call randomizations provide runnable controls where specified; they answer a different, implementation-level question.
+then use the feasible pair with the smallest loss for each endpoint. This analytic envelope exactly matches expected counted compute and is deliberately strong, but it is not an executable fractional schedule. Runnable randomized controls are secondary. Full operation ledgers are in \cref{app:compute}.
+
+\paragraph{What the comparator identifies.}
+Suppose a fixed-depth curve improves monotonically with depth. An adaptive model can appear favorable merely because it takes more steps on average. The analytic envelope removes this advantage by converting the allocator's complete charge---including feature and score computation---into an equivalent point on the fixed-depth curve. It is also endpoint-adaptive: if raw and whitened fixed-depth losses prefer different bracketing pairs, each endpoint receives its own strongest feasible pair. A positive benefit therefore means that no feasible fixed-depth allocation of the same expected counted arithmetic achieves the observed episode-mean loss. It does \emph{not} mean that the fractional mixture is directly schedulable, or that equal \flops{} imply equal elapsed time.
+
+\paragraph{Runnable controls.}
+Where integer schedules can approximate the analytic charge, we additionally compare with seeded fixed-depth mixtures and within-episode randomizations that preserve the adaptive depth histogram while permuting which transitions receive each depth. These controls are weaker as exact envelopes but executable as transition schedules. Agreement with them tests the same qualitative mechanism: the identity of routed transitions matters beyond the marginal number of calls.
 
 \section{Experimental Design}
-\label{sec:design}
 
-\subsection{Study roles, freezing, and chronology}
+\paragraph{Cube.}
+Gate heads are fitted on 240 episodes and thresholds selected on 120 disjoint episodes. The complete four-depth package is then frozen. The main confirmation contains 1,600 fresh PlanOracle episodes (60,800 transitions) from \texttt{swm/OGBCube-v0}. Co-primary endpoints are raw and native-whitened MSE; both Bonferroni-adjusted one-sided lower bounds must exceed zero. We use 20,000 paired episode bootstraps. Without refitting, the same package is tested under three one-factor shifts---MarkovOracle, doubled action noise, and 0.1 random-action probability---with 3,000 fresh episodes each and six multiplicity-controlled regime-by-endpoint claims.
 
-The program separates fit, selection, pilot/discovery, and confirmation roles.  All outcome cohorts are disjoint from the episodes used to fit a refiner, fit a gate, or choose a threshold.  Frozen artifacts are addressed by hashes; the principal chronology and array hashes are reported in \cref{app:chronology}.  No model parameter is updated during an evaluation described as frozen.
+The native PlanOracle population uses action noise 0.1, random-action probability zero, history length three, and 38 evaluated transitions per episode. Selection considers six regularization/quantile candidates and seals the candidate with thresholds 0.194657, 0.156867, and 0.151533. The one-factor shifts alter only the named population factor. All three retain the model weights, feature map, heads, thresholds, whitening matrix, and compute ledger. Their six simultaneous lower bounds use per-claim level \(0.05/6\). This design asks whether the already-confirmed allocation rule survives specified changes; it does not tune a new rule for each shift.
 
-\paragraph{Cube discovery and freeze.}
-Prior Cube development produced a four-depth candidate.  Gate heads were fitted on 240 episodes, six thresholded candidates were compared on 120 selection episodes, and candidate \texttt{stage\_dual\_r0.01\_q0.85} was sealed before the fresh confirmation.  The selection thresholds were 0.19465730, 0.15686659, and 0.15153322.  The complete base, solver, feature map, heads, thresholds, PlanOracle-native whitening, and compute ledger were frozen in package version \texttt{v004}.
+\paragraph{PushT.}
+For \texttt{swm/PushT-v1}, a 120-episode fit role trains the recurrent refiner, whitening transform, and ridge heads; 40 disjoint episodes select a four-depth candidate. An 80-episode pilot requires favorable raw and fit-whitened point benefits. It fails because the whitened endpoint is negative. A read-only analysis of those consumed arrays suggests retaining only the frozen stage-one decision, yielding a mandatory depth-one/optional depth-two rule. That hypothesis, threshold, metrics, 240 fresh seeds, and rejection rule are sealed before a disjoint confirmation. Both co-primary simultaneous lower bounds must be positive under 20,000 paired episode bootstraps. All PushT fit, selection, pilot, and confirmation episodes under the WeakPolicy have zero task success; the study concerns prediction on those trajectories.
 
-\paragraph{Fresh Cube PlanOracle confirmation.}
-The anchor population is \texttt{swm/OGBCube-v0} under PlanOracle with action noise 0.1, random-action probability zero, history length three, and 38 evaluated transitions in each of 1,600 fresh episodes.  The co-primary endpoints are raw and native-whitened next-latent MSE.  Both simultaneous one-sided lower bounds must exceed zero.  A two-endpoint Bonferroni family uses per-endpoint \(\alpha=0.025\) with 20,000 paired episode-bootstrap replicates.
+PushT uses history length three and 18 evaluated transitions per episode. Its shared recurrent block has 256 hidden units and a 16-dimensional iteration embedding; the selected checkpoint contains 323,840 trainable parameters. Six gate candidates cross ridge regularization 1 or 10 with fit-score quantiles 0.45, 0.60, or 0.75; the selection role chooses regularization 10 and quantile 0.75. The pilot-derived binary protocol preserves the original stage-one heads and freezes threshold 0.0365982. It computes no later-stage features or scores, an important detail for the new exact ledger.
 
-\paragraph{Frozen Cube shifts.}
-The confirmed policy and native whitening matrix are then carried unchanged into three one-factor populations: PlanOracle to MarkovOracle, action noise 0.1 to 0.2, and random-action probability zero to 0.1.  Each has 3,000 fresh episodes and 114,000 transitions.  Six regime-by-endpoint claims share familywise \(\alpha=0.05\), so each simultaneous one-sided lower bound uses \(\alpha/6\).  The study is a partial robustness map over these specified shifts, not a claim over arbitrary distribution change.
+\paragraph{Role separation.}
+No evaluation cohort described as fresh is used to fit a refiner, gate, whitening transform, or threshold. All intervals resample whole episodes with the same bootstrap indices for adaptive and comparator losses. Hashes, timestamps, detailed cohorts, and secondary diagnostics appear in the supplement.
 
-\paragraph{Consumed Cube composition and planning bridge.}
-Five-step autoregressive composition reuses 100 already-consumed confirmation episodes and 3,400 overlapping starts.  It is exploratory and has no confirmatory interval.  A subsequent bridge uses 20 independent starts and 64 fixed candidates per start.  Its paired start-cluster intervals and candidate-set adequacy checks are descriptive because the bridge was opened after the one-step result and no closed-loop experiment was performed.
+\paragraph{Decision rules and diagnostics.}
+Cube and binary PushT confirmations each have a two-endpoint family. A study passes only if both one-sided Bonferroni-adjusted lower bounds exceed zero; favorable routing correlations cannot override a failed endpoint. We also report ordinary two-sided percentile intervals, relative effects, allocation histograms, and Spearman correlation between the frozen score and realized combined gain on rows that reach each stage. Correlations are mechanism diagnostics rather than independent confirmation tests because realized gain uses the target latent.
 
-\subsection{PushT environment-specific replication}
+The primary hypotheses are therefore population-specific. For frozen Cube PlanOracle, \(H_{\rm Cube}\) requires \(\benefit_{\raw}>0\) and \(\benefit_{\white}>0\) against their strongest exact-compute envelopes. For the fresh PushT binary cohort, \(H_{\rm PushT}\) requires the same conjunction under the fit-frozen whitening transform. Rejecting both null families supports two instantiations of the allocation principle; it does not estimate a common cross-environment effect. The shift family then asks a separate question about the already-frozen Cube package, and the exploratory bridge asks whether a one-step effect survives composition.
 
-PushT uses \texttt{swm/PushT-v1} with \texttt{WeakPolicy(dist\_constraint=100)}, history length three, and 18 evaluated transitions per episode.  A PushT refiner was fitted on 120 episodes; its selected checkpoint has 323,840 trainable parameters.  Stagewise dual ridge gates were fitted on the same fit role and one of six regularization/quantile candidates was selected on 40 separate episodes.  The resulting four-depth policy, \texttt{stage\_dual\_r10\_q0.75}, and its fit-whitening transform were frozen before evaluation.  This is PushT-specific fitting of the method, not direct transfer of the Cube gate.
-
-\paragraph{Formally negative four-depth pilot.}
-The frozen four-depth policy was evaluated on 80 fresh episodes (1,440 transitions).  The pilot required positive raw and fit-whitened point benefits against the matched-compute analytic comparator.  Raw benefit was positive, but fit-whitened benefit was negative; the locked label was therefore \texttt{pusht\_replication\_pilot\_not\_supported}.  Its bootstrap intervals are exploratory.  The negative result is retained as the discovery event rather than omitted.
-
-\paragraph{Pilot-derived binary hypothesis and fresh confirmation.}
-A read-only analysis of the consumed pilot arrays showed that restricting the frozen stage-one rule to mandatory depth one and optional depth two produced positive raw and fit-whitened point benefits (0.00243524 and 0.00123334).  That post-outcome simplification generated the hypothesis but is not confirmation.  A binary protocol fixing the original PushT gate, threshold, metrics, exact-compute comparator, 240 fresh episode seeds, and no exclusions or replacements was sealed before the new cohort.  Confirmation required positive simultaneous one-sided lower bounds for both co-primary endpoints, with Bonferroni \(\alpha/2=0.025\) and 20,000 paired episode-bootstrap replicates.
-
-All 240 PushT WeakPolicy episodes across the fit (120), selection (40), and pilot-evaluation (80) roles, and all 240 binary-confirmation episodes, had zero task success.  The PushT results therefore concern prediction on the sampled trajectories; they do not demonstrate successful behavior or decision utility.
-
-\subsection{Independent units, uncertainty, and diagnostics}
-
-The independent inferential unit is an episode for all one-step Cube and PushT tests and an initial planning start for the candidate bridge.  Calls and transition losses remain useful descriptive data, but they do not inflate sample size.  Bootstrap sampling uses common resampled units for adaptive and comparator losses.  Individual intervals are two-sided 95\% percentile intervals.  Simultaneous lower bounds follow the predeclared one-sided Bonferroni families described above.  Score-versus-realized-gain Spearman correlations are routing diagnostics, not separate confirmation claims.
-
-Latency diagnostics use synchronized repeated device timing and are isolated from the counted-compute endpoint.  They test whether the particular sparse implementation realizes a runtime advantage; they do not change the scientific decision.
+The Cube shift study is intentionally stricter: all six regime-by-endpoint claims share one family. We label robustness \emph{partial} when some but not all simultaneous lower bounds are positive. Exploratory composition and planning analyses use already-consumed data and have no path to upgrade the primary result. This hierarchy prevents a favorable secondary slice from changing a prespecified terminal decision.
 
 \section{Results}
-\label{sec:results}
 
-\subsection{Frozen Cube confirmation: the primary anchor}
+\paragraph{Cube confirmation.}
+The frozen four-depth allocator passes both co-primary tests. Raw MSE is 0.00343354 versus 0.00344031 for the strongest matched-compute envelope, a benefit of \(6.7690\times10^{-6}\) (95\% interval \([5.4240,8.1630]\times10^{-6}\)), or 0.1968\%. Native-whitened MSE is 0.0987642 versus 0.0993728, a benefit of \(6.0862\times10^{-4}\) (95\% interval \([5.1356,7.0843]\times10^{-4}\)), or 0.6125\%. The displayed lower endpoints also serve as simultaneous one-sided lower bounds. At 4,332,936,120,435 counted \flops{} per arm, routing assigns 50,973, 7,267, 1,773, and 787 transitions to depths one through four. Score--realized-gain Spearman correlations remain positive at all reached stages (0.263, 0.171, 0.141).
 
-The frozen allocator passed both co-primary Cube criteria (\cref{tab:cube,fig:confirmed}A).  Raw MSE was 0.003433540759 for adaptive allocation and 0.003440309763 for the strongest matched-compute analytic mixture, a benefit of \(6.769003362\times10^{-6}\) (95\% interval \([5.423955198,8.162961004]\times10^{-6}\)).  This is 0.1968\% of comparator MSE.  Native-whitened MSE was 0.09876419994 versus 0.09937282203, a benefit of 0.0006086220972 (95\% interval [0.0005135570380, 0.0007084272042]), or 0.6125\%.  The displayed lower endpoints also serve as the two simultaneous one-sided lower bounds, and both are positive.
+The histogram corresponds to 83.8\% of transitions stopping at depth one, 12.0\% at depth two, 2.9\% at depth three, and 1.3\% at depth four. Thus the effect is not produced by a nearly fixed depth-two system: most transitions stop immediately while a small tail receives multiple refinements. The stage-two and stage-three correlations are computed only over 9,827 and 2,560 reached rows, respectively, and should not be compared directly with the stage-one value over all 60,800 transitions. Their shared positive direction is nevertheless consistent with the allocator ranking additional refinement more effectively than random assignment.
 
-\begin{table}[H]
+\paragraph{PushT pilot and confirmation.}
+The four-depth pilot is retained as a negative result: raw benefit is 0.0039098, but fit-whitened benefit is \(-0.0003099\), failing the two-endpoint rule. On the later 240-episode binary confirmation, raw MSE falls from 0.1213907 to 0.1186569, a benefit of 0.0027338 (95\% interval [0.0024323, 0.0030399]), or 2.2521\%. Fit-whitened MSE falls from 0.2935357 to 0.2919665, a benefit of 0.0015692 (95\% interval [0.0012688, 0.0018738]), or 0.5346\%. Both simultaneous lower bounds are positive. Adaptive and comparator arms each use exactly 307,585,049,440 counted \flops{}. The rule sends 3,265 transitions to depth one and 1,055 to depth two; the stage-one score has Spearman 0.458 with combined realized gain.
+
+The pilot's negative whitened effect has exploratory interval [\(-0.0012590\), 0.0006292], whereas its favorable raw interval is [0.0027287, 0.0050886]. The disagreement is precisely why the conjunction rule was specified. The four-depth histogram [1,089, 42, 46, 263] also reveals an unusually heavy depth-four tail. Removing later routing stages after viewing that outcome is hypothesis generation, not a repair of the pilot. Only the disjoint binary cohort can support the simplified rule, and it does not rehabilitate the original four-depth candidate.
+
+\begin{table}[t]
 \centering
-\caption{Fresh Cube PlanOracle confirmation. Benefits are comparator MSE minus adaptive MSE; positive values favor adaptive allocation. The simultaneous family contains the two endpoints.}
-\label{tab:cube}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}YrrYrr@{}}
-\toprule
-Endpoint & Adaptive & Comparator & Benefit [95\% interval] & Simult. LB & Relative \\
-\midrule
-Raw latent MSE
-& 0.003433540759 & 0.003440309763
-& \begin{tabular}[t]{@{}l@{}}0.000006769003362\\{}[0.000005423955198,\\\phantom{[}0.000008162961004]\end{tabular}
-& 0.000005423955198 & 0.1968\% \\
-Native-whitened MSE
-& 0.09876419994 & 0.09937282203
-& \begin{tabular}[t]{@{}l@{}}0.0006086220972\\{}[0.0005135570380,\\\phantom{[}0.0007084272042]\end{tabular}
-& 0.0005135570380 & 0.6125\% \\
-\bottomrule
-\end{tabularx}
-\vspace{0.25em}
-\begin{minipage}{0.98\textwidth}\footnotesize
-\emph{Design:} 1,600 fresh episodes, 38 transitions per episode, 20,000 paired episode bootstraps, and 4,332,936,120,435 adaptive counted \flops{}. Terminal label: \texttt{v5\_confirmation\_passed}.
-\end{minipage}
-\end{table}
-
-The allocation was sparse but nontrivial: 50,973 transitions stopped at depth one, 7,267 at depth two, 1,773 at depth three, and 787 at depth four (\cref{fig:confirmed}C).  Gate score and combined realized gain had positive Spearman correlations at every reached stage: 0.2626 over 60,800 rows at stage one, 0.1712 over 9,827 reached rows at stage two, and 0.1412 over 2,560 reached rows at stage three (\cref{tab:routing}).  These diagnostics support the allocation mechanism without replacing the episode-level endpoint tests.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figure1_confirmed_effects.pdf}
-    \caption{Confirmed effects and allocation. \textbf{A}, Cube raw and native-whitened benefits normalized by comparator MSE; gray lines are individual 95\% intervals and black caps are simultaneous one-sided lower bounds. \textbf{B}, PushT chronology: the formally negative four-depth pilot precedes the pilot-derived binary rule and its fresh confirmation. Pilot intervals are exploratory; binary caps are simultaneous lower bounds. \textbf{C}, realized transition allocations and score-versus-gain Spearman correlations. Episode is the inferential unit; transition counts are descriptive.}
-    \label{fig:confirmed}
-\end{figure}
-
-\subsection{Frozen Cube shifts show partial robustness}
-
-The frozen policy retained four of six multiplicity-controlled claims (\cref{tab:shifts,fig:shifts}).  Under doubled PlanOracle action noise, both raw and fixed-whitened simultaneous lower bounds remained positive.  The fixed-whitened endpoint also remained positive for the Markov policy and random-action shifts.  Raw results were weaker: Markov benefit was negative, and random-action benefit was nearly zero with a negative simultaneous lower bound.  The appropriate terminal label is therefore \texttt{zero\_shot\_generalization\_partial}.  The shift map supports some robustness of the frozen Cube allocator within these one-factor interventions; it does not establish a distribution-independent property.
-
-\begin{table}[H]
-\centering
-\caption{One-factor Cube shifts using the fully frozen confirmation policy. Parentheses contain simultaneous lower bounds over the six regime-by-endpoint claims.}
-\label{tab:shifts}
+\caption{Consolidated fresh-cohort confirmations. Benefits are comparator minus adaptive episode MSE. Parentheses show 95\% intervals; their lower endpoints also form the two-endpoint simultaneous one-sided lower bounds.}
+\label{tab:confirmations}
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}YcYYY@{}}
+\begin{tabularx}{\textwidth}{@{}l l r r Y r@{}}
 \toprule
-Shift & Episodes (trans.) & Raw MSE / benefit / LB & Fixed-white MSE / benefit / LB & Counted \flops{} / label \\
+Environment & Endpoint & Adaptive & Comparator & Benefit (95\% interval) & Relative \\
 \midrule
-PlanOracle $\rightarrow$ MarkovOracle
-& 3,000 (114,000)
-& \begin{tabular}[t]{@{}l@{}}0.08203089830\\$-0.000002513778663$\\LB $-0.000005677096742$\end{tabular}
-& \begin{tabular}[t]{@{}l@{}}0.5879283392\\0.0001773618066\\LB 0.00008606212246\end{tabular}
-& 8,121,837,438,190 / mixed \\
-Action noise 0.1 $\rightarrow$ 0.2
-& 3,000 (114,000)
-& \begin{tabular}[t]{@{}l@{}}0.006131965011\\0.000006690627725\\LB 0.000005233178062\end{tabular}
-& \begin{tabular}[t]{@{}l@{}}0.1102460678\\0.0006314822713\\LB 0.0005518158912\end{tabular}
-& 8,124,093,582,040 / supported \\
-Random-action probability 0 $\rightarrow$ 0.1
-& 3,000 (114,000)
-& \begin{tabular}[t]{@{}l@{}}0.1013982963\\0.00000009599565688\\LB $-0.000003128983968$\end{tabular}
-& \begin{tabular}[t]{@{}l@{}}0.3484651159\\0.0004263060037\\LB 0.0003605363394\end{tabular}
-& 8,123,886,122,050 / mixed \\
+Cube & raw & 0.00343354 & 0.00344031 & \(6.7690{\times}10^{-6}\) (\(5.4240{\times}10^{-6}\), \(8.1630{\times}10^{-6}\)) & 0.1968\% \\
+Cube & native-white & 0.0987642 & 0.0993728 & \(6.0862{\times}10^{-4}\) (\(5.1356{\times}10^{-4}\), \(7.0843{\times}10^{-4}\)) & 0.6125\% \\
+PushT binary & raw & 0.1186569 & 0.1213907 & 0.0027338 (0.0024323, 0.0030399) & 2.2521\% \\
+PushT binary & fit-white & 0.2919665 & 0.2935357 & 0.0015692 (0.0012688, 0.0018738) & 0.5346\% \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-The routing distribution shifted along with the population (\cref{fig:shifts}C).  Markov transitions stopped at depth one more often (90.4\%) than native PlanOracle transitions (83.8\%), whereas the action-noise and random-action shifts retained more later-depth calls.  This is descriptive allocation behavior; it should not be interpreted as a measure of physical difficulty.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figure2_cube_shift_map.pdf}
-    \caption{Frozen Cube one-factor robustness map. \textbf{A--B}, raw and fixed-whitened benefits normalized by endpoint-specific comparator MSE. Gray lines show individual 95\% intervals; black caps show six-claim simultaneous lower bounds. Filled points have positive simultaneous lower bounds, while open points expose the failed or mixed raw claims. \textbf{C}, realized depth allocations for native and shifted cohorts. Each shifted cohort contains 3,000 independent episodes and 114,000 transitions.}
-    \label{fig:shifts}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figure1_confirmed_effects.pdf}
+  \caption{Consolidated evidence. \textbf{A}: normalized Cube benefits and simultaneous lower bounds. \textbf{B}: the negative PushT four-depth pilot precedes the pilot-derived binary rule and its fresh confirmation. \textbf{C}: realized allocations and score--gain correlations. Episode is the inferential unit; transition counts are descriptive.}
+  \label{fig:confirmed}
 \end{figure}
 
-\subsection{A negative PushT pilot immediately precedes a fresh binary confirmation}
+\paragraph{Frozen shifts and boundary tests.}
+The unchanged Cube allocator retains four of six multiplicity-controlled shift claims: raw and fixed-whitened benefits remain positive under doubled action noise, while fixed-whitened benefits remain positive under Markov and random-action shifts. Markov raw benefit is negative and random-action raw benefit is inconclusive. This is partial, not universal, robustness.
 
-The four-depth PushT pilot did not pass (\cref{tab:pusht,fig:confirmed}B).  Its raw benefit was 0.003909796985 with an exploratory 95\% interval [0.002728725277, 0.005088644256], but its fit-whitened benefit was \(-0.0003099001292\), with interval [\(-0.001258993863\), 0.0006292011461].  Because both point benefits had to be positive, the negative whitened result determines the formal pilot label.  Positive score-versus-gain correlations and a heavy depth-four tail within that pilot are useful diagnostics, but they do not override the criterion.
+Under doubled action noise, raw and fixed-whitened benefits are \(6.6906\times10^{-6}\) and \(6.3148\times10^{-4}\), with simultaneous lower bounds \(5.2332\times10^{-6}\) and \(5.5182\times10^{-4}\). Under MarkovOracle, raw benefit is \(-2.5138\times10^{-6}\), while fixed-whitened benefit remains \(1.7736\times10^{-4}\). With random-action probability 0.1, raw benefit is only \(9.60\times10^{-8}\) and its lower bound is negative, while fixed-whitened benefit is \(4.2631\times10^{-4}\). The frozen routing distribution also changes: Markov transitions stop at depth one more often than native PlanOracle transitions, while the noisy-action populations retain more later calls. This demonstrates population-responsive routing, but the histogram is not a physical-difficulty label.
 
-Only after that decision was locked did the consumed pilot arrays motivate the binary depth-one/depth-two rule.  On the disjoint 240-episode confirmation, both co-primary benefits were positive with positive simultaneous lower bounds.  Raw MSE fell from 0.1213907177 for the exact-compute analytic comparator to 0.1186569357, a benefit of 0.002733782041 (95\% interval [0.002432267825, 0.003039855909]) and a relative effect of 2.2521\%.  Fixed fit-whitened MSE fell from 0.2935356923 to 0.2919664555, a benefit of 0.001569236827 (95\% interval [0.001268753083, 0.001873825556]) and a relative effect of 0.5346\%.  The lower confidence endpoints are also the two simultaneous lower bounds.  The policy assigned 3,265 transitions to depth one and 1,055 to depth two; its stage-one score had Spearman 0.4577 with combined realized gain.
+Five-step composition on consumed Cube data is directionally favorable but exploratory. A 20-start, 64-candidate planning bridge is uninformative: no start meets the prespecified candidate-diversity rule, both rollout intervals cross zero, and adaptive and matched selections differ on only one start. Synchronized timings are also unfavorable to the current adaptive implementation. These results bound the confirmed claim to next-latent fidelity at matched counted arithmetic.
 
-\begin{table}[H]
-\centering
-\caption{PushT pilot and fresh binary confirmation in chronological order. Intervals for the pilot are exploratory; binary lower endpoints also serve as simultaneous one-sided lower bounds.}
-\label{tab:pusht}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}YrrYYrY@{}}
-\toprule
-Study & Episodes & Transitions & Raw benefit [95\% interval] & Fit-whitened benefit [95\% interval] & Counted \flops{} & Formal result \\
-\midrule
-Four-depth pilot
-& 80 & 1,440
-& 0.003909796985 [0.002728725277, 0.005088644256]
-& $-0.0003099001292$ [$-0.001258993863$, 0.0006292011461]
-& 102,905,055,196
-& not supported \\
-Binary confirmation
-& 240 & 4,320
-& 0.002733782041 [0.002432267825, 0.003039855909]
-& 0.001569236827 [0.001268753083, 0.001873825556]
-& 307,585,049,440
-& supported \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-The confirmation supports the pilot-derived hypothesis, not the full four-depth PushT policy.  It also does not support successful-task prediction: every PushT WeakPolicy episode across fit, selection, pilot, and confirmation roles had zero success.  The role-specific fitting and the whitening sensitivity in \cref{app:pusht} further constrain interpretation.
-
-\begin{table}[H]
-\centering
-\caption{Routing diagnostics. Correlations compare frozen gate score with realized combined next-step gain on the rows reaching that stage.}
-\label{tab:routing}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}Yl l Y Y@{}}
-\toprule
-Study & Stage / reached rows & Spearman $\rho$ & Allocation & Interpretation \\
-\midrule
-Cube confirmation & 1 / 60,800 & 0.262620548 & [50,973, 7,267, 1,773, 787] & Positive stage-one ordering \\
-Cube confirmation & 2 / 9,827 & 0.171193282 & same policy & Positive on reached subset \\
-Cube confirmation & 3 / 2,560 & 0.141229169 & same policy & Positive on smaller subset \\
-PushT four-depth pilot & 1/2/3: 1,440/351/309 & 0.429763 / 0.376714 / 0.390850 & [1,089, 42, 46, 263] & Exploratory evidence inside negative pilot \\
-PushT binary confirmation & 1 / 4,320 & combined 0.457740; raw 0.459259; white 0.395781 & [3,265, 1,055] & Fresh one-extra-step routing signal \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection{Composition is exploratory; planning remains unsupported}
-
-Composing the frozen Cube predictor for five steps produced small adaptive-minus-matched differences favoring adaptive allocation at every horizon (\cref{fig:planning}A).  At \(K=5\), raw MSE was 0.02967818 for adaptive and 0.02974415 for the histogram-matched schedule, a difference of \(-6.597279931\times10^{-5}\).  Whitened MSE was 0.155283 versus 0.156470, a difference of \(-0.001187089240\).  The 3,400 starts overlap within 100 consumed episodes, and there is no confirmatory interval.  The result is therefore exploratory evidence that the one-step advantage can survive short composition, not a new endpoint.
-
-The candidate rollout comparison was less conclusive (\cref{fig:planning}B and \cref{tab:planning}).  Across 20 independent starts, raw adaptive-minus-matched MSE was \(-2.735299392\times10^{-6}\), with a paired start-cluster interval [\(-6.392055823\times10^{-5}\), \(5.519269647\times10^{-5}\)].  The whitened effect was \(-0.0001401812773\), with interval [\(-0.0004938837164\), 0.0001551248760].  Both intervals cross zero.
-
-More importantly, the fixed 64-candidate pools could not test useful planning discrimination (\cref{fig:planning}C).  No start met the predeclared informativeness rule of physical range above 0.1\,mm and at least five tolerance-distinct outcome groups; ten starts had physical range at most \(10^{-12}\)\,m and four were exactly constant in floating-point representation.  Actual latent goal cost had mean rank correlation 0.0237 with physical block error over the nine rank-defined starts, and all-start top-five overlap was 0.040 versus chance 0.078125.  Adaptive and matched selections differed on one of 20 starts and on zero informative starts.  These data cannot establish planning or control utility.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figure3_multistep_planning.pdf}
-    \caption{Exploratory composition and the unsupported planning bridge. \textbf{A}, adaptive-minus-histogram-matched prediction MSE over horizons one through five on consumed, overlapping Cube starts; negative values favor adaptive and no inferential interval is attached. \textbf{B}, off-policy candidate rollout effects with paired 95\% start-cluster intervals; raw and whitened units use separate axes. \textbf{C}, candidate-pool physical range and tolerance-distinct outcome groups. Four starts are exactly constant, ten have range at most \(10^{-12}\)\,m, and none meet the two-part informativeness rule.}
-    \label{fig:planning}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Multi-step and planning boundary. Negative adaptive-minus-matched prediction differences favor adaptive routing. All planning intervals are descriptive.}
-\label{tab:planning}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}Y Y Y Y@{}}
-\toprule
-Link & Independent unit & Estimate / uncertainty & Conclusion \\
-\midrule
-Five-step composition, raw
-& 100 consumed episodes; 3,400 overlapping starts
-& adaptive 0.02967818; matched 0.02974415; difference $-0.00006597279931$; no interval
-& Small exploratory advantage \\
-Five-step composition, whitened
-& same
-& adaptive 0.155283; matched 0.156470; difference $-0.001187089240$; no interval
-& Small exploratory advantage \\
-Candidate rollout, raw
-& 20 starts; 64 candidates each
-& $-0.000002735299392$; 95\% interval [$-0.00006392055823$, 0.00005519269647]
-& Directional only \\
-Candidate rollout, whitened
-& same
-& $-0.0001401812773$; 95\% interval [$-0.0004938837164$, 0.0001551248760]
-& Directional only \\
-Latent goal cost $\rightarrow$ physical error
-& 20 starts; 9 rank-defined
-& mean Spearman 0.0237205; all-start top-five overlap 0.040
-& Unsupported; 0/20 informative \\
-Downstream utility
-& same consumed pilot
-& adaptive and matched selections differed at 1/20 starts, 0 informative
-& Unsupported \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\subsection{Counted computation and measured latency are different outcomes}
-
-Every primary comparison is exactly matched under its declared ledger (\cref{tab:compute}).  Cube uses an analytic equivalent mean depth of 1.252954098 after charging gate overhead; its conservative seeded runnable mixture used 103,565 additional \flops{}.  PushT pilot and binary analytic mixtures equal the adaptive integer ledger totals exactly.  This equality identifies a compute-budget comparison, but it does not turn fractional mixture weights into runnable schedules.
-
-\begin{table}[H]
-\centering
-\caption{Exact compute totals and comparator types. Equal analytic totals are expectation-level arithmetic matches; runnable controls are distinct.}
-\label{tab:compute}
-\scriptsize
-\begin{tabularx}{\textwidth}{@{}Y r l r r Y@{}}
-\toprule
-Study & Rows & Call histogram & Adaptive \flops{} & Comparator \flops{} & Comparator \\
-\midrule
-Cube confirmation & 60,800 & [50,973, 7,267, 1,773, 787] & 4,332,936,120,435 & 4,332,936,120,435 & analytic, mean depth 1.252954098; seeded runnable total 4,332,936,224,000 \\
-Cube Markov shift & 114,000 & [103,059, 6,748, 3,507, 686] & 8,121,837,438,190 & equal & endpoint-specific analytic pair \\
-Cube noise shift & 114,000 & [96,236, 12,960, 3,261, 1,543] & 8,124,093,582,040 & equal & depth 1/2 analytic mixture \\
-Cube random-action shift & 114,000 & [96,637, 12,788, 3,166, 1,409] & 8,123,886,122,050 & equal & depth 1/2 analytic mixture \\
-PushT four-depth pilot & 1,440 & [1,089, 42, 46, 263] & 102,905,055,196 & 102,905,055,196 & depth 1/2 analytic mixture, mean 1.658270021 \\
-PushT binary confirmation & 4,320 & [3,265, 1,055] & 307,585,049,440 & 307,585,049,440 & strongest pairwise depth 1/2 analytic mixture, mean 1.256074310 \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-Synchronized timing did not show a latency advantage for the adaptive implementations (\cref{tab:latency}).  Cube adaptive medians exceeded fixed depth one at batch sizes 1, 32, 256, and 1,024.  PushT gate construction, scoring, indexing, and CPU transfer made the cached-base adaptive components slower than the corresponding fixed-depth components.  These measurements do not contradict the counted-compute result: operation totals and realized device time answer different questions.
-
-\begin{table}[H]
-\centering
-\caption{Synchronized latency diagnostics in milliseconds. These are implementation diagnostics, not terminal endpoints.}
-\label{tab:latency}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}Y r r r r Y@{}}
-\toprule
-Timed workload & Rows/call & Fixed d1 & Fixed d2 & Adaptive & Other reference / repeats \\
-\midrule
-Cube latent/action path & 1 & 3.4151 & --- & 3.8366 & dense-all-exit 4.1224; 7 \\
-Cube latent/action path & 32 & 4.1582 & --- & 7.0677 & dense-all-exit 4.8332; 7 \\
-Cube latent/action path & 256 & 13.0494 & --- & 14.9812 & dense-all-exit 14.0034; 7 \\
-Cube latent/action path & 1,024 & 48.1154 & --- & 49.6928 & dense-all-exit 49.1027; 7 \\
-PushT pilot, cached base $\rightarrow$ output & 1,440 total & 0.7910 & --- & 8.6095 & fixed d4 1.9625; common base 64.2102; 5 \\
-PushT binary, cached base $\rightarrow$ output & 4,320 total & 1.6025 & 2.7835 & 16.9063 & common base 194.0410; 5 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+At horizon five, raw MSE is 0.0296782 for adaptive and 0.0297442 for histogram-matched routing; whitened MSE is 0.155283 versus 0.156470. The 3,400 starts overlap within 100 consumed episodes, so these directional values carry no new inferential status. In the planning bridge, ten of 20 candidate pools have physical range at most \(10^{-12}\) m and four are exactly constant. Mean latent-cost/physical-error Spearman correlation is 0.0237 over the nine rank-defined starts. The bridge therefore lacks the outcome diversity required to test whether the small prediction improvement changes useful decisions.
 
 \section{Discussion}
-\label{sec:discussion}
 
-The two confirmations isolate a modest but reproducible allocation effect.  At a fixed arithmetic ledger, the identity of transitions receiving extra refinement matters: the causal scores preferentially route updates whose realized next-latent gain is larger, and the resulting episode-mean loss is below the strongest feasible fixed-depth envelope.  The Cube result is the stronger anchor because the entire four-depth policy was frozen before a large fresh cohort.  PushT supplies a complementary replication of the allocation principle after environment-specific fitting, but only for the binary hypothesis generated by a negative pilot.
+The two confirmations answer the physical-world-model question narrowly: when total counted arithmetic is fixed, choosing \emph{which} transitions receive refinement can improve prediction. Positive score--gain correlations provide a mechanism-level diagnostic, while fresh episode-level endpoints provide the statistical test. Cube is the stronger anchor because the entire four-depth package is frozen before a large confirmation. PushT tests the same allocation principle with environment-specific fitting, but only the pilot-derived binary hypothesis is confirmed.
 
-The chronology is scientifically important.  If the four-depth PushT pilot were summarized only by its favorable raw endpoint or by its positive routing correlations, it would look successful.  The fixed fit-whitened endpoint makes it formally negative.  The binary observation is useful precisely because it is treated as discovery, followed by a locked disjoint confirmation.  This pattern argues for reporting adaptive-compute search as a sequence of roles, not as a single pool of favorable configurations.
+The effect sizes should be interpreted in context. Cube's sub-percent changes are small in average latent MSE, but their paired episode intervals are narrow and exclude zero after multiplicity adjustment. PushT's raw relative effect is larger, yet its whitening scale, model fit, and trajectory population differ; pooling the percentages would be misleading. The common observation is qualitative: a score derived without the target latent ranks realized refinement benefit well enough to beat a fixed-depth envelope.
 
-The shift study refines the robustness claim.  All three fixed-whitened benefits have positive simultaneous lower bounds, and doubled action noise also retains the raw endpoint.  Yet Markov raw loss favors the comparator and random-action raw loss is inconclusive.  The frozen policy therefore travels across some defined changes, not all metrics or populations.  The differing depth histograms show that routing responds to population change, but the histograms alone do not say why a transition is physically or semantically demanding.
+Raw and whitened agreement strengthens that interpretation but does not make the metric task-aware. Whitening changes the geometry of prediction error, not the downstream value of a latent direction. The PushT sensitivity analysis further shows that this geometry depends on regularization of small covariance eigenvalues. Freezing the transform prevents outcome-driven metric choice in the confirmation; reporting the sensitivity prevents that procedural validity from being mistaken for metric invariance.
 
-The planning bridge supplies a second useful boundary.  A small one-step predictive advantage can remain visible after five-step composition, while candidate ranking remains statistically unresolved and the physical candidate pool is too tied to test decisions.  The chain is therefore
-\[
-\begin{gathered}
-\text{matched-compute one-step prediction: supported}
-\quad\longrightarrow\quad
-\text{short composition: exploratory}\\[-0.1em]
-\longrightarrow\quad\text{planning/control: unsupported}.
-\end{gathered}
-\]
-This is not a paradox.  Predictive loss averages over latent dimensions and transitions; decision utility depends on whether errors reorder candidates near a meaningful boundary.  Establishing that link requires an informative candidate set and a separately designed study.
+Matched-compute prediction is useful even without latency or control evidence because it removes a common alternative explanation. The improvement cannot be attributed to simply buying more refinement; the allocator's overhead is paid from the same ledger. This establishes an empirical target for future systems work: preserve transition selection while making routing executable and hardware-efficient. It also establishes a target for decision studies: test whether the selected refinements alter rankings in candidate sets that are actually behaviorally informative.
 
-Finally, exact counted compute should be interpreted literally.  The ledger enables a clean comparison of arithmetic allocation, including gate overhead.  It does not model memory access, sparse-indexing overhead, accelerator utilization, or power.  The measured implementation was slower than depth one in the synchronized diagnostics.  A different systems implementation might change latency, but this paper offers no evidence for that outcome.
+The comparator is intentionally conservative in loss space. It can interpolate between any feasible bracketing fixed depths and choose a different pair for each metric, something a single deployed baseline cannot generally do. Its weakness is operational: fractional expected depth does not specify which concrete transitions should run longer. The randomized controls bridge part of this gap, but not the hardware consequences of dynamic batches. We therefore use the analytic comparator to identify allocation value and the latency measurements to reject an unsupported runtime interpretation.
+
+This separation also clarifies the role of the counted ledger. Arithmetic counts are reproducible properties of the declared computation graph, while latency is a property of an implementation, device, batch shape, and synchronization protocol. Dynamic routing can reduce refiner calls yet lose wall-clock time through feature construction, indexing, fragmented batches, and transfers. The present implementation exhibits exactly this mismatch. The scientific result remains meaningful because it establishes selective computation as a prediction mechanism, but any claim of efficient deployment must be earned with a separate optimized implementation and timing study.
+
+The negative and mixed results prevent overgeneralization. The PushT pilot shows that adding more routing stages can help one metric while harming another. The Cube shifts show that a frozen allocator does not retain every endpoint. The planning bridge shows that small prediction changes need not produce measurable decision changes, especially with tied candidates. These are not side notes; they define what has and has not been learned.
+
+Several next experiments follow directly. A systems study should compare dense evaluation, compaction, and static bucketed routing on the same device while preserving the exact prediction endpoints. A control study should predeclare candidate-set adequacy, use trajectories with nonzero success variation, and power action-ranking or closed-loop outcomes separately from latent MSE. A generalization study should freeze a common feature representation and thresholds across more bodies, contacts, and policies rather than refitting every environment. Each asks a different question; combining them prematurely would obscure whether failure comes from prediction, routing, hardware, or decision sensitivity.
+
+The negative pilot offers one concrete design lesson. Multi-stage routing compounds selection: later heads see smaller, policy-selected subsets, and a permissive early threshold can create a costly tail of deep calls. A binary rule has fewer opportunities for this mismatch and a simpler exact ledger. That does not imply binary depth is universally optimal; it suggests that later-stage gates need enough reached fit data and should be validated as an added hypothesis rather than assumed beneficial because stage one works.
 
 \section{Limitations}
-\label{sec:limitations}
 
-\paragraph{Prediction is not decision utility.}
-No closed-loop control experiment supports this manuscript.  The 20-start planning bridge had no informative starts under its adequacy rule, and the five-step study reused consumed data.  Better next-latent MSE must not be read as better action selection.
+The study covers one native Cube population, three one-factor Cube shifts, and one zero-success PushT trajectory population. PushT refiner, whitening, gate, and threshold selection are environment-specific, so this is not direct Cube-to-PushT transfer. Cube effects are below one percent of comparator MSE; the larger PushT raw percentage occurs on a different scale and should not be pooled.
 
-\paragraph{PushT trajectories have zero task success.}
-All PushT WeakPolicy episodes across the 120-episode fit role, 40-episode selection role, 80-episode pilot role, and 240-episode confirmation had zero success.  The confirmation describes prediction over those trajectories, not performance on successful demonstrations or a behavior-policy improvement.
+The exact comparator is an expectation-level fixed-depth envelope, not a fractional executable schedule. The ledger excludes memory traffic, indexing, synchronization, simulation, and pixel encoding. Measured latency does not favor the adaptive path, and energy is unmeasured. The PushT whitened result depends on its prespecified covariance floor; a post-outcome sensitivity weakens and eventually reverses the sign at smaller floors. The binary PushT hypothesis is post-pilot relative to the overall program even though its confirmation cohort is fresh. Finally, no closed-loop experiment supports a control claim, and the exploratory planning bridge contains no informative candidate set.
 
-\paragraph{PushT fitting is environment-specific.}
-The refiner, whitening transform, ridge heads, and threshold candidate were fitted or selected on PushT role-separated data.  The study tests whether the method can be instantiated in PushT; it is not a direct transfer of Cube parameters.
+The confirmations condition on one frozen trained artifact per environment rather than repeated end-to-end training seeds. Episode resampling quantifies evaluation-population uncertainty for those artifacts, not variation from retraining the base model, refiner, or gate. Likewise, the fresh cohorts protect the terminal tests from threshold overfitting, but they do not erase the broader researcher degrees of freedom accumulated before the protocols were locked. Replication with independently trained artifacts would test whether the effect is stable across model fitting.
 
-\paragraph{Analytic comparators are expectation-level.}
-The strongest fixed-depth comparator can use fractional mixture weights and, in the Cube shifts, different bracketing depth pairs for raw and whitened endpoints.  It is a demanding loss envelope at equal counted arithmetic, not an executable per-transition schedule.  Runnable seeded and call-randomized controls reduce but do not erase this conceptual distinction.
-
-\paragraph{Whitened PushT evidence depends on a fixed floor.}
-The confirmatory fit-whitened endpoint uses the \(10^{-3}\) covariance floor frozen before evaluation.  A post-outcome sensitivity that re-estimates whitening on confirmation targets is not a valid replacement endpoint.  It yields benefits 0.0013365 at \(10^{-3}\), 0.0008800 at \(3\times10^{-4}\), and \(-0.0001743\) at \(10^{-4}\), showing that smaller floors can weaken or reverse this metric (\cref{app:pusht}).
-
-\paragraph{The binary hypothesis was post-pilot.}
-The fresh cohort confirms a pilot-derived binary rule, but it does not make that rule an a priori hypothesis relative to the overall PushT program.  Any new PushT depth family would require another role-separated test.
-
-\paragraph{Effect sizes and populations are bounded.}
-Cube relative effects are below one percent of comparator MSE.  The larger PushT raw percentage occurs on a different environment, model fit, and error scale and should not be pooled with Cube.  Only one native Cube population, three one-factor Cube shifts, and one unsuccessful-policy PushT population were tested.
-
-\paragraph{No practical resource claim.}
-Latency diagnostics did not favor the adaptive path, and energy was not measured.  Counted \flops{} omit memory and control-flow costs and should not be interpreted as a practical runtime or power result.
-
-\paragraph{Related-work scope.}
-The literature pass is focused rather than exhaustive, and adjacent work is evolving.  We make restrained methodological distinctions and no novelty-priority statement.
+The gate scores are predictive summaries, not explanations of physical events. Positive correlation with realized gain does not establish that the router has identified contact, geometry, or any other causal factor; those variables are deliberately absent. The scalar features also inherit the latent representation's coordinate system and may not travel across encoders. Finally, the study does not compare against every possible budgeted router or jointly train allocation with the world model. Its conclusion is restricted to beating the declared fixed-depth envelope with these frozen stagewise predictors.
 
 \section{Conclusion}
-\label{sec:conclusion}
 
-At matched counted \flops{}, a learned causal allocator improved fresh-cohort next-latent prediction in two bounded settings: a fully frozen four-depth Cube PlanOracle confirmation and a fresh confirmation of a pilot-derived, PushT-specific binary depth rule.  The evidence includes positive raw and whitened simultaneous lower bounds, exact computation totals, and routing diagnostics at the episode inferential level.  It also includes the evidence that limits the claim: a formally negative four-depth PushT pilot, mixed raw Cube shift results, exploratory five-step composition, an uninformative planning bridge, zero-success PushT trajectories, whitening-floor sensitivity, and unfavorable latency diagnostics.  The supported conclusion is about predictive fidelity under a counted-compute budget.  Whether such fidelity improves decisions, successful behavior, or practical systems cost remains open.
+History-conditioned depth allocation improves next-latent prediction in two fresh physical-world-model confirmations when allocator overhead and refinement are charged to the same counted-compute budget as the fixed-depth comparator. The result is about \emph{where} arithmetic is spent. Whether this mechanism can improve latency, energy, planning, or control remains open.
 
-\begingroup
-\small
-\setlength{\bibsep}{0.25em}
+\begin{ack}
+Omitted for anonymous review.
+\end{ack}
+
+\clearpage
 \bibliographystyle{plainnat}
 \bibliography{references}
-\endgroup
 
 \clearpage
 \appendix
 
-\section{Exact Operation Ledgers}
+\section{Supplementary Material}
+
+\subsection{Exact operation ledgers}
 \label{app:compute}
 
-\subsection{Cube}
-
-The Cube ledger charges 70,529,190 \flops{} per transition for the common frozen base and 669,184 for the mandatory depth-one solver.  Each refinement beyond depth one costs 264,960.  A reached gate stage costs 3,801 for feature construction and 4,184 for two affine heads and the minimum score, for 7,985 \flops{}.  Five comparisons/minimum operations per reached stage are logged separately and are not assigned a floating-point count.  For the confirmation,
+Cube charges 70,529,190 \flops{} per transition for the frozen base, 669,184 for the mandatory depth-one solver, 264,960 per later refiner, and 7,985 per reached gate stage. Its confirmation total is
 \begin{align*}
-C_{\mathrm{Cube}}
+C_{\rm Cube}
 &=60{,}800(70{,}529{,}190)+60{,}800(669{,}184)\\
 &\quad +(73{,}974-60{,}800)(264{,}960)+73{,}187(7{,}985)\\
 &=4{,}332{,}936{,}120{,}435.
 \end{align*}
-The analytic comparator converts all charged overhead to an equivalent fixed-depth mean of 1.2529540975.  The seeded runnable depth-one/depth-two schedule uses 15,380 upper-depth rows and totals 4,332,936,224,000 \flops{}, 103,565 more than adaptive.
-
-\subsection{PushT}
-
-The PushT common base costs 70,383,192 \flops{} per transition, action normalization costs 60, a refiner call costs 650,432, and a reached gate costs 3,711 for features plus 4,004 for its two affine heads, or 7,715.  Thus the four-depth pilot totals
+PushT charges 70,383,192 \flops{} for the base, 60 for action normalization, 650,432 per refiner, and 7,715 per reached gate. The four-depth pilot totals 102,905,055,196 \flops{}, and the binary confirmation totals
 \begin{align*}
-C_{\mathrm{pilot}}
-&=1{,}440(70{,}383{,}192)+1{,}440(60)\\
-&\quad+2{,}363(650{,}432)+2{,}100(7{,}715)\\
-&=102{,}905{,}055{,}196,
-\end{align*}
-and the binary confirmation totals
-\begin{align*}
-C_{\mathrm{binary}}
+C_{\rm binary}
 &=4{,}320(70{,}383{,}192)+4{,}320(60)\\
 &\quad+5{,}375(650{,}432)+4{,}320(7{,}715)\\
 &=307{,}585{,}049{,}440.
 \end{align*}
 
-The per-unit charges used in these reconstructions are collected in \cref{tab:operations}.
-
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
-\caption{Primitive counted-operation ledger used to reproduce the headline totals.}
+\caption{Primitive counted-operation ledger.}
 \label{tab:operations}
 \footnotesize
 \begin{tabularx}{\textwidth}{@{}Y r Y r@{}}
 \toprule
-Cube component & \flops{} / unit & PushT component & \flops{} / unit \\
+Cube component & \flops{}/unit & PushT component & \flops{}/unit \\
 \midrule
-Common base prediction & 70,529,190 / transition & Common base prediction & 70,383,192 / transition \\
-Mandatory depth-one solver & 669,184 / transition & Action normalization & 60 / transition \\
-Additional residual adapter & 264,960 / call & Shared refiner & 650,432 / call \\
-Causal gate features & 3,801 / reached stage & Causal gate features & 3,711 / reached stage \\
-Dual affine score & 4,184 / reached stage & Dual affine score & 4,004 / reached stage \\
-Total gate charge & 7,985 / reached stage & Total gate charge & 7,715 / reached stage \\
-Logged non-\flops{} & 5 comparisons/minima / stage & Logged non-\flops{} & 5 comparisons/minima / stage \\
+Common base & 70,529,190 & Common base & 70,383,192 \\
+Mandatory depth one & 669,184 & Action normalization & 60 \\
+Additional refiner & 264,960 & Shared refiner & 650,432 \\
+Gate features + heads & 7,985 & Gate features + heads & 7,715 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Comparator and Inference Details}
-\label{app:inference}
-
-For every endpoint, fixed-depth episode losses are averaged before applying \cref{eq:analytic}.  Among all bracketing fixed-depth pairs, the comparator selects the smallest analytic-mixture MSE.  Because raw and whitened fixed-depth curves can order differently, the strongest pair can differ by endpoint; the Markov shift uses depths one/four for raw and one/three for fixed-whitened error.  This makes the comparator deliberately conservative.
-
-The Cube and PushT bootstrap implementations sample episode indices with replacement and apply the same index vector to paired adaptive and comparator episode losses.  Cube confirmation and PushT binary confirmation use 20,000 replicates.  The PushT pilot uses 10,000 exploratory replicates.  Cube shifts use 20,000 common bootstrap draws per regime and a six-claim family.  Candidate rollout intervals resample 20 starts, averaging 64 candidates within each selected start, with 20,000 replicates.  Transition observations within episodes or starts are never counted as independent units.
-
-Individual intervals are percentile quantiles 0.025 and 0.975.  Cube and PushT simultaneous confirmation bounds use the 0.025 quantile for each of two co-primary endpoints.  Shift simultaneous bounds use quantile \(0.05/6\).  The same reported lower endpoint happens to be both the individual lower limit and simultaneous lower bound in the two-endpoint confirmations because the individual interval is two-sided 95\% and the familywise procedure is one-sided Bonferroni with two claims.
-
-\section{Full Cube Shift Controls}
+\subsection{Full Cube shift controls}
 \label{app:shifts}
 
-\Cref{tab:shiftfull} separates individual intervals from simultaneous lower bounds.  All values are comparator minus adaptive MSE.  The fixed whitening matrix is never re-estimated on a shifted population.
-
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
-\caption{Full co-primary Cube shift intervals.}
+\caption{Frozen Cube one-factor shifts. Benefit is comparator minus adaptive MSE. Simultaneous lower bounds cover all six claims.}
 \label{tab:shiftfull}
 \scriptsize
 \begin{tabularx}{\textwidth}{@{}Y l r Y r@{}}
 \toprule
-Shift & Endpoint & Estimate & Individual 95\% interval & Simultaneous LB \\
+Shift & Endpoint & Benefit & Individual 95\% interval & Simultaneous LB \\
 \midrule
-MarkovOracle & raw & $-0.000002513778663$ & [$-0.000005087830609$, 0.00000006624685125] & $-0.000005677096742$ \\
-MarkovOracle & fixed-white & 0.0001773618066 & [0.0001018846393, 0.0002555767469] & 0.00008606212246 \\
-Action noise 0.2 & raw & 0.000006690627725 & [0.000005496450698, 0.000007892301435] & 0.000005233178062 \\
-Action noise 0.2 & fixed-white & 0.0006314822713 & [0.0005660341524, 0.0006992612331] & 0.0005518158912 \\
-Random action 0.1 & raw & 0.00000009599565688 & [$-0.000002519483841$, 0.000002741036550] & $-0.000003128983968$ \\
-Random action 0.1 & fixed-white & 0.0004263060037 & [0.0003720113575, 0.0004821358275] & 0.0003605363394 \\
+MarkovOracle & raw & \(-0.0000025138\) & [\(-0.0000050878\), 0.0000000662] & \(-0.0000056771\) \\
+MarkovOracle & fixed-white & 0.0001773618 & [0.0001018846, 0.0002555767] & 0.0000860621 \\
+Action noise 0.2 & raw & 0.0000066906 & [0.0000054965, 0.0000078923] & 0.0000052332 \\
+Action noise 0.2 & fixed-white & 0.0006314823 & [0.0005660342, 0.0006992612] & 0.0005518159 \\
+Random action 0.1 & raw & 0.0000000960 & [\(-0.0000025195\), 0.0000027410] & \(-0.0000031290\) \\
+Random action 0.1 & fixed-white & 0.0004263060 & [0.0003720114, 0.0004821358] & 0.0003605363 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-The within-episode histogram comparator preserves each episode's adaptive depth counts while randomizing which transitions receive those counts.  Seeded fixed-depth mixtures provide a second runnable comparison, weakly exceeding adaptive compute when integer assignment cannot hit the exact total.  These controls support the conclusion that transition identity matters, but the paper's primary shift decision remains the six matched analytic claims.
-
-\section{PushT Fitting, Chronology, and Whitening Sensitivity}
-\label{app:pusht}
-
-The PushT refiner uses a 256-unit shared recurrent block and a 16-dimensional iteration embedding.  Training uses 120 fit episodes with a held-out validation partition and selects epoch 8.  The dual gate has stage-specific ridge heads and six candidate combinations: regularization 1 or 10 crossed with fit-score quantiles 0.45, 0.60, or 0.75.  Forty selection episodes choose regularization 10 and quantile 0.75.  The pilot evaluates 80 later episodes; the binary confirmation uses 240 fixed seeds not present in any earlier role.
-
-The frozen fit-whitening transform floors covariance eigenvalues at \(10^{-3}\) times the reference scale.  The formal binary benefit under that transform is 0.001569236827.  To assess metric fragility, the evidence checker re-estimated covariance on confirmation targets after outcomes were available while keeping calls and comparator construction fixed.  Because this changes the metric using outcome data, the values in \cref{tab:whitening} are a post-outcome limitation analysis only.
-
-\begin{table}[htbp]
+\begin{figure}[h]
 \centering
-\caption{Post-outcome PushT whitening sensitivity. These values cannot replace the frozen confirmatory endpoint.}
-\label{tab:whitening}
-\footnotesize
-\begin{tabular}{@{}l r l@{}}
-\toprule
-Covariance floor ratio & Refit-whitened binary benefit & Interpretation \\
-\midrule
-\(10^{-3}\) & 0.001336506988 & positive, smaller than frozen-fit endpoint \\
-\(3\times10^{-4}\) & 0.0008799668240 & positive but weakened \\
-\(10^{-4}\) & $-0.0001742822988$ & sign reversed \\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=\textwidth]{figure2_cube_shift_map.pdf}
+\caption{Frozen Cube shift map. Raw and fixed-whitened benefits use endpoint-specific normalization; allocation histograms show that the frozen gate changes routing across populations.}
+\label{fig:shifts}
+\end{figure}
 
-The absolute MSE scales also differ between the pilot and fresh binary cohort; relative effects are always formed within a cohort and endpoint.  No cross-environment or cross-cohort pooled estimate is reported.
+\subsection{Negative pilot, whitening sensitivity, and inference details}
 
-\section{Protocol Chronology and Artifact Hashes}
+The PushT four-depth pilot contains 80 episodes and 1,440 transitions. Raw benefit is 0.0039098 (95\% exploratory interval [0.0027287, 0.0050886]), while fit-whitened benefit is \(-0.0003099\) (interval [\(-0.0012590\), 0.0006292]); it therefore fails. Its depth histogram is [1,089, 42, 46, 263]. The binary confirmation uses a fresh 240 episodes and 4,320 transitions. Its histogram is [3,265, 1,055].
+
+The frozen PushT transform floors covariance eigenvalues at \(10^{-3}\) of the reference scale. Re-estimating covariance on confirmation targets after outcomes are known is invalid as a replacement endpoint, but exposes sensitivity: binary benefit is 0.0013365 at \(10^{-3}\), 0.0008800 at \(3\times10^{-4}\), and \(-0.0001743\) at \(10^{-4}\).
+
+All bootstrap procedures resample episodes and preserve adaptive--comparator pairing. Confirmation uses 20,000 replicates and one-sided Bonferroni adjustment over two co-primary endpoints. Cube shifts use 20,000 common draws and a six-claim family. Fixed-depth losses are averaged at the episode level before analytic interpolation. Because raw and whitened curves can order differently, the strongest bracketing depth pair may differ by endpoint.
+
+\subsection{Exploratory composition, planning, and latency}
+
+At five-step composition on 100 consumed Cube episodes, raw MSE is 0.02967818 for adaptive and 0.02974415 for histogram-matched routing; whitened MSE is 0.155283 and 0.156470. These directional differences have no confirmatory interval.
+
+The planning bridge uses 20 independent starts and 64 fixed candidates per start. Raw adaptive-minus-matched rollout MSE is \(-2.7353\times10^{-6}\), with 95\% start-cluster interval [\(-6.3921\times10^{-5}\), \(5.5193\times10^{-5}\)]. Whitened effect is \(-0.0001402\), interval [\(-0.0004939\), 0.0001551]. Ten starts have physical range at most \(10^{-12}\) m, four are exactly constant, and none meet the informativeness rule of range above 0.1 mm plus five tolerance-distinct outcome groups. Actual latent goal cost has mean Spearman 0.0237 with physical error over nine rank-defined starts. These data do not test planning utility.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figure3_multistep_planning.pdf}
+\caption{Exploratory five-step composition and unsupported planning bridge. No planning start meets the candidate-set informativeness rule.}
+\label{fig:planning}
+\end{figure}
+
+Cube synchronized latency medians exceed fixed depth one at batch sizes 1, 32, 256, and 1,024. PushT gate construction, scoring, indexing, and CPU transfer likewise make the cached-base adaptive components slower than fixed-depth components. These are implementation diagnostics, not endpoints, and no energy measurement was collected.
+
+\subsection{Protocol chronology and hashes}
 \label{app:chronology}
 
-\Cref{tab:chronology} records the decisive PushT sequence.  The four-depth decision predates the binary analysis, the binary protocol predates its outcomes, and independent verification follows the scientific lock.
+PushT fitting uses 120 episodes; 40 later episodes select regularization 10 and quantile 0.75. The four-depth pilot decision is locked at 2026-07-18 19:06:22 UTC. The binary protocol, including seeds and criteria, is locked at 2026-07-18 23:30:23 UTC; its fresh decision follows at 23:31:48 UTC. Independent recomputation follows the scientific lock.
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
-\caption{PushT decision chronology in UTC.}
-\label{tab:chronology}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}l l Y@{}}
-\toprule
-Time & Event & Evidentiary role \\
-\midrule
-2026-07-18 19:06:22.440495 & Four-depth pilot decision locked & Negative pilot/discovery \\
-After pilot lock & Read-only binary reproduction on consumed arrays & Hypothesis generation only \\
-2026-07-18 23:30:23.485504 & Binary protocol locked & Cohort, seeds, gate, metrics, and criteria sealed \\
-2026-07-18 23:31:48.777558 & Binary scientific decision locked & Fresh confirmation outcome \\
-After scientific lock & Independent recomputation & Verification; no scientific rerun \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-The principal numerical arrays are content-addressed in \cref{tab:hashes}; the complete manifest, including model and configuration artifacts, is \texttt{runs/lewm\_paper\_evidence\_synthesis/EVIDENCE\_INDEX.json}.
-
-\begin{table}[htbp]
-\centering
-\caption{SHA-256 hashes for principal arrays used in figures and tables.}
+\caption{SHA-256 hashes for principal numerical arrays.}
 \label{tab:hashes}
 \scriptsize
 \begin{tabularx}{\textwidth}{@{}Y Y@{}}
 \toprule
 Artifact & SHA-256 \\
 \midrule
-Cube confirmation episode metrics & \hash{4eb5cc464f2526a9ccd9ab0aaf84f3d789439120390dd95df0fef224d54e9391} \\
-Cube confirmation bootstrap replicates & \hash{b1a4a8c29d18430e6deb4a60cb19d7147c4d2125dfececc6f05479440657f469} \\
-Cube shift bootstrap replicates & \hash{d1ace0696cee85d10b4472110d4515dc42825487922a4366e0247d65290d3b81} \\
+Cube confirmation metrics & \hash{4eb5cc464f2526a9ccd9ab0aaf84f3d789439120390dd95df0fef224d54e9391} \\
+Cube confirmation bootstraps & \hash{b1a4a8c29d18430e6deb4a60cb19d7147c4d2125dfececc6f05479440657f469} \\
+Cube shift bootstraps & \hash{d1ace0696cee85d10b4472110d4515dc42825487922a4366e0247d65290d3b81} \\
 Cube five-step metrics & \hash{56325873fcbecc01f4ee931473d225faaf1b7ee7e56225510084e7afec3e51f5} \\
-Planning decomposition metrics & \hash{ba734b92c2cba7546201693349e331dd06a8e2233429134a71cdc8009b274788} \\
-PushT four-depth evaluation arrays & \hash{30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8} \\
-PushT binary evaluation arrays & \hash{080c052a582c5d20650b1569fd8425c986533e1afbe616a83e2e7e5f9ce89cc9} \\
+Planning metrics & \hash{ba734b92c2cba7546201693349e331dd06a8e2233429134a71cdc8009b274788} \\
+PushT four-depth arrays & \hash{30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8} \\
+PushT binary arrays & \hash{080c052a582c5d20650b1569fd8425c986533e1afbe616a83e2e7e5f9ce89cc9} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Multi-Step and Planning Diagnostics}
-\label{app:planning}
-
-The multi-step comparator preserves the adaptive depth histogram separately at each horizon but permutes its assignment across rows.  Autoregressive histories diverge after horizon one, so the comparison asks whether an allocation-induced advantage survives composition, not whether the two models receive identical histories.  \Cref{tab:horizons} reports every displayed horizon.
-
-\begin{table}[htbp]
-\centering
-\caption{Exploratory composed prediction by horizon. Differences are adaptive minus histogram-matched MSE; negative values favor adaptive.}
-\label{tab:horizons}
-\footnotesize
-\begin{tabular}{@{}r r r r r r r@{}}
-\toprule
-\multirow{2}{*}{Horizon} & \multicolumn{3}{c}{Raw MSE} & \multicolumn{3}{c}{Whitened MSE} \\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}
-& Adaptive & Matched & Difference & Adaptive & Matched & Difference \\
-\midrule
-1 & 0.003571395 & 0.003585479 & $-0.00001408411046$ & 0.101630679 & 0.102802660 & $-0.001171981728$ \\
-2 & 0.007485689 & 0.007503582 & $-0.00001789364490$ & 0.111666838 & 0.112891412 & $-0.001224574216$ \\
-3 & 0.013353775 & 0.013419600 & $-0.00006582520735$ & 0.123419238 & 0.124560733 & $-0.001141495352$ \\
-4 & 0.021066409 & 0.021152720 & $-0.00008631151749$ & 0.138461436 & 0.139692522 & $-0.001231086568$ \\
-5 & 0.029678178 & 0.029744151 & $-0.00006597279931$ & 0.155282691 & 0.156469780 & $-0.001187089240$ \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Candidate rollout effects average the 64 fixed candidates within each of 20 independent starts.  Seven raw starts favored adaptive, ten favored matched, and three tied; the whitened counts were nine, eight, and three.  Physical outcomes were quantized at a 0.1\,mm tolerance before group counting.  The informativeness rule required both range above 0.1\,mm and at least five distinct groups; no start met both.  Mean model-versus-physical Spearman is therefore not meaningful evidence for planning, even where ranks can be numerically defined.  \Cref{tab:adequacy} collects these candidate-set checks.
-
-\begin{table}[htbp]
-\centering
-\caption{Candidate-bridge adequacy and ranking diagnostics.}
-\label{tab:adequacy}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}Y r Y@{}}
-\toprule
-Diagnostic & Value & Consequence \\
-\midrule
-Independent starts / candidates per start & 20 / 64 & Start is the inferential unit \\
-Starts with physical range $\le 10^{-12}$ m & 10 & Half the candidate pools are effectively constant \\
-Exactly constant starts & 4 & Rank is undefined for these physical outcomes \\
-Starts meeting informativeness rule & 0 & No planning-evidence population \\
-Rank-defined actual-latent/physical starts & 9 & Mean Spearman 0.0237205 is descriptive \\
-All-start top-five overlap & 0.040 & Below chance reference 0.078125 \\
-Adaptive/matched selection disagreements & 1 / 20 & Occurred at zero informative starts \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section{Latency Protocol}
-\label{app:latency}
-
-Cube timing synchronizes the MPS device around repeated calls to the full latent/action-input path.  It includes base prediction, solver blocks, causal feature construction, both gate heads, row selection/indexing, and synchronization.  Simulator rollout and pixel encoding are excluded.  Seven repeats are summarized by the median at batch sizes 1, 32, 256, and 1,024.  Dense-all-exit timing is a shadow reference, not the matched-compute comparator.
-
-PushT timing separates the common base predictor from cached-base refinement.  The pilot adaptive component includes stagewise feature construction, scores, selection, and CPU transfer for all 1,440 transitions.  The binary component does the same for 4,320 transitions.  Five synchronized repeats are summarized by the median.  Because the workloads and exclusions differ, Cube and PushT milliseconds should not be compared to each other.  No energy measurement was collected.
-
-The raw repeat vectors and device metadata are retained in \path{metrics/v5_confirmation_latency.json}, \path{runs/lewm_pusht_replication_pilot/LATENCY.json}, and the \texttt{synchronized\_latency} object in \path{runs/lewm_pusht_binary_confirmation/DECISION.json}.  \Cref{tab:latency} reports every median used in the manuscript.
+\input{checklist.tex}
 
 \end{document}

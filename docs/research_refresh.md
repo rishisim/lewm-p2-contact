@@ -1,6 +1,6 @@
 # World-model refresh: problem discovery and literature boundaries
 
-Reviewed 2026-10-05. Round one of problem discovery is complete. This is a project-selection record, not an experimental result, proof of novelty, or a committed training protocol. No models were trained or benchmark results reproduced.
+Reviewed 2026-10-05. Rounds one and two of problem discovery are complete. The round-two adjudication below supersedes the historical round-one ranking. This is a project-selection record, not an experimental result, proof of novelty, or a committed training protocol. No models were trained or benchmark results reproduced.
 
 ## Decision
 
@@ -10,7 +10,71 @@ The user has redirected selection toward significant unresolved problems before 
 
 A modest architecture change can support a research paper if it explains a repeatable failure, outperforms strong simple alternatives with matched resources, and transfers beyond its development setting. A leaderboard increase alone does not establish those properties. Neither a wholly untouched topic nor a dramatic architectural invention is required.
 
-## Round-one result: nine candidate problems
+## Round-two decision
+
+**P5 is the strongest problem to investigate for a generalizable research direction; P2 is the cheapest diagnostic; P1 is a conditional alternate. None yet warrants a new-method training campaign.** This separates scientific value from implementation convenience. A problem being known does not disqualify it: the question is whether existing solutions leave an important capability unresolved. Conversely, an untested combination of nuisance, task, and backbone is not automatically a significant gap.
+
+Seven Sol agents handled three primary reviews, two independent prior-work challenges, feasibility, and a comparative audit. The parent independently read a component-forgetting study and reconciled conflicting interpretations. The strongest new comparisons substantially weakened our earlier broad claims.
+
+| Candidate | Round-two verdict | Strongest existing answers | What remains to establish |
+| --- | --- | --- | --- |
+| P5: sequential perception and dynamics reuse | Narrow and prioritize as a research question | Future-blind replay, frozen generic features, latent alignment | A decision-relevant failure in reusable transitions, rather than poor visual pretraining or incompatible old readouts |
+| P2: effect accuracy into better decisions | Narrow; use as a diagnostic, with P3 as a possible mechanism | GAP, D-JEPA, AD-WM, rollout-preserving updates | Residual endpoint error on useful planner queries after cost, support, preservation and candidate controls |
+| P1: information for later goals | Narrow; lower confidence than round one | DINO-WM, TC-WM, forward-backward representations, reconstruction/object features | A substantive decision-sufficiency tradeoff beyond standard spatial features, not an artificially small latent or one distractor vignette |
+
+### P5 brief — Learn new visual situations without relearning known dynamics
+
+**Research question.** When the observation mapping changes but the underlying interaction rules stay the same, can a sequentially trained world model learn to see the new situation while retaining and reusing its existing action-conditioned dynamics, without access to future-task data?
+
+**Why this survives.** Reusing physical knowledge across new appearances is a meaningful capability, and future-blind learning is a realistic requirement. The compositional benchmark's modular advantage requires an encoder pretrained on all tasks and frozen. Its sequential comparison changes both pretraining and encoder updates; model capacity also differs. Consequently, it motivates this question but does not prove that encoder drift is the cause. [Main paper and supplement](https://arxiv.org/abs/2609.22055).
+
+**Closest answer and remaining boundary.** [WMAR](https://arxiv.org/abs/2401.16650) provides a substantive future-blind replay remedy. [DINO-WM](https://arxiv.org/abs/2411.04983) may avoid adaptation for many appearance/layout shifts. [Adapt & Align](https://arxiv.org/abs/2312.13699) makes latent alignment an existing control, not an invention to claim. None of these comparisons alone settles whether old controlled transitions remain reusable when perceptual adaptation is genuinely necessary. Return loss is not enough: a separate [component-forgetting study](https://arxiv.org/abs/2607.19749) shows that model knowledge can remain usable while the actor fails, in its small replay-maintained setting.
+
+**Simplest alternative explanation.** The new encoder is simply less informative than the all-task-pretrained one, or old heads cannot read its changed coordinates. Neither implies the dynamics knowledge was lost.
+
+**Decisive experiment.** Use an A→B sequence with paired renders of the same physical states/actions and unchanged physics. B introduces a new observation mapping. First compare natural-size frozen generic features and ordinary fixed-memory replay. Only if perceptual adaptation is actually needed, compare an adapted encoder with a simple map into the frozen A dynamics against equal-budget joint updates. Joint A+B pretraining is a labeled ceiling, not a deployable comparator. Evaluate physical transition accuracy, realized candidate-choice regret, and old/new control; evaluate old and refreshed readouts separately. Fit all deployable maps/readouts using permitted training data only. A small state decoder is a diagnostic instrument, not a physical oracle.
+
+**Stop rule.** Drop the proposed mechanism if generic features, replay or simple alignment suffice; if only actor/readout compatibility fails; or if physics changed inadvertently. Advance only after a repeated transition/decision failure survives these controls and an intervention localizes its cause. A positive two-task test motivates further work; it does not establish general continual robot learning.
+
+### P2 brief — Decision-relevant prediction across goals and planner queries
+
+**Research question.** Can an existing visual world model improve the consequences that matter for selecting actions across held-out goals, while preserving its existing rollout behavior and remaining reliable as the planner changes its candidate distribution?
+
+**Correction to the original motivation.** Do-JEPA's 50-episode comparison is base 94%, ordinary augmentation fine-tuning 58%, paired fine-tuning 54%. Thus the collapse does not isolate the paired loss as its cause. The preservation adapter's separate 600-episode comparison is approximately 87.7% versus 87.8% base: compatibility, not a planning gain. Cohorts must not be mixed. [Do-JEPA Appendix F](https://arxiv.org/abs/2609.37378).
+
+**Closest answer and remaining boundary.** [Goal-Aware Prediction (GAP, ICML 2020)](https://proceedings.mlr.press/v119/nair20a.html) already trains reward-free image-goal-aware prediction to improve useful trajectories and planning. [D-JEPA](https://arxiv.org/abs/2609.24749) already improves candidate selection with executed-outcome labels; [AD-WM](https://arxiv.org/abs/2609.30264) provides strong action-aware controls. The problem is therefore not discovering that MSE and decisions differ. A remaining opportunity would require a failure these solutions do not fix under fair goal/data/planning interfaces. Goal conditioning must not be excluded merely to preserve a gap; whether a goal-independent reusable predictor is needed requires a concrete use case.
+
+**Simplest alternative explanation.** Effects improve on irrelevant actions or directions, while the goal score, useful-candidate supply, multi-step preservation or action-support distribution remains wrong.
+
+**Decisive experiment.** On a predeclared non-ceiling population, replay the same action bank from each held-out simulator start. Compare A: predicted endpoint/native latent goal cost; B: realized endpoint encoded by the same model/same cost; C: realized physical endpoint/physical task cost. A→B estimates endpoint-prediction headroom; B→C combines representation and cost limitations, not information loss alone. Physical task cost cannot be applied to a predicted latent without an additional readout. Include one executable strong action/residual baseline before expanding comparisons. Repeat on early and late CEM candidates and then paired closed-loop runs only if the fixed-bank result warrants it.
+
+**Stop rule.** Do not pursue a dynamics remedy if realized endpoints do not help the native score, if useful actions are absent, or if ordinary target/preservation/GAP-style/AD-WM controls resolve the deficit. Improvements confined to mean effect error or a fixed bank are insufficient. P3 is a possible explanation within this test, not a separate method commitment.
+
+### P1 brief — Preserve decision-sufficient state for a specified future task family
+
+**Research question.** Across a declared family of later goals, when do visual nuisance suppression and state compression discard information needed for actual choices, after accounting for strong spatial representations and their resource costs?
+
+**Closest answer and remaining boundary.** DINO-WM already succeeds on unseen wall/door layouts. [TC-WM](https://arxiv.org/abs/2605.25620) supplies compact task-centric states using foundation features and proprioceptive supervision. Reward-free [forward-backward representations](https://proceedings.neurips.cc/paper_files/paper/2021/file/003dd617c12d444ff9c80f717c3fa982-Paper.pdf) address rewards specified after training; [recent rank analysis](https://arxiv.org/abs/2602.11399) limits universal guarantees at low rank. These are substantial answers. Coherent-video plus passive-object failure across strong goal-planning methods is not yet established. Arbitrary future rewards cannot be promised under unrestricted lossy compression.
+
+**Simplest alternative explanation.** The information is present but the predictor, goal geometry or candidate generator fails; a weak linear probe cannot establish deletion. Current observations or valid goal images may already supply the needed state.
+
+**Decisive experiment.** Start with natural-size DINO spatial features and a compact baseline in paired fully visible scenes with independent nuisance changes and held-out task combinations. Keep legitimate goal-image information available. Compare actual action-choice flips and regret on identical useful candidates; localize score versus endpoint errors as in P2. Only if these controls fail should TC-WM, reconstruction and object-centric alternatives and resource curves be expanded. Declare their extra training information rather than removing it to handicap them.
+
+**Stop rule.** Drop the opportunity if ordinary spatial features or data/capacity resolve it, or if a legitimate goal/current observation supplies what the test tried to hide. A single synthetic obstacle or probe failure is not enough. Any eventual claim needs a meaningful sufficiency-versus-resource improvement in more than the development family.
+
+### Recommended next research action and feasibility
+
+Prioritize the **P5 causal discriminator** if choosing the next research direction for the user's generalization objective. Its implementation is larger, but its question is broader than improving one planner's score. Treat P2's frozen-bank audit as the lower-cost alternative if continuity with existing LeWM infrastructure takes priority, not as proof of greater scientific importance. Keep P1 as a fallback rather than forcing its untested conjunction into a flagship claim. No parallel training campaigns are recommended.
+
+This round authorizes and completes review, not pilot implementation. The P5 benchmark's public page contains a Code placeholder; a runnable release was not verified. Local LeWM has state restoration and scoring, but lacks the proposed fixed-bank diagnostic and a continual-learning protocol. The configured ChildLens volume was absent during the read-only audit, the stable-worldmodel cache link was dangling, and no local model/dataset readiness was established. [AD-WM simulation artifacts](https://github.com/ad-wm/ad-wm-code), [DINO-WM source](https://github.com/gaoyuezhou/dino_wm), and [TC-WM source](https://github.com/MinghaoFu/TC-WM) are public; their availability is not a local reproduction. TC-WM's README describes checkpoint release as future work. Verify artifact hashes and time a smoke run before promising GPU hours.
+
+### Round-two reading and completion evidence
+
+New complete reads reported by the reviewing agents: TC-WM main plus Appendices A–E; Denoised MDPs main plus Appendices A–B; Do-JEPA main plus Appendices A–G; AVL-JEPA main plus Appendices A–D; the compositional continual-learning paper plus official project Appendices A–C and learning curves; WMAR main and supplement. The parent read The World Model Remembers, the Actor Forgets including Appendices A–C. Other adversarial sources have targeted reading scope recorded in the local packet; do not count all cited papers as new full reads. Previous StarWM/MotionJEPA/AD-WM/D-JEPA/H-JEPA full reads were reused with decisive passages rechecked.
+
+For each of P1/P2/P5, the review now records an exact question, strongest known answers, remaining evidence gap, alternative explanation, falsifying experiment and verdict. Comparative and feasibility reviews were reconciled. Full notes and coverage are retained under ignored `tmp/research-refresh/adversarial/`; no account-derived selections are published here. This completes round two, while leaving experimental validation and method selection explicitly unperformed.
+
+## Historical round-one result: nine candidate problems
 
 Seven Sol agents covered recent limitations, frontier capabilities, cross-area connections, apparently contradictory findings, stressed assumptions, bookmark omissions, and a skeptical filter. The parent added continual-reuse research and consolidated overlaps. This round reused the previous full reads and made targeted new primary-source reads; it was not a second cover-to-cover audit of every paper.
 

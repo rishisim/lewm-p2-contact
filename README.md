@@ -1,7 +1,7 @@
 # LeWM research workspace
 
-A minimal working base for LeWM world-model research: the LeWM source
-snapshot, its training/eval configs, and the governed external-storage guard.
+A working base for LeWM world-model research with a pinned upstream submodule,
+local probe tools, and the governed external-storage guard.
 
 ## Earlier work
 
@@ -28,31 +28,41 @@ git worktree add --detach ../lewm-paper-v1 adaptive-prediction-paper-v1
 Evaluation data inspected during that study counts as consumed; new
 confirmations need fresh data.
 
-## Contents
+## Setup and commands
 
-- `le-wm/`: source snapshot based on
-  [`lucas-maes/le-wm`](https://github.com/lucas-maes/le-wm) with
-  project-specific training/eval config.
-- `lewm_storage.py`, `storage.json`, `storage_manifest.json`: storage guard,
-  contract, and checksummed inventory.
-- `docs/external_storage.md`: storage layout and recovery policy.
-- `tests/`: storage-guard tests.
+```bash
+git submodule update --init
+uv sync
+uv run lewm --help
+uv run lewm gates
+uv run lewm bench-sim
+uv run lewm smoke-eval --no-video
+uv run pytest -q
+```
+
+On macOS arm64, uv excludes `decord` because PyPI has no compatible build.
+The HDF5 workflow is available; the optional video dataset reader is not.
+
+`third_party/le-wm/` is pristine upstream source pinned to the role-swap probe
+commit. `src/lewm_research/` contains local paths, device, run, model, and CLI
+code. `src/lewm_research/data/verify.py` preserves the dataset verification
+tool and uses the governed USB guard as before; run it with
+`uv run python -m lewm_research.data.verify DATASET` when that volume is ready.
+`lewm_storage.py`, `storage.json`, and `storage_manifest.json` remain the
+governed USB storage contract for earlier Cube, Reacher, and TwoRoom data.
 
 ## Datasets
 
-Dataset loading goes through `stable-worldmodel` via
-`swm.data.load_dataset(...)`. Lance is the working format for repeated
-training and evaluation; HDF5 is kept as the import/provenance format when it
-is the original published artifact. Run `le-wm/verify_dataset.py` before
-relying on a converted Lance table.
+The PushT smoke evaluation reads `pusht_expert_train.h5` with the pinned
+`stable-worldmodel` HDF5 reader. Place it at
+`$LEWM_WORK_ROOT/stable-worldmodel/datasets/` before running `smoke-eval`.
 
 ## External storage
 
-Public LeWM source datasets live on the governed USB volume
-at `/Volumes/ChildLens_Governed/lewm-storage`. Run `python lewm_storage.py` as
-a preflight; the training, evaluation, and dataset-verification entrypoints run
-it automatically and stop when the volume is absent. Remote machines set
-`LEWM_STORAGE_ROOT` to a prepared root containing the matching marker. See
+New PushT downloads, checkpoints, and runs go under `LEWM_WORK_ROOT` (default
+`~/lewm-work`) on the internal SSD. The CLI sets `STABLEWM_HOME` to its
+`stable-worldmodel/` child. Earlier governed USB datasets remain under
+`LEWM_STORAGE_ROOT`; run `python lewm_storage.py` to check that volume. See
 [docs/external_storage.md](docs/external_storage.md).
 
 Virtual environments, caches, Lance tables, checkpoints, videos, and run

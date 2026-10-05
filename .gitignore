@@ -1,7 +1,6 @@
 .DS_Store
 __pycache__/
-data/
-**/data/
+/data/
 checkpoints/
 **/checkpoints/
 *.py[cod]
@@ -15,7 +14,8 @@ venv/
 
 # Local experiment and dependency caches.
 .cache/
-le-wm/outputs/
+/runs/
+third_party/le-wm/outputs/
 wandb/
 mlruns/
 *.egg-info/

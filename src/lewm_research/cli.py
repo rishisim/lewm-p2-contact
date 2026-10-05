@@ -7,6 +7,21 @@ import typer
 app = typer.Typer(help="LeWM role-swap research tools.")
 
 
+@app.command("collect")
+def collect_cmd(
+    name: str = typer.Option(..., help="Dataset name below the work-root datasets directory."),
+    episodes: int = typer.Option(..., min=1),
+    steps: int = typer.Option(100, min=1),
+    policy: str = typer.Option("block", help="block or mixed."),
+    seed: int = typer.Option(0),
+    workers: int = typer.Option(1, min=1),
+) -> None:
+    """Collect fixed-length PushT-Peg episodes into compressed HDF5."""
+    from .data.collect import collect
+
+    typer.echo(json.dumps(collect(name, episodes, steps, policy, seed, workers), indent=2))
+
+
 @app.command("smoke-eval")
 def smoke_eval(
     num_eval: int = typer.Option(50, min=1, help="Number of PushT evaluations."),

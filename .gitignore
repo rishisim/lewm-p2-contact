@@ -36,3 +36,6 @@ tmp/
 # Full experiment products stay local.
 *.npy
 *.npz
+
+# W2 visual pilot output (regenerable from the pilot dataset).
+/experiments/role_swap/results/peg_env_samples.png

@@ -1,7 +1,6 @@
 # External LeWM Storage
 
-The local canonical LeWM source datasets and unique checkpoints were migrated
-to the governed USB root:
+The public LeWM source datasets live on the governed USB root:
 
 `/Volumes/ChildLens_Governed/lewm-storage`
 
@@ -30,7 +29,6 @@ The guard exports `STABLEWM_HOME` as
 ## Recovery policy
 
 - Preserve the HDF5 files listed as `provenance_source` in the manifest.
-- Preserve locally unique checkpoints.
 - Re-download public Hugging Face artifacts using the source records in the
   project documentation.
 - Rebuild Lance working tables from the preserved HDF5 sources and validate
@@ -38,5 +36,6 @@ The guard exports `STABLEWM_HOME` as
 - Do not treat derived Lance tables, extracted caches, or Hugging Face caches as
   authoritative records.
 
-The USB is a storage location, not a backup. Replicate irreplaceable checkpoints
-to a second governed location before retiring this device.
+The USB is a storage location, not a backup. Everything on it can be
+re-downloaded from the sources in the manifest. If new work produces unique
+checkpoints, replicate them to a second location before relying on them.

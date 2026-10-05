@@ -48,7 +48,7 @@ relying on a converted Lance table.
 
 ## External storage
 
-Source datasets and locally unique checkpoints live on the governed USB volume
+Public LeWM source datasets live on the governed USB volume
 at `/Volumes/ChildLens_Governed/lewm-storage`. Run `python lewm_storage.py` as
 a preflight; the training, evaluation, and dataset-verification entrypoints run
 it automatically and stop when the volume is absent. Remote machines set

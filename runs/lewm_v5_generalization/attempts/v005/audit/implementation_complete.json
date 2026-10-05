@@ -1,0 +1,96 @@
+{
+  "ast": {
+    "activate_attempt.py": {
+      "parsed": true,
+      "sha256": "b926d81f33073aac70366191c4d318693153b3f2a7e91667307d0a347628c338",
+      "top_level_nodes": 23
+    },
+    "analysis.py": {
+      "parsed": true,
+      "sha256": "cd965bda94429bdfe01153f98eb6b930e8e307ad13570e06b7f145613f5f6202",
+      "top_level_nodes": 27
+    },
+    "bootstrap_audit.py": {
+      "parsed": true,
+      "sha256": "cd4e4902b9568fcf573f6d1dcdf08f0c06127e38f5ea1d60ee83b5e5526cc101",
+      "top_level_nodes": 12
+    },
+    "checkpoints.py": {
+      "parsed": true,
+      "sha256": "f53734da42547af0c8fd6d682ad05ee299c67ac7daf20e95ba53c677f1ff24c3",
+      "top_level_nodes": 13
+    },
+    "design_and_power.py": {
+      "parsed": true,
+      "sha256": "a8ceff7cc37e06cc5ef123f1af7db51471400e4b8b003d89af124998dfdd1175",
+      "top_level_nodes": 22
+    },
+    "finalize.py": {
+      "parsed": true,
+      "sha256": "302bc27e04e72c6e250b9f5a3f21485d64b03089d4cdcf39df74da89dd73e4b2",
+      "top_level_nodes": 8
+    },
+    "generator.py": {
+      "parsed": true,
+      "sha256": "3a3a4b6e3077a9fbdd20d1a0e1ab4032932b6700f07809c5a9ea3bc162b43bbd",
+      "top_level_nodes": 31
+    },
+    "independent_verify.py": {
+      "parsed": true,
+      "sha256": "7a0607a22d8b326a19cd6d54fed182ca59948ef5c76c4a1223bd133a6dd8ea6b",
+      "top_level_nodes": 26
+    },
+    "latency.py": {
+      "parsed": true,
+      "sha256": "d553dfb868f849aeaf7efcbbe576e685ff54e54cfcd68d53f0e5825ecbccc2c8",
+      "top_level_nodes": 12
+    },
+    "launcher.py": {
+      "parsed": true,
+      "sha256": "035695cfb35c6026e5f447eb79cf159c66c81adac8cd8dac37c86dbb0fd85819",
+      "top_level_nodes": 16
+    },
+    "posthoc.py": {
+      "parsed": true,
+      "sha256": "85c065e2b72029759130e16fd80e4be52b477edf949dc7e0c37b094ae13335cf",
+      "top_level_nodes": 12
+    },
+    "preseal.py": {
+      "parsed": true,
+      "sha256": "868321278b68d44188f82a34dc575af53d88d3a8a2ea4b0bcb3bd6825f10d0d1",
+      "top_level_nodes": 24
+    },
+    "runner.py": {
+      "parsed": true,
+      "sha256": "f2c8c415d38c7a7eb6d73a0da22877f7f3df4f733b6b0dbf77dc76147bde1d16",
+      "top_level_nodes": 16
+    },
+    "state_init.py": {
+      "parsed": true,
+      "sha256": "5abf8d38bb04884a635d1874383644b36d22ac3795e40322a33d4f6727e288fe",
+      "top_level_nodes": 5
+    },
+    "study_common.py": {
+      "parsed": true,
+      "sha256": "92af88126919ceebc2c572186c1535ef1b00f2188bd9d20e020c4782ceea27d9",
+      "top_level_nodes": 81
+    }
+  },
+  "checks": {
+    "all_python_ast_parses": true,
+    "analysis_has_six_claim_family": true,
+    "contact_not_loaded_by_runner": true,
+    "generator_has_exact_three_regimes": true,
+    "independent_does_not_import_analysis": true,
+    "no_missing_normative_files": true,
+    "no_target_or_smoke_data_before_qualification": true,
+    "posthoc_requires_decision": true,
+    "runner_uses_frozen_v5_sparse_dense": true
+  },
+  "created_unix_ns": 1784235949507511000,
+  "missing": [],
+  "normative_file_count": 22,
+  "passed": true,
+  "schema_version": 1,
+  "target_outcome_episodes": 0
+}

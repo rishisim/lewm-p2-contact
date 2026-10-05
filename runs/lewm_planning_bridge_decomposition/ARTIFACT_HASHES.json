@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "CONFIG.json": "c4b54b51669e4581b717693da2a5704dbb0b0d33238ab0df1482ee3c6f1fb98c",
+    "FIRST_DECOMPOSITION_TABLE.md": "b165351bff430c8e3e29a6075d1dd58ff2c833ad41202d6767baab38dc88c69f",
+    "NOTES.md": "e31c6ed30f1960a451b717f65595c8699a1c1055707adb17f35b60a7d89fc52a",
+    "REPORT.md": "b7c697c3becfe6e2e2c056cd85015260fda6b0c77c1f019af9a6a03977e03de5",
+    "RESULTS.json": "7bbc23bb43683a1dec912a0cabc9d5819fe48e064ee3aa33097b8a81a0f3b8f3",
+    "RUN_STATUS.json": "78b6559fa8d1f14018a3656867a16347b5ebbaef1ac5c9d273ecca43508e8d37",
+    "actual_terminal_latents.npz": "e1efc99ecd9496ec8a2059efd488a9588810876195fdbbc9bbe7f409fd70f890",
+    "decompose.py": "ddcc7be41eb8bbf5f93ad99b5995944d0626e3d28cd9518877e77e34b7e5e758",
+    "decomposition_metrics.npz": "ba734b92c2cba7546201693349e331dd06a8e2233429134a71cdc8009b274788",
+    "model_reproduction.npz": "d137868ba7b7f40df3041643cbb5a350ba16e3e9d636b0249d021c0bb64e144b",
+    "simulator_replay.py": "79f022294ad4f7ce863be439250afb0ee0eab0aa6b7436884b5d87d530cd44e5",
+    "test_decomposition.py": "fe83d9d762fd8bbacb8ef1cb2b02f87a06fd9bd7f7313c2a08567994c3a41170"
+  },
+  "created_unix_ns": 1784399263053832000,
+  "focused_test_count": 8,
+  "hash_algorithm": "sha256",
+  "schema_version": 1,
+  "self_excluded": true
+}

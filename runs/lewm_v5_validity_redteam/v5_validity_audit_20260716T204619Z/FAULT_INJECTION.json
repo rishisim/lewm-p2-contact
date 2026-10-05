@@ -1,0 +1,606 @@
+{
+  "canonical_evidence_mutated": false,
+  "cases": [
+    {
+      "case_id": "FLT-01A",
+      "causal_note": "The package-ready SHA-256 binds the complete execution archive.",
+      "domain": "FLT-01",
+      "expected": "final package hash verifier rejects",
+      "mutation": "one-byte execution/outcome archive corruption",
+      "mutation_timing_model": "post-final-manifest",
+      "observations": {
+        "byte_change": {
+          "exactly_one_byte_changed": true,
+          "new_hex": "69",
+          "offset": 1573485,
+          "old_hex": "68",
+          "sha256_after": "756a03df6ba7a5c7a8d433f37aee3c35c887a4cb25e624527b53ac9f3235f01e",
+          "sha256_before": "6d3c4ae2388c747a769aedd15df16f843df134059d54340dc6b287dd23b4c933"
+        },
+        "final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 52, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 47, in verify\n    raise RuntimeError(f\"final package verification failed: {result}\")\nRuntimeError: final package verification failed: {'passed': False, 'path_set_complete': True, 'bad_hashes': ['runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_execution.npz'], 'file_count': 92, 'manifest_sha256': 'cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526', 'status': 'v5_package_ready', 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-01B",
+      "causal_note": "The frozen gate is independently bound in two preserved manifests.",
+      "domain": "FLT-01",
+      "expected": "pre-V5 seal and final package verifier reject",
+      "mutation": "one-byte compiled-gate corruption",
+      "mutation_timing_model": "post-pre-V5-seal",
+      "observations": {
+        "byte_change": {
+          "exactly_one_byte_changed": true,
+          "new_hex": "90",
+          "offset": 12410,
+          "old_hex": "91",
+          "sha256_after": "9ce7685967e376a56aea71719767b2dcdd0431d9936084bfaf3b4d53abfc44b0",
+          "sha256_before": "1eb9253073dbc6aad52c1589ac6b0643fec2aa5388cb0c7fd474a5f0114c8d57"
+        },
+        "final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 52, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 47, in verify\n    raise RuntimeError(f\"final package verification failed: {result}\")\nRuntimeError: final package verification failed: {'passed': False, 'path_set_complete': True, 'bad_hashes': ['runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/compiled_gate.npz'], 'file_count': 92, 'manifest_sha256': 'cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526', 'status': 'v5_package_ready', 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        },
+        "preseal_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 66, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 54, in verify\n    raise RuntimeError(f\"pre-V5 seal invalid: checks={checks}, bad={bad}\")\nRuntimeError: pre-V5 seal invalid: checks={'status_frozen': True, 'package_version': True, 'accepted_cycle': True, 'package_smoke_zero_at_seal': True, 'v5_zero_at_seal': True, 'v5_size': True, 'power_passed': True, 'normative_code_complete': True, 'dual_interpreter_contract': True, 'scientific_carry_forward': True, 'wrong_interpreter_negative_path': True, 'generation_global_preflight': True, 'identifier_freshness': True, 'all_hashes_match': False}, bad=['runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/compiled_gate.npz']\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-02A",
+      "causal_note": "Missing preserved inputs cannot authenticate.",
+      "domain": "FLT-02",
+      "expected": "final package path/hash verifier rejects",
+      "mutation": "delete one expected raw episode",
+      "mutation_timing_model": "post-final-manifest",
+      "observations": {
+        "final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 52, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 47, in verify\n    raise RuntimeError(f\"final package verification failed: {result}\")\nRuntimeError: final package verification failed: {'passed': False, 'path_set_complete': False, 'bad_hashes': ['runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw/v5v004-package-smoke-000.npz'], 'file_count': 92, 'manifest_sha256': 'cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526', 'status': 'v5_package_ready', 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-02B",
+      "causal_note": "The package-ready path set rejects unmanifested durable files.",
+      "domain": "FLT-02",
+      "expected": "final package exact path-set verifier rejects",
+      "mutation": "add one extra raw episode file",
+      "mutation_timing_model": "post-final-manifest",
+      "observations": {
+        "final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 52, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 47, in verify\n    raise RuntimeError(f\"final package verification failed: {result}\")\nRuntimeError: final package verification failed: {'passed': False, 'path_set_complete': False, 'bad_hashes': [], 'file_count': 92, 'manifest_sha256': 'cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526', 'status': 'v5_package_ready', 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-02C",
+      "causal_note": "Every listed raw file is rehashed before execution.",
+      "domain": "FLT-02",
+      "expected": "raw-manifest execution preflight rejects",
+      "mutation": "raw-manifest record hash mismatch",
+      "mutation_timing_model": "before-execution",
+      "observations": {
+        "raw_manifest_preflight": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import json,runner;runner._validate_existing_raw_manifest('package_smoke',12);print(json.dumps({'accepted':True}))"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/runner.py\", line 270, in _validate_existing_raw_manifest\n    raise RuntimeError(f\"raw episode hash drift: {candidate}\")\nRuntimeError: raw episode hash drift: /Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw/v5v004-package-smoke-000.npz\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-02D",
+      "causal_note": "The generation/execution preflight accepts duplicate identifier metadata; the smoke verifier later rejects it, but the V5 independent verifier does not explicitly bind manifest episode strings to the seed ledger. The canonical cohort is separately proven unique.",
+      "domain": "FLT-02",
+      "expected": "every applicable preflight/final verifier rejects",
+      "mutation": "duplicate one manifest episode identifier while retaining unique paths",
+      "mutation_timing_model": "malformed manifest before execution/input seal",
+      "observations": {
+        "canonical_audit_uniqueness_check": "separate chronology/cohort audit",
+        "excluded_smoke_final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_package_smoke.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_package_smoke.py\", line 181, in <module>\n    main()\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_package_smoke.py\", line 176, in main\n    raise RuntimeError(f\"package smoke verification failed: {result}\")\nRuntimeError: package smoke verification failed: {'schema_version': 1, 'created_unix_ns': 1784240287687591000, 'checks': {'pre_v5_seal': True, 'seal_precedes_every_smoke_episode': True, 'exact_12_raw_episodes': True, 'exact_456_execution_rows': True, 'episode_identifiers_exact': True, 'raw_path_set_complete': True, 'raw_hashes': True, 'seed_records_match_frozen_ledger': False, 'seed_isolation': True, 'calls_in_range': True, 'calls_reconstructed_exactly': True, 'reached_scores_finite_unreached_nan': True, 'reached_features_finite_unreached_nan': True, 'model_outputs_finite': True, 'input_allowlist': True, 'contact_and_privileged_excluded': True, 'v3_and_hdf5_excluded': True, 'frozen_modules_no_gradients': True, 'same_path_and_manual_api_exact': True, 'sparse_dense_calls_histograms_exact': True, 'sparse_dense_latents_within_contract': True, 'two_flop_derivations_agree': True, 'synchronized_latency_passed_separately': True, 'zero_confirmation_artifacts': True, 'zero_v5_outcomes': True}, 'call_histogram': [395, 52, 8, 1], 'maximum_sparse_dense_absolute_error': 2.384185791015625e-07, 'raw_manifest_sha256': '9fcbfc9372ef6aa9c4d8e7c7e786b8545b9749208ebb4e002fd62372f820966b', 'execution_sha256': '6d3c4ae2388c747a769aedd15df16f843df134059d54340dc6b287dd23b4c933', 'execution_manifest_sha256': '04250400da8db8149e5e84b08bf516ad2d2b5d2799db18a2287a2602f42d0538', 'latency_sha256': 'b4f02c1f928dd36d47fe49d2a630b2b0f2901a0cd8a6e8091568cef9fc000286', 'passed': False, 'excluded_package_smoke_episode_count': 12, 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        },
+        "existing_manifest_preflight": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import json,runner;runner._validate_existing_raw_manifest('package_smoke',12);print(json.dumps({'accepted':True}))"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"accepted\": true}\n"
+        },
+        "v5_final_verifier_predicate_probe": {
+          "episode_string_uniqueness_explicitly_checked": false,
+          "execution_numeric_episode_ids_unchanged": true,
+          "manifest_list_length_1600": true,
+          "raw_path_set_still_exact": true
+        }
+      },
+      "package_fail_open": true,
+      "passed": false
+    },
+    {
+      "case_id": "FLT-02E",
+      "causal_note": "The verifier checks membership/counts but not canonical serialized row order. A paired permutation is metric-invariant, so this is hardening and provenance weakness rather than an observed decision error.",
+      "domain": "FLT-02",
+      "expected": "semantic verifier rejects noncanonical row order",
+      "mutation": "reverse complete episode blocks in every execution array and rebind manifest hash",
+      "mutation_timing_model": "hypothetical regenerated manifest before analysis",
+      "observations": {
+        "first_reordered_episode_id": 11,
+        "package_smoke_verifier": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_package_smoke.py"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"call_histogram\": [395, 52, 8, 1], \"checks\": {\"calls_in_range\": true, \"calls_reconstructed_exactly\": true, \"contact_and_privileged_excluded\": true, \"episode_identifiers_exact\": true, \"exact_12_raw_episodes\": true, \"exact_456_execution_rows\": true, \"frozen_modules_no_gradients\": true, \"input_allowlist\": true, \"model_outputs_finite\": true, \"pre_v5_seal\": true, \"raw_hashes\": true, \"raw_path_set_complete\": true, \"reached_features_finite_unreached_nan\": true, \"reached_scores_finite_unreached_nan\": true, \"same_path_and_manual_api_exact\": true, \"seal_precedes_every_smoke_episode\": true, \"seed_isolation\": true, \"seed_records_match_frozen_ledger\": true, \"sparse_dense_calls_histograms_exact\": true, \"sparse_dense_latents_within_contract\": true, \"synchronized_latency_passed_separately\": true, \"two_flop_derivations_agree\": true, \"v3_and_hdf5_excluded\": true, \"zero_confirmation_artifacts\": true, \"zero_v5_outcomes\": true}, \"created_unix_ns\": 1784240287960280000, \"excluded_package_smoke_episode_count\": 12, \"execution_manifest_sha256\": \"7dd1290f6cdb6ad192025fa488646fcbae604469eed29d1b6c59dffbd4afe657\", \"execution_sha256\": \"52d68b3508b04b65063ab89d9bb698217139e139a50b73c6050bd3f93208a2f6\", \"latency_sha256\": \"b4f02c1f928dd36d47fe49d2a630b2b0f2901a0cd8a6e8091568cef9fc000286\", \"maximum_sparse_dense_absolute_error\": 2.384185791015625e-07, \"passed\": true, \"raw_manifest_sha256\": \"84853bae4109e6a1717b6a30a55fed48e9d1bcedfbf9ea7bdae6a45ee21d1848\", \"schema_version\": 1, \"v5_outcome_episodes\": 0}\n"
+        },
+        "row_count": 456
+      },
+      "package_fail_open": true,
+      "passed": false
+    },
+    {
+      "case_id": "FLT-03A",
+      "causal_note": "The preflight joins paths without resolve/root-confinement and therefore authenticates an out-of-root file if its hash is declared.",
+      "domain": "FLT-03",
+      "expected": "raw preflight rejects root escape before opening external file",
+      "mutation": "raw-manifest path escapes REPO_ROOT with .. and carries a valid external hash",
+      "mutation_timing_model": "malformed manifest before execution/input seal",
+      "observations": {
+        "manifest_path": "../../traversal_target.npz",
+        "raw_manifest_preflight": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import json,runner;value=runner._validate_existing_raw_manifest('traversal_probe',1);print(json.dumps({'accepted':value is not None,'path':value['episodes'][0]['path']}))"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"accepted\": true, \"path\": \"../../traversal_target.npz\"}\n"
+        }
+      },
+      "package_fail_open": true,
+      "passed": false
+    },
+    {
+      "case_id": "FLT-03B",
+      "causal_note": "The final verifier follows symlinks and authenticates content only; the canonical snapshot independently shows regular files, so preserved bytes are not presently substituted.",
+      "domain": "FLT-03",
+      "expected": "final verifier rejects non-regular/symlink artifact",
+      "mutation": "replace compiled gate with symlink to byte-identical external file",
+      "mutation_timing_model": "filesystem substitution after final manifest",
+      "observations": {
+        "final_verifier": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"bad_hashes\": [], \"file_count\": 92, \"manifest_sha256\": \"cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526\", \"passed\": true, \"path_set_complete\": true, \"status\": \"v5_package_ready\", \"v5_outcome_episodes\": 0}\n"
+        },
+        "fixture_is_symlink": true,
+        "target": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/compiled_gate_external_identical.npz"
+      },
+      "package_fail_open": true,
+      "passed": false
+    },
+    {
+      "case_id": "FLT-04A",
+      "causal_note": "Threshold bytes are directly included in the pre-V5 seal.",
+      "domain": "FLT-04",
+      "expected": "pre-V5 seal rejects",
+      "mutation": "change first compiled score threshold by one representable float",
+      "mutation_timing_model": "post-pre-V5-seal",
+      "observations": {
+        "new_threshold": 0.19465729885363536,
+        "old_threshold": 0.19465729885363534,
+        "preseal_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 66, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 54, in verify\n    raise RuntimeError(f\"pre-V5 seal invalid: checks={checks}, bad={bad}\")\nRuntimeError: pre-V5 seal invalid: checks={'status_frozen': True, 'package_version': True, 'accepted_cycle': True, 'package_smoke_zero_at_seal': True, 'v5_zero_at_seal': True, 'v5_size': True, 'power_passed': True, 'normative_code_complete': True, 'dual_interpreter_contract': True, 'scientific_carry_forward': True, 'wrong_interpreter_negative_path': True, 'generation_global_preflight': True, 'identifier_freshness': True, 'all_hashes_match': False}, bad=['runs/lewm_v5_readiness_program/v5_package_versions/v004/freeze/compiled_gate.npz']\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-04B",
+      "causal_note": "The compute constants' source file is hash-bound before outcomes.",
+      "domain": "FLT-04",
+      "expected": "pre-V5 seal rejects source drift",
+      "mutation": "change sealed adapter compute price from 264960 to 264961",
+      "mutation_timing_model": "post-pre-V5-seal",
+      "observations": {
+        "preseal_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 66, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py\", line 54, in verify\n    raise RuntimeError(f\"pre-V5 seal invalid: checks={checks}, bad={bad}\")\nRuntimeError: pre-V5 seal invalid: checks={'status_frozen': True, 'package_version': True, 'accepted_cycle': True, 'package_smoke_zero_at_seal': True, 'v5_zero_at_seal': True, 'v5_size': True, 'power_passed': True, 'normative_code_complete': True, 'dual_interpreter_contract': True, 'scientific_carry_forward': True, 'wrong_interpreter_negative_path': True, 'generation_global_preflight': True, 'identifier_freshness': True, 'all_hashes_match': False}, bad=['runs/lewm_v5_readiness_program/v5_package_versions/v004/cycle_common.py']\n",
+          "stdout_tail": ""
+        }
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-04C",
+      "causal_note": "The execution/analysis entry points call the strict runtime assertion.",
+      "domain": "FLT-04",
+      "expected": "runtime assertion rejects before inference",
+      "mutation": "invoke evaluation runtime assertion under an unapproved interpreter",
+      "mutation_timing_model": "runtime preflight",
+      "observations": {
+        "runtime_assertion": {
+          "accepted": false,
+          "command": [
+            "/usr/bin/python3",
+            "-B",
+            "-c",
+            "from cycle_common import assert_runtime_contract;assert_runtime_contract('evaluation')"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/cycle_common.py\", line 224, in assert_runtime_contract\n    raise RuntimeError(\nRuntimeError: evaluation interpreter contract violation: expected /Users/rishisim/.cache/lewm-v2-venv/bin/python, observed /Applications/Xcode.app/Contents/Developer/usr/bin/python3\n",
+          "stdout_tail": ""
+        },
+        "wrong_interpreter": "/usr/bin/python3"
+      },
+      "package_fail_open": false,
+      "passed": true
+    },
+    {
+      "case_id": "FLT-05A",
+      "causal_note": "Unknown arrays are not schema-rejected when present before the relevant manifest, but the allowlist loader only materializes action/pixels and is invariant. Post-manifest insertion is hash-rejected. This is safe ignore, not privileged consumption.",
+      "domain": "FLT-05",
+      "expected": "post-manifest injection is rejected; if present before sealing, loader must not materialize it or change model/gate inputs",
+      "mutation": "add future-target, oracle-gain, and privileged-contact canary arrays",
+      "mutation_timing_model": "both post-manifest and pre-manifest models",
+      "observations": {
+        "canary_keys": [
+          "future_target_canary",
+          "oracle_gain_canary",
+          "unexpected_privileged_contact"
+        ],
+        "copied_loader": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import hashlib,json,pathlib;from input_loader import load_model_gate_inputs;loaded,audit=load_model_gate_inputs(pathlib.Path('/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw/v5v004-package-smoke-000.npz'));out={'loaded_keys':sorted(loaded),'archive_keys':audit['archive_key_names_observed_without_array_load'],'forbidden_arrays_materialized':audit['forbidden_arrays_materialized'],'contact_or_privileged_loaded':audit['contact_or_privileged_loaded'],'action_sha256':hashlib.sha256(loaded['action'].tobytes()).hexdigest(),'pixels_sha256':hashlib.sha256(loaded['pixels'].tobytes()).hexdigest()};print(json.dumps(out,sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"action_sha256\": \"067dea1f62ae37af0f39f3615ca9ab82ea60439c24e2afc076024c5e1ea5eeae\", \"archive_keys\": [\"action\", \"control\", \"env_seed\", \"future_target_canary\", \"observation\", \"oracle_gain_canary\", \"oracle_np_seed\", \"phase\", \"pixels\", \"policy_seed\", \"policy_type\", \"prev_qpos\", \"prev_qvel\", \"privileged_block_0_pos\", \"privileged_block_0_quat\", \"privileged_block_0_yaw\", \"privileged_target_block\", \"privileged_target_block_pos\", \"privileged_target_block_yaw\", \"privileged_target_task\", \"proprio_effector_pos\", \"proprio_effector_yaw\", \"proprio_gripper_contact\", \"proprio_gripper_opening\", \"proprio_gripper_vel\", \"proprio_joint_pos\", \"proprio_joint_vel\", \"qpos\", \"qvel\", \"reward\", \"slot\", \"step_idx\", \"success\", \"terminated\", \"time\", \"trajectory_id\", \"truncated\", \"unexpected_privileged_contact\"], \"contact_or_privileged_loaded\": false, \"forbidden_arrays_materialized\": false, \"loaded_keys\": [\"action\", \"pixels\"], \"pixels_sha256\": \"319a29983f7d60549d0286f5b9de6826ab3a273426979aabb1272a3fe53a85ad\"}\n"
+        },
+        "loader_payload": {
+          "action_sha256": "067dea1f62ae37af0f39f3615ca9ab82ea60439c24e2afc076024c5e1ea5eeae",
+          "archive_keys": [
+            "action",
+            "control",
+            "env_seed",
+            "future_target_canary",
+            "observation",
+            "oracle_gain_canary",
+            "oracle_np_seed",
+            "phase",
+            "pixels",
+            "policy_seed",
+            "policy_type",
+            "prev_qpos",
+            "prev_qvel",
+            "privileged_block_0_pos",
+            "privileged_block_0_quat",
+            "privileged_block_0_yaw",
+            "privileged_target_block",
+            "privileged_target_block_pos",
+            "privileged_target_block_yaw",
+            "privileged_target_task",
+            "proprio_effector_pos",
+            "proprio_effector_yaw",
+            "proprio_gripper_contact",
+            "proprio_gripper_opening",
+            "proprio_gripper_vel",
+            "proprio_joint_pos",
+            "proprio_joint_vel",
+            "qpos",
+            "qvel",
+            "reward",
+            "slot",
+            "step_idx",
+            "success",
+            "terminated",
+            "time",
+            "trajectory_id",
+            "truncated",
+            "unexpected_privileged_contact"
+          ],
+          "contact_or_privileged_loaded": false,
+          "forbidden_arrays_materialized": false,
+          "loaded_keys": [
+            "action",
+            "pixels"
+          ],
+          "pixels_sha256": "319a29983f7d60549d0286f5b9de6826ab3a273426979aabb1272a3fe53a85ad"
+        },
+        "old_outer_manifest_final_verifier": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 52, in <module>\n    print(json.dumps(verify(), sort_keys=True))\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py\", line 47, in verify\n    raise RuntimeError(f\"final package verification failed: {result}\")\nRuntimeError: final package verification failed: {'passed': False, 'path_set_complete': True, 'bad_hashes': ['runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw/v5v004-package-smoke-000.npz', 'runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw_manifest.json'], 'file_count': 92, 'manifest_sha256': 'cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526', 'status': 'v5_package_ready', 'v5_outcome_episodes': 0}\n",
+          "stdout_tail": ""
+        },
+        "post_manifest_raw_preflight": {
+          "accepted": false,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import json,runner;runner._validate_existing_raw_manifest('package_smoke',12);print(json.dumps({'accepted':True}))"
+          ],
+          "returncode": 1,
+          "stderr_tail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/runner.py\", line 270, in _validate_existing_raw_manifest\n    raise RuntimeError(f\"raw episode hash drift: {candidate}\")\nRuntimeError: raw episode hash drift: /Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/data/package_smoke_raw/v5v004-package-smoke-000.npz\n",
+          "stdout_tail": ""
+        },
+        "rebound_manifest_raw_preflight": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "-c",
+            "import json,runner;runner._validate_existing_raw_manifest('package_smoke',12);print(json.dumps({'accepted':True}))"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"accepted\": true}\n"
+        },
+        "rebound_manifest_smoke_verifier": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_package_smoke.py"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"call_histogram\": [395, 52, 8, 1], \"checks\": {\"calls_in_range\": true, \"calls_reconstructed_exactly\": true, \"contact_and_privileged_excluded\": true, \"episode_identifiers_exact\": true, \"exact_12_raw_episodes\": true, \"exact_456_execution_rows\": true, \"frozen_modules_no_gradients\": true, \"input_allowlist\": true, \"model_outputs_finite\": true, \"pre_v5_seal\": true, \"raw_hashes\": true, \"raw_path_set_complete\": true, \"reached_features_finite_unreached_nan\": true, \"reached_scores_finite_unreached_nan\": true, \"same_path_and_manual_api_exact\": true, \"seal_precedes_every_smoke_episode\": true, \"seed_isolation\": true, \"seed_records_match_frozen_ledger\": true, \"sparse_dense_calls_histograms_exact\": true, \"sparse_dense_latents_within_contract\": true, \"synchronized_latency_passed_separately\": true, \"two_flop_derivations_agree\": true, \"v3_and_hdf5_excluded\": true, \"zero_confirmation_artifacts\": true, \"zero_v5_outcomes\": true}, \"created_unix_ns\": 1784240291056433000, \"excluded_package_smoke_episode_count\": 12, \"execution_manifest_sha256\": \"04250400da8db8149e5e84b08bf516ad2d2b5d2799db18a2287a2602f42d0538\", \"execution_sha256\": \"6d3c4ae2388c747a769aedd15df16f843df134059d54340dc6b287dd23b4c933\", \"latency_sha256\": \"b4f02c1f928dd36d47fe49d2a630b2b0f2901a0cd8a6e8091568cef9fc000286\", \"maximum_sparse_dense_absolute_error\": 2.384185791015625e-07, \"passed\": true, \"raw_manifest_sha256\": \"9d0ad3e4be93c43cfe6287a0165520a35048229025c23e61e0562f88524a1b54\", \"schema_version\": 1, \"v5_outcome_episodes\": 0}\n"
+        },
+        "rebound_outer_manifest_final_verifier": {
+          "accepted": true,
+          "command": [
+            "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+            "-B",
+            "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+          ],
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": "{\"bad_hashes\": [], \"file_count\": 92, \"manifest_sha256\": \"68eb64d186d2464c03c4f5cc1e41b2c4a77dd00eed5c1edce7d1d61a086ac05a\", \"passed\": true, \"path_set_complete\": true, \"status\": \"v5_package_ready\", \"v5_outcome_episodes\": 0}\n"
+        },
+        "safe_ignore_invariance": true,
+        "strict_unknown_field_rejection": false
+      },
+      "package_fail_open": false,
+      "passed": true
+    }
+  ],
+  "created_unix_ns": 1784240291514723000,
+  "domains": {
+    "FLT-01": {
+      "case_count": 2,
+      "failed_case_count": 0,
+      "package_fail_open_case_ids": [],
+      "passed_case_count": 2,
+      "status": "pass"
+    },
+    "FLT-02": {
+      "case_count": 5,
+      "failed_case_count": 2,
+      "package_fail_open_case_ids": [
+        "FLT-02D",
+        "FLT-02E"
+      ],
+      "passed_case_count": 3,
+      "status": "fail"
+    },
+    "FLT-03": {
+      "case_count": 2,
+      "failed_case_count": 2,
+      "package_fail_open_case_ids": [
+        "FLT-03A",
+        "FLT-03B"
+      ],
+      "passed_case_count": 0,
+      "status": "fail"
+    },
+    "FLT-04": {
+      "case_count": 3,
+      "failed_case_count": 0,
+      "package_fail_open_case_ids": [],
+      "passed_case_count": 3,
+      "status": "pass"
+    },
+    "FLT-05": {
+      "case_count": 1,
+      "failed_case_count": 0,
+      "package_fail_open_case_ids": [],
+      "passed_case_count": 1,
+      "status": "pass"
+    }
+  },
+  "fixture": {
+    "baseline_final_verifier": {
+      "accepted": true,
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-B",
+        "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"bad_hashes\": [], \"file_count\": 92, \"manifest_sha256\": \"cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526\", \"passed\": true, \"path_set_complete\": true, \"status\": \"v5_package_ready\", \"v5_outcome_episodes\": 0}\n"
+    },
+    "baseline_preseal_verifier": {
+      "accepted": true,
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-B",
+        "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"bad_hashes\": [], \"checks\": {\"accepted_cycle\": true, \"all_hashes_match\": true, \"dual_interpreter_contract\": true, \"generation_global_preflight\": true, \"identifier_freshness\": true, \"normative_code_complete\": true, \"package_smoke_zero_at_seal\": true, \"package_version\": true, \"power_passed\": true, \"scientific_carry_forward\": true, \"status_frozen\": true, \"v5_size\": true, \"v5_zero_at_seal\": true, \"wrong_interpreter_negative_path\": true}, \"passed\": true, \"seal_sha256\": \"c2853b726cf2e596ab3fda47ae1cae5aba1308f8f0c6409732acf4dc430677d6\", \"sealed_file_count\": 103, \"v5_outcome_episodes_at_seal\": 0}\n"
+    },
+    "canonical_package": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "copied_regular_file_count": 92,
+    "copied_total_bytes": 51758095,
+    "copy_manifest_sha256": "4b0e760c25cd30ed8e1d2895e4c18ded3fe342c28eac15e52cc782567451cba4",
+    "final_after_restore": {
+      "accepted": true,
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-B",
+        "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_final_package.py"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"bad_hashes\": [], \"file_count\": 92, \"manifest_sha256\": \"cad97a07712eba7219a354d4105ec69d20eb85ba08fcefdaa1a6570cb21c2526\", \"passed\": true, \"path_set_complete\": true, \"status\": \"v5_package_ready\", \"v5_outcome_episodes\": 0}\n"
+    },
+    "fixture_package": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "fixture_repo": "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo",
+    "preseal_after_restore": {
+      "accepted": true,
+      "command": [
+        "/Users/rishisim/.cache/lewm-v2-venv/bin/python",
+        "-B",
+        "/Users/rishisim/Documents/research/.worktrees/lewm-p2-contact/v5-validity-audit-20260716T204619Z/runs/lewm_v5_validity_redteam/v5_validity_audit_20260716T204619Z/fault_copies/package_ready_fixture/repo/runs/lewm_v5_readiness_program/v5_package_versions/v004/verify_pre_v5.py"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\"bad_hashes\": [], \"checks\": {\"accepted_cycle\": true, \"all_hashes_match\": true, \"dual_interpreter_contract\": true, \"generation_global_preflight\": true, \"identifier_freshness\": true, \"normative_code_complete\": true, \"package_smoke_zero_at_seal\": true, \"package_version\": true, \"power_passed\": true, \"scientific_carry_forward\": true, \"status_frozen\": true, \"v5_size\": true, \"v5_zero_at_seal\": true, \"wrong_interpreter_negative_path\": true}, \"passed\": true, \"seal_sha256\": \"c2853b726cf2e596ab3fda47ae1cae5aba1308f8f0c6409732acf4dc430677d6\", \"sealed_file_count\": 103, \"v5_outcome_episodes_at_seal\": 0}\n"
+    },
+    "preseal_repository_file_count": 95,
+    "preseal_repository_total_bytes": 80110016
+  },
+  "interpretation": {
+    "canonical_state_cross_check_required": [
+      "canonical paths confined and regular",
+      "canonical identifiers, paths, and raw hashes unique",
+      "canonical execution row order matches raw manifest",
+      "initial/final canonical snapshots unchanged"
+    ],
+    "no_fault_was_applied_to_canonical_evidence": true,
+    "validated_fail_open_surfaces": [
+      "pre-execution raw-manifest paths are not root-confined",
+      "final durable-file verifier follows symlinks",
+      "existing raw-manifest preflight does not enforce identifier uniqueness",
+      "semantic verifiers do not enforce canonical serialized row order"
+    ]
+  },
+  "schema_version": 1,
+  "summary": {
+    "all_post_seal_hash_mutations_rejected": true,
+    "case_count": 13,
+    "domain_fail_count": 2,
+    "domain_pass_count": 3,
+    "failed_case_count": 4,
+    "package_fail_open_case_ids": [
+      "FLT-02D",
+      "FLT-02E",
+      "FLT-03A",
+      "FLT-03B"
+    ],
+    "passed_case_count": 9,
+    "privileged_canary_safe_ignore": true,
+    "strict_privileged_schema_rejection": false
+  }
+}

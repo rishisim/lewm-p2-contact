@@ -1,0 +1,421 @@
+{"attempt": "v001", "created_unix_ns": 1784233621945705000, "current_state": "BOOTSTRAP_AUDIT", "event": "state_initialized", "state_machine": ["BOOTSTRAP_AUDIT", "DESIGN_AND_POWER", "IMPLEMENT_PACKAGE", "PRESEAL_QUALIFY", "PRE_OUTCOME_SEAL", "EXCLUDED_REGIME_SMOKE", "FRESH_COHORT_GENERATION", "SPARSE_DENSE_EXECUTION", "SEALED_ANALYSIS", "LATENCY_AND_RESOURCE_REPORTING", "INDEPENDENT_VERIFICATION", "TERMINAL", "FOLLOW_ON_TASK_CREATION"], "target_episode_count_per_regime": 3000}
+{"attempt": "v002", "created_unix_ns": 1784233846376790000, "event": "zero_outcome_version_forward", "evidence_path": "runs/lewm_v5_generalization/attempts/v002/audit/version_forward_equivalence.json", "evidence_sha256": "de515947af4d0c95e47fd7d3b5236334b3913c554f51539487fe40b8f7493778", "from_attempt": "v001", "reason": "external Git HEAD changed during bootstrap", "scientific_design_changed": false}
+{"attempt": "v002", "checkpoint_name": "v001_v5_and_workspace_bootstrap_verified", "completed_state": "BOOTSTRAP_AUDIT", "created_unix_ns": 1784233853703738000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v002/audit/bootstrap_audit.json", "evidence_sha256": "eeddae73413079986a74ef2c9b77c35cc1ced0f59d981df1fd243bd663a67e3b", "extra_fields": {}, "next_state": "DESIGN_AND_POWER"}
+{"attempt": "v003", "created_unix_ns": 1784234271148766000, "event": "zero_outcome_version_forward", "evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/version_forward_equivalence.json", "evidence_sha256": "14d0d27d3cd7e97c35d4790824fd8e4c73befc4d3a9591ee3d4635c475a8b11a", "from_attempt": "v002", "reason": "incorrect consumed V5 episode-metrics hash", "scientific_design_changed": false, "target_outcomes": 0, "to_attempt": "v003"}
+{"attempt": "v003", "created_unix_ns": 1784234274376312000, "event": "design_power_identifiers_frozen", "evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/design_and_power.json", "evidence_sha256": "408269277ae30d473260af7ddbcc5b92cd54185a9b2473de18696c577063fec2", "target_episodes_per_regime": 3000, "target_outcomes": 0}
+{"attempt": "v003", "checkpoint_name": "v003_design_power_identifiers_frozen", "completed_state": "DESIGN_AND_POWER", "created_unix_ns": 1784234274376795000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/design_and_power.json", "evidence_sha256": "408269277ae30d473260af7ddbcc5b92cd54185a9b2473de18696c577063fec2", "extra_fields": {}, "next_state": "IMPLEMENT_PACKAGE"}
+{"attempt": "v003", "created_unix_ns": 1784235301029407000, "event": "implementation_complete", "normative_file_count": 21, "path": "runs/lewm_v5_generalization/attempts/v003/audit/implementation_complete.json", "sha256": "5f3ca7b66c82e6555b9c5d9a02a2e84f4b6f808ea2950990a3877589028da8e8"}
+{"attempt": "v003", "checkpoint_name": "v003_implementation_complete", "completed_state": "IMPLEMENT_PACKAGE", "created_unix_ns": 1784235301029897000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v003/audit/implementation_complete.json", "evidence_sha256": "5f3ca7b66c82e6555b9c5d9a02a2e84f4b6f808ea2950990a3877589028da8e8", "extra_fields": {}, "next_state": "PRESEAL_QUALIFY"}
+{"attempt": "v004", "created_unix_ns": 1784235465586419000, "event": "zero_outcome_version_forward", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/version_forward_equivalence.json", "evidence_sha256": "71be1e1103d64146c42338ef8d01a9ea39b9f10add2ee2e649b718708e2029e1", "from_attempt": "v003", "reason": "preseal local-module shadowing by consumed V5 path", "scientific_design_changed": false, "target_outcomes": 0, "to_attempt": "v004"}
+{"attempt": "v004", "created_unix_ns": 1784235472566727000, "event": "design_power_identifiers_frozen", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/design_and_power.json", "evidence_sha256": "064f4d2c5e3b95a0f128d24e801af8479c78125b867c79d764f1ffa9d9696b5e", "target_episodes_per_regime": 3000, "target_outcomes": 0}
+{"attempt": "v004", "checkpoint_name": "v004_design_power_identifiers_frozen", "completed_state": "DESIGN_AND_POWER", "created_unix_ns": 1784235472567248000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/design_and_power.json", "evidence_sha256": "064f4d2c5e3b95a0f128d24e801af8479c78125b867c79d764f1ffa9d9696b5e", "extra_fields": {}, "next_state": "IMPLEMENT_PACKAGE"}
+{"attempt": "v004", "created_unix_ns": 1784235502170036000, "event": "implementation_complete", "normative_file_count": 22, "path": "runs/lewm_v5_generalization/attempts/v004/audit/implementation_complete.json", "sha256": "06b47e2b4ec9ddcd4299fdf8104923bf4b4f0c6185039c99df75a05c485400eb"}
+{"attempt": "v004", "checkpoint_name": "v004_implementation_complete", "completed_state": "IMPLEMENT_PACKAGE", "created_unix_ns": 1784235502170595000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/implementation_complete.json", "evidence_sha256": "06b47e2b4ec9ddcd4299fdf8104923bf4b4f0c6185039c99df75a05c485400eb", "extra_fields": {}, "next_state": "PRESEAL_QUALIFY"}
+{"attempt": "v004", "created_unix_ns": 1784235509062200000, "event": "preseal_qualification_complete", "path": "runs/lewm_v5_generalization/attempts/v004/audit/preseal_qualification.json", "sha256": "3d5d3fc3282f265627604e3e47ea3d98c20e02a84fa68f04dfa910480381ee80", "target_outcomes": 0}
+{"attempt": "v004", "checkpoint_name": "v004_preseal_qualification_complete", "completed_state": "PRESEAL_QUALIFY", "created_unix_ns": 1784235509062748000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/preseal_qualification.json", "evidence_sha256": "3d5d3fc3282f265627604e3e47ea3d98c20e02a84fa68f04dfa910480381ee80", "extra_fields": {}, "next_state": "PRE_OUTCOME_SEAL"}
+{"attempt": "v004", "created_unix_ns": 1784235509800951000, "event": "pre_outcome_seal_complete", "path": "runs/lewm_v5_generalization/attempts/v004/audit/pre_outcome_seal.json", "sealed_file_count": 142, "sha256": "0f60c142fa7b0a86a99100d199c7c2e461a237782997d87956bcc327b58224d5", "target_outcomes": 0}
+{"attempt": "v004", "checkpoint_name": "v004_pre_outcome_seal_complete", "completed_state": "PRE_OUTCOME_SEAL", "created_unix_ns": 1784235509801812000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v004/audit/pre_outcome_seal.json", "evidence_sha256": "0f60c142fa7b0a86a99100d199c7c2e461a237782997d87956bcc327b58224d5", "extra_fields": {}, "next_state": "EXCLUDED_REGIME_SMOKE"}
+{"attempt": "v004", "created_unix_ns": 1784235532339053000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/markov_oracle/raw_manifest.json", "manifest_sha256": "d82493d8402b9f7175873aa82c12af09187ab91d1a1c31c75fbb7faf6ae9aa3f", "phase": "smoke", "regime": "markov_oracle", "replacements": 0}
+{"attempt": "v004", "created_unix_ns": 1784235536625602000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/markov_oracle/execution_manifest.json", "manifest_sha256": "da3c12799891c533d0e0296ec8b872b19b31208223c3a9fd231fec7c2b951f4d", "phase": "smoke", "regime": "markov_oracle", "rows": 228}
+{"attempt": "v004", "created_unix_ns": 1784235550538096000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/plan_action_noise_0p2/raw_manifest.json", "manifest_sha256": "2036aa3766c53dd887e126945f5b5e26dd64499c2682e74d04d84e03f964ad8f", "phase": "smoke", "regime": "plan_action_noise_0p2", "replacements": 0}
+{"attempt": "v004", "created_unix_ns": 1784235554847344000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/plan_action_noise_0p2/execution_manifest.json", "manifest_sha256": "394d0550c04d64ecae18b68cf0b124478ff0b1c1278aef8fe73ecab296d4d130", "phase": "smoke", "regime": "plan_action_noise_0p2", "rows": 228}
+{"attempt": "v004", "created_unix_ns": 1784235568774485000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/plan_random_action_0p1/raw_manifest.json", "manifest_sha256": "f270c9068ec6beaa241bbc4bffb3c466d1ab1bbed297fc31ed9ee50b4f78b5a9", "phase": "smoke", "regime": "plan_random_action_0p1", "replacements": 0}
+{"attempt": "v004", "created_unix_ns": 1784235572949788000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v004/data/smoke/plan_random_action_0p1/execution_manifest.json", "manifest_sha256": "119589e129786baac4af05c126bf895fd0fda498aa02f9283957aec7093a7aef", "phase": "smoke", "regime": "plan_random_action_0p1", "rows": 228}
+{"attempt": "v005", "created_unix_ns": 1784235887256954000, "event": "zero_target_outcome_version_forward", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/version_forward_equivalence.json", "evidence_sha256": "1330b233354b5c56863230eeeab7036e0c9ec8fecb989794861faffc39e558a2", "from_attempt": "v004", "prior_smoke_episodes": 18, "prior_smoke_permanently_excluded": true, "reason": "integer zero in excluded-smoke boolean check map despite all 18 fresh excluded smoke and equivalence checks passing", "scientific_design_changed": false, "target_outcomes": 0, "to_attempt": "v005"}
+{"attempt": "v005", "created_unix_ns": 1784235912257865000, "event": "design_power_identifiers_frozen", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/design_and_power.json", "evidence_sha256": "e29b0d232608b1ad6d3161640804f3a6145305b56f4a9b46bd04f9668d607b3a", "target_episodes_per_regime": 3000, "target_outcomes": 0}
+{"attempt": "v005", "checkpoint_name": "v005_design_power_identifiers_frozen", "completed_state": "DESIGN_AND_POWER", "created_unix_ns": 1784235912258368000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/design_and_power.json", "evidence_sha256": "e29b0d232608b1ad6d3161640804f3a6145305b56f4a9b46bd04f9668d607b3a", "extra_fields": {}, "next_state": "IMPLEMENT_PACKAGE"}
+{"attempt": "v005", "created_unix_ns": 1784235949508150000, "event": "implementation_complete", "normative_file_count": 22, "path": "runs/lewm_v5_generalization/attempts/v005/audit/implementation_complete.json", "sha256": "17c2ff9b4f1eee5d7932948f5d4aaeedf7ab52f54e2c544565fe238a430e900b"}
+{"attempt": "v005", "checkpoint_name": "v005_implementation_complete", "completed_state": "IMPLEMENT_PACKAGE", "created_unix_ns": 1784235949508672000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/implementation_complete.json", "evidence_sha256": "17c2ff9b4f1eee5d7932948f5d4aaeedf7ab52f54e2c544565fe238a430e900b", "extra_fields": {}, "next_state": "PRESEAL_QUALIFY"}
+{"attempt": "v005", "created_unix_ns": 1784235955906204000, "event": "preseal_qualification_complete", "path": "runs/lewm_v5_generalization/attempts/v005/audit/preseal_qualification.json", "sha256": "3b08647972207b35e43946066073ea42a94ffa15256669a203a711967effe22b", "target_outcomes": 0}
+{"attempt": "v005", "checkpoint_name": "v005_preseal_qualification_complete", "completed_state": "PRESEAL_QUALIFY", "created_unix_ns": 1784235955906756000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/preseal_qualification.json", "evidence_sha256": "3b08647972207b35e43946066073ea42a94ffa15256669a203a711967effe22b", "extra_fields": {}, "next_state": "PRE_OUTCOME_SEAL"}
+{"attempt": "v005", "created_unix_ns": 1784235956591078000, "event": "pre_outcome_seal_complete", "path": "runs/lewm_v5_generalization/attempts/v005/audit/pre_outcome_seal.json", "sealed_file_count": 144, "sha256": "178ba3efa4f66bc20e838a1197d3fdd5214fa3aa040a60534df11379a4720a4e", "target_outcomes": 0}
+{"attempt": "v005", "checkpoint_name": "v005_pre_outcome_seal_complete", "completed_state": "PRE_OUTCOME_SEAL", "created_unix_ns": 1784235956591900000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/pre_outcome_seal.json", "evidence_sha256": "178ba3efa4f66bc20e838a1197d3fdd5214fa3aa040a60534df11379a4720a4e", "extra_fields": {}, "next_state": "EXCLUDED_REGIME_SMOKE"}
+{"attempt": "v005", "created_unix_ns": 1784235978780007000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/markov_oracle/raw_manifest.json", "manifest_sha256": "3aedb0a47072b7a68ebe8b09a367b0ea9c8408028db8a6173f2c6029ddc957da", "phase": "smoke", "regime": "markov_oracle", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784235983106613000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/markov_oracle/execution_manifest.json", "manifest_sha256": "4cddaebb4915d43ee429f51d18dd0ac271c96c776c965b673e7b13bac97cbcbe", "phase": "smoke", "regime": "markov_oracle", "rows": 228}
+{"attempt": "v005", "created_unix_ns": 1784235996406945000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_action_noise_0p2/raw_manifest.json", "manifest_sha256": "c5359285a64a24d797051e66f12fb77e3ab7ccf3eb561b8a0f95ec6ce0e1196b", "phase": "smoke", "regime": "plan_action_noise_0p2", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784236000283742000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_action_noise_0p2/execution_manifest.json", "manifest_sha256": "66a6ebbb6a7b6ceb89baba14e120a10c77e3598bf740fec2ae9016e7960e4fe9", "phase": "smoke", "regime": "plan_action_noise_0p2", "rows": 228}
+{"attempt": "v005", "created_unix_ns": 1784236013256656000, "episodes": 6, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_random_action_0p1/raw_manifest.json", "manifest_sha256": "a373171f6e836b3e3dd7a9a47ddd1913c641acb44a91eb264742abae1f1e461b", "phase": "smoke", "regime": "plan_random_action_0p1", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784236017182033000, "episodes": 6, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_random_action_0p1/execution_manifest.json", "manifest_sha256": "497eea8475f98808be59b1e7990c97e2f99c208e3ce3d765eb6cba791a9090fa", "phase": "smoke", "regime": "plan_random_action_0p1", "rows": 228}
+{"attempt": "v005", "checkpoint_name": "v005_excluded_regime_smoke_passed", "completed_state": "EXCLUDED_REGIME_SMOKE", "created_unix_ns": 1784236017786912000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/excluded_regime_smoke.json", "evidence_sha256": "09f0ea446e10b885b3449bc48894aa0bd40d738eaaac50d3289cf579dc420299", "extra_fields": {}, "next_state": "FRESH_COHORT_GENERATION"}
+{"attempt": "v005", "created_unix_ns": 1784236109361568000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 50}}
+{"attempt": "v005", "created_unix_ns": 1784236189047632000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 100}}
+{"attempt": "v005", "created_unix_ns": 1784236268866319000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 150}}
+{"attempt": "v005", "created_unix_ns": 1784236349203736000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 200}}
+{"attempt": "v005", "created_unix_ns": 1784236455780562000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 250}}
+{"attempt": "v005", "created_unix_ns": 1784236580077576000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 300}}
+{"attempt": "v005", "created_unix_ns": 1784236789600370000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 350}}
+{"attempt": "v005", "created_unix_ns": 1784236973579603000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 400}}
+{"attempt": "v005", "created_unix_ns": 1784237112504806000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 450}}
+{"attempt": "v005", "created_unix_ns": 1784237218896250000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 500}}
+{"attempt": "v005", "created_unix_ns": 1784237320771711000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 550}}
+{"attempt": "v005", "created_unix_ns": 1784237504730382000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 600}}
+{"attempt": "v005", "created_unix_ns": 1784237703220727000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 650}}
+{"attempt": "v005", "created_unix_ns": 1784240192107978000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 700}}
+{"attempt": "v005", "created_unix_ns": 1784240276307207000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 750}}
+{"attempt": "v005", "created_unix_ns": 1784240361690549000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 800}}
+{"attempt": "v005", "created_unix_ns": 1784240452704079000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 850}}
+{"attempt": "v005", "created_unix_ns": 1784240532832274000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 900}}
+{"attempt": "v005", "created_unix_ns": 1784240615201996000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 950}}
+{"attempt": "v005", "created_unix_ns": 1784240697391416000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1000}}
+{"attempt": "v005", "created_unix_ns": 1784240776976109000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1050}}
+{"attempt": "v005", "created_unix_ns": 1784240861144411000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1100}}
+{"attempt": "v005", "created_unix_ns": 1784240944413208000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1150}}
+{"attempt": "v005", "created_unix_ns": 1784241026295479000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1200}}
+{"attempt": "v005", "created_unix_ns": 1784241107179345000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1250}}
+{"attempt": "v005", "created_unix_ns": 1784241188180263000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1300}}
+{"attempt": "v005", "created_unix_ns": 1784241267879345000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1350}}
+{"attempt": "v005", "created_unix_ns": 1784241347945055000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1400}}
+{"attempt": "v005", "created_unix_ns": 1784241426244796000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1450}}
+{"attempt": "v005", "created_unix_ns": 1784241505970959000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1500}}
+{"attempt": "v005", "created_unix_ns": 1784241583688162000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1550}}
+{"attempt": "v005", "created_unix_ns": 1784241653488114000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1600}}
+{"attempt": "v005", "created_unix_ns": 1784241722623159000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1650}}
+{"attempt": "v005", "created_unix_ns": 1784241789024633000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1700}}
+{"attempt": "v005", "created_unix_ns": 1784241854151919000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1750}}
+{"attempt": "v005", "created_unix_ns": 1784241919071135000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1800}}
+{"attempt": "v005", "created_unix_ns": 1784241983984037000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1850}}
+{"attempt": "v005", "created_unix_ns": 1784242048828988000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1900}}
+{"attempt": "v005", "created_unix_ns": 1784242113367528000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 1950}}
+{"attempt": "v005", "created_unix_ns": 1784242177795501000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2000}}
+{"attempt": "v005", "created_unix_ns": 1784242242217910000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2050}}
+{"attempt": "v005", "created_unix_ns": 1784242306745507000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2100}}
+{"attempt": "v005", "created_unix_ns": 1784242371846848000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2150}}
+{"attempt": "v005", "created_unix_ns": 1784242439355438000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2200}}
+{"attempt": "v005", "created_unix_ns": 1784242505807686000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2250}}
+{"attempt": "v005", "created_unix_ns": 1784242572525300000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2300}}
+{"attempt": "v005", "created_unix_ns": 1784242640036151000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2350}}
+{"attempt": "v005", "created_unix_ns": 1784242706747920000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2400}}
+{"attempt": "v005", "created_unix_ns": 1784242772941831000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2450}}
+{"attempt": "v005", "created_unix_ns": 1784242839135323000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2500}}
+{"attempt": "v005", "created_unix_ns": 1784242905080894000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2550}}
+{"attempt": "v005", "created_unix_ns": 1784242973135328000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2600}}
+{"attempt": "v005", "created_unix_ns": 1784243040859814000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2650}}
+{"attempt": "v005", "created_unix_ns": 1784243107404894000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2700}}
+{"attempt": "v005", "created_unix_ns": 1784243173901124000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2750}}
+{"attempt": "v005", "created_unix_ns": 1784243240789289000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2800}}
+{"attempt": "v005", "created_unix_ns": 1784243307319964000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2850}}
+{"attempt": "v005", "created_unix_ns": 1784243373370084000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2900}}
+{"attempt": "v005", "created_unix_ns": 1784243439409355000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 2950}}
+{"attempt": "v005", "created_unix_ns": 1784243505503924000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3000}}
+{"attempt": "v005", "created_unix_ns": 1784243505725675000, "episodes": 3000, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/markov_oracle/raw_manifest.json", "manifest_sha256": "5fd749cd7135f60870e55274c00f93804ee26b2d588e53f2b8bff4cc444fcd79", "phase": "target", "regime": "markov_oracle", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784243579640584000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3050}}
+{"attempt": "v005", "created_unix_ns": 1784243648932288000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3100}}
+{"attempt": "v005", "created_unix_ns": 1784243718290662000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3150}}
+{"attempt": "v005", "created_unix_ns": 1784243787652667000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3200}}
+{"attempt": "v005", "created_unix_ns": 1784243858158588000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3250}}
+{"attempt": "v005", "created_unix_ns": 1784243933555677000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3300}}
+{"attempt": "v005", "created_unix_ns": 1784244017307989000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3350}}
+{"attempt": "v005", "created_unix_ns": 1784244099466670000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3400}}
+{"attempt": "v005", "created_unix_ns": 1784244174428191000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3450}}
+{"attempt": "v005", "created_unix_ns": 1784244258402630000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3500}}
+{"attempt": "v005", "created_unix_ns": 1784244345407057000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3550}}
+{"attempt": "v005", "created_unix_ns": 1784244425770049000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3600}}
+{"attempt": "v005", "created_unix_ns": 1784244499454759000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3650}}
+{"attempt": "v005", "created_unix_ns": 1784244581902576000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3700}}
+{"attempt": "v005", "created_unix_ns": 1784244659173406000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3750}}
+{"attempt": "v005", "created_unix_ns": 1784244743854137000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3800}}
+{"attempt": "v005", "created_unix_ns": 1784244830061597000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3850}}
+{"attempt": "v005", "created_unix_ns": 1784244918500063000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3900}}
+{"attempt": "v005", "created_unix_ns": 1784245006325272000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 3950}}
+{"attempt": "v005", "created_unix_ns": 1784245093072125000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4000}}
+{"attempt": "v005", "created_unix_ns": 1784245179272057000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4050}}
+{"attempt": "v005", "created_unix_ns": 1784245266503026000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4100}}
+{"attempt": "v005", "created_unix_ns": 1784245352422068000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4150}}
+{"attempt": "v005", "created_unix_ns": 1784245439178540000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4200}}
+{"attempt": "v005", "created_unix_ns": 1784245526355618000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4250}}
+{"attempt": "v005", "created_unix_ns": 1784245613569597000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4300}}
+{"attempt": "v005", "created_unix_ns": 1784245700712259000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4350}}
+{"attempt": "v005", "created_unix_ns": 1784245788446900000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4400}}
+{"attempt": "v005", "created_unix_ns": 1784245875336935000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4450}}
+{"attempt": "v005", "created_unix_ns": 1784245962451870000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4500}}
+{"attempt": "v005", "created_unix_ns": 1784246049009048000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4550}}
+{"attempt": "v005", "created_unix_ns": 1784246136463777000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4600}}
+{"attempt": "v005", "created_unix_ns": 1784246224203240000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4650}}
+{"attempt": "v005", "created_unix_ns": 1784246307189002000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4700}}
+{"attempt": "v005", "created_unix_ns": 1784246389826672000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4750}}
+{"attempt": "v005", "created_unix_ns": 1784246471892679000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4800}}
+{"attempt": "v005", "created_unix_ns": 1784246554095513000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4850}}
+{"attempt": "v005", "created_unix_ns": 1784246636032722000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4900}}
+{"attempt": "v005", "created_unix_ns": 1784246718233601000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 4950}}
+{"attempt": "v005", "created_unix_ns": 1784246800513670000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5000}}
+{"attempt": "v005", "created_unix_ns": 1784246883080908000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5050}}
+{"attempt": "v005", "created_unix_ns": 1784246965829752000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5100}}
+{"attempt": "v005", "created_unix_ns": 1784247048829963000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5150}}
+{"attempt": "v005", "created_unix_ns": 1784247132100777000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5200}}
+{"attempt": "v005", "created_unix_ns": 1784247215142389000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5250}}
+{"attempt": "v005", "created_unix_ns": 1784247298371845000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5300}}
+{"attempt": "v005", "created_unix_ns": 1784247382019300000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5350}}
+{"attempt": "v005", "created_unix_ns": 1784247465378864000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5400}}
+{"attempt": "v005", "created_unix_ns": 1784247548796878000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5450}}
+{"attempt": "v005", "created_unix_ns": 1784247632033141000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5500}}
+{"attempt": "v005", "created_unix_ns": 1784247715378973000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5550}}
+{"attempt": "v005", "created_unix_ns": 1784247798510844000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5600}}
+{"attempt": "v005", "created_unix_ns": 1784247881813773000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5650}}
+{"attempt": "v005", "created_unix_ns": 1784247965044582000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5700}}
+{"attempt": "v005", "created_unix_ns": 1784248048566599000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5750}}
+{"attempt": "v005", "created_unix_ns": 1784248131660239000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5800}}
+{"attempt": "v005", "created_unix_ns": 1784248215043160000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5850}}
+{"attempt": "v005", "created_unix_ns": 1784248298675297000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5900}}
+{"attempt": "v005", "created_unix_ns": 1784248382835444000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 5950}}
+{"attempt": "v005", "created_unix_ns": 1784248466633197000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6000}}
+{"attempt": "v005", "created_unix_ns": 1784248466820091000, "episodes": 3000, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/plan_action_noise_0p2/raw_manifest.json", "manifest_sha256": "abd9b5ff618786e873979ba1432ecd0c0e95871529b53f90f4e5bcf12f8b7ecd", "phase": "target", "regime": "plan_action_noise_0p2", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784248553577335000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6050}}
+{"attempt": "v005", "created_unix_ns": 1784248635183828000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6100}}
+{"attempt": "v005", "created_unix_ns": 1784248716835180000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6150}}
+{"attempt": "v005", "created_unix_ns": 1784248798543871000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6200}}
+{"attempt": "v005", "created_unix_ns": 1784248880264026000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6250}}
+{"attempt": "v005", "created_unix_ns": 1784248961936000000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6300}}
+{"attempt": "v005", "created_unix_ns": 1784249043958474000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6350}}
+{"attempt": "v005", "created_unix_ns": 1784249125998355000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6400}}
+{"attempt": "v005", "created_unix_ns": 1784249207283762000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6450}}
+{"attempt": "v005", "created_unix_ns": 1784249289107192000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6500}}
+{"attempt": "v005", "created_unix_ns": 1784249370581356000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6550}}
+{"attempt": "v005", "created_unix_ns": 1784249452462924000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6600}}
+{"attempt": "v005", "created_unix_ns": 1784249534352057000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6650}}
+{"attempt": "v005", "created_unix_ns": 1784249616384073000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6700}}
+{"attempt": "v005", "created_unix_ns": 1784249698365043000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6750}}
+{"attempt": "v005", "created_unix_ns": 1784249780103842000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6800}}
+{"attempt": "v005", "created_unix_ns": 1784249862243494000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6850}}
+{"attempt": "v005", "created_unix_ns": 1784249944555934000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6900}}
+{"attempt": "v005", "created_unix_ns": 1784250026717606000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 6950}}
+{"attempt": "v005", "created_unix_ns": 1784250109015846000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7000}}
+{"attempt": "v005", "created_unix_ns": 1784250190791028000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7050}}
+{"attempt": "v005", "created_unix_ns": 1784250272547937000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7100}}
+{"attempt": "v005", "created_unix_ns": 1784250353758960000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7150}}
+{"attempt": "v005", "created_unix_ns": 1784250435518222000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7200}}
+{"attempt": "v005", "created_unix_ns": 1784250516553048000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7250}}
+{"attempt": "v005", "created_unix_ns": 1784250598526538000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7300}}
+{"attempt": "v005", "created_unix_ns": 1784250679818522000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7350}}
+{"attempt": "v005", "created_unix_ns": 1784250761263034000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7400}}
+{"attempt": "v005", "created_unix_ns": 1784250842745797000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7450}}
+{"attempt": "v005", "created_unix_ns": 1784250924005282000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7500}}
+{"attempt": "v005", "created_unix_ns": 1784251005293409000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7550}}
+{"attempt": "v005", "created_unix_ns": 1784251086631640000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7600}}
+{"attempt": "v005", "created_unix_ns": 1784251167791501000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7650}}
+{"attempt": "v005", "created_unix_ns": 1784251248767068000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7700}}
+{"attempt": "v005", "created_unix_ns": 1784251330262372000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7750}}
+{"attempt": "v005", "created_unix_ns": 1784251414776431000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7800}}
+{"attempt": "v005", "created_unix_ns": 1784251506386168000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7850}}
+{"attempt": "v005", "created_unix_ns": 1784251593813513000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7900}}
+{"attempt": "v005", "created_unix_ns": 1784251676965001000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 7950}}
+{"attempt": "v005", "created_unix_ns": 1784251762708534000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8000}}
+{"attempt": "v005", "created_unix_ns": 1784251848827921000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8050}}
+{"attempt": "v005", "created_unix_ns": 1784251933158566000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8100}}
+{"attempt": "v005", "created_unix_ns": 1784252020062199000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8150}}
+{"attempt": "v005", "created_unix_ns": 1784252104976242000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8200}}
+{"attempt": "v005", "created_unix_ns": 1784252188603496000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8250}}
+{"attempt": "v005", "created_unix_ns": 1784252273610204000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8300}}
+{"attempt": "v005", "created_unix_ns": 1784252356017520000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8350}}
+{"attempt": "v005", "created_unix_ns": 1784252435355973000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8400}}
+{"attempt": "v005", "created_unix_ns": 1784252521180937000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8450}}
+{"attempt": "v005", "created_unix_ns": 1784252604076526000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8500}}
+{"attempt": "v005", "created_unix_ns": 1784252688159024000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8550}}
+{"attempt": "v005", "created_unix_ns": 1784252773296935000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8600}}
+{"attempt": "v005", "created_unix_ns": 1784252855799311000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8650}}
+{"attempt": "v005", "created_unix_ns": 1784252938072829000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8700}}
+{"attempt": "v005", "created_unix_ns": 1784253022027052000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8750}}
+{"attempt": "v005", "created_unix_ns": 1784253105973912000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8800}}
+{"attempt": "v005", "created_unix_ns": 1784253187045376000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8850}}
+{"attempt": "v005", "created_unix_ns": 1784253273785215000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8900}}
+{"attempt": "v005", "created_unix_ns": 1784253367535271000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 8950}}
+{"attempt": "v005", "created_unix_ns": 1784253456715207000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 9000}}
+{"attempt": "v005", "created_unix_ns": 1784253456893941000, "episodes": 3000, "event": "raw_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/plan_random_action_0p1/raw_manifest.json", "manifest_sha256": "50211501242cb9cc246e2dc2a44f493917b6bec06710f0ddfc70b94b59b66393", "phase": "target", "regime": "plan_random_action_0p1", "replacements": 0}
+{"attempt": "v005", "created_unix_ns": 1784253476330121000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_generated": 9000}}
+{"attempt": "v005", "checkpoint_name": "v005_target_generation_complete", "completed_state": "FRESH_COHORT_GENERATION", "created_unix_ns": 1784253476330806000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/target_generation_complete.json", "evidence_sha256": "853947e02a09a34131497feb447f7b613c18e44cbb72cfa1314189d6a03640b2", "extra_fields": {"target_outcome_episodes_generated": 9000}, "next_state": "SPARSE_DENSE_EXECUTION"}
+{"attempt": "v005", "created_unix_ns": 1784253509189822000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 50}}
+{"attempt": "v005", "created_unix_ns": 1784253516220176000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 100}}
+{"attempt": "v005", "created_unix_ns": 1784253523178599000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 150}}
+{"attempt": "v005", "created_unix_ns": 1784253530157869000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 200}}
+{"attempt": "v005", "created_unix_ns": 1784253537068838000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 250}}
+{"attempt": "v005", "created_unix_ns": 1784253544065777000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 300}}
+{"attempt": "v005", "created_unix_ns": 1784253551036096000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 350}}
+{"attempt": "v005", "created_unix_ns": 1784253558018677000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 400}}
+{"attempt": "v005", "created_unix_ns": 1784253565007564000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 450}}
+{"attempt": "v005", "created_unix_ns": 1784253572209327000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 500}}
+{"attempt": "v005", "created_unix_ns": 1784253579156884000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 550}}
+{"attempt": "v005", "created_unix_ns": 1784253586080764000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 600}}
+{"attempt": "v005", "created_unix_ns": 1784253592981181000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 650}}
+{"attempt": "v005", "created_unix_ns": 1784253599892789000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 700}}
+{"attempt": "v005", "created_unix_ns": 1784253606803652000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 750}}
+{"attempt": "v005", "created_unix_ns": 1784253613669429000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 800}}
+{"attempt": "v005", "created_unix_ns": 1784253620549610000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 850}}
+{"attempt": "v005", "created_unix_ns": 1784253627423379000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 900}}
+{"attempt": "v005", "created_unix_ns": 1784253634380466000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 950}}
+{"attempt": "v005", "created_unix_ns": 1784253641434039000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1000}}
+{"attempt": "v005", "created_unix_ns": 1784253648481713000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1050}}
+{"attempt": "v005", "created_unix_ns": 1784253655462555000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1100}}
+{"attempt": "v005", "created_unix_ns": 1784253662396545000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1150}}
+{"attempt": "v005", "created_unix_ns": 1784253669298974000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1200}}
+{"attempt": "v005", "created_unix_ns": 1784253676178533000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1250}}
+{"attempt": "v005", "created_unix_ns": 1784253683098213000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1300}}
+{"attempt": "v005", "created_unix_ns": 1784253689972229000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1350}}
+{"attempt": "v005", "created_unix_ns": 1784253696873757000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1400}}
+{"attempt": "v005", "created_unix_ns": 1784253703878946000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1450}}
+{"attempt": "v005", "created_unix_ns": 1784253710824690000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1500}}
+{"attempt": "v005", "created_unix_ns": 1784253717716637000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1550}}
+{"attempt": "v005", "created_unix_ns": 1784253724597109000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1600}}
+{"attempt": "v005", "created_unix_ns": 1784253731479470000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1650}}
+{"attempt": "v005", "created_unix_ns": 1784253738364496000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1700}}
+{"attempt": "v005", "created_unix_ns": 1784253745248632000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1750}}
+{"attempt": "v005", "created_unix_ns": 1784253752127025000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1800}}
+{"attempt": "v005", "created_unix_ns": 1784253759013294000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1850}}
+{"attempt": "v005", "created_unix_ns": 1784253765923645000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1900}}
+{"attempt": "v005", "created_unix_ns": 1784253772874199000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 1950}}
+{"attempt": "v005", "created_unix_ns": 1784253779770859000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2000}}
+{"attempt": "v005", "created_unix_ns": 1784253786668427000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2050}}
+{"attempt": "v005", "created_unix_ns": 1784253793544816000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2100}}
+{"attempt": "v005", "created_unix_ns": 1784253800479629000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2150}}
+{"attempt": "v005", "created_unix_ns": 1784253807381095000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2200}}
+{"attempt": "v005", "created_unix_ns": 1784253814330623000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2250}}
+{"attempt": "v005", "created_unix_ns": 1784253821267214000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2300}}
+{"attempt": "v005", "created_unix_ns": 1784253828206460000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2350}}
+{"attempt": "v005", "created_unix_ns": 1784253835301285000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2400}}
+{"attempt": "v005", "created_unix_ns": 1784253842216859000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2450}}
+{"attempt": "v005", "created_unix_ns": 1784253849142148000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2500}}
+{"attempt": "v005", "created_unix_ns": 1784253856012826000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2550}}
+{"attempt": "v005", "created_unix_ns": 1784253862936925000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2600}}
+{"attempt": "v005", "created_unix_ns": 1784253869870363000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2650}}
+{"attempt": "v005", "created_unix_ns": 1784253876798900000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2700}}
+{"attempt": "v005", "created_unix_ns": 1784253883727503000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2750}}
+{"attempt": "v005", "created_unix_ns": 1784253890726634000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2800}}
+{"attempt": "v005", "created_unix_ns": 1784253897639039000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2850}}
+{"attempt": "v005", "created_unix_ns": 1784253904552626000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2900}}
+{"attempt": "v005", "created_unix_ns": 1784253911465438000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 2950}}
+{"attempt": "v005", "created_unix_ns": 1784253918383792000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3000}}
+{"attempt": "v005", "created_unix_ns": 1784253918629985000, "episodes": 3000, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/markov_oracle/execution_manifest.json", "manifest_sha256": "3a4f2e8dc813c52d0b39e6840c793444a9b9224675e1ddfe0d0d56f152135e2d", "phase": "target", "regime": "markov_oracle", "rows": 114000}
+{"attempt": "v005", "created_unix_ns": 1784253929551621000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3050}}
+{"attempt": "v005", "created_unix_ns": 1784253936544421000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3100}}
+{"attempt": "v005", "created_unix_ns": 1784253943547327000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3150}}
+{"attempt": "v005", "created_unix_ns": 1784253950570220000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3200}}
+{"attempt": "v005", "created_unix_ns": 1784253957791262000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3250}}
+{"attempt": "v005", "created_unix_ns": 1784253964806049000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3300}}
+{"attempt": "v005", "created_unix_ns": 1784253971858992000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3350}}
+{"attempt": "v005", "created_unix_ns": 1784253978856833000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3400}}
+{"attempt": "v005", "created_unix_ns": 1784253985812168000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3450}}
+{"attempt": "v005", "created_unix_ns": 1784253992789041000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3500}}
+{"attempt": "v005", "created_unix_ns": 1784253999747687000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3550}}
+{"attempt": "v005", "created_unix_ns": 1784254006744620000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3600}}
+{"attempt": "v005", "created_unix_ns": 1784254013724983000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3650}}
+{"attempt": "v005", "created_unix_ns": 1784254020750705000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3700}}
+{"attempt": "v005", "created_unix_ns": 1784254027711935000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3750}}
+{"attempt": "v005", "created_unix_ns": 1784254034730400000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3800}}
+{"attempt": "v005", "created_unix_ns": 1784254041691987000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3850}}
+{"attempt": "v005", "created_unix_ns": 1784254048634361000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3900}}
+{"attempt": "v005", "created_unix_ns": 1784254055652613000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 3950}}
+{"attempt": "v005", "created_unix_ns": 1784254062609344000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4000}}
+{"attempt": "v005", "created_unix_ns": 1784254069595285000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4050}}
+{"attempt": "v005", "created_unix_ns": 1784254076564294000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4100}}
+{"attempt": "v005", "created_unix_ns": 1784254083594038000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4150}}
+{"attempt": "v005", "created_unix_ns": 1784254090587860000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4200}}
+{"attempt": "v005", "created_unix_ns": 1784254097538043000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4250}}
+{"attempt": "v005", "created_unix_ns": 1784254104656883000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4300}}
+{"attempt": "v005", "created_unix_ns": 1784254111648930000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4350}}
+{"attempt": "v005", "created_unix_ns": 1784254118615223000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4400}}
+{"attempt": "v005", "created_unix_ns": 1784254125617952000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4450}}
+{"attempt": "v005", "created_unix_ns": 1784254132559895000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4500}}
+{"attempt": "v005", "created_unix_ns": 1784254139567347000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4550}}
+{"attempt": "v005", "created_unix_ns": 1784254146544482000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4600}}
+{"attempt": "v005", "created_unix_ns": 1784254153529236000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4650}}
+{"attempt": "v005", "created_unix_ns": 1784254160556647000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4700}}
+{"attempt": "v005", "created_unix_ns": 1784254167559749000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4750}}
+{"attempt": "v005", "created_unix_ns": 1784254174559336000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4800}}
+{"attempt": "v005", "created_unix_ns": 1784254181553927000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4850}}
+{"attempt": "v005", "created_unix_ns": 1784254188535650000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4900}}
+{"attempt": "v005", "created_unix_ns": 1784254195555385000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 4950}}
+{"attempt": "v005", "created_unix_ns": 1784254202557327000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5000}}
+{"attempt": "v005", "created_unix_ns": 1784254209558637000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5050}}
+{"attempt": "v005", "created_unix_ns": 1784254216551384000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5100}}
+{"attempt": "v005", "created_unix_ns": 1784254223561861000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5150}}
+{"attempt": "v005", "created_unix_ns": 1784254230512411000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5200}}
+{"attempt": "v005", "created_unix_ns": 1784254237534068000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5250}}
+{"attempt": "v005", "created_unix_ns": 1784254244683780000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5300}}
+{"attempt": "v005", "created_unix_ns": 1784254251755951000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5350}}
+{"attempt": "v005", "created_unix_ns": 1784254258935602000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5400}}
+{"attempt": "v005", "created_unix_ns": 1784254265979547000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5450}}
+{"attempt": "v005", "created_unix_ns": 1784254272999291000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5500}}
+{"attempt": "v005", "created_unix_ns": 1784254279996820000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5550}}
+{"attempt": "v005", "created_unix_ns": 1784254287116266000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5600}}
+{"attempt": "v005", "created_unix_ns": 1784254294122779000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5650}}
+{"attempt": "v005", "created_unix_ns": 1784254301117522000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5700}}
+{"attempt": "v005", "created_unix_ns": 1784254308166534000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5750}}
+{"attempt": "v005", "created_unix_ns": 1784254315235551000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5800}}
+{"attempt": "v005", "created_unix_ns": 1784254322257176000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5850}}
+{"attempt": "v005", "created_unix_ns": 1784254329298804000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5900}}
+{"attempt": "v005", "created_unix_ns": 1784254336324552000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 5950}}
+{"attempt": "v005", "created_unix_ns": 1784254343332761000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6000}}
+{"attempt": "v005", "created_unix_ns": 1784254343594797000, "episodes": 3000, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/plan_action_noise_0p2/execution_manifest.json", "manifest_sha256": "962406087c2bd93f7aaa1c69dd94bc3a9325eaa64d495ca9a7f3cc8d599eeb1e", "phase": "target", "regime": "plan_action_noise_0p2", "rows": 114000}
+{"attempt": "v005", "created_unix_ns": 1784254354735887000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6050}}
+{"attempt": "v005", "created_unix_ns": 1784254361768064000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6100}}
+{"attempt": "v005", "created_unix_ns": 1784254368806301000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6150}}
+{"attempt": "v005", "created_unix_ns": 1784254375988507000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6200}}
+{"attempt": "v005", "created_unix_ns": 1784254383117709000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6250}}
+{"attempt": "v005", "created_unix_ns": 1784254390124235000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6300}}
+{"attempt": "v005", "created_unix_ns": 1784254397136664000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6350}}
+{"attempt": "v005", "created_unix_ns": 1784254404148371000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6400}}
+{"attempt": "v005", "created_unix_ns": 1784254411223651000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6450}}
+{"attempt": "v005", "created_unix_ns": 1784254418236063000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6500}}
+{"attempt": "v005", "created_unix_ns": 1784254425303180000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6550}}
+{"attempt": "v005", "created_unix_ns": 1784254432558387000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6600}}
+{"attempt": "v005", "created_unix_ns": 1784254440028830000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6650}}
+{"attempt": "v005", "created_unix_ns": 1784254447351187000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6700}}
+{"attempt": "v005", "created_unix_ns": 1784254454418512000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6750}}
+{"attempt": "v005", "created_unix_ns": 1784254461476296000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6800}}
+{"attempt": "v005", "created_unix_ns": 1784254468528774000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6850}}
+{"attempt": "v005", "created_unix_ns": 1784254475575182000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6900}}
+{"attempt": "v005", "created_unix_ns": 1784254482625418000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 6950}}
+{"attempt": "v005", "created_unix_ns": 1784254489695937000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7000}}
+{"attempt": "v005", "created_unix_ns": 1784254496785368000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7050}}
+{"attempt": "v005", "created_unix_ns": 1784254503931252000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7100}}
+{"attempt": "v005", "created_unix_ns": 1784254510986313000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7150}}
+{"attempt": "v005", "created_unix_ns": 1784254518074966000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7200}}
+{"attempt": "v005", "created_unix_ns": 1784254525297919000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7250}}
+{"attempt": "v005", "created_unix_ns": 1784254532415216000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7300}}
+{"attempt": "v005", "created_unix_ns": 1784254539453317000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7350}}
+{"attempt": "v005", "created_unix_ns": 1784254546568814000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7400}}
+{"attempt": "v005", "created_unix_ns": 1784254553663309000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7450}}
+{"attempt": "v005", "created_unix_ns": 1784254561074911000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7500}}
+{"attempt": "v005", "created_unix_ns": 1784254568175653000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7550}}
+{"attempt": "v005", "created_unix_ns": 1784254575356320000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7600}}
+{"attempt": "v005", "created_unix_ns": 1784254582450369000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7650}}
+{"attempt": "v005", "created_unix_ns": 1784254589516260000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7700}}
+{"attempt": "v005", "created_unix_ns": 1784254596621422000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7750}}
+{"attempt": "v005", "created_unix_ns": 1784254603685379000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7800}}
+{"attempt": "v005", "created_unix_ns": 1784254610791904000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7850}}
+{"attempt": "v005", "created_unix_ns": 1784254617941776000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7900}}
+{"attempt": "v005", "created_unix_ns": 1784254625093743000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 7950}}
+{"attempt": "v005", "created_unix_ns": 1784254632228211000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8000}}
+{"attempt": "v005", "created_unix_ns": 1784254639318963000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8050}}
+{"attempt": "v005", "created_unix_ns": 1784254646406505000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8100}}
+{"attempt": "v005", "created_unix_ns": 1784254653532554000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8150}}
+{"attempt": "v005", "created_unix_ns": 1784254660670506000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8200}}
+{"attempt": "v005", "created_unix_ns": 1784254667915908000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8250}}
+{"attempt": "v005", "created_unix_ns": 1784254675040138000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8300}}
+{"attempt": "v005", "created_unix_ns": 1784254682143154000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8350}}
+{"attempt": "v005", "created_unix_ns": 1784254689306237000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8400}}
+{"attempt": "v005", "created_unix_ns": 1784254696404054000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8450}}
+{"attempt": "v005", "created_unix_ns": 1784254703516677000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8500}}
+{"attempt": "v005", "created_unix_ns": 1784254710611068000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8550}}
+{"attempt": "v005", "created_unix_ns": 1784254717698336000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8600}}
+{"attempt": "v005", "created_unix_ns": 1784254724868682000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8650}}
+{"attempt": "v005", "created_unix_ns": 1784254732005114000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8700}}
+{"attempt": "v005", "created_unix_ns": 1784254739102059000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8750}}
+{"attempt": "v005", "created_unix_ns": 1784254746231620000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8800}}
+{"attempt": "v005", "created_unix_ns": 1784254753427295000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8850}}
+{"attempt": "v005", "created_unix_ns": 1784254760508546000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8900}}
+{"attempt": "v005", "created_unix_ns": 1784254767562000000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 8950}}
+{"attempt": "v005", "created_unix_ns": 1784254774599832000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 9000}}
+{"attempt": "v005", "created_unix_ns": 1784254774864703000, "episodes": 3000, "event": "execution_cohort_complete", "manifest_path": "runs/lewm_v5_generalization/attempts/v005/data/target/plan_random_action_0p1/execution_manifest.json", "manifest_sha256": "158b45097ca0af09c52dbb8d964fa8853efb4d8459d26ff9779ed65e4245e9ba", "phase": "target", "regime": "plan_random_action_0p1", "rows": 114000}
+{"attempt": "v005", "created_unix_ns": 1784254777620688000, "event": "state_fields_updated", "fields": {"target_outcome_episodes_executed": 9000}}
+{"attempt": "v005", "checkpoint_name": "v005_target_execution_complete", "completed_state": "SPARSE_DENSE_EXECUTION", "created_unix_ns": 1784254777621429000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/target_execution_complete.json", "evidence_sha256": "f73e103da6154e8acd2ebd29a47b1b42ad64a352086c0ae06a912c6218fcaaf0", "extra_fields": {"target_outcome_episodes_executed": 9000}, "next_state": "SEALED_ANALYSIS"}
+{"attempt": "v005", "created_unix_ns": 1784254813495944000, "episodes": 9000, "event": "target_inputs_sealed_before_analysis", "path": "runs/lewm_v5_generalization/attempts/v005/audit/target_input_seal.json", "rows": 342000, "sha256": "029bcebd49526805816353983bdc6eb1761792bcd61f213e583e633c5c66d7de"}
+{"attempt": "v005", "created_unix_ns": 1784254813498596000, "event": "state_fields_updated", "fields": {"target_outcomes_opened_for_analysis": true}}
+{"attempt": "v005", "created_unix_ns": 1784254832102606000, "event": "sealed_analysis_complete", "path": "runs/lewm_v5_generalization/attempts/v005/analysis_result.json", "process_valid": true, "proposed_terminal_outcome": "zero_shot_generalization_partial", "sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8", "supported_claims": 4}
+{"attempt": "v005", "checkpoint_name": "v005_sealed_analysis_complete", "completed_state": "SEALED_ANALYSIS", "created_unix_ns": 1784254832103503000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/analysis_result.json", "evidence_sha256": "e39d9642a406d3fb52f1f775f8a68d1d1e1dffedc5f0bd15b421230bb17484b8", "extra_fields": {"target_outcomes_opened_for_analysis": true}, "next_state": "LATENCY_AND_RESOURCE_REPORTING"}
+{"attempt": "v005", "created_unix_ns": 1784254848136484000, "energy_measured": false, "event": "latency_and_resources_complete", "path": "runs/lewm_v5_generalization/attempts/v005/metrics/latency_and_resources.json", "sha256": "32d19afa015bb11433a0dffefeb1f119796ed9fb66443b4bce0af4fe2fa48e91"}
+{"attempt": "v005", "checkpoint_name": "v005_latency_resources_complete", "completed_state": "LATENCY_AND_RESOURCE_REPORTING", "created_unix_ns": 1784254848178862000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/metrics/latency_and_resources.json", "evidence_sha256": "32d19afa015bb11433a0dffefeb1f119796ed9fb66443b4bce0af4fe2fa48e91", "extra_fields": {}, "next_state": "INDEPENDENT_VERIFICATION"}
+{"attempt": "v005", "audit_path": "runs/lewm_v5_generalization/attempts/v005/audit/independent_verification.json", "audit_sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6", "created_unix_ns": 1784254891333661000, "decision_path": "runs/lewm_v5_generalization/attempts/v005/decision.json", "decision_sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38", "event": "independent_verification_complete", "passed": true, "terminal_outcome": "zero_shot_generalization_partial"}
+{"attempt": "v005", "checkpoint_name": "v005_independent_verification_complete", "completed_state": "INDEPENDENT_VERIFICATION", "created_unix_ns": 1784254891334454000, "event": "state_completed", "evidence_path": "runs/lewm_v5_generalization/attempts/v005/audit/independent_verification.json", "evidence_sha256": "520f8f688c17419aa43018d19750d2ef8b52fcb5603da16ec1cc8d97c9ec9fd6", "extra_fields": {}, "next_state": "TERMINAL"}
+{"attempt": "v005", "created_unix_ns": 1784254891334939000, "decision_path": "runs/lewm_v5_generalization/attempts/v005/decision.json", "decision_sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38", "event": "scientific_terminal_decision_recorded", "process_valid": true, "terminal_label": "zero_shot_generalization_partial"}
+{"attempt": "v005", "created_unix_ns": 1784254912324316000, "decision_sha256": "5dc9f88f105be31dc47e50effd9fa44c1f7d2a7201351a675c3029529d755e38", "event": "post_terminal_interpretation_complete", "path": "runs/lewm_v5_generalization/attempts/v005/metrics/posthoc_interpretation.json", "sha256": "8d01f7eddf9ac2bee51708051db1de0d6a07aeda65fa313febade57d2f8b89fd", "terminal_outcome": "zero_shot_generalization_partial"}
+{"attempt": "v005", "created_unix_ns": 1784254912420769000, "event": "robustness_map_and_report_complete", "follow_on_path": "runs/lewm_v5_generalization/attempts/v005/FOLLOW_ON_TASK.md", "follow_on_sha256": "170ab9d3343b1f090ead67791b89b14c94b294bd75d5fd9a4362e4ba84c045e7", "map_path": "runs/lewm_v5_generalization/attempts/v005/ROBUSTNESS_MAP.json", "map_sha256": "f3b19508936f235a811a483bcbd4364d691a01ad1e9c87a393c8f8ca533f8bb9", "report_path": "runs/lewm_v5_generalization/attempts/v005/REPORT.md", "report_sha256": "55774ea7aa14a9b719110d3d4d6b6c2b6d6fabb85ea563e5cb9feadf335d9c33", "terminal_outcome": "zero_shot_generalization_partial"}
+{"attempt": "v005", "created_unix_ns": 1784254912421463000, "event": "follow_on_task_created", "path": "runs/lewm_v5_generalization/attempts/v005/FOLLOW_ON_TASK.md", "sha256": "170ab9d3343b1f090ead67791b89b14c94b294bd75d5fd9a4362e4ba84c045e7"}

@@ -1,0 +1,207 @@
+{
+  "all_declared_convention_checks_pass": true,
+  "checks": {
+    "all_visible_adapter_cost_seeded_comparators_weakly_more": true,
+    "all_visible_adapter_cost_sensitivities_positive": true,
+    "analytic_global_mixture_reproduced": true,
+    "declared_total_exactly_reproduced": true,
+    "gate_overhead_included": true,
+    "latency_not_used_as_flops": true,
+    "later_dense_linear_shape_derivation": true,
+    "ledger_matches_graph": true,
+    "operation_graph_dimensions_exact": true,
+    "operation_graph_independent_sum": true,
+    "seeded_comparator_exact_integer_reproduction": true,
+    "seeded_comparator_weakly_more_compute": true,
+    "seeded_rounding_gap_bounded": true,
+    "v1_dense_linear_shape_derivation": true
+  },
+  "comparator_information_sets": {
+    "analytic": {
+      "global_compute_budget_used": true,
+      "global_target_losses_used_to_choose_strongest_depth_pair": true,
+      "interpretation": "An outcome-informed but transition-independent oracle mixture; this strengthens the benchmark and cannot route individual rows.",
+      "transition_specific_information_used": false
+    },
+    "seeded": {
+      "integer_target_calls": 76180,
+      "rng_seed": 2831777771,
+      "transition_specific_target_information_used": false,
+      "weakly_more_compute": true
+    },
+    "within_episode_histogram": {
+      "preserves_each_episode_call_histogram": true,
+      "rng_seed": 2831888881,
+      "uses_targets_to_route_rows": false
+    }
+  },
+  "counts": {
+    "base_flops_per_row_declared": 70529190,
+    "call_histogram": [
+      50973,
+      7267,
+      1773,
+      787
+    ],
+    "common_total": 4328861139200,
+    "declared_adaptive_total": 4332936120435,
+    "gate_evaluations": 73187,
+    "gate_feature_flops_per_evaluation": 3801,
+    "gate_flops_per_evaluation": 7985,
+    "gate_nonflops_per_evaluation": 5,
+    "gate_score_flops_per_evaluation": 4184,
+    "gate_total": 584398195,
+    "later_adapter_calls": 13174,
+    "later_adapter_flops_per_call_declared": 264960,
+    "later_adapter_total": 3490583040,
+    "rows": 60800,
+    "seeded_minus_adaptive": 103565,
+    "seeded_total": 4332936224000,
+    "solver_calls": 73974,
+    "v1_flops_per_row_declared": 669184
+  },
+  "created_unix_ns": 1784241118119620000,
+  "dense_linear_shape_derivations": {
+    "later_adapter": {
+      "formula": "2 * (843*128 + 128*192)",
+      "hidden": 128,
+      "input": 843,
+      "output": 192,
+      "result": 264960
+    },
+    "mandatory_v1": {
+      "formula": "2 * (859*256 + 256*256 + 256*192)",
+      "hidden": 256,
+      "input": 859,
+      "output": 192,
+      "result": 669184
+    }
+  },
+  "literal_exactness_caveat": {
+    "base_model_full_primitive_graph_available": false,
+    "common_base_and_v1_omissions_cancel_between_adaptive_and_comparators": true,
+    "comparator_sign_reversal_under_visible_later_adapter_corrections": false,
+    "declared_convention": "historical dense-linear/scalar ledger: each matrix multiply and reduction addition is counted; gate scalar algebra is enumerated",
+    "later_adapter_visible_omission_per_call_excluding_gelu": 704,
+    "later_adapter_visible_omission_per_call_if_gelu_is_one_op_per_element": 832,
+    "later_adapter_visible_omission_total_excluding_gelu": 9274496,
+    "mandatory_v1_visible_omission_per_row_excluding_gelu": 896,
+    "mandatory_v1_visible_omission_per_row_if_each_gelu_is_one_op_per_element": 1408,
+    "mandatory_v1_visible_omission_total_excluding_gelu": 54476800,
+    "pixel_encoder_executed_but_not_in_declared_total": true,
+    "proper_claim_scope": "exact integer total under the frozen latent-prediction dense-linear/scalar convention, excluding pixel encoding and simulator",
+    "reason": "The executed adapter and V1 sources contain default bias additions, GELUs, an adapter alpha multiply, and residual additions that are not included in the inherited 264,960/669,184 constants. The base model constant is inherited as BASE_PREDICT_FLOPS rather than accompanied here by a full executed primitive graph, and the executed pixel encoder is outside the ledger (the latency record also explicitly excludes it). GELU has no single architecture-independent scalar-FLOP expansion.",
+    "unqualified_literal_exact_flop_claim_supported": false,
+    "visible_source_checks": {
+      "inherited_constant_named_base_predict_flops": true,
+      "latency_explicitly_excludes_pixel_encoder": true,
+      "later_alpha_multiply_present": true,
+      "later_biases_default_true": true,
+      "later_gelu_present": true,
+      "later_residual_add_present": true,
+      "later_two_linear_layers": true,
+      "pixel_encoder_executed": true,
+      "v1_three_linear_layers": true,
+      "v1_two_gelus": true
+    }
+  },
+  "schema_version": 1,
+  "sensitivity": [
+    {
+      "adaptive_total_under_convention": 4332936120435,
+      "additional_visible_ops_per_later_adapter": 0,
+      "analytic_depth_lower": 1,
+      "analytic_depth_upper": 2,
+      "analytic_equivalent_mean_calls": 1.2529540975276308,
+      "analytic_weight_upper": 0.25295409752763076,
+      "effect_positive": true,
+      "later_adapter_cost": 264960,
+      "raw_vs_analytic_effect": 6.769003432993542e-06,
+      "seeded_minus_adaptive": 103565,
+      "seeded_total_under_convention": 4332936224000,
+      "seeded_weakly_more_compute": true
+    },
+    {
+      "adaptive_total_under_convention": 4332945394931,
+      "additional_visible_ops_per_later_adapter": 704,
+      "analytic_depth_lower": 1,
+      "analytic_depth_upper": 2,
+      "analytic_equivalent_mean_calls": 1.2528579662037485,
+      "analytic_weight_upper": 0.25285796620374845,
+      "effect_positive": true,
+      "later_adapter_cost": 265664,
+      "raw_vs_analytic_effect": 6.7732229123400514e-06,
+      "seeded_minus_adaptive": 62605,
+      "seeded_total_under_convention": 4332945457536,
+      "seeded_weakly_more_compute": true
+    },
+    {
+      "adaptive_total_under_convention": 4332947081203,
+      "additional_visible_ops_per_later_adapter": 832,
+      "analytic_depth_lower": 1,
+      "analytic_depth_upper": 2,
+      "analytic_equivalent_mean_calls": 1.2528405424933584,
+      "analytic_weight_upper": 0.2528405424933584,
+      "effect_positive": true,
+      "later_adapter_cost": 265792,
+      "raw_vs_analytic_effect": 6.773987688930668e-06,
+      "seeded_minus_adaptive": 78413,
+      "seeded_total_under_convention": 4332947159616,
+      "seeded_weakly_more_compute": true
+    },
+    {
+      "adaptive_total_under_convention": 4332963100787,
+      "additional_visible_ops_per_later_adapter": 2048,
+      "analytic_depth_lower": 1,
+      "analytic_depth_upper": 2,
+      "analytic_equivalent_mean_calls": 1.2526758504254356,
+      "analytic_weight_upper": 0.2526758504254356,
+      "effect_positive": true,
+      "later_adapter_cost": 267008,
+      "raw_vs_analytic_effect": 6.781216495848847e-06,
+      "seeded_minus_adaptive": 82317,
+      "seeded_total_under_convention": 4332963183104,
+      "seeded_weakly_more_compute": true
+    },
+    {
+      "adaptive_total_under_convention": 4333044041843,
+      "additional_visible_ops_per_later_adapter": 8192,
+      "analytic_depth_lower": 1,
+      "analytic_depth_upper": 2,
+      "analytic_equivalent_mean_calls": 1.251866143534793,
+      "analytic_weight_upper": 0.2518661435347931,
+      "effect_positive": true,
+      "later_adapter_cost": 273152,
+      "raw_vs_analytic_effect": 6.8167568521428405e-06,
+      "seeded_minus_adaptive": 147085,
+      "seeded_total_under_convention": 4333044188928,
+      "seeded_weakly_more_compute": true
+    }
+  ],
+  "source": {
+    "execution_sha256": "93aa013b550696e5a2ea962a680df29d411b94f6ff45caf9eb98a438727e636e",
+    "later_adapter_source": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_discovery/models.py",
+    "operation_graph_sha256": "da32a80800bd707b2cbeee3092cd9ab6c2ce36e802f30c02428d3b5c1fb6db84",
+    "package": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_v5_readiness_program/v5_package_versions/v004",
+    "v1_source": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_adaptive_compute_v1/refiner.py"
+  },
+  "test_results": {
+    "CMP-01": {
+      "decision_reversal_capable": false,
+      "reason": "The integer total is exact under the declared inherited convention and includes all enumerated gate overhead, but it is not an exact literal count of all executed arithmetic.",
+      "status": "fail"
+    },
+    "CMP-02": {
+      "reason": "analytic mixture is global/transition-independent and exact",
+      "status": "pass"
+    },
+    "CMP-03": {
+      "reason": "seeded comparator is 103,565 declared FLOPs above adaptive",
+      "status": "pass"
+    },
+    "CMP-04": {
+      "reason": "call/histogram-to-exit mapping independently reproduced",
+      "status": "pass"
+    }
+  }
+}

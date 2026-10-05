@@ -1,0 +1,220 @@
+{
+  "created_unix_ns": 1784235909562487000,
+  "family_size": 6,
+  "familywise_alpha": 0.05,
+  "generalization_target_outcome_episodes": 0,
+  "grid": [
+    {
+      "eligible": false,
+      "episodes_per_regime": 500,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.5031922654503863,
+        "raw_vs_analytic": 0.2972676139414767
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.0
+    },
+    {
+      "eligible": false,
+      "episodes_per_regime": 1000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.8420539623267068,
+        "raw_vs_analytic": 0.5943959256744609
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.0
+    },
+    {
+      "eligible": false,
+      "episodes_per_regime": 1500,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9613334846682092,
+        "raw_vs_analytic": 0.7968964274838065
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.2746897364560472
+    },
+    {
+      "eligible": false,
+      "episodes_per_regime": 2000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9920233815453391,
+        "raw_vs_analytic": 0.9081467433215211
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.7005103746005806
+    },
+    {
+      "eligible": false,
+      "episodes_per_regime": 2500,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9985446491623994,
+        "raw_vs_analytic": 0.9615461920350202
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.8802725235922588
+    },
+    {
+      "eligible": true,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.999758173009991,
+        "raw_vs_analytic": 0.9848537989836191
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9538359159808305
+    },
+    {
+      "eligible": true,
+      "episodes_per_regime": 3500,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999626921192708,
+        "raw_vs_analytic": 0.9943232637559776
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9828578676257451
+    },
+    {
+      "eligible": true,
+      "episodes_per_regime": 4000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.999994583723879,
+        "raw_vs_analytic": 0.9979587468439012
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9938599917033404
+    },
+    {
+      "eligible": true,
+      "episodes_per_regime": 4500,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999992527335568,
+        "raw_vs_analytic": 0.9992914204232622
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9978720194704572
+    },
+    {
+      "eligible": true,
+      "episodes_per_regime": 5000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999999012914126,
+        "raw_vs_analytic": 0.9997614068756104
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9992839245010691
+    }
+  ],
+  "grid_step": 500,
+  "method": "one-sided normal paired-mean power using V5 episode-level mean and SD, Bonferroni alpha .05/6, and a union-bound lower bound over three regimes times two co-primary endpoints",
+  "passed": true,
+  "per_claim_alpha": 0.008333333333333333,
+  "primary_effect_shrink_fraction": 0.65,
+  "primary_family_power_target": 0.95,
+  "primary_retained_effect_fraction": 0.35,
+  "remaining_uncertainty": "Shifted-DGP effects and variances may differ arbitrarily; power does not guarantee support and cannot justify expansion.",
+  "schema_version": 1,
+  "selected": {
+    "eligible": true,
+    "episodes_per_regime": 3000,
+    "marginal_power": {
+      "fixed_whitened_vs_analytic": 0.999758173009991,
+      "raw_vs_analytic": 0.9848537989836191
+    },
+    "retained_effect_fraction": 0.35,
+    "union_bound_family_power_lower": 0.9538359159808305
+  },
+  "selected_episodes_per_regime": 3000,
+  "selection_rule": "smallest 500-episode grid point with union-bound family-power lower bound >= .95 when only 35% of the V5 effect remains",
+  "sensitivity": [
+    {
+      "effect_shrink_fraction": 0.19999999999999996,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 1.0,
+        "raw_vs_analytic": 0.9999999999999996
+      },
+      "retained_effect_fraction": 0.8,
+      "union_bound_family_power_lower": 0.9999999999999987
+    },
+    {
+      "effect_shrink_fraction": 0.4,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999999999999928,
+        "raw_vs_analytic": 0.9999999707865619
+      },
+      "retained_effect_fraction": 0.6,
+      "union_bound_family_power_lower": 0.999999912359664
+    },
+    {
+      "effect_shrink_fraction": 0.5,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999999990792547,
+        "raw_vs_analytic": 0.9999811079731794
+      },
+      "retained_effect_fraction": 0.5,
+      "union_bound_family_power_lower": 0.9999433211573024
+    },
+    {
+      "effect_shrink_fraction": 0.6,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9999925502276275,
+        "raw_vs_analytic": 0.9975816014922414
+      },
+      "retained_effect_fraction": 0.4,
+      "union_bound_family_power_lower": 0.9927224551596066
+    },
+    {
+      "effect_shrink_fraction": 0.65,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.999758173009991,
+        "raw_vs_analytic": 0.9848537989836191
+      },
+      "retained_effect_fraction": 0.35,
+      "union_bound_family_power_lower": 0.9538359159808305
+    },
+    {
+      "effect_shrink_fraction": 0.7,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9959650507559265,
+        "raw_vs_analytic": 0.9350865797418696
+      },
+      "retained_effect_fraction": 0.3,
+      "union_bound_family_power_lower": 0.7931548914933881
+    },
+    {
+      "effect_shrink_fraction": 0.75,
+      "episodes_per_regime": 3000,
+      "marginal_power": {
+        "fixed_whitened_vs_analytic": 0.9647444061028678,
+        "raw_vs_analytic": 0.8060203967774467
+      },
+      "retained_effect_fraction": 0.25,
+      "union_bound_family_power_lower": 0.3122944086409437
+    }
+  ],
+  "sequential_expansion": false,
+  "source": {
+    "consumed_v5_only": true,
+    "path": "runs/lewm_v5_readiness_program/v5_package_versions/v004/metrics/v5_confirmation_episode_metrics.npz",
+    "sha256": "4eb5cc464f2526a9ccd9ab0aaf84f3d789439120390dd95df0fef224d54e9391",
+    "source_outcome_episodes": 1600
+  },
+  "source_endpoint_moments": {
+    "fixed_whitened_vs_analytic": {
+      "episode_count": 1600,
+      "mean": 0.0006086220971507569,
+      "sd_ddof1": 0.001983038139078128
+    },
+    "raw_vs_analytic": {
+      "episode_count": 1600,
+      "mean": 6.769003361969305e-06,
+      "sd_ddof1": 2.8455555262480006e-05
+    }
+  }
+}

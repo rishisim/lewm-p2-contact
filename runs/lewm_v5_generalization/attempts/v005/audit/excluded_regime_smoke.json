@@ -1,0 +1,202 @@
+{
+  "checks": {
+    "all_regimes_passed": true,
+    "all_regimes_present": true,
+    "six_per_regime": true,
+    "smoke_permanently_excluded": true,
+    "target_directories_absent": true,
+    "target_outcome_episodes_absent": true
+  },
+  "classification": "fresh_excluded_regime_smoke",
+  "created_unix_ns": 1784236017785781000,
+  "passed": true,
+  "regimes": {
+    "markov_oracle": {
+      "execution": {
+        "bad_paths": [],
+        "checks": {
+          "all_equivalence": true,
+          "all_hashes": true,
+          "complete": true,
+          "contact_excluded": true,
+          "episode_count": true,
+          "input_allowlist": true,
+          "module_frozen": true,
+          "no_forbidden_evidence": true,
+          "no_gradients": true,
+          "no_outcome_analysis": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "row_count": true
+        },
+        "episode_ids": [
+          "g5v005-mk-smoke-0000",
+          "g5v005-mk-smoke-0001",
+          "g5v005-mk-smoke-0002",
+          "g5v005-mk-smoke-0003",
+          "g5v005-mk-smoke-0004",
+          "g5v005-mk-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/markov_oracle/execution_manifest.json",
+        "sha256": "4cddaebb4915d43ee429f51d18dd0ac271c96c776c965b673e7b13bac97cbcbe"
+      },
+      "passed": true,
+      "raw": {
+        "bad_paths": [],
+        "checks": {
+          "all_hashes": true,
+          "complete": true,
+          "episode_count": true,
+          "no_forbidden_evidence": true,
+          "outcome_blind_retention": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "unique_episode_ids": true
+        },
+        "episode_ids": [
+          "g5v005-mk-smoke-0000",
+          "g5v005-mk-smoke-0001",
+          "g5v005-mk-smoke-0002",
+          "g5v005-mk-smoke-0003",
+          "g5v005-mk-smoke-0004",
+          "g5v005-mk-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/markov_oracle/raw_manifest.json",
+        "replacement_count": 0,
+        "sha256": "3aedb0a47072b7a68ebe8b09a367b0ea9c8408028db8a6173f2c6029ddc957da"
+      },
+      "raw_execution_ids_exact": true,
+      "smoke_target_ids_disjoint": true
+    },
+    "plan_action_noise_0p2": {
+      "execution": {
+        "bad_paths": [],
+        "checks": {
+          "all_equivalence": true,
+          "all_hashes": true,
+          "complete": true,
+          "contact_excluded": true,
+          "episode_count": true,
+          "input_allowlist": true,
+          "module_frozen": true,
+          "no_forbidden_evidence": true,
+          "no_gradients": true,
+          "no_outcome_analysis": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "row_count": true
+        },
+        "episode_ids": [
+          "g5v005-n2-smoke-0000",
+          "g5v005-n2-smoke-0001",
+          "g5v005-n2-smoke-0002",
+          "g5v005-n2-smoke-0003",
+          "g5v005-n2-smoke-0004",
+          "g5v005-n2-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_action_noise_0p2/execution_manifest.json",
+        "sha256": "66a6ebbb6a7b6ceb89baba14e120a10c77e3598bf740fec2ae9016e7960e4fe9"
+      },
+      "passed": true,
+      "raw": {
+        "bad_paths": [],
+        "checks": {
+          "all_hashes": true,
+          "complete": true,
+          "episode_count": true,
+          "no_forbidden_evidence": true,
+          "outcome_blind_retention": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "unique_episode_ids": true
+        },
+        "episode_ids": [
+          "g5v005-n2-smoke-0000",
+          "g5v005-n2-smoke-0001",
+          "g5v005-n2-smoke-0002",
+          "g5v005-n2-smoke-0003",
+          "g5v005-n2-smoke-0004",
+          "g5v005-n2-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_action_noise_0p2/raw_manifest.json",
+        "replacement_count": 0,
+        "sha256": "c5359285a64a24d797051e66f12fb77e3ab7ccf3eb561b8a0f95ec6ce0e1196b"
+      },
+      "raw_execution_ids_exact": true,
+      "smoke_target_ids_disjoint": true
+    },
+    "plan_random_action_0p1": {
+      "execution": {
+        "bad_paths": [],
+        "checks": {
+          "all_equivalence": true,
+          "all_hashes": true,
+          "complete": true,
+          "contact_excluded": true,
+          "episode_count": true,
+          "input_allowlist": true,
+          "module_frozen": true,
+          "no_forbidden_evidence": true,
+          "no_gradients": true,
+          "no_outcome_analysis": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "row_count": true
+        },
+        "episode_ids": [
+          "g5v005-ra-smoke-0000",
+          "g5v005-ra-smoke-0001",
+          "g5v005-ra-smoke-0002",
+          "g5v005-ra-smoke-0003",
+          "g5v005-ra-smoke-0004",
+          "g5v005-ra-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_random_action_0p1/execution_manifest.json",
+        "sha256": "497eea8475f98808be59b1e7990c97e2f99c208e3ce3d765eb6cba791a9090fa"
+      },
+      "passed": true,
+      "raw": {
+        "bad_paths": [],
+        "checks": {
+          "all_hashes": true,
+          "complete": true,
+          "episode_count": true,
+          "no_forbidden_evidence": true,
+          "outcome_blind_retention": true,
+          "phase": true,
+          "record_count": true,
+          "regime": true,
+          "unique_episode_ids": true
+        },
+        "episode_ids": [
+          "g5v005-ra-smoke-0000",
+          "g5v005-ra-smoke-0001",
+          "g5v005-ra-smoke-0002",
+          "g5v005-ra-smoke-0003",
+          "g5v005-ra-smoke-0004",
+          "g5v005-ra-smoke-0005"
+        ],
+        "passed": true,
+        "path": "runs/lewm_v5_generalization/attempts/v005/data/smoke/plan_random_action_0p1/raw_manifest.json",
+        "replacement_count": 0,
+        "sha256": "a373171f6e836b3e3dd7a9a47ddd1913c641acb44a91eb264742abae1f1e461b"
+      },
+      "raw_execution_ids_exact": true,
+      "smoke_target_ids_disjoint": true
+    }
+  },
+  "schema_version": 1,
+  "smoke_episode_count": 18,
+  "smoke_outcomes_excluded_from_all_inference": true,
+  "target_outcome_episodes": 0
+}

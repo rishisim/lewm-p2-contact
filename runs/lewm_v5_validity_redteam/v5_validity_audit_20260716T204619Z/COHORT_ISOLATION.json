@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "action_sketch_near_duplicate_search_passed": true,
+    "all_1600_v5_raw_archives_fingerprinted": true,
+    "exact_action_array_overlap_absent": true,
+    "exact_episode_identifier_overlap_absent": true,
+    "exact_initial_pixel_overlap_absent": true,
+    "exact_initial_state_hash_overlap_absent": true,
+    "exact_observation_array_overlap_absent": true,
+    "exact_structured_seed_overlap_absent": true,
+    "initial_pixel_sketch_near_duplicate_search_passed": true,
+    "initial_state_near_duplicate_search_passed": true,
+    "low32_seed_overlap_absent": true,
+    "observation_sketch_near_duplicate_search_passed": true,
+    "seedsequence_transformed_overlap_absent": true,
+    "within_v5_initial_state_hashes_unique": true
+  },
+  "created_unix_ns": 1784240434399434000,
+  "exact_identifier_seed_tests": {
+    "exact_identifier_overlap": [],
+    "exact_seed_overlap": [],
+    "low32_seed_overlap": [],
+    "prior_structured_identifier_count": 31629,
+    "prior_structured_seed_count": 28427,
+    "seedsequence_transformed_overlap": [],
+    "v5_confirmation_identifier_count": 1600,
+    "v5_confirmation_seed_tuple_count": 1600
+  },
+  "exact_raw_fingerprints": {
+    "action_hash_collisions": [],
+    "initial_pixel_hash_collisions": [],
+    "initial_state_hash_collisions": [],
+    "observation_hash_collisions": [],
+    "within_v5_initial_state_hash_duplicates": []
+  },
+  "near_duplicate_tests": {
+    "action_prefix_mean_std_sketches": {
+      "groups": [
+        {
+          "cross_below_threshold": 0,
+          "cross_minimum": 4.119770113131806,
+          "cross_quantiles": {
+            "0.01": 4.487180714403152,
+            "0.05": 4.761388240145156,
+            "0.50": 5.368618874405496
+          },
+          "dimension": 110,
+          "near_duplicate_threshold": 0.054522735028932505,
+          "prior_count": 2472,
+          "v5_count": 1600,
+          "within_v5_median": 5.4522735028932505,
+          "within_v5_minimum": 4.475110299847935
+        }
+      ],
+      "passed": true,
+      "suspicious_pairs": []
+    },
+    "initial_pixel_14x14_grid_sketches": {
+      "groups": [
+        {
+          "cross_below_threshold": 0,
+          "cross_minimum": 0.8782267443193027,
+          "cross_quantiles": {
+            "0.01": 2.3666860378122947,
+            "0.05": 3.5089436175113646,
+            "0.50": 7.066240608957072
+          },
+          "dimension": 594,
+          "near_duplicate_threshold": 0.07847856644911018,
+          "prior_count": 2472,
+          "v5_count": 1600,
+          "within_v5_median": 7.847856644911017,
+          "within_v5_minimum": 1.4552321004077762
+        }
+      ],
+      "passed": true,
+      "suspicious_pairs": []
+    },
+    "initial_state_numeric_vectors": {
+      "groups": [
+        {
+          "cross_below_threshold": 0,
+          "cross_minimum": 0.41581266473699946,
+          "cross_quantiles": {
+            "0.01": 0.7090275467623928,
+            "0.05": 0.8973529197005324,
+            "0.50": 1.41257825909033
+          },
+          "dimension": 52,
+          "near_duplicate_threshold": 0.01499150026684028,
+          "prior_count": 2472,
+          "v5_count": 1600,
+          "within_v5_median": 1.499150026684028,
+          "within_v5_minimum": 0.6101567568239201
+        }
+      ],
+      "passed": true,
+      "suspicious_pairs": []
+    },
+    "observation_prefix_mean_std_sketches": {
+      "groups": [
+        {
+          "cross_below_threshold": 0,
+          "cross_minimum": 8.195259360919724,
+          "cross_quantiles": {
+            "0.01": 8.88021281519038,
+            "0.05": 9.768273826197532,
+            "0.50": 11.840491120476793
+          },
+          "dimension": 616,
+          "near_duplicate_threshold": 0.12146939216206992,
+          "prior_count": 2472,
+          "v5_count": 1600,
+          "within_v5_median": 12.146939216206992,
+          "within_v5_minimum": 7.69469248781687
+        }
+      ],
+      "passed": true,
+      "suspicious_pairs": []
+    },
+    "threshold_definition": "standardized Euclidean distance <= max(1e-8, 1% of the within-V5 median nearest-neighbor distance), grouped by exact fingerprint dimension"
+  },
+  "passed": true,
+  "runtime_seconds": 102.34369111061096,
+  "schema_version": 1,
+  "scope": {
+    "base_model_training_episode_level_raw_corpus_accessible": false,
+    "base_model_training_surface_note": "The repository preserves base weights/config and many prior adaptive-compute cohorts, but not a complete episode-level raw corpus for the original base-model training. Observation-level absence from that entire historical corpus is therefore not proven by this scan.",
+    "explicitly_pruned": [
+      ".git",
+      "__pycache__",
+      "lewm_adaptive_compute_v3",
+      "lewm_v5_generalization"
+    ],
+    "json_parse_failures": [],
+    "prior_json_paths_scanned": 2614,
+    "prior_raw_npz_candidates": 2472,
+    "prior_raw_npz_fingerprinted": 2472,
+    "runs_root": "/Users/rishisim/Documents/research/lewm-p2-contact/runs",
+    "v3_test_target_directory_not_opened": true,
+    "v5_generalization_not_used": true,
+    "v5_raw_npz_fingerprinted": 1600
+  }
+}

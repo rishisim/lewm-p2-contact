@@ -1,0 +1,33 @@
+{
+  "auxiliary_controls_affect_terminal_mapping": false,
+  "claim_support": "a regime x endpoint claim is supported exactly when its fixed Bonferroni one-sided episode-bootstrap lower bound is > 0",
+  "created_unix_ns": 1784235912177585000,
+  "family_size": 6,
+  "familywise_alpha": 0.05,
+  "generalization_target_outcome_episodes": 0,
+  "heterogeneity_affects_terminal_mapping": false,
+  "integrity_precedence": "any required integrity failure => generalization_execution_invalid",
+  "latency_energy_affect_terminal_mapping": false,
+  "no_retry_after_process_valid_result": true,
+  "overall_mapping": {
+    "generalization_execution_invalid": "any required integrity failure",
+    "zero_shot_generalization_failed": "none of the six claims supported",
+    "zero_shot_generalization_partial": "one through five of the six claims supported",
+    "zero_shot_generalization_supported": "all six regime x endpoint claims supported"
+  },
+  "per_claim_alpha": 0.008333333333333333,
+  "posthoc_fields_affect_terminal_mapping": false,
+  "regime_mapping": {
+    "failed": "neither co-primary claim supported",
+    "mixed": "exactly one co-primary claim supported",
+    "supported": "both co-primary claims supported"
+  },
+  "schema_version": 1,
+  "stagewise_ranks_affect_terminal_mapping": false,
+  "terminal_labels": [
+    "zero_shot_generalization_supported",
+    "zero_shot_generalization_partial",
+    "zero_shot_generalization_failed",
+    "generalization_execution_invalid"
+  ]
+}

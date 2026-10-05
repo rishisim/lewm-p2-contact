@@ -1,0 +1,483 @@
+{
+  "candidate_count": 6,
+  "candidates_in_rank_order": [
+    {
+      "adaptive_total_counted_flops": 51437165296,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51437165296,
+      "analytic_equivalent_mean_depth": 1.625466390884144,
+      "both_co_primary_point_benefits_positive": true,
+      "call_histogram": [
+        547,
+        26,
+        29,
+        118
+      ],
+      "candidate_id": "stage_dual_r10_q0.75",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.75,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "mean_loss": 0.23707585137635348,
+        "weight_upper": 0.625466390884144
+      },
+      "mean_depth": 1.6083333333333334,
+      "minimum_combined_stagewise_spearman": 0.43433979746617307,
+      "minimum_standardized_co_primary": 0.025425409351623816,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": 0.00010753865641103867,
+        "fit_whitened_vs_fixed_d1": 0.004182508654516354,
+        "fit_whitened_vs_fixed_d4": 0.0040910831332137245,
+        "fit_whitened_vs_within_episode_permutation": 0.00323498297887561,
+        "raw_vs_analytic": 0.004225407364928366,
+        "raw_vs_fixed_d1": 0.006655244911656688,
+        "raw_vs_fixed_d4": 0.007603298905546879,
+        "raw_vs_within_episode_permutation": 0.005549456311429024
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "mean_loss": 0.10991138052316926,
+        "weight_upper": 0.625466390884144
+      },
+      "reached_gate_evaluations": 1040,
+      "refiner_calls": 1158,
+      "regularization": 10.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.43433979746617307,
+          "score_vs_fit_whitened_gain_spearman": 0.37324705487472004,
+          "score_vs_raw_gain_spearman": 0.4568654646324549,
+          "stage": 1
+        },
+        {
+          "reached_rows": 173,
+          "score_vs_combined_gain_spearman": 0.43455970630090257,
+          "score_vs_fit_whitened_gain_spearman": 0.41450927312254615,
+          "score_vs_raw_gain_spearman": 0.42951638846526463,
+          "stage": 2
+        },
+        {
+          "reached_rows": 147,
+          "score_vs_combined_gain_spearman": 0.4442156722000166,
+          "score_vs_fit_whitened_gain_spearman": 0.4632486834052392,
+          "score_vs_raw_gain_spearman": 0.4045100454102411,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": 0.025425409351623816,
+        "raw_vs_analytic": 0.9019541340585382
+      },
+      "thresholds": [
+        0.036598234837386154,
+        0.059525666089429635,
+        0.11451476688987573
+      ],
+      "within_episode_histograms_preserved": true
+    },
+    {
+      "adaptive_total_counted_flops": 51450947808,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51450947808,
+      "analytic_equivalent_mean_depth": 1.6548966430515923,
+      "both_co_primary_point_benefits_positive": false,
+      "call_histogram": [
+        538,
+        28,
+        31,
+        123
+      ],
+      "candidate_id": "stage_dual_r1_q0.75",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.75,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "mean_loss": 0.23688411062678338,
+        "weight_upper": 0.6548966430515923
+      },
+      "mean_depth": 1.6375,
+      "minimum_combined_stagewise_spearman": 0.32521441062334094,
+      "minimum_standardized_co_primary": -0.11613449515420629,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": -0.00046403545690249784,
+        "fit_whitened_vs_fixed_d1": 0.0038026752907729085,
+        "fit_whitened_vs_fixed_d4": 0.003711249769470279,
+        "fit_whitened_vs_within_episode_permutation": 0.002252827347657323,
+        "raw_vs_analytic": 0.003984512780149862,
+        "raw_vs_fixed_d1": 0.0065286821803052925,
+        "raw_vs_fixed_d4": 0.007476736174195484,
+        "raw_vs_within_episode_permutation": 0.004833643378246637
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 1,
+        "depth_upper": 2,
+        "mean_loss": 0.10979704866974216,
+        "weight_upper": 0.6548966430515923
+      },
+      "reached_gate_evaluations": 1056,
+      "refiner_calls": 1179,
+      "regularization": 1.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.4527815768677537,
+          "score_vs_fit_whitened_gain_spearman": 0.3853128896210576,
+          "score_vs_raw_gain_spearman": 0.48435561539792066,
+          "stage": 1
+        },
+        {
+          "reached_rows": 182,
+          "score_vs_combined_gain_spearman": 0.32521441062334094,
+          "score_vs_fit_whitened_gain_spearman": 0.2958194780493485,
+          "score_vs_raw_gain_spearman": 0.33546591077611815,
+          "stage": 2
+        },
+        {
+          "reached_rows": 154,
+          "score_vs_combined_gain_spearman": 0.3871345605690957,
+          "score_vs_fit_whitened_gain_spearman": 0.40223268192907663,
+          "score_vs_raw_gain_spearman": 0.37564093085914724,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": -0.11613449515420629,
+        "raw_vs_analytic": 0.8693598851659641
+      },
+      "thresholds": [
+        0.0036837229407997523,
+        0.0472174920966386,
+        0.10592174825540741
+      ],
+      "within_episode_histograms_preserved": true
+    },
+    {
+      "adaptive_total_counted_flops": 51799809037,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51799809037,
+      "analytic_equivalent_mean_depth": 2.3998315243646617,
+      "both_co_primary_point_benefits_positive": false,
+      "call_histogram": [
+        346,
+        45,
+        41,
+        288
+      ],
+      "candidate_id": "stage_dual_r1_q0.45",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.45,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.23473352437826617,
+        "weight_upper": 0.39983152436466174
+      },
+      "mean_depth": 2.376388888888889,
+      "minimum_combined_stagewise_spearman": 0.25913235700469744,
+      "minimum_standardized_co_primary": -0.5320319806676398,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": -0.0020216258462116255,
+        "fit_whitened_vs_fixed_d1": 0.004395671149980969,
+        "fit_whitened_vs_fixed_d4": 0.004304245628678339,
+        "fit_whitened_vs_within_episode_permutation": 0.0020461075456704335,
+        "raw_vs_analytic": 0.0031480739483482406,
+        "raw_vs_fixed_d1": 0.0068206369110501135,
+        "raw_vs_fixed_d4": 0.007768690904940303,
+        "raw_vs_within_episode_permutation": 0.004313478925428485
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.10866865510719573,
+        "weight_upper": 0.39983152436466174
+      },
+      "reached_gate_evaluations": 1423,
+      "refiner_calls": 1711,
+      "regularization": 1.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.4527815768677537,
+          "score_vs_fit_whitened_gain_spearman": 0.3853128896210576,
+          "score_vs_raw_gain_spearman": 0.48435561539792066,
+          "stage": 1
+        },
+        {
+          "reached_rows": 374,
+          "score_vs_combined_gain_spearman": 0.36497908273716506,
+          "score_vs_fit_whitened_gain_spearman": 0.3032270791816605,
+          "score_vs_raw_gain_spearman": 0.38450545511892303,
+          "stage": 2
+        },
+        {
+          "reached_rows": 329,
+          "score_vs_combined_gain_spearman": 0.25913235700469744,
+          "score_vs_fit_whitened_gain_spearman": 0.251883689740462,
+          "score_vs_raw_gain_spearman": 0.2465099508690583,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": -0.5320319806676398,
+        "raw_vs_analytic": 0.7380888513211848
+      },
+      "thresholds": [
+        -0.38523944179438574,
+        -0.33442062727468586,
+        -0.285017724348939
+      ],
+      "within_episode_histograms_preserved": true
+    },
+    {
+      "adaptive_total_counted_flops": 51649695144,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51649695144,
+      "analytic_equivalent_mean_depth": 2.0792883806454787,
+      "both_co_primary_point_benefits_positive": false,
+      "call_histogram": [
+        423,
+        42,
+        45,
+        210
+      ],
+      "candidate_id": "stage_dual_r10_q0.60",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.6,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.23465512394748309,
+        "weight_upper": 0.07928838064547872
+      },
+      "mean_depth": 2.058333333333333,
+      "minimum_combined_stagewise_spearman": 0.4321597093561835,
+      "minimum_standardized_co_primary": -0.5383926781361685,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": -0.002097018333694306,
+        "fit_whitened_vs_fixed_d1": 0.0043986790932814155,
+        "fit_whitened_vs_fixed_d4": 0.004307253571978786,
+        "fit_whitened_vs_within_episode_permutation": 0.0024523344834715692,
+        "raw_vs_analytic": 0.002840477054334543,
+        "raw_vs_fixed_d1": 0.006683222455793172,
+        "raw_vs_fixed_d4": 0.007631276449683362,
+        "raw_vs_within_episode_permutation": 0.004654696372393828
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.10849847266843896,
+        "weight_upper": 0.07928838064547872
+      },
+      "reached_gate_evaluations": 1272,
+      "refiner_calls": 1482,
+      "regularization": 10.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.43433979746617307,
+          "score_vs_fit_whitened_gain_spearman": 0.37324705487472004,
+          "score_vs_raw_gain_spearman": 0.4568654646324549,
+          "stage": 1
+        },
+        {
+          "reached_rows": 297,
+          "score_vs_combined_gain_spearman": 0.44687808613983115,
+          "score_vs_fit_whitened_gain_spearman": 0.4102273414353952,
+          "score_vs_raw_gain_spearman": 0.45004095004095007,
+          "stage": 2
+        },
+        {
+          "reached_rows": 255,
+          "score_vs_combined_gain_spearman": 0.4321597093561835,
+          "score_vs_fit_whitened_gain_spearman": 0.42360250694766094,
+          "score_vs_raw_gain_spearman": 0.3962844488188976,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": -0.5383926781361685,
+        "raw_vs_analytic": 0.6831083120409983
+      },
+      "thresholds": [
+        -0.2213472393739036,
+        -0.1665867713987593,
+        -0.10610513378674473
+      ],
+      "within_episode_histograms_preserved": true
+    },
+    {
+      "adaptive_total_counted_flops": 51837842693,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51837842693,
+      "analytic_equivalent_mean_depth": 2.4810460436721713,
+      "both_co_primary_point_benefits_positive": false,
+      "call_histogram": [
+        329,
+        39,
+        46,
+        306
+      ],
+      "candidate_id": "stage_dual_r10_q0.45",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.45,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.23475338832926412,
+        "weight_upper": 0.4810460436721713
+      },
+      "mean_depth": 2.4569444444444444,
+      "minimum_combined_stagewise_spearman": 0.396518849422532,
+      "minimum_standardized_co_primary": -0.5491122811369544,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": -0.0020149524551757074,
+        "fit_whitened_vs_fixed_d1": 0.004382480590018982,
+        "fit_whitened_vs_fixed_d4": 0.004291055068716352,
+        "fit_whitened_vs_within_episode_permutation": 0.0027803045210693564,
+        "raw_vs_analytic": 0.00298008304962078,
+        "raw_vs_fixed_d1": 0.00660952768260939,
+        "raw_vs_fixed_d4": 0.007557581676499579,
+        "raw_vs_within_episode_permutation": 0.005091386673340806
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.108711773436909,
+        "weight_upper": 0.4810460436721713
+      },
+      "reached_gate_evaluations": 1463,
+      "refiner_calls": 1769,
+      "regularization": 10.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.43433979746617307,
+          "score_vs_fit_whitened_gain_spearman": 0.37324705487472004,
+          "score_vs_raw_gain_spearman": 0.4568654646324549,
+          "stage": 1
+        },
+        {
+          "reached_rows": 391,
+          "score_vs_combined_gain_spearman": 0.4016114137962878,
+          "score_vs_fit_whitened_gain_spearman": 0.34974002979118074,
+          "score_vs_raw_gain_spearman": 0.4114728165513698,
+          "stage": 2
+        },
+        {
+          "reached_rows": 352,
+          "score_vs_combined_gain_spearman": 0.396518849422532,
+          "score_vs_fit_whitened_gain_spearman": 0.37509464881986126,
+          "score_vs_raw_gain_spearman": 0.378565564117972,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": -0.5491122811369544,
+        "raw_vs_analytic": 0.7089164606733598
+      },
+      "thresholds": [
+        -0.37299063805541416,
+        -0.32580990697844486,
+        -0.27082518841094894
+      ],
+      "within_episode_histograms_preserved": true
+    },
+    {
+      "adaptive_total_counted_flops": 51622083830,
+      "all_combined_stagewise_spearman_nonnegative": true,
+      "analytic_comparator_total_counted_flops": 51622083830,
+      "analytic_equivalent_mean_depth": 2.0203290317477887,
+      "both_co_primary_point_benefits_positive": false,
+      "call_histogram": [
+        446,
+        34,
+        34,
+        206
+      ],
+      "candidate_id": "stage_dual_r1_q0.60",
+      "exact_total_counted_compute_equality": true,
+      "fit_score_quantile": 0.6,
+      "fit_whitened_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.23464070330413805,
+        "weight_upper": 0.02032903174778866
+      },
+      "mean_depth": 2.0,
+      "minimum_combined_stagewise_spearman": 0.28036163822288573,
+      "minimum_standardized_co_primary": -0.6517398621295224,
+      "point_benefits": {
+        "fit_whitened_vs_analytic": -0.0024851052720803964,
+        "fit_whitened_vs_fixed_d1": 0.004025012798240366,
+        "fit_whitened_vs_fixed_d4": 0.0039335872769377354,
+        "fit_whitened_vs_within_episode_permutation": 0.0018829884115419426,
+        "raw_vs_analytic": 0.002982469302631146,
+        "raw_vs_fixed_d1": 0.006856517341439926,
+        "raw_vs_fixed_d4": 0.007804571335330117,
+        "raw_vs_within_episode_permutation": 0.004393797740151782
+      },
+      "raw_analytic_mixture": {
+        "depth_lower": 2,
+        "depth_upper": 3,
+        "mean_loss": 0.10846717003108881,
+        "weight_upper": 0.02032903174778866
+      },
+      "reached_gate_evaluations": 1234,
+      "refiner_calls": 1440,
+      "regularization": 1.0,
+      "stagewise_rank": [
+        {
+          "reached_rows": 720,
+          "score_vs_combined_gain_spearman": 0.4527815768677537,
+          "score_vs_fit_whitened_gain_spearman": 0.3853128896210576,
+          "score_vs_raw_gain_spearman": 0.48435561539792066,
+          "stage": 1
+        },
+        {
+          "reached_rows": 274,
+          "score_vs_combined_gain_spearman": 0.3379642255554664,
+          "score_vs_fit_whitened_gain_spearman": 0.2942963605737329,
+          "score_vs_raw_gain_spearman": 0.35072927072927074,
+          "stage": 2
+        },
+        {
+          "reached_rows": 240,
+          "score_vs_combined_gain_spearman": 0.28036163822288573,
+          "score_vs_fit_whitened_gain_spearman": 0.27862983732356456,
+          "score_vs_raw_gain_spearman": 0.27380596885362585,
+          "stage": 3
+        }
+      ],
+      "standardized_co_primary": {
+        "fit_whitened_vs_analytic": -0.6517398621295224,
+        "raw_vs_analytic": 0.7048540256903183
+      },
+      "thresholds": [
+        -0.23285845448018708,
+        -0.192344168521579,
+        -0.11723182165503607
+      ],
+      "within_episode_histograms_preserved": true
+    }
+  ],
+  "evaluation_episode_outcomes_opened": false,
+  "fixed_ranking": [
+    "all selection stagewise combined score/gain Spearman signs nonnegative",
+    "both selection co-primary point benefits positive",
+    "largest minimum standardized co-primary episode benefit",
+    "largest minimum stagewise combined Spearman",
+    "lower counted FLOPs",
+    "candidate_id lexical tie break"
+  ],
+  "gate_fit_lock_sha256": "ace9b2d2d65806db917144ff589ebe82e9d7d4690157e459c11b6f6bcd84382c",
+  "refiner_or_features_refit_after_selection": false,
+  "schema_version": 1,
+  "selected_candidate_id": "stage_dual_r10_q0.75",
+  "selection_data_sha256": "ba613f2b8e857cd34905754e55021e0705fba322b50137e6b21c86dc6ce92904",
+  "selection_episode_count": 40,
+  "status": "single_selection_complete_no_refit"
+}

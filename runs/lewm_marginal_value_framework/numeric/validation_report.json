@@ -1,0 +1,29 @@
+{
+  "check_count": 23,
+  "checks": {
+    "allocation_and_calibration_pdf_nonempty": true,
+    "allocation_and_calibration_render_dimensions": true,
+    "audit_validation_all_true": true,
+    "binary_both_positive_10_through_90_percent": true,
+    "binary_frozen_benefits": true,
+    "binary_frozen_k": true,
+    "binary_frozen_unique": true,
+    "binary_lossless_frontier_shape": true,
+    "binary_oracle_capture_frozen": true,
+    "binary_source_hash_manifest": true,
+    "cube_both_endpoints_positive_at_eight_nonzero_settings": true,
+    "cube_frozen_benefit_recomputed": true,
+    "cube_frozen_unique": true,
+    "cube_grid_exact": true,
+    "cube_lossless_frontier_shape": true,
+    "cube_source_hash_manifest": true,
+    "finite_schedules_lossless_and_finite": true,
+    "gate_overhead_sensitivity_pdf_nonempty": true,
+    "gate_overhead_sensitivity_render_dimensions": true,
+    "pilot_source_hash_manifest": true,
+    "quality_compute_frontiers_pdf_nonempty": true,
+    "quality_compute_frontiers_render_dimensions": true,
+    "required_numeric_artifacts_present": true
+  },
+  "status": "all_checks_passed"
+}

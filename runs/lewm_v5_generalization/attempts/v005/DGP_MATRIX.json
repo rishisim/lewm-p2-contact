@@ -1,0 +1,139 @@
+{
+  "attempt": "v005",
+  "bootstrap": {
+    "family": "three regimes x raw/fixed-whitened exact-compute analytic claims",
+    "family_size": 6,
+    "familywise_alpha": 0.05,
+    "individual_intervals": "two-sided 95% percentile",
+    "per_claim_alpha": 0.008333333333333333,
+    "replicates": 20000,
+    "simultaneous_method": "Bonferroni one-sided percentile lower bounds",
+    "unit": "episode"
+  },
+  "candidate_id": "stage_dual_r0.01_q0.85",
+  "claim_boundary": "external-validity envelope of the fully frozen V5 policy only; no universal, downstream-control, contact-aware, wall-clock, or first-method claim",
+  "co_primary_endpoints": [
+    "raw_vs_analytic",
+    "fixed_whitened_vs_analytic"
+  ],
+  "contact_free_gate": true,
+  "controls": [
+    "seeded weakly-more-counted-compute transition-independent allocation",
+    "fixed depth 1",
+    "within-episode exact-call-histogram randomization"
+  ],
+  "created_unix_ns": 1784235909558550000,
+  "diagnostics": [
+    "stagewise score/next-stage-gain Spearman signs and reached counts",
+    "regime effect heterogeneity",
+    "call-depth distribution shift",
+    "gate-score and causal-feature shift",
+    "solver-gain shift",
+    "exact compute-price implications",
+    "routing score-bin calibration"
+  ],
+  "environment_common": {
+    "deterministic_reset": "the exact seed-forwarding correction consumed by V5",
+    "env_type": "single",
+    "environment": "swm/OGBCube-v0",
+    "frameskip": 5,
+    "height": 224,
+    "history": 3,
+    "image_shape": [
+      224,
+      224
+    ],
+    "max_episode_steps": 200,
+    "mode": "data_collection",
+    "model_steps_inclusive": [
+      3,
+      40
+    ],
+    "multiview": false,
+    "num_envs": 1,
+    "rows_per_episode": 38,
+    "terminate_at_goal": false,
+    "visualize_info": false,
+    "width": 224
+  },
+  "forbidden_evidence": {
+    "combined_v3_cache_numpy_loaded": false,
+    "released_hdf5_opened": false,
+    "v3_test_targets_opened": false
+  },
+  "frozen_native_whitening": "unchanged V5 PlanOracle-native matrix; termed fixed-whitened under shifted DGPs; no recalibration",
+  "generalization_target_outcome_episodes": 0,
+  "model_gate_input_allowlist": [
+    "action",
+    "pixels"
+  ],
+  "one_factor_at_a_time": true,
+  "posthoc_only_after_immutable_terminal_decision": [
+    "contact",
+    "motion",
+    "phase",
+    "reward",
+    "success"
+  ],
+  "primary_comparator": "strongest transition-independent analytic mixture of fixed depths 1..4 at exactly matched adaptive total counted FLOPs, including reached feature and dual-head overhead",
+  "regime_order": [
+    "markov_oracle",
+    "plan_action_noise_0p2",
+    "plan_random_action_0p1"
+  ],
+  "regimes": {
+    "markov_oracle": {
+      "action_noise": 0.1,
+      "label": "policy_structure_markov_oracle",
+      "min_norm": 0.4,
+      "noise_smoothing": 0.5,
+      "p_random_action": 0.0,
+      "policy_type": "markov_oracle",
+      "single_changed_factor": "policy_type: plan_oracle -> markov_oracle"
+    },
+    "plan_action_noise_0p2": {
+      "action_noise": 0.2,
+      "label": "action_noise_0p1_to_0p2",
+      "min_norm": 0.4,
+      "noise_smoothing": 0.5,
+      "p_random_action": 0.0,
+      "policy_type": "plan_oracle",
+      "single_changed_factor": "action_noise: 0.1 -> 0.2"
+    },
+    "plan_random_action_0p1": {
+      "action_noise": 0.1,
+      "label": "random_action_contamination_0p1",
+      "min_norm": 0.4,
+      "noise_smoothing": 0.5,
+      "p_random_action": 0.1,
+      "policy_type": "plan_oracle",
+      "single_changed_factor": "p_random_action: 0.0 -> 0.1"
+    }
+  },
+  "replacement_and_exclusion_rule": "assigned slots are retained; only a mechanical exception before artifact completion may consume the next replacement tuple; target, loss, contact, motion, phase, reward, and success are forbidden from replacement, exclusion, and stopping",
+  "replacement_tuples_per_regime": 200,
+  "resource_reporting": {
+    "base_calls": true,
+    "energy_separate": true,
+    "feature_flops": true,
+    "gate_evaluations": true,
+    "gate_head_flops": true,
+    "latency_separate": true,
+    "nonflop_operations": true,
+    "refiner_calls": true,
+    "total_flops": true
+  },
+  "schema_version": 1,
+  "scientific_components_changed": false,
+  "sequential_expansion": false,
+  "smoke_episodes_per_regime": 6,
+  "study": "LeWM V5 zero-shot one-factor generalization",
+  "target_episodes_per_regime": 3000,
+  "target_rows_per_regime": 114000,
+  "thresholds_float64": [
+    0.19465729885363534,
+    0.1568665868361991,
+    0.15153321811129283
+  ],
+  "v5_package": "runs/lewm_v5_readiness_program/v5_package_versions/v004"
+}

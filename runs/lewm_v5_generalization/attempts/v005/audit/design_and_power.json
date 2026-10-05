@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "episode_ids_unique": true,
+    "ids_fit_raw_u32_text": true,
+    "ids_fit_uint32": true,
+    "no_sequential_expansion": true,
+    "numeric_identifiers_unique": true,
+    "power_passed": true,
+    "record_count_exact": true,
+    "sample_size_exact_3000": true,
+    "zero_safe_prior_numeric_overlap": true,
+    "zero_safe_prior_string_overlap": true,
+    "zero_v5_v001_v004_overlap": true
+  },
+  "created_unix_ns": 1784235912256390000,
+  "files": {
+    "DGP_MATRIX.json": "7bab28d8746d6553456398da46939ca18cfa7b3ecc43c5040d93d61d92a2ef05",
+    "PREREGISTRATION.md": "f9e312395521210dd0ddb3955f81c87ccad644754c5a9b67e2067ffe09d3b7e5",
+    "cohort_seed_ledger.json": "6c181d31b0b9bea3adedcecbf7274ae4ec77a0babf3bf64d7c70668ee77bf234",
+    "numerical_equivalence_contract.json": "b7b4be1936dbee8f5f439cf85f93126509da286097cd828c33d98ab6faaa531d",
+    "operation_ledger.json": "fdc28007c10086662fd85f509017e724bca1045ad53d35f6bbc0c94896b95e15",
+    "outcome_mapping.json": "8286740fe02f861fecbecba0f3ff5bc1814f9c515439f22c2d4ad3ceb6673336",
+    "power_analysis.json": "bc191a033be5a90d5b608cbb06aa3f9ed8c513c330c9a562aa8fefff507ce466"
+  },
+  "forbidden_evidence_access": {
+    "combined_v3_cache_numpy_loaded": false,
+    "released_hdf5_opened": false,
+    "v3_test_targets_opened": false
+  },
+  "passed": true,
+  "schema_version": 1,
+  "science_frozen_before_target_outcomes": true,
+  "target_outcome_episodes": 0
+}

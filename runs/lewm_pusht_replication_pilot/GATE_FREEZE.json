@@ -1,0 +1,106 @@
+{
+  "base_refiner_feature_gate_threshold_normalization_whitening_compute_prices_decision_rule_frozen": true,
+  "created_unix_ns": 1784401537875163000,
+  "evaluation_data_exists_at_freeze": false,
+  "evaluation_outcomes_opened": false,
+  "feature_builder_signature": [
+    "history",
+    "actions",
+    "current",
+    "update"
+  ],
+  "feature_names_sha256": "1be124478ffd6fa503fbefbbb0ad7d80f54f3e3b7b80892defc60d4f512e89cf",
+  "feature_width": 1001,
+  "fit_artifacts_sha256": "b9901680c953474a09881141b2b9e7ef01c17a67602c8938addbf040be7409ec",
+  "frozen_gate_sha256": "6192936bf95a3b511adf83c623e5a9bb40930131fabb1c06e74d0d0831cd0dd6",
+  "gate_inputs": [
+    "frozen history latents",
+    "fit-normalized blocked actions",
+    "current prediction",
+    "last refiner update",
+    "causal derived norms/differences"
+  ],
+  "refiner_checkpoint_sha256": "29be92d39a2efba992c8e2dcfd289956d04f057d63d8ed1042de25c305641a6f",
+  "refit_after_selection": false,
+  "schema_version": 1,
+  "selected": {
+    "adaptive_total_counted_flops": 51437165296,
+    "all_combined_stagewise_spearman_nonnegative": true,
+    "analytic_comparator_total_counted_flops": 51437165296,
+    "analytic_equivalent_mean_depth": 1.625466390884144,
+    "both_co_primary_point_benefits_positive": true,
+    "call_histogram": [
+      547,
+      26,
+      29,
+      118
+    ],
+    "candidate_id": "stage_dual_r10_q0.75",
+    "exact_total_counted_compute_equality": true,
+    "fit_score_quantile": 0.75,
+    "fit_whitened_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.23707585137635348,
+      "weight_upper": 0.625466390884144
+    },
+    "mean_depth": 1.6083333333333334,
+    "minimum_combined_stagewise_spearman": 0.43433979746617307,
+    "minimum_standardized_co_primary": 0.025425409351623816,
+    "point_benefits": {
+      "fit_whitened_vs_analytic": 0.00010753865641103867,
+      "fit_whitened_vs_fixed_d1": 0.004182508654516354,
+      "fit_whitened_vs_fixed_d4": 0.0040910831332137245,
+      "fit_whitened_vs_within_episode_permutation": 0.00323498297887561,
+      "raw_vs_analytic": 0.004225407364928366,
+      "raw_vs_fixed_d1": 0.006655244911656688,
+      "raw_vs_fixed_d4": 0.007603298905546879,
+      "raw_vs_within_episode_permutation": 0.005549456311429024
+    },
+    "raw_analytic_mixture": {
+      "depth_lower": 1,
+      "depth_upper": 2,
+      "mean_loss": 0.10991138052316926,
+      "weight_upper": 0.625466390884144
+    },
+    "reached_gate_evaluations": 1040,
+    "refiner_calls": 1158,
+    "regularization": 10.0,
+    "stagewise_rank": [
+      {
+        "reached_rows": 720,
+        "score_vs_combined_gain_spearman": 0.43433979746617307,
+        "score_vs_fit_whitened_gain_spearman": 0.37324705487472004,
+        "score_vs_raw_gain_spearman": 0.4568654646324549,
+        "stage": 1
+      },
+      {
+        "reached_rows": 173,
+        "score_vs_combined_gain_spearman": 0.43455970630090257,
+        "score_vs_fit_whitened_gain_spearman": 0.41450927312254615,
+        "score_vs_raw_gain_spearman": 0.42951638846526463,
+        "stage": 2
+      },
+      {
+        "reached_rows": 147,
+        "score_vs_combined_gain_spearman": 0.4442156722000166,
+        "score_vs_fit_whitened_gain_spearman": 0.4632486834052392,
+        "score_vs_raw_gain_spearman": 0.4045100454102411,
+        "stage": 3
+      }
+    ],
+    "standardized_co_primary": {
+      "fit_whitened_vs_analytic": 0.025425409351623816,
+      "raw_vs_analytic": 0.9019541340585382
+    },
+    "thresholds": [
+      0.036598234837386154,
+      0.059525666089429635,
+      0.11451476688987573
+    ],
+    "within_episode_histograms_preserved": true
+  },
+  "selection_ledger_sha256": "faa3af1ab636b8f70d47ccd36d3865772c9eafcc09d68046aa93ad2f5758feee",
+  "status": "frozen_before_evaluation_generation_or_outcomes",
+  "target_future_contact_reward_success_simulator_state_or_geometry_inputs": false
+}

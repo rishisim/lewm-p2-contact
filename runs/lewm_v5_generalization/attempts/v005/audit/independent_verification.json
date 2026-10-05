@@ -1,0 +1,492 @@
+{
+  "checks": {
+    "all_9000_raw_and_execution_hashes": true,
+    "all_compute_reproduced": true,
+    "all_intervals_reproduced": true,
+    "all_simultaneous_bounds_reproduced": true,
+    "all_stagewise_ranks_reproduced": true,
+    "analysis_process_valid": true,
+    "calls_reproduced": true,
+    "chronology": true,
+    "exact_input_counts": true,
+    "finite_arrays": true,
+    "forbidden_v3_hdf5_excluded": true,
+    "histograms_preserved": true,
+    "latency_resources_passed_and_nonterminal": true,
+    "ledger_parse_and_chronology": true,
+    "posthoc_not_opened_before_decision": true,
+    "pre_outcome_seal": true,
+    "required_paths_present": true,
+    "seed_isolation": true,
+    "state_ready_for_independent_verification": true,
+    "supported_claim_count_reproduced": true,
+    "terminal_mapping_reproduced": true
+  },
+  "compute_matches": {
+    "markov_oracle": true,
+    "plan_action_noise_0p2": true,
+    "plan_random_action_0p1": true
+  },
+  "created_unix_ns": 1784254891331847000,
+  "implementation_independent_of_analysis_py": true,
+  "interval_matches": {
+    "markov_oracle": {
+      "fixed_whitened_vs_analytic": true,
+      "fixed_whitened_vs_fixed_d1": true,
+      "fixed_whitened_vs_seeded": true,
+      "fixed_whitened_vs_within_episode_histogram": true,
+      "raw_vs_analytic": true,
+      "raw_vs_fixed_d1": true,
+      "raw_vs_seeded": true,
+      "raw_vs_within_episode_histogram": true
+    },
+    "plan_action_noise_0p2": {
+      "fixed_whitened_vs_analytic": true,
+      "fixed_whitened_vs_fixed_d1": true,
+      "fixed_whitened_vs_seeded": true,
+      "fixed_whitened_vs_within_episode_histogram": true,
+      "raw_vs_analytic": true,
+      "raw_vs_fixed_d1": true,
+      "raw_vs_seeded": true,
+      "raw_vs_within_episode_histogram": true
+    },
+    "plan_random_action_0p1": {
+      "fixed_whitened_vs_analytic": true,
+      "fixed_whitened_vs_fixed_d1": true,
+      "fixed_whitened_vs_seeded": true,
+      "fixed_whitened_vs_within_episode_histogram": true,
+      "raw_vs_analytic": true,
+      "raw_vs_fixed_d1": true,
+      "raw_vs_seeded": true,
+      "raw_vs_within_episode_histogram": true
+    }
+  },
+  "ledger_event_count": 415,
+  "passed": true,
+  "rank_matches": {
+    "markov_oracle": true,
+    "plan_action_noise_0p2": true,
+    "plan_random_action_0p1": true
+  },
+  "read_only_scientific_inputs": true,
+  "recomputed": {
+    "individual_intervals": {
+      "markov_oracle": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00017736180662955358,
+          "lower": 0.00010188463926809114,
+          "upper": 0.0002555767468795296
+        },
+        "fixed_whitened_vs_fixed_d1": {
+          "estimate": 0.0005041586154304227,
+          "lower": 0.000421576117869377,
+          "upper": 0.0005914856119069335
+        },
+        "fixed_whitened_vs_seeded": {
+          "estimate": 0.00017938198242822094,
+          "lower": 8.55144749636793e-05,
+          "upper": 0.0002763921748117099
+        },
+        "fixed_whitened_vs_within_episode_histogram": {
+          "estimate": 0.00021647882580974964,
+          "lower": 0.0001510778780757207,
+          "upper": 0.00028132974904109757
+        },
+        "raw_vs_analytic": {
+          "estimate": -2.5137786633814877e-06,
+          "lower": -5.087830609011666e-06,
+          "upper": 6.624685125416591e-08
+        },
+        "raw_vs_fixed_d1": {
+          "estimate": -6.182920712082574e-06,
+          "lower": -8.895618340835818e-06,
+          "upper": -3.4601312687532173e-06
+        },
+        "raw_vs_seeded": {
+          "estimate": -1.6533494552119063e-06,
+          "lower": -4.777992539987483e-06,
+          "upper": 1.505764370212259e-06
+        },
+        "raw_vs_within_episode_histogram": {
+          "estimate": 1.208077684464194e-06,
+          "lower": -1.9437897438575456e-06,
+          "upper": 4.393692064993957e-06
+        }
+      },
+      "plan_action_noise_0p2": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.0006314822713329762,
+          "lower": 0.0005660341523793187,
+          "upper": 0.0006992612331282921
+        },
+        "fixed_whitened_vs_fixed_d1": {
+          "estimate": 0.001590174802396789,
+          "lower": 0.0015026407048951034,
+          "upper": 0.001680332309858415
+        },
+        "fixed_whitened_vs_seeded": {
+          "estimate": 0.0006043506560650016,
+          "lower": 0.0005326602960835288,
+          "upper": 0.0006776265238060673
+        },
+        "fixed_whitened_vs_within_episode_histogram": {
+          "estimate": 0.0005949601822989901,
+          "lower": 0.0005520492785616528,
+          "upper": 0.0006381578363529954
+        },
+        "raw_vs_analytic": {
+          "estimate": 6.690627724886398e-06,
+          "lower": 5.496450698207828e-06,
+          "upper": 7.892301434789884e-06
+        },
+        "raw_vs_fixed_d1": {
+          "estimate": 1.6755157102442266e-05,
+          "lower": 1.5288715831986643e-05,
+          "upper": 1.8221404070898622e-05
+        },
+        "raw_vs_seeded": {
+          "estimate": 6.749552893867629e-06,
+          "lower": 5.177746736703007e-06,
+          "upper": 8.31165339630133e-06
+        },
+        "raw_vs_within_episode_histogram": {
+          "estimate": 6.155038638827283e-06,
+          "lower": 4.863079720197402e-06,
+          "upper": 7.4399206513015016e-06
+        }
+      },
+      "plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00042630600368814966,
+          "lower": 0.00037201135749829307,
+          "upper": 0.0004821358275338534
+        },
+        "fixed_whitened_vs_fixed_d1": {
+          "estimate": 0.0012234872047460629,
+          "lower": 0.0011583478775999557,
+          "upper": 0.001291357127269847
+        },
+        "fixed_whitened_vs_seeded": {
+          "estimate": 0.0004000233601000378,
+          "lower": 0.0003347756809797894,
+          "upper": 0.000467282203860128
+        },
+        "fixed_whitened_vs_within_episode_histogram": {
+          "estimate": 0.0005062102570582495,
+          "lower": 0.0004527287149005447,
+          "upper": 0.000560021069828738
+        },
+        "raw_vs_analytic": {
+          "estimate": 9.599565687949847e-08,
+          "lower": -2.5194838406422047e-06,
+          "upper": 2.7410365501096174e-06
+        },
+        "raw_vs_fixed_d1": {
+          "estimate": 5.237612345425197e-06,
+          "lower": 2.35789028451128e-06,
+          "upper": 8.126157264286706e-06
+        },
+        "raw_vs_seeded": {
+          "estimate": -1.4880137508099236e-07,
+          "lower": -3.961422418750979e-06,
+          "upper": 3.672285671851704e-06
+        },
+        "raw_vs_within_episode_histogram": {
+          "estimate": -1.8103091901586537e-06,
+          "lower": -5.254541969369277e-06,
+          "upper": 1.66660072287156e-06
+        }
+      }
+    },
+    "regimes": {
+      "markov_oracle": {
+        "adaptive_fixed_whitened_mse": 0.5879283391878123,
+        "adaptive_raw_mse": 0.08203089830437021,
+        "calls_match": true,
+        "compute": {
+          "adaptive_total_flops": 8121837438190,
+          "analytic_equivalent_mean_calls": 1.1729093232874608,
+          "analytic_equivalent_total_calls": 133711.66285477052,
+          "call_histogram": [
+            103059,
+            6748,
+            3507,
+            686
+          ],
+          "fixed_whitened_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 3,
+            "mean_loss": 0.5881057009944418,
+            "weight_upper": 0.08645466164373039
+          },
+          "gate_evaluations": 129134,
+          "raw_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 4,
+            "mean_loss": 0.08202838452570682,
+            "weight_upper": 0.05763644109582026
+          },
+          "refiner_model_calls": 129820,
+          "rows": 114000,
+          "seeded_fixed_whitened": {
+            "baseline_minus_adaptive_flops": 89330,
+            "depth_lower": 1,
+            "depth_upper": 3,
+            "number_upper": 9856,
+            "seed": 3500000201,
+            "total_calls": 133712,
+            "total_flops": 8121837527520
+          },
+          "seeded_raw": {
+            "baseline_minus_adaptive_flops": 354290,
+            "depth_lower": 1,
+            "depth_upper": 4,
+            "number_upper": 6571,
+            "seed": 3500000200,
+            "total_calls": 133713,
+            "total_flops": 8121837792480
+          }
+        },
+        "finite": true,
+        "histograms_preserved": true,
+        "stagewise_rank": [
+          {
+            "positive_sign": true,
+            "reached_rows": 114000,
+            "spearman_score_gain_rho": 0.07368376380726156,
+            "stage": 1
+          },
+          {
+            "positive_sign": true,
+            "reached_rows": 10941,
+            "spearman_score_gain_rho": 0.049841972283721114,
+            "stage": 2
+          },
+          {
+            "positive_sign": false,
+            "reached_rows": 4193,
+            "spearman_score_gain_rho": -0.039781747784366786,
+            "stage": 3
+          }
+        ]
+      },
+      "plan_action_noise_0p2": {
+        "adaptive_fixed_whitened_mse": 0.11024606775544009,
+        "adaptive_raw_mse": 0.006131965011184909,
+        "calls_match": true,
+        "compute": {
+          "adaptive_total_flops": 8124093582040,
+          "analytic_equivalent_mean_calls": 1.2476026186011528,
+          "analytic_equivalent_total_calls": 142226.6985205314,
+          "call_histogram": [
+            96236,
+            12960,
+            3261,
+            1543
+          ],
+          "fixed_whitened_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "mean_loss": 0.11087755002677308,
+            "weight_upper": 0.24760261860115285
+          },
+          "gate_evaluations": 136568,
+          "raw_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "mean_loss": 0.006138655638909796,
+            "weight_upper": 0.24760261860115285
+          },
+          "refiner_model_calls": 138111,
+          "rows": 114000,
+          "seeded_fixed_whitened": {
+            "baseline_minus_adaptive_flops": 79880,
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "number_upper": 28227,
+            "seed": 3500000211,
+            "total_calls": 142227,
+            "total_flops": 8124093661920
+          },
+          "seeded_raw": {
+            "baseline_minus_adaptive_flops": 79880,
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "number_upper": 28227,
+            "seed": 3500000210,
+            "total_calls": 142227,
+            "total_flops": 8124093661920
+          }
+        },
+        "finite": true,
+        "histograms_preserved": true,
+        "stagewise_rank": [
+          {
+            "positive_sign": true,
+            "reached_rows": 114000,
+            "spearman_score_gain_rho": 0.2436885921540553,
+            "stage": 1
+          },
+          {
+            "positive_sign": true,
+            "reached_rows": 17764,
+            "spearman_score_gain_rho": 0.14155540880425857,
+            "stage": 2
+          },
+          {
+            "positive_sign": true,
+            "reached_rows": 4804,
+            "spearman_score_gain_rho": 0.12266602203967679,
+            "stage": 3
+          }
+        ]
+      },
+      "plan_random_action_0p1": {
+        "adaptive_fixed_whitened_mse": 0.3484651159429733,
+        "adaptive_raw_mse": 0.10139829625915286,
+        "calls_match": true,
+        "compute": {
+          "adaptive_total_flops": 8123886122050,
+          "analytic_equivalent_mean_calls": 1.240734319711946,
+          "analytic_equivalent_total_calls": 141443.71244716184,
+          "call_histogram": [
+            96637,
+            12788,
+            3166,
+            1409
+          ],
+          "fixed_whitened_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "mean_loss": 0.3488914219466615,
+            "weight_upper": 0.24073431971194603
+          },
+          "gate_evaluations": 135938,
+          "raw_analytic_mixture": {
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "mean_loss": 0.10139839225480975,
+            "weight_upper": 0.24073431971194603
+          },
+          "refiner_model_calls": 137347,
+          "rows": 114000,
+          "seeded_fixed_whitened": {
+            "baseline_minus_adaptive_flops": 76190,
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "number_upper": 27444,
+            "seed": 3500000221,
+            "total_calls": 141444,
+            "total_flops": 8123886198240
+          },
+          "seeded_raw": {
+            "baseline_minus_adaptive_flops": 76190,
+            "depth_lower": 1,
+            "depth_upper": 2,
+            "number_upper": 27444,
+            "seed": 3500000220,
+            "total_calls": 141444,
+            "total_flops": 8123886198240
+          }
+        },
+        "finite": true,
+        "histograms_preserved": true,
+        "stagewise_rank": [
+          {
+            "positive_sign": true,
+            "reached_rows": 114000,
+            "spearman_score_gain_rho": 0.17384395838825717,
+            "stage": 1
+          },
+          {
+            "positive_sign": true,
+            "reached_rows": 17363,
+            "spearman_score_gain_rho": 0.09392521647146333,
+            "stage": 2
+          },
+          {
+            "positive_sign": true,
+            "reached_rows": 4575,
+            "spearman_score_gain_rho": 0.07911736601832796,
+            "stage": 3
+          }
+        ]
+      }
+    },
+    "simultaneous_co_primary": {
+      "markov_oracle": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00017736180662955358,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 8.606212245792454e-05,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": -2.5137786633814877e-06,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": -5.677096742246274e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      },
+      "plan_action_noise_0p2": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.0006314822713329762,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 0.0005518158911522297,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": 6.690627724886398e-06,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 5.233178061723166e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      },
+      "plan_random_action_0p1": {
+        "fixed_whitened_vs_analytic": {
+          "estimate": 0.00042630600368814966,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": 0.00036053633935118735,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        },
+        "raw_vs_analytic": {
+          "estimate": 9.599565687949847e-08,
+          "family_size": 6,
+          "familywise_alpha": 0.05,
+          "lower": -3.128983968264394e-06,
+          "method": "bonferroni_six_claim_one_sided_percentile",
+          "per_claim_alpha": 0.008333333333333333
+        }
+      }
+    },
+    "supported_claim_count": 4,
+    "terminal_mapping": "zero_shot_generalization_partial"
+  },
+  "schema_version": 1,
+  "simultaneous_matches": {
+    "markov_oracle": {
+      "fixed_whitened_vs_analytic": true,
+      "raw_vs_analytic": true
+    },
+    "plan_action_noise_0p2": {
+      "fixed_whitened_vs_analytic": true,
+      "raw_vs_analytic": true
+    },
+    "plan_random_action_0p1": {
+      "fixed_whitened_vs_analytic": true,
+      "raw_vs_analytic": true
+    }
+  },
+  "target_outcome_episodes": 9000,
+  "terminal_outcome_after_independent_verification": "zero_shot_generalization_partial"
+}

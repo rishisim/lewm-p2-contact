@@ -33,3 +33,17 @@ runs/lewm_adaptive_compute_critic_compression/cache/stagewise_train_outputs.npz
 
 # Temporary render/scratch output.
 tmp/
+
+# Full experiment products stay local; paper branches retain curated records.
+*.npy
+*.npz
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log
+manuscript/*.out
+manuscript/*.pdf
+manuscript/*.synctex.gz
+manuscript/figures/

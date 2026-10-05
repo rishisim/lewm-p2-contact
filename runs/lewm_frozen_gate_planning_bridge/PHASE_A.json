@@ -1,0 +1,188 @@
+{
+  "accepted_numerical_contract": {
+    "both_allclose_and_ceiling_required": true,
+    "independent_maximum_absolute_error_ceiling": 4.76837158203125e-07,
+    "torch_allclose_atol": 2e-07,
+    "torch_allclose_rtol": 2e-06
+  },
+  "aggregate": {
+    "adaptive_raw_mse": 0.0033920051234579314,
+    "adaptive_whitened_mse": 0.0966236371637757,
+    "maximum_feature_abs_difference": 0.0,
+    "maximum_score_abs_difference": 0.0,
+    "maximum_sparse_output_abs_difference": 0.0,
+    "maximum_target_abs_difference": 0.0
+  },
+  "all_parameters_frozen_and_no_gradients": true,
+  "device": "mps",
+  "episode_count": 8,
+  "metrics_sha256": "ded76b1361363de65a1994461f521a6c9af14be6065d20ac6ac2fbfde82c1060",
+  "passed": true,
+  "per_episode": [
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.0030737349597606623,
+      "adaptive_whitened_mse": 0.08368249991297141,
+      "depth_histogram": [
+        31,
+        6,
+        1,
+        0
+      ],
+      "episode_id": "v5v004-confirmation-0000",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.002330722843268282,
+      "adaptive_whitened_mse": 0.08079217700930597,
+      "depth_histogram": [
+        36,
+        0,
+        1,
+        1
+      ],
+      "episode_id": "v5v004-confirmation-0001",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.003536510069988553,
+      "adaptive_whitened_mse": 0.09402494956545389,
+      "depth_histogram": [
+        24,
+        8,
+        3,
+        3
+      ],
+      "episode_id": "v5v004-confirmation-0002",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.0029479175267782213,
+      "adaptive_whitened_mse": 0.09499139058614137,
+      "depth_histogram": [
+        33,
+        2,
+        2,
+        1
+      ],
+      "episode_id": "v5v004-confirmation-0003",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.0024894203115895927,
+      "adaptive_whitened_mse": 0.09794682369716676,
+      "depth_histogram": [
+        38,
+        0,
+        0,
+        0
+      ],
+      "episode_id": "v5v004-confirmation-0004",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.005167081926700815,
+      "adaptive_whitened_mse": 0.11085963062021882,
+      "depth_histogram": [
+        34,
+        4,
+        0,
+        0
+      ],
+      "episode_id": "v5v004-confirmation-0005",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.0032431513137030133,
+      "adaptive_whitened_mse": 0.09685252172530323,
+      "depth_histogram": [
+        38,
+        0,
+        0,
+        0
+      ],
+      "episode_id": "v5v004-confirmation-0006",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    },
+    {
+      "accepted_calls_exact": true,
+      "accepted_features_within_contract": true,
+      "accepted_scores_within_contract": true,
+      "accepted_sparse_output_within_contract": true,
+      "accepted_target_within_contract": true,
+      "adaptive_raw_mse": 0.0043475020358743136,
+      "adaptive_whitened_mse": 0.1138391041936442,
+      "depth_histogram": [
+        30,
+        6,
+        1,
+        1
+      ],
+      "episode_id": "v5v004-confirmation-0007",
+      "forward_selected_bitwise_exact": true,
+      "passed": true,
+      "rows": 38,
+      "wrapper_inputs_and_base_exact": true
+    }
+  ],
+  "phase": "A",
+  "rows": 304,
+  "schema_version": 1,
+  "scientific_role": "consumed_data_compatibility",
+  "terminal_on_failure": "bridge_execution_incomplete"
+}

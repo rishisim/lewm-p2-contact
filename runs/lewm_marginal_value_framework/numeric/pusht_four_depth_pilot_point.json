@@ -1,0 +1,25 @@
+{
+  "adaptive_raw_mean": 0.10740739382814737,
+  "adaptive_whitened_mean": 0.252459692826501,
+  "analytic_raw_mean": 0.11131719081353657,
+  "analytic_whitened_mean": 0.2521497926972788,
+  "call_histogram": [
+    1089,
+    42,
+    46,
+    263
+  ],
+  "chronology": "four-depth pilot preceded and motivated the later binary confirmation",
+  "episodes": 80,
+  "frozen_total_flops": 102905055196,
+  "raw_benefit_vs_ti_envelope": 0.003909796985389194,
+  "recomputed_calls_exact": true,
+  "rows": 1440,
+  "rows_per_episode_unique": [
+    18
+  ],
+  "scientific_label": "process-valid pilot not supported because fit-whitened co-primary point benefit was negative",
+  "score_recomputation_max_abs": 8.796503179198112e-07,
+  "source_sha256": "30ec62250b99de0755dc1a9460491007af8445f152596615aad1b561a5f721c8",
+  "whitened_benefit_vs_ti_envelope": -0.0003099001292222181
+}

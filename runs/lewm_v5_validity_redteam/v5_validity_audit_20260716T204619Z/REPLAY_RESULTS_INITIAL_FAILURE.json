@@ -1,0 +1,117 @@
+{
+  "checks": {
+    "all_raw_hashes_verified": true,
+    "all_requested_episodes_replayed": true,
+    "all_rows_replayed": true,
+    "dense_exits_bitwise_exact": true,
+    "independent_calls_exact": true,
+    "independent_features_within_predeclared_float32_tolerance": false,
+    "independent_scores_within_predeclared_float32_tolerance": false,
+    "independent_sparse_bitwise_exact": true,
+    "modules_and_gradients_unchanged": true,
+    "no_failures": true,
+    "packaged_calls_exact": true,
+    "packaged_features_exact": true,
+    "packaged_scores_exact": true,
+    "packaged_sparse_bitwise_exact": true,
+    "targets_bitwise_exact": true,
+    "two_strategy_calls_exact": true,
+    "two_strategy_features_within_predeclared_float32_tolerance": false,
+    "two_strategy_outputs_exact": true,
+    "two_strategy_scores_within_predeclared_float32_tolerance": false
+  },
+  "complete_confirmation_replay": true,
+  "created_unix_ns": 1784236938504517000,
+  "device": "mps",
+  "failures": [],
+  "metrics": {
+    "dense_exact_rows": 60800,
+    "episodes": 1600,
+    "independent_calls_exact_rows": 60800,
+    "independent_feature_max_abs": 3.814697265625e-06,
+    "independent_features_exact_episodes": 0,
+    "independent_score_max_abs": 3.814697265625e-06,
+    "independent_scores_exact_episodes": 0,
+    "independent_sparse_exact_rows": 60800,
+    "independent_sparse_max_abs": 0.0,
+    "packaged_calls_exact_rows": 60800,
+    "packaged_features_exact_episodes": 1600,
+    "packaged_scores_exact_episodes": 1600,
+    "packaged_sparse_exact_rows": 60800,
+    "packaged_sparse_max_abs": 0.0,
+    "raw_hashes_verified": 1600,
+    "rows": 60800,
+    "strategy_calls_exact_episodes": 1600,
+    "strategy_features_exact_episodes": 0,
+    "strategy_outputs_exact_episodes": 1600,
+    "strategy_scores_exact_episodes": 0,
+    "target_exact_rows": 60800
+  },
+  "module_after": {
+    "modules": [
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "JEPA",
+        "parameters": 18034628,
+        "state_sha256": "145a9f69cf17de314fe0373767b3affac4e7887e9ba52d2812b4c21ef684552a",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "StagewiseResidualCascade",
+        "parameters": 733760,
+        "state_sha256": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "SharedResidualRefiner",
+        "parameters": 335360,
+        "state_sha256": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+        "training": false
+      }
+    ],
+    "passed": true
+  },
+  "module_before": {
+    "modules": [
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "JEPA",
+        "parameters": 18034628,
+        "state_sha256": "145a9f69cf17de314fe0373767b3affac4e7887e9ba52d2812b4c21ef684552a",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "StagewiseResidualCascade",
+        "parameters": 733760,
+        "state_sha256": "953c0c068641e591d437a8de9e3e1b63dc1cef7a571f4739b241f1e619c48bfa",
+        "training": false
+      },
+      {
+        "all_gradients_absent": true,
+        "all_parameters_frozen": true,
+        "class": "SharedResidualRefiner",
+        "parameters": 335360,
+        "state_sha256": "13a71205556d57051348aa8c1f8c00d1fe83f7635316e44fd502e9373d9dc764",
+        "training": false
+      }
+    ],
+    "passed": true
+  },
+  "passed": false,
+  "requested_episode_count": 1600,
+  "requested_row_count": 60800,
+  "runtime_seconds": 395.7399170398712,
+  "schema_version": 1,
+  "strategies": [
+    "packaged manual_sparse/dense_shadow path",
+    "independently transcribed direct-module sparse loop and feature graph"
+  ]
+}

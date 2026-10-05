@@ -1,0 +1,1500 @@
+{
+  "action_normalization": {
+    "fit_transitions_only": true,
+    "per_blocked_action_coordinate": true
+  },
+  "compute": {
+    "analytic_comparator": "strongest pairwise fixed-depth interpolation at exact total counted FLOPs",
+    "base_predictor": {
+      "action_encoder_linear_conv_flops_per_transition": 931416,
+      "prediction_projection_linear_flops_per_transition": 4718592,
+      "predictor_transformer_linear_attention_flops_per_transition": 64733184,
+      "total_flops_per_transition": 70383192
+    },
+    "gate": {
+      "action_normalization_flops_per_transition": 60,
+      "dual_affine_score_flops_per_reached_evaluation": 4004,
+      "feature_flops_per_reached_evaluation": 3711,
+      "feature_width": 1001,
+      "nonflop_comparison_min_operations_per_reached_evaluation": 5,
+      "total_flops_per_reached_evaluation": 7715
+    },
+    "multiply_add_convention": "one multiplication plus one accumulation/bias contribution equals two FLOPs",
+    "refiner": {
+      "gelu_flops_per_call": 4096,
+      "linear_flops_per_call": 646144,
+      "residual_add_flops_per_call": 192,
+      "total_flops_per_call": 650432
+    }
+  },
+  "created_unix_ns": 1784401445112190000,
+  "environment": {
+    "blocked_action_dim": 10,
+    "frameskip": 5,
+    "fresh_simulator_only": true,
+    "history_size": 3,
+    "id": "swm/PushT-v1",
+    "latent_dim": 192,
+    "max_raw_steps": 100,
+    "policy": "WeakPolicy(dist_constraint=100)"
+  },
+  "episode_counts": {
+    "evaluation": 80,
+    "fit": 120,
+    "selection": 40
+  },
+  "evaluation": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 7181991,
+    "confidence": 0.95,
+    "interval_label": "exploratory",
+    "pilot_positive_rule": [
+      "raw adaptive benefit over primary analytic comparator > 0",
+      "fit-whitened adaptive benefit over primary analytic comparator > 0",
+      "exact counted-compute equality",
+      "causal input checks",
+      "finite outputs",
+      "all three combined stagewise score/gain Spearman signs nonnegative"
+    ],
+    "within_episode_permutation_seed": 7181881
+  },
+  "gate": {
+    "candidate_count": 6,
+    "candidates": [
+      {
+        "candidate_id": "stage_dual_r1_q0.45",
+        "fit_score_quantile": 0.45,
+        "regularization": 1.0
+      },
+      {
+        "candidate_id": "stage_dual_r1_q0.60",
+        "fit_score_quantile": 0.6,
+        "regularization": 1.0
+      },
+      {
+        "candidate_id": "stage_dual_r1_q0.75",
+        "fit_score_quantile": 0.75,
+        "regularization": 1.0
+      },
+      {
+        "candidate_id": "stage_dual_r10_q0.45",
+        "fit_score_quantile": 0.45,
+        "regularization": 10.0
+      },
+      {
+        "candidate_id": "stage_dual_r10_q0.60",
+        "fit_score_quantile": 0.6,
+        "regularization": 10.0
+      },
+      {
+        "candidate_id": "stage_dual_r10_q0.75",
+        "fit_score_quantile": 0.75,
+        "regularization": 10.0
+      }
+    ],
+    "family": "stage-specific dual ridge heads with minimum standardized raw/whitened gain score",
+    "feature_definition_fixed": true,
+    "feature_width": 1001,
+    "no_refit_after_selection": true,
+    "selection_ranking": [
+      "all selection stagewise combined score/gain Spearman signs nonnegative",
+      "both selection co-primary point benefits positive",
+      "largest minimum standardized co-primary episode benefit",
+      "largest minimum stagewise combined Spearman",
+      "lower counted FLOPs",
+      "candidate_id lexical tie break"
+    ]
+  },
+  "git_baseline": {
+    "head": "86e4bb150de0d1546a3cf57f3ef301294eb04368",
+    "status": [
+      "?? runs/lewm_domain_robust_gate/",
+      "?? runs/lewm_frozen_gate_planning_bridge/",
+      "?? runs/lewm_planning_bridge_decomposition/",
+      "?? runs/lewm_pusht_replication_pilot/",
+      "?? runs/lewm_v5_generalization/"
+    ],
+    "tracked_diff": []
+  },
+  "internal_refiner_validation_rule": "fit episode ordinal modulo 10 equals 9",
+  "objective": "PushT-specific adaptive-allocation replication pilot",
+  "read_only_inputs": {
+    "model_config": "/Users/rishisim/Documents/research/World Models/le-wm/.cache/diagnostic/model/quentinll--lewm-pusht/config.json",
+    "model_config_sha256": "2564086e961e7b5c7c04dffc451091115b389a590645ff19653c64fd0bc16e09",
+    "model_weights": "/Users/rishisim/Documents/research/World Models/le-wm/.cache/diagnostic/model/quentinll--lewm-pusht/weights.pt",
+    "model_weights_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+  },
+  "refiner": {
+    "batch_size": 256,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "early_stopping_min_delta": 1e-08,
+    "early_stopping_patience": 30,
+    "heterogeneity_rule": {
+      "at_least_one_extra_stage_fraction_benefiting_strictly_between": [
+        0.02,
+        0.98
+      ],
+      "at_least_one_extra_stage_positive_mean_gain": true,
+      "extra_stage_nontrivial_std_count_at_least": 2,
+      "finite": true,
+      "nontrivial_std_threshold": "max(1e-10, 1e-4 * fit base raw MSE)"
+    },
+    "hidden_dim": 256,
+    "iteration_embedding_dim": 16,
+    "learning_rate": 0.0003,
+    "max_epochs": 250,
+    "shared_recurrent_block": true,
+    "training_seed": 7181337,
+    "update_penalty": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "role_seed_ranges": {
+    "evaluation": [
+      4910000,
+      4910079
+    ],
+    "fit": [
+      4710000,
+      4710119
+    ],
+    "selection": [
+      4810000,
+      4810039
+    ]
+  },
+  "role_specs": {
+    "evaluation": [
+      {
+        "identifier": "pusht_evaluation_0000",
+        "ordinal": 0,
+        "seed": 4910000
+      },
+      {
+        "identifier": "pusht_evaluation_0001",
+        "ordinal": 1,
+        "seed": 4910001
+      },
+      {
+        "identifier": "pusht_evaluation_0002",
+        "ordinal": 2,
+        "seed": 4910002
+      },
+      {
+        "identifier": "pusht_evaluation_0003",
+        "ordinal": 3,
+        "seed": 4910003
+      },
+      {
+        "identifier": "pusht_evaluation_0004",
+        "ordinal": 4,
+        "seed": 4910004
+      },
+      {
+        "identifier": "pusht_evaluation_0005",
+        "ordinal": 5,
+        "seed": 4910005
+      },
+      {
+        "identifier": "pusht_evaluation_0006",
+        "ordinal": 6,
+        "seed": 4910006
+      },
+      {
+        "identifier": "pusht_evaluation_0007",
+        "ordinal": 7,
+        "seed": 4910007
+      },
+      {
+        "identifier": "pusht_evaluation_0008",
+        "ordinal": 8,
+        "seed": 4910008
+      },
+      {
+        "identifier": "pusht_evaluation_0009",
+        "ordinal": 9,
+        "seed": 4910009
+      },
+      {
+        "identifier": "pusht_evaluation_0010",
+        "ordinal": 10,
+        "seed": 4910010
+      },
+      {
+        "identifier": "pusht_evaluation_0011",
+        "ordinal": 11,
+        "seed": 4910011
+      },
+      {
+        "identifier": "pusht_evaluation_0012",
+        "ordinal": 12,
+        "seed": 4910012
+      },
+      {
+        "identifier": "pusht_evaluation_0013",
+        "ordinal": 13,
+        "seed": 4910013
+      },
+      {
+        "identifier": "pusht_evaluation_0014",
+        "ordinal": 14,
+        "seed": 4910014
+      },
+      {
+        "identifier": "pusht_evaluation_0015",
+        "ordinal": 15,
+        "seed": 4910015
+      },
+      {
+        "identifier": "pusht_evaluation_0016",
+        "ordinal": 16,
+        "seed": 4910016
+      },
+      {
+        "identifier": "pusht_evaluation_0017",
+        "ordinal": 17,
+        "seed": 4910017
+      },
+      {
+        "identifier": "pusht_evaluation_0018",
+        "ordinal": 18,
+        "seed": 4910018
+      },
+      {
+        "identifier": "pusht_evaluation_0019",
+        "ordinal": 19,
+        "seed": 4910019
+      },
+      {
+        "identifier": "pusht_evaluation_0020",
+        "ordinal": 20,
+        "seed": 4910020
+      },
+      {
+        "identifier": "pusht_evaluation_0021",
+        "ordinal": 21,
+        "seed": 4910021
+      },
+      {
+        "identifier": "pusht_evaluation_0022",
+        "ordinal": 22,
+        "seed": 4910022
+      },
+      {
+        "identifier": "pusht_evaluation_0023",
+        "ordinal": 23,
+        "seed": 4910023
+      },
+      {
+        "identifier": "pusht_evaluation_0024",
+        "ordinal": 24,
+        "seed": 4910024
+      },
+      {
+        "identifier": "pusht_evaluation_0025",
+        "ordinal": 25,
+        "seed": 4910025
+      },
+      {
+        "identifier": "pusht_evaluation_0026",
+        "ordinal": 26,
+        "seed": 4910026
+      },
+      {
+        "identifier": "pusht_evaluation_0027",
+        "ordinal": 27,
+        "seed": 4910027
+      },
+      {
+        "identifier": "pusht_evaluation_0028",
+        "ordinal": 28,
+        "seed": 4910028
+      },
+      {
+        "identifier": "pusht_evaluation_0029",
+        "ordinal": 29,
+        "seed": 4910029
+      },
+      {
+        "identifier": "pusht_evaluation_0030",
+        "ordinal": 30,
+        "seed": 4910030
+      },
+      {
+        "identifier": "pusht_evaluation_0031",
+        "ordinal": 31,
+        "seed": 4910031
+      },
+      {
+        "identifier": "pusht_evaluation_0032",
+        "ordinal": 32,
+        "seed": 4910032
+      },
+      {
+        "identifier": "pusht_evaluation_0033",
+        "ordinal": 33,
+        "seed": 4910033
+      },
+      {
+        "identifier": "pusht_evaluation_0034",
+        "ordinal": 34,
+        "seed": 4910034
+      },
+      {
+        "identifier": "pusht_evaluation_0035",
+        "ordinal": 35,
+        "seed": 4910035
+      },
+      {
+        "identifier": "pusht_evaluation_0036",
+        "ordinal": 36,
+        "seed": 4910036
+      },
+      {
+        "identifier": "pusht_evaluation_0037",
+        "ordinal": 37,
+        "seed": 4910037
+      },
+      {
+        "identifier": "pusht_evaluation_0038",
+        "ordinal": 38,
+        "seed": 4910038
+      },
+      {
+        "identifier": "pusht_evaluation_0039",
+        "ordinal": 39,
+        "seed": 4910039
+      },
+      {
+        "identifier": "pusht_evaluation_0040",
+        "ordinal": 40,
+        "seed": 4910040
+      },
+      {
+        "identifier": "pusht_evaluation_0041",
+        "ordinal": 41,
+        "seed": 4910041
+      },
+      {
+        "identifier": "pusht_evaluation_0042",
+        "ordinal": 42,
+        "seed": 4910042
+      },
+      {
+        "identifier": "pusht_evaluation_0043",
+        "ordinal": 43,
+        "seed": 4910043
+      },
+      {
+        "identifier": "pusht_evaluation_0044",
+        "ordinal": 44,
+        "seed": 4910044
+      },
+      {
+        "identifier": "pusht_evaluation_0045",
+        "ordinal": 45,
+        "seed": 4910045
+      },
+      {
+        "identifier": "pusht_evaluation_0046",
+        "ordinal": 46,
+        "seed": 4910046
+      },
+      {
+        "identifier": "pusht_evaluation_0047",
+        "ordinal": 47,
+        "seed": 4910047
+      },
+      {
+        "identifier": "pusht_evaluation_0048",
+        "ordinal": 48,
+        "seed": 4910048
+      },
+      {
+        "identifier": "pusht_evaluation_0049",
+        "ordinal": 49,
+        "seed": 4910049
+      },
+      {
+        "identifier": "pusht_evaluation_0050",
+        "ordinal": 50,
+        "seed": 4910050
+      },
+      {
+        "identifier": "pusht_evaluation_0051",
+        "ordinal": 51,
+        "seed": 4910051
+      },
+      {
+        "identifier": "pusht_evaluation_0052",
+        "ordinal": 52,
+        "seed": 4910052
+      },
+      {
+        "identifier": "pusht_evaluation_0053",
+        "ordinal": 53,
+        "seed": 4910053
+      },
+      {
+        "identifier": "pusht_evaluation_0054",
+        "ordinal": 54,
+        "seed": 4910054
+      },
+      {
+        "identifier": "pusht_evaluation_0055",
+        "ordinal": 55,
+        "seed": 4910055
+      },
+      {
+        "identifier": "pusht_evaluation_0056",
+        "ordinal": 56,
+        "seed": 4910056
+      },
+      {
+        "identifier": "pusht_evaluation_0057",
+        "ordinal": 57,
+        "seed": 4910057
+      },
+      {
+        "identifier": "pusht_evaluation_0058",
+        "ordinal": 58,
+        "seed": 4910058
+      },
+      {
+        "identifier": "pusht_evaluation_0059",
+        "ordinal": 59,
+        "seed": 4910059
+      },
+      {
+        "identifier": "pusht_evaluation_0060",
+        "ordinal": 60,
+        "seed": 4910060
+      },
+      {
+        "identifier": "pusht_evaluation_0061",
+        "ordinal": 61,
+        "seed": 4910061
+      },
+      {
+        "identifier": "pusht_evaluation_0062",
+        "ordinal": 62,
+        "seed": 4910062
+      },
+      {
+        "identifier": "pusht_evaluation_0063",
+        "ordinal": 63,
+        "seed": 4910063
+      },
+      {
+        "identifier": "pusht_evaluation_0064",
+        "ordinal": 64,
+        "seed": 4910064
+      },
+      {
+        "identifier": "pusht_evaluation_0065",
+        "ordinal": 65,
+        "seed": 4910065
+      },
+      {
+        "identifier": "pusht_evaluation_0066",
+        "ordinal": 66,
+        "seed": 4910066
+      },
+      {
+        "identifier": "pusht_evaluation_0067",
+        "ordinal": 67,
+        "seed": 4910067
+      },
+      {
+        "identifier": "pusht_evaluation_0068",
+        "ordinal": 68,
+        "seed": 4910068
+      },
+      {
+        "identifier": "pusht_evaluation_0069",
+        "ordinal": 69,
+        "seed": 4910069
+      },
+      {
+        "identifier": "pusht_evaluation_0070",
+        "ordinal": 70,
+        "seed": 4910070
+      },
+      {
+        "identifier": "pusht_evaluation_0071",
+        "ordinal": 71,
+        "seed": 4910071
+      },
+      {
+        "identifier": "pusht_evaluation_0072",
+        "ordinal": 72,
+        "seed": 4910072
+      },
+      {
+        "identifier": "pusht_evaluation_0073",
+        "ordinal": 73,
+        "seed": 4910073
+      },
+      {
+        "identifier": "pusht_evaluation_0074",
+        "ordinal": 74,
+        "seed": 4910074
+      },
+      {
+        "identifier": "pusht_evaluation_0075",
+        "ordinal": 75,
+        "seed": 4910075
+      },
+      {
+        "identifier": "pusht_evaluation_0076",
+        "ordinal": 76,
+        "seed": 4910076
+      },
+      {
+        "identifier": "pusht_evaluation_0077",
+        "ordinal": 77,
+        "seed": 4910077
+      },
+      {
+        "identifier": "pusht_evaluation_0078",
+        "ordinal": 78,
+        "seed": 4910078
+      },
+      {
+        "identifier": "pusht_evaluation_0079",
+        "ordinal": 79,
+        "seed": 4910079
+      }
+    ],
+    "fit": [
+      {
+        "identifier": "pusht_fit_0000",
+        "ordinal": 0,
+        "seed": 4710000
+      },
+      {
+        "identifier": "pusht_fit_0001",
+        "ordinal": 1,
+        "seed": 4710001
+      },
+      {
+        "identifier": "pusht_fit_0002",
+        "ordinal": 2,
+        "seed": 4710002
+      },
+      {
+        "identifier": "pusht_fit_0003",
+        "ordinal": 3,
+        "seed": 4710003
+      },
+      {
+        "identifier": "pusht_fit_0004",
+        "ordinal": 4,
+        "seed": 4710004
+      },
+      {
+        "identifier": "pusht_fit_0005",
+        "ordinal": 5,
+        "seed": 4710005
+      },
+      {
+        "identifier": "pusht_fit_0006",
+        "ordinal": 6,
+        "seed": 4710006
+      },
+      {
+        "identifier": "pusht_fit_0007",
+        "ordinal": 7,
+        "seed": 4710007
+      },
+      {
+        "identifier": "pusht_fit_0008",
+        "ordinal": 8,
+        "seed": 4710008
+      },
+      {
+        "identifier": "pusht_fit_0009",
+        "ordinal": 9,
+        "seed": 4710009
+      },
+      {
+        "identifier": "pusht_fit_0010",
+        "ordinal": 10,
+        "seed": 4710010
+      },
+      {
+        "identifier": "pusht_fit_0011",
+        "ordinal": 11,
+        "seed": 4710011
+      },
+      {
+        "identifier": "pusht_fit_0012",
+        "ordinal": 12,
+        "seed": 4710012
+      },
+      {
+        "identifier": "pusht_fit_0013",
+        "ordinal": 13,
+        "seed": 4710013
+      },
+      {
+        "identifier": "pusht_fit_0014",
+        "ordinal": 14,
+        "seed": 4710014
+      },
+      {
+        "identifier": "pusht_fit_0015",
+        "ordinal": 15,
+        "seed": 4710015
+      },
+      {
+        "identifier": "pusht_fit_0016",
+        "ordinal": 16,
+        "seed": 4710016
+      },
+      {
+        "identifier": "pusht_fit_0017",
+        "ordinal": 17,
+        "seed": 4710017
+      },
+      {
+        "identifier": "pusht_fit_0018",
+        "ordinal": 18,
+        "seed": 4710018
+      },
+      {
+        "identifier": "pusht_fit_0019",
+        "ordinal": 19,
+        "seed": 4710019
+      },
+      {
+        "identifier": "pusht_fit_0020",
+        "ordinal": 20,
+        "seed": 4710020
+      },
+      {
+        "identifier": "pusht_fit_0021",
+        "ordinal": 21,
+        "seed": 4710021
+      },
+      {
+        "identifier": "pusht_fit_0022",
+        "ordinal": 22,
+        "seed": 4710022
+      },
+      {
+        "identifier": "pusht_fit_0023",
+        "ordinal": 23,
+        "seed": 4710023
+      },
+      {
+        "identifier": "pusht_fit_0024",
+        "ordinal": 24,
+        "seed": 4710024
+      },
+      {
+        "identifier": "pusht_fit_0025",
+        "ordinal": 25,
+        "seed": 4710025
+      },
+      {
+        "identifier": "pusht_fit_0026",
+        "ordinal": 26,
+        "seed": 4710026
+      },
+      {
+        "identifier": "pusht_fit_0027",
+        "ordinal": 27,
+        "seed": 4710027
+      },
+      {
+        "identifier": "pusht_fit_0028",
+        "ordinal": 28,
+        "seed": 4710028
+      },
+      {
+        "identifier": "pusht_fit_0029",
+        "ordinal": 29,
+        "seed": 4710029
+      },
+      {
+        "identifier": "pusht_fit_0030",
+        "ordinal": 30,
+        "seed": 4710030
+      },
+      {
+        "identifier": "pusht_fit_0031",
+        "ordinal": 31,
+        "seed": 4710031
+      },
+      {
+        "identifier": "pusht_fit_0032",
+        "ordinal": 32,
+        "seed": 4710032
+      },
+      {
+        "identifier": "pusht_fit_0033",
+        "ordinal": 33,
+        "seed": 4710033
+      },
+      {
+        "identifier": "pusht_fit_0034",
+        "ordinal": 34,
+        "seed": 4710034
+      },
+      {
+        "identifier": "pusht_fit_0035",
+        "ordinal": 35,
+        "seed": 4710035
+      },
+      {
+        "identifier": "pusht_fit_0036",
+        "ordinal": 36,
+        "seed": 4710036
+      },
+      {
+        "identifier": "pusht_fit_0037",
+        "ordinal": 37,
+        "seed": 4710037
+      },
+      {
+        "identifier": "pusht_fit_0038",
+        "ordinal": 38,
+        "seed": 4710038
+      },
+      {
+        "identifier": "pusht_fit_0039",
+        "ordinal": 39,
+        "seed": 4710039
+      },
+      {
+        "identifier": "pusht_fit_0040",
+        "ordinal": 40,
+        "seed": 4710040
+      },
+      {
+        "identifier": "pusht_fit_0041",
+        "ordinal": 41,
+        "seed": 4710041
+      },
+      {
+        "identifier": "pusht_fit_0042",
+        "ordinal": 42,
+        "seed": 4710042
+      },
+      {
+        "identifier": "pusht_fit_0043",
+        "ordinal": 43,
+        "seed": 4710043
+      },
+      {
+        "identifier": "pusht_fit_0044",
+        "ordinal": 44,
+        "seed": 4710044
+      },
+      {
+        "identifier": "pusht_fit_0045",
+        "ordinal": 45,
+        "seed": 4710045
+      },
+      {
+        "identifier": "pusht_fit_0046",
+        "ordinal": 46,
+        "seed": 4710046
+      },
+      {
+        "identifier": "pusht_fit_0047",
+        "ordinal": 47,
+        "seed": 4710047
+      },
+      {
+        "identifier": "pusht_fit_0048",
+        "ordinal": 48,
+        "seed": 4710048
+      },
+      {
+        "identifier": "pusht_fit_0049",
+        "ordinal": 49,
+        "seed": 4710049
+      },
+      {
+        "identifier": "pusht_fit_0050",
+        "ordinal": 50,
+        "seed": 4710050
+      },
+      {
+        "identifier": "pusht_fit_0051",
+        "ordinal": 51,
+        "seed": 4710051
+      },
+      {
+        "identifier": "pusht_fit_0052",
+        "ordinal": 52,
+        "seed": 4710052
+      },
+      {
+        "identifier": "pusht_fit_0053",
+        "ordinal": 53,
+        "seed": 4710053
+      },
+      {
+        "identifier": "pusht_fit_0054",
+        "ordinal": 54,
+        "seed": 4710054
+      },
+      {
+        "identifier": "pusht_fit_0055",
+        "ordinal": 55,
+        "seed": 4710055
+      },
+      {
+        "identifier": "pusht_fit_0056",
+        "ordinal": 56,
+        "seed": 4710056
+      },
+      {
+        "identifier": "pusht_fit_0057",
+        "ordinal": 57,
+        "seed": 4710057
+      },
+      {
+        "identifier": "pusht_fit_0058",
+        "ordinal": 58,
+        "seed": 4710058
+      },
+      {
+        "identifier": "pusht_fit_0059",
+        "ordinal": 59,
+        "seed": 4710059
+      },
+      {
+        "identifier": "pusht_fit_0060",
+        "ordinal": 60,
+        "seed": 4710060
+      },
+      {
+        "identifier": "pusht_fit_0061",
+        "ordinal": 61,
+        "seed": 4710061
+      },
+      {
+        "identifier": "pusht_fit_0062",
+        "ordinal": 62,
+        "seed": 4710062
+      },
+      {
+        "identifier": "pusht_fit_0063",
+        "ordinal": 63,
+        "seed": 4710063
+      },
+      {
+        "identifier": "pusht_fit_0064",
+        "ordinal": 64,
+        "seed": 4710064
+      },
+      {
+        "identifier": "pusht_fit_0065",
+        "ordinal": 65,
+        "seed": 4710065
+      },
+      {
+        "identifier": "pusht_fit_0066",
+        "ordinal": 66,
+        "seed": 4710066
+      },
+      {
+        "identifier": "pusht_fit_0067",
+        "ordinal": 67,
+        "seed": 4710067
+      },
+      {
+        "identifier": "pusht_fit_0068",
+        "ordinal": 68,
+        "seed": 4710068
+      },
+      {
+        "identifier": "pusht_fit_0069",
+        "ordinal": 69,
+        "seed": 4710069
+      },
+      {
+        "identifier": "pusht_fit_0070",
+        "ordinal": 70,
+        "seed": 4710070
+      },
+      {
+        "identifier": "pusht_fit_0071",
+        "ordinal": 71,
+        "seed": 4710071
+      },
+      {
+        "identifier": "pusht_fit_0072",
+        "ordinal": 72,
+        "seed": 4710072
+      },
+      {
+        "identifier": "pusht_fit_0073",
+        "ordinal": 73,
+        "seed": 4710073
+      },
+      {
+        "identifier": "pusht_fit_0074",
+        "ordinal": 74,
+        "seed": 4710074
+      },
+      {
+        "identifier": "pusht_fit_0075",
+        "ordinal": 75,
+        "seed": 4710075
+      },
+      {
+        "identifier": "pusht_fit_0076",
+        "ordinal": 76,
+        "seed": 4710076
+      },
+      {
+        "identifier": "pusht_fit_0077",
+        "ordinal": 77,
+        "seed": 4710077
+      },
+      {
+        "identifier": "pusht_fit_0078",
+        "ordinal": 78,
+        "seed": 4710078
+      },
+      {
+        "identifier": "pusht_fit_0079",
+        "ordinal": 79,
+        "seed": 4710079
+      },
+      {
+        "identifier": "pusht_fit_0080",
+        "ordinal": 80,
+        "seed": 4710080
+      },
+      {
+        "identifier": "pusht_fit_0081",
+        "ordinal": 81,
+        "seed": 4710081
+      },
+      {
+        "identifier": "pusht_fit_0082",
+        "ordinal": 82,
+        "seed": 4710082
+      },
+      {
+        "identifier": "pusht_fit_0083",
+        "ordinal": 83,
+        "seed": 4710083
+      },
+      {
+        "identifier": "pusht_fit_0084",
+        "ordinal": 84,
+        "seed": 4710084
+      },
+      {
+        "identifier": "pusht_fit_0085",
+        "ordinal": 85,
+        "seed": 4710085
+      },
+      {
+        "identifier": "pusht_fit_0086",
+        "ordinal": 86,
+        "seed": 4710086
+      },
+      {
+        "identifier": "pusht_fit_0087",
+        "ordinal": 87,
+        "seed": 4710087
+      },
+      {
+        "identifier": "pusht_fit_0088",
+        "ordinal": 88,
+        "seed": 4710088
+      },
+      {
+        "identifier": "pusht_fit_0089",
+        "ordinal": 89,
+        "seed": 4710089
+      },
+      {
+        "identifier": "pusht_fit_0090",
+        "ordinal": 90,
+        "seed": 4710090
+      },
+      {
+        "identifier": "pusht_fit_0091",
+        "ordinal": 91,
+        "seed": 4710091
+      },
+      {
+        "identifier": "pusht_fit_0092",
+        "ordinal": 92,
+        "seed": 4710092
+      },
+      {
+        "identifier": "pusht_fit_0093",
+        "ordinal": 93,
+        "seed": 4710093
+      },
+      {
+        "identifier": "pusht_fit_0094",
+        "ordinal": 94,
+        "seed": 4710094
+      },
+      {
+        "identifier": "pusht_fit_0095",
+        "ordinal": 95,
+        "seed": 4710095
+      },
+      {
+        "identifier": "pusht_fit_0096",
+        "ordinal": 96,
+        "seed": 4710096
+      },
+      {
+        "identifier": "pusht_fit_0097",
+        "ordinal": 97,
+        "seed": 4710097
+      },
+      {
+        "identifier": "pusht_fit_0098",
+        "ordinal": 98,
+        "seed": 4710098
+      },
+      {
+        "identifier": "pusht_fit_0099",
+        "ordinal": 99,
+        "seed": 4710099
+      },
+      {
+        "identifier": "pusht_fit_0100",
+        "ordinal": 100,
+        "seed": 4710100
+      },
+      {
+        "identifier": "pusht_fit_0101",
+        "ordinal": 101,
+        "seed": 4710101
+      },
+      {
+        "identifier": "pusht_fit_0102",
+        "ordinal": 102,
+        "seed": 4710102
+      },
+      {
+        "identifier": "pusht_fit_0103",
+        "ordinal": 103,
+        "seed": 4710103
+      },
+      {
+        "identifier": "pusht_fit_0104",
+        "ordinal": 104,
+        "seed": 4710104
+      },
+      {
+        "identifier": "pusht_fit_0105",
+        "ordinal": 105,
+        "seed": 4710105
+      },
+      {
+        "identifier": "pusht_fit_0106",
+        "ordinal": 106,
+        "seed": 4710106
+      },
+      {
+        "identifier": "pusht_fit_0107",
+        "ordinal": 107,
+        "seed": 4710107
+      },
+      {
+        "identifier": "pusht_fit_0108",
+        "ordinal": 108,
+        "seed": 4710108
+      },
+      {
+        "identifier": "pusht_fit_0109",
+        "ordinal": 109,
+        "seed": 4710109
+      },
+      {
+        "identifier": "pusht_fit_0110",
+        "ordinal": 110,
+        "seed": 4710110
+      },
+      {
+        "identifier": "pusht_fit_0111",
+        "ordinal": 111,
+        "seed": 4710111
+      },
+      {
+        "identifier": "pusht_fit_0112",
+        "ordinal": 112,
+        "seed": 4710112
+      },
+      {
+        "identifier": "pusht_fit_0113",
+        "ordinal": 113,
+        "seed": 4710113
+      },
+      {
+        "identifier": "pusht_fit_0114",
+        "ordinal": 114,
+        "seed": 4710114
+      },
+      {
+        "identifier": "pusht_fit_0115",
+        "ordinal": 115,
+        "seed": 4710115
+      },
+      {
+        "identifier": "pusht_fit_0116",
+        "ordinal": 116,
+        "seed": 4710116
+      },
+      {
+        "identifier": "pusht_fit_0117",
+        "ordinal": 117,
+        "seed": 4710117
+      },
+      {
+        "identifier": "pusht_fit_0118",
+        "ordinal": 118,
+        "seed": 4710118
+      },
+      {
+        "identifier": "pusht_fit_0119",
+        "ordinal": 119,
+        "seed": 4710119
+      }
+    ],
+    "selection": [
+      {
+        "identifier": "pusht_selection_0000",
+        "ordinal": 0,
+        "seed": 4810000
+      },
+      {
+        "identifier": "pusht_selection_0001",
+        "ordinal": 1,
+        "seed": 4810001
+      },
+      {
+        "identifier": "pusht_selection_0002",
+        "ordinal": 2,
+        "seed": 4810002
+      },
+      {
+        "identifier": "pusht_selection_0003",
+        "ordinal": 3,
+        "seed": 4810003
+      },
+      {
+        "identifier": "pusht_selection_0004",
+        "ordinal": 4,
+        "seed": 4810004
+      },
+      {
+        "identifier": "pusht_selection_0005",
+        "ordinal": 5,
+        "seed": 4810005
+      },
+      {
+        "identifier": "pusht_selection_0006",
+        "ordinal": 6,
+        "seed": 4810006
+      },
+      {
+        "identifier": "pusht_selection_0007",
+        "ordinal": 7,
+        "seed": 4810007
+      },
+      {
+        "identifier": "pusht_selection_0008",
+        "ordinal": 8,
+        "seed": 4810008
+      },
+      {
+        "identifier": "pusht_selection_0009",
+        "ordinal": 9,
+        "seed": 4810009
+      },
+      {
+        "identifier": "pusht_selection_0010",
+        "ordinal": 10,
+        "seed": 4810010
+      },
+      {
+        "identifier": "pusht_selection_0011",
+        "ordinal": 11,
+        "seed": 4810011
+      },
+      {
+        "identifier": "pusht_selection_0012",
+        "ordinal": 12,
+        "seed": 4810012
+      },
+      {
+        "identifier": "pusht_selection_0013",
+        "ordinal": 13,
+        "seed": 4810013
+      },
+      {
+        "identifier": "pusht_selection_0014",
+        "ordinal": 14,
+        "seed": 4810014
+      },
+      {
+        "identifier": "pusht_selection_0015",
+        "ordinal": 15,
+        "seed": 4810015
+      },
+      {
+        "identifier": "pusht_selection_0016",
+        "ordinal": 16,
+        "seed": 4810016
+      },
+      {
+        "identifier": "pusht_selection_0017",
+        "ordinal": 17,
+        "seed": 4810017
+      },
+      {
+        "identifier": "pusht_selection_0018",
+        "ordinal": 18,
+        "seed": 4810018
+      },
+      {
+        "identifier": "pusht_selection_0019",
+        "ordinal": 19,
+        "seed": 4810019
+      },
+      {
+        "identifier": "pusht_selection_0020",
+        "ordinal": 20,
+        "seed": 4810020
+      },
+      {
+        "identifier": "pusht_selection_0021",
+        "ordinal": 21,
+        "seed": 4810021
+      },
+      {
+        "identifier": "pusht_selection_0022",
+        "ordinal": 22,
+        "seed": 4810022
+      },
+      {
+        "identifier": "pusht_selection_0023",
+        "ordinal": 23,
+        "seed": 4810023
+      },
+      {
+        "identifier": "pusht_selection_0024",
+        "ordinal": 24,
+        "seed": 4810024
+      },
+      {
+        "identifier": "pusht_selection_0025",
+        "ordinal": 25,
+        "seed": 4810025
+      },
+      {
+        "identifier": "pusht_selection_0026",
+        "ordinal": 26,
+        "seed": 4810026
+      },
+      {
+        "identifier": "pusht_selection_0027",
+        "ordinal": 27,
+        "seed": 4810027
+      },
+      {
+        "identifier": "pusht_selection_0028",
+        "ordinal": 28,
+        "seed": 4810028
+      },
+      {
+        "identifier": "pusht_selection_0029",
+        "ordinal": 29,
+        "seed": 4810029
+      },
+      {
+        "identifier": "pusht_selection_0030",
+        "ordinal": 30,
+        "seed": 4810030
+      },
+      {
+        "identifier": "pusht_selection_0031",
+        "ordinal": 31,
+        "seed": 4810031
+      },
+      {
+        "identifier": "pusht_selection_0032",
+        "ordinal": 32,
+        "seed": 4810032
+      },
+      {
+        "identifier": "pusht_selection_0033",
+        "ordinal": 33,
+        "seed": 4810033
+      },
+      {
+        "identifier": "pusht_selection_0034",
+        "ordinal": 34,
+        "seed": 4810034
+      },
+      {
+        "identifier": "pusht_selection_0035",
+        "ordinal": 35,
+        "seed": 4810035
+      },
+      {
+        "identifier": "pusht_selection_0036",
+        "ordinal": 36,
+        "seed": 4810036
+      },
+      {
+        "identifier": "pusht_selection_0037",
+        "ordinal": 37,
+        "seed": 4810037
+      },
+      {
+        "identifier": "pusht_selection_0038",
+        "ordinal": 38,
+        "seed": 4810038
+      },
+      {
+        "identifier": "pusht_selection_0039",
+        "ordinal": 39,
+        "seed": 4810039
+      }
+    ]
+  },
+  "root": "/Users/rishisim/Documents/research/lewm-p2-contact/runs/lewm_pusht_replication_pilot",
+  "runtime": {
+    "device": "mps",
+    "python": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python",
+    "python_version": "3.10.20",
+    "required_generation_python": "/Users/rishisim/Documents/research/World Models/le-wm/.venv/bin/python",
+    "torch": "2.12.0"
+  },
+  "schema_version": 1,
+  "size_choice": "full",
+  "smoke": {
+    "compatibility": {
+      "all_latents_deterministic_within_tolerance": true,
+      "all_predictions_deterministic_within_tolerance": true,
+      "all_raw_deterministic": true,
+      "base_eval_mode": true,
+      "base_parameter_digest_after": "1b4656ac1171e23e269dea74faa67ef8de20fe9c0030a5bfa400fe5e726b1e3b",
+      "base_parameter_digest_before": "1b4656ac1171e23e269dea74faa67ef8de20fe9c0030a5bfa400fe5e726b1e3b",
+      "base_parameter_state_unchanged": true,
+      "base_requires_grad_false": true,
+      "blocked_action_dim_10": true,
+      "determinism_replays_not_retained_as_episodes": 2,
+      "exact_unique_smoke_episode_count": 2,
+      "latent_dim_192": true,
+      "one_step_prediction_finite": true,
+      "pixel_preprocessing": {
+        "finite": true,
+        "input_dtype": "uint8",
+        "input_shape": [
+          2,
+          224,
+          224,
+          3
+        ],
+        "output_dtype": "torch.float32",
+        "output_shape": [
+          2,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    "device": "mps",
+    "episodes": [
+      {
+        "base_prediction_shape": [
+          18,
+          192
+        ],
+        "blocked_action_shape": [
+          20,
+          10
+        ],
+        "determinism_replay_sha256": "8e516c55a45b47714011dc633eb30b4da60ce5be71bbfe914f8acb04efba5f30",
+        "deterministic_base_prediction_within_tolerance": true,
+        "deterministic_latents_within_tolerance": true,
+        "deterministic_raw_episode": true,
+        "finite": true,
+        "identifier": "pusht_smoke_excluded_000",
+        "latent_shape": [
+          21,
+          192
+        ],
+        "primary_generation_encoding_prediction_seconds": 1.5205787499999133,
+        "raw_steps": 100,
+        "seed": 9170001,
+        "strided_frames": 21,
+        "trajectory_sha256": "8e516c55a45b47714011dc633eb30b4da60ce5be71bbfe914f8acb04efba5f30",
+        "transition_count": 18
+      },
+      {
+        "base_prediction_shape": [
+          18,
+          192
+        ],
+        "blocked_action_shape": [
+          20,
+          10
+        ],
+        "determinism_replay_sha256": "41e67ff31f0cdebb2b0713ca56f19f321507153e2e21f7caa6123bf00c703408",
+        "deterministic_base_prediction_within_tolerance": true,
+        "deterministic_latents_within_tolerance": true,
+        "deterministic_raw_episode": true,
+        "finite": true,
+        "identifier": "pusht_smoke_excluded_001",
+        "latent_shape": [
+          21,
+          192
+        ],
+        "primary_generation_encoding_prediction_seconds": 0.1627319159997569,
+        "raw_steps": 100,
+        "seed": 9170002,
+        "strided_frames": 21,
+        "trajectory_sha256": "41e67ff31f0cdebb2b0713ca56f19f321507153e2e21f7caa6123bf00c703408",
+        "transition_count": 18
+      }
+    ],
+    "model_load_seconds": 4.916213291000531,
+    "schema_version": 1,
+    "throughput": {
+      "fixed_size_choice": "full",
+      "full_exceeds_six_hours": false,
+      "mean_primary_seconds_per_episode": 0.8416553329998351,
+      "primary_seconds_each": [
+        1.5205787499999133,
+        0.1627319159997569
+      ],
+      "projected_full_wall_seconds": 3872.6963278919466,
+      "projection_formula": "mean_smoke_episode_seconds * 240_full_episodes * 1.35 + 3600_second_fixed_training_analysis_reserve"
+    }
+  },
+  "source_hashes_at_lock": {
+    "pusht_core.py": "94d0ddaccfaad0c6bf34a0a1a257576ac43a6aeba2d1ee6b2a2b4238740f7416",
+    "run_pilot.py": "625f98370e9633734bd6bf9325cbea8d8dc8e1c34366968c77e3b55eb8307a42",
+    "tests/test_pilot.py": "ae894f4209745af8333140022d98b569f367abf3704b9a0f965c7a0a0d1fb06f",
+    "verify_pilot.py": "c7c552a1707c7c75bab20f3f458e91edfd5e00464380fa76bb4b95746c856f85"
+  },
+  "whitening": {
+    "fit_targets_only": true,
+    "symmetric_covariance_floor_ratio": 0.001
+  }
+}

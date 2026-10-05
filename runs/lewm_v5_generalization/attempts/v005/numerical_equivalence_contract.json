@@ -1,0 +1,13 @@
+{
+  "atol": 2e-07,
+  "calls_reproduced_from_float32_scores_and_frozen_thresholds": true,
+  "cross_batch_selected_latents_within_contract": true,
+  "depth_one_selected_rows_bitwise_exact": true,
+  "generalization_target_outcome_episodes": 0,
+  "manual_sparse_vs_forward_selected_bitwise_exact": true,
+  "maximum_absolute_error_ceiling": 4.76837158203125e-07,
+  "rtol": 2e-06,
+  "same_sparse_path_repeat_bitwise_exact": true,
+  "schema_version": 1,
+  "sparse_dense_calls_and_histograms_exact": true
+}

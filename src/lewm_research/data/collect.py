@@ -14,10 +14,10 @@ from lewm_research.policies.weak import BlockWeakPolicy, MixedPolicy
 
 
 def _episode(task):
-    episode_idx, steps, policy_name, seed = task
+    episode_idx, steps, policy_name, seed, placement = task
     episode_seed = int(np.random.SeedSequence([seed, episode_idx]).generate_state(1)[0])
     env = PushTPeg(with_target=False, terminate_on_success=False)
-    env.reset(seed=episode_seed, options={"peg_placement": "uniform"})
+    obs, info = env.reset(seed=episode_seed, options={"peg_placement": placement})
     policy = BlockWeakPolicy(seed=episode_seed) if policy_name == "block" else MixedPolicy(seed=episode_seed)
     # The raw environment has no Gym spec; registration gives the same class a spec.
     policy.env = env
@@ -28,11 +28,9 @@ def _episode(task):
     contact_frames = 0
     columns = {k: [] for k in ("pixels", "action", "proprio", "state", "episode_idx", "ep_idx", "step_idx")}
     try:
+        # Row t = observation before acting and the action taken from it (expert-data convention).
         for step_idx in range(steps):
             action = policy.get_action()[0]
-            obs, _, terminated, truncated, info = env.step(action)
-            if terminated or truncated:
-                raise RuntimeError("PushTPeg ended before fixed episode length")
             columns["pixels"].append(env.render().astype(np.uint8, copy=False))
             columns["action"].append(action)
             columns["proprio"].append(obs["proprio"].astype(np.float32))
@@ -40,6 +38,9 @@ def _episode(task):
             columns["episode_idx"].append(np.int32(episode_idx))
             columns["ep_idx"].append(np.int32(episode_idx))
             columns["step_idx"].append(np.int32(step_idx))
+            obs, _, terminated, truncated, info = env.step(action)
+            if terminated or truncated:
+                raise RuntimeError("PushTPeg ended before fixed episode length")
             max_displacement = max(max_displacement, float(np.linalg.norm(info["peg_pos"] - initial_peg)))
             contact_frames += int(info["peg_contact"])
     finally:
@@ -68,7 +69,7 @@ def _write_episode(file, episode, ep_idx, offset):
         dataset[ep_idx] = value
 
 
-def collect(name, episodes, steps=100, policy="block", seed=0, workers=1):
+def collect(name, episodes, steps=100, policy="block", seed=0, workers=1, placement="clutter"):
     """Collect one named dataset, failing if it already exists."""
     if episodes < 1 or steps < 1 or workers < 1:
         raise ValueError("episodes, steps, and workers must be positive")
@@ -81,7 +82,9 @@ def collect(name, episodes, steps=100, policy="block", seed=0, workers=1):
     metadata_path = path.with_suffix(".json")
     if path.exists() or metadata_path.exists():
         raise FileExistsError(path)
-    tasks = ((i, steps, policy, seed) for i in range(episodes))
+    if placement not in {"uniform", "clutter"}:
+        raise ValueError("placement must be uniform or clutter")
+    tasks = ((i, steps, policy, seed, placement) for i in range(episodes))
     start = time.perf_counter()
     records = []
     try:
@@ -102,7 +105,7 @@ def collect(name, episodes, steps=100, policy="block", seed=0, workers=1):
     elapsed = time.perf_counter() - start
     frames = episodes * steps
     metadata = {
-        "dataset": str(path), "policy": policy, "seed": seed,
+        "dataset": str(path), "policy": policy, "seed": seed, "placement": placement,
         "episodes": episodes, "steps_per_episode": steps, "frames": frames,
         "workers": workers,
         "fraction_episodes_peg_displacement_gt_5px": sum(r["peg_displaced"] for r in records) / episodes,

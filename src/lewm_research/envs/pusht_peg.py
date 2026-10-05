@@ -14,6 +14,8 @@ from stable_worldmodel.envs.pusht.env import PushT
 
 PEG_COLOR = (230, 126, 34)
 PEG_RADIUS = 15
+CLUTTER_MIN_BLOCK_DIST = 180
+CLUTTER_MIN_AGENT_DIST = 100
 
 
 class PushTPeg(PushT):
@@ -174,12 +176,18 @@ class PushTPeg(PushT):
         return any(disc.intersects(geometry) for body in (self.agent, self.block)
                    for geometry in self._shape_geometry(body))
 
-    def _sample_peg(self):
+    def _sample_peg(self, placement="uniform"):
+        """Sample a non-overlapping peg; ``clutter`` keeps it away from the block and agent."""
+        block, agent = np.asarray(self.block.position), np.asarray(self.agent.position)
         for _ in range(10000):
             xy = self.np_random.uniform(30 + PEG_RADIUS, 512 - 30 - PEG_RADIUS, size=2)
-            if not self.peg_overlaps(xy):
-                return xy
-        raise RuntimeError("Could not place peg without overlap")
+            if self.peg_overlaps(xy):
+                continue
+            if placement == "clutter" and (np.linalg.norm(xy - block) < CLUTTER_MIN_BLOCK_DIST
+                                           or np.linalg.norm(xy - agent) < CLUTTER_MIN_AGENT_DIST):
+                continue
+            return xy
+        raise RuntimeError(f"Could not place peg ({placement})")
 
     def reset(self, seed=None, options=None):
         # Let the upstream reset initialize variations and the Pymunk space.
@@ -201,10 +209,10 @@ class PushTPeg(PushT):
         upstream_options = {**options, "state": start, "goal_state": goal}
         super().reset(seed=seed, options=upstream_options)
         if placement is not None:
-            if placement != "uniform":
-                raise ValueError("peg_placement must be 'uniform'")
+            if placement not in {"uniform", "clutter"}:
+                raise ValueError("peg_placement must be 'uniform' or 'clutter'")
             start = start.copy()
-            start[7:9] = self._sample_peg()
+            start[7:9] = self._sample_peg(placement)
             self._set_state(start)
             if "goal_state" not in options:
                 goal = start.copy()

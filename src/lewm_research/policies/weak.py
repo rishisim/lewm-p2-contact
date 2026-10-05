@@ -31,6 +31,9 @@ class _WeakPolicy:
     def _target(self, env, index):
         raise NotImplementedError
 
+    def _limit(self, env, index):
+        return self.dist_constraint
+
     def get_action(self, info_dict=None, **kwargs):
         if not hasattr(self, "env"):
             raise RuntimeError("Call set_env first")
@@ -38,7 +41,8 @@ class _WeakPolicy:
         for i, env in enumerate(self._envs()):
             target = np.asarray(self._target(env, i))
             desired = np.asarray(env.agent.position) + self.rng.uniform(-1, 1, 2) * env.action_scale
-            desired = np.clip(desired, target - self.dist_constraint, target + self.dist_constraint)
+            limit = self._limit(env, i)
+            desired = np.clip(desired, target - limit, target + limit)
             action = np.clip((desired - np.asarray(env.agent.position)) / env.action_scale, -1, 1)
             if self.discrete:
                 action = env.quantizer.quantize(action)
@@ -57,9 +61,14 @@ class PegWeakPolicy(_WeakPolicy):
 
 
 class MixedPolicy(_WeakPolicy):
-    def __init__(self, dist_constraint=100, seed=None, p_peg=0.5):
+    """Per-episode block- or peg-centered actions; peg episodes use a tighter box to make contact."""
+
+    def __init__(self, dist_constraint=100, seed=None, p_peg=0.5, peg_dist_constraint=30):
         super().__init__(dist_constraint, seed)
+        if peg_dist_constraint <= 0:
+            raise ValueError("peg_dist_constraint must be positive")
         self.p_peg = p_peg
+        self.peg_dist_constraint = peg_dist_constraint
         self.choices = {}
 
     def begin_episode(self, episode_idx):
@@ -72,3 +81,6 @@ class MixedPolicy(_WeakPolicy):
         if not hasattr(self, "current_choice"):
             self.begin_episode(0)
         return env.peg.position if self.current_choice == "peg" else env.block.position
+
+    def _limit(self, env, index):
+        return self.peg_dist_constraint if self.current_choice == "peg" else self.dist_constraint

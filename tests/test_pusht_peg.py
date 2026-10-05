@@ -97,3 +97,31 @@ def test_collection_round_trip(tmp_path, monkeypatch):
     assert tuple(episode["proprio"].shape) == (10, 4)
     assert tuple(episode["state"].shape) == (10, 9)
     assert json.loads((tmp_path / "stable-worldmodel/datasets/tiny.json").read_text())["frames"] == 20
+
+
+def test_clutter_placement_keeps_distance():
+    from lewm_research.envs.pusht_peg import CLUTTER_MIN_AGENT_DIST, CLUTTER_MIN_BLOCK_DIST
+
+    env = PushTPeg(with_target=False)
+    try:
+        for seed in range(100):
+            obs, _ = env.reset(seed=seed, options={"peg_placement": "clutter"})
+            state = obs["state"]
+            assert np.linalg.norm(state[7:9] - state[2:4]) >= CLUTTER_MIN_BLOCK_DIST
+            assert np.linalg.norm(state[7:9] - state[0:2]) >= CLUTTER_MIN_AGENT_DIST
+            assert not env.peg_overlaps(state[7:9])
+    finally:
+        env.close()
+
+
+def test_collection_rows_pair_observation_with_action_taken_from_it(tmp_path, monkeypatch):
+    monkeypatch.setenv("LEWM_WORK_ROOT", str(tmp_path))
+    metadata = collect("aligned", episodes=1, steps=30, policy="block", seed=7, workers=1)
+    episode = HDF5Dataset(path=metadata["dataset"]).load_episode(0)
+    state = np.asarray(episode["state"])
+    action = np.asarray(episode["action"])
+    # Row 0 is the reset state (agent at rest); action t moves the agent toward t+1.
+    np.testing.assert_allclose(state[0, 5:7], 0.0)
+    move = state[1:, :2] - state[:-1, :2]
+    cos = np.sum(move * action[:-1], axis=1) / (np.linalg.norm(move, axis=1) * np.linalg.norm(action[:-1], axis=1) + 1e-9)
+    assert np.mean(cos) > 0.5

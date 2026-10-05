@@ -11,7 +11,7 @@ from .device import resolve_device
 from .lewm import load_lewm
 from .paths import checkpoint_dir
 from .planning import config_dict, make_solver, pusht_config
-from .probes import synthetic_info
+from .gates import synthetic_info
 from .runs import create_run, write_metrics
 
 

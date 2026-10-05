@@ -28,7 +28,8 @@ Primary files:
 - `checklist.tex` — completed official NeurIPS 2026 paper checklist
 - `references.bib` — verified focused bibliography
 - `figures/` — consolidated main evidence plus two supplementary figures
-- `main.pdf` — ignored local build; the retained submission PDF lives outside Git
+- `main.pdf` — ignored local build; the archival PDF is attached to the
+  [GitHub Release](https://github.com/rishisim/lewm-p2-contact/releases/tag/adaptive-prediction-paper-v1)
 - `SOURCE_MAP.md` — claim/figure/table-to-artifact traceability
 - `generate_figures.py` — the sole read-only extraction/figure script
 
@@ -56,7 +57,7 @@ The bundled LaTeX workflow selected the installed TeX Live toolchain. Build
 from the LaTeX skill root:
 
 ```bash
-cd /Users/rishisim/.codex/plugins/cache/openai-bundled/latex/0.2.6
+cd /Users/rishisim/.codex/plugins/cache/openai-bundled/latex/0.2.8
 python3 scripts/compile_latex.py \
   /Users/rishisim/Documents/research/lewm-p2-contact/manuscript/main.tex
 ```
@@ -65,6 +66,15 @@ The command runs `latexmk`, BibTeX, and the required reruns and writes
 `manuscript/main.pdf`.
 
 ## Validation record
+
+Archival consolidation on October 5, 2026 reran the evidence checker with
+checkout-first resolution and fallback to the sibling local artifact archive;
+all checks passed. Figure reconstruction passed the indexed source hashes and
+numerical assertions. The PDF was rebuilt with TeX Live 2026 and all 20 pages
+were rendered and inspected: the body occupies eight pages, followed by
+references, supplementary material, and the checklist. The temporary runtime
+used NumPy 2.2.6, Matplotlib 3.10.9, and SciPy 1.14.1 because the existing SciPy
+1.15.3 binary failed to load on this Mac. No experiment was rerun or changed.
 
 - Synthesis checker before drafting: passed with
   `"all_checks_passed": true` at

@@ -2,7 +2,7 @@
 
 Status: `paper_ready_bounded_prediction_claim`
 
-This branch is the canonical record for the completed adaptive-prediction
+The consolidated `main` branch is the canonical record for the completed adaptive-prediction
 research line. It combines the tracked V1--V5 development history with the
 curated manuscript, Cube generalization result, PushT pilot and binary
 confirmation, planning-boundary diagnostics, marginal-value analysis, paper
@@ -21,6 +21,15 @@ wall-clock or energy savings, direct Cube-to-PushT transfer, universal
 robustness, or literal end-to-end FLOP equality. The planning bridge is a
 negative boundary result, and the independent audit supports V5 with recorded
 caveats.
+
+## Archival disposition
+
+The completed paper state is frozen by `adaptive-prediction-paper-v1`, with its
+compiled PDF attached to the corresponding GitHub Release. The planner-aware
+negative follow-on is preserved by `archive/planner-aware-follow-on`; the
+unfinished domain-robust program is preserved by `archive/domain-robust-gate`.
+Their own status records remain authoritative for those lines. See the root
+README for recovery instructions and the unverified external-backup status.
 
 ## Artifact policy
 

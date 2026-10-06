@@ -52,6 +52,65 @@ labels, required paired 15→45 reduction, radius-15 sanity check, corrected pat
 Phase B (big-peg fine-tuning + G contrast at N=100) runs only if the reading is not
 "size substantially explains", and only after the user approves the GPU spend.
 
-## Phase A results
+## Phase A results (run 2026-10-06, ~4 min compute; `lewm probe-size-control`)
 
-_Pending._
+Pool: 2800 frames from 28 held-out episodes (14 per training dataset × 100 frames; the val-split
+intersection caps it below 4000 per dataset). Peg errors in px, [episode-bootstrap 95% CI],
+paired across radii. Full table incl. T, ratios and flags: `size_control_phaseA_full.md`.
+Run dir: `~/lewm-work/runs/size-control/phaseA/`.
+
+| Checkpoint | Kind | Peg r15 | Peg r30 | Peg r45 | T r45 | Peg/mean r45 | Peg/pixel r45 | 15→45 reduction |
+|---|---|---|---|---|---|---|---|---|
+| ft_block_s0 | cls | 139.1 [136.7, 141.5] | 138.6 [136.3, 141.1] | 137.6 [135.1, 140.2] | 19.4 [16.2, 23.3] | 0.98 [0.97, 0.99] | 9.47 [6.47, 14.05] | 1.5 [0.5, 2.3] |
+| ft_block_s0 | projected | 141.8 [139.1, 144.6] | 142.2 [139.5, 145.3] | 142.8 [139.7, 146.3] | 24.9 [20.7, 30.1] | 1.02 [1.00, 1.03] | 9.82 [6.69, 14.59] | -1.0 [-2.6, 0.3] |
+| ft_block_s1 | cls | 139.1 [136.7, 141.5] | 138.5 [136.1, 140.9] | 137.3 [134.9, 139.8] | 20.9 [17.4, 25.1] | 0.98 [0.97, 0.99] | 9.45 [6.46, 14.03] | 1.8 [0.9, 2.6] |
+| ft_block_s1 | projected | 141.6 [139.0, 144.4] | 142.1 [139.4, 145.0] | 142.7 [139.7, 146.0] | 24.1 [20.4, 28.6] | 1.01 [1.00, 1.03] | 9.82 [6.69, 14.57] | -1.1 [-2.5, 0.1] |
+| ft_mixed_s0 | cls | 139.3 [136.7, 141.8] | 139.4 [136.8, 142.1] | 139.3 [136.6, 142.1] | 20.4 [18.0, 23.4] | 0.99 [0.98, 1.00] | 9.58 [6.55, 14.22] | -0.1 [-0.6, 0.4] |
+| ft_mixed_s0 | projected | 140.9 [138.3, 143.6] | 141.2 [138.5, 143.9] | 141.5 [138.7, 144.4] | 26.4 [21.7, 31.8] | 1.01 [0.99, 1.01] | 9.74 [6.66, 14.45] | -0.6 [-1.2, -0.0] |
+| ft_mixed_s1 | cls | 139.4 [136.9, 142.0] | 139.6 [137.0, 142.3] | 139.4 [136.7, 142.2] | 20.8 [17.6, 24.5] | 0.99 [0.98, 1.00] | 9.59 [6.56, 14.23] | 0.0 [-0.5, 0.5] |
+| ft_mixed_s1 | projected | 141.2 [138.5, 143.9] | 141.5 [138.7, 144.3] | 141.7 [138.9, 144.6] | 27.3 [22.9, 32.3] | 1.01 [1.00, 1.02] | 9.75 [6.68, 14.46] | -0.5 [-1.1, -0.0] |
+| lewm-pusht | cls | 138.5 [135.2, 141.6] | 121.3 [109.8, 134.5] | 92.1 [77.5, 109.8] | 36.2 [29.9, 43.8] | 0.65 [0.55, 0.78] | 6.27 [3.97, 10.04] | 46.4 [30.2, 59.5] |
+| lewm-pusht | projected | 141.1 [137.8, 144.3] | 141.4 [137.0, 145.8] | 139.5 [133.1, 146.4] | 44.6 [34.0, 57.8] | 0.99 [0.96, 1.03] | 9.50 [6.27, 14.32] | 1.6 [-3.6, 5.6] |
+
+| Baseline (peg error, px) | r15 | r30 | r45 |
+|---|---|---|---|
+| Pixel ridge 32x32, no decoration (fine-tuned) | 116.6 [77.5, 169.8] | 30.1 [22.8, 38.2] | 14.5 [9.7, 21.4] |
+| Pixel ridge 32x32, green-T decoration (pretrained) | 115.2 [76.9, 167.0] | 30.6 [23.0, 38.9] | 14.7 [9.7, 22.0] |
+| Mean predictor | 140.7 [138.0, 143.3] | 140.7 [138.0, 143.3] | 140.7 [138.0, 143.3] |
+
+### Pre-stated reading, applied mechanically
+
+All 8 fine-tuned cells are **size-unexplained** (peg error at r45 = 0.98–1.02 × mean predictor,
+threshold 0.8). Radius-15 sanity check passed in all 8 (deficit reproduced). Flags: the 15→45
+reduction CI straddles 0 in 4 cells; no cell is near the 0.8 × mean threshold.
+
+**Overall reading: "size alone does not explain it."** Per the design, this means test-time
+enlargement does not rescue frozen-encoder readout; it does not exclude a training-time size
+effect and says nothing directly about planning.
+
+### Interpretation
+
+At radius 45 the peg is easy to read linearly from raw 32×32 pixels (14.5 px), yet every
+fine-tuned checkpoint's CLS and projected embedding stays at mean-predictor level (~140 px) while
+reading the T to 19–27 px, a peg/pixel ratio of ~9.5. Enlarging the peg to T scale changes
+nothing for the fine-tuned encoders (largest reduction 1.8 px). The pretrained checkpoint, which never saw a
+peg in training, does partly pick up a large one in CLS (138 → 92 px), so the fine-tuned encoders look
+specifically insensitive to the orange disc rather than unable to see objects of that size.
+Caveats: this pool differs from the main readout pool (no condition endpoints; narrower peg
+support), so absolute numbers are not comparable (mean baseline 141 vs 186 px; r15 pixel ridge
+117 px here vs 19 px there). Within this pool, r15 is therefore uninformative about a deficit
+relative to pixels; the informative contrast is r45. The CIs come from only 28 episode clusters.
+Big pegs are out of distribution for these frozen encoders, which Phase B addresses.
+
+## Phase B
+
+Gated on user approval of the GPU spend (cap $3). Not run yet.
+
+## Out-of-scope ideas
+
+- Why the main-pool pixel ridge reads a radius-15 peg to 19 px but this pool's only to 117 px
+  (condition-endpoint frames vs dataset frames; peg-position distribution). Worth one look before
+  quoting the main-run peg/pixel ratio as evidence on its own.
+- The pretrained encoder reads the big peg better than fine-tuned ones: a direct test of whether
+  fine-tuning on peg data actively suppresses the peg (e.g. readout across fine-tuning steps
+  using the 250-step checkpoints, if retained).

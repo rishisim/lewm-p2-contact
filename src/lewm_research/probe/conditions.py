@@ -10,7 +10,7 @@ from shapely.geometry import LineString
 
 import lewm_research.envs  # noqa: F401
 from ..envs.pusht_peg import PushTPeg
-from ..policies.weak import BlockWeakPolicy
+from ..policies.weak import BlockWeakPolicy, PegWeakPolicy
 
 NAMES = ("off_path", "on_path", "move_peg", "move_T_matched")
 
@@ -25,6 +25,7 @@ class BaseScene:
     t_goal_pose: list
     goal_agent_xy: list
     snapshot: dict
+    rollout_tasks: dict | None = None
 
 
 @dataclass
@@ -66,105 +67,136 @@ def _free(env, state):
             and np.all((state[7:9] >= 45) & (state[7:9] <= 467)))
 
 
-def make_conditions(base, displacement_range=(60, 100), render_images=True):
-    """Return all four conditions or raise ValueError for infeasible geometry."""
-    if len(displacement_range) != 2 or not 0 < displacement_range[0] < displacement_range[1]:
-        raise ValueError("displacement range must have positive increasing endpoints")
-    env = PushTPeg(with_target=True, render_target_pose=(256, 256, np.pi / 4))
+def make_conditions(base, displacement_range=(40,100), render_images=True, with_target=True):
+    """Construct only the canonical W4c tasks; legacy scenes remain readable."""
+    if base.rollout_tasks is None:
+        raise ValueError("archived pre-W4c scenes require their original Git revision")
+    if tuple(displacement_range) != (40,100):
+        raise ValueError("W4c fixes displacement range=(40,100)")
+    return _rollout_conditions(base, render_images, with_target)
+
+
+def _rollout_conditions(base, render_images, with_target):
+    """Stored physical endpoints; preserve all start velocities."""
+    env = PushTPeg(with_target=with_target, render_target_pose=(256,256,np.pi/4))
+    result = {}
     try:
         env.reset(seed=base.seed)
-        env.restore_snapshot(base.snapshot)
-        start = env._get_obs()
-        target = start.copy()
-        target[:2] = base.goal_agent_xy
-        target[2:5] = base.t_goal_pose
-        rng = np.random.default_rng(base.seed ^ 0x5744)
-        if not _free(env, start) or not _free(env, target):
-            raise ValueError("start or goal geometry invalid")
-        if segment_distance(start[7:9], start[2:4], target[2:4]) < 80:
-            raise ValueError("off-path peg too close")
-        on = None
-        # Midpoint first, then deterministic jitter restricted to the segment.
-        for fraction in [0.5, *rng.uniform(0.05, 0.95, 200)]:
-            xy = start[2:4] + fraction * (target[2:4] - start[2:4])
-            a, b = start.copy(), target.copy()
-            a[7:9] = b[7:9] = xy
-            if _free(env, a) and _free(env, b):
-                on = xy
-                break
-        if on is None:
-            raise ValueError("no non-overlapping on-path location")
-        vector = None
-        for _ in range(2000):
-            angle, length = rng.uniform(0, 2 * np.pi), rng.uniform(*displacement_range)
-            v = length * np.array([np.cos(angle), np.sin(angle)])
-            peg_goal, t_goal = start.copy(), start.copy()
-            peg_goal[7:9] += v
-            t_goal[2:4] += v
-            if (_free(env, peg_goal) and _free(env, t_goal)
-                    and segment_distance(start[7:9], start[2:4], t_goal[2:4]) >= 80):
-                vector = v
-                break
-        if vector is None:
-            raise ValueError("no matched translation")
-        result = {}
-        for name in NAMES:
-            initial, goal = start.copy(), target.copy()
-            if name == "on_path":
-                initial[7:9] = goal[7:9] = on
-            elif name == "move_peg":
-                goal = start.copy()
-                goal[7:9] += vector
-            elif name == "move_T_matched":
-                goal = start.copy()
-                goal[2:4] += vector
-            env.restore_snapshot(base.snapshot)
-            env._set_state(initial)
-            env.set_goal(goal)
-            result[name] = Condition(name, base.id, jsonable(env.get_snapshot()), goal.tolist(),
-                                     {"peg": "target" if name == "move_peg" else "preserve",
-                                      "peg_start": initial[7:9].tolist()}, env.render_state(goal) if render_images else None)
+        for name, task in base.rollout_tasks.items():
+            env.restore_snapshot(task["snapshot"])
+            env.set_goal(task["goal_state"])
+            result[name] = Condition(name, base.id, jsonable(env.get_snapshot()), task["goal_state"],
+                {"peg":"target" if name=="move_peg" else "preserve", "peg_start":list(env.peg.position)},
+                env.render_state(task["goal_state"]) if render_images else None)
         return result
     finally:
         env.close()
 
 
-def generate_bases(n, seed, min_t_displacement=60, displacement_range=(60, 100)):
-    """Reject invalid scenes; goals come from a verified peg-parked rollout."""
-    if n < 1 or seed < 0 or min_t_displacement <= 0:
-        raise ValueError("n must be positive and seed nonnegative")
-    env = gym.make("swm/PushTPeg-v1", with_target=False)
+def _weak_trace(env, snapshot, policy, steps=300):
+    raw = env.unwrapped
+    raw._setup()
+    raw.restore_snapshot(snapshot)
+    policy.set_env(env)
+    states, snapshots, actions = [raw._get_obs().copy()], [jsonable(raw.get_snapshot())], []
+    for _ in range(steps):
+        action = policy.get_action()[0]
+        env.step(action)
+        states.append(raw._get_obs().copy())
+        snapshots.append(jsonable(raw.get_snapshot()))
+        snapshots[-1]["goal"] = None
+        actions.append(action.tolist())
+    return np.asarray(states), snapshots, actions
+
+
+def _window(states, object_indices, stationary_indices, maximum=None, bin_index=None, small_rotation=False):
+    for t in range(len(states)-25):
+        start, goal = states[t], states[t+25]
+        length = np.linalg.norm(goal[object_indices]-start[object_indices])
+        fixed = np.max(np.abs(states[t:t+26, stationary_indices]-start[stationary_indices])) < 1e-6
+        angle = abs((goal[4]-start[4]+np.pi)%(2*np.pi)-np.pi)
+        if (np.linalg.norm(start[:2]-start[object_indices])<=40 and length>=40
+                and (maximum is None or length<=maximum) and fixed
+                and (bin_index is None or min(2,int((length-40)//20))==bin_index)
+                and (not small_rotation or angle<np.pi/9)):
+            return t
+    return None
+
+
+def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100)):
+    """W4c paired D/G rollout windows from the same clutter scene.
+
+    The first qualifying D window is used; invalid midpoint geometry discards
+    the scene. Witness actions establish reachability, never initialize CEM.
+    """
+    from copy import deepcopy
+    if n<1 or seed<0 or min_t_displacement!=40 or tuple(displacement_range)!=(40,100):
+        raise ValueError("W4c fixes minimum=40 and displacement range=(40,100)")
+    env = gym.make("swm/PushTPeg-v1",with_target=False,max_episode_steps=10000)
     bases = []
     try:
-        for attempt in range(10000 * n):
-            scene_seed = int(np.random.SeedSequence([seed, attempt]).generate_state(1)[0])
-            obs, _ = env.reset(seed=scene_seed, options={"peg_placement": "clutter"})
+        for attempt in range(10000*n):
+            scene_seed = int(np.random.SeedSequence([seed,attempt]).generate_state(1)[0])
+            obs,_ = env.reset(seed=scene_seed,options={"peg_placement":"clutter"})
             raw = env.unwrapped
-            start = obs["state"].copy()
-            if not _free(raw, start):
+            if not _free(raw,obs["state"]):
                 continue
-            snap = raw.get_snapshot()
-            parked = start.copy()
-            parked[7:9] = (-1000, -1000)
-            raw._set_state(parked)
-            policy = BlockWeakPolicy(seed=scene_seed)
-            policy.set_env(env)
-            for _ in range(25):
-                env.step(policy.get_action()[0])
-            goal = raw._get_obs()
-            if not np.array_equal(goal[7:9], parked[7:9]):
-                raise RuntimeError("parked peg moved")
-            if np.linalg.norm(goal[2:4] - start[2:4]) < min_t_displacement:
+            original = jsonable(raw.get_snapshot()); original["goal"] = None
+            ts,snaps,actions = _weak_trace(env,original,BlockWeakPolicy(seed=scene_seed))
+            d = _window(ts,slice(2,4),slice(7,9))
+            if d is None:
                 continue
-            base = BaseScene(f"{seed}:{attempt}", scene_seed, start[:2].tolist(),
-                             start[2:5].tolist(), start[7:9].tolist(), goal[2:5].tolist(),
-                             goal[:2].tolist(), jsonable(snap))
-            try:
-                make_conditions(base, displacement_range, render_images=False)
-            except ValueError:
+            start,goal = ts[d],ts[d+25]
+            if segment_distance(start[7:9],start[2:4],goal[2:4])<80:
                 continue
-            bases.append(base)
-            if len(bases) == n:
+            on = (start[2:4]+goal[2:4])/2
+            a,b = start.copy(),goal.copy(); a[7:9]=b[7:9]=on
+            raw._set_state(a); valid = not raw.peg_overlaps(on)
+            raw._set_state(b)
+            if not valid or raw.peg_overlaps(on) or not np.all((on>=45)&(on<=467)):
+                continue
+            ps,psnaps,pactions = _weak_trace(env,original,PegWeakPolicy(dist_constraint=30,seed=scene_seed))
+            g = _window(ps,slice(7,9),slice(2,5),maximum=100)
+            if g is None:
+                continue
+            length = np.linalg.norm(ps[g+25,7:9]-ps[g,7:9]); bin_index = min(2,int((length-40)//20))
+            m = _window(ts,slice(2,4),slice(7,9),maximum=100,bin_index=bin_index,small_rotation=True)
+            if m is None:
+                continue
+            tasks = {}
+            for name,states,snapshots,acts,t in (("off_path",ts,snaps,actions,d),("on_path",ts,snaps,actions,d),
+                    ("move_peg",ps,psnaps,pactions,g),("move_T_matched",ts,snaps,actions,m)):
+                snap,end = deepcopy(snapshots[t]),states[t+25].copy()
+                if name=="on_path":
+                    snap["bodies"]["peg"]["position"]=on.tolist()
+                    snap["bodies"]["peg"]["velocity"]=[0,0]; end[7:9]=on
+                tasks[name] = {"snapshot":snap,"goal_state":end.tolist(),"rollout_t":t,
+                    "witness_actions":acts[t:t+25],"displacement_bin":bin_index if name.startswith("move_") else None,
+                    "displacement_px":float(np.linalg.norm(end[7:9]-states[t,7:9]) if name=="move_peg"
+                                            else np.linalg.norm(end[2:4]-states[t,2:4]))}
+            # Snapshot restores cannot retain Chipmunk's cached contact impulses.
+            # Reject a scene if the original action witness cannot solve its
+            # unchanged goal after a fresh restore, as evaluation will start it.
+            witnessed = True
+            for name in ("off_path", "move_peg", "move_T_matched"):
+                task = tasks[name]
+                raw._setup()
+                raw.restore_snapshot(task["snapshot"])
+                trajectory = [raw._get_obs().copy()]
+                for action in task["witness_actions"]:
+                    trajectory.append(raw.step(np.asarray(action, dtype=np.float32))[0]["state"].copy())
+                c = Condition(name, "construction", task["snapshot"], task["goal_state"],
+                    {"peg":"target" if name=="move_peg" else "preserve",
+                     "peg_start":trajectory[0][7:9].tolist()}, None)
+                task["witness_replay_score"] = score_trajectory(trajectory, c)
+                task["witness_replay_max_state_error"] = float(np.max(np.abs(trajectory[-1]-task["goal_state"])))
+                witnessed &= task["witness_replay_score"]["success"]
+            if not witnessed:
+                continue
+            bases.append(BaseScene(f"{seed}:{attempt}",scene_seed,start[:2].tolist(),start[2:5].tolist(),
+                start[7:9].tolist(),goal[2:5].tolist(),goal[:2].tolist(),snaps[d],tasks))
+            print(f"accepted {len(bases)}/{n} scene attempt={attempt}",flush=True)
+            if len(bases)==n:
                 return bases
         raise RuntimeError(f"Only generated {len(bases)}/{n} feasible bases")
     finally:

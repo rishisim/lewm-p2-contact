@@ -104,7 +104,7 @@ def bench_sim(device: str = typer.Option("auto", help="auto, cuda, mps, or cpu."
 def probe_eval_cmd(
     arm: str = typer.Option(...), bases: str = typer.Option(...),
     conditions: str = typer.Option("all"), seed: int = typer.Option(42),
-    budget: int = typer.Option(50), displacement_min: int = typer.Option(60),
+    budget: int = typer.Option(50), displacement_min: int = typer.Option(40),
     displacement_max: int = typer.Option(100),
     n: int = typer.Option(100, min=1), workers: int = typer.Option(4, min=1),
     population: int | None = typer.Option(None, min=2),
@@ -112,6 +112,8 @@ def probe_eval_cmd(
     topk: int | None = typer.Option(None, min=2), device: str = typer.Option("auto"),
     run_dir: str | None = typer.Option(None, help="Existing run directory to resume."),
     feasibility_run: str | None = typer.Option(None, help="Reference run under separate feasibility seed F."),
+    approach_weight: float = typer.Option(0, min=0),
+    with_target: bool | None = typer.Option(None, help="Fixed training-data T decoration; default per arm."),
 ) -> None:
     """Run matched fixed-budget episodes, resuming a specified run directory."""
     from .probe.rollout_eval import evaluate
@@ -122,7 +124,8 @@ def probe_eval_cmd(
                                   feasibility_run=feasibility_run, budget=budget,
                                   displacement_range=(displacement_min, displacement_max),
                                   workers=workers, population=population, iterations=iterations,
-                                  topk=topk, device=device), indent=2))
+                                  topk=topk, device=device, approach_weight=approach_weight,
+                                  with_target=with_target), indent=2))
 
 
 @app.command("probe-pilot")

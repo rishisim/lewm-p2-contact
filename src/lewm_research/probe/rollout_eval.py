@@ -52,7 +52,11 @@ class PersistedScaler:
 class Planner:
     """Reusable model/pool; fresh seeded solver and policy for every episode."""
 
-    def __init__(self, arm, workers=1, population=None, iterations=None, topk=None, device="auto", normalization=None):
+    def __init__(self, arm, workers=1, population=None, iterations=None, topk=None, device="auto", normalization=None, approach_weight=0, with_target=None):
+        if arm != "reference" and approach_weight != 0:
+            raise ValueError("approach shaping is reference-only")
+        self.approach_weight = approach_weight
+        self.with_target = (arm in ("reference", "lewm-pusht")) if with_target is None else with_target
         self.arm = arm
         self.stats = normalization if normalization is not None else load_normalization(
             checkpoint_dir("lewm-pusht" if arm == "reference" else arm))
@@ -74,7 +78,7 @@ class Planner:
     def start(self, condition, envs, seed):
         if self.arm == "reference":
             if self.cost is None:
-                self.cost = SimulatorCost(condition, self.stats, self.workers)
+                self.cost = SimulatorCost(condition, self.stats, self.workers, self.approach_weight)
             self.cost.condition = condition
             self.cost.snapshot = condition.start_snapshot
             self.cost.prior_max = 0
@@ -101,9 +105,9 @@ def episode_seed(seed, base_id, condition):
     return int.from_bytes(digest[:4], "little")
 
 
-def controlled_steps(world, planner, budget, before_plan=None, fixed_goal=None):
+def controlled_steps(world, planner, budget, before_plan=None, fixed_goal=None, start_step=0):
     """Shared full-budget loop for probe episodes and the no-peg fidelity gate."""
-    for step in range(budget):
+    for step in range(start_step, budget):
         planning = step % 25 == 0
         if planning and before_plan:
             before_plan()
@@ -118,11 +122,11 @@ def controlled_steps(world, planner, budget, before_plan=None, fixed_goal=None):
         yield step, action, planning_s
 
 
-def run_episode(base, condition, planner, seed, population_path=None, budget=50):
+def run_episode(base, condition, planner, seed, population_path=None, budget=50, prefix_record=None, prefix_population=None):
     """Execute the fixed budget, irrespective of env success/termination."""
     started = time.perf_counter()
     world = swm.World("swm/PushTPeg-v1", num_envs=1, image_shape=(224, 224),
-                      max_episode_steps=max(100, budget + 1), with_target=True,
+                      max_episode_steps=max(100, budget + 1), with_target=planner.with_target,
                       render_target_pose=(256, 256, np.pi / 4))
     try:
         # Wheel MegaWrapper + EnvPool construct the exact (env,time,...) info
@@ -139,20 +143,44 @@ def run_episode(base, condition, planner, seed, population_path=None, budget=50)
         trajectory = [raw._get_obs().copy()]
         actions, planning_times, populations = [], [], []
         checkpoints = {}
+        start_step, prefix_wall = 0, 0.0
+        if prefix_record is not None:
+            if planner.arm != "reference" or budget != 100 or len(prefix_record["actions"]) != 50:
+                raise ValueError("only reference 50-to-100 extensions are supported")
+            # Replaying physical actions retains live contact-cache state. A
+            # snapshot at step 50 would not. Full horizon execution leaves no
+            # warm-start tail; only the wheel CEM generator must be advanced.
+            for action in prefix_record["actions"]:
+                _, _, _, _, world.infos = world.envs.step(np.asarray([action], dtype=np.float32))
+                trajectory.append(raw._get_obs().copy())
+                actions.append(action)
+            if not np.array_equal(trajectory, prefix_record["trajectory"]):
+                raise ValueError("reference prefix replay differs")
+            for _ in range(2 * planner.iterations):
+                torch.randn(1, planner.population, 5, 10,
+                            generator=planner.policy.solver.torch_gen, dtype=torch.float32)
+            planning_times = list(prefix_record["planning_times_s"])
+            checkpoints = dict(prefix_record["budget_checkpoints"])
+            prefix_wall = prefix_record["wall_s"]
+            start_step = 50
+            if prefix_population is not None:
+                with np.load(prefix_population) as bank:
+                    populations = [{k: torch.from_numpy(bank[f"call{i}_{k}"].copy())
+                        for k in ("candidates", "costs", "topk_candidates", "topk_vals")} for i in range(2)]
         def before_plan():
             if planner.cost:
                 planner.cost.snapshot = jsonable(raw.get_snapshot())
                 planner.cost.prior_max = max(np.linalg.norm(s[7:9] - condition.scoring_spec["peg_start"])
                                             for s in trajectory)
 
-        for step, action, planning_s in controlled_steps(world, planner, budget, before_plan):
+        for step, action, planning_s in controlled_steps(world, planner, budget, before_plan, start_step=start_step):
             if planning_s is not None:
                 planning_times.append(planning_s)
                 populations.append(planner.recorder.population)
             trajectory.append(raw._get_obs().copy())
             actions.append(action[0].tolist())
             if step + 1 in (50, 100):
-                checkpoints[str(step + 1)] = {"wall_s": time.perf_counter() - started,
+                checkpoints[str(step + 1)] = {"wall_s": prefix_wall + time.perf_counter() - started,
                                             "score": score_trajectory(trajectory, condition)}
         if population_path is not None:
             np.savez_compressed(population_path, **{f"call{i}_{k}": v.numpy()
@@ -160,7 +188,7 @@ def run_episode(base, condition, planner, seed, population_path=None, budget=50)
         return {"base_id": base.id, "condition": condition.name, "arm": planner.arm,
                 "seed": seed, "trajectory": jsonable(trajectory), "actions": actions,
                 "budget_checkpoints": checkpoints,
-                "planning_times_s": planning_times, "wall_s": time.perf_counter() - started,
+                "planning_times_s": planning_times, "wall_s": prefix_wall + time.perf_counter() - started,
                 "score": score_trajectory(trajectory, condition)}
     finally:
         world.close()
@@ -193,7 +221,7 @@ def summarize(records, seed):
 
 
 def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
-             feasibility_run=None, normalization=None, budget=50, displacement_range=(60, 100), **planner_options):
+             feasibility_run=None, normalization=None, budget=50, displacement_range=(40, 100), prefix_run=None, **planner_options):
     prepare_output_root(runs_root())
     if run_dir is not None:
         run_dir = prepare_output_root(run_dir)
@@ -203,10 +231,14 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     names = list(NAMES) if conditions == "all" else conditions.split(",")
     if not bases or any(name not in NAMES for name in names):
         raise ValueError("nonempty bases and valid conditions required")
+    with_target = planner_options.get("with_target")
+    if with_target is None:
+        with_target = arm in ("reference", "lewm-pusht")
+    planner_options["with_target"] = with_target
     config = {"arm": arm, "bases_sha256": hashlib.sha256(Path(bases_path).read_bytes()).hexdigest(),
               "seed": seed, "n": n, "conditions": names, "budget": budget,
               "displacement_range": list(displacement_range),
-              "observation_rendering": "upstream-fixed-target",
+              "observation_rendering": "upstream-fixed-target" if with_target else "no-target",
               "feasibility_run": str(feasibility_run) if feasibility_run else None, **planner_options}
     if normalization is None:
         normalization = load_normalization(checkpoint_dir("lewm-pusht" if arm == "reference" else arm))
@@ -221,13 +253,27 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
         if (feasibility_config["arm"] != "reference" or feasibility_config["seed"] == seed
                 or feasibility_config["bases_sha256"] != config["bases_sha256"]
                 or any(feasibility_config.get(k) != config[k] for k in
-                       ("budget", "displacement_range", "observation_rendering", "normalization_sha256"))):
+                       ("budget", "displacement_range", "normalization_sha256"))):
             raise ValueError("feasibility must use reference, the same bases and protocol, and a separate seed F")
+        if arm == "reference" and any(feasibility_config.get(k, 0 if k == "approach_weight" else None)
+                != config.get(k, 0 if k == "approach_weight" else None)
+                for k in ("population", "iterations", "topk", "approach_weight")):
+            raise ValueError("reference evaluation must match feasibility planner and shaping")
         feasibility = [json.loads(line) for line in
                        (Path(feasibility_run) / "episodes.jsonl").read_text().splitlines()]
         present = {(r["base_id"], r["condition"]) for r in feasibility}
         if any((b.id, name) not in present for b in bases for name in NAMES):
             raise ValueError("feasibility reference run must cover all selected bases/conditions")
+    prefixes = {}
+    if prefix_run:
+        prefix_config = json.loads((Path(prefix_run)/"config.json").read_text())
+        if arm != "reference" or budget != 100 or prefix_config["budget"] != 50:
+            raise ValueError("only reference 50-to-100 extensions are supported")
+        if any(prefix_config.get(k) != v for k,v in config.items() if k not in ("budget", "feasibility_run")):
+            raise ValueError("reference prefix config differs")
+        prefixes = {(r["base_id"],r["condition"]):r for r in
+                    map(json.loads,(Path(prefix_run)/"episodes.jsonl").read_text().splitlines())}
+        config["prefix_run"] = str(prefix_run)
     run_dir = Path(run_dir) if run_dir else create_run("probe-eval", config)
     run_dir = prepare_output_root(run_dir)
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -242,14 +288,16 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     planner = Planner(arm, normalization=normalization, **planner_options)
     try:
         for base in bases:
-            matched = make_conditions(base, displacement_range)
+            matched = make_conditions(base, displacement_range, with_target=planner.with_target)
             for name in names:
                 if (base.id, name) in completed:
                     continue
                 stem = hashlib.sha256(f"{base.id}:{name}".encode()).hexdigest()[:16]
                 save_conditions({name: matched[name]}, run_dir / f"{stem}_condition.json")
                 record = run_episode(base, matched[name], planner, episode_seed(seed, base.id, name),
-                                     run_dir / f"{stem}_population.npz", budget=budget)
+                                     run_dir / f"{stem}_population.npz", budget=budget,
+                                     prefix_record=prefixes.get((base.id,name)),
+                                     prefix_population=Path(prefix_run)/f"{stem}_population.npz" if prefix_run else None)
                 with path.open("a") as file:
                     file.write(json.dumps(record) + "\n")
                 records.append(record)

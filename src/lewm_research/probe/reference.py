@@ -16,7 +16,7 @@ _WORKER_ENV = None
 
 def _simulate(task):
     global _WORKER_ENV
-    snapshot, condition, actions, prior_max = task
+    snapshot, condition, actions, prior_max, approach_weight = task
     if _WORKER_ENV is None:
         _WORKER_ENV = PushTPeg(with_target=False)
         _WORKER_ENV.reset(seed=0)
@@ -33,6 +33,8 @@ def _simulate(task):
         observed = max(np.linalg.norm(s[7:9] - condition.scoring_spec["peg_start"])
                        for s in trajectory)
         cost += 2 * (max(prior_max, observed) - observed)
+    xy = trajectory[-1][7:9] if condition.scoring_spec["peg"] == "target" else trajectory[-1][2:4]
+    cost += approach_weight * np.linalg.norm(trajectory[-1][:2] - xy)
     return cost
 
 
@@ -43,9 +45,12 @@ class SimulatorCost:
     candidates start from the same snapshot, including velocities.
     """
 
-    def __init__(self, condition, normalization, workers=1):
+    def __init__(self, condition, normalization, workers=1, approach_weight=0):
         if workers < 1:
             raise ValueError("workers must be positive")
+        if approach_weight < 0:
+            raise ValueError("approach weight must be nonnegative")
+        self.approach_weight = approach_weight
         self.condition = condition
         self.normalization = normalization
         self.snapshot = condition.start_snapshot
@@ -63,7 +68,7 @@ class SimulatorCost:
         # Physics never consumes rendered pixels; omit them from process IPC.
         snapshot = {**self.snapshot, "goal": None}
         condition = replace(self.condition, goal_image=None, start_snapshot=None)
-        tasks = [(snapshot, condition, a, self.prior_max) for a in actions]
+        tasks = [(snapshot, condition, a, self.prior_max, self.approach_weight) for a in actions]
         if self.pool:
             costs = list(self.pool.map(_simulate, tasks, chunksize=max(1, len(tasks) // (self.workers * 4))))
         else:

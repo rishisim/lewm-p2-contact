@@ -22,34 +22,48 @@ def base():
     return generate_bases(1, 0)[0]
 
 
-def test_geometry_100_seeds():
+@pytest.mark.parametrize("scene_seed", [0, 1, 2])
+def test_rollout_geometry_and_reachability(scene_seed):
+    """Witnesses must solve original futures; on-path changes geometry only."""
+    base = generate_bases(1, scene_seed)[0]
     env = PushTPeg(with_target=False)
     env.reset(seed=0)
     try:
-        # Property test on accepted scenes across 100 independent seed streams.
-        for seed in range(100):
-            b = generate_bases(1, seed)[0]
-            conditions = make_conditions(b)
-            start = np.array([*b.agent_xy, *b.block_pose, 0, 0, *b.peg_xy])
-            assert _free(env, start)
-            assert np.linalg.norm(np.asarray(b.t_goal_pose[:2]) - start[2:4]) >= 60
-            off, on, peg, matched = (conditions[k] for k in ("off_path", "on_path", "move_peg", "move_T_matched"))
-            assert segment_distance(b.peg_xy, b.block_pose[:2], b.t_goal_pose[:2]) >= 80
-            assert segment_distance(on.scoring_spec["peg_start"], b.block_pose[:2], b.t_goal_pose[:2]) < 1e-8
-            v = np.asarray(peg.goal_state[7:9]) - start[7:9]
-            assert 60 <= np.linalg.norm(v) <= 100
-            np.testing.assert_allclose(np.asarray(matched.goal_state[2:4]) - start[2:4], v)
-            for c in conditions.values():
-                env.restore_snapshot(c.start_snapshot)
-                assert _free(env, env._get_obs())
-                assert _free(env, np.asarray(c.goal_state))
-            assert matched.goal_state[4] == start[4]
-            assert peg.goal_state[:2] == matched.goal_state[:2] == b.agent_xy
+        conditions = make_conditions(base)
+        starts = {}
+        for name,c in conditions.items():
+            env._setup()
+            env.restore_snapshot(c.start_snapshot)
+            start = env._get_obs().copy()
+            starts[name] = start
+            object_xy = start[7:9] if name=="move_peg" else start[2:4]
+            assert np.linalg.norm(start[:2]-object_xy) <= 40
+            if name != "on_path":
+                trajectory = [start]
+                for action in base.rollout_tasks[name]['witness_actions']:
+                    trajectory.append(env.step(action)[0]['state'].copy())
+                assert score_trajectory(trajectory,c)['success']
+            else:
+                assert not env.peg_overlaps(start[7:9])
+                env._set_state(np.asarray(c.goal_state))
+                assert not env.peg_overlaps(c.goal_state[7:9])
+        off,on = conditions['off_path'],conditions['on_path']
+        assert segment_distance(starts['off_path'][7:9],starts['off_path'][2:4],off.goal_state[2:4])>=80
+        np.testing.assert_allclose(starts['on_path'][7:9],
+            (starts['off_path'][2:4]+np.asarray(off.goal_state[2:4]))/2)
+        for name in ('move_peg','move_T_matched'):
+            assert 40<=base.rollout_tasks[name]['displacement_px']<=100
+        assert base.rollout_tasks['move_peg']['displacement_bin']==base.rollout_tasks['move_T_matched']['displacement_bin']
+        angle = abs((conditions['move_T_matched'].goal_state[4]-starts['move_T_matched'][4]+np.pi)%(2*np.pi)-np.pi)
+        assert angle < np.pi/9
     finally:
         env.close()
 
 
 def test_determinism_and_roundtrip(base, tmp_path):
+    from dataclasses import replace
+    with pytest.raises(ValueError,match="archived pre-W4c"):
+        make_conditions(replace(base,rollout_tasks=None))
     assert asdict(generate_bases(1, 0)[0]) == asdict(base)
     save_bases([base], tmp_path / "bases.json")
     assert asdict(load_bases(tmp_path / "bases.json")[0]) == asdict(base)
@@ -122,6 +136,11 @@ def test_controlled_loop(base, tmp_path):
         assert len(a["trajectory"]) == 51 and len(a["actions"]) == 50
         assert len(a["planning_times_s"]) == 2
         longer = run_episode(base, c, planner, 7, budget=100)
+        extended = run_episode(base,c,planner,7,budget=100,prefix_record=a,
+                               prefix_population=tmp_path / "population.npz")
+        assert extended["trajectory"] == longer["trajectory"]
+        assert extended["actions"] == longer["actions"]
+        assert extended["score"] == longer["score"]
         assert longer["trajectory"][:51] == a["trajectory"]
         assert longer["actions"][:50] == a["actions"]
         assert longer["budget_checkpoints"]["50"]["score"] == a["score"]
@@ -159,11 +178,22 @@ def test_resume_and_separate_feasibility(base, tmp_path, monkeypatch):
     resumed = evaluate("reference", bases, n=1, run_dir=tmp_path / "F", seed=1, **options)
     assert first == resumed
     assert len((tmp_path / "F" / "episodes.jsonl").read_text().splitlines()) == 4
+    extended = evaluate("reference", bases, n=1, run_dir=tmp_path / "F100", seed=1,
+                        budget=100, prefix_run=tmp_path / "F", **options)
+    assert extended["unconditional"]["episodes"] == 4
+    assert extended == evaluate("reference", bases, n=1, run_dir=tmp_path / "F100", seed=1,
+                               budget=100, prefix_run=tmp_path / "F", **options)
+    with pytest.raises(ValueError, match="prefix config differs"):
+        evaluate("reference", bases, n=1, run_dir=tmp_path / "wrong-prefix", seed=2,
+                 budget=100, prefix_run=tmp_path / "F", **options)
     with pytest.raises(ValueError, match="resume configuration"):
         evaluate("reference", bases, n=1, run_dir=tmp_path / "F", seed=2, **options)
     second = evaluate("reference", bases, n=1, run_dir=tmp_path / "E", seed=2,
                       feasibility_run=tmp_path / "F", **options)
     assert second["common_feasible"]["D"]["feasibility_seed"] == 1
+    with pytest.raises(ValueError, match="match feasibility planner"):
+        evaluate("reference", bases, n=1, run_dir=tmp_path / "shaped-E", seed=2,
+                 feasibility_run=tmp_path / "F", approach_weight=.1, **options)
 
 
 def test_no_peg_has_no_physics_or_pixels():
@@ -270,3 +300,45 @@ def test_reference_ipc_payload_excludes_unused_rendered_snapshots(base, monkeypa
         torch.testing.assert_close(result[0,0],result[0,1])
     finally:
         cost.close()
+
+
+def test_reference_only_approach_shaping(base):
+    c = make_conditions(base)['move_peg']
+    stats = {'columns':{'action':{'mean':[0,0],'std':[1,1]}}}
+    candidate = torch.zeros(1,2,5,10)
+    costs = []
+    for w in (0,.3):
+        cost = SimulatorCost(c,stats,approach_weight=w)
+        try:
+            costs.append(cost.get_cost({},candidate))
+        finally:
+            cost.close()
+    env = PushTPeg(with_target=False)
+    env.reset(seed=0)
+    env.restore_snapshot(c.start_snapshot)
+    for _ in range(25):
+        state = env.step([0,0])[0]['state']
+    env.close()
+    torch.testing.assert_close(costs[1]-costs[0],torch.full_like(costs[0],.3*np.linalg.norm(state[:2]-state[7:9])))
+    with pytest.raises(ValueError,match='reference-only'):
+        Planner('lewm-pusht',approach_weight=.1)
+
+
+def test_per_arm_rendering_preserves_physics(base):
+    yes,no = make_conditions(base,with_target=True),make_conditions(base,with_target=False)
+    for name in yes:
+        assert yes[name].goal_state==no[name].goal_state
+        assert yes[name].start_snapshot['bodies']==no[name].start_snapshot['bodies']
+        assert np.any(yes[name].goal_image != no[name].goal_image)
+
+
+def test_calibration_refuses_incomplete_freeze(base, tmp_path):
+    from lewm_research.probe.calibration import evidence
+    save_bases([base],tmp_path/'bases.json')
+    for name in ('F','chosen-reference','chosen-lewm'):
+        (tmp_path/name).mkdir()
+        (tmp_path/name/'episodes.jsonl').write_text('')
+    (tmp_path/'chosen.json').write_text(json.dumps({'bases_path':str(tmp_path/'bases.json'),
+                                                  'source_run':str(tmp_path/'F')}))
+    with pytest.raises(ValueError,match='complete and unique'):
+        evidence(tmp_path)

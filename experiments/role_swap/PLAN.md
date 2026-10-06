@@ -143,17 +143,29 @@ train/val split (90/10) before windowing.
 ## Step 4: evaluation
 
 ### Base scenes and matched conditions (`probe/conditions.py`)
-Base scene: random agent, T and peg start (non-overlapping). T goal from a 25-step
-BlockWeakPolicy rollout in a peg-free copy; keep bases with T displacement >= 60 px.
-Conditions (same base scene, same planner, same goal-image construction rule:
-goal image renders the goal state for all objects):
-- `off_path`: peg placed off the T start-goal corridor (>= 80 px from the segment);
-  goal = T goal, peg at its start.
-- `on_path`: identical T start/goal, peg moved to the corridor midpoint (jittered
-  along the segment until non-overlapping; else base discarded); goal = T goal,
-  peg at its start.
-- `move_peg`: T fixed; goal peg = peg start + v, |v| in [60,100] px, free direction.
-- `move_T_matched`: T translated by the same v (no rotation), peg fixed (off-path).
+W4c supersedes W4b's far-start construction (historical record:
+`calibration/2026-10-05_w4b_nogo.md`). Sample a random non-overlapping clutter
+scene with unchanged physics, then run 300-step weak-policy traces:
+- D: first 25-step BlockWeakPolicy window starting within 40 px of the T,
+  T displacement >=40 px, peg stationary throughout (tolerance 1e-6 px).
+  `off_path` retains the clutter peg, >=80 px from the T center corridor;
+  `on_path` moves it to the exact midpoint. Reject the scene if the midpoint
+  overlaps agent/T at either endpoint. Retain the exact start snapshot,
+  including velocities, and the real agent/T future goal.
+- G: first peg-centered (30 px box) window starting within 40 px of the peg,
+  peg displacement 40-100 px, T stationary. Pair with a separate block-centered
+  window from the same scene starting within 40 px of T, T displacement in the
+  same 20 px magnitude bin ([40,60), [60,80), [80,100]), wrapped rotation <pi/9,
+  peg stationary. Both goals include the real agent future. Each family shares
+  a scene ID; D and G need not share start poses or a translation vector.
+Store rollout times and action witnesses as construction provenance. Reject
+a scene unless all three original task witnesses achieve final joint success
+after a fresh snapshot restore (cached contact impulses are not serialized). Original
+futures are reachable by construction; inserting the on-path obstacle changes
+reachability and requires reference calibration. These witnesses never seed CEM.
+Per-arm rendering follows training data: pretrained uses the fixed upstream
+T decoration; fine-tuned arms use `with_target=False`. Both current and goal
+frames obey this rule, recorded in each evaluation config.
 Scoring (computed on every trajectory; agent position excluded):
 - T success: final T position error < 20 px and angle error < pi/9.
 - Peg preserved: max peg displacement over the trajectory < 10 px.
@@ -171,7 +183,10 @@ cluster bootstrap by base:
 Simulator-dynamics CEM with identical action semantics; fixed physical-unit cost:
 T pos error (px) + 100 x angle error (rad) + peg term (preserve: 2 x MAX peg
 displacement over the rollout, px; target: final peg error px). Trajectory-aware by
-construction (simulator rollouts expose the whole trajectory). Population/iterations chosen from the pilot so one episode
+construction (simulator rollouts expose the whole trajectory). W4c optionally adds
+reference-only endpoint approach shaping: w x agent-to-manipulated-object distance
+(px), calibrated over w in {0,0.1,0.3}; scoring and A/B/C physical role cost stay
+unchanged. Population/iterations chosen from the pilot so one episode
 <= ~20 s (e.g. 100 x 10), parallelized across processes. It is a reference, not an
 optimum (no oracle normalization is used). Seeds: feasibility seed F selects the common
 feasible set (bases where the reference solves all conditions of a contrast); a separate

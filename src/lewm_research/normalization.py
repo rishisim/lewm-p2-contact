@@ -6,29 +6,27 @@ from pathlib import Path
 import h5py
 import numpy as np
 import torch
-from sklearn.preprocessing import StandardScaler
 
 from .paths import checkpoint_dir, dataset_path
 
 
 def fit_normalization(dataset: Path, chunk_size: int = 100_000) -> dict:
-    """Fit population z-scores on valid rows, as in sklearn StandardScaler."""
-    result = {"source": dataset.name, "method": "standard_scaler", "columns": {}}
+    """Match upstream get_column_normalizer, preserving HDF5 dtype.
+
+    Full-column torch reductions are intentional: chunked/float64 reductions
+    change rounding relative to upstream. ``chunk_size`` remains API-compatible.
+    """
+    result = {"source": dataset.name, "method": "torch_sample_std", "columns": {}}
     with h5py.File(dataset, "r", swmr=True) as file:
         for column in ("action", "proprio"):
-            scaler = StandardScaler()
-            count = 0
-            data = file[column]
-            for start in range(0, len(data), chunk_size):
-                rows = np.asarray(data[start:start + chunk_size]).reshape(-1, data.shape[-1])
-                rows = rows[~np.isnan(rows).any(axis=1)]
-                if len(rows):
-                    scaler.partial_fit(rows)
-                    count += len(rows)
-            if not count:
-                raise ValueError(f"No valid rows for {column}")
+            rows = torch.from_numpy(np.array(file[column]))
+            rows = rows[~torch.isnan(rows).any(dim=1)]
+            if len(rows) < 2:
+                raise ValueError(f"At least two valid rows required for {column}")
             result["columns"][column] = {
-                "mean": scaler.mean_.tolist(), "std": scaler.scale_.tolist(), "valid_rows": count,
+                "mean": rows.mean(0, keepdim=True).clone().flatten().tolist(),
+                "std": rows.std(0, keepdim=True).clone().flatten().tolist(),
+                "valid_rows": len(rows),
             }
     return result
 

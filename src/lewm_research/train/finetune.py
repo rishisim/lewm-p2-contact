@@ -1,9 +1,12 @@
 """Plain PyTorch fine-tuning with the upstream LeJEPA objective."""
 
+import contextlib
+import hashlib
 import json
-import math
+import os
 import random
 import shutil
+import tempfile
 import time
 from pathlib import Path
 
@@ -11,6 +14,8 @@ import numpy as np
 import stable_pretraining as spt
 import stable_worldmodel as swm
 import torch
+from hydra.utils import instantiate
+from stable_pretraining.optim.lr_scheduler import LinearWarmupCosineAnnealingLR
 from stable_worldmodel.wm.loss import SIGReg
 from torch.utils.data import DataLoader, RandomSampler, Subset
 
@@ -84,35 +89,134 @@ def lejepa_loss(model, sigreg: SIGReg, batch: dict) -> dict[str, torch.Tensor]:
             "loss": pred_loss + 0.09 * sigreg_loss}
 
 
+def seed_worker(worker_id: int) -> None:
+    """Picklable worker initializer for macOS spawn."""
+    worker_seed = torch.initial_seed() % (2 ** 32)
+    np.random.seed(worker_seed)
+    random.seed(worker_seed)
+
+
 def _loader(dataset, batch_size: int, workers: int, seed: int, shuffle: bool) -> DataLoader:
     generator = torch.Generator().manual_seed(seed)
-    def seed_worker(worker_id: int) -> None:
-        worker_seed = torch.initial_seed() % (2 ** 32)
-        np.random.seed(worker_seed)
-        random.seed(worker_seed)
-    return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, drop_last=False,
-                      num_workers=workers, generator=generator, worker_init_fn=seed_worker,
-                      persistent_workers=workers > 0)
+    loader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, drop_last=shuffle,
+                        num_workers=workers, generator=generator, worker_init_fn=seed_worker,
+                        persistent_workers=workers > 0)
+    if shuffle and not len(loader):
+        raise ValueError("Zero training batches: reduce batch_size or supply more windows")
+    return loader
 
 
-def _lr(step: int, max_steps: int) -> float:
-    warmup = max(1, round(0.05 * max_steps))
-    if step <= warmup:
-        return LR * step / warmup
-    progress = (step - warmup) / max(1, max_steps - warmup)
-    return LR * 0.5 * (1 + math.cos(math.pi * progress))
+def _scheduler(optimizer, schedule_steps: int):
+    if not schedule_steps:
+        return None
+    return LinearWarmupCosineAnnealingLR(
+        optimizer, warmup_steps=max(1, int(0.01 * schedule_steps)),
+        max_steps=schedule_steps, warmup_start_lr=0.0, eta_min=0.0,
+    )
 
 
-def _save(model, optimizer, output: Path, step: int, epoch: int, batch_index: int) -> None:
-    # Keep only weights.pt in the .pt format expected by load_pretrained.
-    weights_tmp = output / "weights.tmp"
-    torch.save(model.state_dict(), weights_tmp)
-    weights_tmp.replace(output / "weights.pt")
-    state_tmp = output / "trainer_state.tmp"
-    torch.save({"step": step, "epoch": epoch, "batch_index": batch_index,
-                "optimizer": optimizer.state_dict(), "torch_rng": torch.get_rng_state(),
-                "numpy_rng": np.random.get_state(), "python_rng": random.getstate()}, state_tmp)
-    state_tmp.replace(output / "trainer_state.pth")
+def _fingerprint(path: Path, cache: bool = False) -> dict:
+    """Hash file content in bounded chunks; dataset caches are local hints only."""
+    stat = path.stat()
+    key = {"size": stat.st_size, "mtime_ns": stat.st_mtime_ns}
+    cache_path = path.with_name(path.name + ".sha256")
+    if cache:
+        try:
+            saved = json.loads(cache_path.read_text())
+            if not isinstance(saved, dict):
+                raise ValueError("Invalid fingerprint cache")
+            digest = saved["sha256"]
+            if (all(saved.get(k) == v for k, v in key.items())
+                    and isinstance(digest, str) and len(digest) == 64
+                    and all(c in "0123456789abcdef" for c in digest)):
+                return {"size": stat.st_size, "sha256": digest}
+        except (OSError, ValueError, KeyError, TypeError):
+            pass
+    hasher = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            hasher.update(chunk)
+    after = path.stat()
+    if (after.st_size, after.st_mtime_ns) != (stat.st_size, stat.st_mtime_ns):
+        raise ValueError(f"Input changed while fingerprinting: {path}")
+    digest = hasher.hexdigest()
+    if cache:
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(mode="w", dir=path.parent,
+                                             prefix=cache_path.name + ".", delete=False) as file:
+                temporary = Path(file.name)
+                json.dump({**key, "sha256": digest}, file)
+            temporary.replace(cache_path)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
+    return {"size": stat.st_size, "sha256": digest}
+
+
+def _validate_resume(state: dict, metadata: dict) -> None:
+    saved = state.get("metadata")
+    if (state.get("version") != 2 or not isinstance(saved, dict)
+            or any(not isinstance(saved.get(key), dict)
+                   or not {"name", "size", "sha256"} <= saved[key].keys()
+                   for key in ("dataset", "init"))):
+        raise ValueError("Legacy/incomplete trainer checkpoint: portable resume requires "
+                         "version 2 content fingerprints; start a new run")
+    mismatches = []
+    for key, value in metadata.items():
+        if key in {"dataset", "init"}:
+            # Names describe the inputs; only content determines identity.
+            matches = isinstance(value, dict) and all(
+                saved[key].get(field) == value.get(field) for field in ("size", "sha256"))
+        else:
+            matches = saved.get(key) == value
+        if not matches:
+            mismatches.append(key)
+    if mismatches:
+        raise ValueError("Resume metadata mismatch: " + ", ".join(mismatches))
+
+
+def _rng_state() -> dict:
+    state = {"torch": torch.get_rng_state(), "numpy": np.random.get_state(),
+             "python": random.getstate()}
+    if torch.cuda.is_available():
+        state["cuda"] = torch.cuda.get_rng_state_all()
+    if torch.backends.mps.is_available():
+        state["mps"] = torch.mps.get_rng_state()
+    return state
+
+
+def _restore_rng(state: dict) -> None:
+    torch.set_rng_state(state["torch"])
+    np.random.set_state(state["numpy"])
+    random.setstate(state["python"])
+    if "cuda" in state:
+        torch.cuda.set_rng_state_all(state["cuda"])
+    if "mps" in state:
+        torch.mps.set_rng_state(state["mps"])
+
+
+def _atomic_save(state: dict, target: Path) -> None:
+    temporary = target.with_suffix(".tmp")
+    try:
+        with temporary.open("wb") as file:
+            torch.save(state, file)
+            file.flush()
+            os.fsync(file.fileno())
+        temporary.replace(target)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+def _save(model, optimizer, scheduler, output: Path, step: int, epoch: int,
+          batch_index: int, metadata: dict, model_config: dict) -> None:
+    # Trainer state is the sole resume source; weights.pt is only an export.
+    _atomic_save({"version": 2, "model": model.state_dict(), "model_config": model_config,
+                  "optimizer": optimizer.state_dict(),
+                  "scheduler": scheduler.state_dict() if scheduler else None,
+                  "step": step, "epoch": epoch, "batch_index": batch_index,
+                  "metadata": metadata, "rng": _rng_state()}, output / "trainer_state.pth")
+    _atomic_save(model.state_dict(), output / "weights.pt")
 
 
 def _validation(model, sigreg, loader, device) -> dict:
@@ -131,52 +235,108 @@ def _validation(model, sigreg, loader, device) -> dict:
     return {f"val_{key}": value / count for key, value in totals.items()}
 
 
+def _autocast(device: torch.device, precision: str):
+    """bf16 autocast for forward+loss on CUDA (upstream trains in bf16); fp32 otherwise."""
+    if precision not in {"auto", "fp32", "bf16"}:
+        raise ValueError("precision must be auto, fp32, or bf16")
+    use_bf16 = precision == "bf16" or (precision == "auto" and device.type == "cuda")
+    if use_bf16 and device.type != "cuda":
+        raise ValueError("bf16 precision is only supported on CUDA")
+    if use_bf16:
+        return torch.autocast(device_type="cuda", dtype=torch.bfloat16), "bf16"
+    return contextlib.nullcontext(), "fp32"
+
+
 def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int = 0,
              batch_size: int = 32, seed: int = 0, device: str = "auto",
              log_interval: int = 1, val_interval: int = 100,
-             checkpoint_interval: int = 100, workers: int = 4) -> dict:
-    if max_steps < 0 or batch_size < 1 or workers < 0 or min(log_interval, val_interval, checkpoint_interval) < 1:
-        raise ValueError("Invalid training count, batch size, workers, or interval")
+             checkpoint_interval: int = 100, workers: int = 4,
+             schedule_steps: int | None = None, precision: str = "auto") -> dict:
+    """Train to max_steps; schedule_steps is an immutable total LR budget."""
+    budget = max_steps if schedule_steps is None else schedule_steps
+    if (max_steps < 0 or batch_size < 1 or workers < 0
+            or min(log_interval, val_interval, checkpoint_interval) < 1
+            or budget < max_steps or budget < 0 or budget == 1):
+        raise ValueError("Invalid training counts/intervals; schedule budget must be 0 or >=2 and >= max_steps")
     if Path(name).name != name or name in {"", ".", ".."}:
         raise ValueError("Output checkpoint name must be a single directory name")
+    dataset_name = Path(dataset if dataset.endswith(".h5") else f"{dataset}.h5")
+    init_name = Path(init)
+    if any(path.is_absolute() or ".." in path.parts for path in (dataset_name, init_name)):
+        raise ValueError("Dataset and init names must be relative to their storage roots")
     source = checkpoint_dir(init)
     output = checkpoint_dir(name)
     if output == source:
         raise ValueError("Output checkpoint must differ from initialization")
-    stats = load_normalization(source)
+    state_file = output / "trainer_state.pth"
+    state = torch.load(state_file, map_location="cpu", weights_only=False) if state_file.exists() else None
+    if state is not None:
+        _validate_resume(state, {})
+    if state is None and output.exists() and any(output.iterdir()):
+        raise FileExistsError(output)
+    stats = load_normalization(output if state is not None else source)
+    metadata = {"dataset": {"name": dataset_name.as_posix(),
+                            **_fingerprint(dataset_path(str(dataset_name)), cache=True)},
+                "init": {"name": init_name.as_posix(),
+                         **_fingerprint(source / "weights.pt")},
+                "seed": seed, "batch_size": batch_size, "schedule_steps": budget}
+    if state is not None:
+        # Reject changed content before trying to parse the dataset.
+        _validate_resume(state, metadata)
+    train_eps, val_eps = [], []
+    split = {}
+    if budget:
+        train, val, train_eps, val_eps = load_windows(dataset, stats, seed)
+        # Validate before creating output files or a model.
+        _loader(train, batch_size, workers, seed, True)
+        split = {"train_episodes": train_eps, "val_episodes": val_eps,
+                 "train_windows": len(train), "val_windows": len(val)}
+    metadata.update(train_episodes=train_eps, val_episodes=val_eps)
+    if state is not None:
+        _validate_resume(state, metadata)
+        if max_steps < state["step"]:
+            raise ValueError("max_steps is below the resumed step")
     selected_device = resolve_device(device)
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    model = load_lewm(output if (output / "trainer_state.pth").exists() else source, selected_device)
-    model.requires_grad_(True)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=1e-3)
-    state_file = output / "trainer_state.pth"
-    if state_file.exists():
-        state = torch.load(state_file, map_location="cpu", weights_only=False)
-        optimizer.load_state_dict(state["optimizer"])
-        step, epoch, batch_index = state["step"], state["epoch"], state["batch_index"]
-        torch.set_rng_state(state["torch_rng"])
-        np.random.set_state(state["numpy_rng"])
-        random.setstate(state["python_rng"])
+    if state is not None:
+        model_config = state["model_config"]
+        model = instantiate(model_config)
+        model.load_state_dict(state["model"])
+        model.to(selected_device)
+        model.interpolate_pos_encoding = True
     else:
-        if output.exists() and any(output.iterdir()):
-            raise FileExistsError(output)
+        model_config = json.loads((source / "config.json").read_text())
+        model = load_lewm(source, selected_device)
         output.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source / "config.json", output / "config.json")
         shutil.copyfile(source / "normalization.json", output / "normalization.json")
-        step = epoch = batch_index = 0
-    (output / "train_log.jsonl").touch(exist_ok=True)
+    model.requires_grad_(True)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=1e-3)
+    scheduler = _scheduler(optimizer, budget)
+    step = epoch = batch_index = 0
+    if state is not None:
+        optimizer.load_state_dict(state["optimizer"])
+        if scheduler:
+            scheduler.load_state_dict(state["scheduler"])
+        step, epoch, batch_index = state["step"], state["epoch"], state["batch_index"]
     config = {"dataset": dataset, "name": name, "init": init, "max_steps": max_steps,
-              "batch_size": batch_size, "seed": seed, "device": str(selected_device),
-              "log_interval": log_interval, "val_interval": val_interval,
-              "checkpoint_interval": checkpoint_interval, "workers": workers}
+              "schedule_steps": budget, "batch_size": batch_size, "seed": seed,
+              "device": str(selected_device), "log_interval": log_interval,
+              "val_interval": val_interval, "checkpoint_interval": checkpoint_interval,
+              "workers": workers, "precision": _autocast(selected_device, precision)[1],
+              "batch_size_deviation": "Default 32 instead of upstream 128: 128 exceeds this Mac's memory; configurable."}
     run_dir = create_run("finetune", config)
-    if max_steps:
-        train, val, train_eps, val_eps = load_windows(dataset, stats, seed)
+    start_step = step
+    wall_start = time.perf_counter()
+    if budget:
         val_loader = _loader(val, batch_size, workers, seed, False)
         sigreg = SIGReg(knots=17, num_proj=1024).to(selected_device)
         model.train()
+        # Model/SIGReg construction must not consume the resumed RNG stream.
+        if state is not None:
+            _restore_rng(state["rng"])
         while step < max_steps:
             loader = _loader(train, batch_size, workers, seed + epoch, True)
             for index, batch in enumerate(loader):
@@ -185,14 +345,18 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                 start = time.perf_counter()
                 batch = {k: v.to(selected_device) for k, v in batch.items()}
                 optimizer.zero_grad(set_to_none=True)
-                losses = lejepa_loss(model, sigreg, batch)
+                with _autocast(selected_device, precision)[0]:
+                    losses = lejepa_loss(model, sigreg, batch)
                 losses["loss"].backward()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-                step += 1
-                lr = _lr(step, max_steps)
-                for group in optimizer.param_groups:
-                    group["lr"] = lr
+                lr = optimizer.param_groups[0]["lr"]
                 optimizer.step()
+                scheduler.step()
+                step += 1
+                if selected_device.type == "mps":
+                    torch.mps.synchronize()
+                elif selected_device.type == "cuda":
+                    torch.cuda.synchronize()
                 record = {"step": step, "train_pred_loss": float(losses["pred_loss"].detach()),
                           "train_sigreg_loss": float(losses["sigreg_loss"].detach()),
                           "train_total_loss": float(losses["loss"].detach()),
@@ -203,7 +367,8 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                     with (output / "train_log.jsonl").open("a") as file:
                         file.write(json.dumps(record) + "\n")
                 if step % checkpoint_interval == 0 or step == max_steps:
-                    _save(model, optimizer, output, step, epoch, index + 1)
+                    _save(model, optimizer, scheduler, output, step, epoch, index + 1,
+                          metadata, model_config)
                 if step == max_steps:
                     break
             else:
@@ -211,13 +376,13 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                 batch_index = 0
                 continue
             break
-        split = {"train_episodes": train_eps, "val_episodes": val_eps,
-                 "train_windows": len(train), "val_windows": len(val)}
-    else:
-        _save(model, optimizer, output, step, epoch, batch_index)
-        split = {}
-    summary = {**config, **split, "completed_steps": step, "checkpoint": str(output),
-               "run_dir": str(run_dir)}
+    if step == start_step:
+        if state is not None:
+            _restore_rng(state["rng"])
+        _save(model, optimizer, scheduler, output, step, epoch, batch_index, metadata, model_config)
+    summary = {**config, **split, "completed_steps": step, "start_step": start_step,
+               "wall_seconds": time.perf_counter() - wall_start,
+               "checkpoint": str(output), "run_dir": str(run_dir)}
     (output / "train_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     write_metrics(run_dir, summary)
     return summary

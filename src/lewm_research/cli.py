@@ -192,6 +192,20 @@ def probe_readout_cmd(
     typer.echo(json.dumps(result, indent=2))
 
 
+@app.command("probe-size-control")
+def probe_size_control_cmd(
+    checkpoints: str = typer.Option("lewm-pusht,ft_block_s0,ft_block_s1,ft_mixed_s0,ft_mixed_s1"),
+    radii: str = typer.Option("15,30,45"),
+    frames_per_dataset: int = typer.Option(4000, min=1), seed: int = typer.Option(42, min=0),
+    device: str = typer.Option("auto"), run_dir: str | None = typer.Option(None),
+) -> None:
+    """Paired held-out readouts at three peg radii (Phase A)."""
+    from .probe.size_control import run_size_control
+    result = run_size_control(checkpoints.split(","), tuple(int(r) for r in radii.split(",")),
+                              frames_per_dataset, seed, run_dir, device)
+    typer.echo(json.dumps(result, indent=2))
+
+
 @app.command("probe-abc")
 def probe_abc_cmd(
     bases: str = typer.Option(...),

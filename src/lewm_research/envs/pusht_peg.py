@@ -19,7 +19,8 @@ CLUTTER_MIN_AGENT_DIST = 100
 
 
 class PushTPeg(PushT):
-    def __init__(self, *args, terminate_on_success=False, peg_enabled=True, render_target_pose=None, **kwargs):
+    def __init__(self, *args, terminate_on_success=False, peg_enabled=True, render_target_pose=None, peg_radius=PEG_RADIUS, **kwargs):
+        self.peg_radius = peg_radius
         self.render_target_pose = render_target_pose
         self.peg_enabled = peg_enabled
         super().__init__(*args, **kwargs)
@@ -40,9 +41,9 @@ class PushTPeg(PushT):
         self.peg = None
         if not self.peg_enabled:
             return
-        self.peg = pymunk.Body(1, pymunk.moment_for_circle(1, 0, PEG_RADIUS))
+        self.peg = pymunk.Body(1, pymunk.moment_for_circle(1, 0, self.peg_radius))
         self.peg.position = (256, 256)
-        shape = pymunk.Circle(self.peg, PEG_RADIUS)
+        shape = pymunk.Circle(self.peg, self.peg_radius)
         shape.friction = next(iter(self.block.shapes)).friction
         shape.color = pygame.Color(*PEG_COLOR)
         shape.collision_type = 2
@@ -72,7 +73,7 @@ class PushTPeg(PushT):
         # in observation pixels after the upstream resize.
         center = pymunk.pygame_util.to_pygame(self.peg.position, self.screen)
         center = tuple(round(v * self.render_size / self.window_size) for v in center)
-        radius = round(PEG_RADIUS * self.render_size / self.window_size)
+        radius = round(self.peg_radius * self.render_size / self.window_size)
         cv2.circle(frame, center, radius, PEG_COLOR, -1)
         cv2.circle(frame, center, radius, (120, 60, 10), 1)
         return frame
@@ -150,7 +151,7 @@ class PushTPeg(PushT):
         # Rendering in an independent Pymunk space preserves live contact
         # arbiters as well as body fields, including during a collision.
         renderer = type(self)(resolution=self.render_size, with_target=self.with_target,
-                              render_action=False, render_mode="rgb_array", peg_enabled=self.peg_enabled, render_target_pose=self.render_target_pose)
+                              render_action=False, render_mode="rgb_array", peg_enabled=self.peg_enabled, render_target_pose=self.render_target_pose, peg_radius=self.peg_radius)
         try:
             renderer.variation_space = self.variation_space
             renderer._setup()
@@ -194,7 +195,7 @@ class PushTPeg(PushT):
         return geometries
 
     def peg_overlaps(self, xy):
-        disc = Point(*xy).buffer(PEG_RADIUS)
+        disc = Point(*xy).buffer(self.peg_radius)
         return any(disc.intersects(geometry) for body in (self.agent, self.block)
                    for geometry in self._shape_geometry(body))
 
@@ -202,7 +203,7 @@ class PushTPeg(PushT):
         """Sample a non-overlapping peg; ``clutter`` keeps it away from the block and agent."""
         block, agent = np.asarray(self.block.position), np.asarray(self.agent.position)
         for _ in range(10000):
-            xy = self.np_random.uniform(30 + PEG_RADIUS, 512 - 30 - PEG_RADIUS, size=2)
+            xy = self.np_random.uniform(30 + self.peg_radius, 512 - 30 - self.peg_radius, size=2)
             if self.peg_overlaps(xy):
                 continue
             if placement == "clutter" and (np.linalg.norm(xy - block) < CLUTTER_MIN_BLOCK_DIST

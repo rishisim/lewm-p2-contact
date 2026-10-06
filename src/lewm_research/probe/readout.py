@@ -176,6 +176,17 @@ def render_pool(states, manifest, with_target):
             file.close()
 
 
+def encode_pool(planner, pixels, batch_size=64):
+    cls, projected = [], []
+    with torch.inference_mode():
+        for offset in range(0, len(pixels), batch_size):
+            tensor = torch.stack([planner.transform(torch.from_numpy(p.copy()).permute(2,0,1))
+                                  for p in pixels[offset:offset+batch_size]]).to(planner.device)
+            c, p = encode(planner.model, tensor)
+            cls.append(c.cpu().numpy()); projected.append(p.cpu().numpy())
+    return {"cls": np.concatenate(cls), "projected": np.concatenate(projected)}
+
+
 def run_readout(bases_path, checkpoints=DEFAULT_CHECKPOINTS, frames_per_dataset=4000,
                 seed=42, run_dir=None, device="auto", batch_size=64, outer_folds=5,
                 inner_folds=3, samples=2000, split_checkpoints=SPLIT_CHECKPOINTS):
@@ -221,14 +232,7 @@ def run_readout(bases_path, checkpoints=DEFAULT_CHECKPOINTS, frames_per_dataset=
                 pixels = images["pixels"]
             feature_path = root / f"{name}_features.npz"
             if not feature_path.exists():
-                cls, projected = [], []
-                with torch.inference_mode():
-                    for offset in range(0, len(pixels), batch_size):
-                        tensor = torch.stack([planner.transform(torch.from_numpy(p.copy()).permute(2,0,1))
-                                              for p in pixels[offset:offset+batch_size]]).to(planner.device)
-                        c, p = encode(planner.model, tensor)
-                        cls.append(c.cpu().numpy()); projected.append(p.cpu().numpy())
-                write_npz(feature_path, cls=np.concatenate(cls), projected=np.concatenate(projected))
+                write_npz(feature_path, **encode_pool(planner, pixels, batch_size))
             result = {"checkpoint": name, "with_target": planner.with_target, "features": {}}
             pixel_result = root / f"pixel_{int(planner.with_target)}.json"
             for kind in ("cls", "projected", "pixel"):

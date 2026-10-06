@@ -125,3 +125,30 @@ def test_collection_rows_pair_observation_with_action_taken_from_it(tmp_path, mo
     move = state[1:, :2] - state[:-1, :2]
     cos = np.sum(move * action[:-1], axis=1) / (np.linalg.norm(move, axis=1) * np.linalg.norm(action[:-1], axis=1) + 1e-9)
     assert np.mean(cos) > 0.5
+
+
+def test_peg_radius_render_and_physics():
+    options = {"agent_xy": (100,100), "block_pose": (250,250,0), "peg_xy": (400,100)}
+    envs = [PushTPeg(with_target=False, **kwargs) for kwargs in ({}, {"peg_radius":15}, {"peg_radius":45})]
+    try:
+        images = []
+        for env in envs:
+            obs, _ = env.reset(seed=0, options=options)
+            image = env._render_frame("rgb_array").copy()
+            images.append(image)
+            assert next(iter(env.peg.shapes)).radius == env.peg_radius
+            assert env.peg.moment == env.peg_radius**2/2
+            xy = env._sample_peg()
+            assert np.all((xy >= 30+env.peg_radius) & (xy <= 482-env.peg_radius))
+            np.testing.assert_array_equal(env.render_state(obs["state"]), image)
+        assert envs[0].peg_radius == 15
+        np.testing.assert_array_equal(images[0], images[1])
+        counts = [np.all(image == PEG_COLOR, axis=-1).sum() for image in images]
+        assert 7 < counts[2]/counts[0] < 12
+        for env in envs:
+            assert env.peg_overlaps((120,100))
+        assert not envs[0].peg_overlaps((160,100))
+        assert envs[2].peg_overlaps((160,100))
+    finally:
+        for env in envs:
+            env.close()

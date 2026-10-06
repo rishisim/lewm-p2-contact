@@ -102,9 +102,42 @@ support), so absolute numbers are not comparable (mean baseline 141 vs 186 px; r
 relative to pixels; the informative contrast is r45. The CIs come from only 28 episode clusters.
 Big pegs are out of distribution for these frozen encoders, which Phase B addresses.
 
-## Phase B
+## Phase B design (written 2026-10-06, before any Phase B number was computed)
 
-Gated on user approval of the GPU spend (cap $3). Not run yet.
+User approved the GPU spend (cap $3) on 2026-10-06.
+
+- Data: `lewm collect --peg-radius 45`, block and mixed policies, 2000 × 100 steps, clutter,
+  seed 1 (`peg45_blockpolicy.h5`, `peg45_mixedpolicy.h5`). One deviation from "existing collector",
+  found in code review before collection: the mixed policy's peg-episode target box was a
+  hardcoded ±30 px (= agent+peg contact distance at radius 15), which sits inside a radius-45
+  peg and makes the agent shove the peg near-continuously. It now scales as radius + 15 (30 at
+  radius 15, byte-identical old datasets; 60 at 45). Peg-contact frames: mixed 39.5% (37.2% at
+  r15); block 5.6% (2.9% at r15; incidental contact rises with peg size).
+- Fine-tuning: `ft45_block_s0`, `ft45_mixed_s0` from lewm-pusht, Step-3 recipe (2000 steps,
+  batch 128, bf16, seed 0), one Vast GPU.
+- Evaluation: G only (move_peg vs move_T_matched), N=100 bases built at radius 45 with new
+  reserved construction master **310000000** (main used 300000000; dry-run 290000000).
+  Frozen settings: budget 50, LeWM CEM 300×30 top-30 seed 42 (no T decoration for fine-tuned
+  arms), reference CEM 300×30 top-30, approach weight 0.1, F=101, E=202, frozen W4d
+  normalization, success tolerances unchanged. Primary set: common F-feasible bases.
+- Readout: the Phase A pool and procedure at radii 15 and 45 for ft45 checkpoints.
+
+### Pre-stated Phase B reading (per arm; original gap = matching s0 checkpoint, common_feasible)
+
+Original G gaps: ft_block_s0 0.688, ft_mixed_s0 0.666.
+
+- **size explains the planning failure** if big-peg gap < 0.15 AND the gap's 95% CI upper bound
+  is below the original gap;
+- **relevance (P1) supported** if big-peg gap ≥ 0.15 AND the protocol's linear-readout deficit
+  persists at radius 45 (peg error ≥ 2 × T error AND ≥ 1.5 × pixel-ridge error, cls and projected);
+- otherwise **ambiguous**.
+
+Overall: both arms give the same label → that label; otherwise "mixed/ambiguous". Reference-E
+gap is reported as the task-difficulty control (if it is itself ≥ 0.15, that is flagged).
+
+## Phase B results
+
+_Pending._
 
 ## Out-of-scope ideas
 

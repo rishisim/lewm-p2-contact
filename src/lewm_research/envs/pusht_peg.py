@@ -19,14 +19,16 @@ CLUTTER_MIN_AGENT_DIST = 100
 
 
 class PushTPeg(PushT):
-    def __init__(self, *args, terminate_on_success=False, **kwargs):
+    def __init__(self, *args, terminate_on_success=False, peg_enabled=True, render_target_pose=None, **kwargs):
+        self.render_target_pose = render_target_pose
+        self.peg_enabled = peg_enabled
         super().__init__(*args, **kwargs)
         self.terminate_on_success = terminate_on_success
         self.env_name = "PushTPeg"
         self.observation_space = spaces.Dict({
             "proprio": self.observation_space["proprio"],
             "state": spaces.Box(
-                low=np.array([0, 0, 0, 0, 0, -512, -512, 0, 0]),
+                low=np.array([0, 0, 0, 0, 0, -512, -512, -1000, -1000]),
                 high=np.array([512, 512, 512, 512, 2 * np.pi, 512, 512, 512, 512]),
                 dtype=np.float64,
             ),
@@ -34,6 +36,10 @@ class PushTPeg(PushT):
 
     def _setup(self):
         super()._setup()
+        self.n_peg_contacts = 0
+        self.peg = None
+        if not self.peg_enabled:
+            return
         self.peg = pymunk.Body(1, pymunk.moment_for_circle(1, 0, PEG_RADIUS))
         self.peg.position = (256, 256)
         shape = pymunk.Circle(self.peg, PEG_RADIUS)
@@ -48,6 +54,18 @@ class PushTPeg(PushT):
         self.n_peg_contacts += len(arbiter.contact_point_set.points)
 
     def _render_frame(self, mode):
+        # Upstream dataset decoration is fixed, independent of the task goal.
+        goal_pose = self.goal_pose
+        if self.render_target_pose is not None:
+            self.goal_pose = np.asarray(self.render_target_pose)
+        try:
+            return self._render_with_peg(mode)
+        finally:
+            self.goal_pose = goal_pose
+
+    def _render_with_peg(self, mode):
+        if not self.peg_enabled:
+            return super()._render_frame(mode)
         self._set_body_color(self.peg, PEG_COLOR)
         frame = super()._render_frame(mode)
         # Pymunk's debug renderer brightens fills; preserve the specified RGB
@@ -66,7 +84,7 @@ class PushTPeg(PushT):
     def _get_obs(self):
         return np.array((*self.agent.position, *self.block.position,
                          self.block.angle % (2 * np.pi), *self.agent.velocity,
-                         *self.peg.position), dtype=np.float64)
+                         *(self.peg.position if self.peg_enabled else (-1000, -1000))), dtype=np.float64)
 
     def _set_state(self, state):
         state = np.asarray(state, dtype=np.float64)
@@ -80,17 +98,18 @@ class PushTPeg(PushT):
         self.block.position = tuple(state[2:4])
         self.block.velocity = (0, 0)
         self.block.angular_velocity = 0
-        self.peg.angle = 0
-        self.peg.position = tuple(state[7:9])
-        self.peg.velocity = (0, 0)
-        self.peg.angular_velocity = 0
         self.space.reindex_shapes_for_body(self.agent)
         self.space.reindex_shapes_for_body(self.block)
-        self.space.reindex_shapes_for_body(self.peg)
+        if self.peg_enabled:
+            self.peg.angle = 0
+            self.peg.position = tuple(state[7:9])
+            self.peg.velocity = (0, 0)
+            self.peg.angular_velocity = 0
+            self.space.reindex_shapes_for_body(self.peg)
 
     def get_snapshot(self):
         bodies = {}
-        for name in ("agent", "block", "peg"):
+        for name in (("agent", "block", "peg") if self.peg_enabled else ("agent", "block")):
             body = getattr(self, name)
             bodies[name] = {
                 "position": tuple(body.position), "angle": body.angle,
@@ -110,7 +129,7 @@ class PushTPeg(PushT):
     def restore_snapshot(self, snap):
         # Removing shapes clears Chipmunk's cached contact arbiters. Those
         # impulses otherwise survive a pose rewind and alter the next step.
-        for name in ("agent", "block", "peg"):
+        for name in (("agent", "block", "peg") if self.peg_enabled else ("agent", "block")):
             body = getattr(self, name)
             self.space.remove(*body.shapes, body)
         for name, values in snap["bodies"].items():
@@ -131,7 +150,7 @@ class PushTPeg(PushT):
         # Rendering in an independent Pymunk space preserves live contact
         # arbiters as well as body fields, including during a collision.
         renderer = type(self)(resolution=self.render_size, with_target=self.with_target,
-                              render_action=False, render_mode="rgb_array")
+                              render_action=False, render_mode="rgb_array", peg_enabled=self.peg_enabled, render_target_pose=self.render_target_pose)
         try:
             renderer.variation_space = self.variation_space
             renderer._setup()
@@ -145,14 +164,17 @@ class PushTPeg(PushT):
         state = np.asarray(state, dtype=np.float64)
         if state.shape != (9,):
             raise ValueError("PushTPeg goal must have nine values")
-        self.goal_state = state.copy()
+        state = state.copy()
+        if not self.peg_enabled:
+            state[7:9] = -1000
+        self.goal_state = state
         self.goal_pose = state[2:5].copy()
         self._goal = self.render_state(state)
 
     def _get_info(self):
         info = super()._get_info()
         info["goal_proprio"] = self._proprio(self.goal_state)
-        info["peg_pos"] = np.array(self.peg.position)
+        info["peg_pos"] = np.array(self.peg.position if self.peg_enabled else (-1000, -1000))
         info["peg_contact"] = self.n_peg_contacts > 0
         return info
 
@@ -208,7 +230,7 @@ class PushTPeg(PushT):
         goal = np.asarray(options.get("goal_state", start), dtype=np.float64)
         upstream_options = {**options, "state": start, "goal_state": goal}
         super().reset(seed=seed, options=upstream_options)
-        if placement is not None:
+        if placement is not None and self.peg_enabled:
             if placement not in {"uniform", "clutter"}:
                 raise ValueError("peg_placement must be 'uniform' or 'clutter'")
             start = start.copy()

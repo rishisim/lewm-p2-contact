@@ -21,19 +21,22 @@ def finetune_cmd(
     name: str = typer.Option(..., help="Output checkpoint name."),
     init: str = typer.Option("lewm-pusht", help="Initialization checkpoint name."),
     max_steps: int = typer.Option(0, min=0),
-    batch_size: int = typer.Option(32, min=1),
+    batch_size: int = typer.Option(32, min=1, help="Default 32 deviates from upstream 128, which exceeds this Mac\'s memory; configurable."),
     seed: int = typer.Option(0),
     device: str = typer.Option("auto"),
     log_interval: int = typer.Option(1, min=1),
     val_interval: int = typer.Option(100, min=1),
     checkpoint_interval: int = typer.Option(100, min=1),
     workers: int = typer.Option(4, min=0),
+    schedule_steps: int | None = typer.Option(None, min=2, help="Immutable LR budget; defaults to max-steps. Set on both initial and resumed runs."),
+    precision: str = typer.Option("auto", help="auto (bf16 on CUDA, fp32 elsewhere), fp32, or bf16."),
 ) -> None:
     """Fine-tune LeWM with episode-held-out validation; resume by name."""
     from .train.finetune import finetune
 
     typer.echo(json.dumps(finetune(dataset, name, init, max_steps, batch_size, seed, device,
-                                  log_interval, val_interval, checkpoint_interval, workers), indent=2))
+                                  log_interval, val_interval, checkpoint_interval, workers, schedule_steps,
+                                  precision), indent=2))
 
 
 @app.command("bench-train")
@@ -95,3 +98,62 @@ def bench_sim(device: str = typer.Option("auto", help="auto, cuda, mps, or cpu."
     from .benchmark import bench_sim as run_benchmark
 
     typer.echo(json.dumps(run_benchmark(device), indent=2))
+
+
+@app.command("probe-eval")
+def probe_eval_cmd(
+    arm: str = typer.Option(...), bases: str = typer.Option(...),
+    conditions: str = typer.Option("all"), seed: int = typer.Option(42),
+    budget: int = typer.Option(50), displacement_min: int = typer.Option(60),
+    displacement_max: int = typer.Option(100),
+    n: int = typer.Option(100, min=1), workers: int = typer.Option(4, min=1),
+    population: int | None = typer.Option(None, min=2),
+    iterations: int | None = typer.Option(None, min=1),
+    topk: int | None = typer.Option(None, min=2), device: str = typer.Option("auto"),
+    run_dir: str | None = typer.Option(None, help="Existing run directory to resume."),
+    feasibility_run: str | None = typer.Option(None, help="Reference run under separate feasibility seed F."),
+) -> None:
+    """Run matched fixed-budget episodes, resuming a specified run directory."""
+    from .probe.rollout_eval import evaluate
+
+    if seed >= 1_000_000_000:
+        raise typer.BadParameter("evaluation seeds must be outside the reserved pilot range")
+    typer.echo(json.dumps(evaluate(arm, bases, conditions, seed, n, run_dir,
+                                  feasibility_run=feasibility_run, budget=budget,
+                                  displacement_range=(displacement_min, displacement_max),
+                                  workers=workers, population=population, iterations=iterations,
+                                  topk=topk, device=device), indent=2))
+
+
+@app.command("probe-pilot")
+def probe_pilot_cmd(
+    checkpoint: str = typer.Option("lewm-pusht"), workers: int = typer.Option(4, min=1),
+    seed: int = typer.Option(1_000_000_000), n: int = typer.Option(10, min=1),
+    reference_population: int = typer.Option(100, min=2),
+    reference_iterations: int = typer.Option(10, min=1),
+    lewm_population: int = typer.Option(300, min=2), lewm_iterations: int = typer.Option(30, min=1),
+    device: str = typer.Option("auto"), run_dir: str | None = typer.Option(None),
+) -> None:
+    """Measure independent pilot timing, feasibility, and paired discordance."""
+    from .probe.pilot import pilot
+
+    typer.echo(json.dumps(pilot(checkpoint, workers, seed, n, run_dir,
+                                reference_population, reference_iterations,
+                                lewm_population, lewm_iterations, device), indent=2))
+
+
+@app.command("probe-fidelity")
+def probe_fidelity_cmd(device: str = typer.Option("auto"),
+                       dataset_images: bool = typer.Option(False)) -> None:
+    """Validate the controlled loop on smoke-eval's 50 no-peg expert pairs."""
+    from .probe.fidelity import fidelity
+    typer.echo(json.dumps(fidelity(device=device, dataset_images=dataset_images), indent=2))
+
+
+@app.command("probe-calibrate")
+def probe_calibrate_cmd(workers: int = typer.Option(8, min=1),
+                        device: str = typer.Option("auto"),
+                        run_dir: str | None = typer.Option(None)) -> None:
+    """Run the independent 20-base difficulty grid and chosen pretrained arm."""
+    from .probe.calibration import grid
+    typer.echo(json.dumps(grid(workers=workers, device=device, run_dir=run_dir), indent=2))

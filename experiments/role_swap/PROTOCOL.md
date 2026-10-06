@@ -205,3 +205,28 @@ For `ft_block`:
    condition improves by >= 10 points over `ft_block` (paired CI excluding 0), (b) the
    control condition regresses by < 5 points, and (c) the gap shrinks by >= 50%.
    Otherwise report only "reduced disparity" (or none).
+
+## Amendment 1 — 2026-10-05 (before main evaluation)
+
+For wall-time reasons, reduce the main sample from 900 to **400 candidate
+bases**. This decision was made before any main evaluation outcome was observed.
+The primary within-arm 15-point approximation requires 196 effective bases for
+D' and 261 for G. At the frozen Wilson lower eligibility bounds, these require
+ceil(196 / 0.5313) = **369** and ceil(261 / 0.7639) = **342** candidate bases,
+respectively; both are <=369 and within N=400. This retains the approximation
+for the primary bar, not guaranteed power for its full compound criteria.
+The **10-point cross-arm coverage comparison is underpowered at N=400** and
+will be explicitly reported as such; its frozen decision thresholds are unchanged.
+
+Evaluate lewm-pusht, ft_block_s0, ft_block_s1, ft_mixed_s0, and ft_mixed_s1,
+with **one evaluation repeat**, learned seed namespace **42**, main construction
+master **300000000**, and frozen near_path **L=55 px**. Reference F=101 and E=202
+retain budget 50, CEM 300x30, top-30, and approach weight 0.1; use **five CPU
+candidate workers** for wall-time/resource scheduling. Reference F then E run
+in a CPU lane concurrently with sequential learned arms on MPS, using each
+checkpoint's frozen rendering. All arms reuse the frozen W4d normalization.
+A/B/C uses shared banks across all checkpoints on the **first 50 F-feasible
+bases per family**, in construction order (D' and G selected separately).
+Readout uses W5 defaults: 4000 frames per dataset, batch 64, five outer/three
+inner grouped folds, seed 42, and 2000 bootstrap samples. No construction,
+scoring, eligibility, or decision threshold is otherwise changed.

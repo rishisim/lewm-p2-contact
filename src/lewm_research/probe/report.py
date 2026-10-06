@@ -311,10 +311,14 @@ def markdown_report(result):
         [[pair,label,v["label"],_number(v["hard_gain"]),_number(v["control_gain"]),_number(v["gap_shrink"]),
           f'{v["gap_shrink_fraction"]:.3f}' if v["gap_shrink_fraction"] is not None else "unavailable"]
          for pair,entries in result["coverage"].items() for label,v in entries.items()]))
-    return "\n\n".join(tables)+"\n"
+    note = ("Amendment 1: N=400 candidate bases. The 10-point cross-arm coverage "
+            "comparison is underpowered; frozen decision thresholds remain unchanged.\n\n"
+            if result.get("coverage_underpowered") else "")
+    return note + "\n\n".join(tables)+"\n"
 
 
-def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, publish=False):
+def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, publish=False,
+               coverage_underpowered=False):
     roots = [Path(p).expanduser().resolve() for p in runs]
     episodes, abc, readouts, configs, sources = [], [], {}, [], {}
     analysis_configs, readout_pool_ids, abc_diagnostics = [], set(), []
@@ -412,8 +416,11 @@ def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, 
             raise ValueError("ABC and evaluation rendering differ")
     config = {"stage":"probe-report","runs":list(map(str,roots)),
               "feasibility_run":str(next(iter(fpaths))) if fpaths else None,"seed":seed,"bootstrap_samples":samples}
+    if coverage_underpowered:
+        config["coverage_underpowered"] = True
     root = open_run("probe-report",config,run_dir)
     result = compute_report(episodes,feasibility,reference_e,abc,readouts,seed,samples)
+    result["coverage_underpowered"] = coverage_underpowered
     # Reports may be rerun after upstream resumes append results. Keep the
     # requested sources/settings fixed, but refresh their content provenance.
     result.update(stage="probe-report",run_dir=str(root),sources={**config,"sources_sha256":sources},

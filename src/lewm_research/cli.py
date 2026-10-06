@@ -1,6 +1,7 @@
 """Command-line entry points for the role-swap probe."""
 
 import json
+from pathlib import Path
 
 import typer
 
@@ -114,6 +115,7 @@ def probe_eval_cmd(
     feasibility_run: str | None = typer.Option(None, help="Reference run under separate feasibility seed F."),
     approach_weight: float = typer.Option(0, min=0),
     with_target: bool | None = typer.Option(None, help="Fixed training-data T decoration; default per arm."),
+    normalization: str | None = typer.Option(None, help="Frozen normalization JSON shared by all arms."),
 ) -> None:
     """Run matched fixed-budget episodes, resuming a specified run directory."""
     from .probe.rollout_eval import evaluate
@@ -125,7 +127,19 @@ def probe_eval_cmd(
                                   displacement_range=(displacement_min, displacement_max),
                                   workers=workers, population=population, iterations=iterations,
                                   topk=topk, device=device, approach_weight=approach_weight,
-                                  with_target=with_target), indent=2))
+                                  with_target=with_target,
+                                  normalization=json.loads(Path(normalization).read_text())
+                                  if normalization else None), indent=2))
+
+
+@app.command("probe-bases")
+def probe_bases_cmd(n: int = typer.Option(400, min=1),
+                    seed: int = typer.Option(300000000),
+                    near_path_distance: float = typer.Option(55),
+                    run_dir: str = typer.Option(...)) -> None:
+    """Persist frozen matched construction; reject incompatible resumes."""
+    from .main import prepare_bases
+    typer.echo(str(prepare_bases(n, seed, near_path_distance, run_dir)))
 
 
 @app.command("probe-pilot")
@@ -204,10 +218,11 @@ def probe_report_cmd(
     feasibility_run: str | None = typer.Option(None), seed: int = typer.Option(42),
     bootstrap_samples: int = typer.Option(2000, min=1), run_dir: str | None = typer.Option(None),
     publish: bool = typer.Option(False, help="Copy the two compact result files into experiments/role_swap/results/."),
+    coverage_underpowered: bool = typer.Option(False, help="Report Amendment 1's N=400 coverage power limitation."),
 ) -> None:
     """Write tables and frozen-bar labels from completed episode/analysis runs."""
     from .probe.report import run_report
     result = run_report([p for value in runs for p in value.split(",")], run_dir,
-                        feasibility_run, seed, bootstrap_samples, publish)
+                        feasibility_run, seed, bootstrap_samples, publish, coverage_underpowered)
     typer.echo(json.dumps({"run_dir": result["run_dir"], "checkpoints": list(result["checkpoints"]),
                            "feasibility": result["feasibility"]}, indent=2))

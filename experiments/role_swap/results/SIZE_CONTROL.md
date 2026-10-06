@@ -135,15 +135,70 @@ Original G gaps: ft_block_s0 0.688, ft_mixed_s0 0.666.
 Overall: both arms give the same label → that label; otherwise "mixed/ambiguous". Reference-E
 gap is reported as the task-difficulty control (if it is itself ≥ 0.15, that is flagged).
 
-## Phase B results
+## Phase B results (run 2026-10-06)
 
-_Pending._
+Deviation (decided before any evaluation outcome): construction skips near_path
+(`--near-path-distance 0`). near_path only feeds D′, which is out of scope. At radius 45 it doubled an
+already ~10× slower construction (~1,200 vs 77 scene attempts per accepted base), which would
+have broken the 5 h limit. All G filters and witness checks are unchanged. Run dir:
+`~/lewm-work/runs/size-control/phaseB/`; driver `experiments/role_swap/run_size_control_b.sh`.
+
+Fine-tuning: Vast A100 SXM4 80 GB (approved fallback, no qualifying H100), $0.817/h, 59.7 min,
+**$0.816 total**; instance destroyed and `vastai show instances` returned `[]`. Both runs 2000 steps, bf16,
+batch 128, seed 0. Final val_pred_loss: ft45_block_s0 0.0451, ft45_mixed_s0 0.0321 (r15
+counterparts: 0.0439, 0.0258).
+
+### G contrast at radius 45 (N=100 bases, 87 common F-feasible)
+
+| Checkpoint | Set | Bases | move_peg success | move_T_matched success | Gap (95% CI) | Original r15 gap (s0) |
+|---|---|---:|---|---|---|---|
+| ft45_block_s0 | common_feasible | 87 | 0.034 [0.000, 0.080] | 0.678 [0.575, 0.770] | **0.644 [0.529, 0.759]** | 0.688 |
+| ft45_block_s0 | unconditional | 100 | 0.030 [0.000, 0.070] | 0.640 [0.550, 0.730] | 0.610 [0.510, 0.710] | 0.642 |
+| ft45_mixed_s0 | common_feasible | 87 | 0.011 [0.000, 0.034] | 0.540 [0.437, 0.644] | **0.529 [0.425, 0.632]** | 0.666 |
+| ft45_mixed_s0 | unconditional | 100 | 0.010 [0.000, 0.030] | 0.510 [0.410, 0.610] | 0.500 [0.400, 0.600] | 0.610 |
+
+Reference-E gap (common_feasible): −0.023 [−0.069, 0.011], so the radius-45 G task is not
+harder for the reference planner (no difficulty flag).
+
+### Readout of ft45 checkpoints (Phase A pool, identity verified equal)
+
+| Checkpoint | Kind | Peg r15 | Peg r45 | T r45 | Pixel peg r45 | Peg/mean r45 | Linear-readout deficit r45 |
+|---|---|---|---|---|---|---|---|
+| ft45_block_s0 | cls | 138.6 | 136.1 [134.1, 138.0] | 20.2 | 14.5 | 0.97 | yes |
+| ft45_block_s0 | projected | 140.9 | 139.7 [137.6, 141.9] | 27.1 | 14.5 | 0.99 | yes |
+| ft45_mixed_s0 | cls | 139.5 | 137.6 [135.1, 140.2] | 22.2 | 14.5 | 0.98 | yes |
+| ft45_mixed_s0 | projected | 141.4 | 140.8 [138.1, 143.4] | 25.9 | 14.5 | 1.00 | yes |
+
+Full table: `size_control_phaseB_readout.md`.
+
+### Pre-stated Phase B reading, applied mechanically
+
+- ft45_block_s0: gap 0.644 ≥ 0.15, deficit persists (cls and projected) → **relevance (P1) supported**.
+- ft45_mixed_s0: gap 0.529 ≥ 0.15, deficit persists (cls and projected) → **relevance (P1) supported**.
+- **Overall: relevance (P1) supported.**
+
+### Interpretation
+
+Making the peg as large as the T during training as well as at test time leaves the failure
+essentially intact. The models still almost never move the peg to its goal (1–3%) while moving the T in
+matched scenes 54–68% of the time, and their embeddings still carry no linearly decodable peg
+position (~0.97–1.00 × mean predictor) while the same frames give it to raw pixels at 14.5 px.
+The mixed arm saw the big peg pushed in ~39% of training frames and still does not represent
+it. Peg size is therefore not the explanation. What remains is consistent with the peg being
+dropped as task-irrelevant (P1), though the experiment shows only that size is ruled out, not the
+mechanism. Caveats: one seed per arm; radius-45 construction selects a different
+(sparser-clutter) scene population; ft45_mixed's control success fell (0.54 vs 0.69), so its
+smaller gap reflects a weaker T arm, not a better peg arm; readout is linear only.
 
 ## Out-of-scope ideas
 
 - Why the main-pool pixel ridge reads a radius-15 peg to 19 px but this pool's only to 117 px
   (condition-endpoint frames vs dataset frames; peg-position distribution). Worth one look before
   quoting the main-run peg/pixel ratio as evidence on its own.
+- Nonlinear (e.g. small MLP) peg readout from the same embeddings: distinguishes "not encoded"
+  from "encoded non-linearly". Only the linear readout was pre-registered here.
+- Construction at radius 45 accepts ~1/1,200 scenes vs 1/77 at r15; which filter dominates was
+  not diagnosed.
 - The pretrained encoder reads the big peg better than fine-tuned ones: a direct test of whether
   fine-tuning on peg data actively suppresses the peg (e.g. readout across fine-tuning steps
   using the 250-step checkpoints, if retained).

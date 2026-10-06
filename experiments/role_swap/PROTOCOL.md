@@ -230,3 +230,13 @@ bases per family**, in construction order (D' and G selected separately).
 Readout uses W5 defaults: 4000 frames per dataset, batch 64, five outer/three
 inner grouped folds, seed 42, and 2000 bootstrap samples. No construction,
 scoring, eligibility, or decision threshold is otherwise changed.
+
+## Amendment 2 — 2026-10-06 (size-control follow-up, after main results)
+
+Adds a separate size-control experiment; nothing above is changed. Phase A
+(no retraining) repeats the frozen readout on a re-rendered, seeded frame pool
+at peg radii 15/30/45 px; design and the pre-stated reading are recorded in
+`results/SIZE_CONTROL.md` before any size-control number was computed. Phase B
+(conditional, user-approved GPU spend) fine-tunes one seed per arm on radius-45
+datasets with the Step-3 recipe and evaluates only the G contrast at N=100 with
+the frozen planner settings on a new reserved base-seed range.

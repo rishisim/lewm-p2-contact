@@ -9,7 +9,7 @@ import numpy as np
 
 from ..paths import runs_root, checkpoint_dir
 from ..normalization import load_normalization
-from .conditions import NAMES, generate_bases, save_bases, load_bases
+from .conditions import LEGACY_NAMES as NAMES, generate_bases, save_bases, load_bases
 from .rollout_eval import evaluate, prepare_output_root, summarize
 from .stats import paired_sample_size, wilson_ci
 

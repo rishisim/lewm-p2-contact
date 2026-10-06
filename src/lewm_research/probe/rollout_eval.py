@@ -16,7 +16,7 @@ from ..lewm import load_lewm
 from ..normalization import load_normalization
 from ..paths import checkpoint_dir, runs_root
 from ..runs import create_run
-from .conditions import NAMES, jsonable, load_bases, make_conditions, score_trajectory, save_conditions
+from .conditions import ALL_NAMES, LEGACY_NAMES, PRIMARY_NAMES, jsonable, load_bases, make_conditions, score_trajectory, save_conditions
 from .reference import PopulationRecorder, SimulatorCost
 from .stats import paired_cluster_bootstrap, wilson_ci
 
@@ -196,7 +196,7 @@ def run_episode(base, condition, planner, seed, population_path=None, budget=50,
 
 def summarize(records, seed):
     result = {"episodes": len(records), "conditions": {}, "contrasts": {}}
-    for name in NAMES:
+    for name in ALL_NAMES:
         rows = [r for r in records if r["condition"] == name]
         if not rows:
             continue
@@ -205,7 +205,7 @@ def summarize(records, seed):
                                      "wilson_ci": wilson_ci(successes, len(rows)),
                                      "mean_wall_s": float(np.mean([r["wall_s"] for r in rows])),
                                      "t_success_rate": float(np.mean([r["score"]["t_success"] for r in rows]))}
-    for label, hard, control in (("D", "on_path", "off_path"), ("G", "move_peg", "move_T_matched")):
+    for label, hard, control in (("D", "on_path", "off_path"), ("D_prime", "near_path", "off_path"), ("G", "move_peg", "move_T_matched")):
         a = {r["base_id"]: r for r in records if r["condition"] == hard}
         b = {r["base_id"]: r for r in records if r["condition"] == control}
         ids = sorted(a.keys() & b.keys())
@@ -214,8 +214,8 @@ def summarize(records, seed):
                 [a[i]["score"]["success"] for i in ids], [b[i]["score"]["success"] for i in ids], ids, seed)
             result["contrasts"][label]["discordance"] = float(np.mean([
                 a[i]["score"]["success"] != b[i]["score"]["success"] for i in ids]))
-            if label == "D":
-                result["contrasts"]["D_disturbance_allowed"] = paired_cluster_bootstrap(
+            if label in ("D", "D_prime"):
+                result["contrasts"][label + "_disturbance_allowed"] = paired_cluster_bootstrap(
                     [a[i]["score"]["t_success"] for i in ids], [b[i]["score"]["t_success"] for i in ids], ids, seed)
     return result
 
@@ -228,8 +228,9 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     if budget not in (50, 100):
         raise ValueError("budget must be 50 or 100")
     bases = load_bases(bases_path)[:n]
-    names = list(NAMES) if conditions == "all" else conditions.split(",")
-    if not bases or any(name not in NAMES for name in names):
+    defaults = PRIMARY_NAMES if bases and all("near_path" in (b.rollout_tasks or {}) for b in bases) else LEGACY_NAMES
+    names = list(defaults) if conditions == "all" else conditions.split(",")
+    if not bases or any(name not in ALL_NAMES for name in names):
         raise ValueError("nonempty bases and valid conditions required")
     with_target = planner_options.get("with_target")
     if with_target is None:
@@ -262,7 +263,7 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
         feasibility = [json.loads(line) for line in
                        (Path(feasibility_run) / "episodes.jsonl").read_text().splitlines()]
         present = {(r["base_id"], r["condition"]) for r in feasibility}
-        if any((b.id, name) not in present for b in bases for name in NAMES):
+        if any((b.id, name) not in present for b in bases for name in names):
             raise ValueError("feasibility reference run must cover all selected bases/conditions")
     prefixes = {}
     if prefix_run:
@@ -306,7 +307,9 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     summary = {"run_dir": str(run_dir), "unconditional": summarize(records, seed)}
     if feasibility_run:
         summary["common_feasible"] = {}
-        for label, pair in (("D", ("off_path", "on_path")), ("G", ("move_peg", "move_T_matched"))):
+        for label, pair in (("D", ("off_path", "on_path")), ("D_prime", ("off_path", "near_path")), ("G", ("move_peg", "move_T_matched"))):
+            if not all(name in names for name in pair):
+                continue
             solved = [{r["base_id"] for r in feasibility
                        if r["condition"] == name and r["score"]["success"]} for name in pair]
             common = set.intersection(*solved) & {b.id for b in bases}

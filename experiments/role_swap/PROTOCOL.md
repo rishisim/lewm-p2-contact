@@ -1,46 +1,50 @@
-# Role-swap Step-4 protocol — W4c
+# Role-swap Step-4 protocol — W4d
 
-Status: **frozen diagnostic configuration; main run NO-GO**.
-No main evaluation has run. This protocol replaces W4b's task construction;
-its unchanged historical record is `calibration/2026-10-05_w4b_nogo.md`.
+Status: **GO for the primary contrasts below**. No main evaluation has run.
+Primary contrasts: **D' = near_path vs off_path; G = move_peg vs move_T_matched**.
+W4d is one bounded redesign of W4c D. G and the physical planner/scoring are unchanged.
+The prior W4c midpoint `on_path` is retained as an explicitly requested diagnostic,
+not a primary condition: its independent reference success was 0/20.
 
 ## Task construction
 
-Sample a non-overlapping agent/T/clutter-peg scene, with unchanged physics.
-Run 300 physical steps of BlockWeakPolicy from that scene. D uses the **first**
-25-step window whose start agent is within 40 px of the T center, T translation
-is >=40 px, and peg position is stationary throughout (absolute tolerance
-1e-6 px). Retain the exact snapshot at t, including all body velocities.
-Goal agent/T states are the real t+25 states; peg remains fixed.
+Sample the same non-overlapping agent/T/clutter-peg scene with unchanged physics.
+Run 300 physical steps of BlockWeakPolicy. D uses the first 25-step window
+whose start agent is within 40 px of T, T translation is >=40 px, and peg
+position is stationary throughout (absolute tolerance 1e-6 px). Retain the
+exact start snapshot including body velocities; goals use the real t+25
+agent/T states. `off_path` retains the original peg, >=80 px from the T
+center start-goal segment. `on_path` places the peg at its exact midpoint.
+`near_path` uses the same D start and goal, replacing only the peg with
+a perpendicular offset L from the segment midpoint. Its goal peg is fixed
+there; peg linear/angular velocities are zero. A per-base seeded side
+(NumPy default_rng(scene_seed), choice([-1,1])) is preferred independently
+of L and outcomes; try the opposite side only if geometry is invalid.
+Require no peg overlap with agent/T at both endpoints and center within
+[45,467]^2. Do not jitter, alter goals, or replace calibration bases.
+Record bases where neither side fits; exclude them from D eligibility.
 
-`off_path` retains the scene's peg and requires its center >=80 px from the
-T center start-goal segment. `on_path` moves only the peg to the exact segment
-midpoint, with zero peg velocity. It must overlap neither agent nor T at both
-endpoints and stay within the peg wall margin. Discard incompatible scenes;
-no midpoint jitter. Inserting this obstacle changes the task, so on_path is
-**not** guaranteed reachable by the original witness.
+For G, restore the original scene and run PegWeakPolicy (30 px box) for
+300 steps. Select the first 25-step window with agent within 40 px of peg,
+peg translation 40–100 px and T pose stationary throughout (1e-6 tolerance).
+`move_peg` uses its real future agent/peg, with T fixed. `move_T_matched`
+uses a separate block window in the same scene, agent within 40 px of T,
+T translation in the same 20 px peg displacement bin ([40,60), [60,80),
+[80,100]), wrapped rotation <pi/9 and stationary peg.
+D/G share scene IDs but may have different exact starts and agent goals.
+Replay original off_path/move_peg/move_T_matched witnesses from fresh
+simulator spaces before scene acceptance; require unchanged final joint
+success. This rejects Chipmunk contact-cache-sensitive restored futures.
+Witnesses never initialize either planner. For near_path the original D
+witness is instead replayed with the relocated peg to measure **naive
+disturbance**: maximum peg displacement >10 px during all 25 steps.
+This establishes whether the obstacle affects that witness, not whether
+near_path is solvable; reference F/E establish planner feasibility.
 
-For G, restore the same original scene and run PegWeakPolicy with a 30 px
-box for 300 steps. Select the first 25-step window with agent within 40 px
-of peg, peg translation 40-100 px, and T pose stationary throughout (1e-6
-absolute tolerance). `move_peg` uses the real future peg and agent, T fixed.
-`move_T_matched` uses a separate block-rollout window in the same scene,
-agent within 40 px of T, T translation in the peg displacement's 20 px bin
-([40,60), [60,80), [80,100]), wrapped rotation <pi/9, peg stationary.
-Both original G goals and off_path have recorded rollout action witnesses.
-Witnesses are provenance only and never initialize the reference or LeWM.
-D/G share scene IDs but may have different exact starts and future agent goals.
-Before acceptance, replay each original off_path/move_peg/move_T_matched
-action witness from a fresh simulator space and the saved start snapshot;
-require final joint success against the unchanged t+25 goal. This rejects
-contact-cache-sensitive windows rather than silently calling unreachable
-restored starts reachable. Body snapshots do not capture Chipmunk cached
-contact impulses. Store each replay score and final-state discrepancy.
-Accept 20 scenes valid for both families; pairing and bootstrap remain by scene.
-
-Legacy BaseScene files remain readable for historical seed checks, but cannot
-be evaluated under W4c. Replay W4b using its original Git revision. There is
-one canonical task-construction implementation.
+New main scenes use `generate_bases(N, 300000000, near_path_distance=L)`
+when D is retained; geometry-invalid candidates are rejected. Calibration
+uses `with_near_path` on the exact 20 stored W4c bases. Legacy BaseScene
+files remain readable but require their original revision for evaluation.
 
 ## Semantics, rendering, normalization, and scoring
 
@@ -68,7 +72,7 @@ be shared across differently rendered learned arms. The no-peg forgetting
 check must likewise use each learned arm's training rendering.
 
 Normalization is copied once from pretrained to
-`$LEWM_WORK_ROOT/runs/w4c-calibration/normalization.json` and reused by all cells
+`$LEWM_WORK_ROOT/runs/w4d-calibration/normalization.json` (exact W4c copy) and reused by all cells
 and validation. Resume rejects changed config, bases, checkpoint or normalization;
 reference E must match F's CEM and approach weight. Main arms use this same
 frozen normalization. Its canonical JSON SHA256 is
@@ -88,143 +92,105 @@ max peg displacement <10 px; move_peg final peg target error <15 px and T
 success. Agent goal position is rendered but excluded from success. Report
 trajectory ever-success and disturbance-allowed T success as companions.
 
-## Seeds and calibration selection
+## Seeds and bounded calibration selection
 
-Pilot master reserved [1,000,000,000,1,000,999,999]; W4b calibration master
-reserved [2,000,000,000,2,000,999,999]. W4c reserves the new disjoint master
-range **[2,100,000,000,2,100,999,999]**, using master 2,100,000,000.
-Actual scene seeds are SeedSequence([master,attempt]) uint32 values; assert
-they are disjoint from recorded pilot/W4b scene seeds in construction.json.
-Grid/feasibility F_cal=23042; independent validation E_cal=23043 for reference
-and pretrained. Calibration is not main evaluation or main feasibility.
+Reuse the exact W4c calibration master 2,100,000,000 and its 20 accepted
+scene IDs (previous pilot/W4b disjointness remains verified). F_cal=23042
+alone selects L; E_cal=23043 independently validates reference and pretrained.
+This is calibration, not main evaluation or main feasibility. Main master
+300,000,000 / [300,000,000,300,999,999], F=101 and E=202 remain reserved.
+Main learned planning namespace 42 is shared across the **five trained
+checkpoints**: lewm-pusht, ft_block_s0, ft_block_s1, ft_mixed_s0, ft_mixed_s1.
+One evaluation repeat each. Episode seeds are low 32 bits of
+SHA256(namespace:base_id:condition), identical across arms.
 
-Main master/range remain 300,000,000 / [300,000,000,300,999,999]; F=101 alone
-selects paired eligibility; E=202 independently evaluates reference. One learned
-planning namespace 42 across seven checkpoints: pretrained + ft_block and
-ft_mixed each at three training seeds. Episode seeds are low 32 bits of
-SHA256(namespace:base_id:condition), identical across arms. Training seeds are
-checkpoint provenance and are not independent new evaluation scenes.
-
-Grid: w={0,0.1,0.3} x CEM={100x10 top-10,300x30 top-30}, eight CPU candidate
-workers, 20 bases per family. Exhaust the six-cell grid at budget 50. If none
-meets readiness, extend the best 50-step cell (minimum target deficit, then
-D difference, then CEM/w) to budget 100. Select among the resulting seven
-tested configurations and validate independently. This bounded budget
-expansion fits the 100-minute session limit; it is not an exhaustive 100-step
-weight/CEM grid and NO-GO concerns only the tested configurations. Targets:
-off_path and move_T_matched >=80%; on_path and move_peg >=60%.
-Require grid unconditional absolute reference D difference <5 points as a
-conservative plausibility screen. Prefer a passing budget-50 cell, then smaller
-CEM and smaller w. If none passes, minimize summed target deficit, then D
-difference, then budget/CEM/w; this selects a diagnostic config, not a GO.
-Validate selection under E_cal and run pretrained on all 80 validation episodes.
-Reference 100-step grid runs replay their exact 50-step physical action prefixes
-to reconstruct live contact state, advance the wheel CEM RNG by the first two
-searches, and execute the remaining two calls. A regression test checks equality
-of all actions, states and scores against a fresh 100-step run; runtime replay
-checks reject state mismatches. Independent reference E runs are fresh.
-Pretrained validation may be precomputed at budget 100 on MPS concurrently
-with reference F calibration. Selection uses only F reference outcomes; retain
-the exact budget prefix after selection, with hashes and source provenance.
-GO additionally requires validation targets, nonempty F common sets for D/G,
-and reference E absolute D difference <5 points on D's common feasible set.
+Test L={40,55,70,85} px only. Reference is frozen at 50 env steps,
+300x30 CEM, top-30, approach w=0.1 and eight CPU candidate workers.
+LeWM is 50 steps, 300x30, top-30 on MPS with upstream fixed decoration.
+Original W4c control episodes are reused after exact base, config,
+normalization and checkpoint-hash checks; source condition/population
+artifacts remain at their original run roots. Only near_path is new.
+A candidate requires near_path F success >=60% of the original 20 bases
+(geometry exclusions count against coverage) and nonzero naive disturbance.
+Among candidates meeting the reference F common-set |near-off| <5-point
+bar, maximize naive disturbance; tie by smaller L. Report the unconditional
+difference as a companion, not an additional selection screen.
+If none meets the common-set bar, minimize its difference, then maximize naive
+disturbance, then smaller L. A bounded fallback is diagnostic and cannot
+relax the independent E <5-point frozen bar on the F common feasible set.
+F common-set success differences are zero by construction, not validation.
+Do not select a second L after inspecting E. Retain D only if chosen L
+passes independent E targets (off >=80%, near >=60%), nonempty F common
+eligibility and reference E absolute difference <5 points. Otherwise drop D
+and use G only. G requires move_peg >=60%, matched >=80%, nonempty common
+eligibility and reference E absolute difference <5 points. GO applies only
+to the contrasts retained and does not authorize a main run automatically.
 
 ## Calibration evidence and frozen settings
 
-The diagnostic configuration is frozen before main evaluation. **Main run: NO-GO**. No main evaluation has run.
-Budget **50 env steps**; reference **300x30, top-30, w=0.1, 8 CPU workers**; LeWM **300x30, top-30, MPS**.
+| L (px) | Geometry valid | Reference F success | Success / all 20 | Naive disturbance | F abs near-off (points) |
+|---:|---:|---:|---:|---:|---:|
+| 40 | 17/20 | 9/17 (52.9%) | 45.0% | 9/17 (52.9%) | 35.3 |
+| 55 | 20/20 | 15/20 (75.0%) | 75.0% | 5/20 (25.0%) | 15.0 |
+| 70 | 19/20 | 16/19 (84.2%) | 80.0% | 1/19 (5.3%) | 5.3 |
+| 85 | 20/20 | 14/20 (70.0%) | 70.0% | 5/20 (25.0%) | 20.0 |
 
-Complete F_cal=23042 grid, final joint success percentages (20 bases each):
+Chosen **L=55 px**; naive disturbance **5/20 (25.0%)**. F unconditional abs difference **15.0 points**.
 
-| Budget | CEM | w | off_path | on_path | move_peg | move_T_matched |
-|---:|:---|---:|---:|---:|---:|---:|
-| 50 | 100x10 | 0 | 85 | 0 | 80 | 95 |
-| 50 | 100x10 | 0.1 | 85 | 0 | 80 | 95 |
-| 50 | 100x10 | 0.3 | 80 | 0 | 85 | 95 |
-| 50 | 300x30 | 0 | 95 | 5 | 90 | 95 |
-| 50 | 300x30 | 0.1 | 90 | 5 | 100 | 95 |
-| 50 | 300x30 | 0.3 | 90 | 0 | 100 | 95 |
-| 100 | 300x30 | 0.1 | 90 | 5 | 80 | 95 |
-
-Independent E_cal=23043 validation, all bases unconditionally:
+Independent E=23043 validation (all available bases; unchanged controls reused):
 
 | Condition | Reference | Pretrained | Reference mean s | Pretrained mean s |
 |:---|---:|---:|---:|---:|
-| off_path | 18/20 (90%) | 5/20 (25%) | 7.63 | 5.41 |
-| on_path | 0/20 (0%) | 0/20 (0%) | 7.71 | 5.50 |
-| move_peg | 20/20 (100%) | 1/20 (5%) | 5.78 | 5.49 |
-| move_T_matched | 19/20 (95%) | 10/20 (50%) | 7.49 | 5.47 |
+| off_path | 18/20 (90.0%) | 5/20 (25.0%) | 7.63 | 5.41 |
+| near_path | 15/20 (75.0%) | 2/20 (10.0%) | 8.69 | 4.44 |
+| move_peg | 20/20 (100.0%) | 1/20 (5.0%) | 5.78 | 5.49 |
+| move_T_matched | 19/20 (95.0%) | 10/20 (50.0%) | 7.49 | 5.47 |
 
-Reference validation unconditional D difference is **-90.0 points**. Frozen readiness checks are unmet; no main evaluation.
-The empty D common set leaves its reference E difference unestimable. These readiness failures do not establish LeWM information loss.
+F-selected common feasible sets (calibration eligibility only):
 
-F-selected common sets (calibration eligibility only):
+- D': **15/20 included, 5 excluded**; independent readiness passes.
+  Naive disturbance on this common set: **1/15 (6.7%)**; eligibility removes some witness-disturbing bases, limiting D interaction coverage.
+  reference: off_path 100.0%, near_path 100.0%; hard-control difference **0.0 points**, paired bootstrap 95% CI [0.0, 0.0].
+  pretrained: off_path 33.3%, near_path 13.3%; hard-control difference **-20.0 points**, paired bootstrap 95% CI [-46.7, 6.7].
+- G: **19/20 included, 1 excluded**; independent readiness passes.
+  reference: move_peg 100.0%, move_T_matched 100.0%; hard-control difference **0.0 points**, paired bootstrap 95% CI [0.0, 0.0].
+  pretrained: move_peg 5.3%, move_T_matched 52.6%; hard-control difference **-47.4 points**, paired bootstrap 95% CI [-73.7, -21.1].
 
-- D: **0/20 included, 20 excluded**.
-- G: **19/20 included, 1 excluded**.
-  reference: move_peg 100.0%, move_T_matched 100.0%; hard-control difference 0.0 points, bootstrap 95% CI [0.0, 0.0].
-  lewm-pusht: move_peg 5.3%, move_T_matched 52.6%; hard-control difference -47.4 points, bootstrap 95% CI [-73.7, -21.1].
+**GO** for D' = near_path vs off_path; G = move_peg vs move_T_matched. No main evaluation has run.
 
-25-step displacement distributions (px):
+## Sample size and measured Mac timing
 
-| Condition | min | median | mean | max |
-|:---|---:|---:|---:|---:|
-| off_path | 82.02 | 194.28 | 191.28 | 356.34 |
-| on_path | 82.02 | 194.28 | 191.28 | 356.34 |
-| move_peg | 50.80 | 77.68 | 76.24 | 99.07 |
-| move_T_matched | 40.05 | 70.69 | 71.95 | 98.82 |
+Use the inherited paired-binary approximation separately on each retained
+F-selected common set. q is pretrained hard/control discordance; use its
+Wilson 95% upper bound (at least the effect). Effective bases for delta in
+{0.15,0.10} = ceil((z_0.975+z_0.80)^2*(q_upper-delta^2)/delta^2). Divide
+the larger count by the Wilson lower bound on F eligibility. Take the
+maximum over retained contrasts and round up to the next hundred. The
+10-point count is a proxy, not measured cross-arm power. This powers CI
+exclusion of zero, not the full compound bar or guaranteed fine-tuned effects.
 
-G bin counts ([40,60), [60,80), [80,100]): **{'move_peg': [6, 5, 9], 'move_T_matched': [6, 5, 9]}**.
-Scene seeds are disjoint from 31 unique recorded pilot/W4b seeds.
-All 60 original replay witnesses solve; all 20 midpoint endpoint checks pass.
-The superseded initial attempt rejected three contact-cache-sensitive futures and contributes no observations;
-its diagnosis is retained at `runs/w4c-snapshot-audit/superseded.json`.
-
-D: N unestimable (zero common-feasible calibration bases).
+D_prime: discordance 0.3333, Wilson q upper 0.5829; effective bases 196 (15 points), 450 (10 points); eligibility 0.7500, Wilson lower 0.5313; candidate bases 600 (observed), 847 (lower bound).
 G: discordance 0.5789, Wilson q upper 0.7686; effective bases 261 (15 points), 596 (10 points); eligibility 0.9500, Wilson lower 0.7639; candidate bases 628 (observed), 781 (lower bound).
 
-Joint planning N: **unestimable**. Conditional N from estimable contrasts: **800**; neither repairs reference readiness.
+Planning **N=900 candidate bases**; five checkpoints x1 repeat x4 primary conditions.
+Measured independent episode means: reference **7.396 s**, pretrained **5.201 s** (LeWM planning **5.012 s**).
+Mac learned: **18000 episodes, 26.00 h**; reference F/E: **7200 episodes, 14.79 h**; total **40.80 h**.
+Measured Mac episode means; pretrained is a latency proxy for all five checkpoints. Serial episodes, eight reference CPU candidate workers. Excludes training/generation/readout/ABC. Controls reused from W4c.
+Calibration base generation and contact-cache witness filtering are additional unprojected work.
 
-Pretrained latency was measured concurrently with reference calibration and tests; projections assume those measured latencies persist.
-
-Measured independent episode means: reference **7.152 s**, pretrained **5.465 s** (LeWM planning **5.247 s**).
-At N=800 (conditional), 7 checkpoints x1 repeat x4 conditions:
-
-- Mac learned: **34.01 h**; reference F/E: **12.72 h**; total **46.72 h**.
-- One CUDA GPU, LeWM planning assumed 5x faster, same CPU reference: learned **7.89 h**; total **20.60 h**.
-
-Projections exclude training, generation, readout and A/B/C. CUDA is an assumption, not a benchmark.
-All full evidence is under `$LEWM_WORK_ROOT/runs/w4c-calibration`: `grid.json`, `chosen.json`,
-`construction.json`, `construction_audit.json`, `evidence.json`, `chosen-reference`, `chosen-lewm`,
-`pretrained-budget100` and `protocol_freeze.json`. Reused learned images/populations are at the source in `reuse.json`.
-Wilson intervals, all episode times and full power inputs are in evidence.json. Tests: `uv run pytest -q` passes (see `runs/w4c-tests/pytest.log`). No commit was made.
-
-## Sample size and timing method
-
-Use W4b's paired-binary method separately on each F-selected common set.
-q is pretrained hard/control discordance; use its Wilson 95% upper bound
-(and at least the assumed effect). For delta in {0.15,0.10}, effective bases
-=ceil((z_0.975+z_0.80)^2*(q_upper-delta^2)/delta^2). The 10-point requirement
-is a proxy for future ft_mixed/ft_block discordance, not measured cross-arm
-power. Divide the larger effective count by the Wilson lower bound on F
-eligibility. Take the larger candidate count across D/G and round up to the
-next hundred; an empty common set leaves joint N unestimable. A remaining contrast may
-provide an explicitly conditional N and workload projection, never main-run
-authorization. Increasing N
-cannot fix reference readiness. This powers CI exclusion of zero, not the
-full compound decision bar or guaranteed fine-tuned effects.
-
-Evaluation workload is **7 checkpoints x 1 repeat x 4 conditions x N**, plus
-separate reference F/E x4xN. Use independent validation episode means at the
-chosen reference cost and worker count. CUDA projection, if Mac exceeds
-12 h, divides measured LeWM **planning** time by five, retaining non-planning
-and reference CPU time; this is an assumption, not a measured GPU benchmark.
-Exclude training, generation, readout and A/B/C from the evaluation projection.
+Full evidence: `$LEWM_WORK_ROOT/runs/w4d-calibration` (`grid.json`,
+`chosen.json`, `L*/construction.json`, `L*/reference-F`, `near-reference-E`,
+`near-pretrained-E`, merged `reference-F/reference-E/pretrained-E`,
+`reuse.json`, `evidence.json`, `protocol_freeze.json`, `driver.log`).
+Reproduce the bounded workflow with `python -m lewm_research.probe.near_path`
+using the project environment; resume rejects changed episode configs.
+Tests and validation are recorded under `$LEWM_WORK_ROOT/runs/w4d-tests`.
+No commit was made.
 
 ## Frozen decision bar (copied from PLAN.md)
 
 For `ft_block`:
-1. Gap exists: D or G shows LeWM success lower by >= 15 points in the less-familiar
+1. Gap exists: D' or G shows LeWM success lower by >= 15 points in the less-familiar
    condition, paired cluster-bootstrap 95% CI excluding 0, on the common feasible set,
    while the reference planner's difference under evaluation seed E is < 5 points.
 2. Localization (labels are descriptive, not proofs of mechanism):

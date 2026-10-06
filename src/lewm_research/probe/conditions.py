@@ -12,7 +12,10 @@ import lewm_research.envs  # noqa: F401
 from ..envs.pusht_peg import PushTPeg
 from ..policies.weak import BlockWeakPolicy, PegWeakPolicy
 
-NAMES = ("off_path", "on_path", "move_peg", "move_T_matched")
+LEGACY_NAMES = ("off_path", "on_path", "move_peg", "move_T_matched")
+PRIMARY_NAMES = ("off_path", "near_path", "move_peg", "move_T_matched")
+NAMES = PRIMARY_NAMES
+ALL_NAMES = (*PRIMARY_NAMES, "on_path")
 
 
 @dataclass
@@ -55,6 +58,70 @@ def segment_distance(xy, start, goal):
     return LineString([start, goal]).distance(Point(*xy))
 
 
+def with_near_path(base, lateral_distance):
+    """Add a midpoint perpendicular offset, retaining the original D future.
+
+    Prefer one side deterministically per scene, independent of L or outcomes;
+    try the other only for endpoint geometry. Never jitter or change the goal.
+    """
+    from copy import deepcopy
+    from dataclasses import replace
+    if base.rollout_tasks is None or not np.isfinite(lateral_distance) or lateral_distance <= 0:
+        raise ValueError("near_path requires rollout tasks and a positive finite L")
+    task = deepcopy(base.rollout_tasks["off_path"])
+    start = np.asarray(task["snapshot"]["bodies"]["block"]["position"])
+    goal = np.asarray(task["goal_state"][2:4])
+    direction = goal - start
+    if np.linalg.norm(direction) == 0:
+        raise ValueError("near_path requires a nonzero corridor")
+    normal = np.array([-direction[1], direction[0]]) / np.linalg.norm(direction)
+    preferred = int(np.random.default_rng(base.seed).choice([-1, 1]))
+    env = PushTPeg(with_target=False)
+    try:
+        env.reset(seed=base.seed)
+        for side in (preferred, -preferred):
+            xy = (start + goal) / 2 + side * lateral_distance * normal
+            if not np.all((xy >= 45) & (xy <= 467)):
+                continue
+            env.restore_snapshot(task["snapshot"])
+            if env.peg_overlaps(xy):
+                continue
+            env._set_state(np.asarray(task["goal_state"]))
+            if env.peg_overlaps(xy):
+                continue
+            peg = task["snapshot"]["bodies"]["peg"]
+            peg["position"], peg["velocity"], peg["angular_velocity"] = xy.tolist(), [0, 0], 0
+            task["goal_state"][7:9] = xy.tolist()
+            task["lateral_distance_px"], task["side"] = float(lateral_distance), side
+            # The original witness remains provenance, not a reachability claim
+            # for the modified task or an initialization of either planner.
+            task.pop("witness_replay_score", None)
+            task.pop("witness_replay_max_state_error", None)
+            tasks = deepcopy(base.rollout_tasks)
+            tasks["near_path"] = task
+            return replace(base, rollout_tasks=tasks)
+        raise ValueError(f"{base.id}: no non-overlapping near_path endpoint placement at L={lateral_distance}")
+    finally:
+        env.close()
+
+
+def naive_disturbance(base):
+    """Replay the original 25-step D witness in a fresh modified scene."""
+    condition = make_conditions(base, render_images=False, with_target=False)["near_path"]
+    env = PushTPeg(with_target=False)
+    try:
+        env.reset(seed=base.seed)
+        env.restore_snapshot(condition.start_snapshot)
+        trajectory = [env._get_obs().copy()]
+        for action in base.rollout_tasks["off_path"]["witness_actions"]:
+            trajectory.append(env.step(np.asarray(action, dtype=np.float32))[0]["state"].copy())
+        score = score_trajectory(trajectory, condition)
+        return {"base_id": base.id, "disturbed": score["max_peg_displacement"] > 10,
+                "max_peg_displacement_px": score["max_peg_displacement"], "score": score}
+    finally:
+        env.close()
+
+
 def _free(env, state):
     env._set_state(state)
     shapes = env._shape_geometry(env.block)
@@ -68,7 +135,7 @@ def _free(env, state):
 
 
 def make_conditions(base, displacement_range=(40,100), render_images=True, with_target=True):
-    """Construct only the canonical W4c tasks; legacy scenes remain readable."""
+    """Render stored W4c/W4d rollout tasks; pre-W4c scenes remain readable."""
     if base.rollout_tasks is None:
         raise ValueError("archived pre-W4c scenes require their original Git revision")
     if tuple(displacement_range) != (40,100):
@@ -123,15 +190,18 @@ def _window(states, object_indices, stationary_indices, maximum=None, bin_index=
     return None
 
 
-def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100)):
+def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), *, near_path_distance=None):
     """W4c paired D/G rollout windows from the same clutter scene.
 
     The first qualifying D window is used; invalid midpoint geometry discards
-    the scene. Witness actions establish reachability, never initialize CEM.
+    the scene. Optional W4d L additionally requires a valid lateral placement.
+    Witness actions establish original-goal reachability, never initialize CEM.
     """
     from copy import deepcopy
     if n<1 or seed<0 or min_t_displacement!=40 or tuple(displacement_range)!=(40,100):
         raise ValueError("W4c fixes minimum=40 and displacement range=(40,100)")
+    if near_path_distance is not None and (not np.isfinite(near_path_distance) or near_path_distance <= 0):
+        raise ValueError("near_path requires a positive finite L")
     env = gym.make("swm/PushTPeg-v1",with_target=False,max_episode_steps=10000)
     bases = []
     try:
@@ -193,8 +263,14 @@ def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100)):
                 witnessed &= task["witness_replay_score"]["success"]
             if not witnessed:
                 continue
-            bases.append(BaseScene(f"{seed}:{attempt}",scene_seed,start[:2].tolist(),start[2:5].tolist(),
-                start[7:9].tolist(),goal[2:5].tolist(),goal[:2].tolist(),snaps[d],tasks))
+            base = BaseScene(f"{seed}:{attempt}",scene_seed,start[:2].tolist(),start[2:5].tolist(),
+                start[7:9].tolist(),goal[2:5].tolist(),goal[:2].tolist(),snaps[d],tasks)
+            if near_path_distance is not None:
+                try:
+                    base = with_near_path(base, near_path_distance)
+                except ValueError:
+                    continue
+            bases.append(base)
             print(f"accepted {len(bases)}/{n} scene attempt={attempt}",flush=True)
             if len(bases)==n:
                 return bases

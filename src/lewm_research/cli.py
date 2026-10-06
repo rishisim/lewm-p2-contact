@@ -160,3 +160,54 @@ def probe_calibrate_cmd(workers: int = typer.Option(8, min=1),
     """Run the independent 20-base difficulty grid and chosen pretrained arm."""
     from .probe.calibration import grid
     typer.echo(json.dumps(grid(workers=workers, device=device, run_dir=run_dir), indent=2))
+
+
+@app.command("probe-readout")
+def probe_readout_cmd(
+    bases: str = typer.Option(...),
+    checkpoints: str = typer.Option("lewm-pusht,ft_block_s0,ft_block_s1,ft_mixed_s0,ft_mixed_s1"),
+    frames_per_dataset: int = typer.Option(4000, min=1), seed: int = typer.Option(42),
+    device: str = typer.Option("auto"), batch_size: int = typer.Option(64, min=1),
+    outer_folds: int = typer.Option(5, min=2), inner_folds: int = typer.Option(3, min=2),
+    bootstrap_samples: int = typer.Option(2000, min=1), run_dir: str | None = typer.Option(None),
+) -> None:
+    """Nested grouped linear readouts on one common held-out frame pool."""
+    from .probe.readout import run_readout
+    result = run_readout(bases, checkpoints.split(","), frames_per_dataset, seed, run_dir,
+                         device, batch_size, outer_folds, inner_folds, bootstrap_samples)
+    typer.echo(json.dumps(result, indent=2))
+
+
+@app.command("probe-abc")
+def probe_abc_cmd(
+    bases: str = typer.Option(...),
+    checkpoints: str = typer.Option("lewm-pusht,ft_block_s0,ft_block_s1,ft_mixed_s0,ft_mixed_s1"),
+    conditions: str = typer.Option("all"), n: int = typer.Option(50, min=1),
+    seed: int = typer.Option(42), device: str = typer.Option("auto"),
+    workers: int = typer.Option(4, min=1), population: int = typer.Option(300, min=16),
+    iterations: int = typer.Option(30, min=1), topk: int = typer.Option(30, min=2),
+    approach_weight: float = typer.Option(.1, min=0), batch_size: int = typer.Option(16, min=1),
+    feasibility_run: str | None = typer.Option(None), bootstrap_samples: int = typer.Option(2000, min=1),
+    run_dir: str | None = typer.Option(None),
+) -> None:
+    """Persist one physical bank per base/condition, then score every checkpoint."""
+    from .probe.abc import run_abc
+    result = run_abc(bases, checkpoints.split(","), conditions, n, seed, run_dir, device,
+                     workers, population, iterations, topk, approach_weight, batch_size,
+                     feasibility_run, bootstrap_samples)
+    typer.echo(json.dumps(result, indent=2))
+
+
+@app.command("probe-report")
+def probe_report_cmd(
+    runs: list[str] = typer.Option(..., help="Repeat --runs for each eval/readout/ABC directory; comma-separated paths also accepted."),
+    feasibility_run: str | None = typer.Option(None), seed: int = typer.Option(42),
+    bootstrap_samples: int = typer.Option(2000, min=1), run_dir: str | None = typer.Option(None),
+    publish: bool = typer.Option(False, help="Copy the two compact result files into experiments/role_swap/results/."),
+) -> None:
+    """Write tables and frozen-bar labels from completed episode/analysis runs."""
+    from .probe.report import run_report
+    result = run_report([p for value in runs for p in value.split(",")], run_dir,
+                        feasibility_run, seed, bootstrap_samples, publish)
+    typer.echo(json.dumps({"run_dir": result["run_dir"], "checkpoints": list(result["checkpoints"]),
+                           "feasibility": result["feasibility"]}, indent=2))

@@ -9,7 +9,7 @@ import numpy as np
 from shapely.geometry import LineString
 
 import lewm_research.envs  # noqa: F401
-from ..envs.pusht_peg import PushTPeg
+from ..envs.pusht_peg import PEG_RADIUS, PushTPeg
 from ..policies.weak import BlockWeakPolicy, PegWeakPolicy
 
 LEGACY_NAMES = ("off_path", "on_path", "move_peg", "move_T_matched")
@@ -29,6 +29,7 @@ class BaseScene:
     goal_agent_xy: list
     snapshot: dict
     rollout_tasks: dict | None = None
+    peg_radius: int = PEG_RADIUS
 
 
 @dataclass
@@ -39,6 +40,7 @@ class Condition:
     goal_state: list
     scoring_spec: dict
     goal_image: np.ndarray
+    peg_radius: int = PEG_RADIUS
 
 
 def jsonable(value):
@@ -76,12 +78,12 @@ def with_near_path(base, lateral_distance):
         raise ValueError("near_path requires a nonzero corridor")
     normal = np.array([-direction[1], direction[0]]) / np.linalg.norm(direction)
     preferred = int(np.random.default_rng(base.seed).choice([-1, 1]))
-    env = PushTPeg(with_target=False)
+    env = PushTPeg(with_target=False, peg_radius=base.peg_radius)
     try:
         env.reset(seed=base.seed)
         for side in (preferred, -preferred):
             xy = (start + goal) / 2 + side * lateral_distance * normal
-            if not np.all((xy >= 45) & (xy <= 467)):
+            if not np.all((xy >= 30+base.peg_radius) & (xy <= 482-base.peg_radius)):
                 continue
             env.restore_snapshot(task["snapshot"])
             if env.peg_overlaps(xy):
@@ -108,7 +110,7 @@ def with_near_path(base, lateral_distance):
 def naive_disturbance(base):
     """Replay the original 25-step D witness in a fresh modified scene."""
     condition = make_conditions(base, render_images=False, with_target=False)["near_path"]
-    env = PushTPeg(with_target=False)
+    env = PushTPeg(with_target=False, peg_radius=base.peg_radius)
     try:
         env.reset(seed=base.seed)
         env.restore_snapshot(condition.start_snapshot)
@@ -131,7 +133,7 @@ def _free(env, state):
             and all(s.bounds[0] >= 30 and s.bounds[1] >= 30
                     and s.bounds[2] <= 482 and s.bounds[3] <= 482 for s in shapes)
             and np.all((state[:2] >= 50) & (state[:2] <= 462))
-            and np.all((state[7:9] >= 45) & (state[7:9] <= 467)))
+            and np.all((state[7:9] >= 30+env.peg_radius) & (state[7:9] <= 482-env.peg_radius)))
 
 
 def make_conditions(base, displacement_range=(40,100), render_images=True, with_target=True):
@@ -145,7 +147,7 @@ def make_conditions(base, displacement_range=(40,100), render_images=True, with_
 
 def _rollout_conditions(base, render_images, with_target):
     """Stored physical endpoints; preserve all start velocities."""
-    env = PushTPeg(with_target=with_target, render_target_pose=(256,256,np.pi/4))
+    env = PushTPeg(with_target=with_target, render_target_pose=(256,256,np.pi/4), peg_radius=base.peg_radius)
     result = {}
     try:
         env.reset(seed=base.seed)
@@ -154,7 +156,7 @@ def _rollout_conditions(base, render_images, with_target):
             env.set_goal(task["goal_state"])
             result[name] = Condition(name, base.id, jsonable(env.get_snapshot()), task["goal_state"],
                 {"peg":"target" if name=="move_peg" else "preserve", "peg_start":list(env.peg.position)},
-                env.render_state(task["goal_state"]) if render_images else None)
+                env.render_state(task["goal_state"]) if render_images else None, base.peg_radius)
         return result
     finally:
         env.close()
@@ -176,13 +178,14 @@ def _weak_trace(env, snapshot, policy, steps=300):
     return np.asarray(states), snapshots, actions
 
 
-def _window(states, object_indices, stationary_indices, maximum=None, bin_index=None, small_rotation=False):
+def _window(states, object_indices, stationary_indices, maximum=None, bin_index=None, small_rotation=False,
+            start_distance=40):
     for t in range(len(states)-25):
         start, goal = states[t], states[t+25]
         length = np.linalg.norm(goal[object_indices]-start[object_indices])
         fixed = np.max(np.abs(states[t:t+26, stationary_indices]-start[stationary_indices])) < 1e-6
         angle = abs((goal[4]-start[4]+np.pi)%(2*np.pi)-np.pi)
-        if (np.linalg.norm(start[:2]-start[object_indices])<=40 and length>=40
+        if (np.linalg.norm(start[:2]-start[object_indices])<=start_distance and length>=40
                 and (maximum is None or length<=maximum) and fixed
                 and (bin_index is None or min(2,int((length-40)//20))==bin_index)
                 and (not small_rotation or angle<np.pi/9)):
@@ -190,7 +193,7 @@ def _window(states, object_indices, stationary_indices, maximum=None, bin_index=
     return None
 
 
-def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), *, near_path_distance=None):
+def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), *, near_path_distance=None, peg_radius=PEG_RADIUS):
     """W4c paired D/G rollout windows from the same clutter scene.
 
     The first qualifying D window is used; invalid midpoint geometry discards
@@ -202,7 +205,9 @@ def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), 
         raise ValueError("W4c fixes minimum=40 and displacement range=(40,100)")
     if near_path_distance is not None and (not np.isfinite(near_path_distance) or near_path_distance <= 0):
         raise ValueError("near_path requires a positive finite L")
-    env = gym.make("swm/PushTPeg-v1",with_target=False,max_episode_steps=10000)
+    if not isinstance(peg_radius, int) or peg_radius < 1:
+        raise ValueError("positive integer peg radius required")
+    env = gym.make("swm/PushTPeg-v1",with_target=False,max_episode_steps=10000,peg_radius=peg_radius)
     bases = []
     try:
         for attempt in range(10000*n):
@@ -223,10 +228,11 @@ def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), 
             a,b = start.copy(),goal.copy(); a[7:9]=b[7:9]=on
             raw._set_state(a); valid = not raw.peg_overlaps(on)
             raw._set_state(b)
-            if not valid or raw.peg_overlaps(on) or not np.all((on>=45)&(on<=467)):
+            if not valid or raw.peg_overlaps(on) or not np.all((on>=30+peg_radius)&(on<=482-peg_radius)):
                 continue
-            ps,psnaps,pactions = _weak_trace(env,original,PegWeakPolicy(dist_constraint=30,seed=scene_seed))
-            g = _window(ps,slice(7,9),slice(2,5),maximum=100)
+            # Agent radius 15; retain the radius-15 contact margin.
+            ps,psnaps,pactions = _weak_trace(env,original,PegWeakPolicy(dist_constraint=peg_radius+15,seed=scene_seed))
+            g = _window(ps,slice(7,9),slice(2,5),maximum=100,start_distance=peg_radius+25)
             if g is None:
                 continue
             length = np.linalg.norm(ps[g+25,7:9]-ps[g,7:9]); bin_index = min(2,int((length-40)//20))
@@ -257,14 +263,14 @@ def generate_bases(n, seed, min_t_displacement=40, displacement_range=(40,100), 
                     trajectory.append(raw.step(np.asarray(action, dtype=np.float32))[0]["state"].copy())
                 c = Condition(name, "construction", task["snapshot"], task["goal_state"],
                     {"peg":"target" if name=="move_peg" else "preserve",
-                     "peg_start":trajectory[0][7:9].tolist()}, None)
+                     "peg_start":trajectory[0][7:9].tolist()}, None, peg_radius)
                 task["witness_replay_score"] = score_trajectory(trajectory, c)
                 task["witness_replay_max_state_error"] = float(np.max(np.abs(trajectory[-1]-task["goal_state"])))
                 witnessed &= task["witness_replay_score"]["success"]
             if not witnessed:
                 continue
             base = BaseScene(f"{seed}:{attempt}",scene_seed,start[:2].tolist(),start[2:5].tolist(),
-                start[7:9].tolist(),goal[2:5].tolist(),goal[:2].tolist(),snaps[d],tasks)
+                start[7:9].tolist(),goal[2:5].tolist(),goal[:2].tolist(),snaps[d],tasks,peg_radius)
             if near_path_distance is not None:
                 try:
                     base = with_near_path(base, near_path_distance)

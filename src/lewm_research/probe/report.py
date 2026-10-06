@@ -8,6 +8,7 @@ import shutil
 
 import numpy as np
 
+from ..envs.pusht_peg import PEG_RADIUS
 from .analysis import cluster_mean, contrasts, fingerprint, open_run, write_json
 from .stats import paired_cluster_bootstrap
 
@@ -374,12 +375,12 @@ def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, 
     for root,config,rows in configs:
         if root in fpaths:
             continue
-        identity = tuple(config.get(k) for k in ("bases_sha256","budget","normalization_sha256"))
+        identity = tuple(config.get(k) for k in ("bases_sha256","budget","normalization_sha256")) + (config.get("peg_radius", PEG_RADIUS),)
         if protocol is not None and identity!=protocol:
-            raise ValueError("evaluation runs disagree on bases, budget or normalization")
+            raise ValueError("evaluation runs disagree on bases, budget, normalization or peg radius")
         protocol = identity
         if fc:
-            if any(fc.get(k)!=config.get(k) for k in ("bases_sha256","budget","displacement_range","normalization_sha256")):
+            if any(fc.get(k)!=config.get(k) for k in ("bases_sha256","budget","displacement_range","normalization_sha256")) or fc.get("peg_radius", PEG_RADIUS)!=config.get("peg_radius", PEG_RADIUS):
                 raise ValueError("F and evaluation protocols differ")
             if config["seed"]==fc["seed"]:
                 raise ValueError("reference F must be independent of evaluation seeds")
@@ -392,7 +393,7 @@ def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, 
             seen.add(key)
             row["evaluation_seed"] = config["seed"]
         (reference_e if config["arm"]=="reference" else episodes).extend(rows)
-    if protocol is not None and any(c["bases_sha256"]!=protocol[0] for c in analysis_configs):
+    if protocol is not None and any(c["bases_sha256"]!=protocol[0] or c.get("peg_radius", PEG_RADIUS)!=protocol[3] for c in analysis_configs):
         raise ValueError("analysis and evaluation runs use different bases")
     abc_seen = set()
     shared_banks = {}
@@ -415,7 +416,8 @@ def run_report(runs, run_dir=None, feasibility_run=None, seed=42, samples=2000, 
         if any(row["with_target"]!=ec.get("with_target") for row in abc if row["checkpoint"]==arm):
             raise ValueError("ABC and evaluation rendering differ")
     config = {"stage":"probe-report","runs":list(map(str,roots)),
-              "feasibility_run":str(next(iter(fpaths))) if fpaths else None,"seed":seed,"bootstrap_samples":samples}
+              "feasibility_run":str(next(iter(fpaths))) if fpaths else None,"seed":seed,"bootstrap_samples":samples,
+              "peg_radius": protocol[3] if protocol else (fc or (analysis_configs[0] if analysis_configs else {})).get("peg_radius", PEG_RADIUS)}
     if coverage_underpowered:
         config["coverage_underpowered"] = True
     root = open_run("probe-report",config,run_dir)

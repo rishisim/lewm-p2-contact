@@ -3,9 +3,11 @@
 import hashlib
 import json
 import time
+from pathlib import Path
 
 import h5py
 import numpy as np
+import torch
 
 from ..envs.pusht_peg import PushTPeg
 from ..paths import checkpoint_dir, dataset_path, runs_root
@@ -14,6 +16,35 @@ from .readout import DEFAULT_CHECKPOINTS, Planner, encode_pool, nested_readout, 
 from .report import _readout_summary
 
 RADII = (15, 30, 45)
+FT45_FAMILIES = {"ft45_block_s0": {"pool": "peg_blockpolicy.h5", "training": "peg45_blockpolicy.h5"},
+                 "ft45_mixed_s0": {"pool": "peg_mixedpolicy.h5", "training": "peg45_mixedpolicy.h5"}}
+
+
+def training_splits(checkpoints):
+    splits = {}
+    for name in checkpoints:
+        if name not in FT45_FAMILIES:
+            continue
+        path = checkpoint_dir(name)/"trainer_state.pth"
+        metadata = torch.load(path, weights_only=False, map_location="cpu")["metadata"]
+        expected = FT45_FAMILIES[name]["training"]
+        val, train = set(metadata["val_episodes"]), set(metadata["train_episodes"])
+        if metadata["dataset"]["name"] != expected or metadata["seed"] != 0 or not val or val & train:
+            raise ValueError(f"invalid Phase B training split: {name}")
+        splits[name] = {"dataset": metadata["dataset"], "seed": metadata["seed"],
+                        "val_episodes": sorted(val), "trainer_state_sha256": fingerprint(path)}
+    return splits
+
+
+def assert_pool_validation(groups, splits):
+    # Compare seed-determined episode indices across r15/r45 datasets: an identical-split guard, not a leakage check.
+    for name, split in splits.items():
+        family = FT45_FAMILIES[name]["pool"]
+        episodes = {int(g.rsplit(":",1)[1]) for g in groups if g.rsplit(":",1)[0] == family}
+        missing = episodes-set(split["val_episodes"])
+        if not episodes or missing:
+            raise ValueError(f"{name}: Phase A pool {family} episodes outside recorded val_episodes: {sorted(missing)}"
+                             if episodes else f"{name}: Phase A pool lacks {family} episodes")
 
 
 def resample_pegs(states, seed=42):
@@ -93,6 +124,8 @@ def summarize(readouts, seed=42, samples=2000):
                                "mean_peg": summary["mean"]["peg"],
                                "peg_over_mean": _estimate(peg/mean if mean > 0 else None,
                                                           boot[valid]/meanboot[valid])}
+                cells[kind]["linear_readout_deficit"] = (peg >= 2*cells[kind]["T"]["mean"]
+                                                        and peg >= 1.5*cells[kind]["pixel_peg"]["mean"])
                 if radius == "45" and "15" in radii:
                     small = radii["15"]["features"][kind]["episode_errors"]
                     if sorted(small) != sorted(metrics["episode_errors"]) or any(
@@ -105,6 +138,8 @@ def summarize(readouts, seed=42, samples=2000):
 
 
 def apply_reading(checkpoints):
+    if not set(DEFAULT_CHECKPOINTS[1:]).issubset(checkpoints):
+        return None
     cells = []
     for name in DEFAULT_CHECKPOINTS[1:]:
         for kind in ("cls", "projected"):
@@ -147,9 +182,9 @@ def markdown_summary(result):
             return "undefined"
         lo, hi = metric["ci"]
         return f'{metric["mean"]:.2f} [{lo:.2f}, {hi:.2f}]'
-    lines = ["# Size control: Phase A", "", "Estimates [episode-bootstrap 95% CI].", "",
-             "| Checkpoint | Radius | Kind | Peg | T | Pixel peg | Mean peg | Peg/T | Peg/pixel | Peg/mean | 15→45 reduction |",
-             "|---|---:|---|---|---|---|---|---|---|---|---|"]
+    lines = ["# Size control: Phase A readout procedure", "", "Estimates [episode-bootstrap 95% CI].", "",
+             "| Checkpoint | Radius | Kind | Peg | T | Pixel peg | Mean peg | Peg/T | Peg/pixel | Peg/mean | 15→45 reduction | Linear-readout deficit |",
+             "|---|---:|---|---|---|---|---|---|---|---|---|---|"]
     for name, radii in result["checkpoints"].items():
         for radius, kinds in sorted(radii.items(), key=lambda item:int(item[0])):
             for kind, cell in kinds.items():
@@ -157,8 +192,10 @@ def markdown_summary(result):
                                                     "peg_over_pixel","peg_over_mean")]
                 reduction = cell.get("peg_reduction_15_to_45")
                 lines.append(f'| {name} | {radius} | {kind} | '+" | ".join(metrics)+
-                             f' | {value(reduction) if reduction else "—"} |')
-    reading = result["reading"]
+                             f' | {value(reduction) if reduction else "—"} | {cell["linear_readout_deficit"]} |')
+    reading = result.get("reading")
+    if reading is None:
+        return "\n".join(lines)+"\n"
     lines += ["", "| Checkpoint | Kind | Label | Radius-15 deficit | Threshold flags |",
               "|---|---|---|---|---|"]
     for cell in reading["cells"]:
@@ -176,8 +213,13 @@ def run_size_control(checkpoints=DEFAULT_CHECKPOINTS, radii=RADII, frames_per_da
                      seed=42, run_dir=None, device="auto"):
     checkpoints = checkpoint_names(checkpoints)
     radii = tuple(radii)
-    if not set(checkpoints).issubset(DEFAULT_CHECKPOINTS):
-        raise ValueError("Phase A checkpoints required")
+    if not set(checkpoints).issubset((*DEFAULT_CHECKPOINTS, *FT45_FAMILIES)):
+        raise ValueError("Phase A or Phase B checkpoints required")
+    if set(checkpoints) & FT45_FAMILIES.keys():
+        if seed != 42 or frames_per_dataset != 4000:
+            raise ValueError("Phase B requires the identical Phase A pool: seed=42, frames_per_dataset=4000")
+        if run_dir is None or Path(run_dir).expanduser().resolve() == (runs_root()/"size-control/phaseA").resolve():
+            raise ValueError("Phase B requires a separate run directory")
     if not radii or len(set(radii)) != len(radii) or not set(radii).issubset(RADII):
         raise ValueError("unique Phase A radii (15, 30, 45) required")
     if frames_per_dataset < 1 or seed < 0:
@@ -191,6 +233,9 @@ def run_size_control(checkpoints=DEFAULT_CHECKPOINTS, radii=RADII, frames_per_da
               "dataset_sha256": hashes, "device": device, "batch_size": 64,
               "outer_folds": 5, "inner_folds": 3, "bootstrap_samples": 2000,
               "checkpoint_sha256": {n: fingerprint(checkpoint_dir(n)/"weights.pt") for n in checkpoints}}
+    splits = training_splits(checkpoints)
+    if splits:
+        config["training_splits"] = splits
     root = open_run("probe-size-control", config, run_dir or runs_root()/"size-control/phaseA")
     start = time.perf_counter()
     if not (root/"pool.npz").exists():
@@ -202,6 +247,11 @@ def run_size_control(checkpoints=DEFAULT_CHECKPOINTS, radii=RADII, frames_per_da
     manifest = json.loads((root/"pool.json").read_text())
     if len(states) != len(groups) or len(states) != len(manifest["rows"]):
         raise ValueError("incomplete persisted evaluation pool")
+    assert_pool_validation(groups, splits)
+    pool_identity = hashlib.sha256(states.tobytes()+json.dumps(groups.tolist()).encode()).hexdigest()
+    phase_a_summary = runs_root()/"size-control/phaseA/summary.json"
+    if splits and phase_a_summary.exists():
+        assert pool_identity == json.loads(phase_a_summary.read_text())["pool_identity"], "Phase B pool identity differs from Phase A"
     targets = states[:, [7,8,2,3]]
     readouts = {}
     for name in checkpoints:
@@ -243,10 +293,13 @@ def run_size_control(checkpoints=DEFAULT_CHECKPOINTS, radii=RADII, frames_per_da
                 planner.close()
     summary = summarize(readouts, seed)
     result = {"stage": "probe-size-control", "run_dir": str(root), "seed": seed,
-              "pool_identity": hashlib.sha256(states.tobytes()+json.dumps(groups.tolist()).encode()).hexdigest(),
+              "pool_identity": pool_identity,
               "pool": {"frames": len(states), "episodes": len(np.unique(groups)), "datasets": manifest["datasets"]},
-              "checkpoints": summary, "reading": apply_reading(summary),
+              "checkpoints": summary,
               "invocation_wall_s": time.perf_counter()-start}
+    reading = apply_reading(summary)
+    if reading is not None:
+        result["reading"] = reading
     write_json(root/"summary.json", result)
     (root/"summary.md").write_text(markdown_summary(result))
     return result

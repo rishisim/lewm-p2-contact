@@ -149,7 +149,7 @@ def build_pool(bases_path, frames_per_dataset, seed, heldout):
                 states.append(state)
                 # All matched condition endpoints from one base stay together.
                 groups.append(f"condition:{base.id}")
-                rows.append({"base_id": base.id, "condition": name, "endpoint": endpoint})
+                rows.append({"base_id": base.id, "condition": name, "endpoint": endpoint, "peg_radius": base.peg_radius})
     return np.asarray(states), np.asarray(groups), {"rows": rows, "datasets": counts}
 
 
@@ -167,6 +167,12 @@ def render_pool(states, manifest, with_target):
                     files[name] = h5py.File(dataset_path(name), "r")
                 pixels.append(files[name]["pixels"][row["row"]])
             else:
+                radius = row.get("peg_radius", 15)
+                if env.peg_radius != radius:
+                    env.close()
+                    env = PushTPeg(resolution=224, with_target=with_target,
+                                   render_target_pose=(256,256,np.pi/4), peg_radius=radius)
+                    env.reset(seed=0)
                 env._set_state(state)
                 pixels.append(env._render_frame("rgb_array").copy())
         return np.stack(pixels)
@@ -196,12 +202,15 @@ def run_readout(bases_path, checkpoints=DEFAULT_CHECKPOINTS, frames_per_dataset=
     if not set(checkpoints).difference(("lewm-pusht",)).issubset(split_checkpoints):
         raise ValueError("all fine-tuned readout checkpoints need their held-out split in split_checkpoints")
     heldout, provenance = validation_episodes(split_checkpoints)
+    bases = load_bases(bases_path)
+    if len({b.peg_radius for b in bases}) > 1:
+        raise ValueError("one peg radius required per readout run")
     dataset_hashes = {name: fingerprint(dataset_path(name)) for name in heldout}
     if any(dataset_hashes[p["dataset"]["name"]] != p["dataset"]["sha256"] for p in provenance.values()):
         raise ValueError("training dataset content differs from recorded split metadata")
     config = {"stage": "probe-readout", "seed": seed, "checkpoints": list(checkpoints),
               "checkpoint_sha256": {n: fingerprint(checkpoint_dir(n)/"weights.pt") for n in checkpoints},
-              "bases_sha256": fingerprint(bases_path), "conditions": list(NAMES),
+              "bases_sha256": fingerprint(bases_path), "conditions": list(NAMES), "peg_radius": bases[0].peg_radius if bases else 15,
               "frames_per_dataset": frames_per_dataset, "splits": provenance,
               "dataset_sha256": dataset_hashes,
               "device": device, "batch_size": batch_size, "outer_folds": outer_folds,

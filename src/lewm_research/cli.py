@@ -139,10 +139,11 @@ def probe_eval_cmd(
 def probe_bases_cmd(n: int = typer.Option(400, min=1),
                     seed: int = typer.Option(300000000),
                     near_path_distance: float = typer.Option(55),
+                    peg_radius: int = typer.Option(PEG_RADIUS, min=1),
                     run_dir: str = typer.Option(...)) -> None:
     """Persist frozen matched construction; reject incompatible resumes."""
     from .main import prepare_bases
-    typer.echo(str(prepare_bases(n, seed, near_path_distance, run_dir)))
+    typer.echo(str(prepare_bases(n, seed, near_path_distance, run_dir, peg_radius)))
 
 
 @app.command("probe-pilot")
@@ -202,7 +203,7 @@ def probe_size_control_cmd(
     frames_per_dataset: int = typer.Option(4000, min=1), seed: int = typer.Option(42, min=0),
     device: str = typer.Option("auto"), run_dir: str | None = typer.Option(None),
 ) -> None:
-    """Paired held-out readouts at three peg radii (Phase A)."""
+    """Paired held-out readouts with the Phase A pool and procedure."""
     from .probe.size_control import run_size_control
     result = run_size_control(checkpoints.split(","), tuple(int(r) for r in radii.split(",")),
                               frames_per_dataset, seed, run_dir, device)

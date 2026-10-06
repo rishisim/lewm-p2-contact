@@ -6,6 +6,7 @@ import json
 
 import numpy as np
 
+from ..envs.pusht_peg import PEG_RADIUS
 from ..runs import create_run
 from ..paths import runs_root
 from .rollout_eval import prepare_output_root
@@ -51,8 +52,11 @@ def open_run(stage, config, run_dir):
     root = prepare_output_root(run_dir) if run_dir else create_run(stage, config)
     root.mkdir(parents=True, exist_ok=True)
     path = root / "config.json"
-    if path.exists() and json.loads(path.read_text()) != config:
-        raise ValueError("resume configuration differs")
+    if path.exists():
+        previous = json.loads(path.read_text())
+        previous["peg_radius"] = previous.get("peg_radius", PEG_RADIUS)
+        if previous != {**config, "peg_radius": config.get("peg_radius", PEG_RADIUS)}:
+            raise ValueError("resume configuration differs")
     write_json(path, config)
     return root
 

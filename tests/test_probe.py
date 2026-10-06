@@ -1,6 +1,6 @@
 """Fast physical, serialization, solver, and statistical checks for W4."""
 
-from dataclasses import asdict
+from dataclasses import asdict, replace
 import json
 
 import numpy as np
@@ -78,6 +78,45 @@ def test_determinism_and_roundtrip(base, tmp_path):
         np.testing.assert_allclose(c.goal_image[round(xy[1]), round(xy[0])], PEG_COLOR, atol=5)
 
 
+@pytest.mark.parametrize("radius", [15, 45])
+def test_base_radius_roundtrip_and_legacy(base, tmp_path, radius):
+    path = tmp_path/"bases.json"
+    scene = replace(base, peg_radius=radius)
+    save_bases([scene], path)
+    assert json.loads(path.read_text())[0]["peg_radius"] == radius
+    assert asdict(load_bases(path)[0]) == asdict(scene)
+    legacy = asdict(scene)
+    del legacy["peg_radius"]
+    path.write_text(json.dumps([legacy]))
+    assert load_bases(path)[0].peg_radius == 15
+
+
+def test_conditions_render_base_radius(base, tmp_path):
+    conditions = make_conditions(replace(base, peg_radius=45), with_target=False)
+    env = PushTPeg(resolution=224, with_target=False, peg_radius=45)
+    try:
+        env.reset(seed=0)
+        for condition in conditions.values():
+            assert condition.peg_radius == 45
+            np.testing.assert_array_equal(condition.goal_image, env.render_state(condition.goal_state))
+        assert not np.array_equal(conditions["move_peg"].goal_image,
+                                  make_conditions(base, with_target=False)["move_peg"].goal_image)
+    finally:
+        env.close()
+    save_conditions(conditions, tmp_path/"conditions.json")
+    assert all(c.peg_radius == 45 for c in load_conditions(tmp_path/"conditions.json").values())
+
+
+def test_generate_passes_radius_to_gym(monkeypatch):
+    from lewm_research.probe import conditions
+    def make(name, **kwargs):
+        assert name == "swm/PushTPeg-v1" and kwargs["peg_radius"] == 45
+        raise RuntimeError("radius reached gym")
+    monkeypatch.setattr(conditions.gym, "make", make)
+    with pytest.raises(RuntimeError, match="radius reached gym"):
+        generate_bases(1, 0, peg_radius=45)
+
+
 def test_scoring_away_and_back(base):
     c = make_conditions(base)["off_path"]
     endpoint = np.asarray(c.goal_state)
@@ -98,11 +137,13 @@ def test_scoring_away_and_back(base):
     assert not score_trajectory([moved_t], peg)["success"]
 
 
-def test_simulator_manual_and_pool(base):
+@pytest.mark.parametrize("radius", [15, 45])
+def test_simulator_manual_and_pool(base, radius):
+    base = replace(base, peg_radius=radius)
     c = make_conditions(base)["off_path"]
     stats = {"columns": {"action": {"mean": [0.1, -0.2], "std": [0.5, 0.7]}}}
     candidate = torch.zeros(1, 2, 5, 10)
-    env = PushTPeg(with_target=False)
+    env = PushTPeg(with_target=False, peg_radius=radius)
     env.reset(seed=0)
     env.restore_snapshot(c.start_snapshot)
     trajectory = [env._get_obs().copy()]
@@ -114,6 +155,9 @@ def test_simulator_manual_and_pool(base):
         cost = SimulatorCost(c, stats, workers)
         try:
             np.testing.assert_allclose(cost.get_cost({}, candidate), role_cost(trajectory, c), rtol=1e-6)
+            if workers == 1:
+                from lewm_research.probe import reference
+                assert reference._WORKER_ENV.peg_radius == radius
             candidates = torch.randn(1, 8, 5, 10, generator=torch.Generator().manual_seed(8))
             first = cost.get_cost({}, candidates)
             torch.testing.assert_close(first, cost.get_cost({}, candidates), rtol=0, atol=0)
@@ -175,8 +219,13 @@ def test_resume_and_separate_feasibility(base, tmp_path, monkeypatch):
         "columns": {"action": {"mean": [0,0], "std": [.2,.2]},
                     "proprio": {"mean": [0,0,0,0], "std": [1,1,1,1]}}})
     first = evaluate("reference", bases, n=1, run_dir=tmp_path / "F", seed=1, **options)
+    path = tmp_path/"F/config.json"
+    legacy = json.loads(path.read_text())
+    del legacy["peg_radius"]
+    path.write_text(json.dumps(legacy))
     resumed = evaluate("reference", bases, n=1, run_dir=tmp_path / "F", seed=1, **options)
     assert first == resumed
+    path.write_text(json.dumps(legacy))
     assert len((tmp_path / "F" / "episodes.jsonl").read_text().splitlines()) == 4
     extended = evaluate("reference", bases, n=1, run_dir=tmp_path / "F100", seed=1,
                         budget=100, prefix_run=tmp_path / "F", **options)

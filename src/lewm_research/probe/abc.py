@@ -9,7 +9,7 @@ import numpy as np
 from scipy.stats import spearmanr
 import torch
 
-from ..envs.pusht_peg import PushTPeg
+from ..envs.pusht_peg import PEG_RADIUS, PushTPeg
 from ..paths import checkpoint_dir
 from .analysis import checkpoint_names, cluster_mean, fingerprint, open_run, write_json, write_npz
 from .conditions import NAMES, load_bases, make_conditions, score_trajectory
@@ -50,7 +50,7 @@ def bank_candidates(population, costs, normalization, seed, low=-1, high=1):
 
 
 def execute_bank(actions, condition):
-    env = PushTPeg(with_target=False, render_target_pose=(256,256,np.pi/4))
+    env = PushTPeg(with_target=False, render_target_pose=(256,256,np.pi/4), peg_radius=condition.peg_radius)
     try:
         env.reset(seed=0)
         trajectories, scores = [], []
@@ -108,7 +108,7 @@ def model_costs(planner, bank, condition, batch_size=16):
     LeWM's encoder is framewise, so B's criterion selects the real last frame.
     """
     env = PushTPeg(resolution=224, with_target=planner.with_target,
-                   render_target_pose=(256,256,np.pi/4))
+                   render_target_pose=(256,256,np.pi/4), peg_radius=condition.peg_radius)
     try:
         env.reset(seed=0)
         def image(state):
@@ -160,25 +160,28 @@ def run_abc(bases_path, checkpoints=DEFAULT_CHECKPOINTS, conditions="all", n=50,
             or any(name not in NAMES for name in names)):
         raise ValueError("valid conditions, n/batch > 0 and population >= 16 required")
     bases = load_bases(bases_path)
+    if len({b.peg_radius for b in bases}) > 1:
+        raise ValueError("one peg radius required per ABC run")
+    peg_radius = bases[0].peg_radius if bases else PEG_RADIUS
     eligible = None
     if feasibility_run:
         froot = Path(feasibility_run)
         fc = json.loads((froot/"config.json").read_text())
-        if fc["arm"] != "reference" or fc["bases_sha256"] != fingerprint(bases_path):
+        if fc["arm"] != "reference" or fc["bases_sha256"] != fingerprint(bases_path) or fc.get("peg_radius", PEG_RADIUS) != peg_radius:
             raise ValueError("feasibility must be reference on identical bases")
         rows = [json.loads(line) for line in (froot/"episodes.jsonl").read_text().splitlines()]
         solved = [{r["base_id"] for r in rows if r["condition"] == name and r["score"]["success"]} for name in names]
         eligible = set.intersection(*solved)
         bases = [b for b in bases if b.id in eligible]
     bases = bases[:n]
-    action_env = PushTPeg()
+    action_env = PushTPeg(peg_radius=peg_radius)
     low, high = action_env.action_space.low.copy(), action_env.action_space.high.copy()
     action_env.close()
     config = {"stage": "probe-abc", "seed": seed, "checkpoints": list(checkpoints),
               "checkpoint_sha256": {name: fingerprint(checkpoint_dir(name)/"weights.pt") for name in checkpoints},
               "checkpoint_normalization_sha256": {name: fingerprint(checkpoint_dir(name)/"normalization.json") for name in checkpoints},
               "bases_sha256": fingerprint(bases_path), "base_ids": [b.id for b in bases],
-              "conditions": names, "n": n, "K": 64, "horizon_blocks": 5,
+              "conditions": names, "n": n, "K": 64, "horizon_blocks": 5, "peg_radius": peg_radius,
               "device": device, "workers": workers, "population": population,
               "iterations": iterations, "topk": topk, "approach_weight": approach_weight,
               "batch_size": batch_size, "bootstrap_samples": samples,

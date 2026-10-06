@@ -12,6 +12,7 @@ import torch
 from torchvision.transforms import v2 as transforms
 
 from ..device import resolve_device
+from ..envs.pusht_peg import PEG_RADIUS
 from ..lewm import load_lewm
 from ..normalization import load_normalization
 from ..paths import checkpoint_dir, runs_root
@@ -127,7 +128,7 @@ def run_episode(base, condition, planner, seed, population_path=None, budget=50,
     started = time.perf_counter()
     world = swm.World("swm/PushTPeg-v1", num_envs=1, image_shape=(224, 224),
                       max_episode_steps=max(100, budget + 1), with_target=planner.with_target,
-                      render_target_pose=(256, 256, np.pi / 4))
+                      render_target_pose=(256, 256, np.pi / 4), peg_radius=base.peg_radius)
     try:
         # Wheel MegaWrapper + EnvPool construct the exact (env,time,...) info
         # layout and action-history convention consumed by WorldModelPolicy.
@@ -232,12 +233,14 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     names = list(defaults) if conditions == "all" else conditions.split(",")
     if not bases or any(name not in ALL_NAMES for name in names):
         raise ValueError("nonempty bases and valid conditions required")
+    if len({b.peg_radius for b in bases}) != 1:
+        raise ValueError("one peg radius required per evaluation run")
     with_target = planner_options.get("with_target")
     if with_target is None:
         with_target = arm in ("reference", "lewm-pusht")
     planner_options["with_target"] = with_target
     config = {"arm": arm, "bases_sha256": hashlib.sha256(Path(bases_path).read_bytes()).hexdigest(),
-              "seed": seed, "n": n, "conditions": names, "budget": budget,
+              "seed": seed, "n": n, "conditions": names, "budget": budget, "peg_radius": bases[0].peg_radius,
               "displacement_range": list(displacement_range),
               "observation_rendering": "upstream-fixed-target" if with_target else "no-target",
               "feasibility_run": str(feasibility_run) if feasibility_run else None, **planner_options}
@@ -253,6 +256,7 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
         feasibility_config = json.loads((Path(feasibility_run) / "config.json").read_text())
         if (feasibility_config["arm"] != "reference" or feasibility_config["seed"] == seed
                 or feasibility_config["bases_sha256"] != config["bases_sha256"]
+                or feasibility_config.get("peg_radius", PEG_RADIUS) != config["peg_radius"]
                 or any(feasibility_config.get(k) != config[k] for k in
                        ("budget", "displacement_range", "normalization_sha256"))):
             raise ValueError("feasibility must use reference, the same bases and protocol, and a separate seed F")
@@ -268,6 +272,7 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     prefixes = {}
     if prefix_run:
         prefix_config = json.loads((Path(prefix_run)/"config.json").read_text())
+        prefix_config["peg_radius"] = prefix_config.get("peg_radius", PEG_RADIUS)
         if arm != "reference" or budget != 100 or prefix_config["budget"] != 50:
             raise ValueError("only reference 50-to-100 extensions are supported")
         if any(prefix_config.get(k) != v for k,v in config.items() if k not in ("budget", "feasibility_run")):
@@ -279,8 +284,11 @@ def evaluate(arm, bases_path, conditions="all", seed=42, n=100, run_dir=None,
     run_dir = prepare_output_root(run_dir)
     run_dir.mkdir(parents=True, exist_ok=True)
     config_path = run_dir / "config.json"
-    if config_path.exists() and json.loads(config_path.read_text()) != config:
-        raise ValueError("resume configuration differs")
+    if config_path.exists():
+        previous = json.loads(config_path.read_text())
+        previous["peg_radius"] = previous.get("peg_radius", PEG_RADIUS)
+        if previous != config:
+            raise ValueError("resume configuration differs")
     config_path.write_text(json.dumps(config, indent=2) + "\n")
     (run_dir / "normalization.json").write_text(json.dumps(normalization, indent=2) + "\n")
     path = run_dir / "episodes.jsonl"

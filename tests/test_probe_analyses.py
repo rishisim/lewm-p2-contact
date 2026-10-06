@@ -210,7 +210,7 @@ def test_run_abc_reuses_banks_across_checkpoints_and_resume(tmp_path,monkeypatch
         (folder/'normalization.json').write_text('{}')
     monkeypatch.setattr(abc,'checkpoint_dir',lambda name:storage/name)
     bases=tmp_path/'bases.json';bases.write_text('[]')
-    base=SimpleNamespace(id='base')
+    base=SimpleNamespace(id='base',peg_radius=15)
     condition=SimpleNamespace(name=contrasts()['G'][0])
     monkeypatch.setattr(abc,'load_bases',lambda path:[base])
     monkeypatch.setattr(abc,'make_conditions',lambda *args,**kwargs:{condition.name:condition})
@@ -272,7 +272,7 @@ def test_abc_normalizes_physical_actions_and_encodes_real_history():
         stats={'columns':{'action':{'mean':[.1,-.1],'std':[.2,.4]}}},transform=lambda x:x.float()/255)
     state=np.array([50,50,250,250,0,0,0,400,400])
     bank={'trajectories':np.broadcast_to(state,(4,26,9)).copy(),'actions':np.zeros((4,25,2),np.float32)}
-    a,b=model_costs(planner,bank,SimpleNamespace(goal_state=state),batch_size=2)
+    a,b=model_costs(planner,bank,SimpleNamespace(goal_state=state,peg_radius=15),batch_size=2)
     assert np.all(a==6.25) and np.all(b==2)
     assert len(seen)==2
     np.testing.assert_allclose(seen[0][...,::2],-.5)
@@ -314,3 +314,34 @@ def test_report_missing_seed_on_feasible_base_prevents_pooled_claim():
     result=compute_report(rows,f,e,samples=20)
     assert result['checkpoints']['ft_block_s0']['contrasts']['G']['gap_label']=='gap present'
     assert result['checkpoints']['ft_block:pooled']['contrasts']['G']['gap_label']=='unavailable'
+
+
+def test_report_ft45_families_and_g_only(tmp_path, monkeypatch):
+    from lewm_research.probe.analysis import checkpoint_names, write_json
+    from lewm_research.probe.report import _family, run_report
+    monkeypatch.setenv('LEWM_WORK_ROOT',str(tmp_path))
+    names = checkpoint_names(['ft45_block_s0','ft45_mixed_s0'])
+    assert [_family(n) for n in names] == ['ft45_block', 'ft45_mixed']
+    assert _family('ft_block_s0') == _family('ft_block_s1') == 'ft_block'
+    roots = []
+    for arm in names + ['reference']:
+        root = tmp_path/'runs'/arm
+        root.mkdir(parents=True)
+        roots.append(root)
+        write_json(root/'config.json', {'arm':arm,'seed':202,'bases_sha256':'same',
+            'normalization_sha256':'same','budget':50,'peg_radius':45})
+        rows = [_episode(arm, b, c, c=='move_T_matched') for b in range(3)
+                for c in ('move_peg','move_T_matched')]
+        (root/'episodes.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
+    result = run_report(roots, run_dir=tmp_path/'runs/report', samples=20)
+    assert set(result['checkpoints']) == set(names)
+    for name in names:
+        arm = result['checkpoints'][name]
+        assert not arm['pooled'] and not arm['readout']
+        assert arm['contrasts']['G']['unconditional']['learned']['gap_control_minus_hard']['difference'] == 1
+    assert (tmp_path/'runs/report/RESULTS.md').is_file()
+    config = json.loads((roots[-1]/'config.json').read_text())
+    del config['peg_radius']
+    write_json(roots[-1]/'config.json', config)
+    with pytest.raises(ValueError, match='peg radius'):
+        run_report(roots, samples=20)

@@ -23,6 +23,14 @@ def test_bases_resume_rejects_config_and_content_changes(tmp_path, monkeypatch):
     path = main.prepare_bases(1, 300000000, 55, root)
     assert main.prepare_bases(1, 300000000, 55, root) == path
     assert len(calls) == 1
+    assert calls[0][2]["peg_radius"] == 15
+    config_path = root/"config.json"
+    legacy = json.loads(config_path.read_text())
+    del legacy["peg_radius"]
+    config_path.write_text(json.dumps(legacy))
+    assert main.prepare_bases(1, 300000000, 55, root) == path
+    with pytest.raises(ValueError, match="configuration differs"):
+        main.prepare_bases(1, 300000000, 55, root, peg_radius=45)
     with pytest.raises(ValueError, match="configuration differs"):
         main.prepare_bases(2, 300000000, 55, root)
     path.write_text(path.read_text() + "\n")

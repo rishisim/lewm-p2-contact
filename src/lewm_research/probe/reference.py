@@ -17,8 +17,10 @@ _WORKER_ENV = None
 def _simulate(task):
     global _WORKER_ENV
     snapshot, condition, actions, prior_max, approach_weight = task
-    if _WORKER_ENV is None:
-        _WORKER_ENV = PushTPeg(with_target=False)
+    if _WORKER_ENV is None or _WORKER_ENV.peg_radius != condition.peg_radius:
+        if _WORKER_ENV is not None:
+            _WORKER_ENV.close()
+        _WORKER_ENV = PushTPeg(with_target=False, peg_radius=condition.peg_radius)
         _WORKER_ENV.reset(seed=0)
     env = _WORKER_ENV
     # Rebuild the physics space: body bias velocities/contact solver state are

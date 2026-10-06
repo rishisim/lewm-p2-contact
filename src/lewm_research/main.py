@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from .envs.pusht_peg import PEG_RADIUS
 from .paths import checkpoint_dir
 from .probe.analysis import fingerprint, open_run, write_json
 from .probe.conditions import generate_bases, load_bases
@@ -26,20 +27,20 @@ def check_normalization(path):
             raise FileNotFoundError(checkpoint_dir(name) / "weights.pt")
 
 
-def prepare_bases(n, seed, near_path_distance, run_dir):
+def prepare_bases(n, seed, near_path_distance, run_dir, peg_radius=PEG_RADIUS):
     config = {"stage": "probe-bases", "n": n, "seed": seed,
-              "near_path_distance": near_path_distance, "construction": "W4d"}
+              "near_path_distance": near_path_distance, "construction": "W4d", "peg_radius": peg_radius}
     root = open_run("probe-bases", config, run_dir)
     path = root / "bases.json"
     manifest = root / "manifest.json"
     if path.exists():
         bases = load_bases(path)
-        if len(bases) != n or any(not b.id.startswith(f"{seed}:") for b in bases):
+        if len(bases) != n or any(not b.id.startswith(f"{seed}:") or b.peg_radius != peg_radius for b in bases):
             raise ValueError("persisted bases differ from requested construction")
         if manifest.exists() and json.loads(manifest.read_text())["sha256"] != fingerprint(path):
             raise ValueError("persisted bases checksum differs")
     else:
-        bases = generate_bases(n, seed, near_path_distance=near_path_distance)
+        bases = generate_bases(n, seed, near_path_distance=near_path_distance, peg_radius=peg_radius)
         write_json(path, [asdict(b) for b in bases])
     write_json(manifest, {"sha256": fingerprint(path), "base_ids": [b.id for b in bases]})
     return path

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Size-control Phase B (SIZE_CONTROL.md): radius-45 G evaluation of ft45 checkpoints.
+# near_path (D'-only) is skipped: at radius 45 it makes construction ~2x slower.
 # Construction and the reference lane start at once; learned arms wait for checkpoints.
 set -Eeuo pipefail
 cd "$(dirname "$0")/../.."
@@ -10,7 +11,7 @@ n=100; master=310000000; arms=(ft45_block_s0 ft45_mixed_s0)
 normalization="$LEWM_WORK_ROOT/runs/w4d-calibration/normalization.json"
 run() { local label="$1"; shift; echo "$(date -u '+%FT%TZ') start $label"
         uv run lewm "$@" >> "$root/logs/$label.log" 2>&1; echo "$(date -u '+%FT%TZ') finished $label"; }
-[[ -f "$root/construction/bases.json" ]] || run construction probe-bases --n "$n" --seed "$master" --near-path-distance 55 --peg-radius 45 --run-dir "$root/construction"
+[[ -f "$root/construction/bases.json" ]] || run construction probe-bases --n "$n" --seed "$master" --near-path-distance 0 --peg-radius 45 --run-dir "$root/construction"
 bases="$root/construction/bases.json"
 eval_args=(--bases "$bases" --conditions move_peg,move_T_matched --n "$n" --budget 50 --population 300 --iterations 30 --topk 30 --normalization "$normalization")
 (

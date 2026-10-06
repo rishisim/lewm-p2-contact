@@ -138,12 +138,12 @@ def probe_eval_cmd(
 @app.command("probe-bases")
 def probe_bases_cmd(n: int = typer.Option(400, min=1),
                     seed: int = typer.Option(300000000),
-                    near_path_distance: float = typer.Option(55),
+                    near_path_distance: float = typer.Option(55, min=0, help="Near-path L in px; 0 skips near_path (G-only construction)."),
                     peg_radius: int = typer.Option(PEG_RADIUS, min=1),
                     run_dir: str = typer.Option(...)) -> None:
     """Persist frozen matched construction; reject incompatible resumes."""
     from .main import prepare_bases
-    typer.echo(str(prepare_bases(n, seed, near_path_distance, run_dir, peg_radius)))
+    typer.echo(str(prepare_bases(n, seed, near_path_distance or None, run_dir, peg_radius)))
 
 
 @app.command("probe-pilot")

@@ -5,6 +5,8 @@ from pathlib import Path
 
 import typer
 
+from .envs.pusht_peg import PEG_RADIUS
+
 app = typer.Typer(help="LeWM role-swap research tools.")
 
 
@@ -62,11 +64,12 @@ def collect_cmd(
     seed: int = typer.Option(0),
     workers: int = typer.Option(1, min=1),
     placement: str = typer.Option("clutter", help="clutter or uniform peg placement."),
+    peg_radius: int = typer.Option(PEG_RADIUS, min=1),
 ) -> None:
     """Collect fixed-length PushT-Peg episodes into compressed HDF5."""
     from .data.collect import collect
 
-    typer.echo(json.dumps(collect(name, episodes, steps, policy, seed, workers, placement), indent=2))
+    typer.echo(json.dumps(collect(name, episodes, steps, policy, seed, workers, placement, peg_radius), indent=2))
 
 
 @app.command("smoke-eval")

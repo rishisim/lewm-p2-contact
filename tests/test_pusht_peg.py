@@ -85,6 +85,24 @@ def test_policies_and_registration():
         env.close()
 
 
+def test_mixed_policy_peg_limit_scales_with_radius():
+    for kwargs, expected in (({}, 30), ({"peg_radius": 45}, 60)):
+        env = gym.make("swm/PushTPeg-v1", with_target=False, **kwargs)
+        try:
+            policy = MixedPolicy(p_peg=1, seed=2)
+            policy.set_env(env)
+            policy.begin_episode(0)
+            assert policy._limit(env.unwrapped, 0) == expected
+            override = MixedPolicy(p_peg=1, peg_dist_constraint=42, seed=2)
+            override.set_env(env)
+            override.begin_episode(0)
+            assert override._limit(env.unwrapped, 0) == 42
+            policy.current_choice = "block"
+            assert policy._limit(env.unwrapped, 0) == 100
+        finally:
+            env.close()
+
+
 def test_collection_round_trip(tmp_path, monkeypatch):
     monkeypatch.setenv("LEWM_WORK_ROOT", str(tmp_path))
     metadata = collect("tiny", episodes=2, steps=10, policy="mixed", seed=4, workers=2)
@@ -112,6 +130,22 @@ def test_clutter_placement_keeps_distance():
             assert not env.peg_overlaps(state[7:9])
     finally:
         env.close()
+
+
+def test_collection_peg_radius(tmp_path, monkeypatch):
+    monkeypatch.setenv("LEWM_WORK_ROOT", str(tmp_path))
+    images = []
+    for name, kwargs in (("default", {}), ("small", {"peg_radius": 15}), ("large", {"peg_radius": 45})):
+        metadata = collect(name, episodes=1, steps=1, seed=4, **kwargs)
+        radius = kwargs.get("peg_radius", 15)
+        assert metadata["peg_radius"] == radius
+        written = json.loads((tmp_path / f"stable-worldmodel/datasets/{name}.json").read_text())
+        assert written["peg_radius"] == radius
+        episode = HDF5Dataset(path=metadata["dataset"]).load_episode(0)
+        images.append(np.asarray(episode["pixels"])[0].transpose(1, 2, 0))
+    np.testing.assert_array_equal(images[0], images[1])
+    counts = [np.all(image == PEG_COLOR, axis=-1).sum() for image in images]
+    assert counts[2] > counts[1] > 0
 
 
 def test_collection_rows_pair_observation_with_action_taken_from_it(tmp_path, monkeypatch):

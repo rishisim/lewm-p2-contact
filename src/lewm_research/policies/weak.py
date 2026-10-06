@@ -63,9 +63,9 @@ class PegWeakPolicy(_WeakPolicy):
 class MixedPolicy(_WeakPolicy):
     """Per-episode block- or peg-centered actions; peg episodes use a tighter box to make contact."""
 
-    def __init__(self, dist_constraint=100, seed=None, p_peg=0.5, peg_dist_constraint=30):
+    def __init__(self, dist_constraint=100, seed=None, p_peg=0.5, peg_dist_constraint=None):
         super().__init__(dist_constraint, seed)
-        if peg_dist_constraint <= 0:
+        if peg_dist_constraint is not None and peg_dist_constraint <= 0:
             raise ValueError("peg_dist_constraint must be positive")
         self.p_peg = p_peg
         self.peg_dist_constraint = peg_dist_constraint
@@ -83,4 +83,6 @@ class MixedPolicy(_WeakPolicy):
         return env.peg.position if self.current_choice == "peg" else env.block.position
 
     def _limit(self, env, index):
-        return self.peg_dist_constraint if self.current_choice == "peg" else self.dist_constraint
+        if self.current_choice == "peg":
+            return env.peg_radius + 15 if self.peg_dist_constraint is None else self.peg_dist_constraint
+        return self.dist_constraint

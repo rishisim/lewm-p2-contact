@@ -8,15 +8,15 @@ from pathlib import Path
 import h5py
 import numpy as np
 
-from lewm_research.envs.pusht_peg import PushTPeg
+from lewm_research.envs.pusht_peg import PEG_RADIUS, PushTPeg
 from lewm_research.paths import dataset_path
 from lewm_research.policies.weak import BlockWeakPolicy, MixedPolicy
 
 
 def _episode(task):
-    episode_idx, steps, policy_name, seed, placement = task
+    episode_idx, steps, policy_name, seed, placement, peg_radius = task
     episode_seed = int(np.random.SeedSequence([seed, episode_idx]).generate_state(1)[0])
-    env = PushTPeg(with_target=False, terminate_on_success=False)
+    env = PushTPeg(with_target=False, terminate_on_success=False, peg_radius=peg_radius)
     obs, info = env.reset(seed=episode_seed, options={"peg_placement": placement})
     policy = BlockWeakPolicy(seed=episode_seed) if policy_name == "block" else MixedPolicy(seed=episode_seed)
     # The raw environment has no Gym spec; registration gives the same class a spec.
@@ -69,7 +69,7 @@ def _write_episode(file, episode, ep_idx, offset):
         dataset[ep_idx] = value
 
 
-def collect(name, episodes, steps=100, policy="block", seed=0, workers=1, placement="clutter"):
+def collect(name, episodes, steps=100, policy="block", seed=0, workers=1, placement="clutter", peg_radius=PEG_RADIUS):
     """Collect one named dataset, failing if it already exists."""
     if episodes < 1 or steps < 1 or workers < 1:
         raise ValueError("episodes, steps, and workers must be positive")
@@ -84,7 +84,7 @@ def collect(name, episodes, steps=100, policy="block", seed=0, workers=1, placem
         raise FileExistsError(path)
     if placement not in {"uniform", "clutter"}:
         raise ValueError("placement must be uniform or clutter")
-    tasks = ((i, steps, policy, seed, placement) for i in range(episodes))
+    tasks = ((i, steps, policy, seed, placement, peg_radius) for i in range(episodes))
     start = time.perf_counter()
     records = []
     try:
@@ -105,7 +105,7 @@ def collect(name, episodes, steps=100, policy="block", seed=0, workers=1, placem
     elapsed = time.perf_counter() - start
     frames = episodes * steps
     metadata = {
-        "dataset": str(path), "policy": policy, "seed": seed, "placement": placement,
+        "dataset": str(path), "policy": policy, "seed": seed, "placement": placement, "peg_radius": peg_radius,
         "episodes": episodes, "steps_per_episode": steps, "frames": frames,
         "workers": workers,
         "fraction_episodes_peg_displacement_gt_5px": sum(r["peg_displaced"] for r in records) / episodes,

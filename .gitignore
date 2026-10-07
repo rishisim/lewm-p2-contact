@@ -42,3 +42,11 @@ tmp/
 
 # Main-run published reports are reproducible outputs, not source changes.
 /experiments/role_swap/results/results.json
+
+# Proposal LaTeX build artifacts
+/docs/proposal/*.aux
+/docs/proposal/*.log
+/docs/proposal/*.fls
+/docs/proposal/*.fdb_latexmk
+/docs/proposal/*.out
+/docs/proposal/build.log

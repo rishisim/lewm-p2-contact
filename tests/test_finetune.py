@@ -106,9 +106,10 @@ def tiny_training(tmp_path, monkeypatch):
     monkeypatch.setattr(module, "dataset_path", lambda name: tmp_path / name)
     monkeypatch.setattr(module, "create_run", lambda *args: tmp_path)
     samples = [{"pixels": torch.full((4, 2), i / 10),
-                "action": torch.ones(4, 2) * 0.1} for i in range(9)]
+                "action": torch.ones(4, 2) * 0.1,
+                "state": torch.full((4, 9), 128.)} for i in range(9)]
     seen = []
-    def windows(dataset, normalization, seed):
+    def windows(dataset, normalization, seed, pegsup=False):
         seen.append(normalization)
         return samples, samples[:3], [seed, 10], [20]
     monkeypatch.setattr(module, "load_windows", windows)
@@ -429,3 +430,188 @@ def test_precision_selection():
         _autocast(torch.device("cpu"), "bf16")
     with pytest.raises(ValueError):
         _autocast(torch.device("cpu"), "fp16")
+
+
+def test_zero_auxiliary_loss_and_rng_match():
+    from lewm_research.train.finetune import _aux_heads
+    model = TinyModel()
+    sigreg = SIGReg(knots=17, num_proj=32)
+    batch = {"pixels": torch.randn(2, 4, 2), "action": torch.randn(2, 4, 2)}
+    torch.manual_seed(123)
+    expected = lejepa_loss(model, sigreg, {k: v.clone() for k, v in batch.items()})
+    expected_rng = torch.get_rng_state()
+    torch.manual_seed(123)
+    heads = _aux_heads(2, 2, 9, "cpu")
+    assert not heads
+    got = lejepa_loss(model, sigreg, {k: v.clone() for k, v in batch.items()}, heads,
+                      idm_enc_weight=0, idm_pred_weight=0, pegsup_weight=0)
+    assert got.keys() == expected.keys()
+    assert all(torch.equal(got[k], expected[k]) for k in got)
+    assert torch.equal(torch.get_rng_state(), expected_rng)
+    before = torch.get_rng_state()
+    heads = _aux_heads(2, 2, 9, "cpu", idm=True, pegsup=True)
+    assert torch.equal(before, torch.get_rng_state())
+    again = _aux_heads(2, 2, 9, "cpu", idm=True, pegsup=True)
+    assert all(torch.equal(v, again.state_dict()[k]) for k, v in heads.state_dict().items())
+    assert heads["idm"][0].in_features == 4
+    assert heads["idm"][-1].out_features == 2
+
+
+def test_idm_values_and_detached_context():
+    class Difference(torch.nn.Module):
+        def forward(self, pair):
+            left, right = pair.chunk(2, -1)
+            return right - left
+    z = torch.tensor([[[0., 0.], [1., 2.], [3., 5.], [6., 9.]]], requires_grad=True)
+    pred = torch.tensor([[[2., 3.], [4., 6.], [8., 12.]]], requires_grad=True)
+    class Model:
+        def encode(self, batch):
+            return {"emb": z, "act_emb": batch["action"]}
+        def predict(self, emb, action):
+            return pred
+    batch = {"action": torch.tensor([[[0., 1.], [1., 1.], [2., 2.], [99., 99.]]])}
+    losses = lejepa_loss(Model(), lambda emb: emb.sum()*0, batch,
+                         {"idm": Difference()}, idm_enc_weight=1, idm_pred_weight=1)
+    # Encoder residual squared sums are 2, 5, 5; predictor residual is (3, 5).
+    assert losses["idm_enc_loss"].item() == 4
+    assert losses["idm_pred_loss"].item() == 34
+    losses["idm_pred_loss"].backward(retain_graph=True)
+    assert z.grad is None
+    assert torch.equal(pred.grad, torch.tensor([[[0., 0.], [0., 0.], [6., 10.]]]))
+    losses["idm_enc_loss"].backward()
+    assert z.grad is not None and z.grad.abs().sum() > 0
+
+
+def test_pegsup_values_all_frames():
+    class Model:
+        def encode(self, batch):
+            return {"emb": batch["pixels"], "act_emb": batch["action"]}
+        def predict(self, emb, action):
+            return emb
+    state = torch.full((1, 4, 9), -999.)
+    state[..., [7, 8, 2, 3]] = 256.
+    state[:, 0, [7, 8, 2, 3]] = torch.tensor([0., 256., 512., 768.])
+    batch = {"pixels": torch.zeros(1, 4, 4), "action": torch.zeros(1, 4, 4), "state": state}
+    losses = lejepa_loss(Model(), lambda emb: emb.sum()*0, batch,
+                         {"pegsup": torch.nn.Identity()}, pegsup_weight=2)
+    assert losses["pegsup_loss"].item() == 0.375
+    assert losses["loss"].item() == 0.75
+
+
+def test_zero_auxiliary_training_parity(tiny_training):
+    module, root, _, _ = tiny_training
+    kwargs = dict(init="init", max_steps=2, schedule_steps=4, batch_size=4,
+                  workers=0, device="cpu", val_interval=2)
+    module.finetune("tiny", "default", **kwargs)
+    module.finetune("tiny", "explicit_zero", **kwargs,
+                    idm_enc_weight=0, idm_pred_weight=0, pegsup_weight=0)
+    def state(name):
+        return torch.load(root / name / "trainer_state.pth", weights_only=False)
+    a, b = state("default"), state("explicit_zero")
+    assert a["metadata"] == b["metadata"] and "aux" not in a["metadata"]
+    assert "aux_heads" not in a and "aux_heads" not in b
+    assert torch.equal(a["rng"]["torch"], b["rng"]["torch"])
+    for key, value in torch.load(root / "default/weights.pt", weights_only=True).items():
+        assert torch.equal(value, torch.load(root / "explicit_zero/weights.pt", weights_only=True)[key])
+    def logs(name):
+        return [{k: v for k, v in json.loads(line).items() if "loss" in k}
+                for line in (root / name / "train_log.jsonl").read_text().splitlines()]
+    assert logs("default") == logs("explicit_zero")
+
+
+@pytest.mark.parametrize("weights", [dict(idm_enc_weight=1., idm_pred_weight=1.),
+                                     dict(pegsup_weight=1.),
+                                     dict(idm_enc_weight=1., idm_pred_weight=1., pegsup_weight=1.)])
+def test_auxiliary_export_resume_and_mismatch(tiny_training, weights):
+    module, root, _, _ = tiny_training
+    kwargs = dict(init="init", schedule_steps=4, batch_size=4, workers=0,
+                  device="cpu", val_interval=2, **weights)
+    module.finetune("tiny", "full_aux", max_steps=4, **kwargs)
+    module.finetune("tiny", "split_aux", max_steps=2, **kwargs)
+    state = torch.load(root / "split_aux/trainer_state.pth", weights_only=False)
+    assert state["aux_heads"]
+    initialized = module._aux_heads(2, 2, 0, "cpu",
+        idm=weights.get("idm_enc_weight", 0) > 0 or weights.get("idm_pred_weight", 0) > 0,
+        pegsup=weights.get("pegsup_weight", 0) > 0).state_dict()
+    assert any(not torch.equal(v, initialized[k]) for k, v in state["aux_heads"].items())
+    exported = torch.load(root / "split_aux/weights.pt", weights_only=True)
+    assert exported.keys() == TinyModel().state_dict().keys()
+    with pytest.raises(ValueError, match="aux"):
+        module.finetune("tiny", "split_aux", max_steps=4, **{**kwargs, next(iter(weights)): 0.5})
+    with pytest.raises(ValueError, match="aux"):
+        module.finetune("tiny", "split_aux", init="init", max_steps=4, schedule_steps=4,
+                        batch_size=4, workers=0, device="cpu")
+    module.finetune("tiny", "split_aux", max_steps=4, **kwargs)
+    a = torch.load(root / "full_aux/trainer_state.pth", weights_only=False)
+    b = torch.load(root / "split_aux/trainer_state.pth", weights_only=False)
+    for section in ("model", "aux_heads"):
+        assert all(torch.equal(v, b[section][k]) for k, v in a[section].items())
+    assert torch.equal(a["rng"]["torch"], b["rng"]["torch"])
+    log = json.loads((root / "split_aux/train_log.jsonl").read_text().splitlines()[-1])
+    for key, weight in weights.items():
+        if weight:
+            term = key.replace("_weight", "_loss")
+            assert f"train_{term}" in log and f"val_{term}" in log
+
+
+def test_state_preprocess_alignment_and_conditional_loading(tmp_path, monkeypatch):
+    import h5py
+    from lewm_research.train import finetune as module
+    path = tmp_path / "aligned.h5"
+    with h5py.File(path, "w") as file:
+        file["episode_idx"] = np.repeat(np.arange(2), 30)
+        file["ep_len"] = np.array([30, 30])
+        file["ep_offset"] = np.array([0, 30])
+        file["pixels"] = np.zeros((60, 16, 16, 3), dtype="u1")
+        file["state"] = np.repeat(np.arange(60, dtype="f4")[:, None], 9, axis=1)
+        file["action"] = np.repeat(np.arange(60, dtype="f4")[:, None], 2, axis=1)
+        file["proprio"] = np.zeros((60, 2), dtype="f4")
+    stats = {"columns": {key: {"mean": [0., 0.], "std": [1., 1.]}
+                         for key in ("action", "proprio")}}
+    monkeypatch.setattr(module, "dataset_path", lambda name: path)
+    monkeypatch.setenv("STABLEWM_HOME", str(tmp_path / "cache"))
+    train, _, _, _ = module.load_windows("aligned", stats, 0, pegsup=True)
+    sample = train[0]
+    start = sample["state"][0, 0].item()
+    assert sample["pixels"].shape[0] == sample["state"].shape[0] == 4
+    assert torch.equal(sample["state"][:, 0], torch.arange(start, start+20, 5))
+    assert torch.equal(sample["action"], torch.arange(start, start+20).repeat_interleave(2).reshape(4, 10))
+    train, _, _, _ = module.load_windows("aligned", stats, 0)
+    assert "state" not in train[0]
+
+
+def test_validation_keeps_original_metrics_with_auxiliary_heads():
+    from lewm_research.train.finetune import _aux_heads, _validation
+    model = TinyModel()
+    sigreg = SIGReg(knots=17, num_proj=32)
+    batch = {"pixels": torch.randn(2, 4, 2), "action": torch.randn(2, 4, 2),
+             "state": torch.zeros(2, 4, 9)}
+    heads = _aux_heads(2, 2, 0, "cpu", idm=True, pegsup=True)
+    torch.manual_seed(4)
+    expected = _validation(model, sigreg, [batch], torch.device("cpu"))
+    rng = torch.get_rng_state()
+    torch.manual_seed(4)
+    got = _validation(model, sigreg, [batch], torch.device("cpu"), heads,
+                      dict(idm_enc_weight=1, idm_pred_weight=1, pegsup_weight=1))
+    assert all(got[key] == value for key, value in expected.items())
+    assert torch.equal(rng, torch.get_rng_state())
+    assert all(key in got for key in ("val_idm_enc_loss", "val_idm_pred_loss", "val_pegsup_loss"))
+
+
+def test_idm_predictor_gradients_reach_action_encoder_and_head():
+    z = torch.randn(2, 4, 2, requires_grad=True)
+    action_encoder = torch.nn.Linear(2, 2)
+    predictor = torch.nn.Linear(2, 2)
+    head = torch.nn.Linear(4, 2)
+    class Model:
+        def encode(self, batch):
+            return {"emb": z, "act_emb": action_encoder(batch["action"])}
+        def predict(self, emb, action):
+            # Isolate the detached head input from any encoder path via predict.
+            return predictor(action)
+    losses = lejepa_loss(Model(), lambda emb: emb.sum()*0,
+        {"action": torch.randn(2, 4, 2)}, {"idm": head}, idm_pred_weight=1)
+    losses["idm_pred_loss"].backward()
+    assert z.grad is None
+    for module in (action_encoder, predictor, head):
+        assert module.weight.grad is not None and module.weight.grad.abs().sum() > 0

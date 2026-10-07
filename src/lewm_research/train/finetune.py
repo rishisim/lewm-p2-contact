@@ -66,18 +66,20 @@ def episode_split(dataset, seed: int) -> tuple[Subset, Subset, list[int], list[i
     return Subset(dataset, train_indices), Subset(dataset, val_indices), train_eps, val_eps
 
 
-def load_windows(name: str, stats: dict, seed: int):
+def load_windows(name: str, stats: dict, seed: int, pegsup: bool = False):
     path = dataset_path(name if name.endswith(".h5") else f"{name}.h5")
     if not path.is_file():
         raise FileNotFoundError(path)
     dataset = swm.data.load_dataset(
         str(path), num_steps=HISTORY_SIZE + NUM_PREDS, frameskip=FRAMESKIP,
-        keys_to_load=["pixels", "action", "proprio"], transform=Preprocess(stats),
+        keys_to_load=["pixels", "action", "proprio"] + (["state"] if pegsup else []),
+        transform=Preprocess(stats),
     )
     return episode_split(dataset, seed)
 
 
-def lejepa_loss(model, sigreg: SIGReg, batch: dict) -> dict[str, torch.Tensor]:
+def lejepa_loss(model, sigreg: SIGReg, batch: dict, aux_heads=None,
+                idm_enc_weight=0.0, idm_pred_weight=0.0, pegsup_weight=0.0) -> dict[str, torch.Tensor]:
     """Match third_party/le-wm/train.py:lejepa_forward exactly."""
     batch["action"] = torch.nan_to_num(batch["action"], 0.0)
     output = model.encode(batch)
@@ -85,8 +87,46 @@ def lejepa_loss(model, sigreg: SIGReg, batch: dict) -> dict[str, torch.Tensor]:
     pred = model.predict(emb[:, :HISTORY_SIZE], output["act_emb"][:, :HISTORY_SIZE])
     pred_loss = (pred - emb[:, NUM_PREDS:]).pow(2).mean()
     sigreg_loss = sigreg(emb.transpose(0, 1))
-    return {"pred_loss": pred_loss, "sigreg_loss": sigreg_loss,
-            "loss": pred_loss + 0.09 * sigreg_loss}
+    losses = {"pred_loss": pred_loss, "sigreg_loss": sigreg_loss,
+              "loss": pred_loss + 0.09 * sigreg_loss}
+    if idm_enc_weight > 0:
+        estimate = aux_heads["idm"](torch.cat((emb[:, :-1], emb[:, 1:]), dim=-1))
+        losses["idm_enc_loss"] = (estimate - batch["action"][:, :HISTORY_SIZE]).square().sum(-1).mean()
+        losses["loss"] = losses["loss"] + idm_enc_weight * losses["idm_enc_loss"]
+    if idm_pred_weight > 0:
+        estimate = aux_heads["idm"](torch.cat((emb[:, HISTORY_SIZE-1].detach(), pred[:, -1]), dim=-1))
+        losses["idm_pred_loss"] = (estimate - batch["action"][:, HISTORY_SIZE-1]).square().sum(-1).mean()
+        losses["loss"] = losses["loss"] + idm_pred_weight * losses["idm_pred_loss"]
+    if pegsup_weight > 0:
+        target = (batch["state"][..., [7, 8, 2, 3]] - 256) / 256
+        losses["pegsup_loss"] = (aux_heads["pegsup"](emb) - target).square().mean()
+        losses["loss"] = losses["loss"] + pegsup_weight * losses["pegsup_loss"]
+    return losses
+
+
+def _aux_heads(embedding_dim, action_dim, seed, device, idm=False, pegsup=False):
+    """Initialize with private generators, without touching the global RNG."""
+    heads = torch.nn.ModuleDict()
+    for name, enabled, offset in (("idm", idm, 1_000_003), ("pegsup", pegsup, 2_000_003)):
+        if not enabled:
+            continue
+        # Meta construction skips Linear.reset_parameters' global random draws.
+        if name == "idm":
+            head = torch.nn.Sequential(
+                torch.nn.Linear(2 * embedding_dim, 256, device="meta"), torch.nn.GELU(),
+                torch.nn.Linear(256, 256, device="meta"), torch.nn.GELU(),
+                torch.nn.Linear(256, action_dim, device="meta"))
+        else:
+            head = torch.nn.Linear(embedding_dim, 4, device="meta")
+        head.to_empty(device="cpu")
+        generator = torch.Generator().manual_seed(seed + offset)
+        for layer in head.modules():
+            if isinstance(layer, torch.nn.Linear):
+                torch.nn.init.kaiming_uniform_(layer.weight, a=5 ** 0.5, generator=generator)
+                bound = layer.in_features ** -0.5
+                torch.nn.init.uniform_(layer.bias, -bound, bound, generator=generator)
+        heads[name] = head.to(device)
+    return heads
 
 
 def seed_worker(worker_id: int) -> None:
@@ -174,6 +214,8 @@ def _validate_resume(state: dict, metadata: dict) -> None:
             matches = saved.get(key) == value
         if not matches:
             mismatches.append(key)
+    if "dataset" in metadata and saved.get("aux") != metadata.get("aux") and "aux" not in mismatches:
+        mismatches.append("aux")
     if mismatches:
         raise ValueError("Resume metadata mismatch: " + ", ".join(mismatches))
 
@@ -211,24 +253,34 @@ def _atomic_save(state: dict, target: Path) -> None:
 
 
 def _save(model, optimizer, scheduler, output: Path, step: int, epoch: int,
-          batch_index: int, metadata: dict, model_config: dict) -> None:
+          batch_index: int, metadata: dict, model_config: dict, aux_heads=None) -> None:
     # Trainer state is the sole resume source; weights.pt is only an export.
-    _atomic_save({"version": 2, "model": model.state_dict(), "model_config": model_config,
-                  "optimizer": optimizer.state_dict(),
-                  "scheduler": scheduler.state_dict() if scheduler else None,
-                  "step": step, "epoch": epoch, "batch_index": batch_index,
-                  "metadata": metadata, "rng": _rng_state()}, output / "trainer_state.pth")
+    trainer = {"version": 2, "model": model.state_dict(), "model_config": model_config,
+               "optimizer": optimizer.state_dict(),
+               "scheduler": scheduler.state_dict() if scheduler else None,
+               "step": step, "epoch": epoch, "batch_index": batch_index,
+               "metadata": metadata, "rng": _rng_state()}
+    if aux_heads:
+        trainer["aux_heads"] = aux_heads.state_dict()
+    _atomic_save(trainer, output / "trainer_state.pth")
     _atomic_save(model.state_dict(), output / "weights.pt")
 
 
-def _validation(model, sigreg, loader, device) -> dict:
+def _validation(model, sigreg, loader, device, aux_heads=None, aux_weights=None) -> dict:
     model.eval()
     totals = {"pred_loss": 0.0, "sigreg_loss": 0.0, "loss": 0.0}
+    weights = aux_weights or {}
+    for key, weight in weights.items():
+        if weight > 0:
+            totals[key.replace("_weight", "_loss")] = 0.0
     count = 0
     with torch.no_grad():
         for batch in loader:
             batch = {k: v.to(device) for k, v in batch.items()}
-            losses = lejepa_loss(model, sigreg, batch)
+            losses = lejepa_loss(model, sigreg, batch, aux_heads, **weights)
+            if aux_heads:
+                # Keep the existing validation objective comparable across arms.
+                losses["loss"] = losses["pred_loss"] + 0.09 * losses["sigreg_loss"]
             size = len(batch["pixels"])
             for key in totals:
                 totals[key] += float(losses[key]) * size
@@ -262,8 +314,14 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
              log_interval: int = 1, val_interval: int = 100,
              checkpoint_interval: int = 100, workers: int = 4,
              schedule_steps: int | None = None, precision: str = "auto",
-             from_scratch: bool = False) -> dict:
+             from_scratch: bool = False, idm_enc_weight: float = 0.0,
+             idm_pred_weight: float = 0.0, pegsup_weight: float = 0.0) -> dict:
     """Train to max_steps; schedule_steps is an immutable total LR budget."""
+    aux_weights = {"idm_enc_weight": idm_enc_weight, "idm_pred_weight": idm_pred_weight,
+                   "pegsup_weight": pegsup_weight}
+    if any(not np.isfinite(w) or w < 0 for w in aux_weights.values()):
+        raise ValueError("Auxiliary weights must be finite and nonnegative")
+    auxiliary = any(w > 0 for w in aux_weights.values())
     budget = max_steps if schedule_steps is None else schedule_steps
     if (max_steps < 0 or batch_size < 1 or workers < 0
             or min(log_interval, val_interval, checkpoint_interval) < 1
@@ -292,13 +350,16 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                          **_fingerprint(source / "weights.pt")},
                 "seed": seed, "batch_size": batch_size, "schedule_steps": budget,
                 "from_scratch": from_scratch}
+    if auxiliary:
+        metadata["aux"] = aux_weights
     if state is not None:
         # Reject changed content before trying to parse the dataset.
         _validate_resume(state, metadata)
     train_eps, val_eps = [], []
     split = {}
     if budget:
-        train, val, train_eps, val_eps = load_windows(dataset, stats, seed)
+        train, val, train_eps, val_eps = load_windows(
+            dataset, stats, seed, **({"pegsup": True} if pegsup_weight > 0 else {}))
         # Validate before creating output files or a model.
         _loader(train, batch_size, workers, seed, True)
         split = {"train_episodes": train_eps, "val_episodes": val_eps,
@@ -330,7 +391,30 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
         shutil.copyfile(source / "config.json", output / "config.json")
         shutil.copyfile(source / "normalization.json", output / "normalization.json")
     model.requires_grad_(True)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=1e-3)
+    aux_heads = None
+    if auxiliary:
+        if budget:
+            # Inspect a real aligned window; evaluation avoids changing BatchNorm buffers.
+            sample = {k: v.unsqueeze(0).to(selected_device) for k, v in train[0].items()}
+            sample["action"] = torch.nan_to_num(sample["action"], 0.0)
+            rng = _rng_state()
+            model.eval()
+            with torch.no_grad():
+                embedding_dim = model.encode(sample)["emb"].shape[-1]
+            model.train()
+            _restore_rng(rng)
+            action_dim = sample["action"].shape[-1]
+        else:
+            embedding_dim = model_config["projector"]["output_dim"]
+            action_dim = model_config["action_encoder"]["input_dim"]
+        aux_heads = _aux_heads(embedding_dim, action_dim, seed, selected_device,
+                               idm_enc_weight > 0 or idm_pred_weight > 0, pegsup_weight > 0)
+        if state is not None:
+            aux_heads.load_state_dict(state["aux_heads"])
+    parameters = list(model.parameters())
+    if aux_heads:
+        parameters += list(aux_heads.parameters())
+    optimizer = torch.optim.AdamW(parameters, lr=LR, weight_decay=1e-3)
     scheduler = _scheduler(optimizer, budget)
     step = epoch = batch_index = 0
     if state is not None:
@@ -345,6 +429,8 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
               "val_interval": val_interval, "checkpoint_interval": checkpoint_interval,
               "workers": workers, "precision": _autocast(selected_device, precision)[1],
               "batch_size_deviation": "Default 32 instead of upstream 128: 128 exceeds this Mac's memory; configurable."}
+    if auxiliary:
+        config["aux"] = aux_weights
     run_dir = create_run("finetune", config)
     start_step = step
     wall_start = time.perf_counter()
@@ -364,9 +450,9 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                 batch = {k: v.to(selected_device) for k, v in batch.items()}
                 optimizer.zero_grad(set_to_none=True)
                 with _autocast(selected_device, precision)[0]:
-                    losses = lejepa_loss(model, sigreg, batch)
+                    losses = lejepa_loss(model, sigreg, batch, aux_heads, **aux_weights)
                 losses["loss"].backward()
-                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                torch.nn.utils.clip_grad_norm_(parameters, 1.0)
                 lr = optimizer.param_groups[0]["lr"]
                 optimizer.step()
                 scheduler.step()
@@ -379,14 +465,18 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                           "train_sigreg_loss": float(losses["sigreg_loss"].detach()),
                           "train_total_loss": float(losses["loss"].detach()),
                           "lr": lr, "step_seconds": time.perf_counter() - start}
+                for key in ("idm_enc_loss", "idm_pred_loss", "pegsup_loss"):
+                    if key in losses:
+                        record[f"train_{key}"] = float(losses[key].detach())
                 if step % val_interval == 0 or step == max_steps:
-                    record.update(_validation(model, sigreg, val_loader, selected_device))
+                    record.update(_validation(model, sigreg, val_loader, selected_device,
+                                              aux_heads, aux_weights))
                 if step % log_interval == 0 or step % val_interval == 0 or step == max_steps:
                     with (output / "train_log.jsonl").open("a") as file:
                         file.write(json.dumps(record) + "\n")
                 if step % checkpoint_interval == 0 or step == max_steps:
                     _save(model, optimizer, scheduler, output, step, epoch, index + 1,
-                          metadata, model_config)
+                          metadata, model_config, aux_heads)
                 if step == max_steps:
                     break
             else:
@@ -397,7 +487,7 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
     if step == start_step:
         if state is not None:
             _restore_rng(state["rng"])
-        _save(model, optimizer, scheduler, output, step, epoch, batch_index, metadata, model_config)
+        _save(model, optimizer, scheduler, output, step, epoch, batch_index, metadata, model_config, aux_heads)
     summary = {**config, **split, "completed_steps": step, "start_step": start_step,
                "wall_seconds": time.perf_counter() - wall_start,
                "checkpoint": str(output), "run_dir": str(run_dir)}

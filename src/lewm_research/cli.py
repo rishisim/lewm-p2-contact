@@ -35,13 +35,16 @@ def finetune_cmd(
     precision: str = typer.Option("auto", help="auto (bf16 on CUDA, fp32 elsewhere), fp32, or bf16."),
     from_scratch: bool = typer.Option(False, "--from-scratch/--no-from-scratch",
                                      help="Random initialization with the init checkpoint architecture."),
+    idm_weight: float = typer.Option(0.0, min=0, help="Weight for each encoder/predictor inverse-dynamics term."),
+    pegsup_weight: float = typer.Option(0.0, min=0, help="Privileged position supervision weight."),
 ) -> None:
     """Fine-tune LeWM with episode-held-out validation; resume by name."""
     from .train.finetune import finetune
 
     typer.echo(json.dumps(finetune(dataset, name, init, max_steps, batch_size, seed, device,
                                   log_interval, val_interval, checkpoint_interval, workers, schedule_steps,
-                                  precision, from_scratch), indent=2))
+                                  precision, from_scratch=from_scratch, idm_enc_weight=idm_weight,
+                                  idm_pred_weight=idm_weight, pegsup_weight=pegsup_weight), indent=2))
 
 
 @app.command("bench-train")
@@ -195,6 +198,19 @@ def probe_readout_cmd(
     from .probe.readout import run_readout
     result = run_readout(bases, checkpoints.split(","), frames_per_dataset, seed, run_dir,
                          device, batch_size, outer_folds, inner_folds, bootstrap_samples)
+    typer.echo(json.dumps(result, indent=2))
+
+
+@app.command("probe-pool-readout")
+def probe_pool_readout_cmd(
+    source_readout: str = typer.Option(...),
+    checkpoints: str = typer.Option(...),
+    run_dir: str = typer.Option(...),
+    device: str = typer.Option("auto"), seed: int = typer.Option(42),
+) -> None:
+    """Read out checkpoints using the main run's persisted pool and settings."""
+    from .probe.readout import run_pool_readout
+    result = run_pool_readout(source_readout, checkpoints.split(","), run_dir, device, seed)
     typer.echo(json.dumps(result, indent=2))
 
 

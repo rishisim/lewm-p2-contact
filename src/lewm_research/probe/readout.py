@@ -3,6 +3,7 @@
 from pathlib import Path
 import hashlib
 import json
+import shutil
 import time
 
 import cv2
@@ -265,6 +266,98 @@ def run_readout(bases_path, checkpoints=DEFAULT_CHECKPOINTS, frames_per_dataset=
             planner.close()
     result = {"stage": "probe-readout", "run_dir": str(root), "seed": seed,
               "pool_identity": hashlib.sha256(states.tobytes()+json.dumps(groups.tolist()).encode()).hexdigest(),
+              "pool": {"frames": len(states), "episodes": len(np.unique(groups)), "datasets": manifest["datasets"]},
+              "checkpoints": {n: json.loads((root/f"{n}.json").read_text()) for n in checkpoints},
+              "invocation_wall_s": time.perf_counter()-start}
+    write_json(root / "readout.json", result)
+    return result
+
+
+def run_pool_readout(source_readout, checkpoints, run_dir, device="auto", seed=42):
+    """Read out new checkpoints on an unchanged, persisted evaluation pool."""
+    source = Path(source_readout).expanduser().resolve()
+    destination = Path(run_dir).expanduser().resolve()
+    if destination == source or source in destination.parents:
+        raise ValueError("output must be separate from the source readout")
+    checkpoints = checkpoint_names(checkpoints)
+    source_config = json.loads((source / "config.json").read_text())
+    if seed != source_config["seed"]:
+        raise ValueError("seed must match the source readout folds/bootstrap")
+    with np.load(source / "pool.npz") as pool:
+        states, groups = pool["states"], pool["groups"]
+    manifest = json.loads((source / "pool.json").read_text())
+    if len(states) != len(groups) or len(states) != len(manifest["rows"]):
+        raise ValueError("incomplete persisted evaluation pool")
+    identity = hashlib.sha256(states.tobytes()+json.dumps(groups.tolist()).encode()).hexdigest()
+    source_result = json.loads((source / "readout.json").read_text())
+    expected = source_config.get("pool_identity", source_result["pool_identity"])
+    if identity != expected or identity != source_result["pool_identity"]:
+        raise ValueError("source evaluation pool identity differs")
+    provenance = {}
+    for name in checkpoints:
+        state_path = checkpoint_dir(name) / "trainer_state.pth"
+        if not state_path.exists() and name == "lewm-pusht":
+            continue
+        metadata = torch.load(state_path, map_location="cpu", weights_only=False)["metadata"]
+        dataset = metadata["dataset"]["name"]
+        episodes = {int(str(g).rsplit(":", 1)[1]) for g in groups
+                    if str(g).rsplit(":", 1)[0] == dataset}
+        if episodes & set(metadata["train_episodes"]):
+            raise ValueError(f"evaluation pool overlaps training episodes: {name}")
+        if source_config["dataset_sha256"].get(dataset) != metadata["dataset"]["sha256"]:
+            raise ValueError(f"training dataset identity differs from source pool: {name}")
+        provenance[name] = metadata
+    config = {**source_config, "stage": "probe-pool-readout", "source_readout": str(source),
+              "source_config_sha256": fingerprint(source / "config.json"),
+              "source_pool_sha256": {f: fingerprint(source / f) for f in ("pool.npz", "pool.json")},
+              "pool_identity": identity, "checkpoints": checkpoints, "splits": provenance,
+              "checkpoint_sha256": {n: fingerprint(checkpoint_dir(n)/"weights.pt") for n in checkpoints},
+              "device": device}
+    root = open_run("probe-pool-readout", config, destination)
+    def copy_input(filename):
+        target = root / filename
+        if target.exists():
+            if fingerprint(target) != fingerprint(source / filename):
+                raise ValueError(f"persisted input differs: {filename}")
+        else:
+            shutil.copyfile(source / filename, target)
+    copy_input("pool.npz")
+    copy_input("pool.json")
+    targets = states[:, [7, 8, 2, 3]]
+    start = time.perf_counter()
+    for name in checkpoints:
+        planner = Planner(name, device=device)
+        try:
+            filename = f"pixels_{int(planner.with_target)}.npz"
+            copy_input(filename)
+            output = root / f"{name}.json"
+            if output.exists():
+                continue
+            arm_start = time.perf_counter()
+            with np.load(root / filename) as images:
+                pixels = images["pixels"]
+            if len(pixels) != len(states):
+                raise ValueError("persisted pixels and states are misaligned")
+            features = encode_pool(planner, pixels, source_config["batch_size"])
+            write_npz(root / f"{name}_features.npz", **features)
+            result = {"checkpoint": name, "with_target": planner.with_target, "features": {}}
+            for kind in ("cls", "projected"):
+                metrics = nested_readout(features[kind], targets, groups, seed,
+                    source_config["outer_folds"], source_config["inner_folds"],
+                    samples=source_config["bootstrap_samples"])
+                write_npz(root / f"{name}_{kind}_oof.npz", groups=groups, targets=targets,
+                    **{k: metrics.pop(k) for k in ("predictions", "errors", "folds")})
+                result["features"][kind] = metrics
+            # The rendering-matched pixel baseline is already measured on this pool.
+            pixel_path = source / f"pixel_{int(planner.with_target)}.json"
+            if pixel_path.exists():
+                result["features"]["pixel"] = json.loads(pixel_path.read_text())
+            result["wall_s"] = time.perf_counter()-arm_start
+            write_json(output, result)
+        finally:
+            planner.close()
+    result = {"stage": "probe-pool-readout", "run_dir": str(root), "seed": seed,
+              "pool_identity": identity,
               "pool": {"frames": len(states), "episodes": len(np.unique(groups)), "datasets": manifest["datasets"]},
               "checkpoints": {n: json.loads((root/f"{n}.json").read_text()) for n in checkpoints},
               "invocation_wall_s": time.perf_counter()-start}

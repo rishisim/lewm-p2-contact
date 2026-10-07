@@ -230,6 +230,29 @@ def probe_abc_cmd(
     typer.echo(json.dumps(result, indent=2))
 
 
+@app.command("probe-pin-mlp")
+def probe_pin_mlp_cmd(
+    out_dir: str | None = typer.Option(None),
+    checkpoints: str = typer.Option("lewm-pusht,ft_block_s0,ft_block_s1,ft_mixed_s0,ft_mixed_s1,ft45_block_s0,ft45_mixed_s0"),
+    radii: str = typer.Option("15,45"), kinds: str = typer.Option("cls,projected"),
+    workers: int = typer.Option(4, min=1), threads: int = typer.Option(2, min=1),
+    include_pixels: bool = typer.Option(True, "--pixels/--no-pixels", help="Disable only for an isolated embedding timing smoke."),
+) -> None:
+    """CPU-only frozen nonlinear readouts; all inputs come from size-control caches."""
+    from .probe.nonlinear_readout import run_pin_mlp
+    result = run_pin_mlp(out_dir, checkpoints.split(","), tuple(int(r) for r in radii.split(",")),
+                         tuple(kinds.split(",")), workers, threads, include_pixels=include_pixels)
+    typer.echo(json.dumps(result, indent=2))
+
+
+@app.command("probe-pin-mlp-report")
+def probe_pin_mlp_report_cmd(out_dir: str | None = typer.Option(None)) -> None:
+    """Summarize nonlinear units using the pre-registered point-estimate labels."""
+    from .probe.nonlinear_readout import pin_mlp_report
+    result = pin_mlp_report(out_dir)
+    typer.echo(json.dumps(result, indent=2))
+
+
 @app.command("probe-report")
 def probe_report_cmd(
     runs: list[str] = typer.Option(..., help="Repeat --runs for each eval/readout/ABC directory; comma-separated paths also accepted."),

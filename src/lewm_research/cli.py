@@ -33,13 +33,15 @@ def finetune_cmd(
     workers: int = typer.Option(4, min=0),
     schedule_steps: int | None = typer.Option(None, min=2, help="Immutable LR budget; defaults to max-steps. Set on both initial and resumed runs."),
     precision: str = typer.Option("auto", help="auto (bf16 on CUDA, fp32 elsewhere), fp32, or bf16."),
+    from_scratch: bool = typer.Option(False, "--from-scratch/--no-from-scratch",
+                                     help="Random initialization with the init checkpoint architecture."),
 ) -> None:
     """Fine-tune LeWM with episode-held-out validation; resume by name."""
     from .train.finetune import finetune
 
     typer.echo(json.dumps(finetune(dataset, name, init, max_steps, batch_size, seed, device,
                                   log_interval, val_interval, checkpoint_interval, workers, schedule_steps,
-                                  precision), indent=2))
+                                  precision, from_scratch), indent=2))
 
 
 @app.command("bench-train")

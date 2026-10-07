@@ -168,6 +168,8 @@ def _validate_resume(state: dict, metadata: dict) -> None:
             # Names describe the inputs; only content determines identity.
             matches = isinstance(value, dict) and all(
                 saved[key].get(field) == value.get(field) for field in ("size", "sha256"))
+        elif key == "from_scratch":
+            matches = saved.get(key, False) == value
         else:
             matches = saved.get(key) == value
         if not matches:
@@ -247,11 +249,20 @@ def _autocast(device: torch.device, precision: str):
     return contextlib.nullcontext(), "fp32"
 
 
+def _random_model(config: dict):
+    # vit_hf(pretrained=True) calls HF from_pretrained; disable weight loading
+    # without changing the architecture or the checkpoint's copied config.
+    if config.get("encoder", {}).get("_target_") == "stable_pretraining.backbone.utils.vit_hf":
+        return instantiate(config, encoder={"pretrained": False})
+    return instantiate(config)
+
+
 def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int = 0,
              batch_size: int = 32, seed: int = 0, device: str = "auto",
              log_interval: int = 1, val_interval: int = 100,
              checkpoint_interval: int = 100, workers: int = 4,
-             schedule_steps: int | None = None, precision: str = "auto") -> dict:
+             schedule_steps: int | None = None, precision: str = "auto",
+             from_scratch: bool = False) -> dict:
     """Train to max_steps; schedule_steps is an immutable total LR budget."""
     budget = max_steps if schedule_steps is None else schedule_steps
     if (max_steps < 0 or batch_size < 1 or workers < 0
@@ -279,7 +290,8 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
                             **_fingerprint(dataset_path(str(dataset_name)), cache=True)},
                 "init": {"name": init_name.as_posix(),
                          **_fingerprint(source / "weights.pt")},
-                "seed": seed, "batch_size": batch_size, "schedule_steps": budget}
+                "seed": seed, "batch_size": batch_size, "schedule_steps": budget,
+                "from_scratch": from_scratch}
     if state is not None:
         # Reject changed content before trying to parse the dataset.
         _validate_resume(state, metadata)
@@ -308,7 +320,12 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
         model.interpolate_pos_encoding = True
     else:
         model_config = json.loads((source / "config.json").read_text())
-        model = load_lewm(source, selected_device)
+        if from_scratch:
+            model = _random_model(model_config)
+            model.to(selected_device).eval()
+            model.interpolate_pos_encoding = True
+        else:
+            model = load_lewm(source, selected_device)
         output.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source / "config.json", output / "config.json")
         shutil.copyfile(source / "normalization.json", output / "normalization.json")
@@ -322,6 +339,7 @@ def finetune(dataset: str, name: str, init: str = "lewm-pusht", max_steps: int =
             scheduler.load_state_dict(state["scheduler"])
         step, epoch, batch_index = state["step"], state["epoch"], state["batch_index"]
     config = {"dataset": dataset, "name": name, "init": init, "max_steps": max_steps,
+              "from_scratch": from_scratch,
               "schedule_steps": budget, "batch_size": batch_size, "seed": seed,
               "device": str(selected_device), "log_interval": log_interval,
               "val_interval": val_interval, "checkpoint_interval": checkpoint_interval,

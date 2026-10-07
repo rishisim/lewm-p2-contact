@@ -127,6 +127,78 @@ def test_zero_step_checkpoint_parity(tiny_training):
     assert "Default 32" in summary["batch_size_deviation"]
 
 
+def test_scratch_zero_step_loadable_checkpoint(tiny_training, monkeypatch):
+    from hydra.utils import instantiate
+    from lewm_research.lewm import load_lewm
+
+    module, root, initial, _ = tiny_training
+    config = {"_target_": f"{__name__}.TinyModel"}
+    (root / "init" / "config.json").write_text(json.dumps(config))
+    monkeypatch.setattr(module, "instantiate", instantiate)
+    monkeypatch.setenv("STABLEWM_HOME", str(root))
+    def refuse_weights(*args):
+        raise AssertionError("scratch must not load init weights")
+    monkeypatch.setattr(module, "load_lewm", refuse_weights)
+    summary = module.finetune("unused", "scratch", init="init", from_scratch=True,
+                              seed=42, device="cpu", workers=0)
+    exported = load_lewm(root / "scratch", torch.device("cpu"))
+    assert any(not torch.equal(exported.state_dict()[key], value)
+               for key, value in initial.items())
+    for filename in ("config.json", "normalization.json"):
+        assert (root / "scratch" / filename).read_bytes() == (root / "init" / filename).read_bytes()
+    assert exported.interpolate_pos_encoding is True
+    assert summary["from_scratch"] is True
+    assert summary["completed_steps"] == 0
+    state = torch.load(root / "scratch" / "trainer_state.pth", weights_only=False)
+    assert state["metadata"]["from_scratch"] is True
+
+
+def test_scratch_deterministic_seed(tiny_training):
+    module, root, _, _ = tiny_training
+    states = []
+    for name, seed in (("a", 42), ("b", 42), ("c", 43)):
+        module.finetune("unused", name, init="init", from_scratch=True,
+                        seed=seed, device="cpu", workers=0)
+        states.append(torch.load(root / name / "weights.pt", weights_only=True))
+    for key in states[0]:
+        torch.testing.assert_close(states[0][key], states[1][key], rtol=0, atol=0)
+    assert any(not torch.equal(states[0][key], states[2][key]) for key in states[0])
+
+
+def test_scratch_resume_flag_mismatch(tiny_training):
+    module, _, _, _ = tiny_training
+    kwargs = dict(dataset="unused", name="scratch", init="init", device="cpu", workers=0)
+    module.finetune(**kwargs, from_scratch=True)
+    with pytest.raises(ValueError, match="Resume metadata mismatch: from_scratch"):
+        module.finetune(**kwargs)
+    assert module.finetune(**kwargs, from_scratch=True)["start_step"] == 0
+    module.finetune(**{**kwargs, "name": "loaded"})
+    with pytest.raises(ValueError, match="Resume metadata mismatch: from_scratch"):
+        module.finetune(**{**kwargs, "name": "loaded"}, from_scratch=True)
+
+
+def test_non_scratch_resume_accepts_old_metadata(tiny_training):
+    module, root, _, _ = tiny_training
+    kwargs = dict(dataset="unused", name="old", init="init", device="cpu", workers=0)
+    module.finetune(**kwargs)
+    path = root / "old" / "trainer_state.pth"
+    state = torch.load(path, weights_only=False)
+    del state["metadata"]["from_scratch"]
+    torch.save(state, path)
+    assert module.finetune(**kwargs)["start_step"] == 0
+
+
+def test_scratch_disables_hf_pretrained(monkeypatch):
+    from lewm_research.train import finetune as module
+    config = {"encoder": {"_target_": "stable_pretraining.backbone.utils.vit_hf",
+                          "pretrained": True}}
+    calls = []
+    monkeypatch.setattr(module, "instantiate", lambda *args, **kwargs: calls.append((args, kwargs)))
+    module._random_model(config)
+    assert calls == [((config,), {"encoder": {"pretrained": False}})]
+    assert config["encoder"]["pretrained"] is True
+
+
 def test_loader_spawn_trains_four_workers():
     from lewm_research.train.finetune import _loader
     # macOS uses spawn by default; explicitly exercise spawn on other platforms.

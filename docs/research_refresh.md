@@ -1,263 +1,179 @@
-# World-model refresh: problem discovery and literature boundaries
+# World-model problem search: three candidates and their novelty boundaries
 
-Reviewed 2026-10-05. The remaining-opportunity review below supersedes both earlier rankings, including the withdrawn P5-first recommendation. This is a project-selection record, not an experimental result, proof of novelty, or a committed training protocol. No models were trained or benchmark results reproduced.
+Reviewed 2026-10-16. This is the current project-selection record, replacing the October 5 ranking; earlier assessments remain in Git history. It is a literature assessment and proposed diagnostic design, not a new experiment, a novelty certification, or a commitment to an architecture. No training or benchmark reproduction was performed in this review.
 
-## Decision
+## Recommendation
 
-**A general LeWM architecture/training contribution remains viable, but no particular new method has cleared the novelty and evidence gates.** Stop presenting information/data/compute diagnosis, physical-event subgoals, or training-only physical supervision as contributions by themselves. The review found direct prior work for all three.
+Keep three candidates:
 
-The user has redirected selection toward significant unresolved problems before methods or benchmarks. This supersedes the earlier recommendation to qualify CLEAR-LeWM first. LeWM is a possible experimental platform, not the boundary of the research question. Keep the completed adaptive-prediction paper closed.
+1. **P1: preserving usefulness when goals change.** Best fit to the original scientific interest; substantial direct overlap with existing work. Retain the question, withdraw the current compression-causation claim.
+2. **Reliability of plans after optimization** (historical P3). Strongest immediate empirical research bet, provided the study goes beyond rediscovering model exploitation or applying an uncertainty penalty.
+3. **Composing familiar interactions into unfamiliar causal chains** (historical P6). Ambitious and distinct, but the least established opportunity in action-conditioned latent planning.
 
-A modest architecture change can support a research paper if it explains a repeatable failure, outperforms strong simple alternatives with matched resources, and transfers beyond its development setting. A leaderboard increase alone does not establish those properties. Neither a wholly untouched topic nor a dramatic architectural invention is required.
+These are three directions worth testing, not three demonstrated open gaps. The central selection criterion is whether a failure survives the strongest reasonable existing answer at an acceptable data, supervision, and inference cost. The absence of a particular benchmark experiment is not a research gap.
 
-## Current assessment: remaining opportunities in P1–P3
+A useful common question is: **When does a learned model support new decisions beyond the behavior that supplied its training data?** The candidates isolate different changes: the goal, the search procedure, and the composition of physical events. Do not combine all three into one initial experiment.
 
-**Keep P1, P2 and P3 active. Prioritize understanding P1’s robustness–task-coverage–resource tradeoff; use P2/P3 to distinguish representation, prediction and search failures. Do not elevate P5 on the evidence reviewed.** Prior work is a starting point for finding remaining limitations, not a reason to abandon an interesting problem. The earlier review applied this standard inconsistently and overstated P5’s standing.
-
-This deliverable compares the strongest relevant answers, meaningful remaining capabilities, evidence and workaround costs. “Observed” below means author-reported in the stated protocol, not independently reproduced. “Inferred” means our research interpretation. An omitted evaluation is an unknown, not evidence of failure. There is no single strongest method across these incompatible task, data and planning interfaces.
-
-| Direction | Established limitation or tradeoff | Strong existing answers | Worth investigating next |
-| --- | --- | --- | --- |
-| **P1: useful information across later goals** | Particular models lose passive spatial information; robust compression can improve shifted performance while reducing native success | DINO-WM, JEPA-Bisim, TC-WM, strong object slots, query-aware proposals, reward/goal-aware abstraction | Can compact visual models reject nuisance while preserving precise decisions across tasks, at a better measured resource and supervision cost? |
-| **P2: useful action-effect correction** | Available state and factual prediction do not ensure accurate intervention effects; improved effects need not improve planning | GAP, RC-aux, AD-WM, D-JEPA, preservation adapters | Can corrections improve decisions across new goals while preserving existing capabilities, with fewer executed outcomes or less task-specific fitting? |
-| **P3: reliability under optimization** | Learned planners exploit contact hallucinations; corrective data reduces them but does not establish durable reliability | PETS, pessimistic offline RL, RP1 Dyna, WAV, policy-aware simulator learning, outcome reranking | Can stronger search improve realized outcomes without repeatedly paying for new failures and retraining? |
-
-### P1 — Robust compression that preserves usefulness across tasks
-
-**Question.** Can a compact visual world model ignore irrelevant variation while retaining the detail needed to plan across a specified family of later tasks—including when an object’s role changes—without paying the full cost of dense prediction or extensive task-specific supervision?
-
-A cup may be irrelevant background, an obstacle to avoid, or an object to move. The desired capability is general across objects and tasks; the example is not itself a novelty claim. Nor should a benchmark hide a legitimate goal image or force an unnaturally small representation to make a method fail.
-
-**Strong existing solutions and concrete evidence.**
-
-- **Dense features already preserve useful geometry in important cases.** [DINO-WM](https://arxiv.org/abs/2411.04983) reports 0.82 success on unseen wall/door layouts, versus 0.64 using DINO CLS in its comparison. It remains a serious baseline, not proof that spatial information is always sufficient. Dense prediction pays for pretrained vision, spatial feature storage, action coverage and planning rollouts.
-- **Compact, robust planning is also already possible.** [JEPA-Bisim’s October 1 revision](https://arxiv.org/html/2602.18639v2), Tables 1–2, improves visual-shift robustness over DINO-WM and domain randomization. In its 1,000-sample PushT experiment, mean relative degradation falls from 47.6% to 7.8%, but native success falls from 48% to 36%. This is an observed tradeoff, not proof of an unavoidable tradeoff or of information deletion. Its rollout features shrink from 196×384 to 196×32 scalars; that excludes backbone cost and does not imply the same speedup. Moving distractors are non-colliding. The bound concerns its latent goal cost, not arbitrary later rewards; training batch sizes also differ between the compared implementations.
-- **Physical supervision and reconstruction provide another practical answer.** [TC-WM](https://arxiv.org/abs/2605.25620) compresses foundation features while reconstructing embeddings and aligning with proprioception. This avoids assuming that every passive detail has been discarded. Costs include paired physical measurements and, in its manipulation setup, a learned diffusion planner/inverse model. Its formal sufficiency is tied to future proprioception, rather than all later objectives.
-- **There is a real failure behind the original intuition.** [StarWM Appendix F.4](https://arxiv.org/html/2609.30667) reports poor recovery of passive-object position under coherent video and a fixed-task return deficit partly repaired by reward routing. This identifies a weakness of that method, not all self-supervised representations. MotionJEPA and strong object-centric alternatives supply additional positive controls; [Better Slots, Better Worlds](https://arxiv.org/abs/2608.12078) is especially relevant because slot quality materially changes the comparison.
-- **Robot-level repairs have consequential scope and infrastructure costs.** [ReOI](https://arxiv.org/html/2506.16565), main and Appendices A–D, improves safe task completion from 2/10 to 7/10 trials versus its DINO-WM baseline. It removes problematic objects before prediction and reinserts them afterward, using VLMs, segmentation, inpainting and depth composition. Its decoder also uses 80 deployment-environment trajectories. It handles static obstacles by rejecting contact; it does not simulate necessary interactions with removed objects. The tiny trial count limits conclusions. This is a working remedy with an explicit boundary, not evidence that all DINO models lack the relevant state.
-
-**Later goals are not untouched territory.** [What Must a World Model Distinguish for Planning?](https://arxiv.org/html/2609.33030v1) directly studies query-dependent information and objective compositions. A query-aware proposal system with a reusable action-conditioned predictor improves held-out regret over query-blind and joint alternatives. This is a partial solution with executed-trajectory/cost supervision, known objective terms and fixed physics. Its striking one-bit failure concerns compressed *per-candidate messages after prediction*, not a one-bit visual world state. It shows that information sufficient for final selection can be inadequate for searching for candidates; that principle is already their contribution. Forward–backward representations and [causal bisimulation](https://arxiv.org/abs/2401.12497) supply further answers, with their own coverage, structured-state or per-task reward-data requirements.
-
-**What remains worth researching.** Two routes deserve investigation:
-
-1. **Improve the measured robustness/precision/resource frontier.** Recover native-task precision while retaining nuisance robustness and compact prediction across more than one task family. JEPA-Bisim provides direct motivation; the cause of its tradeoff remains unknown. This could be significant without discovering a new category of failure, if gains hold against strong compression, reconstruction and object-centric controls and yield meaningful savings or broader task coverage.
-2. **Preserve usefulness when task relevance changes.** Determine whether robustness learned from one interaction distribution erases distinctions needed by later task combinations. The cited failures and assumptions motivate this hypothesis; failure of the strongest models under this condition is not yet established. Query-aware proposals and valid goal inputs must be allowed. If the problem is poor candidate generation or goal scoring, report that mechanism rather than calling it information loss.
-
-**Best workaround now and its price.** Use natural-size spatial features; compare compact JEPA-Bisim, TC-WM when physical measurements are available, and good object features. These may solve the capability problem. That would refute an information-loss claim, but **would not eliminate a research opportunity if the solution’s measured compute, data, supervision or lost capability is consequential**. Conversely, cheap standard solutions that meet the intended capability would remove the motivation for a new method.
-
-**Small next check.** Compare native and nuisance-shifted decisions across legitimate goal combinations, at published default sizes and then measured resource budgets. Include scenes where object role changes, with all necessary observations available. Verify useful action alternatives and separate encoded state, predicted outcomes, scoring and proposal failures. A paired synthetic example can diagnose a mechanism; a broader claim needs independent tasks. Do not start by implementing a proposed architecture.
-
-### P2 — Correct action effects while retaining broad planning ability
-
-**Question.** Can a pretrained model be corrected where action consequences matter for decisions, and transfer that improvement across goals without damaging its existing abilities or needing extensive executed-candidate labels?
-
-**Evidence.** [The Intervention Gap](https://arxiv.org/abs/2608.29998) separates state availability from effect prediction and finds substantial deficits in some LeWM checkpoints. It does not establish downstream decision loss or a repair. Its diagnostic is already prior work. [Do-JEPA](https://arxiv.org/abs/2609.37378) improves natural-action effect prediction and preserves planning with an adapter, but its separate 600-episode test is approximately 87.7% versus 87.8% baseline, not a gain. Its small fine-tuning collapse is confounded: ordinary augmentation also collapses (94% baseline, 58% augmentation, 54% paired). These results motivate investigation without establishing that better effects inherently harm planning.
-
-**Strong solutions and workaround costs.**
-
-| Existing remedy | What it already accomplishes | Cost or remaining limitation |
-| --- | --- | --- |
-| [RC-aux](https://arxiv.org/abs/2605.07278) | Direct LeWM repair through rollout training and finite-budget reachability. Matched continuation gains include TwoRoom +9.2 points and Cube +3.2; PushT is −0.4. Wall’s +33.2 uses a different from-scratch control. | Small reported scoring overhead: +3.74% scoring parameters and under 0.8 ms per isolated 1,024-candidate cost call. Training and scoring change together. It is a strong inexpensive control, not an obstacle to dismiss. Trajectory-offset labels approximate reachability rather than certify shortest paths. |
-| [AD-WM](https://arxiv.org/abs/2609.30264) | Strong action-aware prediction improvements; its own hard-Cube comparison improves substantially using residual prediction and action information. | Requires retraining and fair component controls; results cannot be compared directly with another paper’s Cube population. |
-| [D-JEPA](https://arxiv.org/abs/2609.24749) | Executed-outcome decision correction improves the same-bank PushT result by 4.3 points; also reports physical robot gains. | Executed alternative-action labels and task-local fitting/calibration. It is not merely an offline toy. A new correction should improve its data/transfer/runtime tradeoff, not repeat reranking. |
-| [GAP](https://proceedings.mlr.press/v119/nair20a.html) and goal-conditioned prediction | Already directs prediction toward useful goal-conditioned trajectories. | Requires a training goal distribution. Goal conditioning is a legitimate remedy; exclude it only for a concrete deployment reason. |
-| Rollout-preserving frozen-base adapters | Can protect existing behavior while improving an effect metric. | Preservation constraints and checkpoint selection do not guarantee useful decision changes or broad transfer. |
-
-**Remaining opportunity.** A method that matches decision quality with fewer physical outcome labels, transfers corrections across task goals, or improves useful effects without regression could be significant. We have evidence of the component weaknesses and successful repairs, but not yet a matched demonstration that today’s best remedies leave this combined capability unresolved.
-
-**Decisive check.** On starts with room to improve, compare the same candidate bank using (A) predicted endpoints/native goal cost, (B) real endpoints encoded by the same model/same cost, and (C) real physical endpoints/task cost. A→B isolates prediction headroom; B→C mixes representation and score limitations. Do not apply a physical cost to a latent without a trained readout. Evaluate corrections on held-out goals and in closed-loop planning, including old tasks. A fixed-bank improvement alone is insufficient.
-
-**Important existing workaround.** [IMWM](https://arxiv.org/abs/2606.01626) shows that finite search can lack a successful candidate even with exact dynamics; demonstration retrieval and action proposals help. [Planning Limits](https://arxiv.org/abs/2609.39235), §§5–6 and Appendices E/L/N, shows that short-horizon distance scoring can fail even with simulator dynamics. Longer rollouts trade search budget for horizon; expert subgoals require privileged guidance. Neither failure should be relabeled as poor effect prediction. Learned reachability, proposals and value functions must be treated as existing answers, not novel ideas.
-
-### P3 — Reliability as the planner searches harder
-
-**Question.** Can a world model remain useful as optimization concentrates on its most promising predictions, without repeatedly acquiring failures and retraining or becoming too conservative to act?
-
-**Direct evidence.** [RP1 §7.4](https://arxiv.org/html/2608.18669) reports missed grasps imagined as successful cube attachment. Dyna data collection and retraining reduce the problem: raw h25 LeWM success rises from 92.7% to 95.0%; its separately defined no-op-adjusted hard score rises from 83.4% to 88.6%. Recurrence remains unresolved. This is evidence under RP1’s learned planner, not proof that increasing CEM iterations causes the same failure. Its corrective loop collects 3,600 on-policy episodes per round across two horizons, mixes expert data, fine-tunes the model and retrains the planner (Appendix D.4).
-
-**Strong answers.** [PETS](https://arxiv.org/abs/1805.12114) already propagates ensemble uncertainty; [MOPO](https://arxiv.org/abs/2005.13239), [MOReL](https://arxiv.org/abs/2005.05951) and [COMBO](https://arxiv.org/abs/2102.08363) address pessimism and model exploitation; [Policy-Aware Simulator Learning](https://arxiv.org/abs/2605.29032) targets exploitable regions through policy-aware learning and active samples. These mature ideas establish the starting line. Their feedback, reward/value and state assumptions matter when adapting them to new image-goal tasks.
-
-[World Action Verifier](https://arxiv.org/html/2604.01985v2) is a particularly important recent comparator: forward/inverse disagreement guides useful new interactions and improves visual models and downstream policies. It still needs environment feedback and multiple learned components; reported robot-environment compute is about 40 GPU-hours versus 36 for controls, including training and policy refinement. That is not a runtime estimate for our pilot. The result addresses acquisition, not a guarantee on arbitrary CEM-selected plans. D-JEPA supplies outcome-supervised selection; RP1 supplies planner-collected repair. None should be excluded just to claim an empty research area.
-
-**Remaining opportunity.** Measure the tradeoff between realized success, search effort, corrective interactions and conservatism. An interesting result would retain the benefit of stronger search across new goals with materially less new data or inference cost than existing remedies. It could also identify a recurring failure that their uncertainty estimates miss. This is not yet established by a matched comparison. [ARC-Bench](https://arxiv.org/abs/2609.05461) warns that offline ranking can fail online, but its failed online probe changes available context; it does not contradict D-JEPA’s different successful interface.
-
-**Next check.** Record predicted and realized progress for random, near-best and selected candidates through successive search rounds. Keep goal scoring and useful-candidate supply controlled. Compare equal-budget ensembles/support penalties, replanning and corrective data. Test real success, not only confidence calibration. If this explains P2’s failed effect-to-decision transfer, combine the directions; keep P3 separate only if it exposes a distinct reproducible optimization failure and meaningful cost frontier.
-
-### Recommendation and completion boundary
-
-**P1 merits a focused empirical investigation, not relegation to a fallback.** The strongest immediate rationale is the observed robustness/precision tradeoff and the costs or interaction assumptions of existing remedies. Changing task relevance is a promising generalization axis, but its failure across strong models remains a hypothesis. P2 and P3 provide complementary questions and useful diagnostic controls; their implementation convenience does not make them scientifically superior.
-
-The next research step should be a small comparison using existing methods, designed to locate a consequential capability or resource deficit. A full multi-model training campaign, novel architecture and new benchmark are not selected here. Standard-method success is informative: measure its cost before deciding whether the research opportunity disappears. Do not force a new solution when the existing one meets the intended requirements cheaply.
-
-Five Sol agents contributed four focused reviews and an independent synthesis check. New direct reads included JEPA-Bisim v2’s methods/results/relevant appendices, the complete What Must a World Model Distinguish for Planning? main text and Appendices A–H, and targeted primary readings of object-centric, causal, effect-correction and uncertainty methods. The parent read ReOI main and Appendices A–D, examined Planning Limits main/selected appendices, and checked decisive numerical claims. Exact reading scopes and further controls are recorded in ignored `tmp/research-refresh/gaps/`. Earlier complete reads were reused; not every cited work was newly read cover-to-cover. No experiment or local artifact reproduction occurred; no new X-bookmark audit was performed. Public papers and author artifacts were searched as of October 5, including revisions and closely related later work; this is not an exhaustive citation-index search or a guarantee of novelty.
-
-## Historical round-one result: nine candidate problems
-
-Seven Sol agents covered recent limitations, frontier capabilities, cross-area connections, apparently contradictory findings, stressed assumptions, bookmark omissions, and a skeptical filter. The parent added continual-reuse research and consolidated overlaps. This round reused the previous full reads and made targeted new primary-source reads; it was not a second cover-to-cover audit of every paper.
-
-The nine candidates below are not nine established novel gaps. “Evidence” means an observed failure in the cited setting; “boundary” states what still needs verification. No claim is made that these are the field's universally agreed most important problems. Priority balances broader consequence, concrete evidence, open questions, and a feasible test.
-
-| ID | Research question | Evidence for failure | Fit for modest resources | Historical shortlist |
+| Candidate | Why it matters | Main novelty threat | Current evidence strength | First rejection condition |
 | --- | --- | --- | --- | --- |
-| P1 | Can a compact model discard nuisance while retaining information needed by future goals? | Direct in an adjacent control family; transfer to LeWM unproven | Good controlled-simulation fit | Shortlist |
-| P2 | When can better action-effect prediction improve decisions without damaging other model capabilities? | Direct LeWM evidence | Good, if compatible artifacts exist | Shortlist |
-| P3 | Can a model remain reliable on actions selected by increasingly strong search? | Direct hallucination evidence; mechanism needs isolation | Good frozen-model diagnostic | Alternate; linked to P2 |
-| P4 | What interaction data make alternative action outcomes identifiable? | Theory under restricted assumptions; nonlinear boundary unresolved | Good simulator reset test | Fundamental, but highly occupied |
-| P5 | Can learned dynamics remain reusable while perception learns new situations? | Direct continual-control study; unmatched capacity caveat | Moderate; new sequential-task setup | Shortlist, larger scope |
-| P6 | Can models compose dependent physical events beyond trained chain lengths? | Direct video-model evidence; not established for LeWM | Small mechanism test possible | Exploratory |
-| P7 | Can a model preserve and update hidden object state for later decisions? | Direct video persistence failures; compact-control boundary unproven | Moderate controlled occlusion setup | Exploratory |
-| P8 | When should an uncertain model act to obtain information? | Strong theoretical motivation; recent probabilistic methods already exist | Moderate; requires careful observability setup | Crowded, conditional |
-| P9 | Can adaptation revise changed knowledge while retaining what remains valid? | Recent position argument plus adaptation literature | Moderate; online-feedback assumptions matter | Deprioritized pending sharper evidence |
+| P1: changing goals | Reusing learned physics should not require relearning every newly relevant object | Query-dependent sufficiency, task-aware abstraction, spatial/object representations already address much of this | Strong local LeWM failure; general mechanism unresolved | Adequate familiar-object training plus a standard representation/scorer solves it cheaply |
+| Plan reliability | More computation is valuable only if selected actions work in the environment | Pessimistic MBRL, outcome verification, uncertainty calibration, conformal control | Direct exploitation and uncertainty failures in specific systems; positive remedies also exist | Standard calibration, ensembles, or replanning recover useful search without material extra cost |
+| Causal composition | Learning every complete interaction sequence would limit reuse | Learned physics simulators, object-oriented models, autoregression, compositional planners | Strong adjacent evidence; weak direct evidence for the proposed latent-planning boundary | Structured or autoregressive baselines compose adequately, or failures reduce to ordinary local error |
 
-### P1 — Preserve information before its future use is known
+## 1. P1: what must survive when the agent's goal changes?
 
-**Question and importance.** A static obstacle, target, or currently untouched object can determine a later successful action. Can reward-free predictive compression suppress distracting variation without deleting such information? This matters for reusing a model across goals, beyond one grasp or contact detector.
+### Precise question and significance
 
-**Evidence and boundary.** StarWM's coherent-background experiment loses passive-object position and its reward-aware variant performs better. MotionJEPA succeeds on static-texture distractions; these are different protocols, not contradictory head-to-head results. The sparse-motion study also reports restored action sensitivity without reliable hard pushing. These establish failure examples, not a universal representation defect. [StarWM Appendix F.4](https://arxiv.org/abs/2609.30667), [MotionJEPA](https://arxiv.org/abs/2609.23881), [sparse-motion study](https://arxiv.org/abs/2610.03137).
+Can a visual world model learn from interactions concentrated on one set of goals, then support different goals over the **same familiar objects and physics**, while remaining robust to genuine nuisance and affordable to plan with?
 
-**Small test.** Hold dynamics and nuisance video fixed; change a visible passive obstacle/target that changes the correct later action. Compare strong inverse/motion objectives, ordinary reconstruction, and goal-conditioned controls on identical candidate actions. Measure actual decision changes and control, not only linear probes. **Reject** if existing methods retain the needed state, routine data/capacity controls solve the failure, or the information was never visible. Full arbitrary-future-task sufficiency is impossible under unrestricted compression; specify a task family and capacity budget.
+A mug can be background during one task and the target of the next. A useful representation must distinguish nuisance that never changes a decision from information that is merely irrelevant to the behavior policy that generated the data. That distinction motivates the research, but does not establish a new phenomenon.
 
-### P2 — Improve physical effects without breaking the decisions built on the model
+Specify a finite, meaningful family of tasks. Requiring a small representation to support every conceivable future objective is neither necessary nor a fair empirical target. If objects or physical mechanisms were never observed, their acquisition is a different problem.
 
-**Question and importance.** How can correcting local action consequences yield improved control while preserving factual rollouts and the goal relationships the planner already uses?
+### What the current proposal establishes
 
-**Evidence and boundary.** Do-JEPA improves paired effects; in its small fine-tuning test, baseline planning is 94%, ordinary augmentation is 58% and paired fine-tuning is 54%, so the collapse does not isolate the paired loss. Its preservation adapter maintains planning in a larger equivalence test, without a gain. This does not prove accurate effects harm control: intervention distribution, rollout stability, task ceiling and cost geometry remain possible explanations. AVL-JEPA also occupies generic action-grounded robustness; its counterfactual regret selects displacement magnitude, not goal-conditioned progress. [Do-JEPA Appendix F](https://arxiv.org/abs/2609.37378), [AVL-JEPA Appendix B.2](https://arxiv.org/abs/2610.03587).
+The supplied proposal documents a large asymmetric failure in the evaluated LeWM pipeline. It does not isolate why that failure occurs. Its strongest causal claims should not guide project selection yet.
 
-**Small test.** On a non-ceiling task, compare predicted versus simulator-realized outcomes for the same useful alternatives, while separately replacing the dynamics and goal score with oracles. Include AD-WM/H-JEPA and preservation controls. **Reject** if an existing remedy fixes the relevant decisions, remaining errors lie in irrelevant directions, or target/search failure explains the null. A new effect loss alone is already preempted.
+- All evaluated models use the same 192-dimensional representation. There is no controlled compression intervention.
+- Fine-tuning a PushT model on peg interactions does not eliminate inherited specialization. The weak scratch run is not a competent control for this.
+- Position supervision makes the peg decodable, but that does not establish accurate action-conditioned peg forecasts or useful goal-distance geometry.
+- The reference changes both dynamics and the scoring interface. It uses role-dependent physical costs and optional approach shaping; it is evidence of physical feasibility under that interface.
+- The candidate correlations cited for the second layer come from ordinary models, not the privileged checkpoint.
+- Endpoint pictures do not uniquely specify trajectory requirements such as never disturbing an object.
 
-### P3 — Reliability under the planner's own changing queries
+Sources: [proposal source](proposal/p1_proposal.tex), [reference implementation](../src/lewm_research/probe/reference.py), [task costs](../src/lewm_research/probe/conditions.py). These files were inspected; no new numerical results are claimed here.
 
-**Question and importance.** Can a model know when the action sequence selected by optimization is trustworthy? Search actively selects unusual errors; accuracy on random or logged candidates can conceal this.
+A DINO-WM control is useful but cannot identify compression causally: representation structure, pretraining, trainability and prediction differ. A dimensionality sweep within a matched family would be needed before blaming latent size; competence and optimization must also be controlled.
 
-**Evidence and boundary.** RP1 reports missed-grasp attachment hallucinations and partial improvement from collecting planner-induced failures. D-JEPA's fixed-set simulation successes and ARC's offline-to-online reversal use different methods and information, so they are not an efficacy contradiction; D-JEPA also has live robot reranking. [RP1 §7.4](https://arxiv.org/abs/2608.18669), [D-JEPA](https://arxiv.org/abs/2609.24749), [ARC-Bench](https://arxiv.org/abs/2609.05461).
+### Closest prior work and the boundary it leaves
 
-**Small test.** Track prediction-versus-realized cost for selected and unselected actions over successive CEM refinements, with fixed goals and adequate candidates. Compare ordinary ensembles/support penalties and planner-collected corrective data. **Reject** if cost alignment, proposal quality, or those existing controls explain the failure. This is the familiar model-exploitation problem; the possible opportunity is calibrated reliability under adaptive visual-model queries, not discovering exploitation itself. Merge with P2 if the same mechanism explains both.
-
-### P4 — Identify counterfactual effects from limited interaction
-
-**Question and importance.** Which additional interactions teach a model the action alternatives needed for decisions, rather than merely improving prediction along an expert's path?
-
-**Evidence and boundary.** Controlled-world-model identifiability already relates counterfactual error to conditional action excitation under linear-Gaussian dynamics and invertible observations. Weakly excited directions cannot be recovered universally from fixed data. Plan2Explore and offline uncertainty methods already address exploration and support. [Identifiability §§3–5](https://arxiv.org/abs/2607.22430), [Plan2Explore](https://proceedings.mlr.press/v119/sekar20a.html).
-
-**Small test.** Match state visitation, marginal action scale and data volume while varying action diversity conditional on state. Test actual alternative actions from held-out simulator resets; compare equal-budget random and targeted new interactions. Recovery states offer one application, but WM-DAgger/SimDist are existing recovery-data approaches. **Reject** if ordinary perturbation data closes the gap or the planner never needs unsupported actions. The theory is already a contribution by others; a visual extension needs a substantive acquisition or partial-identification question, not another loss claiming to infer missing information.
-
-### P5 — Reuse dynamics while the visual representation changes
-
-**Question and importance.** As a robot encounters new appearances and tasks, how can it improve perception without making previously learned transitions unusable? The issue is broader than retaining old-task scores: the coordinate system consumed by the dynamics can change.
-
-**Evidence and boundary.** A recent compositional continual-learning study finds its modular advantage only with a frozen encoder pretrained on all future tasks. Without that privilege it matches the monolithic comparison. Capacity is not fully controlled, so modularity is not isolated as the causal remedy. [Study §§III-E, IV-A and limitations](https://arxiv.org/abs/2609.22055).
-
-**Small test.** Use a short sequence with separable visual and dynamics changes, no future-task access, and fixed replay/capacity budgets. Compare frozen pretrained features, replay, joint-training upper bounds and latent alignment; test old transition validity and new-task learning. **Reject** if standard alignment or stable features close the gap. Continual learning and [latent alignment](https://arxiv.org/abs/2312.13699) are established; the question is preserving reusable controlled dynamics under genuinely sequential visual learning. This requires a new task protocol, not an immediate LeWM patch.
-
-### P6 — Compose dependent physical events
-
-**Question and importance.** Can a predictor generalize to longer chains of dependent interactions when each individual interaction is familiar?
-
-**Evidence and boundary.** The Seriality Gap isolates collision-chain degradation in bidirectional video diffusion using length-matched controls; autoregressive/blockwise alternatives already help. Its theory and large training campaign do not establish the same bottleneck in autoregressive LeWM. [Seriality Gap §§3–5](https://arxiv.org/abs/2607.13031).
-
-**Small test.** Compare independent and causally chained contacts while matching time, object count, total motion, data, and inference work. Measure event order and action-choice accuracy. **Reject** if ordinary recurrence/variable horizons resolve it or if errors track time/occlusion rather than dependency depth. A compact latent experiment can test the mechanism, but cannot claim to solve frontier video generation. Reintroducing adaptive depth or event-based planning without this evidence would repeat the old project's mistake.
-
-### P7 — Maintain hidden state through unobserved interactions
-
-**Question and importance.** Can the model retain object identity and update its possible state while it is hidden, so it chooses a sensible later action?
-
-**Evidence and boundary.** WROP reports object-count and reappearance failures; PlayWorld finds weak out-of-sight evolution. These use video-generation/judge-based evaluations, not LeWM planning. TrackEverything tracks observed history; that does not by itself solve prospective hidden interactions. [WROP](https://arxiv.org/abs/2609.28654), [PlayWorld](https://arxiv.org/abs/2608.13552), [TrackEverything](https://arxiv.org/abs/2609.30222).
-
-**Small test.** Separate remembering a stationary hidden object from predicting its unseen collision, using visible-history and full-state diagnostic controls. Compare recurrent/object-track/belief baselines on reappearance and later action choice. **Reject** if ordinary memory solves it, task choices are unaffected, or the setup demands a unique answer where observations permit several futures. A distribution over hidden states is then the appropriate target. Generic object permanence and object tokens are already occupied research areas.
-
-### P8 — Turn uncertainty into useful information-gathering actions
-
-**Question and importance.** When should the agent spend an action resolving ambiguity instead of immediately pursuing its goal?
-
-**Evidence and boundary.** Branch-JEPA explores multiple latent futures, while probabilistic latent MPC and recurrent counterfactual models already exist. Their distinct results do not establish that compact reward-free visual models reliably choose useful probes. This is a provisional boundary, not an absence claim. [Branch-JEPA](https://arxiv.org/abs/2607.05238), [VJEPA](https://arxiv.org/abs/2601.14354), [CLWM](https://arxiv.org/abs/2609.05834).
-
-**Small test.** Pair visually aliased hidden modes with revealable and unrevealable controls. Evaluate whether a diagnostic action improves expected task return under a fixed action budget. Compare ordinary longer history, belief planning, and active-sensing methods. **Reject** if short history resolves the ambiguity, probing has no value, or established methods already achieve the ceiling. This must survive a serious POMDP/dual-control review before being shortlisted. P7 concerns maintaining hidden state; P8 concerns choosing actions to reduce its uncertainty.
-
-### P9 — Revise changed facts without discarding valid knowledge
-
-**Question and importance.** During deployment, can adaptation update the aspects of dynamics that changed while retaining performance where the old model remains valid?
-
-**Evidence and boundary.** A recent position paper distinguishes obsolete knowledge from catastrophic forgetting; it provides a framing, not a demonstrated new algorithmic failure. SimDist, ICWM, ReDRAW, DALI, Sandwich-Residuals and SPREAD already address substantial parts of adaptation. [Retention position paper](https://arxiv.org/abs/2610.03713), [Sandwich-Residuals](https://arxiv.org/abs/2609.21740), [ICWM](https://arxiv.org/abs/2606.26025).
-
-**Small test.** Separate changed physics from changed appearance with identical feedback budgets; measure adaptation latency and performance on still-valid old regimes. **Reject** if context inference or simple residual updates suffice, or the environment provides too little information to detect change. Do not assume gravity, embodiment or action effects are universally invariant: define what stays fixed in the experimental world. This remains deprioritized because the generic problem and many remedies are already well developed.
-
-## Recommendation after round one
-
-The historical round-one recommendation was to advance **P1, P2 and P5** to adversarial literature review, not implementation; the current assessment above supersedes it. P1 offers a broad representation-sufficiency question with a manageable test; P2 has the clearest direct LeWM negative result; P5 offers a distinct generalization problem beyond the original contact project, at greater setup cost. These are judgments about investigation value, not publication forecasts. P3 is the strongest alternate and may become part of P2's explanation.
-
-For each shortlisted problem, round two should produce the exact unsolved boundary against the strongest existing method, the simplest alternative explanation, and one experiment capable of rejecting the hypothesis. If a standard method answers it, remove it. No benchmark, architecture, training run, or hardware allocation is selected yet.
-
-The supplemental agent rescreened all 75 previously ambiguous bookmark records and cross-checked the 58 retained posts; no extra distinct candidate cleared screening. Do-JEPA and AVL-JEPA were important new prior-work constraints. The previous 405-post inventory was reused; X was not rescanned this round. Private selections and detailed notes remain in ignored `tmp/research-refresh/`.
-
-## Earlier method and benchmark audit (reference, not the current next step)
-
-## What the closest papers rule out
-
-| Proposed broad idea | Closest fully read work | Implication |
+| Work | Existing answer | Implication for P1 |
 | --- | --- | --- |
-| Make latents preserve actions | [SMWM](https://arxiv.org/abs/2606.20104), [Delta-JEPA](https://arxiv.org/abs/2606.31232), [AD-WM](https://arxiv.org/abs/2609.30264) | Inverse dynamics, latent-difference decoding, residual prediction and mutual-information auxiliaries are existing baselines. |
-| Make planning geometry better | [TD-JEPA](https://arxiv.org/abs/2607.25337), [CGS](https://arxiv.org/abs/2609.35603), [Temporal Straightening](https://arxiv.org/abs/2603.12231) | Temporal distance, action/transition geometry and straightening are already tested. CGS includes a privileged transition-geometry variant. |
-| Learn candidate ranking | [D-JEPA](https://arxiv.org/abs/2609.24749) | Outcome-supervised candidate-set reranking already exists; simulator counterfactual labels must be budgeted explicitly. |
-| Add physical training supervision | [JEPA-x](https://arxiv.org/abs/2608.24044), [PSG-JEPA](https://arxiv.org/abs/2608.06799), [Scaffolder](https://arxiv.org/abs/2405.14853) | Training-only sensing is not a gap. These methods use different planning/policy interfaces and cannot be compared by headline scores. |
-| Separate motion, action and background | [MotionJEPA](https://arxiv.org/abs/2609.23881), [DWM](https://arxiv.org/abs/2607.18715), [StarWM](https://arxiv.org/abs/2609.30667) | Motion losses and action/world separation already have direct precedents; DWM modifies LeWM itself. |
-| Factorize the representation | [JEPA-Anything](https://arxiv.org/abs/2609.20800) | Generic latent factorization is not enough; its broad prediction results do not establish broad control gains. |
-| Use physical dynamics structure | [H-JEPA](https://arxiv.org/abs/2609.33497) | A particularly important compact architectural comparator, with public code and manipulation results. |
-| Plan through nearer goals / variable horizons | [Aim Short](https://arxiv.org/abs/2609.30036v4), [Beyond the Next Step](https://arxiv.org/abs/2606.21775) | Retrieved subgoals and variable-length prediction are strong alternatives to event-based temporal abstraction. |
+| [What Must a World Model Distinguish for Planning?](https://arxiv.org/html/2609.33030v1) | Directly analyzes information needed by different queries and search stages; studies held-out objective compositions and modular query-aware proposals | The broad question and the idea of reusing physical predictions across objectives are already addressed. Its one-bit experiment compresses candidate messages after prediction, not a visual world state. A possible remaining empirical question concerns how interaction-biased visual training produces useful or harmful invariance before queries arrive. |
+| [JEPA-Bisim, v2](https://arxiv.org/html/2602.18639v2) | Learns compact nuisance-robust features; its 1,000-sample PushT comparison reports native success 48% to 36% while relative shift degradation improves 47.6% to 7.8% | A measured tradeoff motivates study, but is not an impossibility result. Its non-colliding distractors do not establish behavior when a familiar object becomes an interaction target. |
+| [DINO-WM](https://arxiv.org/abs/2411.04983) | Spatial pretrained features support visual planning and transfer to new configurations | A necessary strong positive control. If it solves the task at acceptable cost, the broad capability claim weakens substantially. |
+| [Task-Centric World Models](https://arxiv.org/abs/2605.25620) | Compresses foundation features with reconstruction and physical alignment | Compactness alone is not the problem. Its measurement and planning interfaces must be accounted for in a comparison. |
+| [Causal-JEPA](https://proceedings.mlr.press/v306/nam26c.html) | Object-level masking improves relational reasoning and supports efficient planning | Object-centric latent planning is an existing answer, not a proposed novelty. Compare a competent object representation rather than a weak slot baseline. |
+| [ATLAS](https://arxiv.org/html/2609.36333) | Preserves relational geometry between encoder and planning representations, with LeWM planning gains | “Information is decodable but the planning latent has bad geometry” also has direct prior work. Whitening and geometric alignment are serious controls. |
 
-These overlaps reject generic novelty claims, not every possible extension. The important distinction is the exact mechanism and the evidence supporting it.
+Related negative findings in [StarWM](https://arxiv.org/html/2609.30667) and [SLIM](https://arxiv.org/abs/2610.03137) further weaken a claim to first discover neglected passive/small moving factors.
 
-## Findings that change the decision
+**Unresolved question, not established failure:** Under adequate coverage of the relevant local dynamics, does training-induced invariance prevent reliable decisions across changing object roles, even with strong spatial/object features, legitimate query conditioning and calibrated scoring? If so, what determines the tradeoff among task coverage, precision, robustness and resources?
 
-**Action sensitivity is not sufficient.** [The Intervention Gap](https://arxiv.org/abs/2608.29998) separates representation of real effects from propagation of those effects through the predictor. It reports direction/scale errors despite substantial action sensitivity. This supports investigating calibrated effects, but the paper does not establish a new architecture or a closed-loop planning remedy.
+### Smallest decisive study
 
-**H-JEPA is a substantive architecture baseline.** Its orthonormal action port constrains instantaneous full-latent action gain; its port-inverse consistency loss is closely related to a projected rollout loss. Reported Cube gains are substantial, but the effect is not attributable to inverse consistency alone. A variable-gain port is not inherently novel: learned state-dependent input maps exist in [port-Hamiltonian control work](https://arxiv.org/abs/2401.09520). Also, no object movement before contact does not refute H-JEPA: the agent can move and the latent action direction can rotate. [Paper and appendices](https://arxiv.org/abs/2609.33497).
+First use existing checkpoints for diagnosis: counterfactually move only one object; inspect encoded geometry; decode actual and predicted states separately; compare candidate rankings with realized endpoints. Whitening must be fit on training data with regularization, not tuned on the evaluation goals.
 
-**Offline rank improvements can fail online.** ARC-Bench reports a learned terminal probe that improves fixed-set ranking but fails its small online test. Aim Short shows that target selection materially changes performance; its main PushT query episodes are excluded from retrieval but drawn from the source training split, so model-pretraining exposure needs separate scrutiny. Neither finding proves our historical planning failure had the same cause. [ARC-Bench](https://arxiv.org/abs/2609.05461), [Aim Short](https://arxiv.org/abs/2609.30036v4).
+Then construct a role-change setting in which all objects and required interaction types are familiar during training. Keep appearances and physics fixed at evaluation. Change which object or trajectory property matters. Include genuine visual nuisance separately.
 
-**Representation robustness is real but crowded.** [The Obsessed Encoder](https://www.enigma.inc/posts/obsessed-encoder) provides reproducible nuisance-feature failures. MotionJEPA already addresses a motion/static distinction; StarWM documents failures involving coherent backgrounds and passive objects. A generic second stream or motion weighting would need a sharper justification than these examples alone.
+Use a small number of well-qualified baselines: current LeWM, a spatial model, and a strong structured or task-aware alternative. First compare defaults; only then make matched resource claims. Do not deliberately cripple the stronger baseline's representation.
 
-**Paper numbers can be stale or incomparable.** The [Temporal Straightening repository](https://github.com/agentic-learning-ai-lab/temporal-straightening) documents evaluation/training corrections and reruns. [INTACT's repository](https://github.com/zju3dv/INTACT-JEPA) documents a corrected actor-evaluation path. INTACT's search-free interface uses expert action supervision and a goal-conditioned action operator: its success cannot be credited entirely to improved predictive dynamics. Preserve direct-policy and actor-disabled planning comparisons separately.
+For a fixed bank with useful actions, compare native model predictions and costs, real endpoints encoded with the same cost, and real physical endpoints with the intended task cost. The first substitution measures prediction headroom; the second changes both representation and scoring and must not be called a pure encoder test. A privileged state head is diagnostic, not an equal-information deployment method.
 
-## Benchmark choice
+**Advance** if a substantial role-change deficit survives adequate acquisition, scoring fixes and strong existing representations, or if the only working remedy has a consequential measured cost.
 
-1. **CLEAR-LeWM v0.8: first qualification target.** This independent community evaluation provides frozen manifests, repaired evaluation, Moderate/Strict modes, reference results and public code. Strict evaluates more precise task completion. It already includes INTACT comparisons, so the task is not simply to beat vanilla LeWM. Pin the version, manifests and inference mode; batch size changes can alter CEM randomness. Public availability is verified; local execution is not. [Repository and current results](https://github.com/DavidSunok/CLEAR-LeWM).
-2. **Aim Short: complementary long-range test.** Public controller code and per-episode results exist, but fresh runs need upstream datasets, weights, caches and simulators. Match search budgets and establish fresh model-disjoint test episodes. Use it if the proposed method claims long-range planning benefit. [Reproduction instructions](https://github.com/daybraeklaxry/Aim-Short-to-Reach-Far/blob/main/REPRODUCING.md).
-3. **ARC-Bench: diagnostic design, not presently verified turnkey infrastructure.** No official runnable package was located; its appendix describes a future release. Do not call a home-built adaptation an official benchmark run. Ranking errors must be assessed against chance, regret and candidate quality, not just the fraction of nonoptimal top picks. [Paper](https://arxiv.org/abs/2609.05461).
-4. **OGBench: later external transfer.** A public, broader goal-conditioned suite, including manipulation beyond the single Cube task. Adapter and training costs make it a second-stage test, not the first smoke test. [Official repository](https://github.com/seohongpark/ogbench).
+**Reject the broad P1 story** if ordinary training coverage, whitening, goal specification or a standard model resolves the deficit cheaply. A pipeline diagnosis could still be useful, but would not justify the proposed fundamental compression claim.
 
-Audited source snapshots: CLEAR `14acb4924f6cb9a658b62c9be63efb78e59f1987`, INTACT `653ee22266a34a74efca21b0b03dfc1fd6fa37ff`, Temporal Straightening `2c3c7666a69a730042590d548c6731259c4183ac`. Recheck upstream changes before execution rather than silently mixing versions.
+## 2. Can a planner trust the plan it has optimized?
 
-## Earlier action-effect lead, now narrowed by P2
+### Precise question and significance
 
-Working hypothesis: **a model can retain action information while misrepresenting which physically different outcomes nearby actions produce; correcting that error could improve planning across changing interaction regimes.**
+Can a learned world model provide useful estimates of **decision error on the actions its planner selects**, as search effort and goals change, without requiring excessive corrective interactions or becoming too conservative to act?
 
-This is more general than detecting a secure grasp, but novelty remains unproven. AD-WM, H-JEPA, D-JEPA and CGS are essential nearby work. Do not rebrand state-dependent dynamics or another inverse loss as a new principle.
+Prediction tests average over some distribution of actions. Planning actively seeks unusually favorable predictions. Its chosen action may therefore expose errors that average accuracy or confidence does not reveal. This is the established model-exploitation problem; rediscovering that principle is not a contribution.
 
-The smallest useful test is to compare nearby action alternatives from the same held-out starts, using realized simulator outcomes. Separate endpoint representation error, predicted effect direction/scale, target-cost error, and elite-selection regret. Stratify interaction states for diagnosis, while keeping the proposed method free of task-specific event labels if claiming generality. Use physical task features as well as each model's latent coordinates, because different encoders can rescale the comparison.
+The possible research value lies in identifying when modern latent planning and its strongest remedies retain useful reliability under this selection process, and what feedback or representational independence is required.
 
-Proceed toward a module only if a goal-relevant prediction failure remains under a strong baseline and a simple flexible control fixes it. Reject this lead if adequate target selection eliminates the gap, candidates contain no useful action, a standard inverse/residual baseline solves it, or improvements require privileged test-time information outside the intended setting.
+### Closest work: both negative evidence and working answers
 
-## Conditional benchmark qualification after a problem is selected
+| Work | Evidence or answer | Remaining boundary |
+| --- | --- | --- |
+| [Biased Dreams](https://arxiv.org/html/2604.25416) | RSSM experiments find that ensemble disagreement can decrease while rollout error increases, associated with attraction toward familiar latent regions | Direct mechanism evidence, but not a general result for every latent architecture or a sweep of CEM optimization intensity. Its external latent ensemble and partly qualitative attractor analysis matter. |
+| [RWM-U](https://arxiv.org/html/2504.16680) | Uncertainty-aware autoregressive modeling plus pessimistic policy learning enables real robotic control | Strong positive counterevidence to “ensembles do not work.” Its proprioceptive setting differs; both insufficient and excessive penalties hurt behavior. |
+| [RP1](https://arxiv.org/html/2608.18669) | Documents exploitation of imagined successful grasps and improves performance through planner-collected corrective data | Demonstrates both a failure and a working repair. Repeated-feedback cost and recurrence under changed planning remain relevant measurements. |
+| [World-Coherent Decoding](https://arxiv.org/html/2609.02159v1) | Uses internal signals and executed imagination–reality mismatch to improve future selection | Directly occupies reliability-aware candidate selection and online feedback. Gains under its limited-randomization setting are not evidence of universal transfer across search procedures. |
+| [HAUWM](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ad222e6e38e26e3f00d85829b9e02f43-Abstract-Conference.html) | Trains horizon-dependent predictive uncertainty and reports downstream control benefits | “Uncertainty should reflect horizon” is already an explicit learning objective. Monotone variance alone is not a selected-action calibration test. |
+| [SufficientPlan](https://arxiv.org/html/2610.08350) | Certifies reduced planning budgets against a full-budget baseline on a fixed development distribution | Budget selection already has a practical answer. Matching the full-budget system does not establish that its predictions are physically correct; distribution changes may require recalibration. |
+| [CERT-Replan](https://arxiv.org/html/2610.09302) | Uses calibrated obstacle-prediction risk to trigger changes of planning mode | Adaptive risk-triggered replanning is also occupied. Its structured navigation interface differs from generic image-goal latent planning. |
 
-If the selected problem concerns manipulation planning, the following qualification remains useful. It is deferred until after problem selection, and was not executed:
+Older foundations include [PETS](https://arxiv.org/abs/1805.12114), [MOPO](https://arxiv.org/abs/2005.13239), [MOReL](https://arxiv.org/abs/2005.05951), and [COMBO](https://arxiv.org/abs/2102.08363). Statistical precedents include [action-conditional conformal decision guarantees](https://arxiv.org/abs/2606.05551) and [online conformal selection with limited feedback](https://arxiv.org/abs/2605.14953). Consequently, neither selection-aware uncertainty nor reducing feedback is intrinsically novel. Their assumptions and guarantees must be examined before proposing a theorem or method.
 
-- Pin and smoke-test CLEAR v0.8 on one manipulation task; verify dataset/checkpoint access, reset semantics and resource needs before scheduling training.
-- Establish vanilla LeWM plus one strong compatible method under the same planner. Prefer H-JEPA for architectural structure or AD-WM for action representation, according to available artifacts and the observed failure; do not begin with eight retrained baselines.
-- Inspect a small, fresh validation set of failures. Separate model errors from target/objective, search and success-rule issues. Previously consumed local evaluation episodes are development evidence, not fresh confirmation.
-- Produce one page stating the repeated failure, nearest existing remedy, proposed mechanism and smallest falsifying experiment. If no such page is defensible after the bounded qualification, stop this branch rather than launch another training campaign.
+**Unresolved question, not a new general principle:** Is there a reproducible, practically costly failure of these remedies when search selects actions using learned visual representations—particularly errors shared by predictor and verifier—and can it be explained beyond ordinary lack of action coverage?
 
-For an eventual paper, require multiple training seeds, paired held-out evaluations, appropriate uncertainty, matched data/compute/tuning budgets, causal ablations, and a held-out task or second backbone commensurate with the generality claim. Performance on four tasks with one backbone supports that scope; it does not establish universal world-model improvement.
+### Smallest decisive study
 
-## Earlier full-reading coverage and remaining boundaries
+Use an already competent model and simulator. Hold rollout horizon fixed while varying candidate count and search rounds; investigate horizon separately. Record random candidates, elites and selected actions. Execute audited alternatives from identical simulator states.
 
-In the preceding method audit, seven Sol research agents plus the parent reviewed the material. **25 distinct papers were read through their main text and all available appendices**. This historical count does not describe the targeted new discovery reads:
+Measure physical task regret, realized progress, success and prediction optimism. If a score claims to be a probability, measure calibration on selected actions; do not call arbitrary ensemble variance a probability. Separate factual one-step error from multistep and selection errors.
 
-- Action/prediction: AD-WM, D-JEPA, DA-LeWM (2608.18746), SMWM, Delta-JEPA, TD-JEPA, CAER (2608.30897), H-JEPA.
-- Evaluation: ARC-Bench, Aim Short.
-- Sensing/policy: Scaffolder, JEPA-x, PSG-JEPA, ContactWorld (2606.13877), INTACT (2607.26056).
-- Representation: JEPA-Anything, Planning Limits (2609.39235), MotionJEPA, StarWM, DWM, Contrastive World Models (2609.22175), Temporal Straightening, CGS.
-- Parent full reads: The Intervention Gap, Beyond the Next Step.
+Use nested fixed candidate banks for one diagnostic: the true best candidate cannot worsen when the bank grows, so a worse selected outcome reveals a selection failure. Adaptive CEM is a separate test because its banks need not be nested.
 
-The Obsessed Encoder blog was read fully. LeWM evaluation sections, TRM, PhyLatent, PIGDreamer and broader bookmarked work received targeted or partial reading; they are not counted as full reads. CLEAR received a documentation/code audit, not an independent replication. The new discovery round examined main results and selected appendices of [Keeping JEPA World Models Plannable When Little of the Frame Moves](https://arxiv.org/abs/2610.03137), upgrading its previous abstract screen without claiming a complete appendix audit. Do-JEPA, AVL-JEPA and other new sources likewise have their exact reading scope in the local discovery notes. Current hardware availability, reproduction cost and checkpoint compatibility remain unverified.
+Compare shared-encoder head ensembles with independently trained representations, simple support penalties, held-out residual calibration, shorter replanning intervals and a small matched corrective-data budget. Budget every executed alternative used as a label; distinguish privileged audit access from deployable feedback. Examine both frozen calibration transfer and matched recalibration, rather than banning adaptation to manufacture a gap.
 
-The bookmark inventory and detailed reading notes are retained locally under the ignored `tmp/research-refresh/` directory. Account-derived bookmark selections are excluded from this public research record. A visible-timeline audit cannot guarantee recovery of deleted or unavailable X entries. Literature search is bounded, not proof that no other relevant prior exists.
+Shared blindness is a hypothesis. If the relevant evidence is absent from every input to a verifier, no calibration method can reconstruct it by assumption alone; that elementary impossibility would not be a new contribution.
+
+**Advance** if inexpensive standard remedies fail in a repeatable, mechanistically identifiable way, while useful candidate actions exist, and reliability can be improved without sacrificing most task progress.
+
+**Reject** if ordinary calibration or replanning resolves the problem, if the effect occurs only under an unusably weak model, or if it is wholly explained by known coverage failure without a meaningful new cost or mechanism result.
+
+This is the best immediate research bet because the experiment can separate prediction, selection, confidence and feedback costs. It is not the least crowded literature.
+
+## 3. Can familiar interactions compose into unfamiliar causal chains?
+
+### Precise question and significance
+
+After learning each required local interaction, can a model predict and choose actions for **new sequences of those interactions**, without training on every complete sequence?
+
+For example, pushing A makes it contact B, which moves C out of a passage. The interest is reuse of learned mechanisms. Showing that three events are harder than one is insufficient: ordinary accumulated error and missing contact configurations are obvious explanations.
+
+### Closest prior work
+
+| Work | Existing answer or evidence | Implication |
+| --- | --- | --- |
+| [Graph Network-based Simulators](https://arxiv.org/abs/2002.09405) | Learn local physical dynamics and generalize to longer rollouts and larger particle systems; noise training reduces accumulated error | Local physical composition and graph-based remedies are longstanding. Structured-state access is a powerful diagnostic control. |
+| [HOWM](https://proceedings.mlr.press/v162/zhao22b.html) | Formalizes object-replacement compositional generalization and learns object/action binding | Novel object combinations are already directly studied. This differs from, but constrains, a claim about dependent contact chains. |
+| [The Seriality Gap in Video Diffusion Models](https://arxiv.org/html/2607.13031) | Isolates degradation across dependent collision events and finds benefits from autoregressive generation; theory concerns specified deterministic prediction assumptions | The causal-chain framing and serial-computation explanation are already theirs. LeWM is autoregressive, so this result cannot simply be transferred to explain its failures. |
+| [Causal-JEPA](https://proceedings.mlr.press/v306/nam26c.html) | Learns interaction-dependent object representations | Merely adding objects, masks or relations is not enough to establish novelty. |
+| [World Action Planner](https://arxiv.org/abs/2607.27599) | Reports generalization through world-model-based search on compositional robot tasks | Compositional task planning already has positive evidence; investigate a specific mechanism rather than claiming general absence. |
+| [RoleWorld](https://arxiv.org/html/2610.13172) | Reuses symbolic interaction rules through functional role abstractions and updates role assignments from feedback | Even functional-role transfer has a recent direct answer. Its symbolic LLM environment is not a visual contact-dynamics test. |
+
+**Unresolved question:** Under verified local interaction coverage, what causes useful decision quality to deteriorate with dependency structure in learned visual dynamics? Does the remaining limitation survive standard autoregressive, object-relational and rollout-training remedies?
+
+The reviewed papers do not establish this failure in LeWM or DINO-WM. This candidate has the highest risk of turning into a rediscovery of accumulated error or an application of an existing graph model.
+
+### Smallest decisive study
+
+Construct controlled scenes crossing causal dependency depth with elapsed rollout time. Compare equal-duration chains and independent contacts, and equal-depth sequences with extra waiting. Match contact count, state precision, object count and action difficulty where possible; disclose factors that cannot be matched.
+
+Verify that every necessary pairwise contact type, relative velocity and approach geometry is supported by training. Observing each object separately is insufficient. Include direct interaction tests and perturbation tests near contact boundaries.
+
+Compare a visual autoregressive baseline with a learned relational model receiving privileged object state, then a visually inferred relational counterpart if the first comparison reveals useful headroom. The state model locates perception/representation costs; it is not an equal-input competitor. Include rollout noise/multistep training before attributing failures to missing compositional structure.
+
+Test intermediate state resets: if supplying the true state after each event removes the failure, ordinary error accumulation is implicated. Quantify whether measured local errors already predict the observed failure rate; resets alone do not establish a novel mechanism. Evaluate action choice with a fixed candidate bank before adding search.
+
+**Advance** only if a consistent dependence-specific deficit remains after these controls and affects decisions, with evidence beyond one brittle contact setup.
+
+**Reject** if standard structured dynamics solve the setting, if local interactions were actually out of distribution, or if the results add no explanation beyond familiar numerical sensitivity and rollout drift.
+
+## Why other directions did not enter the top three
+
+- **Generic action-effect correction (historical P2):** [The Intervention Gap](https://arxiv.org/abs/2608.29998) is a diagnostic precedent, while [AD-WM](https://arxiv.org/abs/2609.30264), [D-JEPA](https://arxiv.org/abs/2609.24749), and [RC-aux](https://arxiv.org/abs/2605.07278) already provide direct repairs. Retain them as controls. A new inverse head is not a problem statement.
+- **Continual dynamics reuse:** [Benchmarking World Models for Continual Learning on Compositional Tasks](https://arxiv.org/abs/2609.22055) already separates adaptation from knowledge reuse. This remains important but needs a stronger specific residual question before displacing the shortlist.
+- **Memory and useful probing:** POMDP belief estimation and dual control are mature. [Belief-based interfaces for LLM agents](https://arxiv.org/abs/2609.00455) and [budgeted environment probing](https://arxiv.org/abs/2606.31422) add recent overlap. No sharper feasible visual-control gap was established in this review.
+- **Long-horizon image-goal failure:** [The Planning Limits of Latent World Models](https://arxiv.org/abs/2609.39235) already implicates the relationship between goal distance and planning horizon, including exact-dynamics controls. This is essential differential diagnosis, not a fourth new problem.
+
+## Recommended next decision
+
+Give P1 a cheap diagnostic gate using the existing work, then make plan reliability the first new empirical screen. Keep causal composition as an independent, higher-risk alternative. Do not launch three large training campaigns.
+
+Before selecting a contribution, require one page that states the capability, strongest existing answer, residual failure, simplest explanation, and a test that can reject the claim. A mechanism study could itself be a contribution; architecture is warranted only when evidence localizes a limitation that simpler alternatives cannot meet economically.
+
+A single LeWM failure does not establish a field-wide limit. Require competent baselines, independent evaluation scenes, multiple seeds when fitting models, legitimate goal information, measured resources and a second setting proportional to the eventual generality claim. The amount of evidence should grow with the claim, not with a preselected paper title.
+
+## Reading and evidence scope
+
+This review used the supplied proposal and relevant local implementation, the previous canonical review as a search index, and fresh primary-source searches through October 16, 2026. It did not rescan private X bookmarks. Claims are author-reported unless explicitly identified as local code observations or proposed experiments.
+
+Targeted main-text/method/limitation reads covered the query-sufficiency study, Seriality Gap, Biased Dreams, World-Coherent Decoding, RWM-U, ATLAS and SufficientPlan; HOWM's formal setting was checked in its PDF. Causal-JEPA's proceedings abstract was accessible, but its linked PDF failed in this pass. HAUWM, World Action Planner, the two conformal-selection papers and some rejected-direction references were screened at the primary abstract/proceedings level; their complete assumptions have not been audited. These are novelty warnings and baseline leads, not reproduced results or assurances that implementations are ready.
+
+An omitted evaluation in any of these works is an unknown. The proposed residual questions remain hypotheses until matched tests show that strong existing methods leave a consequential problem.
